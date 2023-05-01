@@ -1,11 +1,15 @@
-﻿Namespace DriveWatcherControl
+﻿
+Partial Class NotifyForm : Inherits System.ComponentModel.Component
+
+#Region "Fields"
+
+		'Wird vom Komponenten-Designer benötigt.
+		Private components As System.ComponentModel.IContainer
+
+#End Region
 
 
-	Partial Class DriveWatcher
-
-
-		Inherits System.ComponentModel.Component
-
+#Region "Public Constructors"
 
 		<System.Diagnostics.DebuggerNonUserCode()>
 		Public Sub New(ByVal container As System.ComponentModel.IContainer)
@@ -27,6 +31,10 @@
 
 		End Sub
 
+#End Region
+
+#Region "Protected Methods"
+
 		'Die Komponente überschreibt den Löschvorgang zum Bereinigen der Komponentenliste.
 		<System.Diagnostics.DebuggerNonUserCode()>
 		Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -39,8 +47,9 @@
 			End Try
 		End Sub
 
-		'Wird vom Komponenten-Designer benötigt.
-		Private components As System.ComponentModel.IContainer
+#End Region
+
+#Region "Private Methods"
 
 		'Hinweis: Die folgende Prozedur ist für den Komponenten-Designer erforderlich.
 		'Das Bearbeiten ist mit dem Komponenten-Designer möglich.
@@ -50,7 +59,6 @@
 			components = New System.ComponentModel.Container()
 		End Sub
 
+#End Region
+
 	End Class
-
-
-End Namespace

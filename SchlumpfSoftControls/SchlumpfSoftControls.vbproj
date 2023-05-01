@@ -4,7 +4,7 @@
     <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <TargetFrameworkProfile />
-    <AssemblyVersion>1.2023.4.4</AssemblyVersion>
+    <AssemblyVersion>1.2023.5.8</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -59,13 +59,13 @@
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="AniGifControl\AniGif.bmp" />
-    <Content Include="NotifyFormControl\NotifyForm.bmp" />
+    <EmbeddedResource Include="Resources\AniGif.bmp" />
+    <EmbeddedResource Include="Resources\NotifyForm.bmp" />
     <Content Include="Resources\NotifyForm_Error.png" />
     <Content Include="Resources\NotifyForm_Info.png" />
     <Content Include="Resources\NotifyForm_Question.png" />
     <Content Include="Resources\NotifyForm_Warning.png" />
-    <EmbeddedResource Include="DriveWatcherControl\DriveWatcher.bmp" />
+    <EmbeddedResource Include="Resources\DriveWatcher.bmp" />
     <Content Include="LICENSE.rtf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -79,7 +79,7 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Resources\AniGif_Standard.gif" />
-    <EmbeddedResource Include="NotifyFormControl\NotifyForm.resx">
+    <EmbeddedResource Include="NotifyForm.resx">
       <DependentUpon>NotifyForm.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="source.extension.vsixmanifest">
@@ -87,45 +87,35 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AniGifControl\AniGif.Designer.vb">
+    <Compile Include="AniGif.Designer.vb">
       <DependentUpon>AniGif.vb</DependentUpon>
     </Compile>
-    <Compile Include="AniGifControl\AniGif.vb">
+    <Compile Include="AniGif.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AniGifControl\GifSizeMode.vb" />
-    <Compile Include="DriveWatcherControl\DBT_DEVTYP.vb" />
-    <Compile Include="DriveWatcherControl\DEV_BROADCAST_HDR.vb" />
-    <Compile Include="DriveWatcherControl\DEV_BROADCAST_OEM.vb" />
-    <Compile Include="DriveWatcherControl\DEV_BROADCAST_VOLUME.vb" />
-    <Compile Include="DriveWatcherControl\DriveAddedEventArgs.vb" />
-    <Compile Include="DriveWatcherControl\DriveRemovedEventArgs.vb" />
-    <Compile Include="DriveWatcherControl\DriveWatcher.Designer.vb">
+    <Compile Include="DriveWatcher.Designer.vb">
       <DependentUpon>DriveWatcher.vb</DependentUpon>
     </Compile>
-    <Compile Include="DriveWatcherControl\DriveWatcher.vb">
+    <Compile Include="DriveWatcher.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DriveWatcherControl\NativeForm.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="NotifyFormControl\FormTemplate.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NotifyFormControl\FormDesign.vb" />
-    <Compile Include="NotifyFormControl\FormStyle.vb" />
-    <Compile Include="NotifyFormControl\NotifyForm.Designer.vb">
+    <Compile Include="NotifyForm.Designer.vb">
       <DependentUpon>NotifyForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="NotifyFormControl\NotifyForm.vb">
+    <Compile Include="NotifyForm.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ProvideToolboxControlAttribute.vb" />
     <Compile Include="SchlumpfSoftControlsPackage.vb" />
+    <Compile Include="Test.vb">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -145,7 +135,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="AniGifControl\AniGif.resx">
+    <EmbeddedResource Include="AniGif.resx">
       <DependentUpon>AniGif.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
