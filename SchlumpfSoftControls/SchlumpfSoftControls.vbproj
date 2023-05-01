@@ -4,7 +4,7 @@
     <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <TargetFrameworkProfile />
-    <AssemblyVersion>1.2023.5.8</AssemblyVersion>
+    <AssemblyVersion>1.2023.5.9</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -87,12 +87,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AniGif.Designer.vb">
-      <DependentUpon>AniGif.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AniGif.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="DriveWatcher.Designer.vb">
       <DependentUpon>DriveWatcher.vb</DependentUpon>
     </Compile>
@@ -113,7 +107,7 @@
     </Compile>
     <Compile Include="ProvideToolboxControlAttribute.vb" />
     <Compile Include="SchlumpfSoftControlsPackage.vb" />
-    <Compile Include="Test.vb">
+    <Compile Include="AniGif.vb">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -135,9 +129,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="AniGif.resx">
-      <DependentUpon>AniGif.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
