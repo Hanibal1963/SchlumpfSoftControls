@@ -1,5 +1,9 @@
-﻿
-
+﻿'
+'****************************************************************************************************************
+'AniGif.vb
+'(c) 2023 by Andreas Sauer
+'****************************************************************************************************************
+'
 
 
 Imports System.ComponentModel
@@ -8,6 +12,12 @@ Imports System.Drawing
 Imports System.Windows.Forms
 
 
+''' <summary>
+''' Control zum anzeigen von animierten Grafiken.
+''' </summary>
+<ProvideToolboxControl("SchlumpfSoft Controls", False)>
+<Description("Control zum anzeigen von animierten Grafiken.")>
+<ToolboxItem(True)>
 Public Class AniGif : Inherits Control
 
 

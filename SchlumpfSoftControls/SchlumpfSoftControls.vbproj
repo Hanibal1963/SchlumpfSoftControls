@@ -4,7 +4,7 @@
     <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <TargetFrameworkProfile />
-    <AssemblyVersion>1.2023.5.9</AssemblyVersion>
+    <AssemblyVersion>1.2023.5.12</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -93,6 +93,9 @@
     <Compile Include="DriveWatcher.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="LineShape.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -105,7 +108,13 @@
     <Compile Include="NotifyForm.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="OvalShape.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ProvideToolboxControlAttribute.vb" />
+    <Compile Include="RectangleChape.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SchlumpfSoftControlsPackage.vb" />
     <Compile Include="AniGif.vb">
       <SubType>Component</SubType>

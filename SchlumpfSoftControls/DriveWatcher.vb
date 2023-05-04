@@ -7,13 +7,14 @@
 
 
 Imports System.ComponentModel
-Imports System.Drawing
 
-
+''' <summary>
+''' Steuerelement um die Laufwerke zu überwachen.
+''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-	<Description("Steuerelement um die Laufwerke zu überwachen.")>
-	<ToolboxItem(True)>
-	Public Class DriveWatcher
+<Description("Steuerelement um die Laufwerke zu überwachen.")>
+<ToolboxItem(True)>
+Public Class DriveWatcher
 
 
 		Private WithEvents _Form As New NativeForm
