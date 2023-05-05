@@ -1,11 +1,12 @@
 ﻿'
 '****************************************************************************************************************
-'OvalShape.vb
+'RectangleChape.vb
 '(c) 2023 by Andreas Sauer
 '****************************************************************************************************************
 '
 
 
+Imports System
 Imports System.ComponentModel
 Imports System.Diagnostics.CodeAnalysis
 Imports System.Drawing
@@ -14,19 +15,20 @@ Imports System.Windows.Forms
 
 
 ''' <summary>
-''' Control zum darstellen eines Kreises oder einer Elypse.
+''' Control zum darstellen eines Rechtecks.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Control zum darstellen eines Kreises oder einer Elypse.")>
+<Description("Control zum darstellen eines Rechtecks.")>
 <ToolboxItem(True)>
-Public Class OvalShape : Inherits Control
+Public Class RectangleShape : Inherits Control
 
 
 	Private _fillColor1 As Color = Color.White
 	Private _fillColor2 As Color = Color.Black
 	Private _fillStyle As FillStyles = FillStyles.None
-	Private _edgelineWidth As Integer = 1
-	Private _edgelineColor As Color = Color.Black
+	Private _borderlineWidth As Integer = 1
+	Private _borderlineColor As Color = Color.Black
+
 
 
 #Region "Aufzählungen"
@@ -168,7 +170,7 @@ Public Class OvalShape : Inherits Control
 
 
 	''' <summary>
-	''' Gibt die Breite der Randlinie zurück oder legt diese fest.
+	''' Gibt die Breite der Rahmenlinie zurück oder legt diese fest.
 	''' </summary>
 	''' <value>
 	''' Breite der Linie.
@@ -179,33 +181,33 @@ Public Class OvalShape : Inherits Control
 	''' </remarks>
 	<Browsable(True)>
 	<Category("Appearance")>
-	<Description("Gibt die Breite der Randlinie zurück oder legt diese fest.")>
-	Public Property EdgeLineWidth() As Integer
+	<Description("Gibt die Breite der Rahmenlinie zurück oder legt diese fest.")>
+	Public Property BorderLineWidth() As Integer
 		Get
-			Return _edgelineWidth
+			Return _borderlineWidth
 		End Get
 		Set(value As Integer)
-			_edgelineWidth = value
+			_borderlineWidth = value
 			Invalidate()
 		End Set
 	End Property
 
 
 	''' <summary>
-	''' Gibt die Farbe der Randlinie zurück oder legt diese fest.
+	''' Gibt die Farbe der Rahmenlinie zurück oder legt diese fest.
 	''' </summary>
 	''' <value>
 	''' Farbe der Linie.
 	''' </value>
 	<Browsable(True)>
 	<Category("Appearance")>
-	<Description("Gibt die Farbe der Randlinie zurück oder legt diese fest.")>
-	Public Property EdgeLineColor() As Color
+	<Description("Gibt die Farbe der Rahmenlinie zurück oder legt diese fest.")>
+	Public Property BorderLineColor() As Color
 		Get
-			Return _edgelineColor
+			Return _borderlineColor
 		End Get
 		Set(value As Color)
-			_edgelineColor = value
+			_borderlineColor = value
 			Invalidate()
 		End Set
 	End Property
@@ -455,33 +457,33 @@ Public Class OvalShape : Inherits Control
 
 			'Einfarbige Füllung
 			Case FillStyles.Solid
-				g.FillEllipse(New SolidBrush(_fillColor1), 1, 1, Width - 2, Height - 2)
+				g.FillRectangle(New SolidBrush(_fillColor1), 1, 1, Width - 2, Height - 2)
 				Exit Select
 
 			'Farbverlaufsfüllung von oben nach unten
 			Case FillStyles.Vertical
-				g.FillEllipse(New LinearGradientBrush(rect, _fillColor1, _fillColor2, LinearGradientMode.Vertical), rect)
+				g.FillRectangle(New LinearGradientBrush(rect, _fillColor1, _fillColor2, LinearGradientMode.Vertical), rect)
 				Exit Select
 
 			'Farbverlaufsfüllung von links nach rechts
 			Case FillStyles.Horizontal
-				g.FillEllipse(New LinearGradientBrush(rect, _fillColor1, _fillColor2, LinearGradientMode.Horizontal), rect)
+				g.FillRectangle(New LinearGradientBrush(rect, _fillColor1, _fillColor2, LinearGradientMode.Horizontal), rect)
 				Exit Select
 
 			'Farbverlaufsfüllung von oben links nach unten rechts
 			Case FillStyles.ForwardDiagonal
-				g.FillEllipse(New LinearGradientBrush(rect, _fillColor1, _fillColor2, LinearGradientMode.ForwardDiagonal), rect)
+				g.FillRectangle(New LinearGradientBrush(rect, _fillColor1, _fillColor2, LinearGradientMode.ForwardDiagonal), rect)
 				Exit Select
 
 			'Farbverlaufsfüllung von oben rechts nach unten links
 			Case FillStyles.BackwardDiagonal
-				g.FillEllipse(New LinearGradientBrush(rect, _fillColor1, _fillColor2, LinearGradientMode.BackwardDiagonal), rect)
+				g.FillRectangle(New LinearGradientBrush(rect, _fillColor1, _fillColor2, LinearGradientMode.BackwardDiagonal), rect)
 				Exit Select
 
 		End Select
 
 		'Umrandung zeichnen
-		g.DrawEllipse(New Pen(New SolidBrush(_edgelineColor), _edgelineWidth), rect)
+		g.DrawRectangle(New Pen(New SolidBrush(_borderlineColor), _borderlineWidth), rect)
 
 	End Sub
 

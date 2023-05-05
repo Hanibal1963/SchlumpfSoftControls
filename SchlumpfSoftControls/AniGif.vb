@@ -108,10 +108,10 @@ Public Class AniGif : Inherits Control
 #Region "ausgeblendete Eigenschaften"
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -125,10 +125,10 @@ Public Class AniGif : Inherits Control
 	End Property
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -142,10 +142,10 @@ Public Class AniGif : Inherits Control
 	End Property
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -159,10 +159,10 @@ Public Class AniGif : Inherits Control
 	End Property
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -176,10 +176,10 @@ Public Class AniGif : Inherits Control
 	End Property
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -193,10 +193,10 @@ Public Class AniGif : Inherits Control
 	End Property
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -210,10 +210,10 @@ Public Class AniGif : Inherits Control
 	End Property
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -227,10 +227,10 @@ Public Class AniGif : Inherits Control
 	End Property
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -244,10 +244,10 @@ Public Class AniGif : Inherits Control
 	End Property
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -261,10 +261,10 @@ Public Class AniGif : Inherits Control
 	End Property
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -278,10 +278,10 @@ Public Class AniGif : Inherits Control
 	End Property
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -296,10 +296,10 @@ Public Class AniGif : Inherits Control
 
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
@@ -331,10 +331,10 @@ Public Class AniGif : Inherits Control
 	End Property
 
 	''' <summary>
-	''' Diese Eigenschaft ist für diese Klasse nicht relevant.
+	''' 
 	''' </summary>
 	''' <remarks>
-	''' Eigenschaft ausgeblendet
+	''' Ausgeblendet da nicht relevant.
 	''' </remarks>
 	<Browsable(False)>
 	<EditorBrowsable(EditorBrowsableState.Never)>
