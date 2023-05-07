@@ -39,7 +39,7 @@ Public Class NotifyForm : Inherits Component
 	''' </summary>
 	<Browsable(True)>
 	<Category("Appearance")>
-	<Description("Legt den Benachrichtigungstext fest der angezeigt werden soll.")>
+	<Description("Legt den Benachrichtigungstext fest der angezeigt werden soll oder gibt diesen zurück.")>
 	Public Property Message As String
 
 
@@ -51,7 +51,7 @@ Public Class NotifyForm : Inherits Component
 	''' </remarks>
 	<Browsable(True)>
 	<Category("Behavior")>
-	<Description("Legt die Anzeigedauer des Benachrichtigungsfensters in ms fest. (Der Wert 0 deaktiviert das automatische schließen.)")>
+	<Description("Legt die Anzeigedauer des Benachrichtigungsfensters in ms fest oder gibt diese zurück. (Der Wert 0 deaktiviert das automatische schließen.)")>
 	Public Property ShowTime As Integer = 5000
 
 
@@ -60,7 +60,7 @@ Public Class NotifyForm : Inherits Component
 	''' </summary>
 	<Browsable(True)>
 	<Category("Appearance")>
-	<Description("Legt das anzuzeigende Symbol des Benachrichtigungsfensters fest.")>
+	<Description("Legt das anzuzeigende Symbol des Benachrichtigungsfensters fest oder gibt dieses zurück.")>
 	Public Property Style As FormStyle
 
 
@@ -69,7 +69,7 @@ Public Class NotifyForm : Inherits Component
 	''' </summary>
 	<Browsable(True)>
 	<Category("Appearance")>
-	<Description("Legt den Text der Titelzeile des Benachrichtigungsfensters fest.")>
+	<Description("Legt den Text der Titelzeile des Benachrichtigungsfensters fest oder gibt diesen zurück.")>
 	Public Property Title As String
 
 #End Region
@@ -81,6 +81,7 @@ Public Class NotifyForm : Inherits Component
 	''' Zeigt das Meldungsfenster an.
 	''' </summary>
 	Public Sub Show()
+
 		Dim _image As Image = SetFormImage()
 		FormTemplate.Image = _image
 		FormTemplate.Title = Title
@@ -105,6 +106,7 @@ Public Class NotifyForm : Inherits Component
 			Case FormDesign.Colorful : SetFormDesignColorful()
 			Case FormDesign.Dark : SetFormDesignDark()
 		End Select
+
 	End Sub
 
 
@@ -112,12 +114,14 @@ Public Class NotifyForm : Inherits Component
 	''' Setzt das Design auf Hell
 	''' </summary>
 	Private Shared Sub SetFormDesignBright()
+
 		FormTemplate.Background = Color.White
 		FormTemplate.TextField = Color.White
 		FormTemplate.TitleBar = Color.Gray
 		FormTemplate.Fontcolor = Color.Black
 		Dim ini As New FormTemplate
 		ini.Initialize()
+
 	End Sub
 
 
@@ -125,12 +129,14 @@ Public Class NotifyForm : Inherits Component
 	''' Setz das Design auf Farbig
 	''' </summary>
 	Private Shared Sub SetFormDesignColorful()
+
 		FormTemplate.Background = Color.LightBlue
 		FormTemplate.TextField = Color.LightBlue
 		FormTemplate.TitleBar = Color.LightSeaGreen
 		FormTemplate.Fontcolor = Color.White
 		Dim ini As New FormTemplate
 		ini.Initialize()
+
 	End Sub
 
 
@@ -138,12 +144,14 @@ Public Class NotifyForm : Inherits Component
 	''' Setz das Design auf Dunkel
 	''' </summary>
 	Private Shared Sub SetFormDesignDark()
+
 		FormTemplate.Background = Color.FromArgb(83, 79, 75)
 		FormTemplate.TextField = Color.FromArgb(83, 79, 75)
 		FormTemplate.TitleBar = Color.FromArgb(60, 57, 54)
 		FormTemplate.Fontcolor = Color.White
 		Dim ini As New FormTemplate
 		ini.Initialize()
+
 	End Sub
 
 
@@ -152,6 +160,7 @@ Public Class NotifyForm : Inherits Component
 	''' </summary>
 	''' <returns></returns>
 	Private Function SetFormImage() As Image
+
 		Select Case Style
 			Case FormStyle.CriticalError : Return My.Resources.NotifyForm_Error
 			Case FormStyle.Exclamation : Return My.Resources.NotifyForm_Warning
@@ -159,6 +168,7 @@ Public Class NotifyForm : Inherits Component
 			Case FormStyle.Question : Return My.Resources.NotifyForm_Question
 			Case Else : Return Nothing
 		End Select
+
 	End Function
 
 #End Region
@@ -235,6 +245,7 @@ Public Class NotifyForm : Inherits Component
 		Public Shared TitleBar As Color
 
 
+		'Controls
 		Private ReadOnly LblClose As New Label
 		Private ReadOnly LblTitle As New Label
 		Private ReadOnly PanelSpacer As New Panel
@@ -406,7 +417,7 @@ Public Class NotifyForm : Inherits Component
 				.Name = "LblClose"
 				.Size = New Size(14, 13)
 				.TabIndex = 1
-				.Text = My.Resources.NotifyFormCloseSymbol
+				.Text = "X"
 			End With
 
 		End Sub

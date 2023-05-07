@@ -55,7 +55,7 @@ Public Class AniGif : Inherits Control
 	''' </remarks>
 	<Browsable(True)>
 	<Category("Appearance")>
-	<Description("Gibt die animierte Gif-Grafik zurück oder legt diese fest.")>
+	<Description("Legt fest ob die Animation sofort nach dem laden gestartet wird.")>
 	Public Property Gif() As Bitmap
 		Get
 			Return _Gif
@@ -66,6 +66,7 @@ Public Class AniGif : Inherits Control
 		End Set
 	End Property
 
+
 	''' <summary>
 	''' Gibt die Art wie die Grafik angezeigt wird zurück oder legt diese fest.
 	''' </summary>
@@ -74,7 +75,7 @@ Public Class AniGif : Inherits Control
 	''' </remarks>
 	<Browsable(True)>
 	<Category("Behavior")>
-	<Description("Gibt die Art wie die Grafik angezeigt wird zurück oder legt diese fest.")>
+	<Description("Legt die animierte Gif-Grafik fest oder gibt diese zurück.")>
 	Public Property GifSizeMode() As SizeMode
 		Get
 			Return _GifSizeMode
@@ -85,6 +86,7 @@ Public Class AniGif : Inherits Control
 		End Set
 	End Property
 
+
 	''' <summary>
 	''' Legt fest ob die Animation sofort nach dem laden gestartet wird.
 	''' </summary>
@@ -92,7 +94,7 @@ Public Class AniGif : Inherits Control
 	''' </remarks>
 	<Browsable(True)>
 	<Category("Behavior")>
-	<Description("Legt fest ob die Animation sofort nach dem laden gestartet wird.")>
+	<Description("Legt die Art wie die Grafik angezeigt wird fest oder gibt diese zurück.")>
 	Public Property AutoPlay() As Boolean
 		Get
 			Return _AutoPlay

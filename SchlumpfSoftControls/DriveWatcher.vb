@@ -8,11 +8,12 @@
 
 Imports System.ComponentModel
 
+
 ''' <summary>
 ''' Steuerelement um die Laufwerke zu überwachen.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Steuerelement um die Laufwerke zu überwachen.")>
+<Description("Control zum überwachen der Laufwerke.")>
 <ToolboxItem(True)>
 Public Class DriveWatcher
 

@@ -13,7 +13,7 @@ Imports System.Windows.Forms
 
 
 ''' <summary>
-''' v
+''' Control zum darstellen einer Linie.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
 <Description("Control zum darstellen einer Linie.")>

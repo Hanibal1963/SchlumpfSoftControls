@@ -179,7 +179,7 @@ Public Class OvalShape : Inherits Control
 	''' </remarks>
 	<Browsable(True)>
 	<Category("Appearance")>
-	<Description("Gibt die Breite der Randlinie zurück oder legt diese fest.")>
+	<Description("Legt die Breite der Randlinie fest oder gibt diese zurück.")>
 	Public Property EdgeLineWidth() As Integer
 		Get
 			Return _edgelineWidth
@@ -199,7 +199,7 @@ Public Class OvalShape : Inherits Control
 	''' </value>
 	<Browsable(True)>
 	<Category("Appearance")>
-	<Description("Gibt die Farbe der Randlinie zurück oder legt diese fest.")>
+	<Description("Legt die Farbe der Randlinie fest oder gibt diese zurück.")>
 	Public Property EdgeLineColor() As Color
 		Get
 			Return _edgelineColor

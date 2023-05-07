@@ -109,14 +109,5 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die x ähnelt.
-        '''</summary>
-        Friend ReadOnly Property NotifyFormCloseSymbol() As String
-            Get
-                Return ResourceManager.GetString("NotifyFormCloseSymbol", resourceCulture)
-            End Get
-        End Property
     End Module
 End Namespace

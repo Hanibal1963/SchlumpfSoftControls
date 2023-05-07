@@ -6,9 +6,7 @@
 '
 
 
-Imports System
 Imports System.ComponentModel
-Imports System.Diagnostics.CodeAnalysis
 Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Imports System.Windows.Forms
@@ -89,6 +87,7 @@ Public Class RectangleShape : Inherits Control
 
 		'weitere Literatur:
 		'http://dotmad.blogspot.com/2007/11/five-steps-for-creating-transparent.html
+		'https://www.codeguru.com/dotnet/creating-a-net-transparent-panel/
 
 		SetStyle(ControlStyles.UserPaint, True)
 		SetStyle(ControlStyles.AllPaintingInWmPaint, True)
@@ -181,7 +180,7 @@ Public Class RectangleShape : Inherits Control
 	''' </remarks>
 	<Browsable(True)>
 	<Category("Appearance")>
-	<Description("Gibt die Breite der Rahmenlinie zurück oder legt diese fest.")>
+	<Description("Legt die Breite der Rahmenlinie fest oder gibt diese zurück.")>
 	Public Property BorderLineWidth() As Integer
 		Get
 			Return _borderlineWidth
@@ -201,7 +200,7 @@ Public Class RectangleShape : Inherits Control
 	''' </value>
 	<Browsable(True)>
 	<Category("Appearance")>
-	<Description("Gibt die Farbe der Rahmenlinie zurück oder legt diese fest.")>
+	<Description("Legt die Farbe der Rahmenlinie fest oder gibt diese zurück.")>
 	Public Property BorderLineColor() As Color
 		Get
 			Return _borderlineColor

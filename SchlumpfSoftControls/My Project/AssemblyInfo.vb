@@ -1,3 +1,4 @@
+Imports System.Resources
 Imports System.Reflection
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
@@ -8,9 +9,9 @@ Imports Microsoft.VisualBasic
 ' set of attributes. Change these attribute values to modify the information
 ' associated with an assembly.
 <Assembly: AssemblyTitle("SchlumpfSoftControls")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyDescription("Eine Sammlung verschiedener Controls")>
 <Assembly: AssemblyConfiguration("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyCompany("Andreas Sauer")>
 <Assembly: AssemblyProduct("SchlumpfSoftControls")>
 <Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
@@ -31,7 +32,8 @@ Imports Microsoft.VisualBasic
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 ' [assembly: AssemblyVersion("1.0.*")]
-<Assembly: AssemblyVersion("1.2023.5.21")>
-<Assembly: AssemblyFileVersion("1.2023.5.21")>
+<Assembly: AssemblyVersion("1.2023.5.36")>
+<Assembly: AssemblyFileVersion("1.2023.5.36")>
 
-<assembly: AssemblyInformationalVersion("0.2023.5.21")>
+<Assembly: AssemblyInformationalVersion("0.2023.5.36")>
+<Assembly: NeutralResourcesLanguage("")>
