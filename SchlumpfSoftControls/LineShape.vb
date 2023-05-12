@@ -24,6 +24,15 @@ Public Class LineShape : Inherits Control
 
 	Private _lineWidth As Integer = 1
 	Private _lineColor As Color = Color.Black
+	Private _drawmode As DrawModes = DrawModes.Horizontal
+
+
+	Public Enum DrawModes
+		Horizontal = 0
+		Vertical = 1
+		ForwardDiagonal = 2
+		BackwardDiagonal = 3
+	End Enum
 
 
 	Public Sub New()
@@ -86,6 +95,20 @@ Public Class LineShape : Inherits Control
 		End Get
 		Set(value As Color)
 			_lineColor = value
+			Invalidate()
+		End Set
+	End Property
+
+
+	<Browsable(True)>
+	<Category("Appearance")>
+	<Description("Gibt die Ausrichtung der Linie zurück oder legt diese fest.")>
+	Public Property DrawMode As DrawModes
+		Get
+			Return _drawmode
+		End Get
+		Set(value As DrawModes)
+			_drawmode = value
 			Invalidate()
 		End Set
 	End Property
@@ -325,7 +348,26 @@ Public Class LineShape : Inherits Control
 		Dim g As Graphics = e.Graphics
 		Dim rect As New Rectangle(1, 1, Width - 2, Height - 2)
 
-		'TODO: Code zum zeichnen einfügen
+		'Verzweigung für Ausrichtung
+		Select Case _drawmode
+
+			'Horizontale Linie
+			Case DrawModes.Horizontal
+				g.DrawLine(New Pen(New SolidBrush(_lineColor), _lineWidth), rect.X, rect.Y, rect.X + rect.Width, rect.Y)
+
+			'Vertikale Linie
+			Case DrawModes.Vertical
+				g.DrawLine(New Pen(New SolidBrush(_lineColor), _lineWidth), rect.X, rect.Y, rect.X, rect.Y + rect.Height)
+
+			 'Linie von oben links nach unten rechts
+			Case DrawModes.ForwardDiagonal
+				g.DrawLine(New Pen(New SolidBrush(_lineColor), _lineWidth), rect.X, rect.Y, rect.X + rect.Width, rect.Y + rect.Height)
+
+			'Linie von oben rechts nach unten links
+			Case DrawModes.BackwardDiagonal
+				g.DrawLine(New Pen(New SolidBrush(_lineColor), _lineWidth), rect.X, rect.Y + rect.Height, rect.X + rect.Width, rect.Y)
+
+		End Select
 
 
 
