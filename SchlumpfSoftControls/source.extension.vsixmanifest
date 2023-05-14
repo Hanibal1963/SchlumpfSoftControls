@@ -7,7 +7,7 @@
         <License>LICENSE.rtf</License>
         <ReleaseNotes>ReleaseNotes.rtf</ReleaseNotes>
         <Icon>PapaSchlumpf.ico</Icon>
-        <Tags>Controls, WindowsForms, animierte Grafiken, Laufwerke überwachen, Benachrichtigung </Tags>
+        <Tags>Controls, WindowsForms, animierte Grafiken, Laufwerke überwachen, Benachrichtigung,Line,Oval,Rectangle </Tags>
         <Preview>true</Preview>
     </Metadata>
     <Installation>

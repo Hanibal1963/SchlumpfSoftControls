@@ -486,6 +486,7 @@ Public Class RectangleShape : Inherits Control
 
 	End Sub
 
+
 #End Region
 
 
