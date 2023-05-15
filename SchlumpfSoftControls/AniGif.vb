@@ -9,6 +9,8 @@
 Imports System.ComponentModel
 Imports System.Diagnostics.CodeAnalysis
 Imports System.Drawing
+Imports System.Reflection
+Imports System.Resources
 Imports System.Windows.Forms
 
 

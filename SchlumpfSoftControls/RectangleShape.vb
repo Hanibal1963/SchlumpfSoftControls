@@ -7,6 +7,7 @@
 
 
 Imports System.ComponentModel
+Imports System.Diagnostics
 Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Imports System.Windows.Forms
@@ -75,6 +76,8 @@ Public Class RectangleShape : Inherits Control
 
 
 	Public Sub New()
+
+		Debug.Print(My.Application.Culture.Name)
 
 		'Stil und Verhalten des Steuerelements festlegen
 		InitializeStyles()
