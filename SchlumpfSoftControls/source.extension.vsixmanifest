@@ -4,6 +4,7 @@
         <Identity Id="SchlumpfSoftControls.ea4aa469-42b3-4a76-934d-7dd9940c8c92" Version="1.0.2023" Language="de-DE" Publisher="Andreas Sauer" />
         <DisplayName>SchlumpfSoftControls</DisplayName>
         <Description xml:space="preserve">Eine Sammlung verschiedener Controls</Description>
+        <MoreInfo>https://github.com/Hanibal1963/SchlumpfSoftControls</MoreInfo>
         <License>LICENSE.rtf</License>
         <ReleaseNotes>ReleaseNotes.rtf</ReleaseNotes>
         <Icon>PapaSchlumpf.ico</Icon>
