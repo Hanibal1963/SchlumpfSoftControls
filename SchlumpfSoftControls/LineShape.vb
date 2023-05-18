@@ -12,6 +12,7 @@ Imports System.Diagnostics.CodeAnalysis
 Imports System.Drawing
 Imports System.Windows.Forms
 
+Imports Microsoft.VisualBasic
 
 ''' <summary>
 ''' Control zum darstellen einer Linie.
@@ -59,6 +60,7 @@ Public Class LineShape : Inherits Control
 
 
 #Region "Eigenschaften"
+
 
 	''' <summary>
 	''' Gibt die Breite der Linie zurück oder legt diese fest.
