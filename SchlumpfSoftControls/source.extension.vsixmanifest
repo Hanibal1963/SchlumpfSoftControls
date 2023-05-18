@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="SchlumpfSoftControls.ea4aa469-42b3-4a76-934d-7dd9940c8c92" Version="1.0.2023" Language="de-DE" Publisher="Andreas Sauer" />
+        <Identity Id="SchlumpfSoftControls.ea4aa469-42b3-4a76-934d-7dd9940c8c92" Version="1.05.2023" Language="de-DE" Publisher="Andreas Sauer" />
         <DisplayName>SchlumpfSoftControls</DisplayName>
         <Description xml:space="preserve">Eine Sammlung verschiedener Controls</Description>
         <MoreInfo>https://github.com/Hanibal1963/SchlumpfSoftControls</MoreInfo>
         <License>LICENSE.rtf</License>
         <ReleaseNotes>ReleaseNotes.rtf</ReleaseNotes>
         <Icon>PapaSchlumpf.ico</Icon>
-        <Tags>Controls, WindowsForms, animierte Grafiken, Laufwerke überwachen, Benachrichtigung,Line,Oval,Rectangle </Tags>
+        <Tags>Controls, WindowsForms, animierte Grafiken, Laufwerke überwachen, Benachrichtigung</Tags>
         <Preview>true</Preview>
     </Metadata>
     <Installation>
