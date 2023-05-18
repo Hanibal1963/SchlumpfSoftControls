@@ -64,11 +64,8 @@
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\OvalShape.bmp" />
-    <EmbeddedResource Include="Resources\RectangleShape.bmp" />
     <EmbeddedResource Include="Resources\AniGif.bmp" />
     <EmbeddedResource Include="Resources\NotifyForm.bmp" />
-    <EmbeddedResource Include="Resources\LineShape.bmp" />
     <Content Include="Resources\NotifyForm_Error.png" />
     <Content Include="Resources\NotifyForm_Info.png" />
     <Content Include="Resources\NotifyForm_Question.png" />
@@ -98,9 +95,6 @@
     <Compile Include="DriveWatcher.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="LineShape.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -113,13 +107,7 @@
     <Compile Include="NotifyForm.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="OvalShape.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="ProvideToolboxControlAttribute.vb" />
-    <Compile Include="RectangleShape.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="SchlumpfSoftControlsPackage.vb" />
     <Compile Include="AniGif.vb">
       <SubType>Component</SubType>
