@@ -1,0 +1,17 @@
+﻿
+Versionshinweise
+----------------
+
+Version 2.2024.04.05
+Datum: 05.04.2024
+- Änderung des Repositorie zur besseren Verwaltung des Quellcodes.
+- Änderung der Versionsnummerierung wegen Problemen mit VisualStudio Marketplace.
+
+Version 1.2024.3103.0
+Datum: 31.03.2024 
+- Update Erste Release Version - Korrektur des Namespace
+
+Version 1.2024.3003.0
+Datum: 30.03.2024 
+- Erste Release Version
+

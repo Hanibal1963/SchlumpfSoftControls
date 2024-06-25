@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SchlumpfSoft.Controls.AniGifControl.AniGif">
+    <Position X="0.5" Y="0.5" Width="3.5" />
+    <Members>
+      <Field Name="_Autoplay" Hidden="true" />
+      <Field Name="_CustomDisplaySpeed" Hidden="true" />
+      <Field Name="_Dimension" Hidden="true" />
+      <Field Name="_Frame" Hidden="true" />
+      <Field Name="_FramesPerSecond" Hidden="true" />
+      <Field Name="_Gif" Hidden="true" />
+      <Field Name="_GifSizeMode" Hidden="true" />
+      <Field Name="_MaxFrame" Hidden="true" />
+      <Field Name="_ZoomFactor" Hidden="true" />
+      <Property Name="AllowDrop" Hidden="true" />
+      <Property Name="AutoScrollOffset" Hidden="true" />
+      <Property Name="AutoSize" Hidden="true" />
+      <Property Name="BackgroundImage" Hidden="true" />
+      <Property Name="BackgroundImageLayout" Hidden="true" />
+      <Method Name="CheckFramesPerSecondValue" Hidden="true" />
+      <Method Name="CheckZoomFactorValue" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Property Name="ContextMenuStrip" Hidden="true" />
+      <Method Name="CustomDisplaySpeedChanged" Hidden="true" />
+      <Property Name="Dock" Hidden="true" />
+      <Property Name="Font" Hidden="true" />
+      <Property Name="ForeColor" Hidden="true" />
+      <Method Name="GetRectStartPoint" Hidden="true" />
+      <Method Name="GetRectStartSize" Hidden="true" />
+      <Method Name="GifChange" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Method Name="InitializeStyles" Hidden="true" />
+      <Method Name="InitializeValues" Hidden="true" />
+      <Method Name="Initlayout" Hidden="true" />
+      <Property Name="MaximumSize" Hidden="true" />
+      <Property Name="MinimumSize" Hidden="true" />
+      <Method Name="OnNextFrame" Hidden="true" />
+      <Method Name="OnPaint" Hidden="true" />
+      <Property Name="Padding" Hidden="true" />
+      <Property Name="RightToLeft" Hidden="true" />
+      <Property Name="Text" Hidden="true" />
+      <Method Name="Tick" Hidden="true" />
+      <Field Name="Timer" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAWGERQAAAIECFBgAAKAgUACRgCiQAACAAIACACGQAI=</HashCode>
+      <FileName>AniGif.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SchlumpfSoft.Controls.AniGifControl.SizeMode">
+    <Position X="4.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEAAAAAAAAAAICAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SizeMode.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

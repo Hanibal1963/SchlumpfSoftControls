@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SchlumpfSoft.Controls.ShapeControl.Shape">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Members>
+      <Field Name="_DiagonalLineModus" Hidden="true" />
+      <Field Name="_FillColor" Hidden="true" />
+      <Field Name="_LineColor" Hidden="true" />
+      <Field Name="_LineWidth" Hidden="true" />
+      <Field Name="_ShapeModus" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Property Name="CreateParams" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Method Name="InitializeStyles" Hidden="true" />
+      <Method Name="InitializeVariables" Hidden="true" />
+      <Method Name="OnPaint" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AwDACQAEACAAAABAAACAgAAiAAACAAAGAAAAKAgHAAQ=</HashCode>
+      <FileName>Shape.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SchlumpfSoft.Controls.ShapeControl.DiagonalLineModes">
+    <Position X="3.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnumDefDiagonalLineModes.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SchlumpfSoft.Controls.ShapeControl.ShapeModes">
+    <Position X="6.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgCAAAAAAAAAAAAAAAAAAgQAAEAAMAAAAAAAA=</HashCode>
+      <FileName>EnumDefShapeModes.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

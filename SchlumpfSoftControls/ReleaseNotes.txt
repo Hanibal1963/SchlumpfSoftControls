@@ -1,0 +1,8 @@
+﻿
+Versionshinweise
+----------------
+
+Version 1.2024.24.06
+Datum: 24.06.2024
+- Zusammenfassung aller bisher erstellten Controls in einer Erweiterung.
+

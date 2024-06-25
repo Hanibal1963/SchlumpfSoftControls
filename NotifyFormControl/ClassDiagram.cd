@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SchlumpfSoft.Controls.NotifyFormControl.NotifyForm">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <Members>
+      <Method Name="SetFormDesign" Hidden="true" />
+      <Method Name="SetFormDesignBright" Hidden="true" />
+      <Method Name="SetFormDesignColorful" Hidden="true" />
+      <Method Name="SetFormDesignDark" Hidden="true" />
+      <Method Name="SetFormImage" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="SchlumpfSoft.Controls.NotifyFormControl.NotifyForm.FormTemplate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NotifyForm.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAACEAAACAAAAAAQAAEAAAABQEAoAAAAAA=</HashCode>
+      <FileName>NotifyForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SchlumpfSoft.Controls.NotifyFormControl.FormDesign">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAEAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>EnumDefFormDesign.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SchlumpfSoft.Controls.NotifyFormControl.FormStyle">
+    <Position X="3.5" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAQAAAAAACAA=</HashCode>
+      <FileName>EnumDefFormStyle.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

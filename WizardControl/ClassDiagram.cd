@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="SchlumpfSoft.Controls.WizardControl.Wizard">
+    <Position X="9" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="_ButtonHelpVisible" Hidden="true" />
+      <Field Name="_HeaderFont" Hidden="true" />
+      <Field Name="_HeaderTitleFont" Hidden="true" />
+      <Field Name="_ImageHeader" Hidden="true" />
+      <Field Name="_ImageWelcome" Hidden="true" />
+      <Field Name="_OffsetBack" Hidden="true" />
+      <Field Name="_OffsetCancel" Hidden="true" />
+      <Field Name="_OffsetNext" Hidden="true" />
+      <Field Name="_Pages" Hidden="true" />
+      <Field Name="_SelectedPage" Hidden="true" />
+      <Field Name="_WelcomeFont" Hidden="true" />
+      <Field Name="_WelcomeTitleFont" Hidden="true" />
+      <Method Name="ActivatePage" Hidden="true" />
+      <Field Name="ButtonBack" Hidden="true" />
+      <Method Name="ButtonBack_Click" Hidden="true" />
+      <Field Name="ButtonCancel" Hidden="true" />
+      <Method Name="ButtonCancel_Click" Hidden="true" />
+      <Field Name="ButtonHelp" Hidden="true" />
+      <Method Name="ButtonHelp_Click" Hidden="true" />
+      <Field Name="ButtonNext" Hidden="true" />
+      <Method Name="ButtonNext_Click" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="FocusFirstTabIndex" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Method Name="InitializeStyles" Hidden="true" />
+      <Method Name="InitializeVariables" Hidden="true" />
+      <Method Name="OnAfterSwitchPages" Hidden="true" />
+      <Method Name="OnBeforeSwitchPages" Hidden="true" />
+      <Method Name="OnCancel" Hidden="true" />
+      <Method Name="OnControlAdded" Hidden="true" />
+      <Method Name="OnFinish" Hidden="true" />
+      <Method Name="OnHelp" Hidden="true" />
+      <Method Name="OnLoad" Hidden="true" />
+      <Method Name="OnPaint" Hidden="true" />
+      <Method Name="OnResize" Hidden="true" />
+      <Property Name="SelectedIndex" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="SchlumpfSoft.Controls.WizardControl.Wizard.BeforeSwitchPagesEventHandler">
+        <TypeIdentifier>
+          <NewMemberFileName>Wizard.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="SchlumpfSoft.Controls.WizardControl.Wizard.AfterSwitchPagesEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Wizard.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ASCgESIMWCkKBEQgQCCCiAACJASiQAGKgoQAwAAiJig=</HashCode>
+      <FileName>Wizard.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchlumpfSoft.Controls.WizardControl.WizardPage">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <Members>
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Style" Hidden="true" />
+      <Field Name="_Title" Hidden="true" />
+      <Method Name="InitializeStyles" Hidden="true" />
+      <Method Name="OnPaint" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAgAEAAAAAAgAAAAIAAAAAEBAAAAAAAAAA=</HashCode>
+      <FileName>WizardPage.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchlumpfSoft.Controls.WizardControl.PageDesigner">
+    <Position X="6.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageDesigner.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchlumpfSoft.Controls.WizardControl.WizardDesigner">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <Members>
+      <Property Name="DrawGrid" Hidden="true" />
+      <Method Name="WndProc" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>WizardDesigner.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchlumpfSoft.Controls.WizardControl.PagesCollection">
+    <Position X="5" Y="3" Width="1.5" />
+    <Members>
+      <Field Name="_Owner" Hidden="true" />
+      <Method Name="New" Hidden="true" />
+      <Method Name="OnInsertComplete" Hidden="true" />
+      <Method Name="OnRemoveComplete" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEYAAEAAAAAAAAAQAAAAhAAEAAAAAAAAAAAAAAAUAAA=</HashCode>
+      <FileName>PagesCollection.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchlumpfSoft.Controls.WizardControl.PagesCollectionEditor">
+    <Position X="6.75" Y="3.5" Width="2" />
+    <Members>
+      <Field Name="_PageTypes" Hidden="true" />
+      <Method Name="CreateNewItemTypes" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PagesCollectionEditor.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchlumpfSoft.Controls.WizardControl.PageWelcome">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_Style" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>PageWelcome.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchlumpfSoft.Controls.WizardControl.PageStandard">
+    <Position X="2.25" Y="1.25" Width="1.75" />
+    <Members>
+      <Field Name="_Style" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>PageStandard.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchlumpfSoft.Controls.WizardControl.PageCustom">
+    <Position X="0.5" Y="3" Width="1.75" />
+    <Members>
+      <Field Name="_Style" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>PageCustom.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchlumpfSoft.Controls.WizardControl.PageFinish">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_Style" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>PageFinish.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchlumpfSoft.Controls.WizardControl.BeforeSwitchPagesEventArgs">
+    <Position X="2.5" Y="3" Width="2.25" />
+    <Members>
+      <Field Name="_Cancel" Hidden="true" />
+      <Method Name="New" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>BeforeSwitchPagesEventArgs.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchlumpfSoft.Controls.WizardControl.AfterSwitchPagesEventArgs">
+    <Position X="0.5" Y="5.25" Width="2.25" />
+    <Members>
+      <Field Name="_NewIndex" Hidden="true" />
+      <Field Name="_OldIndex" Hidden="true" />
+      <Method Name="New" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAEAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAQAAA=</HashCode>
+      <FileName>AfterSwitchPagesEventArgs.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SchlumpfSoft.Controls.WizardControl.PageStyle">
+    <Position X="3.25" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAgAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>PageStyle.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
