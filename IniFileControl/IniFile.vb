@@ -791,9 +791,6 @@ Public Class IniFile : Inherits Component
     ''' <summary>
     ''' Analysiert eine Zeile.
     ''' </summary>
-    ''' <param name="CurrentSectionName">
-    ''' Name des aktuellen Abschnitts
-    ''' </param>
     ''' <param name="LineContent">
     ''' Zeileninhalt
     ''' </param>

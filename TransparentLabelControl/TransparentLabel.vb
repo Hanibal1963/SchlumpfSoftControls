@@ -34,8 +34,8 @@ Public Class TransparentLabel : Inherits Label
 #Region "ausgeblendete Eigenschaften"
 
     ''' <summary>Nicht Relevant</summary>
-    '<Browsable(False)>
-    '<EditorBrowsable(EditorBrowsableState.Never)>
+    <Browsable(False)>
+    <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackColor As Color
         Get
             Return MyBase.BackColor
@@ -105,12 +105,14 @@ Public Class TransparentLabel : Inherits Label
     End Sub
 
 
-    ''' <summary>Das Steuerelement überschreibt den Löschvorgang zum Bereinigen der Komponentenliste.</summary>
+    ''' <summary>
+    ''' Das Steuerelement überschreibt den Löschvorgang zum Bereinigen der Komponentenliste.
+    ''' </summary>
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
+            If disposing AndAlso Me.components IsNot Nothing Then
+                Me.components.Dispose()
             End If
         Finally
             MyBase.Dispose(disposing)
@@ -125,7 +127,7 @@ Public Class TransparentLabel : Inherits Label
     ''' </summary>
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        components = New Container()
+        Me.components = New Container()
     End Sub
 
 

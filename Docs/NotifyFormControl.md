@@ -2,6 +2,8 @@
 
 Dient zum Anzeigen von Benachrichtigungsfenstern.
 
+---
+
 ## Einführung
 
 Der ursprüngliche Code zu diesem Projekt stammt aus den Tiefen des Internets.
@@ -9,6 +11,8 @@ Der ursprüngliche Code zu diesem Projekt stammt aus den Tiefen des Internets.
 Leider ist die Quelle offensichtlich nicht mehr verfügbar.
 
 Falls jemand die ursprüngliche Quelle kennt oder finden sollte, dann bitte eine Nachricht an mich damit ich diese hier benennen kann.
+
+---
 
 ## Eigenschaften
 
@@ -18,13 +22,19 @@ Falls jemand die ursprüngliche Quelle kennt oder finden sollte, dann bitte eine
 -  **Title** - Text der Titelzeile
 -  **Message** - Mitteilungstext
 
+---
+
 ## Funktionen
 
 -  **Show** - Zeigt das Fenster an
 
+---
+
 ## geplante Änderungen und Funktionen
 
-Im Moment keine
+- Im Moment keine
+
+---
 
 ## Weitere Literatur
 
@@ -32,3 +42,30 @@ Im Moment keine
 - [Infos zur ControlStyles Enumeration](https://learn.microsoft.com/de-de/dotnet/api/system.windows.forms.controlstyles?redirectedfrom=MSDN&view=netframework-4.7.2)
 - [Control-Techniken: Eigenes Toolboxicon für Steuerelement](https://www.vb-paradise.de/index.php/Thread/123746-Control-Techniken-Eigenes-Toolboxicon-f%C3%BCr-Steuerelement/)
 
+---
+
+## Versionsverlauf
+
+Version 2.2024.30.06
+
+Datum: 30.06.2024
+
+- Veröffentlichung im Bündel mit anderen Controls.
+
+Version 2.2024.04.06
+
+Datum: 06.04.2024
+
+- Änderung der Versionsnummerierung wegen Problemen mit dem VisualStudio Marketplace.
+
+Version 1.2024.0404.00
+
+Datum: 04.04.2024
+
+- Änderung des Repositorie zur besseren Verwaltung des Quellcodes.
+
+Version 1.2024.0128.00
+
+Datum 28.01.2024
+ 
+- Erstveröffentlichung

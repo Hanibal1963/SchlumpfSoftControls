@@ -596,7 +596,7 @@ Public Class AniGif : Inherits Control
     ''' </param>
     ''' <param name="Zoom">
     ''' Zoomwert
-    ''' param>
+    ''' </param>
     Private Function GetRectStartSize(
                                 Mode As SizeMode, Control As AniGif,
                                 Gif As Bitmap, Zoom As Decimal) As Size

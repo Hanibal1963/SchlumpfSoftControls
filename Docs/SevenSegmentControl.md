@@ -97,4 +97,18 @@ Die Bibliothek SevenSegmentControl umfasst folgende Komponenten:
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](https://learn.microsoft.com/de-de/dotnet/desktop/winforms/controls/developing-custom-windows-forms-controls?view=netframeworkdesktop-4.8)
 - [Control-Techniken: Eigenes Toolboxicon für Steuerelement](https://www.vb-paradise.de/index.php/Thread/123746-Control-Techniken-Eigenes-Toolboxicon-f%C3%BCr-Steuerelement/)
 
+---
 
+## Versionsverlauf
+
+Version 2.2024.30.06
+
+Datum: 30.06.2024
+
+- Veröffentlichung im Bündel mit anderen Controls.
+
+Version 1.2024.06.04
+
+Datum 04.06.2024
+
+- Erstveröffentlichung

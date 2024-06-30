@@ -2,16 +2,14 @@
 
 Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.
 
->Hinweis:
->
->Dieses Steuerelement befindet sich noch in der Entwicklungsphase.
-
 ---
 
 ## Einführung
 
 Dieses Steuerelement wurde von mir als Ersatz des ShapeControls aus VisualBasic 6 erstellt,
 da dieses als veraltet gekennzeichnet ist und nicht mehr verwendet werden sollte.
+
+---
 
 ## Eigenschaften
 
@@ -27,6 +25,12 @@ links oben nach rechts unten gezeichnet wird oder umgekehrt.
 
 ---
 
+ ## geplante Änderungen und Funktionen
+
+- Zurzeit keine.
+
+---
+
 ## weitere Literatur
 
 - [Erstellen eines Windows Forms-Toolbox-Steuerelements](https://docs.microsoft.com/de-de/visualstudio/extensibility/creating-a-windows-forms-toolbox-control?view=vs-2022)
@@ -37,7 +41,16 @@ links oben nach rechts unten gezeichnet wird oder umgekehrt.
 
 ---
 
-## geplante Änderungen und Funktionen
+## Versionsverlauf
 
-Zurzeit keine.
+Version 2.2024.30.06
 
+Datum: 30.06.2024
+
+- Veröffentlichung im Bündel mit anderen Controls.
+
+Version 1.2024.06.04
+
+Datum 04.06.2024
+
+- Erstveröffentlichung

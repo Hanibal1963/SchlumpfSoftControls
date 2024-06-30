@@ -52,9 +52,7 @@ Die Eigenschaft **"GifSizeMode"** kann folgende Werte annehmen:
 
 ## geplante Änderungen und Funktionen
 
-- [X] Funktion für das festlegen einer benutzerdefinierten Anzeigegeschwindigkeit.
-- [X] Funktion für das ändern des Zoomfaktor wenn der Anzeigemodus Zoom ist.
-- [x] Funktion zum gefüllten Anzeigen der Grafik unabhängig von der Originalgröße.
+- Zurzeit keine.
 
 ---
 
@@ -65,4 +63,12 @@ Die Eigenschaft **"GifSizeMode"** kann folgende Werte annehmen:
 -  [Control-Techniken: Eigenes Toolboxicon für Steuerelement](https://www.vb-paradise.de/index.php/Thread/123746-Control-Techniken-Eigenes-Toolboxicon-f%C3%BCr-Steuerelement/)
 -  [FrameDelays von animierter GIF](https://foren.activevb.de/archiv/vb-net/thread-93030/beitrag-93069/FrameDelays-von-animierter-GIF/)
 
+---
 
+## Versionsverlauf
+
+Version 2.2024.30.06
+
+Datum: 30.06.2024
+
+- Veröffentlichung im Bündel mit anderen Controls.
