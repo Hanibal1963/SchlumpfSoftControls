@@ -12,3 +12,22 @@ Zurzeit sind folgende Steuerelemente vorhanden:
 - [ShapeControl](./Docs/ShapeControl.md) - Ein Control zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.([Der ursprüngliche Code wurde ins Archiv verschoben](https://github.com/Hanibal1963/ShapeControl))
 - [TransparentLabelControl](./Docs/TransparentLabelControl.md) - Ein Control zum Anzeigen eines Textes mit durchscheinendem Hintergrund.([Der ursprüngliche Code wurde ins Archiv verschoben](https://github.com/Hanibal1963/TransparenLabelControl))
 - **NEU** [SevenSegmentControl](./Docs/SevenSegmentControl.md) - Ein Control zum Anzeigen von Zeichen als 7-Segmentanzeige (Entwurf) 
+
+---
+
+## Versionsverlauf
+
+**Version 2.2024.30.06**
+
+Datum: 30.06.2024
+
+- Versionsnummern der Controls angepasst.
+- Dokumentationsdateien angepasst.
+
+**Version 1.2024.06.24**
+
+Datum: 24.06.2024
+
+- Zusammenfassung aller bisher erstellten Controls in einer Erweiterung.
+- Erstes Release dieser Fassung.
+
