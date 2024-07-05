@@ -5,8 +5,6 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AniGifControl", "AniGifControl\AniGifControl.vbproj", "{98546338-1A3F-47BF-B195-5B25A19C4DFA}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AniGifTest", "AniGifTest\AniGifTest.vbproj", "{A48AA9C8-EF86-4CB0-9747-63814581427B}"
-EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DriveWatcherControl", "DriveWatcherControl\DriveWatcherControl.vbproj", "{FBA9160F-6F7D-4182-982C-5DF153309F33}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DriveWatcherTest", "DriveWatcherTest\DriveWatcherTest.vbproj", "{14541708-ABE6-480E-853B-2718EC4C0D70}"
@@ -62,6 +60,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SevenSegmentControlTest", "
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SchlumpfSoftControls", "SchlumpfSoftControls\SchlumpfSoftControls.vbproj", "{B69644FD-D04B-492F-A241-A03BAD3F6FAB}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestApp", "TestApp\TestApp.vbproj", "{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,18 +84,6 @@ Global
 		{98546338-1A3F-47BF-B195-5B25A19C4DFA}.Release|arm64.Build.0 = Release|arm64
 		{98546338-1A3F-47BF-B195-5B25A19C4DFA}.Release|x86.ActiveCfg = Release|x86
 		{98546338-1A3F-47BF-B195-5B25A19C4DFA}.Release|x86.Build.0 = Release|x86
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Debug|arm64.ActiveCfg = Debug|Any CPU
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Debug|arm64.Build.0 = Debug|Any CPU
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Debug|x86.Build.0 = Debug|Any CPU
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Release|arm64.ActiveCfg = Release|Any CPU
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Release|arm64.Build.0 = Release|Any CPU
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Release|x86.ActiveCfg = Release|Any CPU
-		{A48AA9C8-EF86-4CB0-9747-63814581427B}.Release|x86.Build.0 = Release|Any CPU
 		{FBA9160F-6F7D-4182-982C-5DF153309F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FBA9160F-6F7D-4182-982C-5DF153309F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBA9160F-6F7D-4182-982C-5DF153309F33}.Debug|arm64.ActiveCfg = Debug|arm64
@@ -276,6 +264,18 @@ Global
 		{B69644FD-D04B-492F-A241-A03BAD3F6FAB}.Release|arm64.Build.0 = Release|arm64
 		{B69644FD-D04B-492F-A241-A03BAD3F6FAB}.Release|x86.ActiveCfg = Release|x86
 		{B69644FD-D04B-492F-A241-A03BAD3F6FAB}.Release|x86.Build.0 = Release|x86
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Debug|arm64.ActiveCfg = Debug|Any CPU
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Debug|arm64.Build.0 = Debug|Any CPU
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Debug|x86.Build.0 = Debug|Any CPU
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Release|arm64.ActiveCfg = Release|Any CPU
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Release|arm64.Build.0 = Release|Any CPU
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Release|x86.ActiveCfg = Release|Any CPU
+		{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
