@@ -7,8 +7,6 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AniGifControl", "AniGifCont
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DriveWatcherControl", "DriveWatcherControl\DriveWatcherControl.vbproj", "{FBA9160F-6F7D-4182-982C-5DF153309F33}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DriveWatcherTest", "DriveWatcherTest\DriveWatcherTest.vbproj", "{14541708-ABE6-480E-853B-2718EC4C0D70}"
-EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IniFileControl", "IniFileControl\IniFileControl.vbproj", "{1D25B863-7D2E-4748-AEB5-71AF873907A2}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IniFileTest", "IniFileTest\IniFileTest.vbproj", "{32D376EF-EE8A-45F2-936D-142C0CF04D50}"
@@ -96,18 +94,6 @@ Global
 		{FBA9160F-6F7D-4182-982C-5DF153309F33}.Release|arm64.Build.0 = Release|arm64
 		{FBA9160F-6F7D-4182-982C-5DF153309F33}.Release|x86.ActiveCfg = Release|x86
 		{FBA9160F-6F7D-4182-982C-5DF153309F33}.Release|x86.Build.0 = Release|x86
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Debug|arm64.ActiveCfg = Debug|Any CPU
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Debug|arm64.Build.0 = Debug|Any CPU
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Debug|x86.Build.0 = Debug|Any CPU
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Release|arm64.ActiveCfg = Release|Any CPU
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Release|arm64.Build.0 = Release|Any CPU
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Release|x86.ActiveCfg = Release|Any CPU
-		{14541708-ABE6-480E-853B-2718EC4C0D70}.Release|x86.Build.0 = Release|Any CPU
 		{1D25B863-7D2E-4748-AEB5-71AF873907A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1D25B863-7D2E-4748-AEB5-71AF873907A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D25B863-7D2E-4748-AEB5-71AF873907A2}.Debug|arm64.ActiveCfg = Debug|arm64
