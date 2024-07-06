@@ -109,6 +109,12 @@
     <Compile Include="FormNotifyFormControl.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormSevenSegmentControl.Designer.vb">
+      <DependentUpon>FormSevenSegmentControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSevenSegmentControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNotifyFormControl.resx">
       <DependentUpon>FormNotifyFormControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSevenSegmentControl.resx">
+      <DependentUpon>FormSevenSegmentControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
