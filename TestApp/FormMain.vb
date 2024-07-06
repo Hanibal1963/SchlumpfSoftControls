@@ -21,14 +21,16 @@ Public Class FormMain
 
         'welcher Button wurde geklickt?
         Select Case True
+
             Case sender Is Me.ButtonAniGif : result = My.Forms.FormAniGifControl.ShowDialog(Me)
             Case sender Is Me.ButtonDriveWatcher : result = My.Forms.FormDriveWatcherControl.ShowDialog(Me)
             Case sender Is Me.ButtonIniFilecontrol : result = My.Forms.FormIniFileControl.ShowDialog(Me)
-            Case sender Is Me.ButtonNotifyFormControl
+            Case sender Is Me.ButtonNotifyFormControl : result = My.Forms.FormNotifyFormControl.ShowDialog(Me)
             Case sender Is Me.ButtonSevenSegmentControl
             Case sender Is Me.ButtonShapeControl
             Case sender Is Me.ButtonTransparentLabelControl
             Case sender Is Me.ButtonWizardControl
+
         End Select
 
 
