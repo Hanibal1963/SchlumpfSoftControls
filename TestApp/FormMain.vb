@@ -17,11 +17,13 @@ Public Class FormMain
         ButtonTransparentLabelControl.Click,
         ButtonShapeControl.Click
 
+        Dim result As DialogResult
+
         'welcher Button wurde geklickt?
         Select Case True
-            Case sender Is Me.ButtonAniGif : My.Forms.FormAniGifControl.Show(Me)
-            Case sender Is Me.ButtonDriveWatcher : My.Forms.FormDriveWatcherControl.Show(Me)
-            Case sender Is Me.ButtonIniFilecontrol
+            Case sender Is Me.ButtonAniGif : result = My.Forms.FormAniGifControl.ShowDialog(Me)
+            Case sender Is Me.ButtonDriveWatcher : result = My.Forms.FormDriveWatcherControl.ShowDialog(Me)
+            Case sender Is Me.ButtonIniFilecontrol : result = My.Forms.FormIniFileControl.ShowDialog(Me)
             Case sender Is Me.ButtonNotifyFormControl
             Case sender Is Me.ButtonSevenSegmentControl
             Case sender Is Me.ButtonShapeControl

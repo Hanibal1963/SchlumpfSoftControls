@@ -173,6 +173,8 @@ Partial Class FormAniGifControl
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormAniGifControl"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "AniGif - Control -Test"
         CType(Me.NumericUpDown_ZoomFactor, System.ComponentModel.ISupportInitialize).EndInit()

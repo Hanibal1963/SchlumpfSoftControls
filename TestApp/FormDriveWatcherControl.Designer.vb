@@ -59,6 +59,8 @@ Partial Class FormDriveWatcherControl
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormDriveWatcherControl"
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "DriveWatcher - Control - Test"
         Me.ResumeLayout(False)
