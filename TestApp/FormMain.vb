@@ -41,7 +41,7 @@ Public Class FormMain
                 result = My.Forms.FormShapeControl.ShowDialog(Me)
 
             Case sender Is Me.ButtonTransparentLabelControl
-
+                result = My.Forms.FormTransparentLabelControl.ShowDialog(Me)
 
             Case sender Is Me.ButtonWizardControl
 
