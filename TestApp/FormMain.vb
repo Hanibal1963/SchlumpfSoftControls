@@ -38,7 +38,7 @@ Public Class FormMain
                 result = My.Forms.FormSevenSegmentControl.ShowDialog(Me)
 
             Case sender Is Me.ButtonShapeControl
-
+                result = My.Forms.FormShapeControl.ShowDialog(Me)
 
             Case sender Is Me.ButtonTransparentLabelControl
 

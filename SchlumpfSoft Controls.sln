@@ -13,8 +13,6 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NotifyFormControl", "Notify
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ShapeControl", "ShapeControl\ShapeControl.vbproj", "{0BA96D2E-8DDC-4526-9804-6C91318C6A54}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ShapeControlTest", "ShapeControlTest\ShapeControlTest.vbproj", "{94A1CD16-5292-42A7-958A-7524644629DB}"
-EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TransparentLabelControl", "TransparentLabelControl\TransparentLabelControl.vbproj", "{5CAFFCBA-8E8D-4E9E-8D0E-8E5FF0C4785D}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TransparentLabelTest", "TransparentLabelTest\TransparentLabelTest.vbproj", "{2E3F1B08-B4A2-4905-A23E-8FD64ACC99BB}"
@@ -124,18 +122,6 @@ Global
 		{0BA96D2E-8DDC-4526-9804-6C91318C6A54}.Release|arm64.Build.0 = Release|arm64
 		{0BA96D2E-8DDC-4526-9804-6C91318C6A54}.Release|x86.ActiveCfg = Release|x86
 		{0BA96D2E-8DDC-4526-9804-6C91318C6A54}.Release|x86.Build.0 = Release|x86
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Debug|arm64.ActiveCfg = Debug|Any CPU
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Debug|arm64.Build.0 = Debug|Any CPU
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Debug|x86.Build.0 = Debug|Any CPU
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Release|arm64.ActiveCfg = Release|Any CPU
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Release|arm64.Build.0 = Release|Any CPU
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Release|x86.ActiveCfg = Release|Any CPU
-		{94A1CD16-5292-42A7-958A-7524644629DB}.Release|x86.Build.0 = Release|Any CPU
 		{5CAFFCBA-8E8D-4E9E-8D0E-8E5FF0C4785D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5CAFFCBA-8E8D-4E9E-8D0E-8E5FF0C4785D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CAFFCBA-8E8D-4E9E-8D0E-8E5FF0C4785D}.Debug|arm64.ActiveCfg = Debug|arm64
