@@ -44,7 +44,7 @@ Public Class FormMain
                 result = My.Forms.FormTransparentLabelControl.ShowDialog(Me)
 
             Case sender Is Me.ButtonWizardControl
-
+                result = My.Forms.FormWizardControl.ShowDialog(Me)
 
         End Select
 
