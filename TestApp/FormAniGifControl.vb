@@ -6,6 +6,8 @@
 
 
 
+Imports SchlumpfSoft.Controls.AniGifControl
+
 Public Class FormAniGifControl
 
 
@@ -149,7 +151,7 @@ Public Class FormAniGifControl
     End Sub
 
 
-    Private Sub AniGif1_NoAnimation(sender As Object, e As EventArgs) Handles _
+    Private Sub AniGif1_NoAnimation(sender As Object, e As NoAnimationEventArgs) Handles _
         AniGif1.NoAnimation
 
         Dim prompt As String = $"Das Bild kann nicht animiert werden."
