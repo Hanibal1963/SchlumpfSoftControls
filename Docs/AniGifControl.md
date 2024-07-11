@@ -67,6 +67,13 @@ Die Eigenschaft **"GifSizeMode"** kann folgende Werte annehmen:
 
 ## Versionsverlauf
 
+Version 2.2024.11.07
+
+Datum: 11.07.2024
+
+- Kleinere Änderungen am Code (Achtung! Das Ereignis "NoAnimation" weist ein geändertes Verhlten auf.)
+
+
 Version 2.2024.30.06
 
 Datum: 30.06.2024
