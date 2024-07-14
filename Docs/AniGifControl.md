@@ -71,7 +71,7 @@ Version 2.2024.11.07
 
 Datum: 11.07.2024
 
-- Kleinere Änderungen am Code (Achtung! Das Ereignis "NoAnimation" weist ein geändertes Verhlten auf.)
+- Kleinere Änderungen am Code (Achtung! Das Ereignis "NoAnimation" weist ein geändertes Verhalten auf.)
 
 
 Version 2.2024.30.06
