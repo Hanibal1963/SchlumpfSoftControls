@@ -46,25 +46,31 @@ Falls jemand die ursprüngliche Quelle kennt oder finden sollte, dann bitte eine
 
 ## Versionsverlauf
 
-Version 2.2024.30.06
+**Version 2.2024.14.07**
+
+Datum: 14.07.2024
+
+- Die Auflistungen **FormDesign** und **FormStyle** sowie die Klassenvorlage **FormTemplate** wurden in eigene Dateien ausgelagert.
+
+**Version 2.2024.30.06**
 
 Datum: 30.06.2024
 
 - Veröffentlichung im Bündel mit anderen Controls.
 
-Version 2.2024.04.06
+**Version 2.2024.04.06**
 
 Datum: 06.04.2024
 
 - Änderung der Versionsnummerierung wegen Problemen mit dem VisualStudio Marketplace.
 
-Version 1.2024.0404.00
+**Version 1.2024.0404.00**
 
 Datum: 04.04.2024
 
 - Änderung des Repositorie zur besseren Verwaltung des Quellcodes.
 
-Version 1.2024.0128.00
+**Version 1.2024.0128.00**
 
 Datum 28.01.2024
  
