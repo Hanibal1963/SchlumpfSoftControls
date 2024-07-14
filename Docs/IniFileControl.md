@@ -166,50 +166,54 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 
 ## Versionsverlauf
 
-Version 2.2024.30.06
+**Version 2.2024.14.07**
+
+- Layoutfehler in **IniFileCommentEdit**, **IniFileEntryValueEdit** und **IniFileListEdit** beseitigt.
+
+**Version 2.2024.30.06**
 
 Datum: 30.06.2024
 
 - Veröffentlichung im Bündel mit anderen Controls.
 
-Version 2.2024.06.03
+**Version 2.2024.06.03**
 
 Datum: 03.06.2024
 
 - Fehlerhafte Links in der Beschreibung korrigiert.
 
-Version 2.2024.05.01
+**Version 2.2024.05.01**
 
 Datum: 01.05.2024
 
 - Steuerelement zum Anzeigen des Dateiinhaltes hinzugefügt.
 
-Version 2.2024.04.14
+**Version 2.2024.04.14**
 
 Datum: 14.04.2024
 
 - Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI-Datei hinzugefügt.
 - Steuerelement zum Anzeigen und Bearbeiten des Eintragswertes einer INI-Datei hinzugefügt.
 
-Version 2.2024.04.12
+**Version 2.2024.04.12**
 
 Datum: 12.04.2024
 
 - Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI-Datei hinzugefügt.
 
-Version 2.2024.04.06
+**Version 2.2024.04.06**
 
 Datum: 06.04.2024
 
 - Änderung der Versionsnummerierung wegen Problemen mit dem VisualStudio Marketplace.
 
-Version 1.2024.0404.00
+**Version 1.2024.0404.00**
 
 Datum: 04.04.2024
 
 - Änderung des Repositorie zur besseren Verwaltung des Quellcodes.
 
-Version 1.2024.0303.0
+**Version 1.2024.0303.0**
 
 Datum 03.03.2024
  

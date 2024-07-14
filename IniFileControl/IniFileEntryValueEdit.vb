@@ -9,14 +9,18 @@ Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
+
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
 <Description("Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.")>
 <ToolboxItem(True)>
-<ToolboxBitmap(GetType(IniFileEntryValueEdit), "IniFileEntryValueEdit.bmp")>
-Public Class IniFileEntryValueEdit : Inherits GroupBox
+<System.Drawing.ToolboxBitmap(GetType(IniFileEntryValueEdit), "IniFileEntryValueEdit.bmp")>
+Public Class IniFileEntryValueEdit
+
+
+    Inherits GroupBox
 
 
 #Region "Definition der Variablen"
@@ -79,34 +83,43 @@ Public Class IniFileEntryValueEdit : Inherits GroupBox
 
 
     Public Sub New()
+
+        'Komponenten erstellen
         Me.InitializeComponent()
+
+        'Komponenten anpassen
+        Me.TextBox.Size = New System.Drawing.Size(Me.Width - 12, 20)
+        Me.Button.Location = New System.Drawing.Point(Me.TextBox.Width - Me.Button.Width, Me.TextBox.Top + Me.TextBox.Height + 6)
+
     End Sub
 
 
     Private Sub InitializeComponent()
-        Me.Button = New Button()
-        Me.TextBox = New TextBox()
+
+        Me.Button = New System.Windows.Forms.Button()
+        Me.TextBox = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Button
         '
-        Me.Button.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Me.Button.Anchor = System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right
+        Me.Button.AutoSize = True
         Me.Button.Enabled = False
-        Me.Button.Location = New Point(Me.Width - 90, 45)
+        Me.Button.Location = New System.Drawing.Point(0, 0)
         Me.Button.Name = "Button"
-        Me.Button.Size = New Size(84, 24)
+        Me.Button.Size = New System.Drawing.Size(84, 24)
         Me.Button.TabIndex = 5
         Me.Button.Text = "übernehmen"
         Me.Button.UseVisualStyleBackColor = True
         '
         'TextBox
         '
-        Me.TextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        Me.TextBox.BorderStyle = BorderStyle.FixedSingle
-        Me.TextBox.Location = New Point(6, 19)
+        Me.TextBox.Anchor = System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left _
+            Or System.Windows.Forms.AnchorStyles.Right
+        Me.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox.Location = New System.Drawing.Point(6, 19)
         Me.TextBox.Name = "TextBox"
-        Me.TextBox.ScrollBars = ScrollBars.Both
-        Me.TextBox.Size = New Size(Me.Width - 12, 20)
+        Me.TextBox.Size = New System.Drawing.Size(100, 20)
         Me.TextBox.TabIndex = 0
         Me.TextBox.WordWrap = False
         '
@@ -115,6 +128,8 @@ Public Class IniFileEntryValueEdit : Inherits GroupBox
         Me.Controls.Add(Me.TextBox)
         Me.Controls.Add(Me.Button)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
 

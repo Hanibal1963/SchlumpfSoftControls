@@ -8,6 +8,7 @@ Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
+
 ''' <summary>
 ''' Steuerelement zum Anzeigen des Dateiinhaltes.
 ''' </summary>
@@ -15,12 +16,18 @@ Imports System.Windows.Forms
 <Description("Steuerelement zum Anzeigen des Dateiinhaltes.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileContentView), "IniFileContentView.bmp")>
-Public Class IniFileContentView : Inherits GroupBox
+Public Class IniFileContentView
+
+
+    Inherits GroupBox
+
 
     Private WithEvents TextBox As TextBox
     Private _Lines As String()
 
+
     Private Event PropLinesChanged()
+
 
     Public Sub New()
 
@@ -28,6 +35,7 @@ Public Class IniFileContentView : Inherits GroupBox
         Me.InitializeComponent()
 
     End Sub
+
 
     ''' <summary>
     ''' Setzt Dateiinhalt
@@ -43,12 +51,14 @@ Public Class IniFileContentView : Inherits GroupBox
         End Set
     End Property
 
+
     Private Sub IniFileContentView_LinesChanged() Handles _
         Me.PropLinesChanged
 
         Me.TextBox.Lines = Me._Lines
 
     End Sub
+
 
     Private Sub InitializeComponent()
         Me.TextBox = New TextBox()
@@ -61,7 +71,7 @@ Public Class IniFileContentView : Inherits GroupBox
         Me.TextBox.Location = New Point(6, 19)
         Me.TextBox.Name = "TextBox"
         Me.TextBox.ScrollBars = ScrollBars.Both
-        Me.TextBox.Size = New Size(Me.Width - 12, 20)
+        'Me.TextBox.Size = New Size(Me.Width - 12, 20)
         Me.TextBox.TabIndex = 0
         Me.TextBox.WordWrap = False
         Me.TextBox.Dock = DockStyle.Fill
@@ -74,5 +84,6 @@ Public Class IniFileContentView : Inherits GroupBox
         Me.ResumeLayout(False)
 
     End Sub
+
 
 End Class

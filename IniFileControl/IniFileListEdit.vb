@@ -9,6 +9,7 @@ Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
+
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei.
 ''' </summary>
@@ -16,7 +17,9 @@ Imports System.Windows.Forms
 <Description("Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileListEdit), "IniFileListEdit.bmp")>
-Public NotInheritable Class IniFileListEdit : Inherits GroupBox
+Public NotInheritable Class IniFileListEdit
+
+    Inherits GroupBox
 
 
 #Region "Definition der Variablen"

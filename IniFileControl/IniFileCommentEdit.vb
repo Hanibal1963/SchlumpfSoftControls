@@ -4,11 +4,13 @@
 ' ****************************************************************************************************************
 '
 
+
 Imports System
 Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.ComponentModel
 Imports Newtonsoft.Json.Linq
+
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.
@@ -17,7 +19,10 @@ Imports Newtonsoft.Json.Linq
 <Description("Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileCommentEdit), "IniFileCommentEdit.bmp")>
-Public Class IniFileCommentEdit : Inherits GroupBox
+Public Class IniFileCommentEdit
+
+
+    Inherits GroupBox
 
 
 #Region "Definition der Variablen"
@@ -97,45 +102,57 @@ Public Class IniFileCommentEdit : Inherits GroupBox
 
     Public Sub New()
 
-        'interne Controls initialisieren
+        'Komponenten erstellen
         Me.InitializeComponent()
+
+        'Komponenten anpassen
+        Me.TextBox.Size = New System.Drawing.Size(Me.Width - 16, Me.Height - Me.Button.Height - 44)
+        Me.Button.Location = New System.Drawing.Point(Me.TextBox.Width - Me.Button.Width, Me.TextBox.Height + 28)
 
     End Sub
 
 
     Private Sub InitializeComponent()
-        Me.Button = New Button()
-        Me.TextBox = New TextBox()
+
+        Me.Button = New System.Windows.Forms.Button()
+        Me.TextBox = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
-        '
-        'TextBox
-        '
-        Me.TextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Me.TextBox.BorderStyle = BorderStyle.FixedSingle
-        Me.TextBox.Location = New Point(8, 20)
-        Me.TextBox.Multiline = True
-        Me.TextBox.Name = "TextBox"
-        Me.TextBox.ScrollBars = ScrollBars.Both
-        Me.TextBox.Size = New Size(Me.Width - 15, Me.Height - 64)
-        Me.TextBox.TabIndex = 0
-        Me.TextBox.WordWrap = False
         '
         'Button
         '
-        Me.Button.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        Me.Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom _
+            Or System.Windows.Forms.AnchorStyles.Right
+        Me.Button.AutoSize = True
         Me.Button.Enabled = False
-        Me.Button.Location = New Point(Me.Width - 90, Me.Height - 34)
+        Me.Button.Location = New System.Drawing.Point(0, 0)
         Me.Button.Name = "Button"
-        Me.Button.Size = New Size(84, 24)
+        Me.Button.Size = New System.Drawing.Size(84, 24)
         Me.Button.TabIndex = 1
         Me.Button.Text = "übernehmen"
         Me.Button.UseVisualStyleBackColor = True
+        '
+        'TextBox
+        '
+        Me.TextBox.Anchor = System.Windows.Forms.AnchorStyles.Top _
+            Or System.Windows.Forms.AnchorStyles.Bottom _
+            Or System.Windows.Forms.AnchorStyles.Left _
+            Or System.Windows.Forms.AnchorStyles.Right
+        Me.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox.Location = New System.Drawing.Point(8, 20)
+        Me.TextBox.Multiline = True
+        Me.TextBox.Name = "TextBox"
+        Me.TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.TextBox.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox.TabIndex = 0
+        Me.TextBox.WordWrap = False
         '
         'IniFileCommentEdit
         '
         Me.Controls.Add(Me.TextBox)
         Me.Controls.Add(Me.Button)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
 

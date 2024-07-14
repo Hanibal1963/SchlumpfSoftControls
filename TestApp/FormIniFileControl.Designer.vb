@@ -26,6 +26,10 @@ Partial Class FormIniFileControl
         Dim ToolStripMenuItem_Datei As System.Windows.Forms.ToolStripMenuItem
         Dim ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
         Dim ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+        Me.ToolStripMenuItem_Oeffnen = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_Speichern = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_SpeichernUnter = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_Beenden = New System.Windows.Forms.ToolStripMenuItem()
         Me.IniFileContentView = New SchlumpfSoft.Controls.IniFileControl.IniFileContentView()
         Me.EntryValueEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit()
         Me.EntrysListEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileListEdit()
@@ -33,10 +37,6 @@ Partial Class FormIniFileControl
         Me.SectionsCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
         Me.FileCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
         Me.IniFile1 = New SchlumpfSoft.Controls.IniFileControl.IniFile()
-        Me.ToolStripMenuItem_Oeffnen = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem_Speichern = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem_SpeichernUnter = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem_Beenden = New System.Windows.Forms.ToolStripMenuItem()
         MenuStrip_HauptMenu = New System.Windows.Forms.MenuStrip()
         ToolStripMenuItem_Datei = New System.Windows.Forms.ToolStripMenuItem()
         ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -44,76 +44,12 @@ Partial Class FormIniFileControl
         MenuStrip_HauptMenu.SuspendLayout()
         Me.SuspendLayout()
         '
-        'IniFileContentView
-        '
-        Me.IniFileContentView.Lines = Nothing
-        Me.IniFileContentView.Location = New System.Drawing.Point(664, 38)
-        Me.IniFileContentView.Name = "IniFileContentView"
-        Me.IniFileContentView.Size = New System.Drawing.Size(264, 297)
-        Me.IniFileContentView.TabIndex = 19
-        Me.IniFileContentView.TabStop = False
-        Me.IniFileContentView.Text = "Dateiinhalt"
-        '
-        'EntryValueEdit
-        '
-        Me.EntryValueEdit.Location = New System.Drawing.Point(664, 341)
-        Me.EntryValueEdit.Name = "EntryValueEdit"
-        Me.EntryValueEdit.Size = New System.Drawing.Size(264, 77)
-        Me.EntryValueEdit.TabIndex = 18
-        Me.EntryValueEdit.TabStop = False
-        Me.EntryValueEdit.Text = "Eintragswert"
-        Me.EntryValueEdit.Value = ""
-        '
-        'EntrysListEdit
-        '
-        Me.EntrysListEdit.Location = New System.Drawing.Point(339, 217)
-        Me.EntrysListEdit.Name = "EntrysListEdit"
-        Me.EntrysListEdit.Size = New System.Drawing.Size(316, 201)
-        Me.EntrysListEdit.TabIndex = 17
-        Me.EntrysListEdit.TabStop = False
-        Me.EntrysListEdit.Text = "Eintragsliste"
-        '
-        'SectionsListEdit
-        '
-        Me.SectionsListEdit.Location = New System.Drawing.Point(12, 217)
-        Me.SectionsListEdit.Name = "SectionsListEdit"
-        Me.SectionsListEdit.Size = New System.Drawing.Size(321, 201)
-        Me.SectionsListEdit.TabIndex = 16
-        Me.SectionsListEdit.TabStop = False
-        Me.SectionsListEdit.Text = "Abschnittsliste"
-        '
-        'SectionsCommentEdit
-        '
-        Me.SectionsCommentEdit.Comment = New String(-1) {}
-        Me.SectionsCommentEdit.Location = New System.Drawing.Point(339, 38)
-        Me.SectionsCommentEdit.Name = "SectionsCommentEdit"
-        Me.SectionsCommentEdit.Size = New System.Drawing.Size(316, 164)
-        Me.SectionsCommentEdit.TabIndex = 15
-        Me.SectionsCommentEdit.TabStop = False
-        Me.SectionsCommentEdit.Text = "Abschnittskommentar"
-        '
-        'FileCommentEdit
-        '
-        Me.FileCommentEdit.Comment = New String(-1) {}
-        Me.FileCommentEdit.Location = New System.Drawing.Point(12, 38)
-        Me.FileCommentEdit.Name = "FileCommentEdit"
-        Me.FileCommentEdit.Size = New System.Drawing.Size(321, 164)
-        Me.FileCommentEdit.TabIndex = 14
-        Me.FileCommentEdit.TabStop = False
-        Me.FileCommentEdit.Text = "Dateikommentar"
-        '
-        'IniFile1
-        '
-        Me.IniFile1.AutoSave = True
-        Me.IniFile1.CommentPrefix = Global.Microsoft.VisualBasic.ChrW(59)
-        Me.IniFile1.FilePath = "D:\Dokumente\NeueDatei.ini"
-        '
         'MenuStrip_HauptMenu
         '
         MenuStrip_HauptMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {ToolStripMenuItem_Datei})
         MenuStrip_HauptMenu.Location = New System.Drawing.Point(0, 0)
         MenuStrip_HauptMenu.Name = "MenuStrip_HauptMenu"
-        MenuStrip_HauptMenu.Size = New System.Drawing.Size(939, 24)
+        MenuStrip_HauptMenu.Size = New System.Drawing.Size(1056, 24)
         MenuStrip_HauptMenu.TabIndex = 13
         '
         'ToolStripMenuItem_Datei
@@ -157,11 +93,75 @@ Partial Class FormIniFileControl
         Me.ToolStripMenuItem_Beenden.Size = New System.Drawing.Size(169, 22)
         Me.ToolStripMenuItem_Beenden.Text = "Beenden"
         '
+        'IniFileContentView
+        '
+        Me.IniFileContentView.Lines = Nothing
+        Me.IniFileContentView.Location = New System.Drawing.Point(664, 38)
+        Me.IniFileContentView.Name = "IniFileContentView"
+        Me.IniFileContentView.Size = New System.Drawing.Size(264, 297)
+        Me.IniFileContentView.TabIndex = 19
+        Me.IniFileContentView.TabStop = False
+        Me.IniFileContentView.Text = "Dateiinhalt"
+        '
+        'EntryValueEdit
+        '
+        Me.EntryValueEdit.Location = New System.Drawing.Point(664, 341)
+        Me.EntryValueEdit.Name = "EntryValueEdit"
+        Me.EntryValueEdit.Size = New System.Drawing.Size(264, 78)
+        Me.EntryValueEdit.TabIndex = 18
+        Me.EntryValueEdit.TabStop = False
+        Me.EntryValueEdit.Text = "Eintragswert"
+        Me.EntryValueEdit.Value = ""
+        '
+        'EntrysListEdit
+        '
+        Me.EntrysListEdit.Location = New System.Drawing.Point(339, 217)
+        Me.EntrysListEdit.Name = "EntrysListEdit"
+        Me.EntrysListEdit.Size = New System.Drawing.Size(316, 202)
+        Me.EntrysListEdit.TabIndex = 17
+        Me.EntrysListEdit.TabStop = False
+        Me.EntrysListEdit.Text = "Eintragsliste"
+        '
+        'SectionsListEdit
+        '
+        Me.SectionsListEdit.Location = New System.Drawing.Point(12, 217)
+        Me.SectionsListEdit.Name = "SectionsListEdit"
+        Me.SectionsListEdit.Size = New System.Drawing.Size(321, 202)
+        Me.SectionsListEdit.TabIndex = 16
+        Me.SectionsListEdit.TabStop = False
+        Me.SectionsListEdit.Text = "Abschnittsliste"
+        '
+        'SectionsCommentEdit
+        '
+        Me.SectionsCommentEdit.Comment = New String(-1) {}
+        Me.SectionsCommentEdit.Location = New System.Drawing.Point(339, 38)
+        Me.SectionsCommentEdit.Name = "SectionsCommentEdit"
+        Me.SectionsCommentEdit.Size = New System.Drawing.Size(316, 164)
+        Me.SectionsCommentEdit.TabIndex = 15
+        Me.SectionsCommentEdit.TabStop = False
+        Me.SectionsCommentEdit.Text = "Abschnittskommentar"
+        '
+        'FileCommentEdit
+        '
+        Me.FileCommentEdit.Comment = New String(-1) {}
+        Me.FileCommentEdit.Location = New System.Drawing.Point(12, 38)
+        Me.FileCommentEdit.Name = "FileCommentEdit"
+        Me.FileCommentEdit.Size = New System.Drawing.Size(321, 164)
+        Me.FileCommentEdit.TabIndex = 14
+        Me.FileCommentEdit.TabStop = False
+        Me.FileCommentEdit.Text = "Dateikommentar"
+        '
+        'IniFile1
+        '
+        Me.IniFile1.AutoSave = True
+        Me.IniFile1.CommentPrefix = Global.Microsoft.VisualBasic.ChrW(59)
+        Me.IniFile1.FilePath = "D:\Dokumente\NeueDatei.ini"
+        '
         'FormIniFileControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(939, 431)
+        Me.ClientSize = New System.Drawing.Size(1056, 655)
         Me.Controls.Add(Me.IniFileContentView)
         Me.Controls.Add(Me.EntryValueEdit)
         Me.Controls.Add(Me.EntrysListEdit)
