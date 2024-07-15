@@ -36,12 +36,14 @@ Public NotInheritable Class IniFileListEdit
 
 #Region "Definition der Ereignisse"
 
+
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag hinzugefügt werden soll.
     ''' </summary>
     <Description("Wird ausgelöst wenn ein Eintrag hinzugefügt werden soll.")>
     <Category("ListEdit")>
     Public Event ItemAdd(sender As Object, e As EventArgs)
+
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag umbenannt werden soll.
@@ -50,6 +52,7 @@ Public NotInheritable Class IniFileListEdit
     <Category("ListEdit")>
     Public Event ItemRename(sender As Object, e As EventArgs)
 
+
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag gelöscht werden soll.
     ''' </summary>
@@ -57,12 +60,14 @@ Public NotInheritable Class IniFileListEdit
     <Category("ListEdit")>
     Public Event ItemRemove(sender As Object, e As EventArgs)
 
+
     ''' <summary>
     ''' Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.
     ''' </summary>
     <Description("Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.")>
     <Category("ListEdit")>
     Public Event SelectedItemChanged(sender As Object, e As EventArgs)
+
 
 #End Region
 

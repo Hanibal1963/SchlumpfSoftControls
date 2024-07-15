@@ -36,13 +36,16 @@ Public Class IniFileCommentEdit
 
 #Region "Definition der Ereignisse"
 
+
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Kommentartext geändert hat.
     ''' </summary>
     <Description("Wird ausgelöst wenn sich der Kommentartext geändert hat.")>
     Public Event CommentChanged(sender As Object, e As EventArgs)
 
+
     Private Event PropCommentChanged()
+
 
 #End Region
 

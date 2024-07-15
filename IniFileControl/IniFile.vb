@@ -8,12 +8,15 @@ Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 
+
 ''' <summary>
 ''' Control zum Verwalten von INI - Dateien
 ''' </summary>
 <Description("Control zum Verwalten von INI - Dateien")>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-Public Class IniFile : Inherits Component
+Public Class IniFile
+
+    Inherits Component
 
 
 #Region "Definition der Variablen"
@@ -32,11 +35,13 @@ Public Class IniFile : Inherits Component
 
 #Region "Definition der Ereignisse"
 
+
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Dateiinhalt geändert hat.
     ''' </summary>
     <Description("Wird ausgelöst wenn sich der Dateiinhalt geändert hat.")>
     Public Event FileContentChanged(sender As Object, e As EventArgs)
+
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Dateikommentar geändert hat.
@@ -44,11 +49,13 @@ Public Class IniFile : Inherits Component
     <Description("Wird ausgelöst wenn sich der Dateikommentar geändert hat.")>
     Public Event FileCommentChanged(sender As Object, e As EventArgs)
 
+
     ''' <summary>
     ''' Wird ausgelöst wenn sich die Liste der Abschnitte geändert hat.
     ''' </summary>
     <Description("Wird ausgelöst wenn sich die Liste der Abschnitte geändert hat.")>
     Public Event SectionsChanged(sender As Object, e As EventArgs)
+
 
     ''' <summary>
     ''' Wird ausgelöst wenn beim anlegen eines neuen Abschnitts oder 
@@ -57,11 +64,13 @@ Public Class IniFile : Inherits Component
     <Description("Wird ausgelöst wenn beim anlegen eines neuen Abschnitts oder umbnennen eines Abschnitts der Name bereits vorhanden ist.")>
     Public Event SectionNameExist(sender As Object, e As EventArgs)
 
+
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Abschnittskommentar geändert hat.
     ''' </summary>
     <Description("Wird ausgelöst wenn sich der Abschnittskommentar geändert hat.")>
     Public Event SectionCommentChanged(sender As Object, e As EventArgs)
+
 
     ''' <summary>
     ''' Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder 
@@ -70,11 +79,13 @@ Public Class IniFile : Inherits Component
     <Description("Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereitsvorhanden ist.")>
     Public Event EntrynameExist(sender As Object, e As EventArgs)
 
+
     ''' <summary>
     ''' wird ausgelöst wenn sich die Liste der Einträge geändert hat.
     ''' </summary>
     <Description("wird ausgelöst wenn sich die Liste der Einträge geändert hat.")>
     Public Event EntrysChanged(sender As Object, e As EventArgs)
+
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Wert eines Eintrags in einem Abschnitt geändert hat.
@@ -82,10 +93,12 @@ Public Class IniFile : Inherits Component
     <Description("Wird ausgelöst wenn sich der Wert eines Eintrags in einem Abschnitt geändert hat.")>
     Public Event EntryValueChanged(sender As Object, e As EventArgs)
 
+
 #End Region
 
 
 #Region "Definition neuer Eigenschaften"
+
 
     ''' <summary>
     ''' Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.
@@ -102,6 +115,7 @@ Public Class IniFile : Inherits Component
         End Set
     End Property
 
+
     ''' <summary>
     ''' Gibt den Pfad und den Name zur INI-Datei zurück oder legt diesen fest.
     ''' </summary>
@@ -116,6 +130,7 @@ Public Class IniFile : Inherits Component
             Me._FilePath = Value
         End Set
     End Property
+
 
     ''' <summary>
     ''' Legt das Speicherverhalten der Klasse fest.
@@ -135,10 +150,12 @@ Public Class IniFile : Inherits Component
         End Set
     End Property
 
+
 #End Region
 
 
 #Region "Definition der öffentlichen Funktionen"
+
 
     ''' <summary>
     ''' Erstellt eine neue Instanz dieser Klasse.
@@ -151,6 +168,7 @@ Public Class IniFile : Inherits Component
                 My.Resources.DefaultFileName, CChar(My.Resources.DefaultCommentPrefix))
 
     End Sub
+
 
     ''' <summary>
     ''' Erstellt eine neue Instanz dieser Klasse unter Angabe der Datei.
@@ -174,6 +192,7 @@ Public Class IniFile : Inherits Component
 
     End Sub
 
+
     ''' <summary>
     ''' Lädt die angegebene Datei
     ''' </summary>
@@ -195,6 +214,7 @@ Public Class IniFile : Inherits Component
 
     End Sub
 
+
     ''' <summary>
     ''' Lädt die Datei die in <see cref="FilePath"/> angegeben wurde.
     ''' </summary>
@@ -206,6 +226,7 @@ Public Class IniFile : Inherits Component
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
+
 
     ''' <summary>
     ''' Speichert die angegebene Datei.
@@ -228,6 +249,7 @@ Public Class IniFile : Inherits Component
 
     End Sub
 
+
     ''' <summary>
     ''' Speichert die in <see cref="FilePath"/> angegebene Datei.
     ''' </summary>
@@ -241,6 +263,7 @@ Public Class IniFile : Inherits Component
 
     End Sub
 
+
     ''' <summary>
     ''' Gibt den Dateiinhalt zurück
     ''' </summary>
@@ -248,12 +271,14 @@ Public Class IniFile : Inherits Component
         Return Me._FileContent
     End Function
 
+
     ''' <summary>
     ''' Gibt den Dateikommentar zurück
     ''' </summary>
     Public Function GetFileComment() As String()
         Return Me._FileComment.ToArray
     End Function
+
 
     ''' <summary>
     ''' Setzt den Dateikommentar.
@@ -278,6 +303,7 @@ Public Class IniFile : Inherits Component
 
     End Sub
 
+
     ''' <summary>
     ''' Ruft die Abschnittsnamen ab.
     ''' </summary>
@@ -290,6 +316,7 @@ Public Class IniFile : Inherits Component
         Return names.ToArray
 
     End Function
+
 
     ''' <summary>
     ''' Gibt die Namen der Einträge eines Abschnitts zurück
@@ -321,6 +348,7 @@ Public Class IniFile : Inherits Component
 
     End Function
 
+
     ''' <summary>
     ''' Fügt einen neuen Abschnitt hinzu.
     ''' </summary>
@@ -347,7 +375,9 @@ Public Class IniFile : Inherits Component
         'Ereignisse auslösen
         RaiseEvent SectionsChanged(Me, EventArgs.Empty)
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+
     End Sub
+
 
     ''' <summary>
     ''' Fügt einen neuen Eintrag in die Liste der Eintragsnamen ein.
@@ -381,6 +411,7 @@ Public Class IniFile : Inherits Component
 
     End Sub
 
+
     ''' <summary>
     ''' Benennt einen Abschnitt um.
     ''' </summary>
@@ -413,7 +444,9 @@ Public Class IniFile : Inherits Component
         'Ereignisse auslösen
         RaiseEvent SectionsChanged(Me, EventArgs.Empty)
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+
     End Sub
+
 
     ''' <summary>
     ''' Benennt einen Eintrag in einem Abschnitt um.
@@ -446,6 +479,7 @@ Public Class IniFile : Inherits Component
 
     End Sub
 
+
     ''' <summary>
     ''' Löscht einen Abschnitt
     ''' </summary>
@@ -466,6 +500,7 @@ Public Class IniFile : Inherits Component
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
+
 
     ''' <summary>
     ''' Löscht einen Eintrag aus einem Abschnitt.
@@ -489,6 +524,7 @@ Public Class IniFile : Inherits Component
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
+
 
     ''' <summary>
     ''' Gibt die Kommentarzeilen für einen Abschnitt zurück
@@ -514,6 +550,7 @@ Public Class IniFile : Inherits Component
 
     End Function
 
+
     ''' <summary>
     ''' Gibt den Wert eines Eintrags aus einem Abschnitt zurück
     ''' </summary>
@@ -529,6 +566,7 @@ Public Class IniFile : Inherits Component
     Public Function GetEntryValue(Section As String, Entry As String) As String
         Return Me._Sections.Item(Section).Item(Entry)
     End Function
+
 
     ''' <summary>
     ''' Setzt den Kommentar für einen Abschnitt.
@@ -553,6 +591,7 @@ Public Class IniFile : Inherits Component
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
+
 
     ''' <summary>
     ''' Setzt den Wert eines Eintrags in einem Abschnitt.
@@ -579,6 +618,7 @@ Public Class IniFile : Inherits Component
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
+
 
 #End Region
 

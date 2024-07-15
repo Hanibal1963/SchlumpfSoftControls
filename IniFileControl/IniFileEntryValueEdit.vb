@@ -33,11 +33,13 @@ Public Class IniFileEntryValueEdit
 
 #Region "Definition der Ereignisse"
 
+
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Wert geändert hat.
     ''' </summary>
     <Description("Wird ausgelöst wenn sich der Wert geändert hat.")>
     Public Event ValueChanged(sender As Object, e As EventArgs)
+
 
 #End Region
 
