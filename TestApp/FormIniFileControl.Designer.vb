@@ -49,7 +49,7 @@ Partial Class FormIniFileControl
         MenuStrip_HauptMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {ToolStripMenuItem_Datei})
         MenuStrip_HauptMenu.Location = New System.Drawing.Point(0, 0)
         MenuStrip_HauptMenu.Name = "MenuStrip_HauptMenu"
-        MenuStrip_HauptMenu.Size = New System.Drawing.Size(1056, 24)
+        MenuStrip_HauptMenu.Size = New System.Drawing.Size(942, 24)
         MenuStrip_HauptMenu.TabIndex = 13
         '
         'ToolStripMenuItem_Datei
@@ -161,7 +161,7 @@ Partial Class FormIniFileControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1056, 655)
+        Me.ClientSize = New System.Drawing.Size(942, 434)
         Me.Controls.Add(Me.IniFileContentView)
         Me.Controls.Add(Me.EntryValueEdit)
         Me.Controls.Add(Me.EntrysListEdit)
