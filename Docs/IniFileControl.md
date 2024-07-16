@@ -166,7 +166,7 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 
 ## Versionsverlauf
 
-**Version 2.2024.14.07**
+**Version 2.2024.16.07**
 
 - Layoutfehler in **IniFileCommentEdit**, **IniFileEntryValueEdit** und **IniFileListEdit** beseitigt.
 
