@@ -17,6 +17,12 @@ Zurzeit sind folgende Steuerelemente vorhanden:
 
 ## Versionsverlauf
 
+**Version 2.2024.16.07**
+
+Datum: 16.07.2024
+
+- Layoutfehler in **IniFileCommentEdit**, **IniFileEntryValueEdit** und **IniFileListEdit** beseitigt.
+
 **Version 2.2024.30.06**
 
 Datum: 30.06.2024
