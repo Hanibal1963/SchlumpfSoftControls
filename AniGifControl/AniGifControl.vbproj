@@ -105,6 +105,7 @@
     <Compile Include="AniGif.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DesciptionConstants.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>

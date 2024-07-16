@@ -16,7 +16,7 @@ Imports System.Drawing.Imaging
 ''' Control zum anzeigen von animierten Grafiken.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Control zum Anzeigen von animierten Grafiken.")>
+<Description(AniGif_Description)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(AniGif), "AniGif.bmp")>
 Public Class AniGif
@@ -42,50 +42,60 @@ Public Class AniGif
 
 #Region "Variablen für Eigenschaften"
 
+
     ''' <summary>
     ''' Eigenschaftsvariable für das aktuelle Bild.
     ''' </summary>
     Private _Gif As System.Drawing.Bitmap
+
 
     ''' <summary>
     ''' Eigenschaftsvariable für den Anzeigemodus des Bildes.
     ''' </summary>
     Private _GifSizeMode As SizeMode
 
+
     ''' <summary>
     ''' Eigenschaftsvariable für das ein bzw. ausschalten der benutzerdefinierten Anzeigegeschwindigkeit.
     ''' </summary>
     Private _CustomDisplaySpeed As Boolean
+
 
     ''' <summary>
     ''' Eigenschaftsvariable für die benutzerdefinierte Anzeigegeschwindigkeit in Bildern/Sekunde.
     ''' </summary>
     Private _FramesPerSecond As Decimal
 
+
     ''' <summary>
     ''' Variable für die Eigenschaften des Bildes.
     ''' </summary>
     Private _Dimension As System.Drawing.Imaging.FrameDimension
+
 
     ''' <summary>
     ''' Variable für den Index des aktuellen Bildes.
     ''' </summary>
     Private _Frame As Integer
 
+
     ''' <summary>
     ''' Variable für den Index des letzten Bildes.
     ''' </summary>
     Private _MaxFrame As Integer
+
 
     ''' <summary>
     ''' Eigenschaftsvariable für automatisches abspielen der Animation.
     ''' </summary>
     Private _Autoplay As Boolean
 
+
     ''' <summary>
     ''' Eigenschaftsvariable für Zoomfaktor
     ''' </summary>
     Private _ZoomFactor As Decimal
+
 
 #End Region
 
@@ -96,8 +106,8 @@ Public Class AniGif
     ''' Wird ausgelöst wenn die Grafik nicht animiert werden kann.
     ''' </summary>
     <Browsable(True)>
-    <Category("Behavior")>
-    <Description("Wird ausgelöst wenn die Grafik nicht animiert werden kann.")>
+    <Category(Category_Behavior)>
+    <Description(NoAnimation_Description)>
     Public Event NoAnimation(sender As Object, e As NoAnimationEventArgs)
 
     ''' <summary>
@@ -115,12 +125,13 @@ Public Class AniGif
 
 #Region "neue Eigenschaften"
 
+
     ''' <summary>
     ''' Legt fest ob die Animation sofort nach dem laden gestartet wird.
     ''' </summary>
     <Browsable(True)>
-    <Category("Behavior")>
-    <Description("Legt fest ob die Animation sofort nach dem laden gestartet wird.")>
+    <Category(Category_Behavior)>
+    <Description(AutoPlay_Description)>
     Public Property AutoPlay() As Boolean
         Get
             Return Me._Autoplay
@@ -130,12 +141,13 @@ Public Class AniGif
         End Set
     End Property
 
+
     ''' <summary>
     ''' Gibt die animierte Gif-Grafik zurück oder legt diese fest.
     ''' </summary>
     <Browsable(True)>
-    <Category("Appearance")>
-    <Description("Gibt die animierte Gif-Grafik zurück oder legt diese fest.")>
+    <Category(Category_Appearance)>
+    <Description(Gif_Description)>
     Public Property Gif() As Bitmap
         Get
             Return Me._Gif
@@ -146,12 +158,13 @@ Public Class AniGif
         End Set
     End Property
 
+
     ''' <summary>
     ''' Gibt die Art wie die Grafik angezeigt wird zurück oder legt diese fest.
     ''' </summary>
     <Browsable(True)>
-    <Category("Behavior")>
-    <Description("Gibt die Art wie die Grafik angezeigt wird zurück oder legt diese fest.")>
+    <Category(Category_Behavior)>
+    <Description(GifSizeMode_Description)>
     Public Property GifSizeMode() As SizeMode
         Get
             Return Me._GifSizeMode
@@ -162,13 +175,14 @@ Public Class AniGif
         End Set
     End Property
 
+
     ''' <summary>
     ''' Legt fest ob die benutzerdefinierte Anzeigegeschwindigkeit oder 
     ''' die in der Datei festgelegte Geschwindigkeit benutzt wird.
     ''' </summary>
     <Browsable(True)>
-    <Category("Behavior")>
-    <Description("Legt fest ob die benutzerdefinierte Anzeigegeschwindigkeit oder die in der Datei festgelegte Geschwindigkeit benutzt wird.")>
+    <Category(Category_Behavior)>
+    <Description(CustomDisplaySpeed_Description)>
     Public Property CustomDisplaySpeed As Boolean
         Get
             Return Me._CustomDisplaySpeed
@@ -179,6 +193,7 @@ Public Class AniGif
         End Set
     End Property
 
+
     ''' <summary>
     ''' Legt die benutzerdefinierte Anzeigegeschwindigkeit in Bildern/Sekunde fest.
     ''' </summary>
@@ -186,8 +201,8 @@ Public Class AniGif
     ''' Bewirkt nur eine Änderung wenn <seealso cref="CustomDisplaySpeed"/> auf True festgelegt ist.
     ''' </remarks>
     <Browsable(True)>
-    <Category("Behavior")>
-    <Description("Legt die benutzerdefinierte Anzeigegeschwindigkeit in Bildern/Sekunde fest wenn CustomDisplaySpeed auf True festgelegt ist.")>
+    <Category(Category_Behavior)>
+    <Description(FramesPerSecond_Description)>
     Public Property FramesPerSecond As Decimal
         Get
             Return Me._FramesPerSecond
@@ -198,6 +213,7 @@ Public Class AniGif
         End Set
     End Property
 
+
     ''' <summary>
     ''' Legt den Zoomfaktor fest. 
     ''' </summary>
@@ -205,8 +221,8 @@ Public Class AniGif
     ''' Bewirkt nur eine Änderung wenn <seealso cref="GifSizeMode"/> auf <seealso cref="SizeMode.Zoom"/> festgelegt ist.
     ''' </remarks>
     <Browsable(True)>
-    <Category("Behavior")>
-    <Description("Legt den Zoomfaktor fest wenn GifSizeMode auf Zoom festgelegt ist.")>
+    <Category(Category_Behavior)>
+    <Description(ZoomFactor_Description)>
     Public Property ZoomFactor As Decimal
         Get
             Return Me._ZoomFactor
@@ -217,10 +233,12 @@ Public Class AniGif
         End Set
     End Property
 
+
 #End Region
 
 
 #Region "ausgeblendete Eigenschaften"
+
 
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
@@ -233,6 +251,7 @@ Public Class AniGif
         End Set
     End Property
 
+
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property MinimumSize As Size
@@ -243,6 +262,7 @@ Public Class AniGif
             MyBase.MinimumSize = value
         End Set
     End Property
+
 
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
@@ -255,6 +275,7 @@ Public Class AniGif
         End Set
     End Property
 
+
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property RightToLeft() As RightToLeft
@@ -265,6 +286,7 @@ Public Class AniGif
             MyBase.RightToLeft = value
         End Set
     End Property
+
 
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
@@ -277,6 +299,7 @@ Public Class AniGif
         End Set
     End Property
 
+
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property AllowDrop() As Boolean
@@ -287,6 +310,7 @@ Public Class AniGif
             MyBase.AllowDrop = value
         End Set
     End Property
+
 
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
@@ -299,6 +323,7 @@ Public Class AniGif
         End Set
     End Property
 
+
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property AutoSize As Boolean
@@ -309,6 +334,7 @@ Public Class AniGif
             MyBase.AutoSize = value
         End Set
     End Property
+
 
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
@@ -321,6 +347,7 @@ Public Class AniGif
         End Set
     End Property
 
+
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackgroundImageLayout() As ImageLayout
@@ -331,6 +358,7 @@ Public Class AniGif
             MyBase.BackgroundImageLayout = value
         End Set
     End Property
+
 
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
@@ -343,6 +371,7 @@ Public Class AniGif
         End Set
     End Property
 
+
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property Dock() As DockStyle
@@ -353,6 +382,7 @@ Public Class AniGif
             MyBase.Dock = value
         End Set
     End Property
+
 
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
@@ -365,6 +395,7 @@ Public Class AniGif
         End Set
     End Property
 
+
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property ForeColor() As Color
@@ -375,6 +406,7 @@ Public Class AniGif
             MyBase.ForeColor = value
         End Set
     End Property
+
 
 #End Region
 
@@ -431,6 +463,7 @@ Public Class AniGif
 
 #Region "interne Ereignisbehandlungen"
 
+
     ''' <summary>
     ''' Wird ausgeführt wenn das Bild gewechselt wurde.
     ''' </summary>
@@ -464,6 +497,7 @@ Public Class AniGif
 
     End Sub
 
+
     ''' <summary>
     ''' Wird ausgeführt wenn die benutzerdefinierte Anzeigegeschwindigkeit ein oder ausgeschaltet wurde
     ''' </summary>
@@ -479,6 +513,7 @@ Public Class AniGif
 
     End Sub
 
+
     ''' <summary>
     ''' Wird ausgeführt wenn das nächste Teilbild angezeigt werden soll.
     ''' </summary>
@@ -487,6 +522,7 @@ Public Class AniGif
         Me.Invalidate() 'neu zeichnen
 
     End Sub
+
 
     ''' <summary>
     ''' wird ausgeführt wenn die Anzeigezeit abgelaufen ist.
@@ -514,6 +550,7 @@ Public Class AniGif
 
     End Sub
 
+
 #End Region
 
 
@@ -532,6 +569,7 @@ Public Class AniGif
 
     End Sub
 
+
     ''' <summary>
     ''' Initialisiert die Controlstyles dieses Controls
     ''' </summary>
@@ -542,6 +580,7 @@ Public Class AniGif
         Me.SetStyle(ControlStyles.OptimizedDoubleBuffer, True)
 
     End Sub
+
 
     ''' <summary>
     ''' Stellt die Variablen mit den Startbedingungen ein.
@@ -556,6 +595,7 @@ Public Class AniGif
         Me._ZoomFactor = 50  'Standardeinstellung für Zoomfaktor
 
     End Sub
+
 
     ''' <summary>
     ''' Prüft den Wert für Bilder/Sekunde
@@ -573,6 +613,7 @@ Public Class AniGif
 
     End Function
 
+
     ''' <summary>
     ''' Püft den Zoomfaktor
     ''' </summary>
@@ -584,6 +625,7 @@ Public Class AniGif
             Case Else : Return ZoomFactor
         End Select
     End Function
+
 
     ''' <summary>
     ''' Bildgröße in Abhängikeit vom Zeichenodus berechnen.
@@ -657,6 +699,7 @@ Public Class AniGif
 
     End Function
 
+
     ''' <summary>
     ''' Startpunkt der Zeichenfläche in Abhängikeit vom Zeichenodus berechnen.
     ''' </summary>
@@ -705,6 +748,7 @@ Public Class AniGif
         End Select
 
     End Function
+
 
 #End Region
 
