@@ -14,7 +14,9 @@ Imports System.ComponentModel
 <Description(SevSegSingleDigit_Description)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(SevSegSingleDigit), "SevSegSingleDigit.bmp")>
-Public Class SevSegSingleDigit : Inherits Control
+Public Class SevSegSingleDigit
+
+    Inherits Control
 
 #Region "Eigenschaftsvariablen"
 

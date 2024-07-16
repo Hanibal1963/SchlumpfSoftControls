@@ -105,18 +105,25 @@ Public Class FormIniFileControl
             sender,
             SchlumpfSoft.Controls.IniFileControl.IniFileListEdit).SelectedItem
 
-        If sectionname = $"" Then 'wenn keinAbschnitt ausgewählt ->
+        If String.IsNullOrEmpty(sectionname) Then 'wenn kein Abschnitt ausgewählt ->
 
-            'Abbruch
-            Exit Sub
+            Exit Sub 'Abbruch
 
         Else 'ansonsten ->
+
 
             'neuen Name abfragen
             Dim newsection As String = InputBox(
           $"Geben Sie den neuen Abschnittsname für ""{sectionname}"" ein.",
           $"Abschnitt umbenennen",
           $"neuer Abschnitt")
+
+            'Eingabe testen
+            If String.IsNullOrEmpty(newsection) Then 'wenn abgebrochen ->
+
+                Exit Sub 'Abbruch
+
+            End If
 
             'Abschnitt umbenennen
             Me.IniFile1.RenameSection(
@@ -235,6 +242,13 @@ Public Class FormIniFileControl
         $"Geben Sie den neuen Eintragsname für ""{entryname}"" ein.",
         $"Eintrag umbenennen",
         $"neuer Eintrag")
+
+        'Eingabe testen
+        If String.IsNullOrEmpty(newentry) Then 'wenn abgebrochen ->
+
+            Exit Sub 'Abbruch
+
+        End If
 
         'Eintrag umbenennen
         Me.IniFile1.RenameEntry(

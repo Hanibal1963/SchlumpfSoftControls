@@ -13,7 +13,9 @@ Imports System.ComponentModel
 <Description(SevSegMultiDigit_Description)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(SevSegMultiDigit), "SevSegMultiDigit.bmp")>
-Public Class SevSegMultiDigit : Inherits Control
+Public Class SevSegMultiDigit
+
+    Inherits Control
 
 #Region "Eigenschaftsvariablen"
 

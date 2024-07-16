@@ -19,7 +19,9 @@ Imports System.Windows.Forms
 <Description("Control zum Anzeigen von Benachrichtigungsfenstern.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(NotifyForm), "NotifyForm.bmp")>
-Public Class NotifyForm : Inherits Component
+Public Class NotifyForm
+
+    Inherits Component
 
 
     ''' <summary>
