@@ -1,16 +1,18 @@
 ﻿' ****************************************************************************************************************
-' NoAnimationEventArgs.vb
+' EventDescriptionConstants.vb
 ' © 2024 by Andreas Sauer
 ' ****************************************************************************************************************
 '
 
 
 ''' <summary>
-''' Übergibt die Argumente für ein nicht animierbares Bild.
+''' Definiert die Beschreibungen der Ereignisse
 ''' </summary>
-Public Structure NoAnimationEventArgs
+Friend Class EventDescriptionConstants
 
 
+    Public Const NoAnimation_Description =
+        "Wird ausgelöst wenn die Grafik nicht animiert werden kann."
 
 
-End Structure
+End Class

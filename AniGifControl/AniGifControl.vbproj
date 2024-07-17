@@ -40,6 +40,9 @@
     <DocumentationFile>AniGifControl.xml</DocumentationFile>
     <UseWinFormsOutOfProcDesigner>True</UseWinFormsOutOfProcDesigner>
   </PropertyGroup>
+  <PropertyGroup>
+    <MyType>Windows</MyType>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -99,20 +102,26 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonCodes\CategoryDescriptionConstants.vb">
+      <Link>CategoryDescriptionConstants.vb</Link>
+    </Compile>
+    <Compile Include="..\CommonCodes\ClassDescriptionConstants.vb">
+      <Link>ClassDescriptionConstants.vb</Link>
+    </Compile>
     <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
       <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
     <Compile Include="AniGif.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DesciptionConstants.vb" />
+    <Compile Include="EventDescriptionConstants.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="NoAnimationEventArgs.vb" />
+    <Compile Include="PropertyDescriptionConstants.vb" />
     <Compile Include="SizeMode.vb" />
   </ItemGroup>
   <ItemGroup>

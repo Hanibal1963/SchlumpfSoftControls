@@ -16,7 +16,7 @@ Imports System.Drawing.Imaging
 ''' Control zum anzeigen von animierten Grafiken.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(AniGif_Description)>
+<Description(ClassDescriptionConstants.AniGif_Description)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(AniGif), "AniGif.bmp")>
 Public Class AniGif
@@ -106,9 +106,9 @@ Public Class AniGif
     ''' Wird ausgelöst wenn die Grafik nicht animiert werden kann.
     ''' </summary>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(NoAnimation_Description)>
-    Public Event NoAnimation(sender As Object, e As NoAnimationEventArgs)
+    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Description(EventDescriptionConstants.NoAnimation_Description)>
+    Public Event NoAnimation(sender As Object, e As EventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich das Bild geändert hat.
@@ -130,8 +130,8 @@ Public Class AniGif
     ''' Legt fest ob die Animation sofort nach dem laden gestartet wird.
     ''' </summary>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(AutoPlay_Description)>
+    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Description(PropertyDescriptionConstants.AutoPlay_Description)>
     Public Property AutoPlay() As Boolean
         Get
             Return Me._Autoplay
@@ -146,8 +146,8 @@ Public Class AniGif
     ''' Gibt die animierte Gif-Grafik zurück oder legt diese fest.
     ''' </summary>
     <Browsable(True)>
-    <Category(Category_Appearance)>
-    <Description(Gif_Description)>
+    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Description(PropertyDescriptionConstants.Gif_Description)>
     Public Property Gif() As Bitmap
         Get
             Return Me._Gif
@@ -163,8 +163,8 @@ Public Class AniGif
     ''' Gibt die Art wie die Grafik angezeigt wird zurück oder legt diese fest.
     ''' </summary>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(GifSizeMode_Description)>
+    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Description(PropertyDescriptionConstants.GifSizeMode_Description)>
     Public Property GifSizeMode() As SizeMode
         Get
             Return Me._GifSizeMode
@@ -181,8 +181,8 @@ Public Class AniGif
     ''' die in der Datei festgelegte Geschwindigkeit benutzt wird.
     ''' </summary>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(CustomDisplaySpeed_Description)>
+    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Description(PropertyDescriptionConstants.CustomDisplaySpeed_Description)>
     Public Property CustomDisplaySpeed As Boolean
         Get
             Return Me._CustomDisplaySpeed
@@ -201,8 +201,8 @@ Public Class AniGif
     ''' Bewirkt nur eine Änderung wenn <seealso cref="CustomDisplaySpeed"/> auf True festgelegt ist.
     ''' </remarks>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(FramesPerSecond_Description)>
+    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Description(PropertyDescriptionConstants.FramesPerSecond_Description)>
     Public Property FramesPerSecond As Decimal
         Get
             Return Me._FramesPerSecond
@@ -221,8 +221,8 @@ Public Class AniGif
     ''' Bewirkt nur eine Änderung wenn <seealso cref="GifSizeMode"/> auf <seealso cref="SizeMode.Zoom"/> festgelegt ist.
     ''' </remarks>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(ZoomFactor_Description)>
+    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Description(PropertyDescriptionConstants.ZoomFactor_Description)>
     Public Property ZoomFactor As Decimal
         Get
             Return Me._ZoomFactor
@@ -478,7 +478,7 @@ Public Class AniGif
             Me._MaxFrame = 0
 
             'Ereignis auslösen
-            RaiseEvent NoAnimation(Me, New NoAnimationEventArgs)
+            RaiseEvent NoAnimation(Me, EventArgs.Empty)
 
         Else
 
@@ -562,7 +562,7 @@ Public Class AniGif
     Private Sub InitializeComponent()
 
         Me.components = New Container()
-        Me.Timer = New Timer(Me.components)
+        Me.Timer = New System.Windows.Forms.Timer()
         Me.SuspendLayout()
         Me.Timer.Interval = 200
         Me.ResumeLayout(False)
