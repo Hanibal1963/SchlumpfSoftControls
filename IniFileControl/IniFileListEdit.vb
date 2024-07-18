@@ -14,7 +14,7 @@ Imports System.Windows.Forms
 ''' Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei.")>
+<Description(ClassDescriptionConstants.IniFileListEdit)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileListEdit), "IniFileListEdit.bmp")>
 Public NotInheritable Class IniFileListEdit

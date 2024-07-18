@@ -8,12 +8,14 @@ Imports System.ComponentModel
 
 ''' <summary>Definiert die Willkommenseite</summary>
 <ToolboxItem(False)>
-Public Class PageWelcome : Inherits WizardPage
+Public Class PageWelcome
+
+    Inherits WizardPage
 
     Private _Style As PageStyle = PageStyle.Welcome
 
     <DefaultValue(PageStyle.Welcome)>
-    <Category("Design")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Ruft den Stil der Assistentenseite ab oder legt diesen fest.")>
     Public Overrides Property Style As PageStyle
         Get

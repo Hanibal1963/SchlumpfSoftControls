@@ -15,19 +15,25 @@ Imports System.Windows.Forms
 ''' </summary>
 <ProvideToolboxControl("Schlumpfsoft Controls", False)>
 <ToolboxItem(True)>
-<Description("Steuerelement um die Laufwerke zu überwachen.")>
+<Description(ClassDescriptionConstants.DriveWatcher)>
 <ToolboxBitmap(GetType(DriveWatcher), "DriveWatcher.bmp")>
-Public Class DriveWatcher : Inherits Component
+Public Class DriveWatcher
+
+
+    Inherits Component
+
 
     ''' <summary>
     ''' Wird vom Komponenten-Designer benötigt.
     ''' </summary>
     Private components As System.ComponentModel.IContainer
 
+
     ''' <summary>
     ''' Internes Formular welches die Meldungen empfängt.
     ''' </summary>
     Private WithEvents _Form As New NativeForm
+
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk hinzugefügt wurde.
@@ -39,6 +45,7 @@ Public Class DriveWatcher : Inherits Component
     <Description("Wird ausgelöst wenn ein Laufwerk hinzugefügt wurde.")>
     Public Event DriveAdded(sender As Object, e As DriveAddedEventArgs)
 
+
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk entfernt wurde.
     ''' </summary>
@@ -49,7 +56,7 @@ Public Class DriveWatcher : Inherits Component
     <Description("Wird ausgelöst wenn ein Laufwerk entfernt wurde.")>
     Public Event DriveRemoved(sender As Object, e As DriveRemovedEventArgs)
 
-    ''' <summary></summary>
+
     <System.Diagnostics.DebuggerNonUserCode()>
     Public Sub New()
         MyBase.New()
@@ -58,6 +65,7 @@ Public Class DriveWatcher : Inherits Component
         Me.InitializeComponent()
 
     End Sub
+
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk hinzugefügt wurde
@@ -80,6 +88,7 @@ Public Class DriveWatcher : Inherits Component
 
     End Sub
 
+
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk entfern wurde
     ''' </summary>
@@ -91,6 +100,7 @@ Public Class DriveWatcher : Inherits Component
         RaiseEvent DriveRemoved(Me, arg)
 
     End Sub
+
 
     ''' <summary>
     ''' Hinweis: Die folgende Prozedur ist für den Komponenten-Designer erforderlich.
@@ -106,8 +116,7 @@ Public Class DriveWatcher : Inherits Component
 
     End Sub
 
-    ''' <summary></summary>
-    ''' <param name="container"></param>
+
     <System.Diagnostics.DebuggerNonUserCode()>
     Public Sub New(container As IContainer)
 
@@ -134,10 +143,13 @@ Public Class DriveWatcher : Inherits Component
 
     End Sub
 
+
     ''' <summary>
     ''' Definiert das Fenster welches die WindowsMessages empfängt.
     ''' </summary>
-    Private Class NativeForm : Inherits NativeWindow
+    Private Class NativeForm
+
+        Inherits NativeWindow
 
         'Das sind die Ereignisse aus WParam.
         'Uns interessiert nur, ob ein Laufwerk hinzugekommen ist oder entfernt wurde.
@@ -308,10 +320,6 @@ Public Class DriveWatcher : Inherits Component
         End Sub
 
     End Class
-
-
-
-
 
 
 End Class

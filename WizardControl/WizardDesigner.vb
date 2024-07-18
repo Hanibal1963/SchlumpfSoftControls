@@ -10,7 +10,9 @@ Imports System.Windows.Forms
 Imports System.Windows.Forms.Design
 
 ''' <summary>Designer für dieses Control</summary>
-Friend Class WizardDesigner : Inherits ParentControlDesigner
+Friend Class WizardDesigner
+
+    Inherits ParentControlDesigner
 
     Protected Overrides Property DrawGrid As Boolean
         Get

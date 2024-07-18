@@ -12,7 +12,7 @@ Imports System.ComponentModel
 ''' <summary>
 ''' Control zum Verwalten von INI - Dateien
 ''' </summary>
-<Description("Control zum Verwalten von INI - Dateien")>
+<Description(ClassDescriptionConstants.IniFile)>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
 Public Class IniFile
 
@@ -104,7 +104,7 @@ Public Class IniFile
     ''' Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.
     ''' </summary>
     <Browsable(True)>
-    <Category("Design")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.")>
     Public Property CommentPrefix As Char
         Get
@@ -120,7 +120,7 @@ Public Class IniFile
     ''' Gibt den Pfad und den Name zur INI-Datei zurück oder legt diesen fest.
     ''' </summary>
     <Browsable(True)>
-    <Category("Design")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Gibt den Pfad und den Name zur INI-Datei zurück oder legt diesen fest.")>
     Public Property FilePath As String
         Get
@@ -139,7 +139,7 @@ Public Class IniFile
     ''' True legt fest das Änderungen automatisch gespeichert werden.
     ''' </remarks>
     <Browsable(True)>
-    <Category("Design")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Legt das Speicherverhalten der Klasse fest.")>
     Public Property AutoSave As Boolean
         Get

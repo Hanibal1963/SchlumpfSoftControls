@@ -11,7 +11,7 @@ Imports System.Drawing.Drawing2D
 Imports System.ComponentModel
 
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(ClassDescriptionConstants.SevSegSingleDigit_Description)>
+<Description(ClassDescriptionConstants.SevSegSingleDigit)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(SevSegSingleDigit), "SevSegSingleDigit.bmp")>
 Public Class SevSegSingleDigit
@@ -141,7 +141,7 @@ Public Class SevSegSingleDigit
     ''' <summary>
     ''' Legt die Farbe inaktiver Segmente fest oder gibt diese zurück.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.InactiveColor_Description)>
     Public Property InactiveColor As Color
         Get
@@ -157,7 +157,7 @@ Public Class SevSegSingleDigit
     ''' <summary>
     ''' Legt die Breite der LED-Segmente fest oder gibt diese zurück.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.SegmentWidth_Description)>
     Public Property SegmentWidth As Integer
         Get
@@ -181,7 +181,7 @@ Public Class SevSegSingleDigit
     ''' <remarks>
     ''' Standarwert ist -0,1.
     ''' </remarks>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.ItalicFactor_Description)>
     Public Property ItalicFactor As Single
         Get
@@ -200,7 +200,7 @@ Public Class SevSegSingleDigit
     ''' <remarks>
     ''' Unterstützte Zeichen sind Ziffern und die meisten Buchstaben.
     ''' </remarks>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.DigitValue_Desciption)>
     Public Property DigitValue As String
         Get
@@ -334,7 +334,7 @@ Public Class SevSegSingleDigit
     ''' Dies ist ein ganzzahliger Wert, 
     ''' bei dem die Bits 0 bis 6 den jeweiligen LED-Segmenten entsprechen.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.CustomBitPattern_Description)>
     Public Property CustomBitPattern As Integer
         Get
@@ -350,7 +350,7 @@ Public Class SevSegSingleDigit
     ''' <summary>
     ''' Gibt an, ob die Dezimalpunkt-LED angezeigt wird.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.ShowDecimalPoint_Description)>
     Public Property ShowDecimalPoint As Boolean
         Get
@@ -366,7 +366,7 @@ Public Class SevSegSingleDigit
     ''' <summary>
     ''' Gibt an, ob die Dezimalpunkt-LED aktiv ist.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.DecimalPointActive_Description)>
     Public Property DecimalPointActive As Boolean
         Get
@@ -382,7 +382,7 @@ Public Class SevSegSingleDigit
     ''' <summary>
     ''' Gibt an, ob die Doppelpunkt-LEDs angezeigt werden.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.ShowColon_Description)>
     Public Property ShowColon As Boolean
         Get
@@ -398,7 +398,7 @@ Public Class SevSegSingleDigit
     ''' <summary>
     ''' Gibt an, ob die Doppelpunkt-LEDs aktiv sind.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.ColonActive_Description)>
     Public Property ColonActive As Boolean
         Get
@@ -421,7 +421,7 @@ Public Class SevSegSingleDigit
     ''' Legt die Hintergrundfarbe des Controls fest oder gibt diese zurück.
     ''' </summary>
     ''' <returns></returns>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.BackColor_Description)>
     Public Overrides Property BackColor As Color
         Get
@@ -438,7 +438,7 @@ Public Class SevSegSingleDigit
     ''' Legt die Vordergrundfarbe der Segmente des Controls fest oder gibt diese zurück.
     ''' </summary>
     ''' <returns></returns>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.ForeColor_Description)>
     Public Overrides Property ForeColor As Color
         Get

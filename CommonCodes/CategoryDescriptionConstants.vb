@@ -16,79 +16,79 @@ Friend Class CategoryDesciptionConstants
     ''' <summary>
     ''' Eigenschaften im Zusammenhang mit verfügbaren Aktionen.
     ''' </summary>
-    Public Const Category_Action = "Action"
+    Public Const Action = "Action"
 
 
     ''' <summary>
     ''' Eigenschaften, die sich auf die Darstellung beziehen.
     ''' </summary>
-    Public Const Category_Appearance = "Appearance"
+    Public Const Appearance = "Appearance"
 
 
     ''' <summary>
     ''' Eigenschaften im Zusammenhang mit dem Verhalten.
     ''' </summary>
-    Public Const Category_Behavior = "Behavior"
+    Public Const Behavior = "Behavior"
 
 
     ''' <summary>
     ''' Eigenschaften im Zusammenhang mit der Daten- und Datenquellenverwaltung.
     ''' </summary>
-    Public Const Category_Data = "Data"
+    Public Const Data = "Data"
 
 
     ''' <summary>
     ''' Eigenschaften, die in einer Standardkategorie gruppiert sind.
     ''' </summary>
-    Public Const Category_Default = "Default"
+    Public Const [Default] = "Default"
 
 
     ''' <summary>
     ''' Eigenschaften, die nur zur Entwurfszeit verfügbar sind.
     ''' </summary>
-    Public Const Category_Design = "Design"
+    Public Const Design = "Design"
 
 
     ''' <summary>
     ''' Eigenschaften im Zusammenhang mit Drag-and-Drop-Vorgängen.
     ''' </summary>
-    Public Const Category_DragDrop = "DragDrop"
+    Public Const DragDrop = "DragDrop"
 
 
     ''' <summary>
     ''' Eigenschaften im Zusammenhang mit dem Fokus.
     ''' </summary>
-    Public Const Category_Focus = "Focus"
+    Public Const Focus = "Focus"
 
 
     ''' <summary>
     ''' Eigenschaften im Zusammenhang mit der Formatierung.
     ''' </summary>
-    Public Const Category_Format = "Format"
+    Public Const Format = "Format"
 
 
     ''' <summary>
     ''' Eigenschaften im Zusammenhang mit der Tastatur.
     ''' </summary>
-    Public Const Category_Key = "Key"
+    Public Const Key = "Key"
 
 
     ''' <summary>
     ''' Eigenschaften im Zusammenhang mit dem Layout.
     ''' </summary>
-    Public Const Category_Layout = "Layout"
+    Public Const Layout = "Layout"
 
 
     ''' <summary>
     ''' Eigenschaften im Zusammenhang mit der Maus.
     ''' </summary>
-    Public Const Category_Mouse = "Mouse"
+    Public Const Mouse = "Mouse"
 
 
     ''' <summary>
     ''' Eigenschaften im Zusammenhang mit dem Fensterstil von Formularen der obersten Ebene.
     ''' </summary>
-    Public Const Category_WindowStyle = "WindowStyle"
+    Public Const WindowStyle = "WindowStyle"
 
 
 End Class

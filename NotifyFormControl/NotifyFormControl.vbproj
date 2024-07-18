@@ -80,6 +80,12 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonCodes\CategoryDescriptionConstants.vb">
+      <Link>CategoryDescriptionConstants.vb</Link>
+    </Compile>
+    <Compile Include="..\CommonCodes\ClassDescriptionConstants.vb">
+      <Link>ClassDescriptionConstants.vb</Link>
+    </Compile>
     <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
       <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>

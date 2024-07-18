@@ -13,13 +13,15 @@ Imports System.Windows.Forms
 ''' Definiert eine Seite des Controls
 ''' </summary>
 <ToolboxItem(False)>
-Public Class WizardPage : Inherits Panel
+Public Class WizardPage
+
+    Inherits Panel
 
     Private _Style As PageStyle = PageStyle.Standard
     Private _Title As String = String.Empty
     Private _Description As String = String.Empty
 
-    <Category("Design")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Ruft den Stil der Assistentenseite ab oder legt diesen fest.")>
     Public Overridable Property Style As PageStyle
         Get
@@ -42,7 +44,7 @@ Public Class WizardPage : Inherits Panel
     End Property
 
     <DefaultValue("")>
-    <Category("Design")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Ruft den Titel der Assistentenseite ab oder legt diesen fest.")>
     Public Overridable Property Title As String
         Get
@@ -60,7 +62,7 @@ Public Class WizardPage : Inherits Panel
     End Property
 
     <DefaultValue("")>
-    <Category("Design")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Ruft die Beschreibung der Assistentenseite ab oder legt diese fest.")>
     Public Overridable Property Description As String
         Get

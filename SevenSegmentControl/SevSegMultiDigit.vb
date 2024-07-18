@@ -10,7 +10,7 @@ Imports System.Drawing
 Imports System.ComponentModel
 
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(ClassDescriptionConstants.SevSegMultiDigit_Description)>
+<Description(ClassDescriptionConstants.SevSegMultiDigit)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(SevSegMultiDigit), "SevSegMultiDigit.bmp")>
 Public Class SevSegMultiDigit
@@ -200,7 +200,7 @@ Public Class SevSegMultiDigit
     ''' <summary>
     ''' Legt die Farbe inaktiver Segmente fest oder gibt diese zurück.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.InactiveColor_Description)>
     Public Property InactiveColor As Color
         Get
@@ -216,7 +216,7 @@ Public Class SevSegMultiDigit
     ''' <summary>
     ''' Legt die Breite der LED-Segmente fest oder gibt diese zurück.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.SegmentWidth_Description)>
     Public Property SegmentWidth As Integer
         Get
@@ -235,7 +235,7 @@ Public Class SevSegMultiDigit
     ''' <remarks>
     ''' Standardwert ist -0.1
     ''' </remarks>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.ItalicFactor_Description)>
     Public Property ItalicFactor As Single
         Get
@@ -251,7 +251,7 @@ Public Class SevSegMultiDigit
     ''' <summary>
     ''' Gibt an, ob die Dezimalpunkt-LED angezeigt wird.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.ShowDecimalPoint_Description)>
     Public Property ShowDecimalPoint As Boolean
         Get
@@ -267,7 +267,7 @@ Public Class SevSegMultiDigit
     ''' <summary>
     ''' Anzahl der Digits in diesem Control.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.DigitCount_Description)>
     Public Property DigitCount As Integer
         Get
@@ -285,7 +285,7 @@ Public Class SevSegMultiDigit
     ''' <remarks>
     ''' Passen Sie diese Zahlen an, um das perfekte Erscheinungsbild für das Control Ihrer Größe zu erhalten.
     ''' </remarks>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.DigitPadding_Description)>
     Public Property DigitPadding As Padding
         Get
@@ -304,7 +304,7 @@ Public Class SevSegMultiDigit
     ''' <remarks>
     ''' Kann Zahlen, bestimmte Buchstaben und Dezimalpunkte enthalten.
     ''' </remarks>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.Value_Description)>
     Public Property Value As String
         Get
@@ -341,7 +341,7 @@ Public Class SevSegMultiDigit
     ''' Legt die Hintergrundfarbe des Controls fest oder gibt diese zurück.
     ''' </summary>
     ''' <returns></returns>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.BackColor_Description)>
     Public Overrides Property BackColor As Color
         Get
@@ -358,7 +358,7 @@ Public Class SevSegMultiDigit
     ''' Legt die Vordergrundfarbe der Segmente des Controls fest oder gibt diese zurück.
     ''' </summary>
     ''' <returns></returns>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.ForeColor_Description)>
     Public Overrides Property ForeColor As Color
         Get

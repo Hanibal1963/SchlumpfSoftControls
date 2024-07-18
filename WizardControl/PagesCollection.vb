@@ -6,7 +6,9 @@
 Imports System.Collections
 
 ''' <summary>Definiert die Auflistung der Seiten des Assistenten</summary>
-Public Class PagesCollection : Inherits CollectionBase
+Public Class PagesCollection
+
+    Inherits CollectionBase
 
     Private ReadOnly _Owner As Wizard = Nothing
 

@@ -10,7 +10,7 @@ Imports System.Windows.Forms
 
 ''' <summary>Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund.</summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund.")>
+<Description(ClassDescriptionConstants.TransparentLabel)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(TransparentLabel), "TransparentLabel.bmp")>
 Public Class TransparentLabel : Inherits Label

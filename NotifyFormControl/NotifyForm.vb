@@ -16,7 +16,7 @@ Imports System.Windows.Forms
 ''' Control zum anzeigen von Benachrichtigungsfenstern.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Control zum Anzeigen von Benachrichtigungsfenstern.")>
+<Description(ClassDescriptionConstants.NotifyForm)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(NotifyForm), "NotifyForm.bmp")>
 Public Class NotifyForm
@@ -28,7 +28,7 @@ Public Class NotifyForm
     ''' Legt das Aussehen des Benachrichtigungsfensters fest.
     ''' </summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Legt das Aussehen des Benachrichtigungsfensters fest.")>
     Public Property Design As FormDesign
 
@@ -37,7 +37,7 @@ Public Class NotifyForm
     ''' Legt den Benachrichtigungstext fest der angezeigt werden soll.
     ''' </summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Legt den Benachrichtigungstext fest der angezeigt werden soll oder gibt diesen zurück.")>
     Public Property Message As String = $"Fensternachricht"
 
@@ -49,7 +49,7 @@ Public Class NotifyForm
     ''' Der Wert 0 bewirkt das kein automatisches schließen des Fensters erfolgt.
     ''' </remarks>
     <Browsable(True)>
-    <Category("Behavior")>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description("Legt die Anzeigedauer des Benachrichtigungsfensters in ms fest oder gibt diese zurück. (Der Wert 0 deaktiviert das automatische schließen.)")>
     Public Property ShowTime As Integer = 5000
 
@@ -58,7 +58,7 @@ Public Class NotifyForm
     ''' Legt das anzuzeigende Symbol im Benachrichtigungsfensters fest.
     ''' </summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Legt das anzuzeigende Symbol des Benachrichtigungsfensters fest oder gibt dieses zurück.")>
     Public Property Style As FormStyle = FormStyle.Information
 
@@ -67,7 +67,7 @@ Public Class NotifyForm
     ''' Legt den Text der Titelzeile des Benachrichtigungsfensters fest.
     ''' </summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Legt den Text der Titelzeile des Benachrichtigungsfensters fest oder gibt diesen zurück.")>
     Public Property Title As String = $"Fenstertitel"
 

@@ -9,9 +9,11 @@ Imports System.Drawing
 Imports System.Windows.Forms
 
 
-''' <summary>Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.</summary>
+''' <summary>
+''' Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.
+''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.")>
+<Description(ClassDescriptionConstants.Shape)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(Shape), "Shape.bmp")>
 Public Class Shape : Inherits Control
@@ -56,70 +58,70 @@ Public Class Shape : Inherits Control
 
     ''' <summary>Legt die anzuzeigende Form fest oder gibt diese zurück.</summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Legt die anzuzeigende Form fest oder gibt diese zurück.")>
     Public Property ShapeModus() As ShapeModes
         Get
-            Return _ShapeModus
+            Return Me._ShapeModus
         End Get
         Set(value As ShapeModes)
-            _ShapeModus = value
+            Me._ShapeModus = value
             Me.RecreateHandle()
         End Set
     End Property
 
     ''' <summary>Legt die Breite der Linie oder Rahmenlinie fest oder gibt diese zurück.</summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Legt die Breite der Linie oder Rahmenlinie fest oder gibt diese zurück.")>
     Public Property LineWidth() As Single
         Get
-            Return _LineWidth
+            Return Me._LineWidth
         End Get
         Set(value As Single)
-            _LineWidth = value
+            Me._LineWidth = value
             Me.RecreateHandle()
         End Set
     End Property
 
     ''' <summary>Legt die Farbe der Linie oder Rahmenlinie fest oder gibt diese zurück.</summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Legt die Farbe der Linie oder Rahmenlinie fest oder gibt diese zurück.")>
     Public Property LineColor() As Color
         Get
-            Return _LineColor
+            Return Me._LineColor
         End Get
         Set(value As Color)
-            _LineColor = value
+            Me._LineColor = value
             Me.RecreateHandle()
         End Set
     End Property
 
     ''' <summary>Legt die Füllfarbe für die Form fest oder gibt diese zurück.</summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Legt die Füllfarbe für die Form fest oder gibt diese zurück.")>
     Public Property FillColor() As Color
         Get
-            Return _FillColor
+            Return Me._FillColor
         End Get
         Set(value As Color)
-            _FillColor = value
+            Me._FillColor = value
             Me.RecreateHandle()
         End Set
     End Property
 
     ''' <summary>Legt fest ob eine diagonale Linie von links oben nach rechts unten oder umgekehrt verläuft oder gibt dieses zurück.</summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Legt fest ob eine diagonale Linie von links oben nach rechts unten oder umgekehrt verläuft oder gibt dieses zurück.")>
     Public Property DiagonalLineModus() As DiagonalLineModes
         Get
-            Return _DiagonalLineModus
+            Return Me._DiagonalLineModus
         End Get
         Set(value As DiagonalLineModes)
-            _DiagonalLineModus = value
+            Me._DiagonalLineModus = value
             Me.RecreateHandle()
         End Set
     End Property
@@ -241,11 +243,11 @@ Public Class Shape : Inherits Control
         Dim g As Graphics = Me.CreateGraphics
 
         'Benutzerdefinierten Zeichnungscode hier einfügen
-        Select Case _ShapeModus
+        Select Case Me._ShapeModus
 
             Case ShapeModes.HorizontalLine
                 'horizontale Linie zeichnen (mittig im Rahmen des Controls)
-                g.DrawLine(New Pen(_LineColor, _LineWidth),
+                g.DrawLine(New Pen(Me._LineColor, Me._LineWidth),
                            0,
                            CInt(Me.Height / 2),
                            Me.Width,
@@ -253,7 +255,7 @@ Public Class Shape : Inherits Control
 
             Case ShapeModes.VerticalLine
                 'vertikale Linie zeichnen (mittig im Rahmen des Controls)
-                g.DrawLine(New Pen(_LineColor, _LineWidth),
+                g.DrawLine(New Pen(Me._LineColor, Me._LineWidth),
                            CInt(Me.Width / 2),
                            0,
                            CInt(Me.Width / 2),
@@ -261,11 +263,11 @@ Public Class Shape : Inherits Control
 
             Case ShapeModes.DiagonalLine
                 'diagonale Linie zeichnen
-                Select Case _DiagonalLineModus
+                Select Case Me._DiagonalLineModus
 
                     Case DiagonalLineModes.BottomLeftToTopRight
                         'von links unten nach rechts oben
-                        g.DrawLine(New Pen(_LineColor, _LineWidth),
+                        g.DrawLine(New Pen(Me._LineColor, Me._LineWidth),
                                    0,
                                    Me.Height,
                                    Me.Width,
@@ -273,7 +275,7 @@ Public Class Shape : Inherits Control
 
                     Case DiagonalLineModes.TopLeftToBottomRight
                         'von links oben nach rechts unten
-                        g.DrawLine(New Pen(_LineColor, _LineWidth),
+                        g.DrawLine(New Pen(Me._LineColor, Me._LineWidth),
                                    0,
                                    0,
                                    Me.Width,
@@ -284,52 +286,52 @@ Public Class Shape : Inherits Control
             Case ShapeModes.Rectangle
                 'einfaches Rechteck zeichnen
                 g.DrawRectangle(
-                    New Pen(_LineColor, _LineWidth),
-                    _LineWidth / 2,
-                    _LineWidth / 2,
-                    Me.Width - _LineWidth,
-                    Me.Height - _LineWidth)
+                    New Pen(Me._LineColor, Me._LineWidth),
+                    Me._LineWidth / 2,
+                    Me._LineWidth / 2,
+                    Me.Width - Me._LineWidth,
+                    Me.Height - Me._LineWidth)
 
             Case ShapeModes.FilledRectangle
                 'einfaches Rechteck zeichnen
                 g.DrawRectangle(
-                    New Pen(_LineColor, _LineWidth),
-                    _LineWidth / 2,
-                    _LineWidth / 2,
-                    Me.Width - _LineWidth,
-                    Me.Height - _LineWidth)
+                    New Pen(Me._LineColor, Me._LineWidth),
+                    Me._LineWidth / 2,
+                    Me._LineWidth / 2,
+                    Me.Width - Me._LineWidth,
+                    Me.Height - Me._LineWidth)
 
                 'Rechteck ausfüllen
-                g.FillRectangle(New SolidBrush(_FillColor),
-                               _LineWidth,
-                               _LineWidth,
-                               Me.Width - (2 * _LineWidth),
-                               Me.Height - (2 * _LineWidth))
+                g.FillRectangle(New SolidBrush(Me._FillColor),
+                               Me._LineWidth,
+                               Me._LineWidth,
+                               Me.Width - (2 * Me._LineWidth),
+                               Me.Height - (2 * Me._LineWidth))
 
             Case ShapeModes.Elypse
                 'einfache Ellipse zeichnen
                 g.DrawEllipse(
-                    New Pen(_LineColor, _LineWidth),
-                    _LineWidth / 2,
-                    _LineWidth / 2,
-                    Me.Width - _LineWidth,
-                    Me.Height - _LineWidth)
+                    New Pen(Me._LineColor, Me._LineWidth),
+                    Me._LineWidth / 2,
+                    Me._LineWidth / 2,
+                    Me.Width - Me._LineWidth,
+                    Me.Height - Me._LineWidth)
 
             Case ShapeModes.FilledElypse
                 'einfache Ellipe zeichnen
                 g.DrawEllipse(
-                    New Pen(_LineColor, _LineWidth),
-                    _LineWidth / 2,
-                    _LineWidth / 2,
-                    Me.Width - _LineWidth,
-                    Me.Height - _LineWidth)
+                    New Pen(Me._LineColor, Me._LineWidth),
+                    Me._LineWidth / 2,
+                    Me._LineWidth / 2,
+                    Me.Width - Me._LineWidth,
+                    Me.Height - Me._LineWidth)
 
                 'Ellipse ausfüllen
-                g.FillEllipse(New SolidBrush(_FillColor),
-                              _LineWidth,
-                              _LineWidth,
-                              Me.Width - (2 * _LineWidth),
-                              Me.Height - (2 * _LineWidth))
+                g.FillEllipse(New SolidBrush(Me._FillColor),
+                              Me._LineWidth,
+                              Me._LineWidth,
+                              Me.Width - (2 * Me._LineWidth),
+                              Me.Height - (2 * Me._LineWidth))
 
         End Select
 
@@ -340,8 +342,8 @@ Public Class Shape : Inherits Control
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
+            If disposing AndAlso Me.components IsNot Nothing Then
+                Me.components.Dispose()
             End If
         Finally
             MyBase.Dispose(disposing)
@@ -386,7 +388,7 @@ Public Class Shape : Inherits Control
     ''' </summary>
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.components = New System.ComponentModel.Container()
     End Sub
 
 

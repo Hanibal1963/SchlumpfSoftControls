@@ -10,12 +10,14 @@ Imports System.ComponentModel
 ''' Definiert eine Benutzerdefinierte Seite
 ''' </summary>
 <ToolboxItem(False)>
-Public Class PageCustom : Inherits WizardPage
+Public Class PageCustom
+
+    Inherits WizardPage
 
     Private _Style As PageStyle = PageStyle.Custom
 
     <DefaultValue(PageStyle.Custom)>
-    <Category("Design")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Ruft den Stil der Assistentenseite ab oder legt diesen fest.")>
     Public Overrides Property Style As PageStyle
         Get

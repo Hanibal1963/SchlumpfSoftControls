@@ -16,7 +16,7 @@ Imports System.Drawing.Imaging
 ''' Control zum anzeigen von animierten Grafiken.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(ClassDescriptionConstants.AniGif_Description)>
+<Description(ClassDescriptionConstants.AniGif)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(AniGif), "AniGif.bmp")>
 Public Class AniGif
@@ -106,7 +106,7 @@ Public Class AniGif
     ''' Wird ausgelöst wenn die Grafik nicht animiert werden kann.
     ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description(EventDescriptionConstants.NoAnimation_Description)>
     Public Event NoAnimation(sender As Object, e As EventArgs)
 
@@ -130,7 +130,7 @@ Public Class AniGif
     ''' Legt fest ob die Animation sofort nach dem laden gestartet wird.
     ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description(PropertyDescriptionConstants.AutoPlay_Description)>
     Public Property AutoPlay() As Boolean
         Get
@@ -146,7 +146,7 @@ Public Class AniGif
     ''' Gibt die animierte Gif-Grafik zurück oder legt diese fest.
     ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Category_Appearance)>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description(PropertyDescriptionConstants.Gif_Description)>
     Public Property Gif() As Bitmap
         Get
@@ -163,7 +163,7 @@ Public Class AniGif
     ''' Gibt die Art wie die Grafik angezeigt wird zurück oder legt diese fest.
     ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description(PropertyDescriptionConstants.GifSizeMode_Description)>
     Public Property GifSizeMode() As SizeMode
         Get
@@ -181,7 +181,7 @@ Public Class AniGif
     ''' die in der Datei festgelegte Geschwindigkeit benutzt wird.
     ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description(PropertyDescriptionConstants.CustomDisplaySpeed_Description)>
     Public Property CustomDisplaySpeed As Boolean
         Get
@@ -201,7 +201,7 @@ Public Class AniGif
     ''' Bewirkt nur eine Änderung wenn <seealso cref="CustomDisplaySpeed"/> auf True festgelegt ist.
     ''' </remarks>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description(PropertyDescriptionConstants.FramesPerSecond_Description)>
     Public Property FramesPerSecond As Decimal
         Get
@@ -221,7 +221,7 @@ Public Class AniGif
     ''' Bewirkt nur eine Änderung wenn <seealso cref="GifSizeMode"/> auf <seealso cref="SizeMode.Zoom"/> festgelegt ist.
     ''' </remarks>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Category_Behavior)>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description(PropertyDescriptionConstants.ZoomFactor_Description)>
     Public Property ZoomFactor As Decimal
         Get

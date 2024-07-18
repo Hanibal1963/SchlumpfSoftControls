@@ -16,11 +16,13 @@ Imports System.Windows.Forms.Design
 ''' Ein Control zum erstellen eines Assistenen
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Ein Control zum erstellen eines Assistenen")>
+<Description(ClassDescriptionConstants.Wizard)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(Wizard), "Wizard.bmp")>
 <Designer(GetType(WizardDesigner))>
-Public Class Wizard : Inherits UserControl
+Public Class Wizard
+
+    Inherits UserControl
 
     ''' <summary>
     ''' speichert das Bild für den Headerbereich
@@ -76,28 +78,28 @@ Public Class Wizard : Inherits UserControl
     Public Delegate Sub BeforeSwitchPagesEventHandler(sender As Object, e As BeforeSwitchPagesEventArgs)
     Public Delegate Sub AfterSwitchPagesEventHandler(sender As Object, e As AfterSwitchPagesEventArgs)
 
-    <Category("Behavior")>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description("Tritt auf, bevor die Seiten des Assistenten gewechselt werden, um dem Benutzer die Möglichkeit zur Validierung zu geben.")>
     Public Event BeforeSwitchPages As BeforeSwitchPagesEventHandler
 
-    <Category("Behavior")>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description("Tritt auf, nachdem die Seiten des Assistenten gewechselt wurden, und gibt dem Benutzer die Möglichkeit, die neue Seite einzurichten.")>
     Public Event AfterSwitchPages As AfterSwitchPagesEventHandler
 
-    <Category("Behavior")>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description("c")>
     Public Event Cancel As CancelEventHandler
 
-    <Category("Behavior")>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description("Tritt auf, wenn der Assistent abgeschlossen ist, und gibt dem Benutzer die Möglichkeit, zusätzliche Aufgaben zu erledigen.")>
     Public Event Finish As EventHandler
 
-    <Category("Behavior")>
+    <Category(CategoryDesciptionConstants.Behavior)>
     <Description("Tritt auf, wenn der Benutzer auf die Hilfeschaltfläche klickt.")>
     Public Event Help As EventHandler
 
     <Browsable(True)>
-    <Category("Design")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Ruft die Sichtbarkeit Status der Hilfeschaltfläche ab oder legt diesen fest.")>
     <DefaultValue(True)>
     Public Property VisibleHelp As Boolean
@@ -122,7 +124,7 @@ Public Class Wizard : Inherits UserControl
     End Property
 
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Content)>
-    <Category("Design ")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Ruft die Auflistung der Assistentenseiten in diesem Registerkartensteuerelement ab.")>
     <Editor(GetType(PagesCollectionEditor), GetType(UITypeEditor))>
     Public ReadOnly Property Pages As PagesCollection
@@ -132,7 +134,7 @@ Public Class Wizard : Inherits UserControl
     End Property
 
     <Browsable(True)>
-    <Category("Design")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Ruft das in der Kopfzeile der Standardseiten angezeigte Bild ab oder legt dieses fest.")>
     Public Property ImageHeader As Image
         Get
@@ -147,7 +149,7 @@ Public Class Wizard : Inherits UserControl
     End Property
 
     <Browsable(True)>
-    <Category("Design")>
+    <Category(CategoryDesciptionConstants.Design)>
     <Description("Ruft das auf den Begrüßungs- und Abschlussseiten angezeigte Bild ab oder legt es fest.")>
     Public Property ImageWelcome As Image
         Get
@@ -161,7 +163,7 @@ Public Class Wizard : Inherits UserControl
         End Set
     End Property
 
-    <Category("Layout")>
+    <Category(CategoryDesciptionConstants.Layout)>
     <Description("Ruft ab oder legt fest, an welcher Kante des übergeordneten Containers ein Steuerelement angedockt ist.")>
     <DefaultValue(DockStyle.Fill)>
     Public Overloads Property Dock As DockStyle
@@ -204,7 +206,7 @@ Public Class Wizard : Inherits UserControl
         End Set
     End Property
 
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Ruft die Schriftart ab, die zum Anzeigen der Beschreibung einer Standardseite verwendet wird, oder legt diese fest.")>
     Public Property HeaderFont As Font
         Get
@@ -218,7 +220,7 @@ Public Class Wizard : Inherits UserControl
         End Set
     End Property
 
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Ruft die Schriftart ab, die zum Anzeigen des Titels einer Standardseite verwendet wird, oder legt diese fest.")>
     Public Property HeaderTitleFont As Font
         Get
@@ -237,7 +239,7 @@ Public Class Wizard : Inherits UserControl
         End Set
     End Property
 
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Ruft die Schriftart ab, die zum Anzeigen der Beschreibung einer Begrüßungs- oder Abschlussseite verwendet wird, oder legt diese fest.")>
     Public Property WelcomeFont As Font
         Get
@@ -251,7 +253,7 @@ Public Class Wizard : Inherits UserControl
         End Set
     End Property
 
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Ruft die Schriftart ab, die zum Anzeigen des Titels einer Begrüßungs- oder Abschlussseite verwendet wird, oder legt diese fest.")>
     Public Property WelcomeTitleFont As Font
         Get

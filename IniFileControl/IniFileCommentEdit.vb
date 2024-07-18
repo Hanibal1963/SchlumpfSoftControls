@@ -16,7 +16,7 @@ Imports Newtonsoft.Json.Linq
 ''' Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.")>
+<Description(ClassDescriptionConstants.IniFileCommentEdit)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileCommentEdit), "IniFileCommentEdit.bmp")>
 Public Class IniFileCommentEdit
@@ -56,7 +56,7 @@ Public Class IniFileCommentEdit
     ''' Gibt den Kommentartext zurück oder legt diesen fest.
     ''' </summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category(CategoryDesciptionConstants.Appearance)>
     <Description("Gibt den Kommentartext zurück oder legt diesen fest.")>
     Public Property Comment As String()
         Get
