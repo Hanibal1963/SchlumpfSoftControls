@@ -12,12 +12,6 @@ Friend Class ClassDescriptionConstants
 
 
 
-    ''' <summary>
-    ''' Kurzbeschreibung des DriveWatcher Controls
-    ''' </summary>
-    Public Const DriveWatcher =
-        "Steuerelement um die Laufwerke zu überwachen."
-
 
     ''' <summary>
     ''' Kurzbeschreibung des IniFile Verwaltungscontrols

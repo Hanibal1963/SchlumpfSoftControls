@@ -10,12 +10,13 @@ Imports System.Drawing
 Imports System.IO
 Imports System.Windows.Forms
 
+
 ''' <summary>
 ''' Steuerelement um die Laufwerke zu überwachen.
 ''' </summary>
 <ProvideToolboxControl("Schlumpfsoft Controls", False)>
 <ToolboxItem(True)>
-<Description(ClassDescriptionConstants.DriveWatcher)>
+<MyDescription("ClassDescription")>
 <ToolboxBitmap(GetType(DriveWatcher), "DriveWatcher.bmp")>
 Public Class DriveWatcher
 
@@ -42,7 +43,7 @@ Public Class DriveWatcher
     ''' <param name="e">
     ''' Enthält die Eigenschaften zum hinzugefügten Laufwerk. (<see cref="DriveAddedEventArgs"/>)
     ''' </param>
-    <Description("Wird ausgelöst wenn ein Laufwerk hinzugefügt wurde.")>
+    <MyDescription("DriveAddedDescription")>
     Public Event DriveAdded(sender As Object, e As DriveAddedEventArgs)
 
 
@@ -53,7 +54,7 @@ Public Class DriveWatcher
     ''' <param name="e">
     ''' Enthält die Eigenschaften zum entfernten Laufwerk. (<see cref="DriveRemovedEventArgs"/>)
     ''' </param>
-    <Description("Wird ausgelöst wenn ein Laufwerk entfernt wurde.")>
+    <MyDescription("DriveRemovedDescription")>
     Public Event DriveRemoved(sender As Object, e As DriveRemovedEventArgs)
 
 
@@ -149,19 +150,24 @@ Public Class DriveWatcher
     ''' </summary>
     Private Class NativeForm
 
+
         Inherits NativeWindow
+
 
         'Das sind die Ereignisse aus WParam.
         'Uns interessiert nur, ob ein Laufwerk hinzugekommen ist oder entfernt wurde.
         Public Event DriveAdded(sender As Object, e As DriveInfo)
         Public Event DriveRemoved(sender As Object, e As DriveInfo)
 
+
         'Windowmessage DeviceChange
         Private Const WM_DEVICECHANGE As Integer = &H219
+
 
         'Die beiden Ereignisse, die für uns von Bedeutung sind.
         Private Const DBT_DEVICEARRIVAL As Integer = &H8000
         Private Const DBT_DEVICEREMOVECOMPLETE As Integer = &H8004
+
 
         ''' <summary>
         ''' Das sind die Konstanten der Gerätetypen
@@ -172,35 +178,42 @@ Public Class DriveWatcher
         ''' </remarks>
         Private Enum DBT_DEVTYP
 
+
             ''' <summary>
             ''' OEM- oder IHV-definiert
             ''' </summary>
             OEM = 0
+
 
             ''' <summary>
             ''' Devnode-Nummer
             ''' </summary>
             DEVNODE = 1
 
+
             ''' <summary>
             ''' Logisches Volumen
             ''' </summary>
             VOLUME = 2
+
 
             ''' <summary>
             ''' Port (seriell oder parallel)
             ''' </summary>
             PORT = 3
 
+
             ''' <summary>
             ''' Netzwerkressource
             ''' </summary>
             NET = 4
 
+
             ''' <summary>
             ''' Geräteschnittstellenklasse
             ''' </summary>
             DEVICEINTERFACE = 5
+
 
             ''' <summary>
             ''' Dateisystem-Handle
@@ -208,6 +221,7 @@ Public Class DriveWatcher
             HANDLE = 6
 
         End Enum
+
 
         ''' <summary>
         ''' Die Struktur für den Header.
@@ -220,6 +234,7 @@ Public Class DriveWatcher
             Public dbch_devicetype As Integer
             Public dbch_reserved As Integer
         End Structure
+
 
         ''' <summary>
         ''' Die Struktur für OEM.
@@ -235,6 +250,7 @@ Public Class DriveWatcher
             Public dbco_suppfunc As Integer
         End Structure
 
+
         ''' <summary>
         ''' Die Struktur für Volumes.
         ''' </summary>
@@ -249,12 +265,14 @@ Public Class DriveWatcher
             Public dbcv_flags As Short
         End Structure
 
+
         'Dies ist der Dreh- und Angelpunkt der Klasse. - Hier bekommen wir die Messages mit.
         'In unserm Fall interessiert uns nur die WM_DeviceChange-Nachricht
         Protected Overrides Sub WndProc(ByRef m As Message)
             If m.Msg = WM_DEVICECHANGE Then Me.HandleHeader(m)
             MyBase.WndProc(m)
         End Sub
+
 
         'Hier schauen wir erst mal in den Header und verzweigen dementsprechend
         Private Sub HandleHeader(ByRef m As Message)
@@ -273,6 +291,7 @@ Public Class DriveWatcher
             End If
         End Sub
 
+
         'Das Ereignis betrifft ein Volume
         Private Sub HandleVolume(ByRef m As Message)
             Dim volume As DEV_BROADCAST_VOLUME
@@ -287,6 +306,7 @@ Public Class DriveWatcher
             End If
         End Sub
 
+
         'OEM, und was genau?
         'Uns interesieren nur Volumes
         Private Sub HandleOEM(ByRef m As Message)
@@ -297,6 +317,7 @@ Public Class DriveWatcher
                 If oem.dbco_devicetype = DBT_DEVTYP.VOLUME Then Me.HandleVolume(m)
             End If
         End Sub
+
 
         'Liefert den Laufwerksbuchstaben zurück
         Private Function DriveFromMask(mask As Integer) As Char
@@ -310,14 +331,17 @@ Public Class DriveWatcher
             Return result
         End Function
 
+
         Public Sub New()
             Me.CreateHandle(New CreateParams) 'eigenes Handle erstellen
         End Sub
+
 
         Protected Overrides Sub Finalize()
             Me.DestroyHandle() 'eigenes Handle zerstören
             MyBase.Finalize()
         End Sub
+
 
     End Class
 
