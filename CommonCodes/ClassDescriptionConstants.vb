@@ -10,11 +10,6 @@
 Friend Class ClassDescriptionConstants
 
 
-    ''' <summary>
-    ''' Kurzbeschreibung des AniGif Controls
-    ''' </summary>
-    Public Const AniGif =
-        "Control zum Anzeigen von animierten Grafiken."
 
 
     ''' <summary>
@@ -79,12 +74,6 @@ Friend Class ClassDescriptionConstants
     Public Const SevSegMultiDigit =
         "Control zum Anzeigen einer Ziffernfolge als 7-Segmentanzeige."
 
-
-    ''' <summary>
-    ''' Kurzbeschreibung des Shape Control
-    ''' </summary>
-    Public Const Shape =
-        "Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse."
 
 
     ''' <summary>

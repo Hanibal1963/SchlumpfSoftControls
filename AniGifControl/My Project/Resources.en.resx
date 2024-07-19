@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,35 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="AniGif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AniGif.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ClassDescription" xml:space="preserve">
+    <value>Control for displaying animated graphics.</value>
   </data>
   <data name="AutoPlayDescription" xml:space="preserve">
-    <value>Legt fest ob die Animation sofort nach dem laden gestartet wird.</value>
-  </data>
-  <data name="ClassDescription" xml:space="preserve">
-    <value>Control zum Anzeigen von animierten Grafiken.</value>
+    <value>Specify whether the animation is started immediately after the loading.</value>
   </data>
   <data name="CustomDisplaySpeedDescription" xml:space="preserve">
-    <value>Legt fest ob die benutzerdefinierte Anzeigegeschwindigkeit oder die in der Datei festgelegte Geschwindigkeit benutzt wird.</value>
+    <value>Specifies whether the custom display speed or the speed specified in the file is used.</value>
   </data>
   <data name="FramesPerSecondDescription" xml:space="preserve">
-    <value>Legt die benutzerdefinierte Anzeigegeschwindigkeit in Bildern/Sekunde fest wenn CustomDisplaySpeed auf True festgelegt ist.</value>
+    <value>Puts the custom display speed in pictures/second when Custom DisplaySpeed ​​is set to true.</value>
   </data>
   <data name="GifDescription" xml:space="preserve">
-    <value>Gibt die animierte Gif-Grafik zurück oder legt diese fest.</value>
+    <value>Put the animated GIF graphics back or define it.</value>
   </data>
   <data name="GifSizeModeDescription" xml:space="preserve">
-    <value>Gibt die Art wie die Grafik angezeigt wird zurück oder legt diese fest.</value>
-  </data>
-  <data name="NoAnimationDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn die Grafik nicht animiert werden kann.</value>
-  </data>
-  <data name="Standard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Standard.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>If the way the graphic is displayed indicates or defines it.</value>
   </data>
   <data name="ZoomFactorDescription" xml:space="preserve">
-    <value>Legt den Zoomfaktor fest wenn GifSizeMode auf Zoom festgelegt ist.</value>
+    <value>Specify the zoom factor when gifsizemod is set on zoom.</value>
+  </data>
+  <data name="NoAnimationDescription" xml:space="preserve">
+    <value>Is triggered if the graphic cannot be animated.</value>
   </data>
 </root>

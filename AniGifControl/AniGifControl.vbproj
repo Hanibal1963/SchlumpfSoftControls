@@ -102,11 +102,8 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\CommonCodes\CategoryDescriptionConstants.vb">
-      <Link>CategoryDescriptionConstants.vb</Link>
-    </Compile>
-    <Compile Include="..\CommonCodes\ClassDescriptionConstants.vb">
-      <Link>ClassDescriptionConstants.vb</Link>
+    <Compile Include="..\CommonCodes\MyDescription.vb">
+      <Link>MyDescription.vb</Link>
     </Compile>
     <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
       <Link>ProvideToolboxControlAttribute.vb</Link>
@@ -114,14 +111,12 @@
     <Compile Include="AniGif.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="EventDescriptionConstants.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="PropertyDescriptionConstants.vb" />
     <Compile Include="SizeMode.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +130,7 @@
     <EmbeddedResource Include="AniGif.resx">
       <DependentUpon>AniGif.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.en.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
