@@ -41,6 +41,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonCodes", "CommonCodes"
 	ProjectSection(SolutionItems) = preProject
 		CommonCodes\ClassDescriptionConstants.vb = CommonCodes\ClassDescriptionConstants.vb
 		CommonCodes\CategoryDescriptionConstants.vb = CommonCodes\CategoryDescriptionConstants.vb
+		CommonCodes\MyDescription.vb = CommonCodes\MyDescription.vb
 		CommonCodes\ProvideToolboxControlAttribute.vb = CommonCodes\ProvideToolboxControlAttribute.vb
 	EndProjectSection
 EndProject
@@ -185,6 +186,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_PrefixTranslations = False
+		RESX_NeutralResourcesLanguage = de-DE
 		SolutionGuid = {1F02675E-F1F5-4CB4-9063-742717056245}
 	EndGlobalSection
 EndGlobal

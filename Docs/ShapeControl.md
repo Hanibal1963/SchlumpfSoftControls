@@ -43,13 +43,19 @@ links oben nach rechts unten gezeichnet wird oder umgekehrt.
 
 ## Versionsverlauf
 
-Version 2.2024.30.06
+**Version 2.2024.19.07**
+
+Datum: 19.07.2024
+
+- Beschreibungstexte in Englisch hinzugefügt (Google Translate)
+
+**Version 2.2024.30.06**
 
 Datum: 30.06.2024
 
 - Veröffentlichung im Bündel mit anderen Controls.
 
-Version 1.2024.06.04
+**Version 1.2024.06.04**
 
 Datum 04.06.2024
 

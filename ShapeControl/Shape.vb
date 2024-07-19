@@ -13,10 +13,13 @@ Imports System.Windows.Forms
 ''' Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(ClassDescriptionConstants.Shape)>
+<MyDescription("ClassDescription")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(Shape), "Shape.bmp")>
-Public Class Shape : Inherits Control
+Public Class Shape
+
+
+    Inherits Control
 
 
 #Region "Definition der Variablen"
@@ -56,10 +59,13 @@ Public Class Shape : Inherits Control
 
 #Region "neue Eigenschaften"
 
-    ''' <summary>Legt die anzuzeigende Form fest oder gibt diese zurück.</summary>
+
+    ''' <summary>
+    ''' Legt die anzuzeigende Form fest oder gibt diese zurück.
+    ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description("Legt die anzuzeigende Form fest oder gibt diese zurück.")>
+    <Category("Appearance")>
+    <MyDescription("ShapeModusDescription")>
     Public Property ShapeModus() As ShapeModes
         Get
             Return Me._ShapeModus
@@ -70,10 +76,13 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
-    ''' <summary>Legt die Breite der Linie oder Rahmenlinie fest oder gibt diese zurück.</summary>
+
+    ''' <summary>
+    ''' Legt die Breite der Linie oder Rahmenlinie fest oder gibt diese zurück.
+    ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description("Legt die Breite der Linie oder Rahmenlinie fest oder gibt diese zurück.")>
+    <Category("Appearance")>
+    <MyDescription("LineWidthDescription")>
     Public Property LineWidth() As Single
         Get
             Return Me._LineWidth
@@ -84,10 +93,13 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
-    ''' <summary>Legt die Farbe der Linie oder Rahmenlinie fest oder gibt diese zurück.</summary>
+
+    ''' <summary>
+    ''' Legt die Farbe der Linie oder Rahmenlinie fest oder gibt diese zurück.
+    ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description("Legt die Farbe der Linie oder Rahmenlinie fest oder gibt diese zurück.")>
+    <Category("Appearance")>
+    <MyDescription("LineColorDescription")>
     Public Property LineColor() As Color
         Get
             Return Me._LineColor
@@ -98,10 +110,13 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
-    ''' <summary>Legt die Füllfarbe für die Form fest oder gibt diese zurück.</summary>
+
+    ''' <summary>
+    ''' Legt die Füllfarbe für die Form fest oder gibt diese zurück.
+    ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description("Legt die Füllfarbe für die Form fest oder gibt diese zurück.")>
+    <Category("Appearance")>
+    <MyDescription("FillColorDescription")>
     Public Property FillColor() As Color
         Get
             Return Me._FillColor
@@ -112,10 +127,14 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
-    ''' <summary>Legt fest ob eine diagonale Linie von links oben nach rechts unten oder umgekehrt verläuft oder gibt dieses zurück.</summary>
+
+    ''' <summary>
+    ''' Legt fest ob eine diagonale Linie von links oben nach rechts unten oder 
+    ''' umgekehrt verläuft oder gibt dieses zurück.
+    ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description("Legt fest ob eine diagonale Linie von links oben nach rechts unten oder umgekehrt verläuft oder gibt dieses zurück.")>
+    <Category("Appearance")>
+    <MyDescription("DiagonalLineModusDescription")>
     Public Property DiagonalLineModus() As DiagonalLineModes
         Get
             Return Me._DiagonalLineModus
@@ -126,13 +145,18 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
+
 #End Region
 
 
 #Region "überschriebene Eigenschften"
 
-    ''' <summary>Legt spezielle Parameter für das ShapeControl fest</summary>
-    ''' <remarks>https://stackoverflow.com/questions/511320/transparent-control-backgrounds-on-a-vb-net-gradient-filled-form</remarks>
+    ''' <summary>
+    ''' Legt spezielle Parameter für das ShapeControl fest
+    ''' </summary>
+    ''' <remarks>
+    ''' https://stackoverflow.com/questions/511320/transparent-control-backgrounds-on-a-vb-net-gradient-filled-form
+    ''' </remarks>
     Protected Overrides ReadOnly Property CreateParams() As CreateParams
         Get
             Dim cp As CreateParams = MyBase.CreateParams
@@ -148,7 +172,10 @@ Public Class Shape : Inherits Control
 
 #Region "ausgeblendete Eigenschaften"
 
-    ''' <summary>Hintergrundfarbe (nicht relevant für dieses Control)</summary>
+
+    ''' <summary>
+    ''' Hintergrundfarbe (nicht relevant für dieses Control)
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackColor As Color
@@ -160,7 +187,10 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
-    ''' <summary>Hintergrundbild (nicht relevant für dieses Control)</summary>
+
+    ''' <summary>
+    ''' Hintergrundbild (nicht relevant für dieses Control)
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackgroundImage As Image
@@ -172,7 +202,10 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
-    ''' <summary>Leout Hintergrundbild (nicht relevant für dieses Control)</summary>
+
+    ''' <summary>
+    ''' Layout Hintergrundbild (nicht relevant für dieses Control)
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackgroundImageLayout As ImageLayout
@@ -184,7 +217,10 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
-    ''' <summary>Schriftart (nicht relevant für dieses Control)</summary>
+
+    ''' <summary>
+    ''' Schriftart (nicht relevant für dieses Control)
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property Font As Font
@@ -196,7 +232,10 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
-    ''' <summary>Vordergrundfarbe (nicht relevant für dieses Control)</summary>
+
+    ''' <summary>
+    ''' Vordergrundfarbe (nicht relevant für dieses Control)
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property ForeColor As Color
@@ -208,7 +247,10 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
-    ''' <summary>Rechts - Links Schreibweise (nicht relevant für dieses Control)</summary>
+
+    ''' <summary>
+    ''' Rechts - Links Schreibweise (nicht relevant für dieses Control)
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property RightToLeft As RightToLeft
@@ -220,7 +262,10 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
-    ''' <summary>Text (nicht relevant für dieses Control)</summary>
+
+    ''' <summary>
+    ''' Text (nicht relevant für dieses Control)
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property Text As String
@@ -232,10 +277,13 @@ Public Class Shape : Inherits Control
         End Set
     End Property
 
+
 #End Region
 
 
-    ''' <summary>zeichnet das ShapeControl neu</summary>
+    ''' <summary>
+    ''' zeichnet das ShapeControl neu
+    ''' </summary>
     Protected Overrides Sub OnPaint(e As PaintEventArgs)
 
         MyBase.OnPaint(e)
@@ -338,7 +386,9 @@ Public Class Shape : Inherits Control
     End Sub
 
 
-    ''' <summary>Das Steuerelement überschreibt den Löschvorgang zum Bereinigen der Komponentenliste.</summary>
+    ''' <summary>
+    ''' Das Steuerelement überschreibt den Löschvorgang zum Bereinigen der Komponentenliste.
+    ''' </summary>
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -351,7 +401,9 @@ Public Class Shape : Inherits Control
     End Sub
 
 
-    ''' <summary>Initialisiert die Standardwerte für das ShapeControl</summary>
+    ''' <summary>
+    ''' Initialisiert die Standardwerte für das ShapeControl
+    ''' </summary>
     Private Sub InitializeVariables()
 
         'Horizontale Linie
@@ -372,7 +424,9 @@ Public Class Shape : Inherits Control
     End Sub
 
 
-    ''' <summary>Initialisiert die Styles für das ShapeControl</summary>
+    ''' <summary>
+    ''' Initialisiert die Styles für das ShapeControl
+    ''' </summary>
     Private Sub InitializeStyles()
 
         Me.SetStyle(ControlStyles.Opaque, True)
