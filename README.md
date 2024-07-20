@@ -17,6 +17,5 @@ Zurzeit sind folgende Steuerelemente vorhanden:
 
 ## Versionsverlauf
 
-Details zu den einzelnen Versionen der Controls sind in den 
-Beschreibungen der controls zu finden.
+Details zu den einzelnen Versionen der Controls sind in den Beschreibungen der Controls zu finden.
 
