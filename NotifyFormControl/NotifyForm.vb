@@ -11,6 +11,7 @@ Imports System.Drawing
 Imports System.Threading
 Imports System.Windows.Forms
 
+'TODO: Beschreibungstexte in Ressource eintragen und auf Englisch übersetzen.
 
 ''' <summary>
 ''' Control zum anzeigen von Benachrichtigungsfenstern.
