@@ -4,6 +4,8 @@
 ' ****************************************************************************************************************
 '
 
+'TODO: Beschreibungstexte in Ressource eintragen und auf Englisch übersetzen.
+
 Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
