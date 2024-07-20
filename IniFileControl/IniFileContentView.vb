@@ -8,6 +8,7 @@ Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
+'TODO: Beschreibungstexte in Ressource eintragen und auf Englisch übersetzen.
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen des Dateiinhaltes.
