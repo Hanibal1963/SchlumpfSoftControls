@@ -12,6 +12,8 @@ Imports System.Drawing.Design
 Imports System.Windows.Forms
 Imports System.Windows.Forms.Design
 
+'TODO: Beschreibungstexte in Ressource eintragen und auf Englisch übersetzen.
+
 ''' <summary>
 ''' Ein Control zum erstellen eines Assistenen
 ''' </summary>
