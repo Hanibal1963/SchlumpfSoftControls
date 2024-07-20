@@ -8,6 +8,8 @@ Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
+'TODO: Beschreibungstexte in Ressource eintragen und auf Englisch übersetzen.
+
 ''' <summary>Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund.</summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
 <Description(ClassDescriptionConstants.TransparentLabel)>
