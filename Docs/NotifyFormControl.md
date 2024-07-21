@@ -28,13 +28,6 @@ Falls jemand die ursprüngliche Quelle kennt oder finden sollte, dann bitte eine
 
 -  **Show** - Zeigt das Fenster an
 
----
-
-## geplante Änderungen und Funktionen
-
-- Im Moment keine
-
----
 
 ## Weitere Literatur
 
