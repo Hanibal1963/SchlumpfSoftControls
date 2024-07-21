@@ -82,6 +82,9 @@
     <Compile Include="..\CommonCodes\ClassDescriptionConstants.vb">
       <Link>ClassDescriptionConstants.vb</Link>
     </Compile>
+    <Compile Include="..\CommonCodes\MyDescription.vb">
+      <Link>MyDescription.vb</Link>
+    </Compile>
     <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
       <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>

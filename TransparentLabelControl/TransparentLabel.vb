@@ -4,11 +4,11 @@
 ' ****************************************************************************************************************
 '
 
+
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
-'TODO: Beschreibungstexte in Ressource eintragen und auf Englisch übersetzen.
 
 ''' <summary>
 ''' Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund.
@@ -24,8 +24,8 @@ Inherits Label
 
 
     '''<summary>
-''' Wird vom Steuerelement-Designer benötigt.
-''' </summary>
+    ''' Wird vom Steuerelement-Designer benötigt.
+    ''' </summary>
     Private components As IContainer
 
 
@@ -42,9 +42,10 @@ Inherits Label
 
 #Region "ausgeblendete Eigenschaften"
 
+
     ''' <summary>
-''' Nicht Relevant
-''' </summary>
+    ''' Nicht Relevant
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackColor As Color
@@ -56,9 +57,10 @@ Inherits Label
         End Set
     End Property
 
+
     ''' <summary>
-''' Nicht Relevant
-''' </summary>
+    ''' Nicht Relevant
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackgroundImage As Image
@@ -70,9 +72,10 @@ Inherits Label
         End Set
     End Property
 
+
     ''' <summary>
-''' Nicht Relevant
-''' </summary>
+    ''' Nicht Relevant
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackgroundImageLayout As ImageLayout
@@ -84,9 +87,10 @@ Inherits Label
         End Set
     End Property
 
+
     ''' <summary>
-''' Nicht Relevant
-''' </summary>
+    ''' Nicht Relevant
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overloads Property FlatStyle As FlatStyle
@@ -98,12 +102,13 @@ Inherits Label
         End Set
     End Property
 
+
 #End Region
 
 
     ''' <summary>
-''' Hiermit wird die Möglichkeit der Transparenz aktiviert
-''' </summary>
+    ''' Hiermit wird die Möglichkeit der Transparenz aktiviert
+    ''' </summary>
     Protected Overrides ReadOnly Property CreateParams As CreateParams
         Get
             Dim cp As CreateParams = MyBase.CreateParams

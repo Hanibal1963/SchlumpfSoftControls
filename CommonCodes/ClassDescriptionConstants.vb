@@ -43,16 +43,6 @@ Friend Class ClassDescriptionConstants
     Public Const IniFileListEdit ="Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei."
 
 
-
-
-
-
-    '''' <summary>
-    '''' Kurzbeschreibung des TransparentLabel Control
-    '''' </summary>
-    'Public Const TransparentLabel ="Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund."
-
-
     ''' <summary>
     ''' 
     ''' </summary>
