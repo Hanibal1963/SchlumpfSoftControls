@@ -1,3 +1,4 @@
+
 # ShapeControl
 
 Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.
@@ -22,12 +23,6 @@ die Breite des Rahmens für ein Rechteck oder eine Ellipse fest.
 gefüllte Ellipse fest.
 - **DiagonalLineModus** - Legt fest ob die diagonale Linie von 
 links oben nach rechts unten gezeichnet wird oder umgekehrt.
-
----
-
- ## geplante Änderungen und Funktionen
-
-- Zurzeit keine.
 
 ---
 
