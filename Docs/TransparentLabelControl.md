@@ -30,12 +30,6 @@ bzw. es Probleme mit der Darstellung gibt, wurden diese von mir ausgeblendet.
 
 ---
 
-## geplante Erweiterungen und Funktionen
-
-- Zurzeit keine.
-
----
-
 ## weitere Literatur
 
 
@@ -53,7 +47,7 @@ Version 2.2024.04.06
 
 Datum: 06.04.2024
 
-- Änderung der versionsnummerierung wegen Problemen mit dem VisualStudio Marketplace.
+- Änderung der Versionsnummerierung wegen Problemen mit dem VisualStudio Marketplace.
 
 Version 1.2024.0404.00
 
