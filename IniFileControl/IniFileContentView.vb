@@ -14,7 +14,7 @@ Imports System.Windows.Forms
 ''' Steuerelement zum Anzeigen des Dateiinhaltes.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(ClassDescriptionConstants.IniFileContentView)>
+<MyDescription("ClassDescription")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileContentView), "IniFileContentView.bmp")>
 Public Class IniFileContentView
