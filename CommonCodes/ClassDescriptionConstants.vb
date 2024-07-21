@@ -51,8 +51,7 @@ Friend Class ClassDescriptionConstants
     '''' <summary>
     '''' Kurzbeschreibung des NotifyForm Control
     '''' </summary>
-    'Public Const NotifyForm =
-        "Control zum Anzeigen von Benachrichtigungsfenstern."
+    'Public Const NotifyForm ="Control zum Anzeigen von Benachrichtigungsfenstern."
 
 
     ''' <summary>
@@ -73,8 +72,7 @@ Friend Class ClassDescriptionConstants
     '''' <summary>
     '''' Kurzbeschreibung des TransparentLabel Control
     '''' </summary>
-    'Public Const TransparentLabel =
-        "Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund."
+    'Public Const TransparentLabel ="Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund."
 
 
     ''' <summary>
