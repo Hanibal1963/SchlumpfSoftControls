@@ -361,6 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Benutzerdefiniert
 /AniGifControl/ClassDiagram.cd
 /DriveWatcherControl/ClassDiagram.cd
 /IniFileControl/ClassDiagram.cd
