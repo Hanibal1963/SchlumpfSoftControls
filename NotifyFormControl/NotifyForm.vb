@@ -17,7 +17,7 @@ Imports System.Windows.Forms
 ''' Control zum anzeigen von Benachrichtigungsfenstern.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(ClassDescriptionConstants.NotifyForm)>
+<MyDescription("ClassDescription")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(NotifyForm), "NotifyForm.bmp")>
 Public Class NotifyForm
