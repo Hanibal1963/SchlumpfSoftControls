@@ -114,6 +114,7 @@
     <Import Include="Microsoft.VisualBasic" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.en.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
