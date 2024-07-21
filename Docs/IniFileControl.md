@@ -146,12 +146,6 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 
 ---
 
-## geplante Änderungen und Funktionen
-
-- Zur Zeit keine.
-
----
-
 ## Weitere Literatur
 
 - [Erstellen eines Windows Forms-Toolbox-Steuerelements](https://docs.microsoft.com/de-de/visualstudio/extensibility/creating-a-windows-forms-toolbox-control?view=vs-2022)
