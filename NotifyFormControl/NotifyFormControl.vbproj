@@ -80,11 +80,8 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\CommonCodes\CategoryDescriptionConstants.vb">
-      <Link>CategoryDescriptionConstants.vb</Link>
-    </Compile>
-    <Compile Include="..\CommonCodes\ClassDescriptionConstants.vb">
-      <Link>ClassDescriptionConstants.vb</Link>
+    <Compile Include="..\CommonCodes\MyDescription.vb">
+      <Link>MyDescription.vb</Link>
     </Compile>
     <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
       <Link>ProvideToolboxControlAttribute.vb</Link>
@@ -117,6 +114,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.en.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

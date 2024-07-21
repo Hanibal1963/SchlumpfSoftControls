@@ -43,10 +43,6 @@ Friend Class ClassDescriptionConstants
     Public Const IniFileListEdit ="Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei."
 
 
-    '''' <summary>
-    '''' Kurzbeschreibung des NotifyForm Control
-    '''' </summary>
-    'Public Const NotifyForm ="Control zum Anzeigen von Benachrichtigungsfenstern."
 
 
     ''' <summary>
