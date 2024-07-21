@@ -14,7 +14,7 @@ Imports System.ComponentModel
 ''' <summary>
 ''' Control zum Verwalten von INI - Dateien
 ''' </summary>
-<Description(ClassDescriptionConstants.IniFile)>
+<MyDescription("ClassDescription")>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
 Public Class IniFile
 
