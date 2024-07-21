@@ -15,7 +15,10 @@ Imports System.Windows.Forms
 <Description(ClassDescriptionConstants.TransparentLabel)>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(TransparentLabel), "TransparentLabel.bmp")>
-Public Class TransparentLabel : Inherits Label
+Public Class TransparentLabel
+
+
+Inherits Label
 
 
     '''<summary> Wird vom Steuerelement-Designer benötigt.</summary>
