@@ -48,10 +48,10 @@ Friend Class ClassDescriptionConstants
         "Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei."
 
 
-    ''' <summary>
-    ''' Kurzbeschreibung des NotifyForm Control
-    ''' </summary>
-    Public Const NotifyForm =
+    '''' <summary>
+    '''' Kurzbeschreibung des NotifyForm Control
+    '''' </summary>
+    'Public Const NotifyForm =
         "Control zum Anzeigen von Benachrichtigungsfenstern."
 
 
@@ -70,10 +70,10 @@ Friend Class ClassDescriptionConstants
 
 
 
-    ''' <summary>
-    ''' Kurzbeschreibung des TransparentLabel Control
-    ''' </summary>
-    Public Const TransparentLabel =
+    '''' <summary>
+    '''' Kurzbeschreibung des TransparentLabel Control
+    '''' </summary>
+    'Public Const TransparentLabel =
         "Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund."
 
 
