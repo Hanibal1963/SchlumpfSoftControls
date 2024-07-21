@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,58 +118,51 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BackColorDescription" xml:space="preserve">
-    <value>Legt die Hintergrundfarbe des Controls fest oder gibt diese zurück.</value>
-  </data>
-  <data name="ClassDescriptionSevSegMultiDigit" xml:space="preserve">
-    <value>Control zum Anzeigen einer Ziffernfolge als 7-Segmentanzeige.</value>
-  </data>
-  <data name="ClassDescriptionSevSegSingleDigit" xml:space="preserve">
-    <value>Control zum Anzeigen einer Ziffer als 7-Segmentanzeige.</value>
+    <value>Detects the background color of the control or returns it.</value>
   </data>
   <data name="ColonActiveDescription" xml:space="preserve">
-    <value>Gibt an, ob die Doppelpunkt-LEDs aktiv sind.</value>
+    <value>Indicates whether the colon LEDs are active.</value>
   </data>
   <data name="CustomBitPatternDescription" xml:space="preserve">
-    <value>Legt ein benutzerdefiniertes Bitmuster fest, das in den  sieben Segmenten angezeigt werden soll. Dies ist ein ganzzahliger Wert, bei dem die Bits 0 bis 6 den jeweiligen LED-Segmenten entsprechen.</value>
+    <value>Set a custom bit pattern that is to be displayed in the seven segments. This is an integer value in which Bits 0 to 6 meet the respective LED segments.</value>
   </data>
   <data name="DecimalPointActiveDescription" xml:space="preserve">
-    <value>Gibt an, ob die Dezimalpunkt-LED aktiv ist.</value>
+    <value>Indicates whether the decimal point LED is active.</value>
   </data>
   <data name="DigitCountDescription" xml:space="preserve">
-    <value>Anzahl der Digits in diesem Control.</value>
+    <value>Number of digits in this control.</value>
   </data>
   <data name="DigitPaddingDescription" xml:space="preserve">
-    <value>Auffüllung, die für jedes Digit im Control gilt.</value>
+    <value>Refilling that applies to every digit in the control.</value>
   </data>
   <data name="DigitValueDesciption" xml:space="preserve">
-    <value>Legt das anzuzeigende Zeichen fest oder gibt dieses zurück.</value>
+    <value>Specifies the sign to be displayed or return it.</value>
   </data>
   <data name="ForeColorDescription" xml:space="preserve">
-    <value>Legt die Vordergrundfarbe der Segmente des Controls fest oder gibt diese zurück.</value>
+    <value>Specifies the foreground color of the control segments or returns it.</value>
   </data>
   <data name="InactiveColorDescription" xml:space="preserve">
-    <value>Legt die Farbe inaktiver Segmente fest oder gibt diese zurück.</value>
+    <value>Detects the color of inactive segments or returns them.</value>
   </data>
   <data name="ItalicFactorDescription" xml:space="preserve">
-    <value>Scherkoeffizient für die Kursivschrift der Anzeige.</value>
+    <value>Schecoefficient for the italics of the advertisement.</value>
   </data>
   <data name="SegmentWidthDescription" xml:space="preserve">
-    <value>Legt die Breite der LED-Segmente fest oder gibt diese zurück.</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="SevSegMultiDigit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SevSegMultiDigit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SevSegSingleDigit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SevSegSingleDigit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>Detects the width of the LED segments or returns them.</value>
   </data>
   <data name="ShowColonDescription" xml:space="preserve">
-    <value>Gibt an, ob die Doppelpunkt-LEDs angezeigt werden.</value>
+    <value>Indicates whether the colon LEDs are displayed.</value>
   </data>
   <data name="ShowDecimalPointDescription" xml:space="preserve">
-    <value>Gibt an, ob die Dezimalpunkt-LED angezeigt wird.</value>
+    <value>Indicates whether the decimal point LED is displayed.</value>
   </data>
   <data name="ValueDescription" xml:space="preserve">
-    <value>Der auf dem Control anzuzeigende Wert.</value>
+    <value>The value to be displayed on the control.</value>
+  </data>
+  <data name="ClassDescriptionSevSegMultiDigit" xml:space="preserve">
+    <value>Control for displaying a sequence of digits as a 7-segment ad.</value>
+  </data>
+  <data name="ClassDescriptionSevSegSingleDigit" xml:space="preserve">
+    <value>Control for displaying a number as a 7-segment ad.</value>
   </data>
 </root>
