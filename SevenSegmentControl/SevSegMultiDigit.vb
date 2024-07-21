@@ -12,7 +12,7 @@ Imports System.Drawing
 Imports System.ComponentModel
 
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(ClassDescriptionConstants.SevSegMultiDigit)>
+<MyDescription("ClassDescriptionSevSegMultiDigit")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(SevSegMultiDigit), "SevSegMultiDigit.bmp")>
 Public Class SevSegMultiDigit
@@ -202,8 +202,8 @@ Public Class SevSegMultiDigit
     ''' <summary>
     ''' Legt die Farbe inaktiver Segmente fest oder gibt diese zurück.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description(PropertyDescriptionConstants.InactiveColor_Description)>
+    <Category("Appearance")>
+    <MyDescription("InactiveColorDescription")>
     Public Property InactiveColor As Color
         Get
             Return Me._inactiveColor
@@ -218,8 +218,8 @@ Public Class SevSegMultiDigit
     ''' <summary>
     ''' Legt die Breite der LED-Segmente fest oder gibt diese zurück.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description(PropertyDescriptionConstants.SegmentWidth_Description)>
+    <Category("Appearance")>
+    <MyDescription("SegmentWidthDescription")>
     Public Property SegmentWidth As Integer
         Get
             Return Me._segmentWidth
@@ -237,8 +237,8 @@ Public Class SevSegMultiDigit
     ''' <remarks>
     ''' Standardwert ist -0.1
     ''' </remarks>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description(PropertyDescriptionConstants.ItalicFactor_Description)>
+    <Category("Appearance")>
+    <MyDescription("ItalicFactorDescription")>
     Public Property ItalicFactor As Single
         Get
             Return Me._italicFactor
@@ -253,8 +253,8 @@ Public Class SevSegMultiDigit
     ''' <summary>
     ''' Gibt an, ob die Dezimalpunkt-LED angezeigt wird.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description(PropertyDescriptionConstants.ShowDecimalPoint_Description)>
+    <Category("Appearance")>
+    <MyDescription("ShowDecimalPointDescription")>
     Public Property ShowDecimalPoint As Boolean
         Get
             Return Me._showDecimalPoint
@@ -269,8 +269,8 @@ Public Class SevSegMultiDigit
     ''' <summary>
     ''' Anzahl der Digits in diesem Control.
     ''' </summary>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description(PropertyDescriptionConstants.DigitCount_Description)>
+    <Category("Appearance")>
+    <MyDescription("DigitCountDescription")>
     Public Property DigitCount As Integer
         Get
             Return Me._digits.Length
@@ -287,8 +287,8 @@ Public Class SevSegMultiDigit
     ''' <remarks>
     ''' Passen Sie diese Zahlen an, um das perfekte Erscheinungsbild für das Control Ihrer Größe zu erhalten.
     ''' </remarks>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description(PropertyDescriptionConstants.DigitPadding_Description)>
+    <Category("Appearance")>
+    <MyDescription("DigitPaddingDescription")>
     Public Property DigitPadding As Padding
         Get
             Return Me._digitPadding
@@ -306,8 +306,8 @@ Public Class SevSegMultiDigit
     ''' <remarks>
     ''' Kann Zahlen, bestimmte Buchstaben und Dezimalpunkte enthalten.
     ''' </remarks>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description(PropertyDescriptionConstants.Value_Description)>
+    <Category("Appearance")>
+    <MyDescription("ValueDescription")>
     Public Property Value As String
         Get
             Return Me._value
@@ -343,8 +343,8 @@ Public Class SevSegMultiDigit
     ''' Legt die Hintergrundfarbe des Controls fest oder gibt diese zurück.
     ''' </summary>
     ''' <returns></returns>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description(PropertyDescriptionConstants.BackColor_Description)>
+    <Category("Appearance")>
+    <MyDescription("BackColorDescription")>
     Public Overrides Property BackColor As Color
         Get
             Return Me._backgroundColor
@@ -360,8 +360,8 @@ Public Class SevSegMultiDigit
     ''' Legt die Vordergrundfarbe der Segmente des Controls fest oder gibt diese zurück.
     ''' </summary>
     ''' <returns></returns>
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description(PropertyDescriptionConstants.ForeColor_Description)>
+    <Category("Appearance")>
+    <MyDescription("ForeColorDescription")>
     Public Overrides Property ForeColor As Color
         Get
             Return Me._foreColor

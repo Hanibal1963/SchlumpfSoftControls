@@ -45,17 +45,6 @@ Friend Class ClassDescriptionConstants
 
 
 
-    ''' <summary>
-    ''' Kurzbeschreibung des SevSegSingleDigit Control
-    ''' </summary>
-    Public Const SevSegSingleDigit ="Control zum Anzeigen einer Ziffer als 7-Segmentanzeige."
-
-
-    ''' <summary>
-    ''' Kurzbeschreibung des SevSegMultiDigit Control
-    ''' </summary>
-    Public Const SevSegMultiDigit ="Control zum Anzeigen einer Ziffernfolge als 7-Segmentanzeige."
-
 
 
     '''' <summary>
