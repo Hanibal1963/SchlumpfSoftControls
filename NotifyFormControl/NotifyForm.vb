@@ -11,7 +11,6 @@ Imports System.Drawing
 Imports System.Threading
 Imports System.Windows.Forms
 
-'TODO: Beschreibungstexte in Ressource eintragen und auf Englisch übersetzen.
 
 ''' <summary>
 ''' Control zum anzeigen von Benachrichtigungsfenstern.
@@ -22,6 +21,7 @@ Imports System.Windows.Forms
 <ToolboxBitmap(GetType(NotifyForm), "NotifyForm.bmp")>
 Public Class NotifyForm
 
+
     Inherits Component
 
 
@@ -30,7 +30,7 @@ Public Class NotifyForm
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <Description("Legt das Aussehen des Benachrichtigungsfensters fest.")>
+    <MyDescription("DesignDescription")>
     Public Property Design As FormDesign
 
 
@@ -39,7 +39,7 @@ Public Class NotifyForm
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <Description("Legt den Benachrichtigungstext fest der angezeigt werden soll oder gibt diesen zurück.")>
+    <MyDescription("MessageDescription")>
     Public Property Message As String = $"Fensternachricht"
 
 
@@ -51,7 +51,7 @@ Public Class NotifyForm
     ''' </remarks>
     <Browsable(True)>
     <Category("Behavior")>
-    <Description("Legt die Anzeigedauer des Benachrichtigungsfensters in ms fest oder gibt diese zurück. (Der Wert 0 deaktiviert das automatische schließen.)")>
+    <MyDescription("ShowTimeDescription")>
     Public Property ShowTime As Integer = 5000
 
 
@@ -60,7 +60,7 @@ Public Class NotifyForm
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <Description("Legt das anzuzeigende Symbol des Benachrichtigungsfensters fest oder gibt dieses zurück.")>
+    <MyDescription("StyleDescription")>
     Public Property Style As FormStyle = FormStyle.Information
 
 
@@ -69,7 +69,7 @@ Public Class NotifyForm
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <Description("Legt den Text der Titelzeile des Benachrichtigungsfensters fest oder gibt diesen zurück.")>
+    <MyDescription("TitleDescription")>
     Public Property Title As String = $"Fenstertitel"
 
 

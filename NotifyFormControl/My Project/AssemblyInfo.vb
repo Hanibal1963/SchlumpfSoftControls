@@ -1,3 +1,4 @@
+Imports System.Resources
 Imports System.Reflection
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
@@ -30,6 +31,6 @@ Imports Microsoft.VisualBasic
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 ' [assembly: AssemblyVersion("1.0.*")]
-<Assembly: AssemblyVersion("2.2024.14.07")>
-<Assembly: AssemblyFileVersion("2.2024.14.07")>
-
+<Assembly: AssemblyVersion("2.2024.21.07")>
+<Assembly: AssemblyFileVersion("2.2024.21.07")>
+<Assembly: NeutralResourcesLanguage("de-DE")>
