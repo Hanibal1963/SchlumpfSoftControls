@@ -1,3 +1,4 @@
+
 ﻿' ****************************************************************************************************************
 ' IniFileEntryValueEdit.vb
 ' © 2024 by Andreas Sauer
@@ -14,8 +15,9 @@ Imports System.Windows.Forms
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.
 ''' </summary>
-<ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(ClassDescriptionConstants.IniFileEntryValueEdit)>
+<ProvideToolboxControl("SchlumpfSoft Controls", Fal
+se)>
+<MyDescription("ClassDescription")>
 <ToolboxItem(True)>
 <System.Drawing.ToolboxBitmap(GetType(IniFileEntryValueEdit), "IniFileEntryValueEdit.bmp")>
 Public Class IniFileEntryValueEdit
