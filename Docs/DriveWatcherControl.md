@@ -19,12 +19,6 @@ Grundlage und Anregung für dieses Control stammen aus dem Internet.
 
 ---
 
-## geplante Änderungen und Funktionen
-
-- Im Moment keine
-
----
-
 ## weitere Literatur
 
 - [Erstellen eines Windows Forms-Toolbox-Steuerelements](https://docs.microsoft.com/de-de/visualstudio/extensibility/creating-a-windows-forms-toolbox-control?view=vs-2022)
