@@ -15,6 +15,12 @@ Zurzeit sind folgende Steuerelemente vorhanden:
 
 ---
 
+## geplante Änderungen
+
+siehe [ToDo Liste](ToDo.md)
+
+---
+
 ## Versionsverlauf
 
 Details zu den einzelnen Versionen der Controls sind in den Beschreibungen der Controls zu finden.
