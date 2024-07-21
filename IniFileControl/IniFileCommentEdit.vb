@@ -17,7 +17,7 @@ Imports Newtonsoft.Json.Linq
 ''' Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(ClassDescriptionConstants.IniFileCommentEdit)>
+<MyDescription("ClassDescription")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileCommentEdit), "IniFileCommentEdit.bmp")>
 Public Class IniFileCommentEdit
