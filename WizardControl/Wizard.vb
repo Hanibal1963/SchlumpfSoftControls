@@ -4,6 +4,7 @@
 ' ****************************************************************************************************************
 '
 
+
 Imports System
 Imports System.ComponentModel
 Imports System.ComponentModel.Design
@@ -12,59 +13,68 @@ Imports System.Drawing.Design
 Imports System.Windows.Forms
 Imports System.Windows.Forms.Design
 
-'TODO: Beschreibungstexte in Ressource eintragen und auf Englisch übersetzen.
 
 ''' <summary>
 ''' Ein Control zum erstellen eines Assistenen
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(ClassDescriptionConstants.Wizard)>
+<MyDescription("ClassDescription")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(Wizard), "Wizard.bmp")>
 <Designer(GetType(WizardDesigner))>
 Public Class Wizard
 
+
     Inherits UserControl
+
 
     ''' <summary>
     ''' speichert das Bild für den Headerbereich
     ''' </summary>
     Friend _ImageHeader As Image
 
+
     ''' <summary>
     ''' speichert das Bild für den linken Bereich der Willkommens und der Abschlußseite
     ''' </summary>
     Friend _ImageWelcome As Image
+
 
     ''' <summary>
     ''' speichert die Schriftart für die Beschreibung der Willkommens und Abschlußseite
     ''' </summary>
     Friend _WelcomeFont As Font
 
+
     ''' <summary>
     ''' speichert die Schriftart für den Titel der Willkommens und Abschlußseite
     ''' </summary>
     Friend _WelcomeTitleFont As Font
+
 
     ''' <summary>
     ''' speichert die Schriftart für die Beschreibung einer Standardeite
     ''' </summary>
     Friend _HeaderFont As Font
 
+
     ''' <summary>
     ''' speichert die Schriftart für den Titel einer Standardeite
     ''' </summary>
     Friend _HeaderTitleFont As Font
+
 
     ''' <summary>
     ''' speichert die aktuelle Seite
     ''' </summary>
     Friend _SelectedPage As WizardPage
 
+
     ''' <summary>
     ''' speichert die Seiten des Assistenten
     ''' </summary>
     Friend _Pages As PagesCollection
+
 
     ''' <summary>
     ''' Speichert die sichtbarkeit des Hilfebuttons
@@ -80,29 +90,57 @@ Public Class Wizard
     Public Delegate Sub BeforeSwitchPagesEventHandler(sender As Object, e As BeforeSwitchPagesEventArgs)
     Public Delegate Sub AfterSwitchPagesEventHandler(sender As Object, e As AfterSwitchPagesEventArgs)
 
-    <Category(CategoryDesciptionConstants.Behavior)>
-    <Description("Tritt auf, bevor die Seiten des Assistenten gewechselt werden, um dem Benutzer die Möglichkeit zur Validierung zu geben.")>
+
+    ''' <summary>
+    ''' Tritt auf, bevor die Seiten des Assistenten gewechselt werden, 
+    ''' um dem Benutzer die Möglichkeit zur Validierung zu geben.
+    ''' </summary>
+    <Category("Behavior")>
+    <MyDescription("BeforeSwitchPagesDescription")>
     Public Event BeforeSwitchPages As BeforeSwitchPagesEventHandler
 
-    <Category(CategoryDesciptionConstants.Behavior)>
-    <Description("Tritt auf, nachdem die Seiten des Assistenten gewechselt wurden, und gibt dem Benutzer die Möglichkeit, die neue Seite einzurichten.")>
+
+    ''' <summary>
+    ''' Tritt auf, nachdem die Seiten des Assistenten gewechselt wurden, 
+    ''' und gibt dem Benutzer die Möglichkeit, die neue Seite einzurichten.
+    ''' </summary>
+    <Category("Behavior")>
+    <MyDescription("AfterSwitchPagesDescription")>
     Public Event AfterSwitchPages As AfterSwitchPagesEventHandler
 
-    <Category(CategoryDesciptionConstants.Behavior)>
-    <Description("c")>
+
+    ''' <summary>
+    ''' Tritt auf wenn der Benutzer auf Abbrechen geklickt hat.
+    ''' </summary>
+    <Category("Behavior")>
+    <MyDescription("CancelDesription")>
     Public Event Cancel As CancelEventHandler
 
-    <Category(CategoryDesciptionConstants.Behavior)>
-    <Description("Tritt auf, wenn der Assistent abgeschlossen ist, und gibt dem Benutzer die Möglichkeit, zusätzliche Aufgaben zu erledigen.")>
+
+    ''' <summary>
+    ''' Tritt auf, wenn der Assistent abgeschlossen ist, 
+    ''' und gibt dem Benutzer die Möglichkeit, zusätzliche Aufgaben zu erledigen.
+    ''' </summary>
+    <Category("Behavior")>
+    <MyDescription("FinishDescription")>
     Public Event Finish As EventHandler
 
-    <Category(CategoryDesciptionConstants.Behavior)>
-    <Description("Tritt auf, wenn der Benutzer auf die Hilfeschaltfläche klickt.")>
+
+    ''' <summary>
+    ''' Tritt auf, wenn der Benutzer auf die Hilfeschaltfläche klickt.
+    ''' </summary>
+    <Category("Behavior")>
+    <MyDescription("HelpDescription")>
     Public Event Help As EventHandler
 
+
+    ''' <summary>
+    ''' Ruft die Sichtbarkeit Status der Hilfeschaltfläche ab oder legt diesen fest.
+    ''' </summary>
+    ''' <returns></returns>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Design)>
-    <Description("Ruft die Sichtbarkeit Status der Hilfeschaltfläche ab oder legt diesen fest.")>
+    <Category("Design")>
+    <MyDescription("VisibleHelpDescription")>
     <DefaultValue(True)>
     Public Property VisibleHelp As Boolean
         Get
@@ -125,9 +163,14 @@ Public Class Wizard
         End Set
     End Property
 
+
+    ''' <summary>
+    ''' Ruft die Auflistung der Assistentenseiten in diesem Registerkartensteuerelement ab.
+    ''' </summary>
+    ''' <returns></returns>
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Content)>
-    <Category(CategoryDesciptionConstants.Design)>
-    <Description("Ruft die Auflistung der Assistentenseiten in diesem Registerkartensteuerelement ab.")>
+    <Category("Design")>
+    <MyDescription("PagesCollectionDescription")>
     <Editor(GetType(PagesCollectionEditor), GetType(UITypeEditor))>
     Public ReadOnly Property Pages As PagesCollection
         Get
@@ -135,9 +178,14 @@ Public Class Wizard
         End Get
     End Property
 
+
+    ''' <summary>
+    ''' Ruft das in der Kopfzeile der Standardseiten angezeigte Bild ab oder legt dieses fest.
+    ''' </summary>
+    ''' <returns></returns>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Design)>
-    <Description("Ruft das in der Kopfzeile der Standardseiten angezeigte Bild ab oder legt dieses fest.")>
+    <Category("Design")>
+    <MyDescription("ImageHeaderDesription")>
     Public Property ImageHeader As Image
         Get
             Return Me._ImageHeader
@@ -150,9 +198,14 @@ Public Class Wizard
         End Set
     End Property
 
+
+    ''' <summary>
+    ''' Ruft das auf den Begrüßungs- und Abschlussseiten angezeigte Bild ab oder legt es fest.
+    ''' </summary>
+    ''' <returns></returns>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Design)>
-    <Description("Ruft das auf den Begrüßungs- und Abschlussseiten angezeigte Bild ab oder legt es fest.")>
+    <Category("Design")>
+    <MyDescription("ImageWelcomeDescription")>
     Public Property ImageWelcome As Image
         Get
             Return Me._ImageWelcome
@@ -165,8 +218,13 @@ Public Class Wizard
         End Set
     End Property
 
-    <Category(CategoryDesciptionConstants.Layout)>
-    <Description("Ruft ab oder legt fest, an welcher Kante des übergeordneten Containers ein Steuerelement angedockt ist.")>
+
+    ''' <summary>
+    ''' Ruft ab oder legt fest, an welcher Kante des übergeordneten Containers ein Steuerelement angedockt ist.
+    ''' </summary>
+    ''' <returns></returns>
+    <Category("Layout")>
+    <MyDescription("DockDescription")>
     <DefaultValue(DockStyle.Fill)>
     Public Overloads Property Dock As DockStyle
         Get
@@ -176,6 +234,7 @@ Public Class Wizard
             MyBase.Dock = value
         End Set
     End Property
+
 
     <Browsable(False)>
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
@@ -187,6 +246,7 @@ Public Class Wizard
             Me.ActivatePage(value)
         End Set
     End Property
+
 
     <Browsable(False)>
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
@@ -208,8 +268,14 @@ Public Class Wizard
         End Set
     End Property
 
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description("Ruft die Schriftart ab, die zum Anzeigen der Beschreibung einer Standardseite verwendet wird, oder legt diese fest.")>
+
+    ''' <summary>
+    ''' Ruft die Schriftart ab, die zum Anzeigen der Beschreibung einer Standardseite 
+    ''' verwendet wird, oder legt diese fest.
+    ''' </summary>
+    ''' <returns></returns>
+    <Category("Appearance")>
+    <MyDescription("HeaderFontDescription")>
     Public Property HeaderFont As Font
         Get
             Return If(Me._HeaderFont, MyBase.Font)
@@ -222,8 +288,14 @@ Public Class Wizard
         End Set
     End Property
 
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description("Ruft die Schriftart ab, die zum Anzeigen des Titels einer Standardseite verwendet wird, oder legt diese fest.")>
+
+    ''' <summary>
+    ''' Ruft die Schriftart ab, die zum Anzeigen des Titels einer Standardseite verwendet wird, 
+    ''' oder legt diese fest.
+    ''' </summary>
+    ''' <returns></returns>
+    <Category("Appearance")>
+    <MyDescription("HeaderTitleFontDescription")>
     Public Property HeaderTitleFont As Font
         Get
             Return If(
@@ -241,8 +313,14 @@ Public Class Wizard
         End Set
     End Property
 
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description("Ruft die Schriftart ab, die zum Anzeigen der Beschreibung einer Begrüßungs- oder Abschlussseite verwendet wird, oder legt diese fest.")>
+
+    ''' <summary>
+    ''' Ruft die Schriftart ab, die zum Anzeigen der Beschreibung einer Begrüßungs- oder 
+    ''' Abschlussseite verwendet wird, oder legt diese fest.
+    ''' </summary>
+    ''' <returns></returns>
+    <Category("Appearance")>
+    <MyDescription("WelcomeFontDescription")>
     Public Property WelcomeFont As Font
         Get
             Return If(Me._WelcomeFont, MyBase.Font)
@@ -255,8 +333,14 @@ Public Class Wizard
         End Set
     End Property
 
-    <Category(CategoryDesciptionConstants.Appearance)>
-    <Description("Ruft die Schriftart ab, die zum Anzeigen des Titels einer Begrüßungs- oder Abschlussseite verwendet wird, oder legt diese fest.")>
+
+    ''' <summary>
+    ''' Ruft die Schriftart ab, die zum Anzeigen des Titels einer Begrüßungs- oder Abschlussseite 
+    ''' verwendet wird, oder legt diese fest.
+    ''' </summary>
+    ''' <returns></returns>
+    <Category("Appearance")>
+    <MyDescription("WelcomeTitleFontDescription")>
     Public Property WelcomeTitleFont As Font
         Get
             Return If(
@@ -274,6 +358,7 @@ Public Class Wizard
         End Set
     End Property
 
+
     <Browsable(False)>
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
     Public Property NextEnabled As Boolean
@@ -284,6 +369,7 @@ Public Class Wizard
             Me.ButtonNext.Enabled = value
         End Set
     End Property
+
 
     <Browsable(False)>
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
@@ -296,6 +382,7 @@ Public Class Wizard
         End Set
     End Property
 
+
     <Browsable(False)>
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
     Public Property NextText As String
@@ -306,6 +393,7 @@ Public Class Wizard
             Me.ButtonNext.Text = value
         End Set
     End Property
+
 
     <Browsable(False)>
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
@@ -318,6 +406,7 @@ Public Class Wizard
         End Set
     End Property
 
+
     <Browsable(False)>
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
     Public Property CancelText As String
@@ -328,6 +417,7 @@ Public Class Wizard
             Me.ButtonCancel.Text = value
         End Set
     End Property
+
 
     <Browsable(False)>
     <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
@@ -340,6 +430,7 @@ Public Class Wizard
         End Set
     End Property
 
+
     Public Sub New()
 
         Me.InitializeComponent()
@@ -349,6 +440,7 @@ Public Class Wizard
         Me._Pages = New PagesCollection(Me)
 
     End Sub
+
 
     Private Sub InitializeVariables()
 
@@ -364,6 +456,7 @@ Public Class Wizard
 
     End Sub
 
+
     Private Sub InitializeStyles()
 
         Me.SetStyle(ControlStyles.AllPaintingInWmPaint, True)
@@ -372,6 +465,7 @@ Public Class Wizard
         Me.SetStyle(ControlStyles.UserPaint, True)
 
     End Sub
+
 
     ''' <summary>
     ''' Entspricht einem Klick auf die Schaltfläche "weiter".
@@ -393,6 +487,7 @@ Public Class Wizard
 
     End Sub
 
+
     ''' <summary>
     ''' Entspricht einem Klick auf die Schaltfläche "zurück".
     ''' </summary>
@@ -413,6 +508,7 @@ Public Class Wizard
 
     End Sub
 
+
     ''' <summary>
     ''' Setzt den Index der aktuellen Seite
     ''' </summary>
@@ -424,6 +520,7 @@ Public Class Wizard
         End If
 
     End Sub
+
 
     ''' <summary>
     ''' setzt eine Wizardseite als aktuelle Seite 
@@ -487,6 +584,7 @@ Public Class Wizard
 
     End Sub
 
+
     Private Sub FocusFirstTabIndex(container As Control)
 
         Dim control As Control = Nothing
@@ -507,6 +605,7 @@ Public Class Wizard
 
     End Sub
 
+
     Protected Overridable Sub OnBeforeSwitchPages(e As BeforeSwitchPagesEventArgs)
 
         RaiseEvent BeforeSwitchPages(Me, e)
@@ -518,11 +617,13 @@ Public Class Wizard
 
     End Sub
 
+
     Protected Overridable Sub OnAfterSwitchPages(e As AfterSwitchPagesEventArgs)
 
         RaiseEvent AfterSwitchPages(Me, e)
 
     End Sub
+
 
     Protected Overridable Sub OnCancel(e As CancelEventArgs)
 
@@ -536,6 +637,7 @@ Public Class Wizard
 
     End Sub
 
+
     Protected Overridable Sub OnFinish(e As EventArgs)
 
         RaiseEvent Finish(Me, e)
@@ -543,11 +645,13 @@ Public Class Wizard
 
     End Sub
 
+
     Protected Overridable Sub OnHelp(e As EventArgs)
 
         RaiseEvent Help(Me, e)
 
     End Sub
+
 
     Protected Overrides Sub OnLoad(e As EventArgs)
 
@@ -558,6 +662,7 @@ Public Class Wizard
         End If
 
     End Sub
+
 
     Protected Overrides Sub OnResize(e As EventArgs)
 
@@ -576,6 +681,7 @@ Public Class Wizard
 
     End Sub
 
+
     Protected Overrides Sub OnPaint(e As PaintEventArgs)
 
         MyBase.OnPaint(e)
@@ -591,6 +697,7 @@ Public Class Wizard
             Border3DSide.Top)
 
     End Sub
+
 
     Protected Overrides Sub OnControlAdded(e As ControlEventArgs)
 
@@ -608,12 +715,14 @@ Public Class Wizard
 
     End Sub
 
+
     Private Sub ButtonHelp_Click(sender As Object, e As EventArgs) Handles _
         ButtonHelp.Click
 
         Me.OnHelp(EventArgs.Empty)
 
     End Sub
+
 
     Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles _
         ButtonBack.Click
@@ -622,12 +731,14 @@ Public Class Wizard
 
     End Sub
 
+
     Private Sub ButtonNext_Click(sender As Object, e As EventArgs) Handles _
         ButtonNext.Click
 
         Me.Next()
 
     End Sub
+
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles _
         ButtonCancel.Click
@@ -643,5 +754,6 @@ Public Class Wizard
         End If
 
     End Sub
+
 
 End Class

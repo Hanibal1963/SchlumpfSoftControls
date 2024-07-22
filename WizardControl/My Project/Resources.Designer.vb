@@ -61,6 +61,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Tritt auf, nachdem die Seiten des Assistenten gewechselt wurden, und gibt dem Benutzer die Möglichkeit, die neue Seite einzurichten. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property AfterSwitchPagesDescription() As String
+            Get
+                Return ResourceManager.GetString("AfterSwitchPagesDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Tritt auf, bevor die Seiten des Assistenten gewechselt werden, um dem Benutzer die Möglichkeit zur Validierung zu geben. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property BeforeSwitchPagesDescription() As String
+            Get
+                Return ResourceManager.GetString("BeforeSwitchPagesDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die OK ähnelt.
         '''</summary>
         Friend ReadOnly Property ButtonCancelText_PageCustom() As String
@@ -88,6 +106,60 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Tritt auf wenn der Benutzer auf Abbrechen geklickt hat. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property CancelDesription() As String
+            Get
+                Return ResourceManager.GetString("CancelDesription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ein Control zum erstellen eines Assistenen ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ClassDescription() As String
+            Get
+                Return ResourceManager.GetString("ClassDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft die Beschreibung der Assistentenseite ab oder legt diese fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property DescriptionDescription() As String
+            Get
+                Return ResourceManager.GetString("DescriptionDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft ab oder legt fest, an welcher Kante des übergeordneten Containers ein Steuerelement angedockt ist. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property DockDescription() As String
+            Get
+                Return ResourceManager.GetString("DockDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Tritt auf, wenn der Assistent abgeschlossen ist, und gibt dem Benutzer die Möglichkeit, zusätzliche Aufgaben zu erledigen. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property FinishDescription() As String
+            Get
+                Return ResourceManager.GetString("FinishDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft die Schriftart ab, die zum Anzeigen der Beschreibung einer Standardseite verwendet wird, oder legt diese fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property HeaderFontDescription() As String
+            Get
+                Return ResourceManager.GetString("HeaderFontDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property HeaderImage() As System.Drawing.Bitmap
@@ -98,12 +170,102 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft die Schriftart ab, die zum Anzeigen des Titels einer Standardseite verwendet wird, oder legt diese fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property HeaderTitleFontDescription() As String
+            Get
+                Return ResourceManager.GetString("HeaderTitleFontDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Tritt auf, wenn der Benutzer auf die Hilfeschaltfläche klickt. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property HelpDescription() As String
+            Get
+                Return ResourceManager.GetString("HelpDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft das in der Kopfzeile der Standardseiten angezeigte Bild ab oder legt dieses fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ImageHeaderDesription() As String
+            Get
+                Return ResourceManager.GetString("ImageHeaderDesription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft das auf den Begrüßungs- und Abschlussseiten angezeigte Bild ab oder legt es fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ImageWelcomeDescription() As String
+            Get
+                Return ResourceManager.GetString("ImageWelcomeDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft die Auflistung der Assistentenseiten in diesem Registerkartensteuerelement ab. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property PagesCollectionDescription() As String
+            Get
+                Return ResourceManager.GetString("PagesCollectionDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft den Stil der Assistentenseite ab oder legt diesen fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property StyleDescription() As String
+            Get
+                Return ResourceManager.GetString("StyleDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft den Titel der Assistentenseite ab oder legt diesen fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property TitleDescription() As String
+            Get
+                Return ResourceManager.GetString("TitleDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft die Sichtbarkeit Status der Hilfeschaltfläche ab oder legt diesen fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property VisibleHelpDescription() As String
+            Get
+                Return ResourceManager.GetString("VisibleHelpDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft die Schriftart ab, die zum Anzeigen der Beschreibung einer Begrüßungs- oder Abschlussseite verwendet wird, oder legt diese fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property WelcomeFontDescription() As String
+            Get
+                Return ResourceManager.GetString("WelcomeFontDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property WelcomeImage() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("WelcomeImage", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ruft die Schriftart ab, die zum Anzeigen des Titels einer Begrüßungs- oder Abschlussseite verwendet wird, oder legt diese fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property WelcomeTitleFontDescription() As String
+            Get
+                Return ResourceManager.GetString("WelcomeTitleFontDescription", resourceCulture)
             End Get
         End Property
         

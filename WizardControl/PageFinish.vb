@@ -4,20 +4,26 @@
 ' ****************************************************************************************************************
 '
 
+
 Imports System.ComponentModel
 
-''' <summary>Definiert die Abschlußseite</summary>
+
+''' <summary>
+''' Definiert die Abschlußseite
+''' </summary>
 <ToolboxItem(False)>
 Public Class PageFinish
 
 
     Inherits WizardPage
 
+
     Private _Style As PageStyle = PageStyle.Finish
 
+
     <DefaultValue(PageStyle.Finish)>
-    <Category(CategoryDesciptionConstants.Design)>
-    <Description("Ruft den Stil der Assistentenseite ab oder legt diesen fest.")>
+    <Category("Design")>
+    <MyDescription("StyleDescription")>
     Public Overrides Property Style As PageStyle
         Get
             Return Me._Style
@@ -26,6 +32,7 @@ Public Class PageFinish
             Me._Style = value
         End Set
     End Property
+
 
 End Class
 

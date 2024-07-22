@@ -4,14 +4,18 @@
 ' ****************************************************************************************************************
 '
 
+
 ''' <summary>
 ''' Enthält die Indexwerte der Seiten bevor die Seiten gewechselt werden.
 ''' </summary>
 Public Class BeforeSwitchPagesEventArgs
 
+
     Inherits AfterSwitchPagesEventArgs
 
+
     Private _Cancel As Boolean = False
+
 
     Public Property Cancel As Boolean
         Get
@@ -21,6 +25,7 @@ Public Class BeforeSwitchPagesEventArgs
             Me._Cancel = value
         End Set
     End Property
+
 
     ''' <summary>
     ''' Index der neuen Seite
@@ -37,6 +42,7 @@ Public Class BeforeSwitchPagesEventArgs
     Friend Sub New(OldIndex As Integer, NewIndex As Integer)
         MyBase.New(OldIndex, NewIndex)
     End Sub
+
 
 End Class
 

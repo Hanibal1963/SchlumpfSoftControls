@@ -43,10 +43,5 @@ Friend Class ClassDescriptionConstants
     Public Const IniFileListEdit ="Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei."
 
 
-    ''' <summary>
-    ''' 
-    ''' </summary>
-    Public Const Wizard ="Ein Control zum erstellen eines Assistenen"
-
 
 End Class
