@@ -4,26 +4,21 @@
 ' ****************************************************************************************************************
 '
 
+
 Imports System.ComponentModel
 Imports System.Drawing
-Imports System.Windows.Forms
 
-'TODO: Beschreibungstexte in Ressource eintragen und auf Englisch übersetzen.
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen des Dateiinhaltes.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<MyDescription("ClassDescription")>
+<MyDescription("ClassDescriptionContentView")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileContentView), "IniFileContentView.bmp")>
 Public Class IniFileContentView
 
 
-    Inherits GroupBox
-
-
-    Private WithEvents TextBox As TextBox
     Private _Lines As String()
 
 
@@ -32,16 +27,41 @@ Public Class IniFileContentView
 
     Public Sub New()
 
-        'interne Controls initialisieren
+        ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
 
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+
     End Sub
+
+
+#Region "Definition der neuen Eigenschaften"
+
+
+    ''' <summary>
+    ''' Gibt den Text der Titelzeile zurück oder legt diesen fest.
+    ''' </summary>
+    ''' <returns></returns>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <MyDescription("TextDescription")>
+    Public Overrides Property Text As String
+        Set(value As String)
+            Me.GroupBox.Text = value
+        End Set
+        Get
+            Return Me.GroupBox.Text
+        End Get
+    End Property
 
 
     ''' <summary>
     ''' Setzt Dateiinhalt
     ''' </summary>
     ''' <returns></returns>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <MyDescription("LinesDescription")>
     Public Property Lines As String()
         Get
             Return Me._Lines
@@ -53,36 +73,14 @@ Public Class IniFileContentView
     End Property
 
 
+#End Region
+
+
+
     Private Sub IniFileContentView_LinesChanged() Handles _
         Me.PropLinesChanged
 
         Me.TextBox.Lines = Me._Lines
-
-    End Sub
-
-
-    Private Sub InitializeComponent()
-        Me.TextBox = New TextBox()
-        Me.SuspendLayout()
-        '
-        'TextBox
-        '
-        Me.TextBox.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        Me.TextBox.BorderStyle = BorderStyle.FixedSingle
-        Me.TextBox.Location = New Point(6, 19)
-        Me.TextBox.Name = "TextBox"
-        Me.TextBox.ScrollBars = ScrollBars.Both
-        'Me.TextBox.Size = New Size(Me.Width - 12, 20)
-        Me.TextBox.TabIndex = 0
-        Me.TextBox.WordWrap = False
-        Me.TextBox.Dock = DockStyle.Fill
-        Me.TextBox.Multiline = True
-        Me.TextBox.ReadOnly = True
-        '
-        'IniFileContentView
-        '
-        Me.Controls.Add(Me.TextBox)
-        Me.ResumeLayout(False)
 
     End Sub
 

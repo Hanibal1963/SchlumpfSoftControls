@@ -4,7 +4,6 @@
 ' ****************************************************************************************************************
 '
 
-'TODO: Beschreibungstexte in Ressource eintragen und auf Englisch übersetzen.
 
 Imports System
 Imports System.ComponentModel
@@ -16,20 +15,14 @@ Imports System.Windows.Forms
 ''' Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<MyDescription("ClassDescription")>
+<MyDescription("ClassDescriptionListEdit")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileListEdit), "IniFileListEdit.bmp")>
-Public NotInheritable Class IniFileListEdit
-
-    Inherits GroupBox
+Public Class IniFileListEdit
 
 
 #Region "Definition der Variablen"
 
-    Private WithEvents Button_Delete As Button
-    Private WithEvents Button_Rename As Button
-    Private WithEvents Button_Add As Button
-    Private WithEvents ListBox As ListBox
     Private _SelectedItem As String = $""
     Private _Items As String()
 
@@ -42,7 +35,7 @@ Public NotInheritable Class IniFileListEdit
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag hinzugefügt werden soll.
     ''' </summary>
-    <Description("Wird ausgelöst wenn ein Eintrag hinzugefügt werden soll.")>
+    <MyDescription("ListEditItemAddDescription")>
     <Category("ListEdit")>
     Public Event ItemAdd(sender As Object, e As EventArgs)
 
@@ -50,7 +43,7 @@ Public NotInheritable Class IniFileListEdit
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag umbenannt werden soll.
     ''' </summary>
-    <Description("Wird ausgelöst wenn ein Eintrag umbenannt werden soll.")>
+    <MyDescription("ListEditItemRenameDescription")>
     <Category("ListEdit")>
     Public Event ItemRename(sender As Object, e As EventArgs)
 
@@ -58,7 +51,7 @@ Public NotInheritable Class IniFileListEdit
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag gelöscht werden soll.
     ''' </summary>
-    <Description("Wird ausgelöst wenn ein Eintrag gelöscht werden soll.")>
+    <MyDescription("ListEditItemRemoveDescription")>
     <Category("ListEdit")>
     Public Event ItemRemove(sender As Object, e As EventArgs)
 
@@ -66,7 +59,7 @@ Public NotInheritable Class IniFileListEdit
     ''' <summary>
     ''' Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.
     ''' </summary>
-    <Description("Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.")>
+    <MyDescription("ListEditSelectedItemChangedDescription")>
     <Category("ListEdit")>
     Public Event SelectedItemChanged(sender As Object, e As EventArgs)
 
@@ -74,21 +67,44 @@ Public NotInheritable Class IniFileListEdit
 #End Region
 
 
-    ''' <summary>
-    ''' Erstellt eine neue Instanz dieser Klasse
-    ''' </summary>
     Public Sub New()
 
-        'interne Controls initialisieren
-        Me.InitializeControls()
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        Me.InitializeComponent()
+
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
 
     End Sub
+
+
+#Region "Definition der neuen Eigenschaften"
+
+
+    ''' <summary>
+    ''' Gibt den Text der Titelzeile zurück oder legt diesen fest.
+    ''' </summary>
+    ''' <returns></returns>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <MyDescription("TextDescription")>
+    Public Overrides Property Text As String
+        Set(value As String)
+            Me.GroupBox.Text = value
+        End Set
+        Get
+            Return Me.GroupBox.Text
+        End Get
+    End Property
+
+#End Region
+
+
+#Region "ausgeblendete Eigenschaften"
 
 
     ''' <summary>
     ''' Gibt den ausgewählten Eintrag oder leer zurück.
     ''' </summary>
-    <Description("Gibt den ausgewählten Eintrag oder leer zurück.")>
     <Browsable(False)>
     Public ReadOnly Property SelectedItem As String
         Get
@@ -100,7 +116,6 @@ Public NotInheritable Class IniFileListEdit
     ''' <summary>
     ''' Elemente der Listbox.
     ''' </summary>
-    <Description("Elemente der Listbox.")>
     <Browsable(False)>
     Public WriteOnly Property Items() As String()
         Set
@@ -110,7 +125,11 @@ Public NotInheritable Class IniFileListEdit
     End Property
 
 
+#End Region
+
+
 #Region "Definition der internen Ereignisbehandlungen"
+
 
     ''' <summary>
     ''' Setzt die Eigenschaft und schaltet die Buttons.
@@ -130,40 +149,45 @@ Public NotInheritable Class IniFileListEdit
 
     End Sub
 
+
     ''' <summary>
     ''' Löst das Ereignis zum hinzufügen eines Eintrags aus.
     ''' </summary>
     Private Sub Button_Add_Click(sender As Object, e As EventArgs) Handles _
-        Button_Add.Click
+        ButtonAdd.Click
 
         RaiseEvent ItemAdd(Me, EventArgs.Empty)
 
     End Sub
 
+
     ''' <summary>
     ''' Löst das Ereignis zum Umbenennen eines Eintrags aus.
     ''' </summary>
     Private Sub Button_Rename_Click(sender As Object, e As EventArgs) Handles _
-        Button_Rename.Click
+        ButtonRename.Click
 
         RaiseEvent ItemRename(Me, EventArgs.Empty)
 
     End Sub
 
+
     ''' <summary>
     ''' Löst das Ereignis zum Löschen eines Eintrags aus.
     ''' </summary>
     Private Sub Button_Delete_Click(sender As Object, e As EventArgs) Handles _
-        Button_Delete.Click
+        ButtonDelete.Click
 
         RaiseEvent ItemRemove(Me, EventArgs.Empty)
 
     End Sub
 
+
 #End Region
 
 
 #Region "Definition der internen Funktionen"
+
 
     ''' <summary>
     ''' Setzt die Eigenschaft <see cref="SelectedItem"/> auf den Gewählten Eintrrag
@@ -174,10 +198,11 @@ Public NotInheritable Class IniFileListEdit
         Me._SelectedItem = CStr(Me.ListBox.SelectedItem)
 
         'Buttons schalten
-        Me.Button_Delete.Enabled = True
-        Me.Button_Rename.Enabled = True
+        Me.ButtonDelete.Enabled = True
+        Me.ButtonRename.Enabled = True
 
     End Sub
+
 
     ''' <summary>
     ''' Setzt die Eigenschaft <see cref="SelectedItem"/> auf leer.
@@ -188,10 +213,11 @@ Public NotInheritable Class IniFileListEdit
         Me._SelectedItem = $""
 
         'Buttons schalten
-        Me.Button_Delete.Enabled = False
-        Me.Button_Rename.Enabled = False
+        Me.ButtonDelete.Enabled = False
+        Me.ButtonRename.Enabled = False
 
     End Sub
+
 
     ''' <summary>
     ''' Befüllt die Listbox
@@ -211,137 +237,15 @@ Public NotInheritable Class IniFileListEdit
         Me._SelectedItem = $""
 
         'Buttons schalten
-        Me.Button_Add.Enabled = True
-        Me.Button_Delete.Enabled = False
-        Me.Button_Rename.Enabled = False
+        Me.ButtonAdd.Enabled = True
+        Me.ButtonDelete.Enabled = False
+        Me.ButtonRename.Enabled = False
 
         'Event auslösen
         RaiseEvent SelectedItemChanged(Me, EventArgs.Empty)
 
     End Sub
 
-    ''' <summary>
-    ''' Initialisiert die untergeordneten Controls.
-    ''' </summary>
-    Private Sub InitializeControls()
-
-        'Variablen für interne Controls aktivieren
-        Me.SetControls()
-        Me.SuspendLayout()
-
-        'Löschbutton initialisieren
-        Me.InitButtonDelete()
-
-        'Umbennenbutton initialisieren
-        Me.InitButtoRename()
-
-        'Hinzufügenbutton initialisieren
-        Me.InitButtonAdd()
-
-        'Listbox initialisieren
-        Me.InitListBox()
-
-        'intene Controls hinzufügen
-        Me.AddControls()
-        Me.ResumeLayout(False)
-
-    End Sub
-
-    ''' <summary>
-    ''' intene Controls hinzufügen
-    ''' </summary>
-    Private Sub AddControls()
-
-        With Me.Controls
-            .Add(Me.ListBox)
-            .Add(Me.Button_Delete)
-            .Add(Me.Button_Rename)
-            .Add(Me.Button_Add)
-        End With
-
-    End Sub
-
-    ''' <summary>
-    ''' Listbox initialisieren
-    ''' </summary>
-    Private Sub InitListBox()
-
-        With Me.ListBox
-            .Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-            .FormattingEnabled = True
-            .Location = New Point(8, 20)
-            .Name = "ListBox"
-            .Size = New Size(Me.Width - 20, Me.Height - 60)
-            .TabIndex = 0
-        End With
-
-    End Sub
-
-    ''' <summary>
-    ''' Hinzufügenbutton initialisieren
-    ''' </summary>
-    Private Sub InitButtonAdd()
-
-        With Me.Button_Add
-            .Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-            .Enabled = False
-            .Location = New Point(Me.Width - 312, Me.Height - 32)
-            .Name = "Button_Add"
-            .Size = New Size(96, 24)
-            .TabIndex = 1
-            .Text = "hinzufügen"
-            .UseVisualStyleBackColor = True
-        End With
-
-    End Sub
-
-    ''' <summary>
-    ''' Umbenennenbutton initialisieren
-    ''' </summary>
-    Private Sub InitButtoRename()
-
-        With Me.Button_Rename
-            .Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-            .Enabled = False
-            .Location = New Point(Me.Width - 210, Me.Height - 32)
-            .Name = "Button_Rename"
-            .Size = New Size(96, 24)
-            .TabIndex = 2
-            .Text = "umbenennen"
-            .UseVisualStyleBackColor = True
-        End With
-
-    End Sub
-
-    ''' <summary>
-    ''' Initialisiert den Löschbutton
-    ''' </summary>
-    Private Sub InitButtonDelete()
-
-        With Me.Button_Delete
-            .Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-            .Enabled = False
-            .Location = New Point(Me.Width - 110, Me.Height - 32)
-            .Name = "Button_Delete"
-            .Size = New Size(96, 24)
-            .TabIndex = 3
-            .Text = "löschen"
-            .UseVisualStyleBackColor = True
-        End With
-
-    End Sub
-
-    ''' <summary>
-    ''' aktiviert die Variablen für die intenen Controls
-    ''' </summary>
-    Private Sub SetControls()
-
-        Me.Button_Delete = New Button()
-        Me.Button_Rename = New Button()
-        Me.Button_Add = New Button()
-        Me.ListBox = New ListBox()
-
-    End Sub
 
 #End Region
 

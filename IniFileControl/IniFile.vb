@@ -4,19 +4,22 @@
 ' ****************************************************************************************************************
 '
 
-'TODO: Beschreibungstexte in Ressource eintragen und auf Englisch übersetzen.
 
 Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
+Imports System.Drawing
 
 
 ''' <summary>
-''' Control zum Verwalten von INI - Dateien
+''' Steuerelement zum Verwalten von INI - Dateien
 ''' </summary>
-<MyDescription("ClassDescription")>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
+<MyDescription("ClassDescriptionIniFile")>
+<ToolboxBitmap(GetType(IniFile), "IniFile.bmp")>
+<ToolboxItem(True)>
 Public Class IniFile
+
 
     Inherits Component
 
@@ -41,21 +44,21 @@ Public Class IniFile
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Dateiinhalt geändert hat.
     ''' </summary>
-    <Description("Wird ausgelöst wenn sich der Dateiinhalt geändert hat.")>
+    <MyDescription("FileContentChangedDescription")>
     Public Event FileContentChanged(sender As Object, e As EventArgs)
 
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Dateikommentar geändert hat.
     ''' </summary>
-    <Description("Wird ausgelöst wenn sich der Dateikommentar geändert hat.")>
+    <MyDescription("FileCommentChangedDescription")>
     Public Event FileCommentChanged(sender As Object, e As EventArgs)
 
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich die Liste der Abschnitte geändert hat.
     ''' </summary>
-    <Description("Wird ausgelöst wenn sich die Liste der Abschnitte geändert hat.")>
+    <MyDescription("SectionsChangedDescription")>
     Public Event SectionsChanged(sender As Object, e As EventArgs)
 
 
@@ -63,14 +66,14 @@ Public Class IniFile
     ''' Wird ausgelöst wenn beim anlegen eines neuen Abschnitts oder 
     ''' umbnennen eines Abschnitts der Name bereits vorhanden ist.
     ''' </summary>
-    <Description("Wird ausgelöst wenn beim anlegen eines neuen Abschnitts oder umbnennen eines Abschnitts der Name bereits vorhanden ist.")>
+    <MyDescription("SectionNameExistDescription")>
     Public Event SectionNameExist(sender As Object, e As EventArgs)
 
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Abschnittskommentar geändert hat.
     ''' </summary>
-    <Description("Wird ausgelöst wenn sich der Abschnittskommentar geändert hat.")>
+    <MyDescription("SectionCommentChangedDescription")>
     Public Event SectionCommentChanged(sender As Object, e As EventArgs)
 
 
@@ -78,21 +81,21 @@ Public Class IniFile
     ''' Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder 
     ''' umbenennen eines Eintrags der Name bereitsvorhanden ist.
     ''' </summary>
-    <Description("Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereitsvorhanden ist.")>
+    <MyDescription("EntrynameExistDescription")>
     Public Event EntrynameExist(sender As Object, e As EventArgs)
 
 
     ''' <summary>
     ''' wird ausgelöst wenn sich die Liste der Einträge geändert hat.
     ''' </summary>
-    <Description("wird ausgelöst wenn sich die Liste der Einträge geändert hat.")>
+    <MyDescription("EntrysChangedDescription")>
     Public Event EntrysChanged(sender As Object, e As EventArgs)
 
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Wert eines Eintrags in einem Abschnitt geändert hat.
     ''' </summary>
-    <Description("Wird ausgelöst wenn sich der Wert eines Eintrags in einem Abschnitt geändert hat.")>
+    <MyDescription("EntryValueChangedDescription")>
     Public Event EntryValueChanged(sender As Object, e As EventArgs)
 
 
@@ -106,8 +109,8 @@ Public Class IniFile
     ''' Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.
     ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Design)>
-    <Description("Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.")>
+    <Category("Design")>
+    <MyDescription("CommentPrefixDescription")>
     Public Property CommentPrefix As Char
         Get
             Return Me._CommentPrefix
@@ -122,8 +125,8 @@ Public Class IniFile
     ''' Gibt den Pfad und den Name zur INI-Datei zurück oder legt diesen fest.
     ''' </summary>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Design)>
-    <Description("Gibt den Pfad und den Name zur INI-Datei zurück oder legt diesen fest.")>
+    <Category("Design")>
+    <MyDescription("FilePathDescription")>
     Public Property FilePath As String
         Get
             Return Me._FilePath
@@ -141,8 +144,8 @@ Public Class IniFile
     ''' True legt fest das Änderungen automatisch gespeichert werden.
     ''' </remarks>
     <Browsable(True)>
-    <Category(CategoryDesciptionConstants.Design)>
-    <Description("Legt das Speicherverhalten der Klasse fest.")>
+    <Category("Design")>
+    <MyDescription("AutoSaveDescription")>
     Public Property AutoSave As Boolean
         Get
             Return Me._AutoSave
@@ -206,8 +209,9 @@ Public Class IniFile
         'Parameter überprüfen
         If String.IsNullOrWhiteSpace(FilePath) Then
             Throw New ArgumentException(
-                $"Der Parameter""{NameOf(FilePath)}"" darf nicht NULL oder ein Leerraumzeichen sein.",
-                NameOf(FilePath))
+                String.Format(
+                My.Resources.ErrorMsgNullOrWhitSpace,
+                NameOf(FilePath)))
         End If
 
         'Pfad und Name der Datei merken
@@ -241,8 +245,9 @@ Public Class IniFile
         'Parameter überprüfen
         If String.IsNullOrWhiteSpace(FilePath) Then
             Throw New ArgumentException(
-                $"Der Parameter""{NameOf(FilePath)}"" darf nicht NULL oder ein Leerraumzeichen sein.",
-                NameOf(FilePath))
+                String.Format(
+                My.Resources.ErrorMsgNullOrWhitSpace,
+                NameOf(FilePath)))
         End If
 
         'Pfad und Name der Datei merken
@@ -627,6 +632,7 @@ Public Class IniFile
 
 #Region "Definition der internen Funktionen"
 
+
     ''' <summary>
     ''' Fügt einen neuen Abschnitt hinzu.
     ''' </summary>
@@ -643,6 +649,7 @@ Public Class IniFile
 
     End Sub
 
+
     ''' <summary>
     ''' fügt einen neuen Eintrag in einen Abschnitt ein.
     ''' </summary>
@@ -655,6 +662,7 @@ Public Class IniFile
     Private Sub AddNewEntry(Section As String, Name As String)
         Me._Sections.Item(Section).Add(Name, $"")
     End Sub
+
 
     ''' <summary>
     ''' Benennt das Key-Comment-Paar eines Abschnitts um.
@@ -675,6 +683,7 @@ Public Class IniFile
 
     End Sub
 
+
     ''' <summary>
     ''' Benennt das Key-Value-Paar eines Abschnitts um.
     ''' </summary>
@@ -693,6 +702,7 @@ Public Class IniFile
         Me._Sections.Add(NewName, oldvalue)
 
     End Sub
+
 
     ''' <summary>
     ''' Benennt einen Eintrag in einem Abschnitt um.
@@ -716,6 +726,7 @@ Public Class IniFile
 
     End Sub
 
+
     ''' <summary>
     ''' Legt die anfänglichen Standardwerte fest
     ''' </summary>
@@ -733,6 +744,7 @@ Public Class IniFile
         Me._FileComment = New List(Of String)
 
     End Sub
+
 
     ''' <summary>
     ''' Erzeugt den Dateiinhalt
@@ -784,6 +796,7 @@ Public Class IniFile
 
     End Sub
 
+
     ''' <summary>
     ''' Erzeugt den Beispielinhalt der Datei
     ''' </summary>
@@ -807,6 +820,7 @@ Public Class IniFile
 
     End Sub
 
+
     ''' <summary>
     ''' analysiert den Dateiinhalt
     ''' </summary>
@@ -829,6 +843,7 @@ Public Class IniFile
         Next
 
     End Sub
+
 
     ''' <summary>
     ''' Analysiert eine Zeile.
@@ -862,6 +877,7 @@ Public Class IniFile
 
     End Sub
 
+
     ''' <summary>
     ''' fügt einen Eintrag hinzu
     ''' </summary>
@@ -879,6 +895,7 @@ Public Class IniFile
 
     End Sub
 
+
     ''' <summary>
     ''' fügt eine Abschnittskommentarzeile hinzu
     ''' </summary>
@@ -894,6 +911,7 @@ Public Class IniFile
         Me._SectionsComments.Item(Me._CurrentSectionName).Add(line)
 
     End Sub
+
 
     ''' <summary>
     ''' fügt einen Abschnittsname hinzu
@@ -915,6 +933,7 @@ Public Class IniFile
 
     End Sub
 
+
     ''' <summary>
     ''' fügt eine Dateikommentarzeile hinzu
     ''' </summary>
@@ -931,6 +950,7 @@ Public Class IniFile
 
     End Sub
 
+
     ''' <summary>
     ''' Initialisiert die Variablen für den Parser
     ''' </summary>
@@ -941,6 +961,11 @@ Public Class IniFile
         Me._SectionsComments = New Dictionary(Of String, List(Of String))
 
     End Sub
+
+    Private Sub InitializeComponent()
+
+    End Sub
+
 
 #End Region
 
