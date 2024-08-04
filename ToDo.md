@@ -1,6 +1,6 @@
 # geplante Änderungen und Erweiterungen
 
-- Konstanten der Beschreibungstexte in allen Controls durch Stringressourcen ersetzen.
+- ~~Konstanten der Beschreibungstexte in allen Controls durch Stringressourcen ersetzen.~~
 
 - Beschreibungstexte der öffentlichen Eigenschaften in allen Controls durch Stringressourcen ersetzen.
 
