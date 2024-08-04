@@ -79,9 +79,6 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\CommonCodes\ClassDescriptionConstants.vb">
-      <Link>ClassDescriptionConstants.vb</Link>
-    </Compile>
     <Compile Include="..\CommonCodes\MyDescription.vb">
       <Link>MyDescription.vb</Link>
     </Compile>
