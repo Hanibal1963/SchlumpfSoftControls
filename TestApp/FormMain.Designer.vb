@@ -22,6 +22,7 @@ Partial Class FormMain
   'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
   <System.Diagnostics.DebuggerStepThrough()> _
   Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.FlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.ButtonAniGif = New System.Windows.Forms.Button()
         Me.ButtonDriveWatcher = New System.Windows.Forms.Button()
@@ -31,12 +32,17 @@ Partial Class FormMain
         Me.ButtonShapeControl = New System.Windows.Forms.Button()
         Me.ButtonTransparentLabelControl = New System.Windows.Forms.Button()
         Me.ButtonWizardControl = New System.Windows.Forms.Button()
+        Me.MenuStrip = New System.Windows.Forms.MenuStrip()
+        Me.SpracheToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemDeutsch = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemEnglisch = New System.Windows.Forms.ToolStripMenuItem()
         Me.FlowLayoutPanel.SuspendLayout()
+        Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel
         '
-        Me.FlowLayoutPanel.AutoScroll = True
+        resources.ApplyResources(Me.FlowLayoutPanel, "FlowLayoutPanel")
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonAniGif)
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonDriveWatcher)
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonIniFilecontrol)
@@ -45,99 +51,94 @@ Partial Class FormMain
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonShapeControl)
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonTransparentLabelControl)
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonWizardControl)
-        Me.FlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel.Name = "FlowLayoutPanel"
-        Me.FlowLayoutPanel.Size = New System.Drawing.Size(260, 244)
-        Me.FlowLayoutPanel.TabIndex = 0
         '
         'ButtonAniGif
         '
-        Me.ButtonAniGif.Location = New System.Drawing.Point(3, 3)
+        resources.ApplyResources(Me.ButtonAniGif, "ButtonAniGif")
         Me.ButtonAniGif.Name = "ButtonAniGif"
-        Me.ButtonAniGif.Size = New System.Drawing.Size(245, 23)
-        Me.ButtonAniGif.TabIndex = 0
-        Me.ButtonAniGif.Text = "AniGif Control"
         Me.ButtonAniGif.UseVisualStyleBackColor = True
         '
         'ButtonDriveWatcher
         '
-        Me.ButtonDriveWatcher.Location = New System.Drawing.Point(3, 32)
+        resources.ApplyResources(Me.ButtonDriveWatcher, "ButtonDriveWatcher")
         Me.ButtonDriveWatcher.Name = "ButtonDriveWatcher"
-        Me.ButtonDriveWatcher.Size = New System.Drawing.Size(245, 23)
-        Me.ButtonDriveWatcher.TabIndex = 1
-        Me.ButtonDriveWatcher.Text = "DriveWatcher Control"
         Me.ButtonDriveWatcher.UseVisualStyleBackColor = True
         '
         'ButtonIniFilecontrol
         '
-        Me.ButtonIniFilecontrol.Location = New System.Drawing.Point(3, 61)
+        resources.ApplyResources(Me.ButtonIniFilecontrol, "ButtonIniFilecontrol")
         Me.ButtonIniFilecontrol.Name = "ButtonIniFilecontrol"
-        Me.ButtonIniFilecontrol.Size = New System.Drawing.Size(245, 23)
-        Me.ButtonIniFilecontrol.TabIndex = 2
-        Me.ButtonIniFilecontrol.Text = "IniFile Control"
         Me.ButtonIniFilecontrol.UseVisualStyleBackColor = True
         '
         'ButtonNotifyFormControl
         '
-        Me.ButtonNotifyFormControl.Location = New System.Drawing.Point(3, 90)
+        resources.ApplyResources(Me.ButtonNotifyFormControl, "ButtonNotifyFormControl")
         Me.ButtonNotifyFormControl.Name = "ButtonNotifyFormControl"
-        Me.ButtonNotifyFormControl.Size = New System.Drawing.Size(245, 23)
-        Me.ButtonNotifyFormControl.TabIndex = 3
-        Me.ButtonNotifyFormControl.Text = "NotifyForm Control"
         Me.ButtonNotifyFormControl.UseVisualStyleBackColor = True
         '
         'ButtonSevenSegmentControl
         '
-        Me.ButtonSevenSegmentControl.Location = New System.Drawing.Point(3, 119)
+        resources.ApplyResources(Me.ButtonSevenSegmentControl, "ButtonSevenSegmentControl")
         Me.ButtonSevenSegmentControl.Name = "ButtonSevenSegmentControl"
-        Me.ButtonSevenSegmentControl.Size = New System.Drawing.Size(245, 23)
-        Me.ButtonSevenSegmentControl.TabIndex = 4
-        Me.ButtonSevenSegmentControl.Text = "SevenSegment Control"
         Me.ButtonSevenSegmentControl.UseVisualStyleBackColor = True
         '
         'ButtonShapeControl
         '
-        Me.ButtonShapeControl.Location = New System.Drawing.Point(3, 148)
+        resources.ApplyResources(Me.ButtonShapeControl, "ButtonShapeControl")
         Me.ButtonShapeControl.Name = "ButtonShapeControl"
-        Me.ButtonShapeControl.Size = New System.Drawing.Size(245, 23)
-        Me.ButtonShapeControl.TabIndex = 5
-        Me.ButtonShapeControl.Text = "Shape Control"
         Me.ButtonShapeControl.UseVisualStyleBackColor = True
         '
         'ButtonTransparentLabelControl
         '
-        Me.ButtonTransparentLabelControl.Location = New System.Drawing.Point(3, 177)
+        resources.ApplyResources(Me.ButtonTransparentLabelControl, "ButtonTransparentLabelControl")
         Me.ButtonTransparentLabelControl.Name = "ButtonTransparentLabelControl"
-        Me.ButtonTransparentLabelControl.Size = New System.Drawing.Size(245, 23)
-        Me.ButtonTransparentLabelControl.TabIndex = 6
-        Me.ButtonTransparentLabelControl.Text = "TransparentLabel Control"
         Me.ButtonTransparentLabelControl.UseVisualStyleBackColor = True
         '
         'ButtonWizardControl
         '
-        Me.ButtonWizardControl.Location = New System.Drawing.Point(3, 206)
+        resources.ApplyResources(Me.ButtonWizardControl, "ButtonWizardControl")
         Me.ButtonWizardControl.Name = "ButtonWizardControl"
-        Me.ButtonWizardControl.Size = New System.Drawing.Size(245, 23)
-        Me.ButtonWizardControl.TabIndex = 7
-        Me.ButtonWizardControl.Text = "Wizard Control"
         Me.ButtonWizardControl.UseVisualStyleBackColor = True
+        '
+        'MenuStrip
+        '
+        resources.ApplyResources(Me.MenuStrip, "MenuStrip")
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpracheToolStripMenuItem})
+        Me.MenuStrip.Name = "MenuStrip"
+        '
+        'SpracheToolStripMenuItem
+        '
+        resources.ApplyResources(Me.SpracheToolStripMenuItem, "SpracheToolStripMenuItem")
+        Me.SpracheToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemDeutsch, Me.ToolStripMenuItemEnglisch})
+        Me.SpracheToolStripMenuItem.Name = "SpracheToolStripMenuItem"
+        '
+        'ToolStripMenuItemDeutsch
+        '
+        resources.ApplyResources(Me.ToolStripMenuItemDeutsch, "ToolStripMenuItemDeutsch")
+        Me.ToolStripMenuItemDeutsch.Name = "ToolStripMenuItemDeutsch"
+        '
+        'ToolStripMenuItemEnglisch
+        '
+        resources.ApplyResources(Me.ToolStripMenuItemEnglisch, "ToolStripMenuItemEnglisch")
+        Me.ToolStripMenuItemEnglisch.Name = "ToolStripMenuItemEnglisch"
         '
         'FormMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(260, 244)
         Me.Controls.Add(Me.FlowLayoutPanel)
+        Me.Controls.Add(Me.MenuStrip)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MainMenuStrip = Me.MenuStrip
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormMain"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormMain"
         Me.FlowLayoutPanel.ResumeLayout(False)
+        Me.MenuStrip.ResumeLayout(False)
+        Me.MenuStrip.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -150,4 +151,8 @@ Partial Class FormMain
     Private WithEvents ButtonShapeControl As Button
     Private WithEvents ButtonTransparentLabelControl As Button
     Private WithEvents ButtonWizardControl As Button
+    Private WithEvents MenuStrip As MenuStrip
+    Private WithEvents SpracheToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents ToolStripMenuItemDeutsch As ToolStripMenuItem
+    Private WithEvents ToolStripMenuItemEnglisch As ToolStripMenuItem
 End Class

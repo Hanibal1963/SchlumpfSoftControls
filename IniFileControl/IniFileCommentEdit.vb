@@ -7,7 +7,9 @@
 
 Imports System
 Imports System.ComponentModel
+Imports System.Diagnostics
 Imports System.Drawing
+Imports System.Windows.Forms
 
 
 ''' <summary>
@@ -18,6 +20,9 @@ Imports System.Drawing
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileCommentEdit), "IniFileCommentEdit.bmp")>
 Public Class IniFileCommentEdit
+
+
+    Inherits UserControl
 
 
     Private _Lines As String()

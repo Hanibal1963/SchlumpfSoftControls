@@ -7,11 +7,9 @@
 
 Public Class FormIniFileControl
 
-
     Private Sub FileCommentEdit_CommentChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                FileCommentEdit.CommentChanged
+                e As EventArgs)
 
         'Kommentar holen
         Dim comment() As String = CType(
@@ -25,8 +23,7 @@ Public Class FormIniFileControl
 
 
     Private Sub SectionCommentEdit_CommentChanged(
-                sender As Object, e As EventArgs) Handles _
-                SectionsCommentEdit.CommentChanged
+                sender As Object, e As EventArgs)
 
         'Wenn kein Abschnitt ausgewählt -> Ende
         If Me.SectionsListEdit.SelectedItem = $"" Then Exit Sub
@@ -46,8 +43,7 @@ Public Class FormIniFileControl
 
     Private Sub EntryValueEdit_ValueChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                EntryValueEdit.ValueChanged
+                e As EventArgs)
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -80,8 +76,7 @@ Public Class FormIniFileControl
 
     Private Sub SectionsListEdit_ItemAdd(
                 sender As Object,
-                e As EventArgs) Handles _
-                SectionsListEdit.ItemAdd
+                e As EventArgs) 
 
         'neuen Abschnittsname abfragen
         Dim newsection As String = InputBox(
@@ -97,8 +92,7 @@ Public Class FormIniFileControl
 
     Private Sub SectionsListEdit_ItemRename(
                 sender As Object,
-                e As EventArgs) Handles _
-                SectionsListEdit.ItemRename
+                e As EventArgs) 
 
         'Abschnittsname holen
         Dim sectionname As String = CType(
@@ -137,8 +131,7 @@ Public Class FormIniFileControl
 
     Private Sub SectionsListEdit_ItemRemove(
                 sender As Object,
-                e As EventArgs) Handles _
-                SectionsListEdit.ItemRemove
+                e As EventArgs) 
 
         'Abschnittsname holen
         Dim sectionname As String = CType(
@@ -161,8 +154,7 @@ Public Class FormIniFileControl
 
     Private Sub SectionsListEdit_SelectedItemChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                SectionsListEdit.SelectedItemChanged
+                e As EventArgs) 
 
         'Abschnittsname holen
         Dim sectionname As String = CType(
@@ -195,8 +187,7 @@ Public Class FormIniFileControl
 
     Private Sub EntrysListEdit_ItemAdd(
                 sender As Object,
-                e As EventArgs) Handles _
-                EntrysListEdit.ItemAdd
+                e As EventArgs) 
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -226,8 +217,7 @@ Public Class FormIniFileControl
 
     Private Sub EntrysListEdit_ItemRename(
                 sender As Object,
-                e As EventArgs) Handles _
-                EntrysListEdit.ItemRename
+                e As EventArgs) 
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -261,8 +251,7 @@ Public Class FormIniFileControl
 
     Private Sub EntrysListEdit_ItemRemove(
                 sender As Object,
-                e As EventArgs) Handles _
-                EntrysListEdit.ItemRemove
+                e As EventArgs) 
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -290,8 +279,7 @@ Public Class FormIniFileControl
 
     Private Sub EntrysListEdit_SelectedItemChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                EntrysListEdit.SelectedItemChanged
+                e As EventArgs) 
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -320,8 +308,7 @@ Public Class FormIniFileControl
 
     Private Sub IniFile1_FileContentChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                IniFile1.FileContentChanged
+                e As EventArgs) 
 
         'Dateiinhalt anzeigen
         Me.IniFileContentView.Lines = CType(
@@ -343,8 +330,7 @@ Public Class FormIniFileControl
 
     Private Sub IniFile1_FileCommentChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                IniFile1.FileCommentChanged
+                e As EventArgs) 
 
         'geänderten Dateikommentar übenehmen
         Me.FileCommentEdit.Comment = CType(
@@ -356,8 +342,7 @@ Public Class FormIniFileControl
 
     Private Sub IniFile1_SectionsChanged(
             sender As Object,
-            e As EventArgs) Handles _
-            IniFile1.SectionsChanged
+            e As EventArgs) 
 
         'Abschnittsliste neu füllen
         Me.SectionsListEdit.Items = CType(
@@ -369,8 +354,7 @@ Public Class FormIniFileControl
 
     Private Sub IniFile1_SectionNameExist(
                 sender As Object,
-                e As EventArgs) Handles _
-                IniFile1.SectionNameExist
+                e As EventArgs) 
 
         Dim unused = MessageBox.Show(
         Me,
@@ -384,8 +368,7 @@ Public Class FormIniFileControl
 
     Private Sub IniFile1_SectionCommentChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                IniFile1.SectionCommentChanged
+                e As EventArgs) 
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -400,8 +383,7 @@ Public Class FormIniFileControl
 
     Private Sub IniFile1_EntrynameExist(
                 sender As Object,
-                e As EventArgs) Handles _
-                IniFile1.EntrynameExist
+                e As EventArgs) 
 
         Dim unused = MessageBox.Show(
         Me,
@@ -415,8 +397,7 @@ Public Class FormIniFileControl
 
     Private Sub IniFile1_EntrysChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                IniFile1.EntrysChanged
+                e As EventArgs) 
 
         'Eintragsliste neu befüllen
         Me.EntrysListEdit.Items = CType(

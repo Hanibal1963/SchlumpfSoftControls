@@ -158,8 +158,14 @@
     <EmbeddedResource Include="FormDriveWatcherControl.resx">
       <DependentUpon>FormDriveWatcherControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormIniFileControl.en.resx">
+      <DependentUpon>FormIniFileControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormIniFileControl.resx">
       <DependentUpon>FormIniFileControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.en.resx">
+      <DependentUpon>FormMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.vb</DependentUpon>

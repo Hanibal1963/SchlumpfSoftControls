@@ -21,6 +21,9 @@ Imports System.Windows.Forms
 Public Class IniFileListEdit
 
 
+    Inherits UserControl
+
+
 #Region "Definition der Variablen"
 
     Private _SelectedItem As String = $""

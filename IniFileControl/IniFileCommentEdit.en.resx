@@ -120,4 +120,7 @@
   <data name="Button.Text" xml:space="preserve">
     <value>Take Over</value>
   </data>
+  <data name="GroupBox.Text" xml:space="preserve">
+    <value>IniFileCommentEdit</value>
+  </data>
 </root>

@@ -109,7 +109,7 @@
       <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
     <Compile Include="AniGif.vb">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">

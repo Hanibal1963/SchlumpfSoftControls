@@ -5,6 +5,7 @@
 '
 
 Imports System.ComponentModel
+Imports System.Windows.Forms
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.
@@ -14,6 +15,9 @@ Imports System.ComponentModel
 <System.ComponentModel.ToolboxItem(True)>
 <System.Drawing.ToolboxBitmap(GetType(IniFileEntryValueEdit), "IniFileEntryValueEdit.bmp")>
 Public Class IniFileEntryValueEdit
+
+
+    Inherits UserControl
 
 
 #Region "Definition der Ereignisse"

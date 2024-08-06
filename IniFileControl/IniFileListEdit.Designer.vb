@@ -80,5 +80,5 @@ Partial Class IniFileListEdit
     Private WithEvents ButtonRename As System.Windows.Forms.Button
     Private WithEvents ButtonAdd As System.Windows.Forms.Button
     Private WithEvents ListBox As System.Windows.Forms.ListBox
-    Friend WithEvents GroupBox As System.Windows.Forms.GroupBox
+    Private WithEvents GroupBox As System.Windows.Forms.GroupBox
 End Class

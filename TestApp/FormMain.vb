@@ -52,12 +52,45 @@ Public Class FormMain
     End Sub
 
 
-    Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles _
-        Me.Load
+    Private Sub FormMain_Load(
+                sender As Object,
+                e As EventArgs) Handles _
+                Me.Load
 
         'Titelzeile anpassen
         Me.Text = $"{My.Application.Info.Title} V{My.Application.Info.Version}"
 
     End Sub
+
+
+    Private Sub ToolStripMenuItemDeutsch_Click(
+                sender As Object,
+                e As EventArgs) Handles _
+                ToolStripMenuItemDeutsch.Click
+
+        'Oberfläche auf Deutsch einstellen
+        System.Threading.Thread.CurrentThread.CurrentCulture =
+            New System.Globalization.CultureInfo($"de")
+        System.Threading.Thread.CurrentThread.CurrentUICulture =
+            New System.Globalization.CultureInfo($"de")
+
+
+    End Sub
+
+
+    Private Sub ToolStripMenuItemEnglisch_Click(
+                sender As Object,
+                e As EventArgs) Handles _
+                ToolStripMenuItemEnglisch.Click
+
+        'Oberfläche auf Enlisch einstellen
+        System.Threading.Thread.CurrentThread.CurrentCulture =
+            New System.Globalization.CultureInfo($"en")
+        System.Threading.Thread.CurrentThread.CurrentUICulture =
+            New System.Globalization.CultureInfo($"en")
+
+
+    End Sub
+
 
 End Class

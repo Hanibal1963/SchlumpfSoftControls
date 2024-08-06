@@ -7,6 +7,7 @@
 
 Imports System.ComponentModel
 Imports System.Drawing
+Imports System.Windows.Forms
 
 
 ''' <summary>
@@ -17,6 +18,9 @@ Imports System.Drawing
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileContentView), "IniFileContentView.bmp")>
 Public Class IniFileContentView
+
+
+    Inherits UserControl
 
 
     Private _Lines As String()

@@ -22,7 +22,7 @@ Imports System.Drawing.Imaging
 Public Class AniGif
 
 
-    Inherits Control
+    Inherits UserControl
 
 
 #Region "Variablen für Komponenten"
