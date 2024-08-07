@@ -111,7 +111,9 @@ Public Class AniGif
     <Browsable(True)>
     <Category("Behavior")>
     <MyDescription("NoAnimationDescription")>
-    Public Event NoAnimation(sender As Object, e As EventArgs)
+    Public Event NoAnimation(
+                 sender As Object,
+                 e As EventArgs)
 
 
     ''' <summary>
