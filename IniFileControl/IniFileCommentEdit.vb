@@ -26,6 +26,7 @@ Public Class IniFileCommentEdit
 
 
     Private _Lines As String()
+    Private _TitelText As String
 
 
 #Region "Definition der Ereignisse"
@@ -39,6 +40,7 @@ Public Class IniFileCommentEdit
 
 
     Private Event PropCommentChanged()
+    Private Event TitelTextChanged()
 
 
 #End Region
@@ -50,6 +52,7 @@ Public Class IniFileCommentEdit
         Me.InitializeComponent()
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+        Me._TitelText = Me.GroupBox.Text
 
     End Sub
 
@@ -63,13 +66,14 @@ Public Class IniFileCommentEdit
     ''' <returns></returns>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("TextDescription")>
-    Public Overrides Property Text As String
+    <MyDescription("TitelTextDescription")>
+    Public Property TitelText As String
         Set(value As String)
-            Me.GroupBox.Text = value
+            Me._TitelText = value
+            RaiseEvent TitelTextChanged()
         End Set
         Get
-            Return Me.GroupBox.Text
+            Return Me._TitelText
         End Get
     End Property
 
@@ -122,6 +126,13 @@ Public Class IniFileCommentEdit
 
         Me.TextBox.Lines = Me._Lines
         Me.Button.Enabled = False
+
+    End Sub
+
+    Private Sub IniFileCommentEdit_TitelTextChanged() Handles _
+        Me.TitelTextChanged
+
+        Me.GroupBox.Text = Me._TitelText
 
     End Sub
 

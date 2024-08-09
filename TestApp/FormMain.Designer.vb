@@ -33,7 +33,7 @@ Partial Class FormMain
         Me.ButtonTransparentLabelControl = New System.Windows.Forms.Button()
         Me.ButtonWizardControl = New System.Windows.Forms.Button()
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
-        Me.SpracheToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemSprache = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItemDeutsch = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItemEnglisch = New System.Windows.Forms.ToolStripMenuItem()
         Me.FlowLayoutPanel.SuspendLayout()
@@ -103,25 +103,25 @@ Partial Class FormMain
         '
         'MenuStrip
         '
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemSprache})
         resources.ApplyResources(Me.MenuStrip, "MenuStrip")
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpracheToolStripMenuItem})
         Me.MenuStrip.Name = "MenuStrip"
         '
-        'SpracheToolStripMenuItem
+        'ToolStripMenuItemSprache
         '
-        resources.ApplyResources(Me.SpracheToolStripMenuItem, "SpracheToolStripMenuItem")
-        Me.SpracheToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemDeutsch, Me.ToolStripMenuItemEnglisch})
-        Me.SpracheToolStripMenuItem.Name = "SpracheToolStripMenuItem"
+        Me.ToolStripMenuItemSprache.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemDeutsch, Me.ToolStripMenuItemEnglisch})
+        Me.ToolStripMenuItemSprache.Name = "ToolStripMenuItemSprache"
+        resources.ApplyResources(Me.ToolStripMenuItemSprache, "ToolStripMenuItemSprache")
         '
         'ToolStripMenuItemDeutsch
         '
-        resources.ApplyResources(Me.ToolStripMenuItemDeutsch, "ToolStripMenuItemDeutsch")
         Me.ToolStripMenuItemDeutsch.Name = "ToolStripMenuItemDeutsch"
+        resources.ApplyResources(Me.ToolStripMenuItemDeutsch, "ToolStripMenuItemDeutsch")
         '
         'ToolStripMenuItemEnglisch
         '
-        resources.ApplyResources(Me.ToolStripMenuItemEnglisch, "ToolStripMenuItemEnglisch")
         Me.ToolStripMenuItemEnglisch.Name = "ToolStripMenuItemEnglisch"
+        resources.ApplyResources(Me.ToolStripMenuItemEnglisch, "ToolStripMenuItemEnglisch")
         '
         'FormMain
         '
@@ -152,7 +152,7 @@ Partial Class FormMain
     Private WithEvents ButtonTransparentLabelControl As Button
     Private WithEvents ButtonWizardControl As Button
     Private WithEvents MenuStrip As MenuStrip
-    Private WithEvents SpracheToolStripMenuItem As ToolStripMenuItem
+    Private WithEvents ToolStripMenuItemSprache As ToolStripMenuItem
     Private WithEvents ToolStripMenuItemDeutsch As ToolStripMenuItem
     Private WithEvents ToolStripMenuItemEnglisch As ToolStripMenuItem
 End Class

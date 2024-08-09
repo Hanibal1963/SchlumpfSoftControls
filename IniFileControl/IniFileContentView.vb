@@ -24,10 +24,11 @@ Public Class IniFileContentView
 
 
     Private _Lines As String()
+    Private _TitelText As String
 
 
     Private Event PropLinesChanged()
-
+    Private Event TitelTextChanged()
 
     Public Sub New()
 
@@ -35,6 +36,7 @@ Public Class IniFileContentView
         Me.InitializeComponent()
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+        Me._TitelText = Me.GroupBox.Text
 
     End Sub
 
@@ -48,13 +50,14 @@ Public Class IniFileContentView
     ''' <returns></returns>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("TextDescription")>
-    Public Overrides Property Text As String
+    <MyDescription("TitelTextDescription")>
+    Public Property TitelText As String
         Set(value As String)
-            Me.GroupBox.Text = value
+            Me._TitelText = value
+            RaiseEvent TitelTextChanged()
         End Set
         Get
-            Return Me.GroupBox.Text
+            Return Me._TitelText
         End Get
     End Property
 
@@ -85,6 +88,13 @@ Public Class IniFileContentView
         Me.PropLinesChanged
 
         Me.TextBox.Lines = Me._Lines
+
+    End Sub
+
+    Private Sub IniFileCommentEdit_TitelTextChanged() Handles _
+        Me.TitelTextChanged
+
+        Me.GroupBox.Text = Me._TitelText
 
     End Sub
 

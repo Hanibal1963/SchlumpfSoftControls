@@ -117,337 +117,310 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonWizardControl.Text" xml:space="preserve">
-    <value>Wizard Control</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FlowLayoutPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="SpracheToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+  <data name="ButtonAniGif.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="&gt;&gt;ButtonSevenSegmentControl.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;ButtonTransparentLabelControl.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ButtonSevenSegmentControl.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;ButtonSevenSegmentControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonNotifyFormControl.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ButtonAniGif.Size" type="System.Drawing.Size, System.Drawing">
     <value>245, 23</value>
   </data>
-  <data name="&gt;&gt;FlowLayoutPanel.Name" xml:space="preserve">
+  <data name="ButtonAniGif.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ButtonAniGif.Text" xml:space="preserve">
+    <value>AniGif Control</value>
+  </data>
+  <data name="&gt;&gt;ButtonAniGif.Name" xml:space="preserve">
+    <value>ButtonAniGif</value>
+  </data>
+  <data name="&gt;&gt;ButtonAniGif.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonAniGif.Parent" xml:space="preserve">
     <value>FlowLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;ButtonDriveWatcher.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ButtonAniGif.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ButtonDriveWatcher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="ButtonDriveWatcher.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 23</value>
+  </data>
+  <data name="ButtonDriveWatcher.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="ButtonDriveWatcher.Text" xml:space="preserve">
     <value>DriveWatcher Control</value>
   </data>
-  <data name="ButtonWizardControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 206</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="ToolStripMenuItemDeutsch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="ButtonAniGif.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;ButtonShapeControl.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="ButtonShapeControl.Text" xml:space="preserve">
-    <value>Shape Control</value>
-  </data>
-  <data name="&gt;&gt;ButtonShapeControl.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="ButtonSevenSegmentControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 119</value>
-  </data>
-  <data name="ButtonTransparentLabelControl.Text" xml:space="preserve">
-    <value>TransparentLabel Control</value>
-  </data>
-  <data name="MenuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ButtonTransparentLabelControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonIniFilecontrol.Text" xml:space="preserve">
-    <value>IniFile Control</value>
-  </data>
   <data name="&gt;&gt;ButtonDriveWatcher.Name" xml:space="preserve">
     <value>ButtonDriveWatcher</value>
-  </data>
-  <data name="&gt;&gt;ButtonAniGif.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ButtonDriveWatcher.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItemDeutsch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ButtonDriveWatcher.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;SpracheToolStripMenuItem.Name" xml:space="preserve">
-    <value>SpracheToolStripMenuItem</value>
-  </data>
-  <data name="FlowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="FlowLayoutPanel.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ButtonDriveWatcher.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="ButtonIniFilecontrol.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="FlowLayoutPanel.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
-    <value>TopDown</value>
-  </data>
-  <data name="ButtonSevenSegmentControl.Text" xml:space="preserve">
-    <value>SevenSegment Control</value>
-  </data>
-  <data name="ToolStripMenuItemEnglisch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="FlowLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="MenuStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
   </data>
   <data name="ButtonIniFilecontrol.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 61</value>
   </data>
-  <data name="ButtonNotifyFormControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 90</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>FormMain</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip.Name" xml:space="preserve">
-    <value>MenuStrip</value>
-  </data>
-  <data name="&gt;&gt;ButtonSevenSegmentControl.Name" xml:space="preserve">
-    <value>ButtonSevenSegmentControl</value>
-  </data>
-  <data name="ButtonNotifyFormControl.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="ButtonIniFilecontrol.Size" type="System.Drawing.Size, System.Drawing">
     <value>245, 23</value>
   </data>
-  <data name="&gt;&gt;ButtonAniGif.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel</value>
+  <data name="ButtonIniFilecontrol.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ButtonIniFilecontrol.Text" xml:space="preserve">
+    <value>IniFile Control</value>
   </data>
   <data name="&gt;&gt;ButtonIniFilecontrol.Name" xml:space="preserve">
     <value>ButtonIniFilecontrol</value>
   </data>
-  <data name="SpracheToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sprache</value>
+  <data name="&gt;&gt;ButtonIniFilecontrol.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ButtonNotifyFormControl.Text" xml:space="preserve">
-    <value>NotifyForm Control</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItemEnglisch.Name" xml:space="preserve">
-    <value>ToolStripMenuItemEnglisch</value>
-  </data>
-  <data name="&gt;&gt;ButtonAniGif.Name" xml:space="preserve">
-    <value>ButtonAniGif</value>
-  </data>
-  <data name="ButtonDriveWatcher.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 23</value>
-  </data>
-  <data name="ButtonAniGif.Text" xml:space="preserve">
-    <value>AniGif Control</value>
-  </data>
-  <data name="ButtonAniGif.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ButtonSevenSegmentControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 23</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonNotifyFormControl.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;ButtonIniFilecontrol.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel</value>
   </data>
   <data name="&gt;&gt;ButtonIniFilecontrol.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="ButtonShapeControl.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="ButtonNotifyFormControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 90</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>255, 265</value>
+  <data name="ButtonNotifyFormControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 23</value>
   </data>
-  <data name="ToolStripMenuItemDeutsch.Text" xml:space="preserve">
-    <value>Deutsch</value>
+  <data name="ButtonNotifyFormControl.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="ButtonTransparentLabelControl.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="ButtonNotifyFormControl.Text" xml:space="preserve">
+    <value>NotifyForm Control</value>
   </data>
-  <data name="&gt;&gt;MenuStrip1.Name" xml:space="preserve">
-    <value>MenuStrip1</value>
+  <data name="&gt;&gt;ButtonNotifyFormControl.Name" xml:space="preserve">
+    <value>ButtonNotifyFormControl</value>
   </data>
-  <data name="&gt;&gt;ButtonWizardControl.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ButtonNotifyFormControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonNotifyFormControl.Parent" xml:space="preserve">
     <value>FlowLayoutPanel</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="&gt;&gt;ButtonNotifyFormControl.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="ButtonDriveWatcher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 32</value>
+  <data name="ButtonSevenSegmentControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 119</value>
   </data>
-  <data name="&gt;&gt;ButtonTransparentLabelControl.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel</value>
+  <data name="ButtonSevenSegmentControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 23</value>
   </data>
-  <data name="&gt;&gt;ButtonShapeControl.Name" xml:space="preserve">
-    <value>ButtonShapeControl</value>
+  <data name="ButtonSevenSegmentControl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItemDeutsch.Name" xml:space="preserve">
-    <value>ToolStripMenuItemDeutsch</value>
+  <data name="ButtonSevenSegmentControl.Text" xml:space="preserve">
+    <value>SevenSegment Control</value>
   </data>
-  <data name="&gt;&gt;MenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ButtonSevenSegmentControl.Name" xml:space="preserve">
+    <value>ButtonSevenSegmentControl</value>
   </data>
-  <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;ButtonWizardControl.Name" xml:space="preserve">
-    <value>ButtonWizardControl</value>
-  </data>
-  <data name="&gt;&gt;ButtonShapeControl.Type" xml:space="preserve">
+  <data name="&gt;&gt;ButtonSevenSegmentControl.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ButtonSevenSegmentControl.Parent" xml:space="preserve">
     <value>FlowLayoutPanel</value>
   </data>
-  <data name="ButtonTransparentLabelControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 177</value>
-  </data>
-  <data name="ButtonDriveWatcher.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormMain</value>
+  <data name="&gt;&gt;ButtonSevenSegmentControl.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="ButtonShapeControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 148</value>
   </data>
-  <data name="FlowLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="ButtonShapeControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 23</value>
   </data>
-  <data name="&gt;&gt;MenuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ButtonShapeControl.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItemEnglisch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ButtonShapeControl.Text" xml:space="preserve">
+    <value>Shape Control</value>
   </data>
-  <data name="&gt;&gt;ButtonNotifyFormControl.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ButtonShapeControl.Name" xml:space="preserve">
+    <value>ButtonShapeControl</value>
+  </data>
+  <data name="&gt;&gt;ButtonShapeControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonShapeControl.Parent" xml:space="preserve">
     <value>FlowLayoutPanel</value>
   </data>
-  <data name="FlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 241</value>
+  <data name="&gt;&gt;ButtonShapeControl.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="ButtonWizardControl.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="ButtonTransparentLabelControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 177</value>
+  </data>
+  <data name="ButtonTransparentLabelControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 23</value>
+  </data>
+  <data name="ButtonTransparentLabelControl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="ButtonTransparentLabelControl.Text" xml:space="preserve">
+    <value>TransparentLabel Control</value>
   </data>
   <data name="&gt;&gt;ButtonTransparentLabelControl.Name" xml:space="preserve">
     <value>ButtonTransparentLabelControl</value>
   </data>
-  <data name="&gt;&gt;ButtonIniFilecontrol.Type" xml:space="preserve">
+  <data name="&gt;&gt;ButtonTransparentLabelControl.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ToolStripMenuItemEnglisch.Text" xml:space="preserve">
-    <value>Englisch</value>
+  <data name="&gt;&gt;ButtonTransparentLabelControl.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;ButtonNotifyFormControl.Type" xml:space="preserve">
+  <data name="&gt;&gt;ButtonTransparentLabelControl.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ButtonWizardControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 206</value>
+  </data>
+  <data name="ButtonWizardControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 23</value>
+  </data>
+  <data name="ButtonWizardControl.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="ButtonWizardControl.Text" xml:space="preserve">
+    <value>Wizard Control</value>
+  </data>
+  <data name="&gt;&gt;ButtonWizardControl.Name" xml:space="preserve">
+    <value>ButtonWizardControl</value>
+  </data>
+  <data name="&gt;&gt;ButtonWizardControl.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ButtonNotifyFormControl.Name" xml:space="preserve">
-    <value>ButtonNotifyFormControl</value>
-  </data>
-  <data name="&gt;&gt;ButtonAniGif.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ButtonDriveWatcher.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ButtonWizardControl.Parent" xml:space="preserve">
     <value>FlowLayoutPanel</value>
   </data>
   <data name="&gt;&gt;ButtonWizardControl.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="ButtonAniGif.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 23</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FlowLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="MenuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="FlowLayoutPanel.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
   </data>
-  <data name="&gt;&gt;SpracheToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="FlowLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
   </data>
-  <data name="ButtonWizardControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 23</value>
+  <data name="FlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 241</value>
   </data>
-  <data name="MenuStrip1.Text" xml:space="preserve">
-    <value>MenuStrip1</value>
+  <data name="FlowLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;ButtonIniFilecontrol.Parent" xml:space="preserve">
+  <data name="&gt;&gt;FlowLayoutPanel.Name" xml:space="preserve">
     <value>FlowLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ButtonShapeControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 23</value>
-  </data>
-  <data name="MenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 24</value>
-  </data>
-  <data name="ButtonTransparentLabelControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 23</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;FlowLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FlowLayoutPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;ButtonWizardControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;FlowLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;MenuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
-  </metadata>
   <metadata name="MenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="ToolStripMenuItemDeutsch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="ToolStripMenuItemDeutsch.Text" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="ToolStripMenuItemEnglisch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="ToolStripMenuItemEnglisch.Text" xml:space="preserve">
+    <value>Englisch</value>
+  </data>
+  <data name="ToolStripMenuItemSprache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="ToolStripMenuItemSprache.Text" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="MenuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 24</value>
+  </data>
+  <data name="MenuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip.Name" xml:space="preserve">
+    <value>MenuStrip</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>255, 265</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Controls Test App</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItemSprache.Name" xml:space="preserve">
+    <value>ToolStripMenuItemSprache</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItemSprache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItemDeutsch.Name" xml:space="preserve">
+    <value>ToolStripMenuItemDeutsch</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItemDeutsch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItemEnglisch.Name" xml:space="preserve">
+    <value>ToolStripMenuItemEnglisch</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItemEnglisch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

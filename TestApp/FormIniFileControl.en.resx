@@ -157,38 +157,11 @@
   <data name="ToolStripMenuItem_Deutsch.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
   </data>
-  <data name="ToolStripMenuItem_Deutsch.Text" xml:space="preserve">
-    <value>German</value>
-  </data>
   <data name="ToolStripMenuItem_Englisch.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
   </data>
-  <data name="ToolStripMenuItem_Englisch.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
   <data name="ToolStripMenuItem_Sprache.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 20</value>
-  </data>
-  <data name="ToolStripMenuItem_Sprache.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="IniFileContentView.Text" xml:space="preserve">
-    <value>File content</value>
-  </data>
-  <data name="EntryValueEdit.Text" xml:space="preserve">
-    <value>Entry value</value>
-  </data>
-  <data name="EntrysListEdit.Text" xml:space="preserve">
-    <value>List of entry</value>
-  </data>
-  <data name="SectionsListEdit.Text" xml:space="preserve">
-    <value>Section list</value>
-  </data>
-  <data name="SectionsCommentEdit.Text" xml:space="preserve">
-    <value>Sectional commentary</value>
-  </data>
-  <data name="FileCommentEdit.Text" xml:space="preserve">
-    <value>File commentary</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Inifile - Control - test</value>

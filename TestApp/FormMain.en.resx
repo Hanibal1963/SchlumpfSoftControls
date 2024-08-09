@@ -121,13 +121,40 @@
   <data name="MenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>255, 24</value>
   </data>
-  <data name="MenuStrip.Text" xml:space="preserve">
-    <value>MenuStrip</value>
+  <data name="ButtonWizardControl.Text" xml:space="preserve">
+    <value>Wizard Control</value>
   </data>
-  <data name="ToolStripMenuItemDeutsch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
+  <data name="ButtonDriveWatcher.Text" xml:space="preserve">
+    <value>Drivewatcher Control</value>
   </data>
-  <data name="ToolStripMenuItemEnglisch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
+  <data name="ButtonShapeControl.Text" xml:space="preserve">
+    <value>Shape Control</value>
+  </data>
+  <data name="ButtonTransparentLabelControl.Text" xml:space="preserve">
+    <value>Transparent label Control</value>
+  </data>
+  <data name="ButtonIniFilecontrol.Text" xml:space="preserve">
+    <value>Inifile control</value>
+  </data>
+  <data name="ButtonSevenSegmentControl.Text" xml:space="preserve">
+    <value>Sevensgment Control</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Controls test app</value>
+  </data>
+  <data name="ButtonNotifyFormControl.Text" xml:space="preserve">
+    <value>Notificform Control</value>
+  </data>
+  <data name="ButtonAniGif.Text" xml:space="preserve">
+    <value>Anigif Control</value>
+  </data>
+  <data name="ToolStripMenuItemDeutsch.Text" xml:space="preserve">
+    <value>German</value>
+  </data>
+  <data name="ToolStripMenuItemEnglisch.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="ToolStripMenuItemSprache.Text" xml:space="preserve">
+    <value>Language</value>
   </data>
 </root>

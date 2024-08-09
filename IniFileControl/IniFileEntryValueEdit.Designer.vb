@@ -26,7 +26,9 @@ Partial Class IniFileEntryValueEdit
         Me.Button = New System.Windows.Forms.Button()
         Me.TextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button
@@ -43,11 +45,17 @@ Partial Class IniFileEntryValueEdit
         '
         'GroupBox
         '
+        Me.GroupBox.Controls.Add(Me.TableLayoutPanel1)
         resources.ApplyResources(Me.GroupBox, "GroupBox")
-        Me.GroupBox.Controls.Add(Me.TextBox)
-        Me.GroupBox.Controls.Add(Me.Button)
         Me.GroupBox.Name = "GroupBox"
         Me.GroupBox.TabStop = False
+        '
+        'TableLayoutPanel1
+        '
+        resources.ApplyResources(Me.TableLayoutPanel1, "TableLayoutPanel1")
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBox, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Button, 0, 1)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         '
         'IniFileEntryValueEdit
         '
@@ -56,7 +64,8 @@ Partial Class IniFileEntryValueEdit
         Me.Controls.Add(Me.GroupBox)
         Me.Name = "IniFileEntryValueEdit"
         Me.GroupBox.ResumeLayout(False)
-        Me.GroupBox.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -64,4 +73,5 @@ Partial Class IniFileEntryValueEdit
     Private WithEvents Button As System.Windows.Forms.Button
     Private WithEvents TextBox As System.Windows.Forms.TextBox
     Private WithEvents GroupBox As System.Windows.Forms.GroupBox
+    Private WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
 End Class

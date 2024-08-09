@@ -211,7 +211,7 @@
   <data name="SectionsChangedDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn sich die Liste der Abschnitte geändert hat.</value>
   </data>
-  <data name="TextDescription" xml:space="preserve">
+  <data name="TitelTextDescription" xml:space="preserve">
     <value>Gibt den Text der Titelzeile zurück oder legt diesen fest.</value>
   </data>
   <data name="ValueDescription" xml:space="preserve">

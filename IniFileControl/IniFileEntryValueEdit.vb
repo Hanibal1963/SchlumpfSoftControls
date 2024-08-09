@@ -20,6 +20,9 @@ Public Class IniFileEntryValueEdit
     Inherits UserControl
 
 
+    Private _TitelText As String
+
+
 #Region "Definition der Ereignisse"
 
 
@@ -28,6 +31,9 @@ Public Class IniFileEntryValueEdit
     ''' </summary>
     <MyDescription("ValueEditValueChanged")>
     Public Event ValueChanged(sender As Object, e As System.EventArgs)
+
+
+    Private Event TitelTextChanged()
 
 
 #End Region
@@ -39,6 +45,7 @@ Public Class IniFileEntryValueEdit
         Me.InitializeComponent()
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+        Me._TitelText = Me.GroupBox.Text
 
     End Sub
 
@@ -52,13 +59,14 @@ Public Class IniFileEntryValueEdit
     ''' <returns></returns>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("TextDescription")>
-    Public Overrides Property Text As String
+    <MyDescription("TitelTextDescription")>
+    Public Property TitelText As String
         Set(value As String)
-            Me.GroupBox.Text = value
+            Me._TitelText = value
+            RaiseEvent TitelTextChanged()
         End Set
         Get
-            Return Me.GroupBox.Text
+            Return Me._TitelText
         End Get
     End Property
 
@@ -97,6 +105,13 @@ Public Class IniFileEntryValueEdit
 
         'Button aktivieren
         Me.Button.Enabled = True
+
+    End Sub
+
+    Private Sub IniFileCommentEdit_TitelTextChanged() Handles _
+        Me.TitelTextChanged
+
+        Me.GroupBox.Text = Me._TitelText
 
     End Sub
 

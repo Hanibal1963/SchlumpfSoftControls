@@ -347,9 +347,9 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Gibt den Text der Titelzeile zurück oder legt diesen fest. ähnelt.
         '''</summary>
-        Friend ReadOnly Property TextDescription() As String
+        Friend ReadOnly Property TitelTextDescription() As String
             Get
-                Return ResourceManager.GetString("TextDescription", resourceCulture)
+                Return ResourceManager.GetString("TitelTextDescription", resourceCulture)
             End Get
         End Property
         

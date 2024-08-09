@@ -173,7 +173,7 @@
     <value>0, 0</value>
   </data>
   <data name="MenuStrip_HauptMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>942, 24</value>
+    <value>920, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="MenuStrip_HauptMenu.TabIndex" type="System.Int32, mscorlib">
@@ -189,7 +189,133 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MenuStrip_HauptMenu.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="EntrysListEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 32</value>
+  </data>
+  <data name="EntrysListEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 201</value>
+  </data>
+  <data name="EntrysListEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;EntrysListEdit.Name" xml:space="preserve">
+    <value>EntrysListEdit</value>
+  </data>
+  <data name="&gt;&gt;EntrysListEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;EntrysListEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EntrysListEdit.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="SectionsCommentEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 322</value>
+  </data>
+  <data name="SectionsCommentEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 156</value>
+  </data>
+  <data name="SectionsCommentEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;SectionsCommentEdit.Name" xml:space="preserve">
+    <value>SectionsCommentEdit</value>
+  </data>
+  <data name="&gt;&gt;SectionsCommentEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SectionsCommentEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SectionsCommentEdit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="EntryValueEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 239</value>
+  </data>
+  <data name="EntryValueEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 77</value>
+  </data>
+  <data name="EntryValueEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Name" xml:space="preserve">
+    <value>EntryValueEdit</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SectionsListEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 239</value>
+  </data>
+  <data name="SectionsListEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 239</value>
+  </data>
+  <data name="SectionsListEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Name" xml:space="preserve">
+    <value>SectionsListEdit</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="IniFileContentView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 32</value>
+  </data>
+  <data name="IniFileContentView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 446</value>
+  </data>
+  <data name="IniFileContentView.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;IniFileContentView.Name" xml:space="preserve">
+    <value>IniFileContentView</value>
+  </data>
+  <data name="&gt;&gt;IniFileContentView.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileContentView, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;IniFileContentView.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;IniFileContentView.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="FileCommentEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 32</value>
+  </data>
+  <data name="FileCommentEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 201</value>
+  </data>
+  <data name="FileCommentEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.Name" xml:space="preserve">
+    <value>FileCommentEdit</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <metadata name="IniFile1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>208, 18</value>
@@ -201,7 +327,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>942, 640</value>
+    <value>920, 488</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">

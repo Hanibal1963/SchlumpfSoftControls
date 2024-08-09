@@ -31,6 +31,12 @@ Partial Class FormIniFileControl
         Me.ToolStripMenuItem_Speichern = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_SpeichernUnter = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_Beenden = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EntrysListEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileListEdit()
+        Me.SectionsCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
+        Me.EntryValueEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit()
+        Me.SectionsListEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileListEdit()
+        Me.IniFileContentView = New SchlumpfSoft.Controls.IniFileControl.IniFileContentView()
+        Me.FileCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
         Me.IniFile1 = New SchlumpfSoft.Controls.IniFileControl.IniFile()
         MenuStrip_HauptMenu = New System.Windows.Forms.MenuStrip()
         ToolStripMenuItem_Datei = New System.Windows.Forms.ToolStripMenuItem()
@@ -81,6 +87,46 @@ Partial Class FormIniFileControl
         Me.ToolStripMenuItem_Beenden.Name = "ToolStripMenuItem_Beenden"
         resources.ApplyResources(Me.ToolStripMenuItem_Beenden, "ToolStripMenuItem_Beenden")
         '
+        'EntrysListEdit
+        '
+        resources.ApplyResources(Me.EntrysListEdit, "EntrysListEdit")
+        Me.EntrysListEdit.Name = "EntrysListEdit"
+        Me.EntrysListEdit.TitelText = "Eintragsliste:"
+        '
+        'SectionsCommentEdit
+        '
+        Me.SectionsCommentEdit.Comment = Nothing
+        resources.ApplyResources(Me.SectionsCommentEdit, "SectionsCommentEdit")
+        Me.SectionsCommentEdit.Name = "SectionsCommentEdit"
+        Me.SectionsCommentEdit.TitelText = "Abschnittskommentar:"
+        '
+        'EntryValueEdit
+        '
+        resources.ApplyResources(Me.EntryValueEdit, "EntryValueEdit")
+        Me.EntryValueEdit.Name = "EntryValueEdit"
+        Me.EntryValueEdit.TitelText = "Eintragswert:"
+        Me.EntryValueEdit.Value = ""
+        '
+        'SectionsListEdit
+        '
+        resources.ApplyResources(Me.SectionsListEdit, "SectionsListEdit")
+        Me.SectionsListEdit.Name = "SectionsListEdit"
+        Me.SectionsListEdit.TitelText = "Abschnittsliste:"
+        '
+        'IniFileContentView
+        '
+        Me.IniFileContentView.Lines = Nothing
+        resources.ApplyResources(Me.IniFileContentView, "IniFileContentView")
+        Me.IniFileContentView.Name = "IniFileContentView"
+        Me.IniFileContentView.TitelText = "Dateiinhalt:"
+        '
+        'FileCommentEdit
+        '
+        Me.FileCommentEdit.Comment = Nothing
+        resources.ApplyResources(Me.FileCommentEdit, "FileCommentEdit")
+        Me.FileCommentEdit.Name = "FileCommentEdit"
+        Me.FileCommentEdit.TitelText = "Dateikommentar:"
+        '
         'IniFile1
         '
         Me.IniFile1.AutoSave = False
@@ -91,6 +137,12 @@ Partial Class FormIniFileControl
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.EntrysListEdit)
+        Me.Controls.Add(Me.SectionsCommentEdit)
+        Me.Controls.Add(Me.EntryValueEdit)
+        Me.Controls.Add(Me.SectionsListEdit)
+        Me.Controls.Add(Me.IniFileContentView)
+        Me.Controls.Add(Me.FileCommentEdit)
         Me.Controls.Add(MenuStrip_HauptMenu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -109,4 +161,10 @@ Partial Class FormIniFileControl
     Private WithEvents ToolStripMenuItem_SpeichernUnter As ToolStripMenuItem
     Private WithEvents ToolStripMenuItem_Beenden As ToolStripMenuItem
     Private WithEvents IniFile1 As SchlumpfSoft.Controls.IniFileControl.IniFile
+    Private WithEvents FileCommentEdit As SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit
+    Private WithEvents IniFileContentView As SchlumpfSoft.Controls.IniFileControl.IniFileContentView
+    Private WithEvents SectionsListEdit As SchlumpfSoft.Controls.IniFileControl.IniFileListEdit
+    Private WithEvents EntryValueEdit As SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit
+    Private WithEvents SectionsCommentEdit As SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit
+    Private WithEvents EntrysListEdit As SchlumpfSoft.Controls.IniFileControl.IniFileListEdit
 End Class

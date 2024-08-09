@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 48</value>
+    <value>48, 29</value>
   </data>
   <data name="Button.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 25</value>
@@ -142,7 +142,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Button.Parent" xml:space="preserve">
-    <value>GroupBox</value>
+    <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;Button.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -151,13 +151,13 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="TextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
+    <value>3, 3</value>
   </data>
   <data name="TextBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Both</value>
   </data>
   <data name="TextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 20</value>
+    <value>143, 20</value>
   </data>
   <data name="TextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -172,19 +172,52 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TextBox.Parent" xml:space="preserve">
-    <value>GroupBox</value>
+    <value>TableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;TextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="GroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="TableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="TableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 54</value>
+  </data>
+  <data name="TableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel1.Name" xml:space="preserve">
+    <value>TableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel1.Parent" xml:space="preserve">
+    <value>GroupBox</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="TextBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Button" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="GroupBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="GroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>0, 0</value>
   </data>
   <data name="GroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 79</value>
+    <value>155, 73</value>
   </data>
   <data name="GroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -211,7 +244,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 85</value>
+    <value>155, 73</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>IniFileEntryValueEdit</value>

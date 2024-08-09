@@ -262,9 +262,6 @@ Public Class IniFile
     ''' </summary>
     Public Sub SaveFile()
 
-        'Dateiinhalt erzeugen 
-        Me.CreateFileContent()
-
         'Dateiinhalt auf Datenträger schreiben
         IO.File.WriteAllLines(Me._FilePath, Me._FileContent)
 
@@ -300,6 +297,9 @@ Public Class IniFile
 
         'neuen Dateikommentar übenehmen
         Me._FileComment.AddRange(CommentLines)
+
+        'Dateiinhalt neu erzeugen 
+        Me.CreateFileContent()
 
         'Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
@@ -376,6 +376,9 @@ Public Class IniFile
         'neuen Abschnitt erstellen
         Me.AddNewSection(Name)
 
+        'Dateiinhalt neu erzeugen 
+        Me.CreateFileContent()
+
         'Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
 
@@ -408,6 +411,9 @@ Public Class IniFile
 
         'neuen Eintrag erstellen
         Me.AddNewEntry(Section, Name)
+
+        'Dateiinhalt neu erzeugen 
+        Me.CreateFileContent()
 
         'Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
@@ -445,6 +451,9 @@ Public Class IniFile
         'Name-Kommentar-Paar umbenennen
         Me.RenameSectionComment(OldName, NewName)
 
+        'Dateiinhalt neu erzeugen 
+        Me.CreateFileContent()
+
         'Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
 
@@ -474,8 +483,12 @@ Public Class IniFile
             Exit Sub
 
         End If
+
         'Name-Wert-Paar des Eintrags umbenennen
         Me.RenameEntryvalue(Section, Oldname, NewName)
+
+        'Dateiinhalt neu erzeugen 
+        Me.CreateFileContent()
 
         'Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
@@ -498,6 +511,9 @@ Public Class IniFile
         'Abschnitt aus den Listen für Abschnitte und Abschnittskommentare entfernen
         Dim unused = Me._Sections.Remove(Name)
         Dim unused1 = Me._SectionsComments.Remove(Name)
+
+        'Dateiinhalt neu erzeugen 
+        Me.CreateFileContent()
 
         'Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
@@ -522,6 +538,9 @@ Public Class IniFile
 
         'Eintrag aus der Liste der Einträge entfernen
         Dim unused = Me._Sections.Item(Section).Remove(Entry)
+
+        'Dateiinhalt neu erzeugen 
+        Me.CreateFileContent()
 
         'Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
@@ -590,6 +609,9 @@ Public Class IniFile
         Me._SectionsComments.Item(Name).Clear()
         Me._SectionsComments.Item(Name).AddRange(CommentLines)
 
+        'Dateiinhalt neu erzeugen 
+        Me.CreateFileContent()
+
         'eventuell Änderung speichern
         If Me._AutoSave Then Me.SaveFile()
 
@@ -616,6 +638,9 @@ Public Class IniFile
 
         'geänderten Wert übenehmen
         Me._Sections.Item(Section).Item(Entry) = Value
+
+        'Dateiinhalt neu erzeugen 
+        Me.CreateFileContent()
 
         'eventuell Änderung speichern
         If Me._AutoSave Then Me.SaveFile()

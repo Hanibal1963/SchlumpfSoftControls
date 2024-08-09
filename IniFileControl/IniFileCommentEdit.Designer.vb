@@ -24,30 +24,38 @@ Partial Class IniFileCommentEdit
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IniFileCommentEdit))
         Me.GroupBox = New System.Windows.Forms.GroupBox()
-        Me.Button = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TextBox = New System.Windows.Forms.TextBox()
+        Me.Button = New System.Windows.Forms.Button()
         Me.GroupBox.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox
         '
+        Me.GroupBox.Controls.Add(Me.TableLayoutPanel1)
         resources.ApplyResources(Me.GroupBox, "GroupBox")
-        Me.GroupBox.Controls.Add(Me.Button)
-        Me.GroupBox.Controls.Add(Me.TextBox)
         Me.GroupBox.Name = "GroupBox"
         Me.GroupBox.TabStop = False
+        '
+        'TableLayoutPanel1
+        '
+        resources.ApplyResources(Me.TableLayoutPanel1, "TableLayoutPanel1")
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBox, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Button, 0, 1)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        '
+        'TextBox
+        '
+        Me.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.TextBox, "TextBox")
+        Me.TextBox.Name = "TextBox"
         '
         'Button
         '
         resources.ApplyResources(Me.Button, "Button")
         Me.Button.Name = "Button"
         Me.Button.UseVisualStyleBackColor = True
-        '
-        'TextBox
-        '
-        resources.ApplyResources(Me.TextBox, "TextBox")
-        Me.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox.Name = "TextBox"
         '
         'IniFileCommentEdit
         '
@@ -56,7 +64,8 @@ Partial Class IniFileCommentEdit
         Me.Controls.Add(Me.GroupBox)
         Me.Name = "IniFileCommentEdit"
         Me.GroupBox.ResumeLayout(False)
-        Me.GroupBox.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -64,4 +73,5 @@ Partial Class IniFileCommentEdit
     Private WithEvents GroupBox As System.Windows.Forms.GroupBox
     Private WithEvents Button As System.Windows.Forms.Button
     Private WithEvents TextBox As System.Windows.Forms.TextBox
+    Private WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
 End Class

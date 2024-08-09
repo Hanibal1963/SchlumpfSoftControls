@@ -198,7 +198,7 @@
   <data name="ListEditSelectedItemChangedDescription" xml:space="preserve">
     <value>Is triggered if the selected entry has changed.</value>
   </data>
-  <data name="TextDescription" xml:space="preserve">
+  <data name="TitelTextDescription" xml:space="preserve">
     <value>Put the text of the title line back or define it.</value>
   </data>
   <data name="CommentChangedDescription" xml:space="preserve">

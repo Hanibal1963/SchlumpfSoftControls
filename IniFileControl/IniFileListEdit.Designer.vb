@@ -24,28 +24,44 @@ Partial Class IniFileListEdit
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IniFileListEdit))
         Me.GroupBox = New System.Windows.Forms.GroupBox()
-        Me.ButtonDelete = New System.Windows.Forms.Button()
-        Me.ButtonRename = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.ButtonAdd = New System.Windows.Forms.Button()
+        Me.ButtonRename = New System.Windows.Forms.Button()
+        Me.ButtonDelete = New System.Windows.Forms.Button()
         Me.ListBox = New System.Windows.Forms.ListBox()
         Me.GroupBox.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox
         '
+        Me.GroupBox.Controls.Add(Me.TableLayoutPanel1)
         resources.ApplyResources(Me.GroupBox, "GroupBox")
-        Me.GroupBox.Controls.Add(Me.ButtonDelete)
-        Me.GroupBox.Controls.Add(Me.ButtonRename)
-        Me.GroupBox.Controls.Add(Me.ButtonAdd)
-        Me.GroupBox.Controls.Add(Me.ListBox)
         Me.GroupBox.Name = "GroupBox"
         Me.GroupBox.TabStop = False
         '
-        'ButtonDelete
+        'TableLayoutPanel1
         '
-        resources.ApplyResources(Me.ButtonDelete, "ButtonDelete")
-        Me.ButtonDelete.Name = "ButtonDelete"
-        Me.ButtonDelete.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.TableLayoutPanel1, "TableLayoutPanel1")
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.ListBox, 0, 0)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        '
+        'TableLayoutPanel2
+        '
+        resources.ApplyResources(Me.TableLayoutPanel2, "TableLayoutPanel2")
+        Me.TableLayoutPanel2.Controls.Add(Me.ButtonAdd, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.ButtonRename, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.ButtonDelete, 2, 0)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        '
+        'ButtonAdd
+        '
+        resources.ApplyResources(Me.ButtonAdd, "ButtonAdd")
+        Me.ButtonAdd.Name = "ButtonAdd"
+        Me.ButtonAdd.UseVisualStyleBackColor = True
         '
         'ButtonRename
         '
@@ -53,11 +69,11 @@ Partial Class IniFileListEdit
         Me.ButtonRename.Name = "ButtonRename"
         Me.ButtonRename.UseVisualStyleBackColor = True
         '
-        'ButtonAdd
+        'ButtonDelete
         '
-        resources.ApplyResources(Me.ButtonAdd, "ButtonAdd")
-        Me.ButtonAdd.Name = "ButtonAdd"
-        Me.ButtonAdd.UseVisualStyleBackColor = True
+        resources.ApplyResources(Me.ButtonDelete, "ButtonDelete")
+        Me.ButtonDelete.Name = "ButtonDelete"
+        Me.ButtonDelete.UseVisualStyleBackColor = True
         '
         'ListBox
         '
@@ -72,6 +88,9 @@ Partial Class IniFileListEdit
         Me.Controls.Add(Me.GroupBox)
         Me.Name = "IniFileListEdit"
         Me.GroupBox.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -81,4 +100,6 @@ Partial Class IniFileListEdit
     Private WithEvents ButtonAdd As System.Windows.Forms.Button
     Private WithEvents ListBox As System.Windows.Forms.ListBox
     Private WithEvents GroupBox As System.Windows.Forms.GroupBox
+    Private WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
+    Private WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
 End Class
