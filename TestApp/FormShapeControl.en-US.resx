@@ -117,67 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonCancelText_PageCustom" xml:space="preserve">
-    <value>OK</value>
+  <data name="Label_FillColor.Text" xml:space="preserve">
+    <value>Fill color rectangle or ellipse:</value>
   </data>
-  <data name="ButtonCancelText_PageFinish" xml:space="preserve">
-    <value>Complete</value>
+  <data name="Label_LineColor.Text" xml:space="preserve">
+    <value>Color line or frame:</value>
   </data>
-  <data name="ButtonCancelText_Standard" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="Label_LineWidth.Text" xml:space="preserve">
+    <value>Wide line or frame:</value>
   </data>
-  <data name="ClassDescription" xml:space="preserve">
-    <value>A control for creating an assistant</value>
+  <data name="Label_LineModus.Text" xml:space="preserve">
+    <value>Starting point diagonal line:</value>
   </data>
-  <data name="AfterSwitchPagesDescription" xml:space="preserve">
-    <value>Come up after the assistant's pages have been changed and gives the user the opportunity to set up the new page.</value>
+  <data name="Label_ShapeModus.Text" xml:space="preserve">
+    <value>form to be displayed:</value>
   </data>
-  <data name="BeforeSwitchPagesDescription" xml:space="preserve">
-    <value>Occurrence before the assistant's pages are changed to give the user the opportunity to validate.</value>
+  <data name="Button_FillColor.Text" xml:space="preserve">
+    <value>Choose color</value>
   </data>
-  <data name="CancelDesription" xml:space="preserve">
-    <value>Occurs when the user clicked on canceling.</value>
+  <data name="Button_LineColor.Text" xml:space="preserve">
+    <value>Choose color</value>
   </data>
-  <data name="DockDescription" xml:space="preserve">
-    <value>Call or determine the edge of the overarching container a control is docked.</value>
-  </data>
-  <data name="FinishDescription" xml:space="preserve">
-    <value>Occurs when the assistant is complete and gives the user the opportunity to do additional tasks.</value>
-  </data>
-  <data name="HeaderFontDescription" xml:space="preserve">
-    <value>Calls the font that is used to display the description of a standard page or determine it.</value>
-  </data>
-  <data name="HeaderTitleFontDescription" xml:space="preserve">
-    <value>Calls the font that is used to display the title of a standard page or determine it.</value>
-  </data>
-  <data name="HelpDescription" xml:space="preserve">
-    <value>Passes up when the user clicks on the help button.</value>
-  </data>
-  <data name="ImageHeaderDesription" xml:space="preserve">
-    <value>Calls the image displayed in the header of the standard pages or defines this festival.</value>
-  </data>
-  <data name="ImageWelcomeDescription" xml:space="preserve">
-    <value>Calls the image displayed on the welcome and final pages or determines it.</value>
-  </data>
-  <data name="PagesCollectionDescription" xml:space="preserve">
-    <value>Calls the listing of the assistant sides in this tab control.</value>
-  </data>
-  <data name="VisibleHelpDescription" xml:space="preserve">
-    <value>Calls the visibility status of the help button or defines it.</value>
-  </data>
-  <data name="WelcomeFontDescription" xml:space="preserve">
-    <value>Calls the font that is used to display the description of a welcome or final page or determine it.</value>
-  </data>
-  <data name="WelcomeTitleFontDescription" xml:space="preserve">
-    <value>Calls the font that is used to display the title of a welcome or final page or determine it.</value>
-  </data>
-  <data name="DescriptionDescription" xml:space="preserve">
-    <value>Calls the description of the assistant side or defines it.</value>
-  </data>
-  <data name="StyleDescription" xml:space="preserve">
-    <value>Call the style of the assistant side or define it.</value>
-  </data>
-  <data name="TitleDescription" xml:space="preserve">
-    <value>Call the title of the assistant side or define it.</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Shape - Control - test</value>
   </data>
 </root>

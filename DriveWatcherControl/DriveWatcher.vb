@@ -71,7 +71,7 @@ Public Class DriveWatcher
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk hinzugefügt wurde
     ''' </summary>
-    Private Sub _Form_DriveAdded(sender As Object, e As System.IO.DriveInfo) Handles _
+    Private Sub _Form_DriveAdded(sender As Object, e As DriveInfo) Handles _
         _Form.DriveAdded
 
 
@@ -93,7 +93,7 @@ Public Class DriveWatcher
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk entfern wurde
     ''' </summary>
-    Private Sub _Form_DriveRemoved(sender As Object, e As System.IO.DriveInfo) Handles _
+    Private Sub _Form_DriveRemoved(sender As Object, e As DriveInfo) Handles _
         _Form.DriveRemoved
 
         Dim arg As New DriveRemovedEventArgs With {.DriveName = e.Name}
@@ -112,8 +112,6 @@ Public Class DriveWatcher
     ''' </remarks>
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-
-        Me.components = New Container()
 
     End Sub
 

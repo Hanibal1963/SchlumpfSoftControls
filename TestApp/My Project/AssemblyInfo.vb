@@ -34,4 +34,4 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyVersion("1.2024.07.05")>
 <Assembly: AssemblyFileVersion("1.2024.07.05")>
-<Assembly: NeutralResourcesLanguage("de")>
+<Assembly: NeutralResourcesLanguage("de-DE")>

@@ -23,6 +23,7 @@ Partial Class FormDriveWatcherControl
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDriveWatcherControl))
         Me.Label_Info = New System.Windows.Forms.Label()
         Me.DriveWatcher1 = New SchlumpfSoft.Controls.DriveWatcherControl.DriveWatcher(Me.components)
         Me.Label_result = New System.Windows.Forms.Label()
@@ -31,28 +32,21 @@ Partial Class FormDriveWatcherControl
         'Label_Info
         '
         Me.Label_Info.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label_Info.Location = New System.Drawing.Point(12, 9)
+        resources.ApplyResources(Me.Label_Info, "Label_Info")
         Me.Label_Info.Name = "Label_Info"
-        Me.Label_Info.Size = New System.Drawing.Size(365, 37)
-        Me.Label_Info.TabIndex = 1
-        Me.Label_Info.Text = "Lege eine CD ein, stecke einen USB-Stick oder ein externes Laufwerk an" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "oder füge" &
-    " ein virtuelles Laufwerk hinzu und beobachte die Reaktion."
         '
         'DriveWatcher1
         '
         '
         'Label_result
         '
-        Me.Label_result.Location = New System.Drawing.Point(12, 59)
+        resources.ApplyResources(Me.Label_result, "Label_result")
         Me.Label_result.Name = "Label_result"
-        Me.Label_result.Size = New System.Drawing.Size(365, 133)
-        Me.Label_result.TabIndex = 2
         '
         'FormDriveWatcherControl
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(387, 206)
         Me.Controls.Add(Me.Label_result)
         Me.Controls.Add(Me.Label_Info)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -61,8 +55,6 @@ Partial Class FormDriveWatcherControl
         Me.Name = "FormDriveWatcherControl"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "DriveWatcher - Control - Test"
         Me.ResumeLayout(False)
 
     End Sub

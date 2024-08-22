@@ -5,17 +5,32 @@
 '
 
 
+Imports System.Globalization
+Imports System.Threading
+Imports SchlumpfSoft.Controls.ShapeControl
+
+
 Public Class FormShapeControl
 
 
-    Private _ShapeModusItems() As String =
-        {$"horizontale Linie", $"vertikale Linie", $"diagonale Linie", $"Rechteck", $"gefülltes Rechteck", $"Ellipse", $"gefüllte Ellipse"}
-
-    Private _LineModusItems() As String =
-        {$"links oben", $"links unten"}
+    Private _ShapeModusItems() As String = {
+        My.Resources.Shape_ModusItem1,
+        My.Resources.Shape_ModusItem2,
+        My.Resources.Shape_ModusItem3,
+        My.Resources.Shape_ModusItem4,
+        My.Resources.Shape_ModusItem5,
+        My.Resources.Shape_ModusItem6,
+        My.Resources.Shape_ModusItem7}
+    Private _LineModusItems() As String = {
+        My.Resources.Shape_LineModusItem1,
+        My.Resources.Shape_LineModusItem2}
 
 
     Public Sub New()
+
+        'Zuletzt verwendete Sprache einstellen
+        Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.LangCode)
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.LangCode)
 
         'Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
@@ -85,13 +100,9 @@ Public Class FormShapeControl
                 ComboBox_LineModus.SelectedIndexChanged
 
         'Verlauf der diagonalen Linie schalten
-        Dim selindex As Integer = CType(
-            sender,
-            ComboBox).SelectedIndex
+        Dim selindex As Integer = CType(sender, ComboBox).SelectedIndex
 
-        Me.Shape1.DiagonalLineModus = CType(
-            selindex,
-            SchlumpfSoft.Controls.ShapeControl.DiagonalLineModes)
+        Me.Shape1.DiagonalLineModus = CType(selindex, DiagonalLineModes)
 
     End Sub
 
@@ -129,9 +140,7 @@ Public Class FormShapeControl
         End Select
 
         'ausgewählte Form umschalten
-        Me.Shape1.ShapeModus = CType(
-            selindex,
-            SchlumpfSoft.Controls.ShapeControl.ShapeModes)
+        Me.Shape1.ShapeModus = CType(selindex, ShapeModes)
 
     End Sub
 

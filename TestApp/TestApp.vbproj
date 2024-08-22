@@ -152,23 +152,32 @@
     <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAniGifControl.en-US.resx">
+      <DependentUpon>FormAniGifControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAniGifControl.resx">
       <DependentUpon>FormAniGifControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDriveWatcherControl.en-US.resx">
+      <DependentUpon>FormDriveWatcherControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDriveWatcherControl.resx">
       <DependentUpon>FormDriveWatcherControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormIniFileControl.en.resx">
+    <EmbeddedResource Include="FormIniFileControl.en-US.resx">
       <DependentUpon>FormIniFileControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIniFileControl.resx">
       <DependentUpon>FormIniFileControl.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.en.resx">
+    <EmbeddedResource Include="FormMain.en-US.resx">
       <DependentUpon>FormMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotifyFormControl.en-US.resx">
+      <DependentUpon>FormNotifyFormControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNotifyFormControl.resx">
       <DependentUpon>FormNotifyFormControl.vb</DependentUpon>
@@ -176,15 +185,25 @@
     <EmbeddedResource Include="FormSevenSegmentControl.resx">
       <DependentUpon>FormSevenSegmentControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormShapeControl.en-US.resx">
+      <DependentUpon>FormShapeControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormShapeControl.resx">
       <DependentUpon>FormShapeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransparentLabelControl.en-US.resx">
+      <DependentUpon>FormTransparentLabelControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTransparentLabelControl.resx">
       <DependentUpon>FormTransparentLabelControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormWizardControl.en-US.resx">
+      <DependentUpon>FormWizardControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormWizardControl.resx">
       <DependentUpon>FormWizardControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.en-US.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

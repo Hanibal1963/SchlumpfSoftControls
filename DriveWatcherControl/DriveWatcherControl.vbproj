@@ -111,7 +111,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="My Project\Resources.en.resx" />
+    <EmbeddedResource Include="DriveWatcher.resx">
+      <DependentUpon>DriveWatcher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.en-US.resx" />
     <EmbeddedResource Include="Resources\DriveWatcher.bmp" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>

@@ -115,10 +115,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AniGif.en-US.resx">
+      <DependentUpon>AniGif.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AniGif.resx">
       <DependentUpon>AniGif.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Resources.en.resx" />
+    <EmbeddedResource Include="My Project\Resources.en-US.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

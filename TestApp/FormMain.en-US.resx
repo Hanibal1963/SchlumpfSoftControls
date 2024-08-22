@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,22 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClassDescription" xml:space="preserve">
-    <value>Control element for displaying a line, a rectangle or a ellipse.</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ToolStripMenuItemDeutsch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
-  <data name="ShapeModusDescription" xml:space="preserve">
-    <value>Detects the form to be displayed or returns it.</value>
+  <data name="ToolStripMenuItemEnglisch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
-  <data name="FillColorDescription" xml:space="preserve">
-    <value>Detects the fill color for the shape or returns it.</value>
+  <data name="ButtonAniGif.Text" xml:space="preserve">
+    <value>Anigif Control</value>
   </data>
-  <data name="LineColorDescription" xml:space="preserve">
-    <value>Detects the color of the line or framework line or returns it.</value>
+  <data name="ButtonDriveWatcher.Text" xml:space="preserve">
+    <value>Drivewatcher Control</value>
   </data>
-  <data name="LineWidthDescription" xml:space="preserve">
-    <value>Specifies the width of the line or framework line or return it.</value>
+  <data name="ButtonIniFilecontrol.Text" xml:space="preserve">
+    <value>Inifile control</value>
   </data>
-  <data name="DiagonalLineModusDescription" xml:space="preserve">
-    <value>Specifies whether a diagonal line runs from the top right or vice versa from the top right.</value>
+  <data name="ButtonNotifyFormControl.Text" xml:space="preserve">
+    <value>Notificform Control</value>
+  </data>
+  <data name="ButtonSevenSegmentControl.Text" xml:space="preserve">
+    <value>Sevensgment Control</value>
+  </data>
+  <data name="ButtonShapeControl.Text" xml:space="preserve">
+    <value>Shape Control</value>
+  </data>
+  <data name="ButtonTransparentLabelControl.Text" xml:space="preserve">
+    <value>Transparent label Control</value>
+  </data>
+  <data name="ButtonWizardControl.Text" xml:space="preserve">
+    <value>Wizard Control</value>
+  </data>
+  <data name="ToolStripMenuItemDeutsch.Text" xml:space="preserve">
+    <value>German</value>
+  </data>
+  <data name="ToolStripMenuItemEnglisch.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="ToolStripMenuItemSprache.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Controls test app</value>
   </data>
 </root>

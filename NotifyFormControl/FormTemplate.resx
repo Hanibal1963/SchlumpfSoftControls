@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,52 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BackColorDescription" xml:space="preserve">
-    <value>Detects the background color of the control or returns it.</value>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en-US</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>284, 261</value>
   </data>
-  <data name="ColonActiveDescription" xml:space="preserve">
-    <value>Indicates whether the colon LEDs are active.</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormTemplate</value>
   </data>
-  <data name="CustomBitPatternDescription" xml:space="preserve">
-    <value>Set a custom bit pattern that is to be displayed in the seven segments. This is an integer value in which Bits 0 to 6 meet the respective LED segments.</value>
-  </data>
-  <data name="DecimalPointActiveDescription" xml:space="preserve">
-    <value>Indicates whether the decimal point LED is active.</value>
-  </data>
-  <data name="DigitCountDescription" xml:space="preserve">
-    <value>Number of digits in this control.</value>
-  </data>
-  <data name="DigitPaddingDescription" xml:space="preserve">
-    <value>Refilling that applies to every digit in the control.</value>
-  </data>
-  <data name="DigitValueDesciption" xml:space="preserve">
-    <value>Specifies the sign to be displayed or return it.</value>
-  </data>
-  <data name="ForeColorDescription" xml:space="preserve">
-    <value>Specifies the foreground color of the control segments or returns it.</value>
-  </data>
-  <data name="InactiveColorDescription" xml:space="preserve">
-    <value>Detects the color of inactive segments or returns them.</value>
-  </data>
-  <data name="ItalicFactorDescription" xml:space="preserve">
-    <value>Schecoefficient for the italics of the advertisement.</value>
-  </data>
-  <data name="SegmentWidthDescription" xml:space="preserve">
-    <value>Detects the width of the LED segments or returns them.</value>
-  </data>
-  <data name="ShowColonDescription" xml:space="preserve">
-    <value>Indicates whether the colon LEDs are displayed.</value>
-  </data>
-  <data name="ShowDecimalPointDescription" xml:space="preserve">
-    <value>Indicates whether the decimal point LED is displayed.</value>
-  </data>
-  <data name="ValueDescription" xml:space="preserve">
-    <value>The value to be displayed on the control.</value>
-  </data>
-  <data name="ClassDescriptionSevSegMultiDigit" xml:space="preserve">
-    <value>Control for displaying a sequence of digits as a 7-segment ad.</value>
-  </data>
-  <data name="ClassDescriptionSevSegSingleDigit" xml:space="preserve">
-    <value>Control for displaying a number as a 7-segment ad.</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

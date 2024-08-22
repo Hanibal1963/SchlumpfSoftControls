@@ -48,7 +48,7 @@ Public Class AniGif
     ''' <summary>
     ''' Eigenschaftsvariable für das aktuelle Bild.
     ''' </summary>
-    Private _Gif As System.Drawing.Bitmap
+    Private _Gif As Bitmap
 
 
     ''' <summary>
@@ -72,7 +72,7 @@ Public Class AniGif
     ''' <summary>
     ''' Variable für die Eigenschaften des Bildes.
     ''' </summary>
-    Private _Dimension As System.Drawing.Imaging.FrameDimension
+    Private _Dimension As FrameDimension
 
 
     ''' <summary>
@@ -111,9 +111,7 @@ Public Class AniGif
     <Browsable(True)>
     <Category("Behavior")>
     <MyDescription("NoAnimationDescription")>
-    Public Event NoAnimation(
-                 sender As Object,
-                 e As EventArgs)
+    Public Event NoAnimation(sender As Object, e As EventArgs)
 
 
     ''' <summary>
@@ -500,7 +498,7 @@ Public Class AniGif
         End If
 
         Me.Invalidate() 'neu zeichnen
-        Me.Initlayout() 'Animation starten
+        Me.InitLayout() 'Animation starten
 
     End Sub
 
@@ -567,11 +565,17 @@ Public Class AniGif
     ''' Initialisiert die Komponenten dieser Klasse
     ''' </summary>
     Private Sub InitializeComponent()
-
         Me.components = New Container()
-        Me.Timer = New System.Windows.Forms.Timer()
+        Me.Timer = New Timer(Me.components)
         Me.SuspendLayout()
+        '
+        'Timer
+        '
         Me.Timer.Interval = 200
+        '
+        'AniGif
+        '
+        Me.Name = "AniGif"
         Me.ResumeLayout(False)
 
     End Sub
@@ -650,8 +654,7 @@ Public Class AniGif
     ''' Zoomwert
     ''' </param>
     Private Function GetRectStartSize(
-                                Mode As SizeMode, Control As AniGif,
-                                Gif As Bitmap, Zoom As Decimal) As Size
+                     Mode As SizeMode, Control As AniGif, Gif As Bitmap, Zoom As Decimal) As Size
 
         Select Case Mode
 
@@ -723,8 +726,7 @@ Public Class AniGif
     ''' Startgröße der Zeichenfläche.
     ''' </param>
     Private Function GetRectStartPoint(
-                                 Mode As SizeMode, Control As AniGif,
-                                 Gif As Bitmap, RectStartSize As Size) As Point
+                     Mode As SizeMode, Control As AniGif, Gif As Bitmap, RectStartSize As Size) As Point
 
         Select Case Mode
 

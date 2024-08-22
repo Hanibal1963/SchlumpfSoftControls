@@ -137,6 +137,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Fensternachricht ähnelt.
+        '''</summary>
+        Friend ReadOnly Property StandardMessage() As String
+            Get
+                Return ResourceManager.GetString("StandardMessage", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Fenstertitel ähnelt.
+        '''</summary>
+        Friend ReadOnly Property StandardTitle() As String
+            Get
+                Return ResourceManager.GetString("StandardTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Legt das anzuzeigende Symbol des Benachrichtigungsfensters fest oder gibt dieses zurück. ähnelt.
         '''</summary>
         Friend ReadOnly Property StyleDescription() As String

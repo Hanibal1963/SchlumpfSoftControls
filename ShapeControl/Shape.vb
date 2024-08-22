@@ -442,7 +442,9 @@ Public Class Shape
     ''' </summary>
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
+        Me.SuspendLayout()
+        Me.ResumeLayout(False)
+
     End Sub
 
 

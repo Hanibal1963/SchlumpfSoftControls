@@ -346,13 +346,13 @@
     <value>17, 17</value>
   </metadata>
   <data name="ToolStripMenuItemDeutsch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>118, 22</value>
   </data>
   <data name="ToolStripMenuItemDeutsch.Text" xml:space="preserve">
     <value>Deutsch</value>
   </data>
   <data name="ToolStripMenuItemEnglisch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>118, 22</value>
   </data>
   <data name="ToolStripMenuItemEnglisch.Text" xml:space="preserve">
     <value>Englisch</value>
@@ -386,6 +386,9 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en-US</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>

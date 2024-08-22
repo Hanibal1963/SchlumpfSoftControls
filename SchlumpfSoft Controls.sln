@@ -185,6 +185,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_CultureCountyOverrides = 
 		RESX_AutoCreateNewLanguageFiles = True
 		RESX_PrefixTranslations = False
 		RESX_NeutralResourcesLanguage = de-DE

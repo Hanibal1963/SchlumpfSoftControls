@@ -114,7 +114,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="My Project\Resources.en.resx" />
+    <EmbeddedResource Include="FormTemplate.resx">
+      <DependentUpon>FormTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -122,6 +127,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="NotifyForm.resx">
+      <DependentUpon>NotifyForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\CriticalError.png" />
   </ItemGroup>
   <ItemGroup>

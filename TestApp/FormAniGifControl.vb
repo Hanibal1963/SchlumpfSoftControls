@@ -6,15 +6,25 @@
 
 
 
+Imports System.Globalization
+Imports System.Threading
 Imports SchlumpfSoft.Controls.AniGifControl
 
 Public Class FormAniGifControl
 
 
     Private _Ani As Integer = 0
-    Private _ComboBox_Ansicht_Items() As String = {$"Normal", $"Zentriert", $"Zoom", $"Gefüllt"}
+    Private _ComboBox_Ansicht_Items() As String = {
+        My.Resources.AnimationComboBoxItem1,
+        My.Resources.AnimationComboBoxItem2,
+        My.Resources.AnimationComboBoxItem3,
+        My.Resources.AnimationComboBoxItem4}
 
     Public Sub New()
+
+        'Zuletzt verwendete Sprache einstellen
+        Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.LangCode)
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.LangCode)
 
         'Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
@@ -49,19 +59,19 @@ Public Class FormAniGifControl
 
             Case 0
 
-                Me.AniGif1.GifSizeMode = SchlumpfSoft.Controls.AniGifControl.SizeMode.Normal
+                Me.AniGif1.GifSizeMode = SizeMode.Normal
 
             Case 1
 
-                Me.AniGif1.GifSizeMode = SchlumpfSoft.Controls.AniGifControl.SizeMode.CenterImage
+                Me.AniGif1.GifSizeMode = SizeMode.CenterImage
 
             Case 2
 
-                Me.AniGif1.GifSizeMode = SchlumpfSoft.Controls.AniGifControl.SizeMode.Zoom
+                Me.AniGif1.GifSizeMode = SizeMode.Zoom
 
             Case 3
 
-                Me.AniGif1.GifSizeMode = SchlumpfSoft.Controls.AniGifControl.SizeMode.Fill
+                Me.AniGif1.GifSizeMode = SizeMode.Fill
 
         End Select
 
@@ -154,8 +164,8 @@ Public Class FormAniGifControl
     Private Sub AniGif1_NoAnimation(sender As Object, e As EventArgs) Handles _
         AniGif1.NoAnimation
 
-        Dim prompt As String = $"Das Bild kann nicht animiert werden."
-        Dim title As String = $"Keine Animation"
+        Dim prompt As String = My.Resources.NoAnimationMsg
+        Dim title As String = My.Resources.NoAnimationTitle
         Dim unused = MsgBox(prompt,, title)
 
     End Sub
@@ -166,16 +176,30 @@ Public Class FormAniGifControl
         'Animationsnummer anzeigen
         Select Case Me._Ani
 
-            Case Is <> 0 : Me.Label_Ani.Text = String.Format("Animation Nr.: {0}", Me._Ani.ToString)
-            Case Else : Me.Label_Ani.Text = $"Standardanimation"
+            Case Is <> 0
+
+                Me.Label_Ani.Text = String.Format(
+                    My.Resources.AnimationNumberText,
+                    Me._Ani.ToString)
+
+            Case Else
+
+                Me.Label_Ani.Text = My.Resources.AnimationStandardText
 
         End Select
 
         'Animation schalten
         Select Case Me._Ani
 
-            Case Is <> 0 : Me.AniGif1.Gif = CType(My.Resources.ResourceManager.GetObject("Anim" & CStr(100 + Me._Ani - 1)), Bitmap)
-            Case Else : Me.AniGif1.Gif = Nothing
+            Case Is <> 0
+
+                Me.AniGif1.Gif = CType(
+                    My.Resources.ResourceManager.GetObject(
+                    "Anim" & CStr(100 + Me._Ani - 1)), Bitmap)
+
+            Case Else
+
+                Me.AniGif1.Gif = Nothing
 
         End Select
 

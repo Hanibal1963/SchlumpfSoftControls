@@ -117,7 +117,319 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label_ShowTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label_ShowTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 184</value>
+  </data>
+  <data name="Label_ShowTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="Label_ShowTime.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="Label_ShowTime.Text" xml:space="preserve">
+    <value>Anzeigezeit:</value>
+  </data>
+  <data name="&gt;&gt;Label_ShowTime.Name" xml:space="preserve">
+    <value>Label_ShowTime</value>
+  </data>
+  <data name="&gt;&gt;Label_ShowTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_ShowTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_ShowTime.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label_Message.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_Message.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 107</value>
+  </data>
+  <data name="Label_Message.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="Label_Message.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="Label_Message.Text" xml:space="preserve">
+    <value>Mitteilungstext:</value>
+  </data>
+  <data name="&gt;&gt;Label_Message.Name" xml:space="preserve">
+    <value>Label_Message</value>
+  </data>
+  <data name="&gt;&gt;Label_Message.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_Message.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_Message.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label_Title.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_Title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 74</value>
+  </data>
+  <data name="Label_Title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="Label_Title.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="Label_Title.Text" xml:space="preserve">
+    <value>Fenstertitel:</value>
+  </data>
+  <data name="&gt;&gt;Label_Title.Name" xml:space="preserve">
+    <value>Label_Title</value>
+  </data>
+  <data name="&gt;&gt;Label_Title.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_Title.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_Title.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label_Style.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_Style.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 44</value>
+  </data>
+  <data name="Label_Style.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="Label_Style.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="Label_Style.Text" xml:space="preserve">
+    <value>Style:</value>
+  </data>
+  <data name="&gt;&gt;Label_Style.Name" xml:space="preserve">
+    <value>Label_Style</value>
+  </data>
+  <data name="&gt;&gt;Label_Style.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_Style.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_Style.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label_Design.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_Design.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 15</value>
+  </data>
+  <data name="Label_Design.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="Label_Design.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="Label_Design.Text" xml:space="preserve">
+    <value>Design:</value>
+  </data>
+  <data name="&gt;&gt;Label_Design.Name" xml:space="preserve">
+    <value>Label_Design</value>
+  </data>
+  <data name="&gt;&gt;Label_Design.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_Design.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_Design.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Button_Show.Location" type="System.Drawing.Point, System.Drawing">
+    <value>157, 218</value>
+  </data>
+  <data name="Button_Show.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 23</value>
+  </data>
+  <data name="Button_Show.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="Button_Show.Text" xml:space="preserve">
+    <value>Fenster anzeigen</value>
+  </data>
+  <data name="&gt;&gt;Button_Show.Name" xml:space="preserve">
+    <value>Button_Show</value>
+  </data>
+  <data name="&gt;&gt;Button_Show.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button_Show.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Button_Show.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="NumericUpDown_ShowTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 182</value>
+  </data>
+  <data name="NumericUpDown_ShowTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="NumericUpDown_ShowTime.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;NumericUpDown_ShowTime.Name" xml:space="preserve">
+    <value>NumericUpDown_ShowTime</value>
+  </data>
+  <data name="&gt;&gt;NumericUpDown_ShowTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NumericUpDown_ShowTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NumericUpDown_ShowTime.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="TextBox_Message.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 105</value>
+  </data>
+  <data name="TextBox_Message.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBox_Message.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
+  <data name="TextBox_Message.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 71</value>
+  </data>
+  <data name="TextBox_Message.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="TextBox_Message.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Message.Name" xml:space="preserve">
+    <value>TextBox_Message</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Message.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Message.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Message.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="TextBox_Title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 72</value>
+  </data>
+  <data name="TextBox_Title.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
+  <data name="TextBox_Title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 20</value>
+  </data>
+  <data name="TextBox_Title.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="TextBox_Title.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Title.Name" xml:space="preserve">
+    <value>TextBox_Title</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Title.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Title.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Title.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ComboBox_Style.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 41</value>
+  </data>
+  <data name="ComboBox_Style.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 21</value>
+  </data>
+  <data name="ComboBox_Style.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Style.Name" xml:space="preserve">
+    <value>ComboBox_Style</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Style.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Style.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Style.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ComboBox_Design.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 12</value>
+  </data>
+  <data name="ComboBox_Design.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 21</value>
+  </data>
+  <data name="ComboBox_Design.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Design.Name" xml:space="preserve">
+    <value>ComboBox_Design</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Design.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Design.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Design.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
   <metadata name="NotifyForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en-US</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>279, 256</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>NotifyForm - Control - Test</value>
+  </data>
+  <data name="&gt;&gt;NotifyForm1.Name" xml:space="preserve">
+    <value>NotifyForm1</value>
+  </data>
+  <data name="&gt;&gt;NotifyForm1.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.NotifyFormControl.NotifyForm, NotifyFormControl, Version=2.2024.21.7, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormNotifyFormControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

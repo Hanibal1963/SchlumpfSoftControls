@@ -142,6 +142,12 @@
   <data name="ShowTimeDescription" xml:space="preserve">
     <value>Legt die Anzeigedauer des Benachrichtigungsfensters in ms fest oder gibt diese zurück. (Der Wert 0 deaktiviert das automatische schließen.)</value>
   </data>
+  <data name="StandardMessage" xml:space="preserve">
+    <value>Fensternachricht</value>
+  </data>
+  <data name="StandardTitle" xml:space="preserve">
+    <value>Fenstertitel</value>
+  </data>
   <data name="StyleDescription" xml:space="preserve">
     <value>Legt das anzuzeigende Symbol des Benachrichtigungsfensters fest oder gibt dieses zurück.</value>
   </data>

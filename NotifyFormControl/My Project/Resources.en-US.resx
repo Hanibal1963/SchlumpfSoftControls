@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,44 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 24</value>
+  <data name="ClassDescription" xml:space="preserve">
+    <value>Control for displaying notification windows.</value>
   </data>
-  <data name="ButtonWizardControl.Text" xml:space="preserve">
-    <value>Wizard Control</value>
+  <data name="DesignDescription" xml:space="preserve">
+    <value>Detects the appearance of the notification window.</value>
   </data>
-  <data name="ButtonDriveWatcher.Text" xml:space="preserve">
-    <value>Drivewatcher Control</value>
+  <data name="MessageDescription" xml:space="preserve">
+    <value>Detects the notification text that should be displayed or gives it back.</value>
   </data>
-  <data name="ButtonShapeControl.Text" xml:space="preserve">
-    <value>Shape Control</value>
+  <data name="ShowTimeDescription" xml:space="preserve">
+    <value>Defines the display time of the notification window in MS or returns them. (The value 0 deactivates the automatic closure)</value>
   </data>
-  <data name="ButtonTransparentLabelControl.Text" xml:space="preserve">
-    <value>Transparent label Control</value>
+  <data name="StyleDescription" xml:space="preserve">
+    <value>If the symbol of the notification window to be displayed, defines or returns it.</value>
   </data>
-  <data name="ButtonIniFilecontrol.Text" xml:space="preserve">
-    <value>Inifile control</value>
+  <data name="TitleDescription" xml:space="preserve">
+    <value>Detects the text of the title line of the notification window or returns it.</value>
   </data>
-  <data name="ButtonSevenSegmentControl.Text" xml:space="preserve">
-    <value>Sevensgment Control</value>
+  <data name="StandardMessage" xml:space="preserve">
+    <value>Window message</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Controls test app</value>
-  </data>
-  <data name="ButtonNotifyFormControl.Text" xml:space="preserve">
-    <value>Notificform Control</value>
-  </data>
-  <data name="ButtonAniGif.Text" xml:space="preserve">
-    <value>Anigif Control</value>
-  </data>
-  <data name="ToolStripMenuItemDeutsch.Text" xml:space="preserve">
-    <value>German</value>
-  </data>
-  <data name="ToolStripMenuItemEnglisch.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="ToolStripMenuItemSprache.Text" xml:space="preserve">
-    <value>Language</value>
+  <data name="StandardTitle" xml:space="preserve">
+    <value>Window title</value>
   </data>
 </root>

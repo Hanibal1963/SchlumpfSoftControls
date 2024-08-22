@@ -1,6 +1,10 @@
 ﻿' ****************************************************************************************************************
 ' Settings.vb
 ' © 2024 by Andreas Sauer
+'
+' Diese Klasse ermöglicht die Behandlung bestimmter Ereignisse der Einstellungsklasse:
+' SettingChanging, PropertyChanged, SettingsLoaded, SettingsSaving
+'
 ' ****************************************************************************************************************
 '
 
@@ -11,17 +15,14 @@ Imports System.Configuration
 
 Namespace My
 
-
-    'Diese Klasse ermöglicht die Behandlung bestimmter Ereignisse der Einstellungsklasse:
-    ' Das SettingChanging-Ereignis wird ausgelöst, bevor der Wert einer Einstellung geändert wird.
-    ' Das PropertyChanged-Ereignis wird ausgelöst, nachdem der Wert einer Einstellung geändert wurde.
-    ' Das SettingsLoaded-Ereignis wird ausgelöst, nachdem die Einstellungswerte geladen wurden.
-    ' Das SettingsSaving-Ereignis wird ausgelöst, bevor die Einstellungswerte gespeichert werden.
-
-
     Partial Friend NotInheritable Class MySettings
 
 
+        ''' <summary>
+        ''' wird ausgelöst, nachdem der Wert einer Einstellung geändert wurde.
+        ''' </summary>
+        ''' <param name="sender"></param>
+        ''' <param name="e"></param>
         Private Sub MySettings_PropertyChanged(
                     sender As Object,
                     e As PropertyChangedEventArgs) Handles _
@@ -30,6 +31,11 @@ Namespace My
         End Sub
 
 
+        ''' <summary>
+        ''' wird ausgelöst, bevor der Wert einer Einstellung geändert wird.
+        ''' </summary>
+        ''' <param name="sender"></param>
+        ''' <param name="e"></param>
         Private Sub MySettings_SettingChanging(
                     sender As Object,
                     e As SettingChangingEventArgs) Handles _
@@ -38,6 +44,11 @@ Namespace My
         End Sub
 
 
+        ''' <summary>
+        ''' wird ausgelöst, nachdem die Einstellungswerte geladen wurden.
+        ''' </summary>
+        ''' <param name="sender"></param>
+        ''' <param name="e"></param>
         Private Sub MySettings_SettingsLoaded(
                     sender As Object,
                     e As SettingsLoadedEventArgs) Handles _
@@ -46,6 +57,11 @@ Namespace My
         End Sub
 
 
+        ''' <summary>
+        ''' wird ausgelöst, bevor die Einstellungswerte gespeichert werden.
+        ''' </summary>
+        ''' <param name="sender"></param>
+        ''' <param name="e"></param>
         Private Sub MySettings_SettingsSaving(
                     sender As Object,
                     e As CancelEventArgs) Handles _
@@ -55,6 +71,5 @@ Namespace My
 
 
     End Class
-
 
 End Namespace
