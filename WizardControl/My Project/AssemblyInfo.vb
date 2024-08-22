@@ -17,6 +17,6 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 <Assembly: ComVisible(False)>
-<Assembly: AssemblyVersion("2.2024.22.07")>
-<Assembly: AssemblyFileVersion("2.2024.22.07")>
+<Assembly: AssemblyVersion("2.2024.22.08")>
+<Assembly: AssemblyFileVersion("2.2024.22.08")>
 <Assembly: NeutralResourcesLanguage("de-DE")>

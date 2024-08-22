@@ -228,10 +228,10 @@
   <data name="Wizard_AktionAbgeschlossen" xml:space="preserve">
     <value>Action completed</value>
   </data>
-  <data name="Wizard_DieHilfeFürDieSeite0DesAssistenten" xml:space="preserve">
-    <value>The help for the assistant's page.</value>
-  </data>
   <data name="Wizard_Hilfe" xml:space="preserve">
     <value>Help</value>
+  </data>
+  <data name="Wizard_DieHilfeFürDieSeite0DesAssistenten" xml:space="preserve">
+    <value>The help for the assistant's page {0}.</value>
   </data>
 </root>
