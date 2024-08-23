@@ -91,41 +91,41 @@ Partial Class FormIniFileControl
         '
         resources.ApplyResources(Me.EntrysListEdit, "EntrysListEdit")
         Me.EntrysListEdit.Name = "EntrysListEdit"
-        Me.EntrysListEdit.TitelText = "Eintragsliste:"
+        Me.EntrysListEdit.TitelText = ""
         '
         'SectionsCommentEdit
         '
         Me.SectionsCommentEdit.Comment = Nothing
         resources.ApplyResources(Me.SectionsCommentEdit, "SectionsCommentEdit")
         Me.SectionsCommentEdit.Name = "SectionsCommentEdit"
-        Me.SectionsCommentEdit.TitelText = "Abschnittskommentar:"
+        Me.SectionsCommentEdit.TitelText = ""
         '
         'EntryValueEdit
         '
         resources.ApplyResources(Me.EntryValueEdit, "EntryValueEdit")
         Me.EntryValueEdit.Name = "EntryValueEdit"
-        Me.EntryValueEdit.TitelText = "Eintragswert:"
+        Me.EntryValueEdit.TitelText = ""
         Me.EntryValueEdit.Value = ""
         '
         'SectionsListEdit
         '
         resources.ApplyResources(Me.SectionsListEdit, "SectionsListEdit")
         Me.SectionsListEdit.Name = "SectionsListEdit"
-        Me.SectionsListEdit.TitelText = "Abschnittsliste:"
+        Me.SectionsListEdit.TitelText = ""
         '
         'IniFileContentView
         '
         Me.IniFileContentView.Lines = Nothing
         resources.ApplyResources(Me.IniFileContentView, "IniFileContentView")
         Me.IniFileContentView.Name = "IniFileContentView"
-        Me.IniFileContentView.TitelText = "Dateiinhalt:"
+        Me.IniFileContentView.TitelText = ""
         '
         'FileCommentEdit
         '
         Me.FileCommentEdit.Comment = Nothing
         resources.ApplyResources(Me.FileCommentEdit, "FileCommentEdit")
         Me.FileCommentEdit.Name = "FileCommentEdit"
-        Me.FileCommentEdit.TitelText = "Dateikommentar:"
+        Me.FileCommentEdit.TitelText = ""
         '
         'IniFile1
         '

@@ -298,4 +298,31 @@
   <data name="Wizard_Hilfe" xml:space="preserve">
     <value>Hilfe</value>
   </data>
+  <data name="IniFile_ContentViewTitle" xml:space="preserve">
+    <value>Dateiinhalt:</value>
+  </data>
+  <data name="IniFile_EntrysListEditTitle" xml:space="preserve">
+    <value>Eintragsliste:</value>
+  </data>
+  <data name="IniFile_EntryValueEditTitle" xml:space="preserve">
+    <value>Eintragswert:</value>
+  </data>
+  <data name="IniFile_FileCommentEditTitle" xml:space="preserve">
+    <value>Dateikommentar:</value>
+  </data>
+  <data name="IniFile_SectionsCommentEditTitle" xml:space="preserve">
+    <value>Abschnittskommentar:</value>
+  </data>
+  <data name="IniFile_SectionsListEditTitle" xml:space="preserve">
+    <value>Abschnittsliste:</value>
+  </data>
+  <data name="IniFile_FileDialogFilter" xml:space="preserve">
+    <value>INI - Dateien (*.ini)|*.ini</value>
+  </data>
+  <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
+    <value>INI - Datei öffnen</value>
+  </data>
+  <data name="IniFile_SaveFileDialogTitle" xml:space="preserve">
+    <value>INI - Datei speichern unter</value>
+  </data>
 </root>

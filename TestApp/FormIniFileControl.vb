@@ -5,7 +5,34 @@
 '
 
 
+Imports System.Globalization
+Imports System.Threading
+
+
 Public Class FormIniFileControl
+
+
+    Public Sub New()
+
+        'Zuletzt verwendete Sprache einstellen
+        Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.LangCode)
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.LangCode)
+
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        Me.InitializeComponent()
+
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+
+        'Titelzeilen der Controls anpassen
+        Me.FileCommentEdit.TitelText = My.Resources.IniFile_FileCommentEditTitle
+        Me.SectionsListEdit.TitelText = My.Resources.IniFile_SectionsListEditTitle
+        Me.EntrysListEdit.TitelText = My.Resources.IniFile_EntrysListEditTitle
+        Me.EntryValueEdit.TitelText = My.Resources.IniFile_EntryValueEditTitle
+        Me.SectionsCommentEdit.TitelText = My.Resources.IniFile_SectionsCommentEditTitle
+        Me.IniFileContentView.TitelText = My.Resources.IniFile_ContentViewTitle
+
+    End Sub
+
 
     Private Sub FileCommentEdit_CommentChanged(
                 sender As Object,
@@ -457,69 +484,67 @@ Public Class FormIniFileControl
     End Sub
 
 
-    Private Sub ToolStripMenuItem_Oeffnen_Click(
-                sender As Object,
-                e As EventArgs) Handles _
+    Private Sub ToolStripMenuItem_Oeffnen_Click(sender As Object, e As EventArgs) Handles _
                 ToolStripMenuItem_Oeffnen.Click
 
-    'Datei öffnen
-    Dim ofd As New OpenFileDialog With {
-        .Title = $"INI - Datei öffnen",
-        .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments,
-        .Filter = $"INI-Dateien (*.ini)|*.ini",
-        .AddExtension = True,
-        .CheckFileExists = True,
-        .Multiselect = False,
-        .ShowHelp = False}
+        'Datei öffnen
+        Dim ofd As New OpenFileDialog With {
+            .Title = My.Resources.IniFile_OpenFileDialogTitle,
+            .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments,
+            .Filter = My.Resources.IniFile_FileDialogFilter,
+            .AddExtension = True,
+            .CheckFileExists = True,
+            .Multiselect = False,
+            .ShowHelp = False}
 
-    Dim result As DialogResult = ofd.ShowDialog(Me)
-    If Not result = DialogResult.OK Then Exit Sub
-    Me.IniFile1.LoadFile(ofd.FileName)
+        Dim result As DialogResult = ofd.ShowDialog(Me)
+        If Not result = DialogResult.OK Then Exit Sub
+        Me.IniFile1.LoadFile(ofd.FileName)
 
-  End Sub
-
-
-  Private Sub ToolStripMenuItem_Speichern_Click(
-                sender As Object,
-                e As EventArgs) Handles _
-                ToolStripMenuItem_Speichern.Click
-
-    'Datei speichern
-    Me.IniFile1.SaveFile()
-
-  End Sub
+    End Sub
 
 
-  Private Sub ToolStripMenuItem_SpeichernUnter_Click(
-                sender As Object,
-                e As EventArgs) Handles _
-                ToolStripMenuItem_SpeichernUnter.Click
+    Private Sub ToolStripMenuItem_Speichern_Click(
+                  sender As Object,
+                  e As EventArgs) Handles _
+                  ToolStripMenuItem_Speichern.Click
 
-    'Datei speichern unter ...
-    Dim sfd As New SaveFileDialog With {
-        .Title = $"INI - Datei speichern unter",
-        .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments,
-        .Filter = $"INI-Dateien (*.ini)|*.ini",
-        .AddExtension = True,
-        .CheckFileExists = False,
-        .ShowHelp = False}
+        'Datei speichern
+        Me.IniFile1.SaveFile()
 
-    Dim result As DialogResult = sfd.ShowDialog(Me)
-    If Not result = DialogResult.OK Then Exit Sub
-    Me.IniFile1.SaveFile(sfd.FileName)
-
-  End Sub
+    End Sub
 
 
-  Private Sub ToolStripMenuItem_Beenden_Click(
-                sender As Object,
-                e As EventArgs) Handles _
-                ToolStripMenuItem_Beenden.Click
+    Private Sub ToolStripMenuItem_SpeichernUnter_Click(
+                  sender As Object,
+                  e As EventArgs) Handles _
+                  ToolStripMenuItem_SpeichernUnter.Click
 
-    'Programm beenden
-    Me.Close()
+        'Datei speichern unter ...
+        Dim sfd As New SaveFileDialog With {
+            .Title = My.Resources.IniFile_SaveFileDialogTitle,
+            .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments,
+            .Filter = My.Resources.IniFile_FileDialogFilter,
+            .AddExtension = True,
+            .CheckFileExists = False,
+            .ShowHelp = False}
 
-  End Sub
+        Dim result As DialogResult = sfd.ShowDialog(Me)
+        If Not result = DialogResult.OK Then Exit Sub
+        Me.IniFile1.SaveFile(sfd.FileName)
+
+    End Sub
+
+
+    Private Sub ToolStripMenuItem_Beenden_Click(
+                  sender As Object,
+                  e As EventArgs) Handles _
+                  ToolStripMenuItem_Beenden.Click
+
+        'Programm beenden
+        Me.Close()
+
+    End Sub
 
 
 End Class

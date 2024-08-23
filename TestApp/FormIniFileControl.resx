@@ -204,7 +204,7 @@
     <value>EntrysListEdit</value>
   </data>
   <data name="&gt;&gt;EntrysListEdit.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;EntrysListEdit.Parent" xml:space="preserve">
     <value>$this</value>
@@ -225,7 +225,7 @@
     <value>SectionsCommentEdit</value>
   </data>
   <data name="&gt;&gt;SectionsCommentEdit.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SectionsCommentEdit.Parent" xml:space="preserve">
     <value>$this</value>
@@ -246,7 +246,7 @@
     <value>EntryValueEdit</value>
   </data>
   <data name="&gt;&gt;EntryValueEdit.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;EntryValueEdit.Parent" xml:space="preserve">
     <value>$this</value>
@@ -267,7 +267,7 @@
     <value>SectionsListEdit</value>
   </data>
   <data name="&gt;&gt;SectionsListEdit.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SectionsListEdit.Parent" xml:space="preserve">
     <value>$this</value>
@@ -288,7 +288,7 @@
     <value>IniFileContentView</value>
   </data>
   <data name="&gt;&gt;IniFileContentView.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.IniFileControl.IniFileContentView, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileContentView, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;IniFileContentView.Parent" xml:space="preserve">
     <value>$this</value>
@@ -309,7 +309,7 @@
     <value>FileCommentEdit</value>
   </data>
   <data name="&gt;&gt;FileCommentEdit.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;FileCommentEdit.Parent" xml:space="preserve">
     <value>$this</value>
@@ -382,7 +382,7 @@
     <value>IniFile1</value>
   </data>
   <data name="&gt;&gt;IniFile1.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.IniFileControl.IniFile, IniFileControl, Version=2.2024.4.8, Culture=neutral, PublicKeyToken=null</value>
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFile, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormIniFileControl</value>

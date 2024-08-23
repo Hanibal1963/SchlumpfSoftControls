@@ -55,9 +55,7 @@ Public Class FormNotifyFormControl
     End Sub
 
 
-    Private Sub ComboBox_SelectedindexChanged(
-                sender As Object,
-                e As EventArgs) Handles _
+    Private Sub ComboBox_SelectedindexChanged(sender As Object, e As EventArgs) Handles _
                 ComboBox_Style.SelectedIndexChanged,
                 ComboBox_Design.SelectedIndexChanged
 
@@ -114,15 +112,11 @@ Public Class FormNotifyFormControl
     End Sub
 
 
-    Private Sub TextBox_TextChanged(
-                sender As Object,
-                e As EventArgs) Handles _
+    Private Sub TextBox_TextChanged(sender As Object, e As EventArgs) Handles _
                 TextBox_Title.TextChanged,
                 TextBox_Message.TextChanged
 
-        Dim text As String = CType(
-            sender,
-            TextBox).Text
+        Dim text As String = CType(sender, TextBox).Text
 
         Select Case True
 
@@ -141,9 +135,7 @@ Public Class FormNotifyFormControl
     End Sub
 
 
-    Private Sub NumericUpDown_ShowTime_ValueChanged_1(
-                sender As Object,
-                e As EventArgs) Handles _
+    Private Sub NumericUpDown_ShowTime_ValueChanged_1(sender As Object, e As EventArgs) Handles _
                 NumericUpDown_ShowTime.ValueChanged
 
         Me.NotifyForm1.ShowTime = CInt(CType(
@@ -153,9 +145,7 @@ Public Class FormNotifyFormControl
     End Sub
 
 
-    Private Sub Button_Show_Click(
-                sender As Object,
-                e As EventArgs) Handles _
+    Private Sub Button_Show_Click(sender As Object, e As EventArgs) Handles _
                 Button_Show.Click
 
         Me.NotifyForm1.Show()

@@ -117,17 +117,39 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ToolStripMenuItem_Oeffnen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
+  </data>
   <data name="ToolStripMenuItem_Oeffnen.Text" xml:space="preserve">
     <value>Open ...</value>
+  </data>
+  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 6</value>
+  </data>
+  <data name="ToolStripMenuItem_Speichern.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
   </data>
   <data name="ToolStripMenuItem_Speichern.Text" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="ToolStripMenuItem_SpeichernUnter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
+  </data>
   <data name="ToolStripMenuItem_SpeichernUnter.Text" xml:space="preserve">
     <value>Save as ...</value>
   </data>
+  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 6</value>
+  </data>
+  <data name="ToolStripMenuItem_Beenden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
+  </data>
   <data name="ToolStripMenuItem_Beenden.Text" xml:space="preserve">
     <value>Finish</value>
+  </data>
+  <data name="ToolStripMenuItem_Datei.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 20</value>
   </data>
   <data name="ToolStripMenuItem_Datei.Text" xml:space="preserve">
     <value>file</value>

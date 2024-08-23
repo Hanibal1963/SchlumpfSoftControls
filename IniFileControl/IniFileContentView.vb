@@ -30,6 +30,7 @@ Public Class IniFileContentView
     Private Event PropLinesChanged()
     Private Event TitelTextChanged()
 
+
     Public Sub New()
 
         ' Dieser Aufruf ist für den Designer erforderlich.

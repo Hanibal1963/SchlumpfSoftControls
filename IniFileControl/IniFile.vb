@@ -168,9 +168,11 @@ Public Class IniFile
     Public Sub New()
 
         'anfänglichen Speicherort und Name der Datei sowie Standardprefix für Kommentare festlegen
-        Me.New(My.Computer.FileSystem.SpecialDirectories.MyDocuments &
-                IO.Path.DirectorySeparatorChar &
-                My.Resources.DefaultFileName, CChar(My.Resources.DefaultCommentPrefix))
+        Me.New(
+            My.Computer.FileSystem.SpecialDirectories.MyDocuments &
+            IO.Path.DirectorySeparatorChar &
+            My.Resources.DefaultFileName,
+            CChar(My.Resources.DefaultCommentPrefix))
 
     End Sub
 
@@ -272,7 +274,9 @@ Public Class IniFile
     ''' Gibt den Dateiinhalt zurück
     ''' </summary>
     Public Function GetFileContent() As String()
+
         Return Me._FileContent
+
     End Function
 
 
@@ -280,7 +284,9 @@ Public Class IniFile
     ''' Gibt den Dateikommentar zurück
     ''' </summary>
     Public Function GetFileComment() As String()
+
         Return Me._FileComment.ToArray
+
     End Function
 
 

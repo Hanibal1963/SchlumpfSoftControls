@@ -4,16 +4,19 @@
 ' ****************************************************************************************************************
 '
 
+
 Imports System.ComponentModel
 Imports System.Windows.Forms
+Imports System.Drawing
+
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
 <MyDescription("ClassDescriptionEntryValueEdit")>
-<System.ComponentModel.ToolboxItem(True)>
-<System.Drawing.ToolboxBitmap(GetType(IniFileEntryValueEdit), "IniFileEntryValueEdit.bmp")>
+<ToolboxItem(True)>
+<ToolboxBitmap(GetType(IniFileEntryValueEdit), "IniFileEntryValueEdit.bmp")>
 Public Class IniFileEntryValueEdit
 
 

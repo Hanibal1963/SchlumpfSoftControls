@@ -369,6 +369,87 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Dateiinhalt: ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_ContentViewTitle() As String
+            Get
+                Return ResourceManager.GetString("IniFile_ContentViewTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Eintragsliste: ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_EntrysListEditTitle() As String
+            Get
+                Return ResourceManager.GetString("IniFile_EntrysListEditTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Eintragswert: ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_EntryValueEditTitle() As String
+            Get
+                Return ResourceManager.GetString("IniFile_EntryValueEditTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Dateikommentar: ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_FileCommentEditTitle() As String
+            Get
+                Return ResourceManager.GetString("IniFile_FileCommentEditTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die INI - Dateien (*.ini)|*.ini ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_FileDialogFilter() As String
+            Get
+                Return ResourceManager.GetString("IniFile_FileDialogFilter", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die INI - Datei öffnen ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_OpenFileDialogTitle() As String
+            Get
+                Return ResourceManager.GetString("IniFile_OpenFileDialogTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die INI - Datei speichern unter ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_SaveFileDialogTitle() As String
+            Get
+                Return ResourceManager.GetString("IniFile_SaveFileDialogTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Abschnittskommentar: ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_SectionsCommentEditTitle() As String
+            Get
+                Return ResourceManager.GetString("IniFile_SectionsCommentEditTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Abschnittsliste: ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_SectionsListEditTitle() As String
+            Get
+                Return ResourceManager.GetString("IniFile_SectionsListEditTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Das Bild kann nicht animiert werden. ähnelt.
         '''</summary>
         Friend ReadOnly Property NoAnimationMsg() As String
