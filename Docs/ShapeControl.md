@@ -38,6 +38,12 @@ links oben nach rechts unten gezeichnet wird oder umgekehrt.
 
 ## Versionsverlauf
 
+**Version 2.2024.22.08**
+
+Datum 22.08.2024
+
+- Fehlerbereinigung
+
 **Version 2.2024.19.07**
 
 Datum: 19.07.2024

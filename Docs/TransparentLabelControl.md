@@ -37,6 +37,12 @@ bzw. es Probleme mit der Darstellung gibt, wurden diese von mir ausgeblendet.
 
 ## Versionsverlauf
 
+**Version 2.2024.22.08**
+
+Datum 22.08.2024
+
+- Fehlerbereinigung
+
 **Version 2.2024.21.07**
 
 Datum: 21.07.2024
