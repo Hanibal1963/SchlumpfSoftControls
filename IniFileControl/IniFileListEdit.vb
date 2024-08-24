@@ -26,7 +26,7 @@ Public Class IniFileListEdit
 
 #Region "Definition der Variablen"
 
-    Private _SelectedItem As String = $""
+    Private _SelectedItem As String = String.Empty
     Private _Items As String()
     Private _TitelText As String
 
@@ -97,8 +97,12 @@ Public Class IniFileListEdit
     <MyDescription("TitelTextDescription")>
     Public Property TitelText As String
         Set(value As String)
-            Me._TitelText = value
-            RaiseEvent TitelTextChanged()
+            'Me._TitelText = value
+            'RaiseEvent TitelTextChanged()
+            If value <> Me._TitelText Then
+                Me._TitelText = value
+                RaiseEvent TitelTextChanged()
+            End If
         End Set
         Get
             Return Me._TitelText
@@ -128,8 +132,12 @@ Public Class IniFileListEdit
     <Browsable(False)>
     Public WriteOnly Property Items() As String()
         Set
-            Me._Items = Value
-            Me.FillListbox()
+            'Me._Items = Value
+            'Me.FillListbox()
+            If Me._Items IsNot Value Then
+                Me._Items = Value
+                Me.FillListbox()
+            End If
         End Set
     End Property
 
