@@ -54,8 +54,12 @@ Public Class IniFileContentView
     <MyDescription("TitelTextDescription")>
     Public Property TitelText As String
         Set(value As String)
-            Me._TitelText = value
-            RaiseEvent TitelTextChanged()
+            'Me._TitelText = value
+            'RaiseEvent TitelTextChanged()
+            If Me._TitelText <> value Then
+                Me._TitelText = value
+                RaiseEvent TitelTextChanged()
+            End If
         End Set
         Get
             Return Me._TitelText
@@ -75,8 +79,12 @@ Public Class IniFileContentView
             Return Me._Lines
         End Get
         Set
-            Me._Lines = Value
-            RaiseEvent PropLinesChanged()
+            'Me._Lines = Value
+            'RaiseEvent PropLinesChanged()
+            If Me._Lines IsNot Value Then
+                Me._Lines = Value
+                RaiseEvent PropLinesChanged()
+            End If
         End Set
     End Property
 
