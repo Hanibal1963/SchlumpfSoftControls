@@ -61,6 +61,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ClassDescription() As String
+            Get
+                Return ResourceManager.GetString("ClassDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property TransparentLabel() As System.Drawing.Bitmap

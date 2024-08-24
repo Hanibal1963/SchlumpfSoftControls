@@ -4,19 +4,28 @@
 ' ****************************************************************************************************************
 '
 
+
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
-''' <summary>Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund.</summary>
+
+''' <summary>
+''' Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund.
+''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund.")>
+<MyDescription("ClassDescription")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(TransparentLabel), "TransparentLabel.bmp")>
-Public Class TransparentLabel : Inherits Label
+Public Class TransparentLabel
 
 
-    '''<summary> Wird vom Steuerelement-Designer benötigt.</summary>
+Inherits Label
+
+
+    '''<summary>
+    ''' Wird vom Steuerelement-Designer benötigt.
+    ''' </summary>
     Private components As IContainer
 
 
@@ -33,7 +42,10 @@ Public Class TransparentLabel : Inherits Label
 
 #Region "ausgeblendete Eigenschaften"
 
-    ''' <summary>Nicht Relevant</summary>
+
+    ''' <summary>
+    ''' Nicht Relevant
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackColor As Color
@@ -45,7 +57,10 @@ Public Class TransparentLabel : Inherits Label
         End Set
     End Property
 
-    ''' <summary>Nicht Relevant</summary>
+
+    ''' <summary>
+    ''' Nicht Relevant
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackgroundImage As Image
@@ -57,7 +72,10 @@ Public Class TransparentLabel : Inherits Label
         End Set
     End Property
 
-    ''' <summary>Nicht Relevant</summary>
+
+    ''' <summary>
+    ''' Nicht Relevant
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackgroundImageLayout As ImageLayout
@@ -69,7 +87,10 @@ Public Class TransparentLabel : Inherits Label
         End Set
     End Property
 
-    ''' <summary>Nicht Relevant</summary>
+
+    ''' <summary>
+    ''' Nicht Relevant
+    ''' </summary>
     <Browsable(False)>
     <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overloads Property FlatStyle As FlatStyle
@@ -81,10 +102,13 @@ Public Class TransparentLabel : Inherits Label
         End Set
     End Property
 
+
 #End Region
 
 
-    ''' <summary>Hiermit wird die Möglichkeit der Transparenz aktiviert</summary>
+    ''' <summary>
+    ''' Hiermit wird die Möglichkeit der Transparenz aktiviert
+    ''' </summary>
     Protected Overrides ReadOnly Property CreateParams As CreateParams
         Get
             Dim cp As CreateParams = MyBase.CreateParams

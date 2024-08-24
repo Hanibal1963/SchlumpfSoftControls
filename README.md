@@ -15,25 +15,13 @@ Zurzeit sind folgende Steuerelemente vorhanden:
 
 ---
 
+## geplante Änderungen
+
+[siehe ToDo Liste](ToDo.md)
+
+---
+
 ## Versionsverlauf
 
-**Version 2.2024.16.07**
-
-Datum: 16.07.2024
-
-- Layoutfehler in **IniFileCommentEdit**, **IniFileEntryValueEdit** und **IniFileListEdit** beseitigt.
-
-**Version 2.2024.30.06**
-
-Datum: 30.06.2024
-
-- Versionsnummern der Controls angepasst.
-- Dokumentationsdateien angepasst.
-
-**Version 1.2024.06.24**
-
-Datum: 24.06.2024
-
-- Zusammenfassung aller bisher erstellten Controls in einer Erweiterung.
-- Erstes Release dieser Fassung.
+Details zu den einzelnen Versionen der Controls sind in den Beschreibungen der Controls zu finden.
 

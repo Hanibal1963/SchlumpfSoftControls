@@ -16,12 +16,19 @@ Imports System.Windows.Forms
 ''' Control zum anzeigen von Benachrichtigungsfenstern.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Control zum Anzeigen von Benachrichtigungsfenstern.")>
+<MyDescription("ClassDescription")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(NotifyForm), "NotifyForm.bmp")>
 Public Class NotifyForm
 
+
     Inherits Component
+
+    Private _Title As String = String.Format(My.Resources.StandardTitle)
+    Private _Message As String = String.Format(My.Resources.StandardMessage)
+    Private _Design As FormDesign = FormDesign.Bright
+    Private _ShowTime As Integer = 5000
+    Private _Style As FormStyle = FormStyle.Information
 
 
     ''' <summary>
@@ -29,8 +36,15 @@ Public Class NotifyForm
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <Description("Legt das Aussehen des Benachrichtigungsfensters fest.")>
+    <MyDescription("DesignDescription")>
     Public Property Design As FormDesign
+        Get
+            Return Me._Design
+        End Get
+        Set
+            Me._Design = Value
+        End Set
+    End Property
 
 
     ''' <summary>
@@ -38,8 +52,15 @@ Public Class NotifyForm
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <Description("Legt den Benachrichtigungstext fest der angezeigt werden soll oder gibt diesen zurück.")>
-    Public Property Message As String = $"Fensternachricht"
+    <MyDescription("MessageDescription")>
+    Public Property Message As String
+        Get
+            Return Me._Message
+        End Get
+        Set
+            Me._Message = Value
+        End Set
+    End Property
 
 
     ''' <summary>
@@ -50,8 +71,15 @@ Public Class NotifyForm
     ''' </remarks>
     <Browsable(True)>
     <Category("Behavior")>
-    <Description("Legt die Anzeigedauer des Benachrichtigungsfensters in ms fest oder gibt diese zurück. (Der Wert 0 deaktiviert das automatische schließen.)")>
-    Public Property ShowTime As Integer = 5000
+    <MyDescription("ShowTimeDescription")>
+    Public Property ShowTime As Integer
+        Get
+            Return Me._ShowTime
+        End Get
+        Set
+            Me._ShowTime = Value
+        End Set
+    End Property
 
 
     ''' <summary>
@@ -59,8 +87,15 @@ Public Class NotifyForm
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <Description("Legt das anzuzeigende Symbol des Benachrichtigungsfensters fest oder gibt dieses zurück.")>
-    Public Property Style As FormStyle = FormStyle.Information
+    <MyDescription("StyleDescription")>
+    Public Property Style As FormStyle
+        Get
+            Return Me._Style
+        End Get
+        Set
+            Me._Style = Value
+        End Set
+    End Property
 
 
     ''' <summary>
@@ -68,8 +103,15 @@ Public Class NotifyForm
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <Description("Legt den Text der Titelzeile des Benachrichtigungsfensters fest oder gibt diesen zurück.")>
-    Public Property Title As String = $"Fenstertitel"
+    <MyDescription("TitleDescription")>
+    Public Property Title As String
+        Get
+            Return Me._Title
+        End Get
+        Set
+            Me._Title = Value
+        End Set
+    End Property
 
 
     ''' <summary>
@@ -179,6 +221,11 @@ Public Class NotifyForm
         Return result
 
     End Function
+
+
+    Private Sub InitializeComponent()
+
+    End Sub
 
 
 End Class

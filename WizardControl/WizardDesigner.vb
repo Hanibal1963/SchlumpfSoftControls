@@ -4,13 +4,21 @@
 ' ****************************************************************************************************************
 '
 
+
 Imports System.ComponentModel.Design
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Forms.Design
 
-''' <summary>Designer für dieses Control</summary>
-Friend Class WizardDesigner : Inherits ParentControlDesigner
+
+''' <summary>
+''' Designer für dieses Control
+''' </summary>
+Friend Class WizardDesigner
+
+
+    Inherits ParentControlDesigner
+
 
     Protected Overrides Property DrawGrid As Boolean
         Get
@@ -20,6 +28,7 @@ Friend Class WizardDesigner : Inherits ParentControlDesigner
             MyBase.DrawGrid = value
         End Set
     End Property
+
 
     Protected Overrides Sub WndProc(ByRef msg As Message)
         If msg.Msg = 513 OrElse msg.Msg = 515 Then
@@ -41,5 +50,6 @@ Friend Class WizardDesigner : Inherits ParentControlDesigner
         End If
         MyBase.WndProc(msg)
     End Sub
+
 
 End Class

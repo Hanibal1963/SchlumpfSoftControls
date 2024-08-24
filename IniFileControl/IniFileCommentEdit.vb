@@ -6,32 +6,26 @@
 
 
 Imports System
-Imports System.Windows.Forms
-Imports System.Drawing
 Imports System.ComponentModel
-Imports Newtonsoft.Json.Linq
+Imports System.Drawing
+Imports System.Windows.Forms
 
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.")>
+<MyDescription("ClassDescriptionCommentEdit")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileCommentEdit), "IniFileCommentEdit.bmp")>
 Public Class IniFileCommentEdit
 
 
-    Inherits GroupBox
+    Inherits UserControl
 
 
-#Region "Definition der Variablen"
-
-    Private WithEvents Button As Button
-    Private WithEvents TextBox As TextBox
     Private _Lines As String()
-
-#End Region
+    Private _TitelText As String
 
 
 #Region "Definition der Ereignisse"
@@ -40,24 +34,55 @@ Public Class IniFileCommentEdit
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Kommentartext geändert hat.
     ''' </summary>
-    <Description("Wird ausgelöst wenn sich der Kommentartext geändert hat.")>
+    <MyDescription("CommentChangedDescription")>
     Public Event CommentChanged(sender As Object, e As EventArgs)
 
 
     Private Event PropCommentChanged()
+    Private Event TitelTextChanged()
 
 
 #End Region
 
 
+    Public Sub New()
+
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        Me.InitializeComponent()
+
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+        Me._TitelText = Me.GroupBox.Text
+
+    End Sub
+
+
 #Region "Definition der neuen Eigenschaften"
+
+
+    ''' <summary>
+    ''' Gibt den Text der Titelzeile zurück oder legt diesen fest.
+    ''' </summary>
+    ''' <returns></returns>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <MyDescription("TitelTextDescription")>
+    Public Property TitelText As String
+        Set(value As String)
+            Me._TitelText = value
+            RaiseEvent TitelTextChanged()
+        End Set
+        Get
+            Return Me._TitelText
+        End Get
+    End Property
+
 
     ''' <summary>
     ''' Gibt den Kommentartext zurück oder legt diesen fest.
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <Description("Gibt den Kommentartext zurück oder legt diesen fest.")>
+    <MyDescription("CommentDescription")>
     Public Property Comment As String()
         Get
             Return Me._Lines
@@ -68,10 +93,12 @@ Public Class IniFileCommentEdit
         End Set
     End Property
 
+
 #End Region
 
 
 #Region "Definition der internen Ereignisbehandlungen"
+
 
     Private Sub Button_Click(sender As Object, e As EventArgs) Handles _
         Button.Click
@@ -83,6 +110,7 @@ Public Class IniFileCommentEdit
 
     End Sub
 
+
     Private Sub TextBox_TextChanged(sender As Object, e As EventArgs) Handles _
         TextBox.TextChanged
 
@@ -90,6 +118,7 @@ Public Class IniFileCommentEdit
         Me.Button.Enabled = True
 
     End Sub
+
 
     Private Sub IniFileCommentEdit_PropCommentChanged() Handles _
         Me.PropCommentChanged
@@ -99,64 +128,15 @@ Public Class IniFileCommentEdit
 
     End Sub
 
+    Private Sub IniFileCommentEdit_TitelTextChanged() Handles _
+        Me.TitelTextChanged
+
+        Me.GroupBox.Text = Me._TitelText
+
+    End Sub
+
 
 #End Region
-
-
-    Public Sub New()
-
-        'Komponenten erstellen
-        Me.InitializeComponent()
-
-        'Komponenten anpassen
-        Me.TextBox.Size = New System.Drawing.Size(Me.Width - 16, Me.Height - Me.Button.Height - 44)
-        Me.Button.Location = New System.Drawing.Point(Me.TextBox.Width - Me.Button.Width, Me.TextBox.Height + 28)
-
-    End Sub
-
-
-    Private Sub InitializeComponent()
-
-        Me.Button = New System.Windows.Forms.Button()
-        Me.TextBox = New System.Windows.Forms.TextBox()
-        Me.SuspendLayout()
-        '
-        'Button
-        '
-        Me.Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom _
-            Or System.Windows.Forms.AnchorStyles.Right
-        Me.Button.AutoSize = True
-        Me.Button.Enabled = False
-        Me.Button.Location = New System.Drawing.Point(0, 0)
-        Me.Button.Name = "Button"
-        Me.Button.Size = New System.Drawing.Size(84, 24)
-        Me.Button.TabIndex = 1
-        Me.Button.Text = "übernehmen"
-        Me.Button.UseVisualStyleBackColor = True
-        '
-        'TextBox
-        '
-        Me.TextBox.Anchor = System.Windows.Forms.AnchorStyles.Top _
-            Or System.Windows.Forms.AnchorStyles.Bottom _
-            Or System.Windows.Forms.AnchorStyles.Left _
-            Or System.Windows.Forms.AnchorStyles.Right
-        Me.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox.Location = New System.Drawing.Point(8, 20)
-        Me.TextBox.Multiline = True
-        Me.TextBox.Name = "TextBox"
-        Me.TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox.TabIndex = 0
-        Me.TextBox.WordWrap = False
-        '
-        'IniFileCommentEdit
-        '
-        Me.Controls.Add(Me.TextBox)
-        Me.Controls.Add(Me.Button)
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
-    End Sub
 
 
 End Class

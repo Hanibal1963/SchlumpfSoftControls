@@ -67,26 +67,38 @@ des übegeordneten Fensters.
 
 ## Versionsverlauf
 
-Version 2.2024.30.06
+**Version 2.2024.22.08**
+
+Datum 22.08.2024
+
+- Fehlerbereinigung
+
+**Version 2.2024.22.07**
+
+Datum: 22.07.2024
+
+- Beschreibungstexte in Englisch hinzugefügt. (Google Translate)
+
+**Version 2.2024.30.06**
 
 Datum: 30.06.2024
 
 - Veröffentlichung im Bündel mit anderen Controls.
 
-Version 2.2024.04.07
+**Version 2.2024.04.07**
 
 Datum: 07.04.2024
 
 - Problem mit der Eigenschaft für die Sichtbarkeit des Hilfebuttons korrigiert.
 
-Version 2.2024.04.05
+**Version 2.2024.04.05**
 
 Datum: 05.04.2024
 
 - Änderung des Repositorie zur besseren Verwaltung des Quellcodes.
 - Änderung der Versionsnummerierung wegen Prblemen mit VisualStudio Marketplace.
 
-Version 1.2024.3103.00
+**Version 1.2024.3103.00**
 
 Datum: 31.03.2024
  

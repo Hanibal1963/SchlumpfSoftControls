@@ -61,6 +61,33 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Steuerelement um die Laufwerke zu überwachen. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ClassDescription() As String
+            Get
+                Return ResourceManager.GetString("ClassDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Wird ausgelöst wenn ein Laufwerk hinzugefügt wurde. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property DriveAddedDescription() As String
+            Get
+                Return ResourceManager.GetString("DriveAddedDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Wird ausgelöst wenn ein Laufwerk entfernt wurde. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property DriveRemovedDescription() As String
+            Get
+                Return ResourceManager.GetString("DriveRemovedDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property DriveWatcher() As System.Drawing.Bitmap

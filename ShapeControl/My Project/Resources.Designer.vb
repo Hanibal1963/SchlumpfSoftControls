@@ -61,12 +61,66 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ClassDescription() As String
+            Get
+                Return ResourceManager.GetString("ClassDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Legt fest ob eine diagonale Linie von links oben nach rechts unten oder umgekehrt verläuft oder gibt dieses zurück. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property DiagonalLineModusDescription() As String
+            Get
+                Return ResourceManager.GetString("DiagonalLineModusDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Legt die Füllfarbe für die Form fest oder gibt diese zurück. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property FillColorDescription() As String
+            Get
+                Return ResourceManager.GetString("FillColorDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Legt die Farbe der Linie oder Rahmenlinie fest oder gibt diese zurück. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property LineColorDescription() As String
+            Get
+                Return ResourceManager.GetString("LineColorDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Legt die Breite der Linie oder Rahmenlinie fest oder gibt diese zurück. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property LineWidthDescription() As String
+            Get
+                Return ResourceManager.GetString("LineWidthDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Shape() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Shape", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Legt die anzuzeigende Form fest oder gibt diese zurück. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ShapeModusDescription() As String
+            Get
+                Return ResourceManager.GetString("ShapeModusDescription", resourceCulture)
             End Get
         End Property
     End Module

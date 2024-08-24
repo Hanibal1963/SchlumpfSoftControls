@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnimationNumberText" xml:space="preserve">
+    <value>Animation No.: {0}</value>
+  </data>
+  <data name="AnimationStandardText" xml:space="preserve">
+    <value>Standard animation</value>
+  </data>
+  <data name="NoAnimationMsg" xml:space="preserve">
+    <value>The picture cannot be animated.</value>
+  </data>
+  <data name="NoAnimationTitle" xml:space="preserve">
+    <value>No animation</value>
+  </data>
+  <data name="DriveWatcherMsgLine1" xml:space="preserve">
+    <value>The drive {0} has been added.</value>
+  </data>
+  <data name="DriveWatcherMsgLine2" xml:space="preserve">
+    <value>The data carrier has the designation {0} and is of type {1}.</value>
+  </data>
+  <data name="DriveWatcherMsgLine3" xml:space="preserve">
+    <value>The format is {0} and the entire storage space is {1} bytes.</value>
+  </data>
+  <data name="DriveWatcherMsgLine4" xml:space="preserve">
+    <value>The drive is ready and the free space is {0} bytes.</value>
+  </data>
+  <data name="DriveWatcherMsgLine5" xml:space="preserve">
+    <value>The drive is not ready</value>
+  </data>
+  <data name="DriveWatcherMsgLine6" xml:space="preserve">
+    <value>The drive {0} was removed.</value>
+  </data>
+  <data name="NotifyForm_ComboBoxStylesItem4" xml:space="preserve">
+    <value>Indicative symbol</value>
+  </data>
+  <data name="AnimationComboBoxItem1" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="AnimationComboBoxItem2" xml:space="preserve">
+    <value>Centered</value>
+  </data>
+  <data name="AnimationComboBoxItem3" xml:space="preserve">
+    <value>zoom</value>
+  </data>
+  <data name="AnimationComboBoxItem4" xml:space="preserve">
+    <value>Filled</value>
+  </data>
+  <data name="NotifyForm_ComboBoxDesignItem1" xml:space="preserve">
+    <value>Bright</value>
+  </data>
+  <data name="NotifyForm_ComboBoxDesignItem2" xml:space="preserve">
+    <value>Colored</value>
+  </data>
+  <data name="NotifyForm_ComboBoxDesignItem3" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="NotifyForm_ComboBoxStylesItem1" xml:space="preserve">
+    <value>Information symbol</value>
+  </data>
+  <data name="NotifyForm_ComboBoxStylesItem2" xml:space="preserve">
+    <value>Question symbol</value>
+  </data>
+  <data name="NotifyForm_ComboBoxStylesItem3" xml:space="preserve">
+    <value>Error symbol</value>
+  </data>
+  <data name="Shape_LineModusItem1" xml:space="preserve">
+    <value>on the top left</value>
+  </data>
+  <data name="Shape_LineModusItem2" xml:space="preserve">
+    <value>at the bottom left</value>
+  </data>
+  <data name="Shape_ModusItem1" xml:space="preserve">
+    <value>horizontal line</value>
+  </data>
+  <data name="Shape_ModusItem2" xml:space="preserve">
+    <value>vertical line</value>
+  </data>
+  <data name="Shape_ModusItem3" xml:space="preserve">
+    <value>diagonal line</value>
+  </data>
+  <data name="Shape_ModusItem4" xml:space="preserve">
+    <value>rectangle</value>
+  </data>
+  <data name="Shape_ModusItem5" xml:space="preserve">
+    <value>Filled rectangle</value>
+  </data>
+  <data name="Shape_ModusItem6" xml:space="preserve">
+    <value>ellipse</value>
+  </data>
+  <data name="Shape_ModusItem7" xml:space="preserve">
+    <value>filled ellipse</value>
+  </data>
+  <data name="Wizard_NeuerIndex0AlterIndex1" xml:space="preserve">
+    <value>New index: {0} / old index: {1}</value>
+  </data>
+  <data name="Wizard_VorDemSeitenwechsel" xml:space="preserve">
+    <value>Before the change of sides</value>
+  </data>
+  <data name="Wizard_NachDemSeitenwechsel" xml:space="preserve">
+    <value>After the change of sides</value>
+  </data>
+  <data name="Wizard_AssistentenAbgebrochen" xml:space="preserve">
+    <value>You broke off the assistant.</value>
+  </data>
+  <data name="Wizard_AssistenteAbgeschlossen" xml:space="preserve">
+    <value>You have completed the assistant.</value>
+  </data>
+  <data name="Wizard_AktionAbgebrochen" xml:space="preserve">
+    <value>Action canceled</value>
+  </data>
+  <data name="Wizard_AktionAbgeschlossen" xml:space="preserve">
+    <value>Action completed</value>
+  </data>
+  <data name="Wizard_Hilfe" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Wizard_DieHilfeFürDieSeite0DesAssistenten" xml:space="preserve">
+    <value>The help for the assistant's page {0}.</value>
+  </data>
+  <data name="IniFile_ContentViewTitle" xml:space="preserve">
+    <value>File content:</value>
+  </data>
+  <data name="IniFile_FileCommentEditTitle" xml:space="preserve">
+    <value>File commentary:</value>
+  </data>
+  <data name="IniFile_EntrysListEditTitle" xml:space="preserve">
+    <value>Entry list:</value>
+  </data>
+  <data name="IniFile_EntryValueEditTitle" xml:space="preserve">
+    <value>Entry value:</value>
+  </data>
+  <data name="IniFile_SectionsCommentEditTitle" xml:space="preserve">
+    <value>Section comment:</value>
+  </data>
+  <data name="IniFile_SectionsListEditTitle" xml:space="preserve">
+    <value>Section list:</value>
+  </data>
+  <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
+    <value>Open ini file</value>
+  </data>
+  <data name="IniFile_SaveFileDialogTitle" xml:space="preserve">
+    <value>Save ini file under</value>
+  </data>
+  <data name="IniFile_FileDialogFilter" xml:space="preserve">
+    <value>Ini - files (*.ini) |*.ini</value>
+  </data>
+</root>

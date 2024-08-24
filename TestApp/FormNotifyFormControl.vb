@@ -5,14 +5,30 @@
 '
 
 
+Imports System.Globalization
+Imports System.Threading
+Imports SchlumpfSoft.Controls.NotifyFormControl
+
+
 Public Class FormNotifyFormControl
 
 
-    Private _ComboBox_Design_Items() As String = {$"Hell", $"Farbig", $"Dunkel"}
-    Private _ComboBox_Styles_Items() As String = {$"Infosymbol", $"Fragesymbol", $"Fehlersymbol", $"Hinweissymbol"}
+    Private _ComboBox_Design_Items() As String = {
+        My.Resources.NotifyForm_ComboBoxDesignItem1,
+        My.Resources.NotifyForm_ComboBoxDesignItem2,
+        My.Resources.NotifyForm_ComboBoxDesignItem3}
+    Private _ComboBox_Styles_Items() As String = {
+        My.Resources.NotifyForm_ComboBoxStylesItem1,
+        My.Resources.NotifyForm_ComboBoxStylesItem2,
+        My.Resources.NotifyForm_ComboBoxStylesItem3,
+        My.Resources.NotifyForm_ComboBoxStylesItem4}
 
 
     Public Sub New()
+
+        'Zuletzt verwendete Sprache einstellen
+        Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.LangCode)
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.LangCode)
 
         'Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
@@ -39,9 +55,7 @@ Public Class FormNotifyFormControl
     End Sub
 
 
-    Private Sub ComboBox_SelectedindexChanged(
-                sender As Object,
-                e As EventArgs) Handles _
+    Private Sub ComboBox_SelectedindexChanged(sender As Object, e As EventArgs) Handles _
                 ComboBox_Style.SelectedIndexChanged,
                 ComboBox_Design.SelectedIndexChanged
 
@@ -59,14 +73,14 @@ Public Class FormNotifyFormControl
 
                     Case 0
                         'Helles Desing
-                        Me.NotifyForm1.Design = SchlumpfSoft.Controls.NotifyFormControl.FormDesign.Bright
+                        Me.NotifyForm1.Design = FormDesign.Bright
                     Case 1
                         'Farbiges Desing
-                        Me.NotifyForm1.Design = SchlumpfSoft.Controls.NotifyFormControl.FormDesign.Colorful
+                        Me.NotifyForm1.Design = FormDesign.Colorful
 
                     Case 2
                         'Dunkles Desing
-                        Me.NotifyForm1.Design = SchlumpfSoft.Controls.NotifyFormControl.FormDesign.Dark
+                        Me.NotifyForm1.Design = FormDesign.Dark
 
                 End Select
 
@@ -77,19 +91,19 @@ Public Class FormNotifyFormControl
 
                     Case 0
                         'Infosymbol
-                        Me.NotifyForm1.Style = SchlumpfSoft.Controls.NotifyFormControl.FormStyle.Information
+                        Me.NotifyForm1.Style = FormStyle.Information
 
                     Case 1
                         'Fragesymbol
-                        Me.NotifyForm1.Style = SchlumpfSoft.Controls.NotifyFormControl.FormStyle.Question
+                        Me.NotifyForm1.Style = FormStyle.Question
 
                     Case 2
                         'Fehlersymbol
-                        Me.NotifyForm1.Style = SchlumpfSoft.Controls.NotifyFormControl.FormStyle.CriticalError
+                        Me.NotifyForm1.Style = FormStyle.CriticalError
 
                     Case 3
                         'Hinweissymbol
-                        Me.NotifyForm1.Style = SchlumpfSoft.Controls.NotifyFormControl.FormStyle.Exclamation
+                        Me.NotifyForm1.Style = FormStyle.Exclamation
 
                 End Select
 
@@ -98,15 +112,11 @@ Public Class FormNotifyFormControl
     End Sub
 
 
-    Private Sub TextBox_TextChanged(
-                sender As Object,
-                e As EventArgs) Handles _
+    Private Sub TextBox_TextChanged(sender As Object, e As EventArgs) Handles _
                 TextBox_Title.TextChanged,
                 TextBox_Message.TextChanged
 
-        Dim text As String = CType(
-            sender,
-            TextBox).Text
+        Dim text As String = CType(sender, TextBox).Text
 
         Select Case True
 
@@ -125,9 +135,7 @@ Public Class FormNotifyFormControl
     End Sub
 
 
-    Private Sub NumericUpDown_ShowTime_ValueChanged_1(
-                sender As Object,
-                e As EventArgs) Handles _
+    Private Sub NumericUpDown_ShowTime_ValueChanged_1(sender As Object, e As EventArgs) Handles _
                 NumericUpDown_ShowTime.ValueChanged
 
         Me.NotifyForm1.ShowTime = CInt(CType(
@@ -137,9 +145,7 @@ Public Class FormNotifyFormControl
     End Sub
 
 
-    Private Sub Button_Show_Click(
-                sender As Object,
-                e As EventArgs) Handles _
+    Private Sub Button_Show_Click(sender As Object, e As EventArgs) Handles _
                 Button_Show.Click
 
         Me.NotifyForm1.Show()

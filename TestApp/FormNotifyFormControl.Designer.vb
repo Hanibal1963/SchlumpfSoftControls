@@ -22,6 +22,7 @@ Partial Class FormNotifyFormControl
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormNotifyFormControl))
         Me.Label_ShowTime = New System.Windows.Forms.Label()
         Me.Label_Message = New System.Windows.Forms.Label()
         Me.Label_Title = New System.Windows.Forms.Label()
@@ -39,104 +40,66 @@ Partial Class FormNotifyFormControl
         '
         'Label_ShowTime
         '
-        Me.Label_ShowTime.AutoSize = True
-        Me.Label_ShowTime.Location = New System.Drawing.Point(14, 184)
+        resources.ApplyResources(Me.Label_ShowTime, "Label_ShowTime")
         Me.Label_ShowTime.Name = "Label_ShowTime"
-        Me.Label_ShowTime.Size = New System.Drawing.Size(64, 13)
-        Me.Label_ShowTime.TabIndex = 21
-        Me.Label_ShowTime.Text = "Anzeigezeit:"
         '
         'Label_Message
         '
-        Me.Label_Message.AutoSize = True
-        Me.Label_Message.Location = New System.Drawing.Point(14, 107)
+        resources.ApplyResources(Me.Label_Message, "Label_Message")
         Me.Label_Message.Name = "Label_Message"
-        Me.Label_Message.Size = New System.Drawing.Size(77, 13)
-        Me.Label_Message.TabIndex = 20
-        Me.Label_Message.Text = "Mitteilungstext:"
         '
         'Label_Title
         '
-        Me.Label_Title.AutoSize = True
-        Me.Label_Title.Location = New System.Drawing.Point(14, 74)
+        resources.ApplyResources(Me.Label_Title, "Label_Title")
         Me.Label_Title.Name = "Label_Title"
-        Me.Label_Title.Size = New System.Drawing.Size(61, 13)
-        Me.Label_Title.TabIndex = 19
-        Me.Label_Title.Text = "Fenstertitel:"
         '
         'Label_Style
         '
-        Me.Label_Style.AutoSize = True
-        Me.Label_Style.Location = New System.Drawing.Point(14, 44)
+        resources.ApplyResources(Me.Label_Style, "Label_Style")
         Me.Label_Style.Name = "Label_Style"
-        Me.Label_Style.Size = New System.Drawing.Size(33, 13)
-        Me.Label_Style.TabIndex = 18
-        Me.Label_Style.Text = "Style:"
         '
         'Label_Design
         '
-        Me.Label_Design.AutoSize = True
-        Me.Label_Design.Location = New System.Drawing.Point(14, 15)
+        resources.ApplyResources(Me.Label_Design, "Label_Design")
         Me.Label_Design.Name = "Label_Design"
-        Me.Label_Design.Size = New System.Drawing.Size(43, 13)
-        Me.Label_Design.TabIndex = 17
-        Me.Label_Design.Text = "Design:"
         '
         'Button_Show
         '
-        Me.Button_Show.Location = New System.Drawing.Point(157, 218)
+        resources.ApplyResources(Me.Button_Show, "Button_Show")
         Me.Button_Show.Name = "Button_Show"
-        Me.Button_Show.Size = New System.Drawing.Size(102, 23)
-        Me.Button_Show.TabIndex = 16
-        Me.Button_Show.Text = "Fenster anzeigen"
         Me.Button_Show.UseVisualStyleBackColor = True
         '
         'NumericUpDown_ShowTime
         '
-        Me.NumericUpDown_ShowTime.Location = New System.Drawing.Point(199, 182)
+        resources.ApplyResources(Me.NumericUpDown_ShowTime, "NumericUpDown_ShowTime")
         Me.NumericUpDown_ShowTime.Maximum = New Decimal(New Integer() {20, 0, 0, 0})
         Me.NumericUpDown_ShowTime.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown_ShowTime.Name = "NumericUpDown_ShowTime"
-        Me.NumericUpDown_ShowTime.Size = New System.Drawing.Size(60, 20)
-        Me.NumericUpDown_ShowTime.TabIndex = 15
         Me.NumericUpDown_ShowTime.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'TextBox_Message
         '
         Me.TextBox_Message.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox_Message.Location = New System.Drawing.Point(97, 105)
-        Me.TextBox_Message.Multiline = True
+        resources.ApplyResources(Me.TextBox_Message, "TextBox_Message")
         Me.TextBox_Message.Name = "TextBox_Message"
-        Me.TextBox_Message.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox_Message.Size = New System.Drawing.Size(162, 71)
-        Me.TextBox_Message.TabIndex = 14
-        Me.TextBox_Message.WordWrap = False
         '
         'TextBox_Title
         '
         Me.TextBox_Title.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox_Title.Location = New System.Drawing.Point(99, 72)
+        resources.ApplyResources(Me.TextBox_Title, "TextBox_Title")
         Me.TextBox_Title.Name = "TextBox_Title"
-        Me.TextBox_Title.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox_Title.Size = New System.Drawing.Size(160, 20)
-        Me.TextBox_Title.TabIndex = 13
-        Me.TextBox_Title.WordWrap = False
         '
         'ComboBox_Style
         '
         Me.ComboBox_Style.FormattingEnabled = True
-        Me.ComboBox_Style.Location = New System.Drawing.Point(99, 41)
+        resources.ApplyResources(Me.ComboBox_Style, "ComboBox_Style")
         Me.ComboBox_Style.Name = "ComboBox_Style"
-        Me.ComboBox_Style.Size = New System.Drawing.Size(160, 21)
-        Me.ComboBox_Style.TabIndex = 12
         '
         'ComboBox_Design
         '
         Me.ComboBox_Design.FormattingEnabled = True
-        Me.ComboBox_Design.Location = New System.Drawing.Point(99, 12)
+        resources.ApplyResources(Me.ComboBox_Design, "ComboBox_Design")
         Me.ComboBox_Design.Name = "ComboBox_Design"
-        Me.ComboBox_Design.Size = New System.Drawing.Size(160, 21)
-        Me.ComboBox_Design.TabIndex = 11
         '
         'NotifyForm1
         '
@@ -148,9 +111,8 @@ Partial Class FormNotifyFormControl
         '
         'FormNotifyFormControl
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(279, 256)
         Me.Controls.Add(Me.Label_ShowTime)
         Me.Controls.Add(Me.Label_Message)
         Me.Controls.Add(Me.Label_Title)
@@ -168,8 +130,6 @@ Partial Class FormNotifyFormControl
         Me.Name = "FormNotifyFormControl"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "NotifyForm - Control - Test"
         CType(Me.NumericUpDown_ShowTime, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

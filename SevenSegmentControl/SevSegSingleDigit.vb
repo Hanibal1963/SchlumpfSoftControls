@@ -4,93 +4,113 @@
 ' ****************************************************************************************************************
 '
 
+
 Imports System
 Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Imports System.ComponentModel
 
+
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(SevSegSingleDigit_Description)>
+<MyDescription("ClassDescriptionSevSegSingleDigit")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(SevSegSingleDigit), "SevSegSingleDigit.bmp")>
 Public Class SevSegSingleDigit
 
+
     Inherits Control
 
+
 #Region "Eigenschaftsvariablen"
+
 
     ''' <summary>
     ''' Punkte der Segmente
     ''' </summary>
     Private ReadOnly _segmentPoints As Point()()
 
+
     ''' <summary>
     ''' Digithöhe
     ''' </summary>
     Private ReadOnly _digitHeight As Integer = 80
+
 
     ''' <summary>
     ''' Digitbreite
     ''' </summary>
     Private ReadOnly _digitWidth As Integer = 48
 
+
     ''' <summary>
     ''' Breite der Segmente eines Digits
     ''' </summary>
     Private _segmentWidth As Integer = 10
+
 
     ''' <summary>
     ''' Scherkoeffizient
     ''' </summary>
     Private _italicFactor As Single = -0.1F
 
+
     ''' <summary>
     ''' Hintergrundfarbe
     ''' </summary>
     Private _backgroundColor As Color = Color.LightGray
+
 
     ''' <summary>
     ''' Farbe für inaktives Segment
     ''' </summary>
     Private _inactiveColor As Color = Color.DarkGray
 
+
     ''' <summary>
     ''' Vordergrundfarbe
     ''' </summary>
     Private _foreColor As Color = Color.DarkGreen
+
 
     ''' <summary>
     ''' Wert für die ziffer
     ''' </summary>
     Private _digitValue As String = Nothing
 
+
     ''' <summary>
     ''' Dezimalpunkt anzeigen
     ''' </summary>
     Private _showDecimalPoint As Boolean = True
+
 
     ''' <summary>
     ''' Dezimalpunkt aktiv
     ''' </summary>
     Private _decimalPointActive As Boolean = False
 
+
     ''' <summary>
     ''' Doppelpunkt anzeigen
     ''' </summary>
     Private _showColon As Boolean = False
+
 
     ''' <summary>
     ''' Doppelpunkt aktiv
     ''' </summary>
     Private _colonActive As Boolean = False
 
+
     ''' <summary>
     ''' Benutzerdefiniertes Bitmuster
     ''' </summary>
     Private _customBitPattern As Integer = 0
 
+
 #End Region
+
 
     ''' <summary>
     ''' Wird ausgeführt wenn eine neue Instanz dieses Controls erstellt wird.
@@ -116,13 +136,15 @@ Public Class SevSegSingleDigit
 
     End Sub
 
+
 #Region "neue Eigenschaften"
+
 
     ''' <summary>
     ''' Legt die Farbe inaktiver Segmente fest oder gibt diese zurück.
     ''' </summary>
-    <Category(Category_Appearance)>
-    <Description(InactiveColor_Description)>
+    <Category("Appearance")>
+    <MyDescription("InactiveColorDescription")>
     Public Property InactiveColor As Color
         Get
             Return Me._inactiveColor
@@ -133,11 +155,12 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
     ''' <summary>
     ''' Legt die Breite der LED-Segmente fest oder gibt diese zurück.
     ''' </summary>
-    <Category(Category_Appearance)>
-    <Description(SegmentWidth_Description)>
+    <Category("Appearance")>
+    <MyDescription("SegmentWidthDescription")>
     Public Property SegmentWidth As Integer
         Get
             Return Me._segmentWidth
@@ -153,14 +176,15 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
     ''' <summary>
     ''' Scherkoeffizient für die Kursivschrift der Anzeige.
     ''' </summary>
     ''' <remarks>
     ''' Standarwert ist -0,1.
     ''' </remarks>
-    <Category(Category_Appearance)>
-    <Description(ItalicFactor_Description)>
+    <Category("Appearance")>
+    <MyDescription("ItalicFactorDescription")>
     Public Property ItalicFactor As Single
         Get
             Return Me._italicFactor
@@ -171,14 +195,15 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
     ''' <summary>
     ''' Legt das anzuzeigende Zeichen fest oder gibt dieses zurück.
     ''' </summary>
     ''' <remarks>
     ''' Unterstützte Zeichen sind Ziffern und die meisten Buchstaben.
     ''' </remarks>
-    <Category(Category_Appearance)>
-    <Description(DigitValue_Desciption)>
+    <Category("Appearance")>
+    <MyDescription("DigitValueDesciption")>
     Public Property DigitValue As String
         Get
             Return Me._digitValue
@@ -304,14 +329,15 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
     ''' <summary>
     ''' Legt ein benutzerdefiniertes Bitmuster fest, 
     ''' das in den sieben Segmenten angezeigt werden soll. 
     ''' Dies ist ein ganzzahliger Wert, 
     ''' bei dem die Bits 0 bis 6 den jeweiligen LED-Segmenten entsprechen.
     ''' </summary>
-    <Category(Category_Appearance)>
-    <Description(CustomBitPattern_Description)>
+    <Category("Appearance")>
+    <MyDescription("CustomBitPatternDescription")>
     Public Property CustomBitPattern As Integer
         Get
             Return Me._customBitPattern
@@ -322,11 +348,12 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
     ''' <summary>
     ''' Gibt an, ob die Dezimalpunkt-LED angezeigt wird.
     ''' </summary>
-    <Category(Category_Appearance)>
-    <Description(ShowDecimalPoint_Description)>
+    <Category("Appearance")>
+    <MyDescription("ShowDecimalPointDescription")>
     Public Property ShowDecimalPoint As Boolean
         Get
             Return Me._showDecimalPoint
@@ -337,11 +364,12 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
     ''' <summary>
     ''' Gibt an, ob die Dezimalpunkt-LED aktiv ist.
     ''' </summary>
-    <Category(Category_Appearance)>
-    <Description(DecimalPointActive_Description)>
+    <Category("Appearance")>
+    <MyDescription("DecimalPointActiveDescription")>
     Public Property DecimalPointActive As Boolean
         Get
             Return Me._decimalPointActive
@@ -352,11 +380,12 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
     ''' <summary>
     ''' Gibt an, ob die Doppelpunkt-LEDs angezeigt werden.
     ''' </summary>
-    <Category(Category_Appearance)>
-    <Description(ShowColon_Description)>
+    <Category("Appearance")>
+    <MyDescription("ShowColonDescription")>
     Public Property ShowColon As Boolean
         Get
             Return Me._showColon
@@ -367,11 +396,12 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
     ''' <summary>
     ''' Gibt an, ob die Doppelpunkt-LEDs aktiv sind.
     ''' </summary>
-    <Category(Category_Appearance)>
-    <Description(ColonActive_Description)>
+    <Category("Appearance")>
+    <MyDescription("ColonActiveDescription")>
     Public Property ColonActive As Boolean
         Get
             Return Me._colonActive
@@ -382,16 +412,19 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
 #End Region
 
+
 #Region "geänderte Eigenschaften"
+
 
     ''' <summary>
     ''' Legt die Hintergrundfarbe des Controls fest oder gibt diese zurück.
     ''' </summary>
     ''' <returns></returns>
-    <Category(Category_Appearance)>
-    <Description(BackColor_Description)>
+    <Category("Appearance")>
+    <MyDescription("BackColorDescription")>
     Public Overrides Property BackColor As Color
         Get
             Return Me._backgroundColor
@@ -402,12 +435,13 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
     ''' <summary>
     ''' Legt die Vordergrundfarbe der Segmente des Controls fest oder gibt diese zurück.
     ''' </summary>
     ''' <returns></returns>
-    <Category(Category_Appearance)>
-    <Description(ForeColor_Description)>
+    <Category("Appearance")>
+    <MyDescription("ForeColorDescription")>
     Public Overrides Property ForeColor As Color
         Get
             Return Me._foreColor
@@ -418,9 +452,12 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
 #End Region
 
+
 #Region "Ausgeblendete Eigenschaften"
+
 
     ''' <summary>
     ''' Ausgeblendet da nicht relevant.
@@ -437,6 +474,7 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
     ''' <summary>
     ''' Ausgeblendet da nicht relevant.
     ''' </summary>
@@ -451,6 +489,7 @@ Public Class SevSegSingleDigit
             MyBase.BackgroundImageLayout = value
         End Set
     End Property
+
 
     ''' <summary>
     ''' Ausgeblendet da nicht relevant.
@@ -467,6 +506,7 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
     ''' <summary>
     ''' Ausgeblendet da nicht relevant.
     ''' </summary>
@@ -481,6 +521,7 @@ Public Class SevSegSingleDigit
             MyBase.Text = value
         End Set
     End Property
+
 
     ''' <summary>
     ''' Ausgeblendet da nicht relevant.
@@ -497,9 +538,12 @@ Public Class SevSegSingleDigit
         End Set
     End Property
 
+
 #End Region
 
+
 #Region "interne Ereignisbehandlung"
+
 
     ''' <summary>
     ''' Tritt ein, wenn das Steuerelement neu gezeichnet wird.
@@ -567,6 +611,7 @@ Public Class SevSegSingleDigit
 
     End Sub
 
+
     ''' <summary>
     ''' Zeichnet die Segmente basierend darauf, ob das entsprechende Bit hoch ist
     ''' </summary>
@@ -622,18 +667,24 @@ Public Class SevSegSingleDigit
 
     End Sub
 
+
     ''' <summary>
     ''' Tritt beim Ändern der Größe des Steuerelements ein.
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub SevSegSingleDigit_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+
         Me.Invalidate()
+
     End Sub
+
 
 #End Region
 
+
 #Region "geänderte Methoden"
+
 
     ''' <summary>
     ''' Löst das PaddingChanged-Ereignis aus.
@@ -644,6 +695,7 @@ Public Class SevSegSingleDigit
         Me.Invalidate()
     End Sub
 
+
     ''' <summary>
     ''' Zeichnet den Hintergrund des Steuerelements.
     ''' </summary>
@@ -653,6 +705,7 @@ Public Class SevSegSingleDigit
         e.Graphics.Clear(Me._backgroundColor)
     End Sub
 
+
     ''' <summary>
     ''' Gibt nicht verwaltete Ressourcen frei und führt andere Bereinigungsvorgänge durch, 
     ''' bevor die Component durch die Garbage Collection wieder zugänglich gemacht wird.
@@ -661,7 +714,15 @@ Public Class SevSegSingleDigit
         MyBase.Finalize()
     End Sub
 
+    Private Sub InitializeComponent()
+        Me.SuspendLayout()
+        Me.ResumeLayout(False)
+
+    End Sub
+
+
 #End Region
+
 
 End Class
 

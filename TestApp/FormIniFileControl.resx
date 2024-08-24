@@ -121,18 +121,273 @@
     <value>False</value>
   </metadata>
   <metadata name="MenuStrip_HauptMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>120, 21</value>
+    <value>30, 18</value>
   </metadata>
   <metadata name="ToolStripMenuItem_Datei.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ToolStripMenuItem_Oeffnen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Oeffnen.Text" xml:space="preserve">
+    <value>Öffnen ...</value>
+  </data>
   <metadata name="ToolStripSeparator1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 6</value>
+  </data>
+  <data name="ToolStripMenuItem_Speichern.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Speichern.Text" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="ToolStripMenuItem_SpeichernUnter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_SpeichernUnter.Text" xml:space="preserve">
+    <value>Speichern unter ...</value>
+  </data>
   <metadata name="ToolStripSeparator2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 6</value>
+  </data>
+  <data name="ToolStripMenuItem_Beenden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Beenden.Text" xml:space="preserve">
+    <value>Beenden</value>
+  </data>
+  <data name="ToolStripMenuItem_Datei.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_Datei.Text" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="MenuStrip_HauptMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MenuStrip_HauptMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>920, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MenuStrip_HauptMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_HauptMenu.Name" xml:space="preserve">
+    <value>MenuStrip_HauptMenu</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_HauptMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_HauptMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_HauptMenu.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="EntrysListEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 32</value>
+  </data>
+  <data name="EntrysListEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 201</value>
+  </data>
+  <data name="EntrysListEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;EntrysListEdit.Name" xml:space="preserve">
+    <value>EntrysListEdit</value>
+  </data>
+  <data name="&gt;&gt;EntrysListEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;EntrysListEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EntrysListEdit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SectionsCommentEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 322</value>
+  </data>
+  <data name="SectionsCommentEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 156</value>
+  </data>
+  <data name="SectionsCommentEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;SectionsCommentEdit.Name" xml:space="preserve">
+    <value>SectionsCommentEdit</value>
+  </data>
+  <data name="&gt;&gt;SectionsCommentEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SectionsCommentEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SectionsCommentEdit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="EntryValueEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 239</value>
+  </data>
+  <data name="EntryValueEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 77</value>
+  </data>
+  <data name="EntryValueEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Name" xml:space="preserve">
+    <value>EntryValueEdit</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SectionsListEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 239</value>
+  </data>
+  <data name="SectionsListEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 239</value>
+  </data>
+  <data name="SectionsListEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Name" xml:space="preserve">
+    <value>SectionsListEdit</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="IniFileContentView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 32</value>
+  </data>
+  <data name="IniFileContentView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 446</value>
+  </data>
+  <data name="IniFileContentView.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;IniFileContentView.Name" xml:space="preserve">
+    <value>IniFileContentView</value>
+  </data>
+  <data name="&gt;&gt;IniFileContentView.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileContentView, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;IniFileContentView.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;IniFileContentView.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="FileCommentEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 32</value>
+  </data>
+  <data name="FileCommentEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>326, 201</value>
+  </data>
+  <data name="FileCommentEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.Name" xml:space="preserve">
+    <value>FileCommentEdit</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <metadata name="IniFile1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>29, 21</value>
+    <value>208, 18</value>
   </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>920, 488</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>IniFile - Control - Test</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Datei.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Datei</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Datei.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Oeffnen.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Oeffnen</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Oeffnen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator1.Name" xml:space="preserve">
+    <value>ToolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Speichern.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Speichern</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Speichern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_SpeichernUnter.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_SpeichernUnter</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_SpeichernUnter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
+    <value>ToolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Beenden.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Beenden</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Beenden.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IniFile1.Name" xml:space="preserve">
+    <value>IniFile1</value>
+  </data>
+  <data name="&gt;&gt;IniFile1.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFile, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormIniFileControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

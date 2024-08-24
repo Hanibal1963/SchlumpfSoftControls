@@ -3,24 +3,32 @@
 ' © 2024 by Andreas Sauer
 ' ****************************************************************************************************************
 '
+
+
 Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 
 Imports System.Windows.Forms
 
+
 ''' <summary>
 ''' Definiert eine Seite des Controls
 ''' </summary>
 <ToolboxItem(False)>
-Public Class WizardPage : Inherits Panel
+Public Class WizardPage
+
+
+    Inherits Panel
+
 
     Private _Style As PageStyle = PageStyle.Standard
     Private _Title As String = String.Empty
     Private _Description As String = String.Empty
 
+
     <Category("Design")>
-    <Description("Ruft den Stil der Assistentenseite ab oder legt diesen fest.")>
+    <MyDescription("StyleDescription")>
     Public Overridable Property Style As PageStyle
         Get
             Return Me._Style
@@ -41,9 +49,10 @@ Public Class WizardPage : Inherits Panel
         End Set
     End Property
 
+
     <DefaultValue("")>
     <Category("Design")>
-    <Description("Ruft den Titel der Assistentenseite ab oder legt diesen fest.")>
+    <MyDescription("TitleDescription")>
     Public Overridable Property Title As String
         Get
             Return Me._Title
@@ -59,9 +68,10 @@ Public Class WizardPage : Inherits Panel
         End Set
     End Property
 
+
     <DefaultValue("")>
     <Category("Design")>
-    <Description("Ruft die Beschreibung der Assistentenseite ab oder legt diese fest.")>
+    <MyDescription("DescriptionDescription")>
     Public Overridable Property Description As String
         Get
             Return Me._Description
@@ -77,11 +87,13 @@ Public Class WizardPage : Inherits Panel
         End Set
     End Property
 
+
     Public Sub New()
 
         Me.InitializeStyles()
 
     End Sub
+
 
     Private Sub InitializeStyles()
 
@@ -91,6 +103,7 @@ Public Class WizardPage : Inherits Panel
         Me.SetStyle(ControlStyles.UserPaint, True)
 
     End Sub
+
 
     Protected Overrides Sub OnPaint(e As PaintEventArgs)
 
@@ -241,6 +254,7 @@ Public Class WizardPage : Inherits Panel
         End Select
 
     End Sub
+
 
 End Class
 

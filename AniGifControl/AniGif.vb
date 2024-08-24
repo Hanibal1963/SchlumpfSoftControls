@@ -16,21 +16,23 @@ Imports System.Drawing.Imaging
 ''' Control zum anzeigen von animierten Grafiken.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description(AniGif_Description)>
+<MyDescription("ClassDescription")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(AniGif), "AniGif.bmp")>
 Public Class AniGif
 
 
-    Inherits Control
+    Inherits UserControl
 
 
 #Region "Variablen für Komponenten"
+
 
     ''' <summary>
     ''' Zeitgeber für Benutzerdefinierte Anzeigegeschwindigkeit
     ''' </summary>
     Private WithEvents Timer As Timer
+
 
     ''' <summary>
     ''' Container für interne Komponenten.
@@ -46,7 +48,7 @@ Public Class AniGif
     ''' <summary>
     ''' Eigenschaftsvariable für das aktuelle Bild.
     ''' </summary>
-    Private _Gif As System.Drawing.Bitmap
+    Private _Gif As Bitmap
 
 
     ''' <summary>
@@ -70,7 +72,7 @@ Public Class AniGif
     ''' <summary>
     ''' Variable für die Eigenschaften des Bildes.
     ''' </summary>
-    Private _Dimension As System.Drawing.Imaging.FrameDimension
+    Private _Dimension As FrameDimension
 
 
     ''' <summary>
@@ -102,18 +104,21 @@ Public Class AniGif
 
 #Region "Ereignisdefinitionen"
 
+
     ''' <summary>
     ''' Wird ausgelöst wenn die Grafik nicht animiert werden kann.
     ''' </summary>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(NoAnimation_Description)>
-    Public Event NoAnimation(sender As Object, e As NoAnimationEventArgs)
+    <Category("Behavior")>
+    <MyDescription("NoAnimationDescription")>
+    Public Event NoAnimation(sender As Object, e As EventArgs)
+
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich das Bild geändert hat.
     ''' </summary>
     Private Event GifChanged()
+
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich die Anzeigegeschwindigkeit geändert hat.
@@ -130,8 +135,8 @@ Public Class AniGif
     ''' Legt fest ob die Animation sofort nach dem laden gestartet wird.
     ''' </summary>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(AutoPlay_Description)>
+    <Category("Behavior")>
+    <MyDescription("AutoPlayDescription")>
     Public Property AutoPlay() As Boolean
         Get
             Return Me._Autoplay
@@ -146,8 +151,8 @@ Public Class AniGif
     ''' Gibt die animierte Gif-Grafik zurück oder legt diese fest.
     ''' </summary>
     <Browsable(True)>
-    <Category(Category_Appearance)>
-    <Description(Gif_Description)>
+    <Category("Appearance")>
+    <MyDescription("GifDescription")>
     Public Property Gif() As Bitmap
         Get
             Return Me._Gif
@@ -163,8 +168,8 @@ Public Class AniGif
     ''' Gibt die Art wie die Grafik angezeigt wird zurück oder legt diese fest.
     ''' </summary>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(GifSizeMode_Description)>
+    <Category("Behavior")>
+    <MyDescription("GifSizeModeDescription")>
     Public Property GifSizeMode() As SizeMode
         Get
             Return Me._GifSizeMode
@@ -181,8 +186,8 @@ Public Class AniGif
     ''' die in der Datei festgelegte Geschwindigkeit benutzt wird.
     ''' </summary>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(CustomDisplaySpeed_Description)>
+    <Category("Behavior")>
+    <MyDescription("CustomDisplaySpeedDescription")>
     Public Property CustomDisplaySpeed As Boolean
         Get
             Return Me._CustomDisplaySpeed
@@ -201,8 +206,8 @@ Public Class AniGif
     ''' Bewirkt nur eine Änderung wenn <seealso cref="CustomDisplaySpeed"/> auf True festgelegt ist.
     ''' </remarks>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(FramesPerSecond_Description)>
+    <Category("Behavior")>
+    <MyDescription("FramesPerSecondDescription")>
     Public Property FramesPerSecond As Decimal
         Get
             Return Me._FramesPerSecond
@@ -221,8 +226,8 @@ Public Class AniGif
     ''' Bewirkt nur eine Änderung wenn <seealso cref="GifSizeMode"/> auf <seealso cref="SizeMode.Zoom"/> festgelegt ist.
     ''' </remarks>
     <Browsable(True)>
-    <Category(Category_Behavior)>
-    <Description(ZoomFactor_Description)>
+    <Category("Behavior")>
+    <MyDescription("ZoomFactorDescription")>
     Public Property ZoomFactor As Decimal
         Get
             Return Me._ZoomFactor
@@ -478,7 +483,7 @@ Public Class AniGif
             Me._MaxFrame = 0
 
             'Ereignis auslösen
-            RaiseEvent NoAnimation(Me, New NoAnimationEventArgs)
+            RaiseEvent NoAnimation(Me, EventArgs.Empty)
 
         Else
 
@@ -493,7 +498,7 @@ Public Class AniGif
         End If
 
         Me.Invalidate() 'neu zeichnen
-        Me.Initlayout() 'Animation starten
+        Me.InitLayout() 'Animation starten
 
     End Sub
 
@@ -560,11 +565,17 @@ Public Class AniGif
     ''' Initialisiert die Komponenten dieser Klasse
     ''' </summary>
     Private Sub InitializeComponent()
-
         Me.components = New Container()
         Me.Timer = New Timer(Me.components)
         Me.SuspendLayout()
+        '
+        'Timer
+        '
         Me.Timer.Interval = 200
+        '
+        'AniGif
+        '
+        Me.Name = "AniGif"
         Me.ResumeLayout(False)
 
     End Sub
@@ -643,8 +654,7 @@ Public Class AniGif
     ''' Zoomwert
     ''' </param>
     Private Function GetRectStartSize(
-                                Mode As SizeMode, Control As AniGif,
-                                Gif As Bitmap, Zoom As Decimal) As Size
+                     Mode As SizeMode, Control As AniGif, Gif As Bitmap, Zoom As Decimal) As Size
 
         Select Case Mode
 
@@ -716,8 +726,7 @@ Public Class AniGif
     ''' Startgröße der Zeichenfläche.
     ''' </param>
     Private Function GetRectStartPoint(
-                                 Mode As SizeMode, Control As AniGif,
-                                 Gif As Bitmap, RectStartSize As Size) As Point
+                     Mode As SizeMode, Control As AniGif, Gif As Bitmap, RectStartSize As Size) As Point
 
         Select Case Mode
 

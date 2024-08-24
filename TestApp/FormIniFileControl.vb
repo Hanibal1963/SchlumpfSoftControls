@@ -5,13 +5,38 @@
 '
 
 
+Imports System.Globalization
+Imports System.Threading
+
+
 Public Class FormIniFileControl
+
+
+    Public Sub New()
+
+        'Zuletzt verwendete Sprache einstellen
+        Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.LangCode)
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.LangCode)
+
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        Me.InitializeComponent()
+
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+
+        'Titelzeilen der Controls anpassen
+        Me.FileCommentEdit.TitelText = My.Resources.IniFile_FileCommentEditTitle
+        Me.SectionsListEdit.TitelText = My.Resources.IniFile_SectionsListEditTitle
+        Me.EntrysListEdit.TitelText = My.Resources.IniFile_EntrysListEditTitle
+        Me.EntryValueEdit.TitelText = My.Resources.IniFile_EntryValueEditTitle
+        Me.SectionsCommentEdit.TitelText = My.Resources.IniFile_SectionsCommentEditTitle
+        Me.IniFileContentView.TitelText = My.Resources.IniFile_ContentViewTitle
+
+    End Sub
 
 
     Private Sub FileCommentEdit_CommentChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                FileCommentEdit.CommentChanged
+                e As EventArgs) Handles FileCommentEdit.CommentChanged
 
         'Kommentar holen
         Dim comment() As String = CType(
@@ -46,8 +71,7 @@ Public Class FormIniFileControl
 
     Private Sub EntryValueEdit_ValueChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                EntryValueEdit.ValueChanged
+                e As EventArgs) Handles EntryValueEdit.ValueChanged
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -80,8 +104,7 @@ Public Class FormIniFileControl
 
     Private Sub SectionsListEdit_ItemAdd(
                 sender As Object,
-                e As EventArgs) Handles _
-                SectionsListEdit.ItemAdd
+                e As EventArgs) Handles SectionsListEdit.ItemAdd
 
         'neuen Abschnittsname abfragen
         Dim newsection As String = InputBox(
@@ -97,8 +120,7 @@ Public Class FormIniFileControl
 
     Private Sub SectionsListEdit_ItemRename(
                 sender As Object,
-                e As EventArgs) Handles _
-                SectionsListEdit.ItemRename
+                e As EventArgs) Handles SectionsListEdit.ItemRename
 
         'Abschnittsname holen
         Dim sectionname As String = CType(
@@ -137,8 +159,7 @@ Public Class FormIniFileControl
 
     Private Sub SectionsListEdit_ItemRemove(
                 sender As Object,
-                e As EventArgs) Handles _
-                SectionsListEdit.ItemRemove
+                e As EventArgs) Handles SectionsListEdit.ItemRemove
 
         'Abschnittsname holen
         Dim sectionname As String = CType(
@@ -161,8 +182,7 @@ Public Class FormIniFileControl
 
     Private Sub SectionsListEdit_SelectedItemChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                SectionsListEdit.SelectedItemChanged
+                e As EventArgs) Handles SectionsListEdit.SelectedItemChanged
 
         'Abschnittsname holen
         Dim sectionname As String = CType(
@@ -195,8 +215,7 @@ Public Class FormIniFileControl
 
     Private Sub EntrysListEdit_ItemAdd(
                 sender As Object,
-                e As EventArgs) Handles _
-                EntrysListEdit.ItemAdd
+                e As EventArgs) Handles EntrysListEdit.ItemAdd
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -226,8 +245,7 @@ Public Class FormIniFileControl
 
     Private Sub EntrysListEdit_ItemRename(
                 sender As Object,
-                e As EventArgs) Handles _
-                EntrysListEdit.ItemRename
+                e As EventArgs) Handles EntrysListEdit.ItemRename
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -261,8 +279,7 @@ Public Class FormIniFileControl
 
     Private Sub EntrysListEdit_ItemRemove(
                 sender As Object,
-                e As EventArgs) Handles _
-                EntrysListEdit.ItemRemove
+                e As EventArgs) Handles EntrysListEdit.ItemRemove
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -290,8 +307,7 @@ Public Class FormIniFileControl
 
     Private Sub EntrysListEdit_SelectedItemChanged(
                 sender As Object,
-                e As EventArgs) Handles _
-                EntrysListEdit.SelectedItemChanged
+                e As EventArgs) Handles EntrysListEdit.SelectedItemChanged
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -323,6 +339,10 @@ Public Class FormIniFileControl
                 e As EventArgs) Handles _
                 IniFile1.FileContentChanged
 
+#If DEBUG Then
+        Debug.Print($"IniFile1_FileContentChanged: Der Dateiinhalt hat sich geändert.")
+#End If
+
         'Dateiinhalt anzeigen
         Me.IniFileContentView.Lines = CType(
             sender,
@@ -346,6 +366,10 @@ Public Class FormIniFileControl
                 e As EventArgs) Handles _
                 IniFile1.FileCommentChanged
 
+#If DEBUG Then
+        Debug.Print($"IniFile1_FileCommentChanged: Der Dateikommentar hat sich geändert")
+#End If
+
         'geänderten Dateikommentar übenehmen
         Me.FileCommentEdit.Comment = CType(
             sender,
@@ -359,10 +383,14 @@ Public Class FormIniFileControl
             e As EventArgs) Handles _
             IniFile1.SectionsChanged
 
+#If DEBUG Then
+        Debug.Print($"IniFile1_SectionsChanged: Die Abschnittsliste hat sich geändert.")
+#End If
+
         'Abschnittsliste neu füllen
         Me.SectionsListEdit.Items = CType(
-                sender,
-                SchlumpfSoft.Controls.IniFileControl.IniFile).GetSectionNames
+                    sender,
+                    SchlumpfSoft.Controls.IniFileControl.IniFile).GetSectionNames
 
     End Sub
 
@@ -372,12 +400,16 @@ Public Class FormIniFileControl
                 e As EventArgs) Handles _
                 IniFile1.SectionNameExist
 
+#If DEBUG Then
+        Debug.Print($"IniFile1_SectionNameExist: Der Abschnittsname existiert bereits.")
+#End If
+
         Dim unused = MessageBox.Show(
-        Me,
-        $"Der Abschnitt existiert bereits.",
-        $"Ein Fehler ist aufgetreten",
-        MessageBoxButtons.OK,
-        MessageBoxIcon.Error)
+            Me,
+            $"Der Abschnitt existiert bereits.",
+            $"Ein Fehler ist aufgetreten",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error)
 
     End Sub
 
@@ -386,6 +418,10 @@ Public Class FormIniFileControl
                 sender As Object,
                 e As EventArgs) Handles _
                 IniFile1.SectionCommentChanged
+
+#If DEBUG Then
+        Debug.Print($"IniFile1_SectionCommentChanged: Der Abschnittskommentar hat sich geändert.")
+#End If
 
         'Abschnittsname holen
         Dim sectionname As String = Me.SectionsListEdit.SelectedItem
@@ -403,12 +439,16 @@ Public Class FormIniFileControl
                 e As EventArgs) Handles _
                 IniFile1.EntrynameExist
 
+#If DEBUG Then
+        Debug.Print($"IniFile1_EntrynameExist: Der Eintrag existiert bereits.")
+#End If
+
         Dim unused = MessageBox.Show(
-        Me,
-        $"Der Eintrag existiert bereits.",
-        $"Ein Fehler ist aufgetreten",
-        MessageBoxButtons.OK,
-        MessageBoxIcon.Error)
+            Me,
+            $"Der Eintrag existiert bereits.",
+            $"Ein Fehler ist aufgetreten",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error)
 
     End Sub
 
@@ -418,29 +458,44 @@ Public Class FormIniFileControl
                 e As EventArgs) Handles _
                 IniFile1.EntrysChanged
 
+#If DEBUG Then
+        Debug.Print($"IniFile1_EntrysChanged: Die Eintragsliste hat sich geändert.")
+#End If
+
         'Eintragsliste neu befüllen
         Me.EntrysListEdit.Items = CType(
-            sender,
-            SchlumpfSoft.Controls.IniFileControl.IniFile).GetEntryNames(
-            Me.SectionsListEdit.SelectedItem)
+                sender,
+                SchlumpfSoft.Controls.IniFileControl.IniFile).GetEntryNames(
+                Me.SectionsListEdit.SelectedItem)
 
     End Sub
 
 
-    Private Sub ToolStripMenuItem_Oeffnen_Click(
+    Private Sub IniFile1_EntryValuChanged(
                 sender As Object,
                 e As EventArgs) Handles _
+                IniFile1.EntryValueChanged
+
+#If DEBUG Then
+        Debug.Print($"IniFile1_EntryValuChanged: Der Eintragswert hat sich geändert.")
+#End If
+
+
+    End Sub
+
+
+    Private Sub ToolStripMenuItem_Oeffnen_Click(sender As Object, e As EventArgs) Handles _
                 ToolStripMenuItem_Oeffnen.Click
 
         'Datei öffnen
         Dim ofd As New OpenFileDialog With {
-        .Title = $"INI - Datei öffnen",
-        .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments,
-        .Filter = $"INI-Dateien (*.ini)|*.ini",
-        .AddExtension = True,
-        .CheckFileExists = True,
-        .Multiselect = False,
-        .ShowHelp = False}
+            .Title = My.Resources.IniFile_OpenFileDialogTitle,
+            .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments,
+            .Filter = My.Resources.IniFile_FileDialogFilter,
+            .AddExtension = True,
+            .CheckFileExists = True,
+            .Multiselect = False,
+            .ShowHelp = False}
 
         Dim result As DialogResult = ofd.ShowDialog(Me)
         If Not result = DialogResult.OK Then Exit Sub
@@ -450,9 +505,9 @@ Public Class FormIniFileControl
 
 
     Private Sub ToolStripMenuItem_Speichern_Click(
-                sender As Object,
-                e As EventArgs) Handles _
-                ToolStripMenuItem_Speichern.Click
+                  sender As Object,
+                  e As EventArgs) Handles _
+                  ToolStripMenuItem_Speichern.Click
 
         'Datei speichern
         Me.IniFile1.SaveFile()
@@ -461,18 +516,18 @@ Public Class FormIniFileControl
 
 
     Private Sub ToolStripMenuItem_SpeichernUnter_Click(
-                sender As Object,
-                e As EventArgs) Handles _
-                ToolStripMenuItem_SpeichernUnter.Click
+                  sender As Object,
+                  e As EventArgs) Handles _
+                  ToolStripMenuItem_SpeichernUnter.Click
 
         'Datei speichern unter ...
         Dim sfd As New SaveFileDialog With {
-        .Title = $"INI - Datei speichern unter",
-        .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments,
-        .Filter = $"INI-Dateien (*.ini)|*.ini",
-        .AddExtension = True,
-        .CheckFileExists = False,
-        .ShowHelp = False}
+            .Title = My.Resources.IniFile_SaveFileDialogTitle,
+            .InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments,
+            .Filter = My.Resources.IniFile_FileDialogFilter,
+            .AddExtension = True,
+            .CheckFileExists = False,
+            .ShowHelp = False}
 
         Dim result As DialogResult = sfd.ShowDialog(Me)
         If Not result = DialogResult.OK Then Exit Sub
@@ -482,9 +537,9 @@ Public Class FormIniFileControl
 
 
     Private Sub ToolStripMenuItem_Beenden_Click(
-                sender As Object,
-                e As EventArgs) Handles _
-                ToolStripMenuItem_Beenden.Click
+                  sender As Object,
+                  e As EventArgs) Handles _
+                  ToolStripMenuItem_Beenden.Click
 
         'Programm beenden
         Me.Close()

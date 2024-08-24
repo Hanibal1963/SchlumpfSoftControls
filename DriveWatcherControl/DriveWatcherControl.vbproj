@@ -80,6 +80,9 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonCodes\MyDescription.vb">
+      <Link>MyDescription.vb</Link>
+    </Compile>
     <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
       <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
@@ -108,6 +111,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DriveWatcher.resx">
+      <DependentUpon>DriveWatcher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.en-US.resx" />
     <EmbeddedResource Include="Resources\DriveWatcher.bmp" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>

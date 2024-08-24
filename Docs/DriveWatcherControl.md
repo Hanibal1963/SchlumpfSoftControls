@@ -19,12 +19,6 @@ Grundlage und Anregung für dieses Control stammen aus dem Internet.
 
 ---
 
-## geplante Änderungen und Funktionen
-
-- Im Moment keine
-
----
-
 ## weitere Literatur
 
 - [Erstellen eines Windows Forms-Toolbox-Steuerelements](https://docs.microsoft.com/de-de/visualstudio/extensibility/creating-a-windows-forms-toolbox-control?view=vs-2022)
@@ -36,25 +30,37 @@ Grundlage und Anregung für dieses Control stammen aus dem Internet.
 
 ## Versionsverlauf
 
-Version 2.2024.30.06
+**Version 2.2024.22.08**
+
+Datum 22.08.2024
+
+- Fehlerbereinigung
+
+**Version 2.2024.19.07**
+
+Datum: 19.07.2024
+
+- Beschreibungen in englisch hinzugefügt. (Google Translate)
+
+**Version 2.2024.30.06**
 
 Datum: 30.06.2024
 
 - Veröffentlichung im Bündel mit anderen Controls.
 
-Version 2.2024.04.06
+**Version 2.2024.04.06**
 
 Datum: 06.04.2024
 
 - Änderung der Versionsnummerierung wegen Problemen mit dem VisualStudio Marketplace.
 
-Version 1.2024.0404.00
+**Version 1.2024.0404.00**
 
 Datum: 04.04.2024
 
 - Änderung des Repositorie zur besseren Verwaltung des Quellcodes.
 
-Version 1.2024.0128.00
+**Version 1.2024.0128.00**
 
 Datum: 28.01.2024
  

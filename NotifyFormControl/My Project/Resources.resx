@@ -117,18 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ClassDescription" xml:space="preserve">
+    <value>Control zum Anzeigen von Benachrichtigungsfenstern.</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CriticalError" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CriticalError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DesignDescription" xml:space="preserve">
+    <value>Legt das Aussehen des Benachrichtigungsfensters fest.</value>
+  </data>
   <data name="Information" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MessageDescription" xml:space="preserve">
+    <value>Legt den Benachrichtigungstext fest der angezeigt werden soll oder gibt diesen zurück.</value>
   </data>
   <data name="NotifyForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NotifyForm.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Question" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ShowTimeDescription" xml:space="preserve">
+    <value>Legt die Anzeigedauer des Benachrichtigungsfensters in ms fest oder gibt diese zurück. (Der Wert 0 deaktiviert das automatische schließen.)</value>
+  </data>
+  <data name="StandardMessage" xml:space="preserve">
+    <value>Fensternachricht</value>
+  </data>
+  <data name="StandardTitle" xml:space="preserve">
+    <value>Fenstertitel</value>
+  </data>
+  <data name="StyleDescription" xml:space="preserve">
+    <value>Legt das anzuzeigende Symbol des Benachrichtigungsfensters fest oder gibt dieses zurück.</value>
+  </data>
+  <data name="TitleDescription" xml:space="preserve">
+    <value>Legt den Text der Titelzeile des Benachrichtigungsfensters fest oder gibt diesen zurück.</value>
   </data>
   <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

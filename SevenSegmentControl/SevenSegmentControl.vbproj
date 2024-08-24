@@ -79,10 +79,12 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonCodes\MyDescription.vb">
+      <Link>MyDescription.vb</Link>
+    </Compile>
     <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
       <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
-    <Compile Include="DescriptionConstants.vb" />
     <Compile Include="EnumCharacterPattern.vb" />
     <Compile Include="Helpers.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
@@ -111,8 +113,15 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.en-US.resx" />
     <EmbeddedResource Include="Resources\SevSegMultiDigit.bmp" />
     <EmbeddedResource Include="Resources\SevSegSingleDigit.bmp" />
+    <EmbeddedResource Include="SevSegMultiDigit.resx">
+      <DependentUpon>SevSegMultiDigit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SevSegSingleDigit.resx">
+      <DependentUpon>SevSegSingleDigit.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

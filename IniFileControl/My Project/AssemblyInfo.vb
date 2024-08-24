@@ -1,3 +1,4 @@
+Imports System.Resources
 Imports System.Reflection
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
@@ -14,6 +15,6 @@ Imports Microsoft.VisualBasic
 
 <Assembly: ComVisible(False)>
 
-<Assembly: AssemblyVersion("2.2024.16.07")>
-<Assembly: AssemblyFileVersion("2.2024.16.07")>
-
+<Assembly: AssemblyVersion("2.2024.22.08")>
+<Assembly: AssemblyFileVersion("2.2024.22.08")>
+<Assembly: NeutralResourcesLanguage("de-DE")>

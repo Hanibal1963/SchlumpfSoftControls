@@ -28,13 +28,6 @@ Falls jemand die ursprüngliche Quelle kennt oder finden sollte, dann bitte eine
 
 -  **Show** - Zeigt das Fenster an
 
----
-
-## geplante Änderungen und Funktionen
-
-- Im Moment keine
-
----
 
 ## Weitere Literatur
 
@@ -45,6 +38,18 @@ Falls jemand die ursprüngliche Quelle kennt oder finden sollte, dann bitte eine
 ---
 
 ## Versionsverlauf
+
+**Version 2.2024.22.08**
+
+Datum 22.08.2024
+
+- Fehlerbereinigung
+
+**Version 2.2024.21.07**
+
+Datum: 21.07.2024
+
+- Beschreibungstexte in englisch hinzugefügt.
 
 **Version 2.2024.14.07**
 

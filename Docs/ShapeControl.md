@@ -1,3 +1,4 @@
+
 # ShapeControl
 
 Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.
@@ -25,12 +26,6 @@ links oben nach rechts unten gezeichnet wird oder umgekehrt.
 
 ---
 
- ## geplante Änderungen und Funktionen
-
-- Zurzeit keine.
-
----
-
 ## weitere Literatur
 
 - [Erstellen eines Windows Forms-Toolbox-Steuerelements](https://docs.microsoft.com/de-de/visualstudio/extensibility/creating-a-windows-forms-toolbox-control?view=vs-2022)
@@ -43,13 +38,25 @@ links oben nach rechts unten gezeichnet wird oder umgekehrt.
 
 ## Versionsverlauf
 
-Version 2.2024.30.06
+**Version 2.2024.22.08**
+
+Datum 22.08.2024
+
+- Fehlerbereinigung
+
+**Version 2.2024.19.07**
+
+Datum: 19.07.2024
+
+- Beschreibungstexte in Englisch hinzugefügt (Google Translate)
+
+**Version 2.2024.30.06**
 
 Datum: 30.06.2024
 
 - Veröffentlichung im Bündel mit anderen Controls.
 
-Version 1.2024.06.04
+**Version 1.2024.06.04**
 
 Datum 04.06.2024
 

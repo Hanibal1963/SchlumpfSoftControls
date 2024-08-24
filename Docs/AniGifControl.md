@@ -4,15 +4,15 @@ Ein Steuerelement welches zum Anzeigen animierter Grafiken dient.
 
 ---
 
-## Einführung
+## EinfÃ¼hrung
 
-Grundlage und Anregung für dieses Steuerelement stammen aus dem Buch 
+Grundlage und Anregung fÃ¼r dieses Steuerelement stammen aus dem Buch 
 **"Visual Basic 2015 - Grundlagen und Profiwissen"** von Walter Dobrenz und Thomas Gewinnus.
 
-Der ursprüngliche Quelltext wurde von mir verändert und um weitere Funktionen erweitert.
+Der ursprÃ¼ngliche Quelltext wurde von mir verÃ¤ndert und um weitere Funktionen erweitert.
 
-Dieser Code sollte für mich als Übung dienen und ich denke das er auch für andere Anfänger 
-interessant sein dürfte.
+Dieser Code sollte fÃ¼r mich als Ãœbung dienen und ich denke das er auch fÃ¼r andere AnfÃ¤nger 
+interessant sein dÃ¼rfte.
 
 Weitere Infos unter: 
 
@@ -24,12 +24,12 @@ Weitere Infos unter:
 
 ## Eigenschaften
 
--  **Gif** - Gibt die animierte Gif-Grafik zurück oder legt diese fest.
+-  **Gif** - Gibt die animierte Gif-Grafik zurÃ¼ck oder legt diese fest.
 -  **AutoPlay** - Legt fest ob die Animation sofort nach dem laden gestartet wird.
--  **GifSizeMode** - Gibt die Art wie die Grafik angezeigt wird zurück oder legt diese fest.
+-  **GifSizeMode** - Gibt die Art wie die Grafik angezeigt wird zurÃ¼ck oder legt diese fest.
 -  **CustomDisplaySpeed** - Legt fest ob die im Bild gespeicherte Anzeigegeschwindigkeit oder die benutzerdefinierte verwendet werden soll.
 -  **FramesPerSecond** - Legt die Anzahl der Bilder pro Sekunde fest (1-50) die angezeigt werden, wenn die Benutzerdefinierte Geschwindigkeit aktiv ist.
--  **ZoomFaktor** - Legt den Zoomfaktor für GifSizeMode "Zoom" in % (1-100) fest.
+-  **ZoomFaktor** - Legt den Zoomfaktor fÃ¼r GifSizeMode "Zoom" in % (1-100) fest.
 
 ---
 
@@ -37,22 +37,16 @@ Weitere Infos unter:
 
 Die Eigenschaft **"GifSizeMode"** kann folgende Werte annehmen:
 
--  **Normal** - Die Grafik wird in Originalgröße angezeigt (Ausrichtung oben links)
--  **CenterImage** - Die Grafik wird in Originalgröße angezeigt (zentrierte Ausrichtung)
--  **Zoom** - Die Grafik wird an die Größe des Steuerelementes angepasst (Die größere Ausdehnung der Grafik wird als Anpassung verwendet, die Ausrichtung erfolgt zentriert und das Seitenverhältnis bleibt erhalten)
--  **Fill** - Die Grafik wird in das Control eingepasst (unabhängig von ihrer Größe).
+-  **Normal** - Die Grafik wird in OriginalgrÃ¶ÃŸe angezeigt (Ausrichtung oben links)
+-  **CenterImage** - Die Grafik wird in OriginalgrÃ¶ÃŸe angezeigt (zentrierte Ausrichtung)
+-  **Zoom** - Die Grafik wird an die GrÃ¶ÃŸe des Steuerelementes angepasst (Die grÃ¶ÃŸere Ausdehnung der Grafik wird als Anpassung verwendet, die Ausrichtung erfolgt zentriert und das SeitenverhÃ¤ltnis bleibt erhalten)
+-  **Fill** - Die Grafik wird in das Control eingepasst (unabhÃ¤ngig von ihrer GrÃ¶ÃŸe).
 
 ---
 
 ## Ereignisse
 
--  **NoAnimation** - wird ausgelöst, wenn das Bild nicht animiert werden kann.
-
----
-
-## geplante Änderungen und Funktionen
-
-- Zurzeit keine.
+-  **NoAnimation** - wird ausgelÃ¶st, wenn das Bild nicht animiert werden kann.
 
 ---
 
@@ -60,22 +54,35 @@ Die Eigenschaft **"GifSizeMode"** kann folgende Werte annehmen:
 
 -  [Erstellen eines Windows Forms-Toolbox-Steuerelements](https://docs.microsoft.com/de-de/visualstudio/extensibility/creating-a-windows-forms-toolbox-control?view=vs-2022)
 -  [Infos zur ControlStyles Enumeration](https://learn.microsoft.com/de-de/dotnet/api/system.windows.forms.controlstyles?redirectedfrom=MSDN&view=netframework-4.7.2)
--  [Control-Techniken: Eigenes Toolboxicon für Steuerelement](https://www.vb-paradise.de/index.php/Thread/123746-Control-Techniken-Eigenes-Toolboxicon-f%C3%BCr-Steuerelement/)
+-  [Control-Techniken: Eigenes Toolboxicon fÃ¼r Steuerelement](https://www.vb-paradise.de/index.php/Thread/123746-Control-Techniken-Eigenes-Toolboxicon-f%C3%BCr-Steuerelement/)
 -  [FrameDelays von animierter GIF](https://foren.activevb.de/archiv/vb-net/thread-93030/beitrag-93069/FrameDelays-von-animierter-GIF/)
 
 ---
 
 ## Versionsverlauf
 
-Version 2.2024.11.07
+**Version 2.2024.22.08**
+
+Datum 22.08.2024
+
+- Fehlerbereinigung
+
+
+**Version 2.2024.19.07**
+
+Datum: 19.07.2024
+
+- Beschreibungstexte in Englisch hinzugefÃ¼gt. (Google Translate)
+
+**Version 2.2024.11.07**
 
 Datum: 11.07.2024
 
-- Kleinere Änderungen am Code (Achtung! Das Ereignis "NoAnimation" weist ein geändertes Verhalten auf.)
+- Kleinere Ã„nderungen am Code (Achtung! Das Ereignis "NoAnimation" weist ein geÃ¤ndertes Verhalten auf.)
 
 
-Version 2.2024.30.06
+**Version 2.2024.30.06**
 
 Datum: 30.06.2024
 
-- Veröffentlichung im Bündel mit anderen Controls.
+- VerÃ¶ffentlichung im BÃ¼ndel mit anderen Controls.

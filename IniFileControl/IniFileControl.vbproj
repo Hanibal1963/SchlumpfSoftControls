@@ -81,23 +81,38 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CommonCodes\MyDescription.vb">
+      <Link>MyDescription.vb</Link>
+    </Compile>
     <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
       <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
     <Compile Include="IniFile.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="IniFileCommentEdit.Designer.vb">
+      <DependentUpon>IniFileCommentEdit.vb</DependentUpon>
+    </Compile>
     <Compile Include="IniFileCommentEdit.vb">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IniFileContentView.Designer.vb">
+      <DependentUpon>IniFileContentView.vb</DependentUpon>
     </Compile>
     <Compile Include="IniFileContentView.vb">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IniFileEntryValueEdit.Designer.vb">
+      <DependentUpon>IniFileEntryValueEdit.vb</DependentUpon>
     </Compile>
     <Compile Include="IniFileEntryValueEdit.vb">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IniFileListEdit.Designer.vb">
+      <DependentUpon>IniFileListEdit.vb</DependentUpon>
     </Compile>
     <Compile Include="IniFileListEdit.vb">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
@@ -119,28 +134,50 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\IniFileCommentEdit.bmp" />
+    <EmbeddedResource Include="IniFile.en-US.resx">
+      <DependentUpon>IniFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFile.resx">
+      <DependentUpon>IniFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileCommentEdit.en-US.resx">
+      <DependentUpon>IniFileCommentEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileCommentEdit.resx">
+      <DependentUpon>IniFileCommentEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileContentView.en-US.resx">
+      <DependentUpon>IniFileContentView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IniFileContentView.resx">
       <DependentUpon>IniFileContentView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileEntryValueEdit.en-US.resx">
+      <DependentUpon>IniFileEntryValueEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniFileEntryValueEdit.resx">
       <DependentUpon>IniFileEntryValueEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\IniFileListEdit.bmp" />
-    <EmbeddedResource Include="Resources\IniFileEntryValueEdit.bmp" />
-    <EmbeddedResource Include="Resources\IniFileContentView.bmp" />
-    <EmbeddedResource Include="Resources\IniFile.bmp" />
-    <EmbeddedResource Include="IniFileCommentEdit.resx">
-      <DependentUpon>IniFileCommentEdit.vb</DependentUpon>
+    <EmbeddedResource Include="IniFileListEdit.en-US.resx">
+      <DependentUpon>IniFileListEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniFileListEdit.resx">
       <DependentUpon>IniFileListEdit.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.en-US.resx" />
+    <EmbeddedResource Include="Resources\IniFileCommentEdit.bmp" />
+    <EmbeddedResource Include="Resources\IniFileListEdit.bmp" />
+    <EmbeddedResource Include="Resources\IniFileEntryValueEdit.bmp" />
+    <EmbeddedResource Include="Resources\IniFileContentView.bmp" />
+    <EmbeddedResource Include="Resources\IniFile.bmp" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

@@ -9,7 +9,9 @@ Imports System
 Imports System.ComponentModel.Design
 
 ''' <summary>Dient zum anzeigen der Seitenstile im Seitendesigner</summary>
-Friend Class PagesCollectionEditor : Inherits CollectionEditor
+Friend Class PagesCollectionEditor
+
+    Inherits CollectionEditor
 
     Private ReadOnly _PageTypes As Type()
 

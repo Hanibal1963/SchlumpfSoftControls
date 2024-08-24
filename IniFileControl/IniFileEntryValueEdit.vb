@@ -4,31 +4,26 @@
 ' ****************************************************************************************************************
 '
 
-Imports System
+
 Imports System.ComponentModel
-Imports System.Drawing
 Imports System.Windows.Forms
+Imports System.Drawing
 
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<Description("Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.")>
+<MyDescription("ClassDescriptionEntryValueEdit")>
 <ToolboxItem(True)>
-<System.Drawing.ToolboxBitmap(GetType(IniFileEntryValueEdit), "IniFileEntryValueEdit.bmp")>
+<ToolboxBitmap(GetType(IniFileEntryValueEdit), "IniFileEntryValueEdit.bmp")>
 Public Class IniFileEntryValueEdit
 
 
-    Inherits GroupBox
+    Inherits UserControl
 
 
-#Region "Definition der Variablen"
-
-    Private WithEvents Button As Button
-    Private WithEvents TextBox As TextBox
-
-#End Region
+    Private _TitelText As String
 
 
 #Region "Definition der Ereignisse"
@@ -37,19 +32,52 @@ Public Class IniFileEntryValueEdit
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Wert geändert hat.
     ''' </summary>
-    <Description("Wird ausgelöst wenn sich der Wert geändert hat.")>
-    Public Event ValueChanged(sender As Object, e As EventArgs)
+    <MyDescription("ValueEditValueChanged")>
+    Public Event ValueChanged(sender As Object, e As System.EventArgs)
+
+
+    Private Event TitelTextChanged()
 
 
 #End Region
 
 
+    Public Sub New()
+
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        Me.InitializeComponent()
+
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+        Me._TitelText = Me.GroupBox.Text
+
+    End Sub
+
+
 #Region "Definition der neuen Eigenschaften"
+
+
+    ''' <summary>
+    ''' Gibt den Text der Titelzeile zurück oder legt diesen fest.
+    ''' </summary>
+    ''' <returns></returns>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <MyDescription("TitelTextDescription")>
+    Public Property TitelText As String
+        Set(value As String)
+            Me._TitelText = value
+            RaiseEvent TitelTextChanged()
+        End Set
+        Get
+            Return Me._TitelText
+        End Get
+    End Property
+
 
     ''' <summary>
     ''' Eintragswert
     ''' </summary>
-    <Description("Eintragswert")>
+    <MyDescription("ValueDescription")>
     Public Property Value As String
         Get
             Return Me.TextBox.Text
@@ -65,15 +93,17 @@ Public Class IniFileEntryValueEdit
 
 #Region "Definition der internen Ereignisbehandlungen"
 
-    Private Sub Button_Click(sender As Object, e As EventArgs) Handles _
+
+    Private Sub Button_Click(sender As Object, e As System.EventArgs) Handles _
         Button.Click
 
         'Ereignis auslösen
-        RaiseEvent ValueChanged(Me, EventArgs.Empty)
+        RaiseEvent ValueChanged(Me, System.EventArgs.Empty)
 
     End Sub
 
-    Private Sub TextBox_TextChanged(sender As Object, e As EventArgs) Handles _
+
+    Private Sub TextBox_TextChanged(sender As Object, e As System.EventArgs) Handles _
         TextBox.TextChanged
 
         'Button aktivieren
@@ -81,58 +111,15 @@ Public Class IniFileEntryValueEdit
 
     End Sub
 
+    Private Sub IniFileCommentEdit_TitelTextChanged() Handles _
+        Me.TitelTextChanged
+
+        Me.GroupBox.Text = Me._TitelText
+
+    End Sub
+
+
 #End Region
-
-
-    Public Sub New()
-
-        'Komponenten erstellen
-        Me.InitializeComponent()
-
-        'Komponenten anpassen
-        Me.TextBox.Size = New System.Drawing.Size(Me.Width - 12, 20)
-        Me.Button.Location = New System.Drawing.Point(Me.TextBox.Width - Me.Button.Width, Me.TextBox.Top + Me.TextBox.Height + 6)
-
-    End Sub
-
-
-    Private Sub InitializeComponent()
-
-        Me.Button = New System.Windows.Forms.Button()
-        Me.TextBox = New System.Windows.Forms.TextBox()
-        Me.SuspendLayout()
-        '
-        'Button
-        '
-        Me.Button.Anchor = System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right
-        Me.Button.AutoSize = True
-        Me.Button.Enabled = False
-        Me.Button.Location = New System.Drawing.Point(0, 0)
-        Me.Button.Name = "Button"
-        Me.Button.Size = New System.Drawing.Size(84, 24)
-        Me.Button.TabIndex = 5
-        Me.Button.Text = "übernehmen"
-        Me.Button.UseVisualStyleBackColor = True
-        '
-        'TextBox
-        '
-        Me.TextBox.Anchor = System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left _
-            Or System.Windows.Forms.AnchorStyles.Right
-        Me.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox.Location = New System.Drawing.Point(6, 19)
-        Me.TextBox.Name = "TextBox"
-        Me.TextBox.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox.TabIndex = 0
-        Me.TextBox.WordWrap = False
-        '
-        'IniFileEntryValueEdit
-        '
-        Me.Controls.Add(Me.TextBox)
-        Me.Controls.Add(Me.Button)
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
-    End Sub
 
 
 End Class

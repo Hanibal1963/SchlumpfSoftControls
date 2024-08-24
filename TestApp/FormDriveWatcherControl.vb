@@ -5,24 +5,46 @@
 '
 
 
+Imports System.Globalization
+Imports System.Threading
+
 Public Class FormDriveWatcherControl
+
+
+    Public Sub New()
+
+        'Zuletzt verwendete Sprache einstellen
+        Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.LangCode)
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.LangCode)
+
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        Me.InitializeComponent()
+
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+
+    End Sub
+
 
     Private Sub DriveAdded(
                 sender As Object,
                 e As SchlumpfSoft.Controls.DriveWatcherControl.DriveAddedEventArgs) Handles _
                 DriveWatcher1.DriveAdded
 
-        Me.Label_result.Text = $"Das Laufwerk {e.DriveName} wurde hinzugefügt.{vbCrLf}" &
-        $"Der Datenträger hat die Bezeichnung {e.VolumeLabel} und ist vom Typ {e.DriveType}.{vbCrLf}" &
-        $"Das Format ist {e.DriveFormat} und der gesamte Speicherplatz beträgt {e.TotalSize} Bytes.{vbCrLf}"
+        Me.Label_result.Text = String.Format(
+            My.Resources.DriveWatcherMsgLine1, e.DriveName)
+        Me.Label_result.Text &= vbCrLf & String.Format(
+            My.Resources.DriveWatcherMsgLine2, e.VolumeLabel, e.DriveType)
+        Me.Label_result.Text &= vbCrLf & String.Format(
+            My.Resources.DriveWatcherMsgLine3, e.DriveFormat, e.TotalSize)
 
         If e.IsReady Then
 
-            Me.Label_result.Text &= $"Das Laufwerk ist bereit und der freie Speicherplatz beträgt {e.TotalFreeSpace} Bytes."
+            Me.Label_result.Text &= vbCrLf & String.Format(
+                My.Resources.DriveWatcherMsgLine4, e.TotalFreeSpace)
 
         Else
 
-            Me.Label_result.Text &= $"Das Laufwerk ist nicht bereit"
+            Me.Label_result.Text &= vbCrLf & String.Format(My.Resources.DriveWatcherMsgLine5)
 
         End If
 
@@ -34,7 +56,7 @@ Public Class FormDriveWatcherControl
                 e As SchlumpfSoft.Controls.DriveWatcherControl.DriveRemovedEventArgs) Handles _
                 DriveWatcher1.DriveRemoved
 
-        Me.Label_result.Text = $"Das Laufwerk {e.DriveName} wurde entfernt."
+        Me.Label_result.Text = String.Format(My.Resources.DriveWatcherMsgLine6, e.DriveName)
 
     End Sub
 

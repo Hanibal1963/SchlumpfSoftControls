@@ -23,6 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Pr
 		.gitignore = .gitignore
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
+		ToDo.md = ToDo.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{EAFFEA96-8EAF-4EA0-9C5F-FF0B2CBC2770}"
@@ -39,6 +40,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{EAFFEA96-8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonCodes", "CommonCodes", "{70445C5A-6847-451E-976E-E3543B4337D7}"
 	ProjectSection(SolutionItems) = preProject
+		CommonCodes\MyDescription.vb = CommonCodes\MyDescription.vb
 		CommonCodes\ProvideToolboxControlAttribute.vb = CommonCodes\ProvideToolboxControlAttribute.vb
 	EndProjectSection
 EndProject
@@ -183,6 +185,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_CultureCountyOverrides = 
+		RESX_AutoCreateNewLanguageFiles = True
+		RESX_PrefixTranslations = False
+		RESX_NeutralResourcesLanguage = de-DE
 		SolutionGuid = {1F02675E-F1F5-4CB4-9063-742717056245}
 	EndGlobalSection
 EndGlobal

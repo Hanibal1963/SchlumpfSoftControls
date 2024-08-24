@@ -178,7 +178,151 @@
   <data name="Anim119" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Anim119.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AnimationComboBoxItem1" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="AnimationComboBoxItem2" xml:space="preserve">
+    <value>Zentriert</value>
+  </data>
+  <data name="AnimationComboBoxItem3" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="AnimationComboBoxItem4" xml:space="preserve">
+    <value>Gefüllt</value>
+  </data>
+  <data name="AnimationNumberText" xml:space="preserve">
+    <value>Animation Nr.: {0}</value>
+  </data>
+  <data name="AnimationStandardText" xml:space="preserve">
+    <value>Standardanimation</value>
+  </data>
+  <data name="DriveWatcherMsgLine1" xml:space="preserve">
+    <value>Das Laufwerk {0} wurde hinzugefügt.</value>
+  </data>
+  <data name="DriveWatcherMsgLine2" xml:space="preserve">
+    <value>Der Datenträger hat die Bezeichnung {0} und ist vom Typ {1}.</value>
+  </data>
+  <data name="DriveWatcherMsgLine3" xml:space="preserve">
+    <value>Das Format ist {0} und der gesamte Speicherplatz beträgt {1} Bytes.</value>
+  </data>
+  <data name="DriveWatcherMsgLine4" xml:space="preserve">
+    <value>Das Laufwerk ist bereit und der freie Speicherplatz beträgt {0} Bytes.</value>
+  </data>
+  <data name="DriveWatcherMsgLine5" xml:space="preserve">
+    <value>Das Laufwerk ist nicht bereit</value>
+  </data>
+  <data name="DriveWatcherMsgLine6" xml:space="preserve">
+    <value>Das Laufwerk {0} wurde entfernt.</value>
+  </data>
+  <data name="NoAnimationMsg" xml:space="preserve">
+    <value>Das Bild kann nicht animiert werden.</value>
+  </data>
+  <data name="NoAnimationTitle" xml:space="preserve">
+    <value>Keine Animation</value>
+  </data>
+  <data name="NotifyForm_ComboBoxDesignItem1" xml:space="preserve">
+    <value>Hell</value>
+  </data>
+  <data name="NotifyForm_ComboBoxDesignItem2" xml:space="preserve">
+    <value>Farbig</value>
+  </data>
+  <data name="NotifyForm_ComboBoxDesignItem3" xml:space="preserve">
+    <value>Dunkel</value>
+  </data>
+  <data name="NotifyForm_ComboBoxStylesItem1" xml:space="preserve">
+    <value>Infosymbol</value>
+  </data>
+  <data name="NotifyForm_ComboBoxStylesItem2" xml:space="preserve">
+    <value>Fragesymbol</value>
+  </data>
+  <data name="NotifyForm_ComboBoxStylesItem3" xml:space="preserve">
+    <value>Fehlersymbol</value>
+  </data>
+  <data name="NotifyForm_ComboBoxStylesItem4" xml:space="preserve">
+    <value>Hinweissymbol</value>
+  </data>
   <data name="Papa_Schlumpf_08" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Papa Schlumpf 08.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shape_LineModusItem1" xml:space="preserve">
+    <value>links oben</value>
+  </data>
+  <data name="Shape_LineModusItem2" xml:space="preserve">
+    <value>links unten</value>
+  </data>
+  <data name="Shape_ModusItem1" xml:space="preserve">
+    <value>horizontale Linie</value>
+  </data>
+  <data name="Shape_ModusItem2" xml:space="preserve">
+    <value>vertikale Linie</value>
+  </data>
+  <data name="Shape_ModusItem3" xml:space="preserve">
+    <value>diagonale Linie</value>
+  </data>
+  <data name="Shape_ModusItem4" xml:space="preserve">
+    <value>Rechteck</value>
+  </data>
+  <data name="Shape_ModusItem5" xml:space="preserve">
+    <value>gefülltes Rechteck</value>
+  </data>
+  <data name="Shape_ModusItem6" xml:space="preserve">
+    <value>Ellipse</value>
+  </data>
+  <data name="Shape_ModusItem7" xml:space="preserve">
+    <value>gefüllte Ellipse</value>
+  </data>
+  <data name="Wizard_NeuerIndex0AlterIndex1" xml:space="preserve">
+    <value>neuer Index: {0} / alter Index: {1}</value>
+  </data>
+  <data name="Wizard_VorDemSeitenwechsel" xml:space="preserve">
+    <value>Vor dem Seitenwechsel</value>
+  </data>
+  <data name="Wizard_NachDemSeitenwechsel" xml:space="preserve">
+    <value>Nach dem Seitenwechsel</value>
+  </data>
+  <data name="Wizard_AssistentenAbgebrochen" xml:space="preserve">
+    <value>Sie haben den Assistenten abgebrochen.</value>
+  </data>
+  <data name="Wizard_AssistenteAbgeschlossen" xml:space="preserve">
+    <value>Sie haben den Assistente abgeschlossen.</value>
+  </data>
+  <data name="Wizard_AktionAbgebrochen" xml:space="preserve">
+    <value>Aktion abgebrochen</value>
+  </data>
+  <data name="Wizard_AktionAbgeschlossen" xml:space="preserve">
+    <value>Aktion abgeschlossen</value>
+  </data>
+  <data name="Wizard_DieHilfeFürDieSeite0DesAssistenten" xml:space="preserve">
+    <value>Die Hilfe für die Seite {0} des Assistenten.</value>
+  </data>
+  <data name="Wizard_Hilfe" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="IniFile_ContentViewTitle" xml:space="preserve">
+    <value>Dateiinhalt:</value>
+  </data>
+  <data name="IniFile_EntrysListEditTitle" xml:space="preserve">
+    <value>Eintragsliste:</value>
+  </data>
+  <data name="IniFile_EntryValueEditTitle" xml:space="preserve">
+    <value>Eintragswert:</value>
+  </data>
+  <data name="IniFile_FileCommentEditTitle" xml:space="preserve">
+    <value>Dateikommentar:</value>
+  </data>
+  <data name="IniFile_SectionsCommentEditTitle" xml:space="preserve">
+    <value>Abschnittskommentar:</value>
+  </data>
+  <data name="IniFile_SectionsListEditTitle" xml:space="preserve">
+    <value>Abschnittsliste:</value>
+  </data>
+  <data name="IniFile_FileDialogFilter" xml:space="preserve">
+    <value>INI - Dateien (*.ini)|*.ini</value>
+  </data>
+  <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
+    <value>INI - Datei öffnen</value>
+  </data>
+  <data name="IniFile_SaveFileDialogTitle" xml:space="preserve">
+    <value>INI - Datei speichern unter</value>
   </data>
 </root>

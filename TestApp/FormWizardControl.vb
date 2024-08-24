@@ -4,19 +4,37 @@
 ' ****************************************************************************************************************
 '
 
+Imports SchlumpfSoft.Controls.WizardControl
+
+Imports System.Globalization
+Imports System.Threading
+
 
 Public Class FormWizardControl
+
+    Public Sub New()
+
+        'Zuletzt verwendete Sprache einstellen
+        Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.LangCode)
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.LangCode)
+
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        Me.InitializeComponent()
+
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+
+    End Sub
 
 
     Private Sub Wizard1_BeforeSwitchPages(
                 sender As Object,
-                e As SchlumpfSoft.Controls.WizardControl.BeforeSwitchPagesEventArgs) Handles _
+                e As BeforeSwitchPagesEventArgs) Handles _
                 Wizard1.BeforeSwitchPages
 
         Dim unused = MessageBox.Show(
         Me,
-        $"neuer Index: {e.NewIndex} / alter Index: {e.OldIndex}",
-        $"Vor dem Seitenwechsel",
+        String.Format(My.Resources.Wizard_NeuerIndex0AlterIndex1, e.NewIndex, e.OldIndex),
+        String.Format(My.Resources.Wizard_VorDemSeitenwechsel),
         MessageBoxButtons.OK,
         MessageBoxIcon.Information)
 
@@ -25,13 +43,13 @@ Public Class FormWizardControl
 
     Private Sub Wizard1_AfterSwitchPages(
                 sender As Object,
-                e As SchlumpfSoft.Controls.WizardControl.AfterSwitchPagesEventArgs) Handles _
+                e As AfterSwitchPagesEventArgs) Handles _
                 Wizard1.AfterSwitchPages
 
         Dim unused = MessageBox.Show(
         Me,
-        $"neuer Index: {e.NewIndex} / alter Index: {e.OldIndex}",
-        $"Nach dem Seitenwechsel",
+        String.Format(My.Resources.Wizard_NeuerIndex0AlterIndex1, e.NewIndex, e.OldIndex),
+        String.Format(My.Resources.Wizard_NachDemSeitenwechsel),
         MessageBoxButtons.OK,
         MessageBoxIcon.Information)
 
@@ -43,12 +61,10 @@ Public Class FormWizardControl
                 e As System.ComponentModel.CancelEventArgs) Handles _
                 Wizard1.Cancel
 
-        Debug.Print($"CancelEventArgs: {e.Cancel}")
-
         Dim unused = MessageBox.Show(
         Me,
-        $"Sie haben den Assistenten abgebrochen.",
-        $"Aktion abgebrochen",
+        String.Format(My.Resources.Wizard_AssistentenAbgebrochen),
+        String.Format(My.Resources.Wizard_AktionAbgebrochen),
         MessageBoxButtons.OK,
         MessageBoxIcon.Information)
 
@@ -62,8 +78,8 @@ Public Class FormWizardControl
 
         Dim unused = MessageBox.Show(
         Me,
-        $"Sie haben den Assistente abgeschlossen.",
-        $"Aktion abgeschlossen",
+        String.Format(My.Resources.Wizard_AssistenteAbgeschlossen),
+        String.Format(My.Resources.Wizard_AktionAbgeschlossen),
         MessageBoxButtons.OK,
         MessageBoxIcon.Information)
 
@@ -75,17 +91,12 @@ Public Class FormWizardControl
                 e As EventArgs) Handles _
                 Wizard1.Help
 
-        Dim pageindex As Integer = CType(
-            sender,
-            SchlumpfSoft.Controls.WizardControl.Wizard).Pages.IndexOf(
-            CType(
-            sender,
-            SchlumpfSoft.Controls.WizardControl.Wizard).SelectedPage) + 1
+        Dim pageindex As Integer = CType(sender, Wizard).Pages.IndexOf(CType(sender, Wizard).SelectedPage) + 1
 
         Dim unused = MessageBox.Show(
         Me,
-        $"Die Hilfe für die Seite {pageindex} des Assistenten.",
-        $"Hilfe",
+        String.Format(My.Resources.Wizard_DieHilfeFürDieSeite0DesAssistenten, pageindex),
+        String.Format(My.Resources.Wizard_Hilfe),
         MessageBoxButtons.OK,
         MessageBoxIcon.Question)
 
