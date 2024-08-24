@@ -116,6 +116,12 @@
     <EmbeddedResource Include="My Project\Resources.en-US.resx" />
     <EmbeddedResource Include="Resources\SevSegMultiDigit.bmp" />
     <EmbeddedResource Include="Resources\SevSegSingleDigit.bmp" />
+    <EmbeddedResource Include="SevSegMultiDigit.resx">
+      <DependentUpon>SevSegMultiDigit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SevSegSingleDigit.resx">
+      <DependentUpon>SevSegSingleDigit.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,10 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Button.Text" xml:space="preserve">
-    <value>Take Over</value>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Enter characters:</value>
   </data>
-  <data name="GroupBox.Text" xml:space="preserve">
-    <value>IniFileCommentEdit</value>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Enter characters:</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Seevens segment - control - test</value>
   </data>
 </root>

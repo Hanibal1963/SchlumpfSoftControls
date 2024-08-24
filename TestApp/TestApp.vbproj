@@ -182,6 +182,9 @@
     <EmbeddedResource Include="FormNotifyFormControl.resx">
       <DependentUpon>FormNotifyFormControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSevenSegmentControl.en-US.resx">
+      <DependentUpon>FormSevenSegmentControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSevenSegmentControl.resx">
       <DependentUpon>FormSevenSegmentControl.vb</DependentUpon>
     </EmbeddedResource>

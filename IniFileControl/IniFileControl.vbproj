@@ -143,16 +143,10 @@
     <EmbeddedResource Include="IniFileCommentEdit.en-US.resx">
       <DependentUpon>IniFileCommentEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IniFileCommentEdit.en.resx">
-      <DependentUpon>IniFileCommentEdit.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="IniFileCommentEdit.resx">
       <DependentUpon>IniFileCommentEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniFileContentView.en-US.resx">
-      <DependentUpon>IniFileContentView.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="IniFileContentView.en.resx">
       <DependentUpon>IniFileContentView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniFileContentView.resx">
@@ -161,16 +155,10 @@
     <EmbeddedResource Include="IniFileEntryValueEdit.en-US.resx">
       <DependentUpon>IniFileEntryValueEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IniFileEntryValueEdit.en.resx">
-      <DependentUpon>IniFileEntryValueEdit.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="IniFileEntryValueEdit.resx">
       <DependentUpon>IniFileEntryValueEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniFileListEdit.en-US.resx">
-      <DependentUpon>IniFileListEdit.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="IniFileListEdit.en.resx">
       <DependentUpon>IniFileListEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniFileListEdit.resx">
