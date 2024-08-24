@@ -22,7 +22,10 @@ Weitere Infos unter:
 
 ---
 
-## Eigenschaften
+## Eigenschaften Anzeigemodi und Ereignisse
+
+<details>
+<summary>Eigenschaften</summary>
 
 -  **Gif** - Gibt die animierte Gif-Grafik zurück oder legt diese fest.
 -  **AutoPlay** - Legt fest ob die Animation sofort nach dem laden gestartet wird.
@@ -31,9 +34,10 @@ Weitere Infos unter:
 -  **FramesPerSecond** - Legt die Anzahl der Bilder pro Sekunde fest (1-50) die angezeigt werden, wenn die Benutzerdefinierte Geschwindigkeit aktiv ist.
 -  **ZoomFaktor** - Legt den Zoomfaktor für GifSizeMode "Zoom" in % (1-100) fest.
 
----
+</details>
 
-## Anzeigemodi
+<details>
+<summary> Anzeigemodi </summary>
 
 Die Eigenschaft **"GifSizeMode"** kann folgende Werte annehmen:
 
@@ -42,13 +46,14 @@ Die Eigenschaft **"GifSizeMode"** kann folgende Werte annehmen:
 -  **Zoom** - Die Grafik wird an die Größe des Steuerelementes angepasst (Die größere Ausdehnung der Grafik wird als Anpassung verwendet, die Ausrichtung erfolgt zentriert und das Seitenverhältnis bleibt erhalten)
 -  **Fill** - Die Grafik wird in das Control eingepasst (unabhängig von ihrer Größe).
 
----
+</details>
 
-## Ereignisse
+<details>
+<summary> Ereignisse </summary>
 
 -  **NoAnimation** - wird ausgelöst, wenn das Bild nicht animiert werden kann.
 
----
+</details>
 
 ## Weitere Literatur
 

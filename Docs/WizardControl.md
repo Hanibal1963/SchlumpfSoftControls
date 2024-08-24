@@ -14,7 +14,10 @@ vornehmen zu können.
 
 ---
 
-## Eigenschaften
+## Eigenschaften Ereignisse und Funktionen
+
+<details>
+<summary>Eigenschaften</summary>
 
 - **ImageHeader** - Ruft das in der Kopfzeile der Standardseiten angezeigte Bild ab oder legt dieses fest.
 - **HeaderFont** - Ruft die Schriftart ab, die zum Anzeigen der Beschreibung einer Standardseite verwendet wird, 
@@ -29,9 +32,11 @@ Abschlussseite verwendet wird, oder legt diese fest.
 - **Pages** - Ruft die Auflistung der Assistentenseiten in diesem Registerkartensteuerelement ab.
 - **VisibleHelp** - Ruft die Sichtbarkeit Status der Hilfeschaltfläche ab oder legt diesen fest.
 
----
+</details>
 
-## Ereignisse
+<details>
+<summary>Ereignisse</summary>
+
 
 - **AfterSwitchPages** - Tritt auf, nachdem die Seiten des Assistenten gewechselt wurden, 
 und gibt dem Benutzer die Möglichkeit, die neue Seite einzurichten.
@@ -43,13 +48,15 @@ und gibt dem Benutzer die Möglichkeit, die neue Seite einzurichten.
 und gibt dem Benutzer die Möglichkeit, zusätzliche Aufgaben zu erledigen.
 - **Help** - Tritt auf, wenn der Benutzer auf die Hilfeschaltfläche klickt.
 
----
+</details>
 
-## Funktionen
+<details>
+<summary>Funktionen</summary>
 
 - **Next** - Entspricht einem Klick auf die Schaltfläche "weiter".
 - **Back** - Entspricht einem Klick auf die Schaltfläche "zurück".
 
+</details>
 
 ---
 

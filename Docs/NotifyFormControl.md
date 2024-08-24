@@ -14,7 +14,10 @@ Falls jemand die ursprüngliche Quelle kennt oder finden sollte, dann bitte eine
 
 ---
 
-## Eigenschaften
+## Eigenschaften Funktionen und Ereignisse
+
+<details>
+<summary>Eigenschaften</summary>
 
 -  **Design** - Helles, Farbiges oder Dunkles Design des Fensters
 -  **Style** - Style des Fensters als Infofenster, Fragefenster, Fehlerfenster oder Hinweisfenster
@@ -22,12 +25,16 @@ Falls jemand die ursprüngliche Quelle kennt oder finden sollte, dann bitte eine
 -  **Title** - Text der Titelzeile
 -  **Message** - Mitteilungstext
 
----
+</details>
 
-## Funktionen
+<details> 
+<summary>Funktionen</summary>
 
 -  **Show** - Zeigt das Fenster an
 
+</details>
+
+---
 
 ## Weitere Literatur
 
