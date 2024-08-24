@@ -65,8 +65,12 @@ Public Class IniFileEntryValueEdit
     <MyDescription("TitelTextDescription")>
     Public Property TitelText As String
         Set(value As String)
-            Me._TitelText = value
-            RaiseEvent TitelTextChanged()
+            'Me._TitelText = value
+            'RaiseEvent TitelTextChanged()
+            If Me._TitelText <> value Then
+                Me._TitelText = value
+                RaiseEvent TitelTextChanged()
+            End If
         End Set
         Get
             Return Me._TitelText
@@ -83,8 +87,12 @@ Public Class IniFileEntryValueEdit
             Return Me.TextBox.Text
         End Get
         Set
-            Me.TextBox.Text = Value
-            Me.Button.Enabled = False
+            'Me.TextBox.Text = Value
+            'Me.Button.Enabled = False
+            If Me.TextBox.Text <> Value Then
+                Me.TextBox.Text = Value
+                Me.Button.Enabled = False
+            End If
         End Set
     End Property
 
