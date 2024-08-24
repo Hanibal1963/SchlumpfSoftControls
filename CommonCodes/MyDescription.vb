@@ -4,6 +4,8 @@
 ' ****************************************************************************************************************
 '
 
+Imports System.Threading
+
 ''' <summary>
 ''' Definiert ein benutzerdefiniertes Beschreibungsattribut um 
 ''' Elementbeschreibungen aus einer Ressource abzurufen.
@@ -15,7 +17,7 @@ Friend Class MyDescription
 
 
     Public Sub New(RessourceName As String)
-        MyBase.DescriptionValue = My.Resources.ResourceManager.GetString(RessourceName)
+        MyBase.DescriptionValue = My.Resources.ResourceManager.GetString(RessourceName, Thread.CurrentThread.CurrentUICulture)
     End Sub
 
 
