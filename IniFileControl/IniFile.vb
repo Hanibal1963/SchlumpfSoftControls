@@ -9,6 +9,7 @@ Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Drawing
+Imports System.IO
 
 
 ''' <summary>
@@ -228,10 +229,23 @@ Public Class IniFile
     ''' </summary>
     Public Sub LoadFile()
 
-        'Dateiinhalt von Datenträger lesen und analysieren
-        Me._FileContent = IO.File.ReadAllLines(Me._FilePath)
-        Me.ParseFileContent()
-        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+        'Datei laden mit Fehlerbehandlung
+        Try
+
+            Me._FileContent = IO.File.ReadAllLines(Me._FilePath)
+
+            'Dateiinhalt analysieren
+            Me.ParseFileContent()
+
+            'Ereignis auslösen
+            RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+
+        Catch ex As IOException
+
+            ' Fehlerbehandlung für IO-Fehler
+            Throw New InvalidOperationException("Fehler beim Laden der Datei", ex)
+
+        End Try
 
     End Sub
 
