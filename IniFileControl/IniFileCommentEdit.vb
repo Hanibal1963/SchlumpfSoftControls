@@ -8,6 +8,7 @@
 Imports System
 Imports System.ComponentModel
 Imports System.Drawing
+Imports System.Linq
 Imports System.Windows.Forms
 
 
@@ -68,8 +69,12 @@ Public Class IniFileCommentEdit
     <MyDescription("TitelTextDescription")>
     Public Property TitelText As String
         Set(value As String)
-            Me._TitelText = value
-            RaiseEvent TitelTextChanged()
+            'Me._TitelText = value
+            'RaiseEvent TitelTextChanged()
+            If Me._TitelText <> value Then
+                Me._TitelText = value
+                RaiseEvent TitelTextChanged()
+            End If
         End Set
         Get
             Return Me._TitelText
@@ -88,8 +93,12 @@ Public Class IniFileCommentEdit
             Return Me._Lines
         End Get
         Set
-            Me._Lines = Value
-            RaiseEvent PropCommentChanged()
+            'Me._Lines = Value
+            'RaiseEvent PropCommentChanged()
+            If Not Me._Lines.SequenceEqual(Value) Then
+                Me._Lines = Value
+                RaiseEvent PropCommentChanged()
+            End If
         End Set
     End Property
 
