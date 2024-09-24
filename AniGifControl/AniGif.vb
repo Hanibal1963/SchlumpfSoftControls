@@ -23,6 +23,7 @@ Public Class AniGif
 
 
     Inherits UserControl
+    Implements IDisposable
 
 
 #Region "Variablen für Komponenten"
@@ -466,6 +467,29 @@ Public Class AniGif
     End Sub
 
 
+    Protected Overrides Sub Dispose(disposing As Boolean)
+
+        If disposing Then
+
+            If Me.components IsNot Nothing Then
+                Me.components.Dispose()
+            End If
+
+            If Me.Timer IsNot Nothing Then
+                Me.Timer.Dispose()
+            End If
+
+            If Me._Gif IsNot Nothing Then
+                Me._Gif.Dispose()
+            End If
+
+        End If
+
+        MyBase.Dispose(disposing)
+
+    End Sub
+
+
 #Region "interne Ereignisbehandlungen"
 
 
@@ -524,7 +548,9 @@ Public Class AniGif
     ''' </summary>
     Private Sub OnNextFrame(o As Object, e As EventArgs)
 
-        Me.Invalidate() 'neu zeichnen
+        If Me.AutoPlay AndAlso Not Me.DesignMode Then
+            Me.Invalidate() 'neu zeichnen
+        End If
 
     End Sub
 
@@ -536,7 +562,7 @@ Public Class AniGif
         Timer.Tick
 
         'Bild animieren wenn AutoPlay und Benutzerdefinierte Geschwindigkeit aktiv
-        If Not Me.DesignMode And Me.AutoPlay Then
+        If Not Me.DesignMode AndAlso Me.AutoPlay Then
 
             'wenn Frames = 0 ist das Bild nicht animiert -> Ende
             If Me._MaxFrame = 0 Then Exit Sub
@@ -547,9 +573,11 @@ Public Class AniGif
             'nächstes Bild auswählen
             Dim unused = Me._Gif.SelectActiveFrame(Me._Dimension, Me._Frame)
 
-            'Bildzähler weiterschalten und neu zeichnen
+            'Bildzähler weiterschalten
             Me._Frame += 1
-            Me.Invalidate() '
+
+            'neu zeichnen
+            Me.Invalidate()
 
         End If
 
@@ -726,7 +754,8 @@ Public Class AniGif
     ''' Startgröße der Zeichenfläche.
     ''' </param>
     Private Function GetRectStartPoint(
-                     Mode As SizeMode, Control As AniGif, Gif As Bitmap, RectStartSize As Size) As Point
+                     Mode As SizeMode, Control As AniGif,
+                     Gif As Bitmap, RectStartSize As Size) As Point
 
         Select Case Mode
 
