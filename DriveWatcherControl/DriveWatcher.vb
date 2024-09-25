@@ -5,6 +5,7 @@
 '****************************************************************************************************************
 '
 
+Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.IO
@@ -27,7 +28,7 @@ Public Class DriveWatcher
     ''' <summary>
     ''' Wird vom Komponenten-Designer benötigt.
     ''' </summary>
-    Private components As System.ComponentModel.IContainer
+    Private ReadOnly components As System.ComponentModel.IContainer
 
 
     ''' <summary>
@@ -135,7 +136,10 @@ Public Class DriveWatcher
     Protected Overrides Sub Dispose(disposing As Boolean)
 
         Try
-            If disposing AndAlso Me.components IsNot Nothing Then Me.components.Dispose()
+            If disposing Then
+                If Me.components IsNot Nothing Then Me.components.Dispose()
+                If Me._Form IsNot Nothing Then Me._Form.Dispose()
+            End If
         Finally
             MyBase.Dispose(disposing)
         End Try
@@ -150,7 +154,7 @@ Public Class DriveWatcher
 
 
         Inherits NativeWindow
-
+        Implements IDisposable
 
         'Das sind die Ereignisse aus WParam.
         'Uns interessiert nur, ob ein Laufwerk hinzugekommen ist oder entfernt wurde.
@@ -165,6 +169,9 @@ Public Class DriveWatcher
         'Die beiden Ereignisse, die für uns von Bedeutung sind.
         Private Const DBT_DEVICEARRIVAL As Integer = &H8000
         Private Const DBT_DEVICEREMOVECOMPLETE As Integer = &H8004
+
+
+        Private disposedValue As Boolean
 
 
         ''' <summary>
@@ -308,25 +315,34 @@ Public Class DriveWatcher
         'OEM, und was genau?
         'Uns interesieren nur Volumes
         Private Sub HandleOEM(ByRef m As Message)
+
             Dim oem As DEV_BROADCAST_OEM
             Dim objOem As Object = m.GetLParam(oem.GetType)
+
             If Not Microsoft.VisualBasic.IsNothing(objOem) Then
+
                 oem = DirectCast(objOem, DEV_BROADCAST_OEM)
                 If oem.dbco_devicetype = DBT_DEVTYP.VOLUME Then Me.HandleVolume(m)
+
             End If
+
         End Sub
 
 
         'Liefert den Laufwerksbuchstaben zurück
         Private Function DriveFromMask(mask As Integer) As Char
+
             Dim result As Char = CChar(String.Empty)
+
             For b As Integer = 0 To 25
                 If (mask And CInt(2 ^ b)) <> 0 Then
                     result = Microsoft.VisualBasic.Chr(65 + b)
                     Exit For
                 End If
             Next b
+
             Return result
+
         End Function
 
 
@@ -335,9 +351,45 @@ Public Class DriveWatcher
         End Sub
 
 
+        Protected Overridable Sub Dispose(disposing As Boolean)
+
+            If Not Me.disposedValue Then
+
+                If disposing Then
+                    ' Verwalteten Zustand (verwaltete Objekte) bereinigen
+                    Me.DestroyHandle() 'eigenes Handle zerstören
+                End If
+
+                ' Nicht verwaltete Ressourcen (nicht verwaltete Objekte) freigeben und Finalizer überschreiben
+
+
+                ' Große Felder auf NULL setzen
+                Me.disposedValue = True
+
+            End If
+
+        End Sub
+
+
+        ' Finalizer nur überschreiben, wenn "Dispose(disposing As Boolean)"
+        ' Code für die Freigabe nicht verwalteter Ressourcen enthält
         Protected Overrides Sub Finalize()
-            Me.DestroyHandle() 'eigenes Handle zerstören
+
+            ' Ändern Sie diesen Code nicht.
+            ' Fügen Sie Bereinigungscode in der Methode "Dispose(disposing As Boolean)" ein.
+            Me.Dispose(disposing:=False)
             MyBase.Finalize()
+
+        End Sub
+
+
+        Public Sub Dispose() Implements IDisposable.Dispose
+
+            ' Ändern Sie diesen Code nicht.
+            ' Fügen Sie Bereinigungscode in der Methode "Dispose(disposing As Boolean)" ein.
+            Me.Dispose(disposing:=True)
+            GC.SuppressFinalize(Me)
+
         End Sub
 
 

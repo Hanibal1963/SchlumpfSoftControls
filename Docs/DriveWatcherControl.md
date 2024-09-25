@@ -30,9 +30,15 @@ Grundlage und Anregung für dieses Control stammen aus dem Internet.
 
 ## Versionsverlauf
 
+**Version 2.2024.25.09**
+
+Datum: 25.09.2024
+
+- kleinere Codeoptimierungen
+
 **Version 2.2024.22.08**
 
-Datum 22.08.2024
+Datum: 22.08.2024
 
 - Fehlerbereinigung
 
