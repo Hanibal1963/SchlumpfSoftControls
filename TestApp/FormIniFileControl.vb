@@ -118,7 +118,8 @@ Public Class FormIniFileControl
 
 #Region "Ereignisse von IniFile"
 
-    Private Sub IniFile_FileCommentChanged(sender As Object, e As EventArgs) Handles IniFile.FileCommentChanged
+    Private Sub IniFile_FileCommentChanged(sender As Object, e As EventArgs) Handles _
+        IniFile.FileCommentChanged
 
 #If DEBUG Then
         Debug.Print($"IniFile_FileCommentChanged: Dateikommentar geändert")
@@ -126,19 +127,26 @@ Public Class FormIniFileControl
 
     End Sub
 
-    Private Sub IniFile_FileContentChanged(sender As Object, e As EventArgs) Handles IniFile.FileContentChanged
+
+    Private Sub IniFile_FileContentChanged(sender As Object, e As EventArgs) Handles _
+        IniFile.FileContentChanged
 
 #If DEBUG Then
         Debug.Print($"IniFile_FileContentChanged: Dateiinhalt geändert")
 #End If
 
         ' Dateiinhalt anzeigen
-        Me.IniFileContentView.Lines = Me.IniFile.GetFileContent
+        Me.ContentView.Lines = Me.IniFile.GetFileContent
+
+        ' Dateikommentar anzeigen
+        Me.FileCommentEdit.Comment = Me.IniFile.GetFileComment
 
 
     End Sub
 
-    Private Sub IniFile_SectionsChanged(sender As Object, e As EventArgs) Handles IniFile.SectionsChanged
+
+    Private Sub IniFile_SectionsChanged(sender As Object, e As EventArgs) Handles _
+        IniFile.SectionsChanged
 
 #If DEBUG Then
         Debug.Print($"IniFile_SectionsChanged: Abschnittsliste geändert")
@@ -146,7 +154,9 @@ Public Class FormIniFileControl
 
     End Sub
 
-    Private Sub IniFile_SectionCommentChanged(sender As Object, e As EventArgs) Handles IniFile.SectionCommentChanged
+
+    Private Sub IniFile_SectionCommentChanged(sender As Object, e As EventArgs) Handles _
+        IniFile.SectionCommentChanged
 
 #If DEBUG Then
         Debug.Print($"IniFile_SectionCommentChanged: Abschnittskommentar geänder")
@@ -154,7 +164,9 @@ Public Class FormIniFileControl
 
     End Sub
 
-    Private Sub IniFile_EntrysChanged(sender As Object, e As EventArgs) Handles IniFile.EntrysChanged
+
+    Private Sub IniFile_EntrysChanged(sender As Object, e As EventArgs) Handles _
+        IniFile.EntrysChanged
 
 #If DEBUG Then
         Debug.Print($"IniFile_EntrysChanged: Eintragsliste geändert")
@@ -162,7 +174,9 @@ Public Class FormIniFileControl
 
     End Sub
 
-    Private Sub IniFile_EntryValueChanged(sender As Object, e As EventArgs) Handles IniFile.EntryValueChanged
+
+    Private Sub IniFile_EntryValueChanged(sender As Object, e As EventArgs) Handles _
+        IniFile.EntryValueChanged
 
 #If DEBUG Then
         Debug.Print($"IniFile_EntryValueChanged: Eintragswert geändert")
@@ -170,7 +184,9 @@ Public Class FormIniFileControl
 
     End Sub
 
-    Private Sub IniFile_SectionNameExist(sender As Object, e As EventArgs) Handles IniFile.SectionNameExist
+
+    Private Sub IniFile_SectionNameExist(sender As Object, e As EventArgs) Handles _
+        IniFile.SectionNameExist
 
 #If DEBUG Then
         Debug.Print($"IniFile_SectionNameExist: Abschnitt existiert")
@@ -178,11 +194,28 @@ Public Class FormIniFileControl
 
     End Sub
 
-    Private Sub IniFile_EntrynameExist(sender As Object, e As EventArgs) Handles IniFile.EntrynameExist
+
+    Private Sub IniFile_EntrynameExist(sender As Object, e As EventArgs) Handles _
+        IniFile.EntrynameExist
 
 #If DEBUG Then
         Debug.Print($"IniFile_EntrynameExist: Eintrag existiert")
 #End If
+
+    End Sub
+
+#End Region
+
+
+#Region "Ereignisse von FileCommentEdit"
+
+    Private Sub FileCommentEdit_CommentChanged(sender As Object, e As EventArgs) Handles _
+        FileCommentEdit.CommentChanged
+
+#If DEBUG Then
+        Debug.Print($"FileCommentEdit_CommentChanged: Dateikommentar hat sich geändert")
+#End If
+
 
     End Sub
 

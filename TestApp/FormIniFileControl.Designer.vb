@@ -29,6 +29,7 @@ Partial Class FormIniFileControl
         Dim ToolStripMenuItem_Datei As System.Windows.Forms.ToolStripMenuItem
         Dim ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
         Dim ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+        Me.ContentView = New SchlumpfSoft.Controls.IniFileControl.IniFileContentView()
         Me.ToolStripMenuItem_Oeffnen = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_Speichern = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_SpeichernUnter = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,7 +37,7 @@ Partial Class FormIniFileControl
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.IniFile = New SchlumpfSoft.Controls.IniFileControl.IniFile()
-        Me.IniFileContentView = New SchlumpfSoft.Controls.IniFileControl.IniFileContentView()
+        Me.FileCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
         MenuStrip_HauptMenu = New System.Windows.Forms.MenuStrip()
         ToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
@@ -76,8 +77,16 @@ Partial Class FormIniFileControl
         'TableLayoutPanel
         '
         resources.ApplyResources(TableLayoutPanel, "TableLayoutPanel")
-        TableLayoutPanel.Controls.Add(Me.IniFileContentView, 0, 0)
+        TableLayoutPanel.Controls.Add(Me.ContentView, 0, 0)
+        TableLayoutPanel.Controls.Add(Me.FileCommentEdit, 0, 1)
         TableLayoutPanel.Name = "TableLayoutPanel"
+        '
+        'ContentView
+        '
+        resources.ApplyResources(Me.ContentView, "ContentView")
+        Me.ContentView.Lines = Nothing
+        Me.ContentView.Name = "ContentView"
+        Me.ContentView.TitelText = "Dateiinhalt:"
         '
         'ToolStripMenuItem_Datei
         '
@@ -136,12 +145,12 @@ Partial Class FormIniFileControl
         Me.IniFile.CommentPrefix = Global.Microsoft.VisualBasic.ChrW(59)
         Me.IniFile.FilePath = ""
         '
-        'IniFileContentView
+        'FileCommentEdit
         '
-        resources.ApplyResources(Me.IniFileContentView, "IniFileContentView")
-        Me.IniFileContentView.Lines = Nothing
-        Me.IniFileContentView.Name = "IniFileContentView"
-        Me.IniFileContentView.TitelText = "Dateiinhalt:"
+        Me.FileCommentEdit.Comment = New String() {""}
+        resources.ApplyResources(Me.FileCommentEdit, "FileCommentEdit")
+        Me.FileCommentEdit.Name = "FileCommentEdit"
+        Me.FileCommentEdit.TitelText = "Dateikommentar:"
         '
         'FormIniFileControl
         '
@@ -173,5 +182,6 @@ Partial Class FormIniFileControl
     Private WithEvents OpenFileDialog As OpenFileDialog
     Private WithEvents SaveFileDialog As SaveFileDialog
     Private WithEvents IniFile As SchlumpfSoft.Controls.IniFileControl.IniFile
-    Private WithEvents IniFileContentView As SchlumpfSoft.Controls.IniFileControl.IniFileContentView
+    Private WithEvents ContentView As SchlumpfSoft.Controls.IniFileControl.IniFileContentView
+    Private WithEvents FileCommentEdit As SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit
 End Class
