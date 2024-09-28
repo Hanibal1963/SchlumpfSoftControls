@@ -25,7 +25,7 @@ Public Class IniFileCommentEdit
     Inherits UserControl
 
 
-    Private _Lines As String()
+    Private _Lines As String() = {""}
     Private _TitelText As String
 
 
@@ -69,8 +69,7 @@ Public Class IniFileCommentEdit
     <MyDescription("TitelTextDescription")>
     Public Property TitelText As String
         Set(value As String)
-            'Me._TitelText = value
-            'RaiseEvent TitelTextChanged()
+            ' hat sich der Wert geändert?
             If Me._TitelText <> value Then
                 Me._TitelText = value
                 RaiseEvent TitelTextChanged()
@@ -93,8 +92,7 @@ Public Class IniFileCommentEdit
             Return Me._Lines
         End Get
         Set
-            'Me._Lines = Value
-            'RaiseEvent PropCommentChanged()
+            ' hat sich der Wert geändert?
             If Not Me._Lines.SequenceEqual(Value) Then
                 Me._Lines = Value
                 RaiseEvent PropCommentChanged()
