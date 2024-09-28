@@ -8,6 +8,9 @@
 Imports System
 Imports System.Globalization
 Imports System.Runtime.InteropServices
+Imports System.Linq
+Imports System.Text
+Imports System.Collections.Generic
 Imports Microsoft.VisualStudio.Shell
 
 
@@ -22,7 +25,7 @@ Imports Microsoft.VisualStudio.Shell
 '''         "WpfControls"="1"
 ''' </remarks>
 <AttributeUsage(AttributeTargets.Class, AllowMultiple:=False, Inherited:=True)>
-<ComVisible(False)>
+<System.Runtime.InteropServices.ComVisibleAttribute(False)>
 Public NotInheritable Class ProvideToolboxControlAttribute
 
 
