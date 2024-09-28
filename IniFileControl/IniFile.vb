@@ -105,10 +105,9 @@ Public Class IniFile
 
 #Region "Definition neuer Eigenschaften"
 
-
-    ''' <summary>
-    ''' Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.
-    ''' </summary>
+    '''' <summary>
+    '''' Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.
+    '''' </summary>
     <Browsable(True)>
     <Category("Design")>
     <MyDescription("CommentPrefixDescription")>
