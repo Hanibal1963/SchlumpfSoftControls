@@ -30,16 +30,17 @@ Partial Class IniFileContentView
         '
         'GroupBox
         '
-        Me.GroupBox.Controls.Add(Me.TextBox)
         resources.ApplyResources(Me.GroupBox, "GroupBox")
+        Me.GroupBox.Controls.Add(Me.TextBox)
         Me.GroupBox.Name = "GroupBox"
         Me.GroupBox.TabStop = False
         '
         'TextBox
         '
-        Me.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         resources.ApplyResources(Me.TextBox, "TextBox")
+        Me.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox.Name = "TextBox"
+        Me.TextBox.ReadOnly = True
         '
         'IniFileContentView
         '
