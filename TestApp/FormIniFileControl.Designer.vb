@@ -31,13 +31,9 @@ Partial Class FormIniFileControl
         Me.ToolStripMenuItem_Speichern = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_SpeichernUnter = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_Beenden = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EntrysListEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileListEdit()
-        Me.SectionsCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
-        Me.EntryValueEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit()
-        Me.SectionsListEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileListEdit()
-        Me.IniFileContentView = New SchlumpfSoft.Controls.IniFileControl.IniFileContentView()
-        Me.FileCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
-        Me.IniFile1 = New SchlumpfSoft.Controls.IniFileControl.IniFile()
+        Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
+        Me.IniFile = New SchlumpfSoft.Controls.IniFileControl.IniFile()
         MenuStrip_HauptMenu = New System.Windows.Forms.MenuStrip()
         ToolStripMenuItem_Datei = New System.Windows.Forms.ToolStripMenuItem()
         ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -87,62 +83,25 @@ Partial Class FormIniFileControl
         Me.ToolStripMenuItem_Beenden.Name = "ToolStripMenuItem_Beenden"
         resources.ApplyResources(Me.ToolStripMenuItem_Beenden, "ToolStripMenuItem_Beenden")
         '
-        'EntrysListEdit
+        'OpenFileDialog
         '
-        resources.ApplyResources(Me.EntrysListEdit, "EntrysListEdit")
-        Me.EntrysListEdit.Name = "EntrysListEdit"
-        Me.EntrysListEdit.TitelText = ""
+        Me.OpenFileDialog.DefaultExt = "ini"
+        Me.OpenFileDialog.RestoreDirectory = True
         '
-        'SectionsCommentEdit
+        'SaveFileDialog
         '
-        Me.SectionsCommentEdit.Comment = Nothing
-        resources.ApplyResources(Me.SectionsCommentEdit, "SectionsCommentEdit")
-        Me.SectionsCommentEdit.Name = "SectionsCommentEdit"
-        Me.SectionsCommentEdit.TitelText = ""
+        Me.SaveFileDialog.DefaultExt = "ini"
         '
-        'EntryValueEdit
+        'IniFile
         '
-        resources.ApplyResources(Me.EntryValueEdit, "EntryValueEdit")
-        Me.EntryValueEdit.Name = "EntryValueEdit"
-        Me.EntryValueEdit.TitelText = ""
-        Me.EntryValueEdit.Value = ""
-        '
-        'SectionsListEdit
-        '
-        resources.ApplyResources(Me.SectionsListEdit, "SectionsListEdit")
-        Me.SectionsListEdit.Name = "SectionsListEdit"
-        Me.SectionsListEdit.TitelText = ""
-        '
-        'IniFileContentView
-        '
-        Me.IniFileContentView.Lines = Nothing
-        resources.ApplyResources(Me.IniFileContentView, "IniFileContentView")
-        Me.IniFileContentView.Name = "IniFileContentView"
-        Me.IniFileContentView.TitelText = ""
-        '
-        'FileCommentEdit
-        '
-        Me.FileCommentEdit.Comment = Nothing
-        resources.ApplyResources(Me.FileCommentEdit, "FileCommentEdit")
-        Me.FileCommentEdit.Name = "FileCommentEdit"
-        Me.FileCommentEdit.TitelText = ""
-        '
-        'IniFile1
-        '
-        Me.IniFile1.AutoSave = False
-        Me.IniFile1.CommentPrefix = Global.Microsoft.VisualBasic.ChrW(59)
-        Me.IniFile1.FilePath = "D:\Dokumente\NeueDatei.ini"
+        Me.IniFile.AutoSave = False
+        Me.IniFile.CommentPrefix = Global.Microsoft.VisualBasic.ChrW(59)
+        Me.IniFile.FilePath = ""
         '
         'FormIniFileControl
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.EntrysListEdit)
-        Me.Controls.Add(Me.SectionsCommentEdit)
-        Me.Controls.Add(Me.EntryValueEdit)
-        Me.Controls.Add(Me.SectionsListEdit)
-        Me.Controls.Add(Me.IniFileContentView)
-        Me.Controls.Add(Me.FileCommentEdit)
         Me.Controls.Add(MenuStrip_HauptMenu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -156,15 +115,12 @@ Partial Class FormIniFileControl
         Me.PerformLayout()
 
     End Sub
+
     Private WithEvents ToolStripMenuItem_Oeffnen As ToolStripMenuItem
     Private WithEvents ToolStripMenuItem_Speichern As ToolStripMenuItem
     Private WithEvents ToolStripMenuItem_SpeichernUnter As ToolStripMenuItem
     Private WithEvents ToolStripMenuItem_Beenden As ToolStripMenuItem
-    Private WithEvents IniFile1 As SchlumpfSoft.Controls.IniFileControl.IniFile
-    Private WithEvents FileCommentEdit As SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit
-    Private WithEvents IniFileContentView As SchlumpfSoft.Controls.IniFileControl.IniFileContentView
-    Private WithEvents SectionsListEdit As SchlumpfSoft.Controls.IniFileControl.IniFileListEdit
-    Private WithEvents EntryValueEdit As SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit
-    Private WithEvents SectionsCommentEdit As SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit
-    Private WithEvents EntrysListEdit As SchlumpfSoft.Controls.IniFileControl.IniFileListEdit
+    Private WithEvents OpenFileDialog As OpenFileDialog
+    Private WithEvents SaveFileDialog As SaveFileDialog
+    Private WithEvents IniFile As SchlumpfSoft.Controls.IniFileControl.IniFile
 End Class
