@@ -169,7 +169,9 @@
     <EmbeddedResource Include="IniFileListEdit.resx">
       <DependentUpon>IniFileListEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Resources.en-US.resx" />
+    <EmbeddedResource Include="My Project\Resources.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\IniFileCommentEdit.bmp" />
     <EmbeddedResource Include="Resources\IniFileListEdit.bmp" />
     <EmbeddedResource Include="Resources\IniFileEntryValueEdit.bmp" />

@@ -187,7 +187,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  Fehler beim laden der Datei &quot;{0}&quot;. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Fehler beim laden der Datei &quot;{0}&quot;. ähnelt.
         '''</summary>
         Friend ReadOnly Property ErrorMsgIoException() As String
             Get
