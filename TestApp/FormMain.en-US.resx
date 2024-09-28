@@ -183,7 +183,4 @@
   <data name="ButtonWizardControl.Text" xml:space="preserve">
     <value>Wizard Control</value>
   </data>
-  <data name="Button1.Text" xml:space="preserve">
-    <value>Exif Control</value>
-  </data>
 </root>

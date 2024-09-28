@@ -58,9 +58,11 @@ Namespace My
                     e As StartupEventArgs) Handles _
                     Me.Startup
 
-            'Sprache festlegen wenn noch nicht geschehen
+            ' Sprache festlegen wenn noch nicht geschehen
             If String.IsNullOrWhiteSpace(My.Settings.LangCode) Then
+
                 My.Settings.LangCode = $"de-DE"
+
             End If
 
         End Sub
