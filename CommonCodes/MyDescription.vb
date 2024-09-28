@@ -4,21 +4,32 @@
 ' ****************************************************************************************************************
 '
 
+Imports System
+Imports System.Diagnostics
+Imports System.Globalization
 Imports System.Threading
+
 
 ''' <summary>
 ''' Definiert ein benutzerdefiniertes Beschreibungsattribut um 
 ''' Elementbeschreibungen aus einer Ressource abzurufen.
 ''' </summary>
+<AttributeUsage(AttributeTargets.All)>
 Friend Class MyDescription
 
 
     Inherits System.ComponentModel.DescriptionAttribute
 
 
-    Public Sub New(RessourceName As String)
-        MyBase.DescriptionValue = My.Resources.ResourceManager.GetString(RessourceName, Thread.CurrentThread.CurrentUICulture)
+    Public Sub New(RessorceKey As String)
+        MyBase.New(GetRessourceValue(RessorceKey))
     End Sub
+
+
+    Private Shared Function GetRessourceValue(RessorceKey As String) As String
+        Return My.Resources.ResourceManager.GetString(
+            RessorceKey, CultureInfo.CurrentUICulture)
+    End Function
 
 
     Public Overrides ReadOnly Property TypeId As Object
