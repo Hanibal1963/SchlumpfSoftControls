@@ -229,21 +229,25 @@ Public Class IniFile
     ''' </summary>
     Public Sub LoadFile()
 
-        'Datei laden mit Fehlerbehandlung
+        ' Datei laden mit Fehlerbehandlung
         Try
 
             Me._FileContent = IO.File.ReadAllLines(Me._FilePath)
 
-            'Dateiinhalt analysieren
+            ' Dateiinhalt analysieren
             Me.ParseFileContent()
 
-            'Ereignis auslösen
+            ' Ereignis auslösen
             RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
         Catch ex As IOException
 
             ' Fehlerbehandlung für IO-Fehler
             Throw New InvalidOperationException("Fehler beim Laden der Datei", ex)
+            Throw New IOException(
+                String.Format(
+                My.Resources.ErrorMsgIoException,
+                Me._FilePath))
 
         End Try
 
