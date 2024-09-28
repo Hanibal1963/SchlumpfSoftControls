@@ -237,21 +237,6 @@
   <data name="IniFile_ContentViewTitle" xml:space="preserve">
     <value>File content:</value>
   </data>
-  <data name="IniFile_FileCommentEditTitle" xml:space="preserve">
-    <value>File commentary:</value>
-  </data>
-  <data name="IniFile_EntrysListEditTitle" xml:space="preserve">
-    <value>Entry list:</value>
-  </data>
-  <data name="IniFile_EntryValueEditTitle" xml:space="preserve">
-    <value>Entry value:</value>
-  </data>
-  <data name="IniFile_SectionsCommentEditTitle" xml:space="preserve">
-    <value>Section comment:</value>
-  </data>
-  <data name="IniFile_SectionsListEditTitle" xml:space="preserve">
-    <value>Section list:</value>
-  </data>
   <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
     <value>Open ini file</value>
   </data>
