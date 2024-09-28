@@ -187,6 +187,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  Fehler beim laden der Datei &quot;{0}&quot;. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ErrorMsgIoException() As String
+            Get
+                Return ResourceManager.GetString("ErrorMsgIoException", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Der Parameter &quot;{0}&quot; darf nicht NULL oder ein Leerraumzeichen sein. ähnelt.
         '''</summary>
         Friend ReadOnly Property ErrorMsgNullOrWhitSpace() As String

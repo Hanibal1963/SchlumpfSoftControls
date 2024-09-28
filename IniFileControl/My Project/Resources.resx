@@ -159,6 +159,9 @@
   <data name="EntryValueChangedDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn sich der Wert eines Eintrags in einem Abschnitt geändert hat.</value>
   </data>
+  <data name="ErrorMsgIoException" xml:space="preserve">
+    <value> Fehler beim laden der Datei "{0}".</value>
+  </data>
   <data name="ErrorMsgNullOrWhitSpace" xml:space="preserve">
     <value>Der Parameter "{0}" darf nicht NULL oder ein Leerraumzeichen sein.</value>
   </data>
