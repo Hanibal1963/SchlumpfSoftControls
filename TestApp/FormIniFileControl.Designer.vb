@@ -23,8 +23,10 @@ Partial Class FormIniFileControl
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim MenuStrip_HauptMenu As System.Windows.Forms.MenuStrip
-        Dim ToolStripMenuItem_Datei As System.Windows.Forms.ToolStripMenuItem
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormIniFileControl))
+        Dim ToolStripContainer As System.Windows.Forms.ToolStripContainer
+        Dim TableLayoutPanel As System.Windows.Forms.TableLayoutPanel
+        Dim ToolStripMenuItem_Datei As System.Windows.Forms.ToolStripMenuItem
         Dim ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
         Dim ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
         Me.ToolStripMenuItem_Oeffnen = New System.Windows.Forms.ToolStripMenuItem()
@@ -34,18 +36,48 @@ Partial Class FormIniFileControl
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.IniFile = New SchlumpfSoft.Controls.IniFileControl.IniFile()
+        Me.IniFileContentView = New SchlumpfSoft.Controls.IniFileControl.IniFileContentView()
         MenuStrip_HauptMenu = New System.Windows.Forms.MenuStrip()
+        ToolStripContainer = New System.Windows.Forms.ToolStripContainer()
+        TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         ToolStripMenuItem_Datei = New System.Windows.Forms.ToolStripMenuItem()
         ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         MenuStrip_HauptMenu.SuspendLayout()
+        ToolStripContainer.ContentPanel.SuspendLayout()
+        ToolStripContainer.TopToolStripPanel.SuspendLayout()
+        ToolStripContainer.SuspendLayout()
+        TableLayoutPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip_HauptMenu
         '
-        MenuStrip_HauptMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {ToolStripMenuItem_Datei})
         resources.ApplyResources(MenuStrip_HauptMenu, "MenuStrip_HauptMenu")
+        MenuStrip_HauptMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {ToolStripMenuItem_Datei})
         MenuStrip_HauptMenu.Name = "MenuStrip_HauptMenu"
+        '
+        'ToolStripContainer
+        '
+        ToolStripContainer.BottomToolStripPanelVisible = False
+        '
+        'ToolStripContainer.ContentPanel
+        '
+        ToolStripContainer.ContentPanel.Controls.Add(TableLayoutPanel)
+        resources.ApplyResources(ToolStripContainer.ContentPanel, "ToolStripContainer.ContentPanel")
+        resources.ApplyResources(ToolStripContainer, "ToolStripContainer")
+        ToolStripContainer.LeftToolStripPanelVisible = False
+        ToolStripContainer.Name = "ToolStripContainer"
+        ToolStripContainer.RightToolStripPanelVisible = False
+        '
+        'ToolStripContainer.TopToolStripPanel
+        '
+        ToolStripContainer.TopToolStripPanel.Controls.Add(MenuStrip_HauptMenu)
+        '
+        'TableLayoutPanel
+        '
+        resources.ApplyResources(TableLayoutPanel, "TableLayoutPanel")
+        TableLayoutPanel.Controls.Add(Me.IniFileContentView, 0, 0)
+        TableLayoutPanel.Name = "TableLayoutPanel"
         '
         'ToolStripMenuItem_Datei
         '
@@ -86,11 +118,17 @@ Partial Class FormIniFileControl
         'OpenFileDialog
         '
         Me.OpenFileDialog.DefaultExt = "ini"
+        resources.ApplyResources(Me.OpenFileDialog, "OpenFileDialog")
+        Me.OpenFileDialog.FilterIndex = 0
         Me.OpenFileDialog.RestoreDirectory = True
         '
         'SaveFileDialog
         '
+        Me.SaveFileDialog.CheckFileExists = True
         Me.SaveFileDialog.DefaultExt = "ini"
+        resources.ApplyResources(Me.SaveFileDialog, "SaveFileDialog")
+        Me.SaveFileDialog.FilterIndex = 0
+        Me.SaveFileDialog.RestoreDirectory = True
         '
         'IniFile
         '
@@ -98,11 +136,18 @@ Partial Class FormIniFileControl
         Me.IniFile.CommentPrefix = Global.Microsoft.VisualBasic.ChrW(59)
         Me.IniFile.FilePath = ""
         '
+        'IniFileContentView
+        '
+        resources.ApplyResources(Me.IniFileContentView, "IniFileContentView")
+        Me.IniFileContentView.Lines = Nothing
+        Me.IniFileContentView.Name = "IniFileContentView"
+        Me.IniFileContentView.TitelText = "Dateiinhalt:"
+        '
         'FormIniFileControl
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(MenuStrip_HauptMenu)
+        Me.Controls.Add(ToolStripContainer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -111,8 +156,13 @@ Partial Class FormIniFileControl
         Me.ShowInTaskbar = False
         MenuStrip_HauptMenu.ResumeLayout(False)
         MenuStrip_HauptMenu.PerformLayout()
+        ToolStripContainer.ContentPanel.ResumeLayout(False)
+        ToolStripContainer.TopToolStripPanel.ResumeLayout(False)
+        ToolStripContainer.TopToolStripPanel.PerformLayout()
+        ToolStripContainer.ResumeLayout(False)
+        ToolStripContainer.PerformLayout()
+        TableLayoutPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -123,4 +173,5 @@ Partial Class FormIniFileControl
     Private WithEvents OpenFileDialog As OpenFileDialog
     Private WithEvents SaveFileDialog As SaveFileDialog
     Private WithEvents IniFile As SchlumpfSoft.Controls.IniFileControl.IniFile
+    Private WithEvents IniFileContentView As SchlumpfSoft.Controls.IniFileControl.IniFileContentView
 End Class

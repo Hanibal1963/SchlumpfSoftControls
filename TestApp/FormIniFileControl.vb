@@ -132,6 +132,10 @@ Public Class FormIniFileControl
         Debug.Print($"IniFile_FileContentChanged: Dateiinhalt geändert")
 #End If
 
+        ' Dateiinhalt anzeigen
+        Me.IniFileContentView.Lines = Me.IniFile.GetFileContent
+
+
     End Sub
 
     Private Sub IniFile_SectionsChanged(sender As Object, e As EventArgs) Handles IniFile.SectionsChanged
