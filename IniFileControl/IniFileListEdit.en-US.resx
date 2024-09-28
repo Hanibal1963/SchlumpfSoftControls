@@ -120,11 +120,11 @@
   <data name="ButtonAdd.Text" xml:space="preserve">
     <value>add</value>
   </data>
-  <data name="ButtonRename.Text" xml:space="preserve">
-    <value>rename</value>
-  </data>
   <data name="ButtonDelete.Text" xml:space="preserve">
     <value>delete</value>
+  </data>
+  <data name="ButtonRename.Text" xml:space="preserve">
+    <value>rename</value>
   </data>
   <data name="GroupBox.Text" xml:space="preserve">
     <value>Inifilelistedit</value>
