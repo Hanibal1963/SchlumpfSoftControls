@@ -127,18 +127,24 @@
   <metadata name="ToolStripMenuItem_Datei.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <metadata name="ToolStripSeparator1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="ToolStripSeparator2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <metadata name="ToolStripContainer.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="TableLayoutPanel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ToolStripSeparator1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ToolStripSeparator2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="OpenFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -157,7 +163,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>924, 491</value>
+    <value>956, 491</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormIniFileControl</value>
@@ -180,17 +186,29 @@
   <data name="&gt;&gt;ContentView.Name" xml:space="preserve">
     <value>ContentView</value>
   </data>
+  <data name="&gt;&gt;ContentView.Name" xml:space="preserve">
+    <value>ContentView</value>
+  </data>
+  <data name="&gt;&gt;ContentView.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
   <data name="&gt;&gt;ContentView.Parent" xml:space="preserve">
     <value>TableLayoutPanel</value>
   </data>
   <data name="ContentView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 320</value>
+    <value>313, 320</value>
   </data>
   <data name="ContentView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;ContentView.Type" xml:space="preserve">
     <value>SchlumpfSoft.Controls.IniFileControl.IniFileContentView, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ContentView.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileContentView, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ContentView.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;ContentView.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -204,17 +222,29 @@
   <data name="&gt;&gt;FileCommentEdit.Name" xml:space="preserve">
     <value>FileCommentEdit</value>
   </data>
+  <data name="&gt;&gt;FileCommentEdit.Name" xml:space="preserve">
+    <value>FileCommentEdit</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
   <data name="&gt;&gt;FileCommentEdit.Parent" xml:space="preserve">
     <value>TableLayoutPanel</value>
   </data>
   <data name="FileCommentEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 135</value>
+    <value>313, 135</value>
   </data>
   <data name="FileCommentEdit.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="&gt;&gt;FileCommentEdit.Type" xml:space="preserve">
     <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;FileCommentEdit.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -238,7 +268,7 @@
     <value>ToolStripContainer.TopToolStripPanel</value>
   </data>
   <data name="MenuStrip_HauptMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>924, 24</value>
+    <value>956, 24</value>
   </data>
   <data name="MenuStrip_HauptMenu.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -273,6 +303,42 @@
   <data name="&gt;&gt;SaveFileDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="SectionsListEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="SectionsListEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 3</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Name" xml:space="preserve">
+    <value>SectionsListEdit</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Name" xml:space="preserve">
+    <value>SectionsListEdit</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="SectionsListEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 320</value>
+  </data>
+  <data name="SectionsListEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.22.8, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="TableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -280,7 +346,7 @@
     <value>Fill</value>
   </data>
   <data name="TableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ContentView" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FileCommentEdit" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33,44481,Percent,33,44482,Percent,33,11037" /&gt;&lt;Rows Styles="Percent,70,Percent,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ContentView" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FileCommentEdit" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="SectionsListEdit" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33,44481,Percent,33,44482,Percent,33,11037" /&gt;&lt;Rows Styles="Percent,70,Percent,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="TableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -295,7 +361,7 @@
     <value>2</value>
   </data>
   <data name="TableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>924, 467</value>
+    <value>956, 467</value>
   </data>
   <data name="TableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -325,7 +391,7 @@
     <value>ToolStripContainer</value>
   </data>
   <data name="ToolStripContainer.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>924, 467</value>
+    <value>956, 467</value>
   </data>
   <data name="&gt;&gt;ToolStripContainer.ContentPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripContentPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -370,7 +436,7 @@
     <value>2</value>
   </data>
   <data name="ToolStripContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>924, 491</value>
+    <value>956, 491</value>
   </data>
   <data name="ToolStripContainer.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>

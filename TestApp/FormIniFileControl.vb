@@ -163,6 +163,7 @@ Public Class FormIniFileControl
         ' Dateikommentar anzeigen
         Me.FileCommentEdit.Comment = Me.IniFile.GetFileComment
         ' Abschnittsliste anzeigen
+        Me.SectionsListEdit.ListItems = Me.IniFile.GetSectionNames
 
     End Sub
 
@@ -248,5 +249,8 @@ Public Class FormIniFileControl
     End Sub
 
 #End Region
+
+
+
 
 End Class
