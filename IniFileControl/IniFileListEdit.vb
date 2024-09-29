@@ -6,6 +6,7 @@
 
 Imports System
 Imports System.ComponentModel
+Imports System.Diagnostics
 Imports System.Drawing
 Imports System.Windows.Forms
 
@@ -132,8 +133,7 @@ Public Class IniFileListEdit : Inherits UserControl
 
 #End Region
 
-
-
+#Region "ausgeblendete Eigenschaften"
 
     ''' <summary>
     ''' Gibt den ausgewählten Eintrag oder leer zurück.
@@ -145,7 +145,7 @@ Public Class IniFileListEdit : Inherits UserControl
         End Get
     End Property
 
-
+#End Region
 
 #Region "Ereignisse der internen ListBox"
 
