@@ -131,18 +131,17 @@ Public Class FormIniFileControl
 
 #End Region
 
-
 #Region "Ereignisse von IniFile"
 
     ' TODO: Wird eventuell nicht benötigt da die Ereignisse von IniFile in den Ereignissen von FileCommentEdit abgefangen werden.
-    Private Sub IniFile_FileCommentChanged(sender As Object, e As EventArgs) Handles _
-        IniFile.FileCommentChanged
+    '    Private Sub IniFile_FileCommentChanged(sender As Object, e As EventArgs) Handles _
+    '        IniFile.FileCommentChanged
 
-#If DEBUG Then
-        Debug.Print($"IniFile_FileCommentChanged: Dateikommentar geändert")
-#End If
+    '#If DEBUG Then
+    '        Debug.Print($"IniFile_FileCommentChanged: Dateikommentar geändert")
+    '#End If
 
-    End Sub
+    '    End Sub
 
 
 
@@ -250,7 +249,62 @@ Public Class FormIniFileControl
 
 #End Region
 
+#Region "Ereignisse von SectionsListEdit"
 
+    ''' <summary>
+    ''' wird aufgerufen wenn sich der ausgewählte Abschnitt geändert hat.
+    ''' </summary>
+    Private Sub SectionsListEdit_SelectedItemChanged(sender As Object, e As EventArgs) Handles _
+        SectionsListEdit.SelectedItemChanged
 
+#If DEBUG Then
+        Debug.Print($"SectionsListEdit_SelectedItemChanged: Der ausgewählte Eintrag wurde auf {Me.SectionsListEdit.SelectedItem} geändert")
+#End If
+
+    End Sub
+
+    ''' <summary>
+    ''' wird aufgerufen wenn ein Abschnitt hinzugefügt werden soll.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub SectionsListEdit_ItemAdd(sender As Object, e As EventArgs) Handles _
+        SectionsListEdit.ItemAdd
+
+#If DEBUG Then
+        Debug.Print($"SectionsListEdit_ItemAdd: Es soll ein Abschnitt hinzugefügt werden.")
+#End If
+
+    End Sub
+
+    ''' <summary>
+    ''' wird aufgerufen wenn ein Abschnitt umbenannt werden soll.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub SectionsListEdit_ItemRename(sender As Object, e As EventArgs) Handles _
+        SectionsListEdit.ItemRename
+
+#If DEBUG Then
+        Debug.Print($"SectionsListEdit_ItemRename: Es soll der Abscnitt {Me.SectionsListEdit.SelectedItem} umbenannt werden")
+#End If
+
+    End Sub
+
+    ''' <summary>
+    ''' wird aufgerufen wenn ein Abschnitt gelöscht werden soll.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub SectionsListEdit_ItemRemove(sender As Object, e As EventArgs) Handles _
+        SectionsListEdit.ItemRemove
+
+#If DEBUG Then
+        Debug.Print($"SectionsListEdit_ItemRemove: Der abschnitt {Me.SectionsListEdit.SelectedItem} soll gelöscht werden")
+#End If
+
+    End Sub
+
+#End Region
 
 End Class
