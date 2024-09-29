@@ -4,16 +4,19 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System.Globalization
 Imports System.Threading
 
-
 Public Class FormIniFileControl
 
+#Region "Definition der internen Variablen"
 
+    ''' <summary>
+    ''' Speichert den Dateinamen der geöffneten oder gespeicherten Datei.
+    ''' </summary>
     Private filename As String = Nothing
 
+#End Region
 
     Public Sub New()
 
@@ -30,7 +33,17 @@ Public Class FormIniFileControl
 
     End Sub
 
+#Region "Interne Ereignisbehandlungen"
 
+    ''' <summary>
+    ''' Wird aufgerufen wenn ein Menüeintrag geklickt wurde.
+    ''' </summary>
+    ''' <param name="sender">
+    ''' Name des Menüeintrags der geklickt wurde.
+    ''' </param>
+    ''' <param name="e">
+    ''' übergibt die Ereignisdaten.
+    ''' </param>
     Private Sub ToolStripMenuItem_Oeffnen_Click(sender As Object, e As EventArgs) Handles _
         ToolStripMenuItem_Oeffnen.Click,
         ToolStripMenuItem_Speichern.Click,
@@ -39,21 +52,26 @@ Public Class FormIniFileControl
 
         ' welcher Menüeintrag wurde geklickt?
         If sender Is Me.ToolStripMenuItem_Oeffnen Then
-            Me.FileOpen() ' Datei öffnen
+            ' Datei öffnen
+            Me.FileOpen()
 
         ElseIf sender Is Me.ToolStripMenuItem_Speichern Then
-            Me.FileSave() ' Datei speichern
+            ' Datei speichern
+            Me.FileSave()
 
         ElseIf sender Is Me.ToolStripMenuItem_SpeichernUnter Then
-            Me.FileSaveAs() ' Datei unter anderem Namen speichern
+            ' Datei unter anderem Namen speichern
+            Me.FileSaveAs()
 
         ElseIf sender Is Me.ToolStripMenuItem_Beenden Then
-            Me.Close() ' Programm beenden
+            ' Programm beenden
+            Me.Close()
 
         End If
 
     End Sub
 
+#End Region
 
 #Region "interne Methoden"
 
@@ -76,7 +94,6 @@ Public Class FormIniFileControl
 
     End Sub
 
-
     Private Sub FileSave()
 
         ' Dateiname abrufen wenn noch nicht gesetzt
@@ -92,7 +109,6 @@ Public Class FormIniFileControl
         Me.IniFile.SaveFile(Me.filename)
 
     End Sub
-
 
     Private Sub FileOpen()
 
@@ -118,6 +134,7 @@ Public Class FormIniFileControl
 
 #Region "Ereignisse von IniFile"
 
+    ' TODO: Wird eventuell nicht benötigt da die Ereignisse von IniFile in den Ereignissen von FileCommentEdit abgefangen werden.
     Private Sub IniFile_FileCommentChanged(sender As Object, e As EventArgs) Handles _
         IniFile.FileCommentChanged
 
@@ -128,6 +145,12 @@ Public Class FormIniFileControl
     End Sub
 
 
+
+
+
+    ''' <summary>
+    ''' Wird ausgelöst wenn sich der Dateiinhalt geändert hat.
+    ''' </summary>
     Private Sub IniFile_FileContentChanged(sender As Object, e As EventArgs) Handles _
         IniFile.FileContentChanged
 
@@ -137,10 +160,9 @@ Public Class FormIniFileControl
 
         ' Dateiinhalt anzeigen
         Me.ContentView.Lines = Me.IniFile.GetFileContent
-
         ' Dateikommentar anzeigen
         Me.FileCommentEdit.Comment = Me.IniFile.GetFileComment
-
+        ' Abschnittsliste anzeigen
 
     End Sub
 
@@ -206,9 +228,13 @@ Public Class FormIniFileControl
 
 #End Region
 
-
 #Region "Ereignisse von FileCommentEdit"
 
+    ''' <summary>
+    ''' Wird aufgerufen wenn sich der Dateikommentar geändert hat.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub FileCommentEdit_CommentChanged(sender As Object, e As EventArgs) Handles _
         FileCommentEdit.CommentChanged
 
@@ -216,10 +242,11 @@ Public Class FormIniFileControl
         Debug.Print($"FileCommentEdit_CommentChanged: Dateikommentar hat sich geändert")
 #End If
 
+        ' Dateikommentar speichern
+        Me.IniFile.SetFileComment(Me.FileCommentEdit.Comment)
 
     End Sub
 
 #End Region
-
 
 End Class
