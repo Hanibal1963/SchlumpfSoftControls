@@ -267,6 +267,10 @@ Public Class IniFileListEdit : Inherits UserControl
 
     Private Sub DeleteItem()
         'TODO: Abfrage ob Eintrag wirklich gelöscht werden soll
+
+
+
+
         RaiseEvent ItemRemove(
             Me, New IniFileListEditEventArgs With {
             .SelectedItem = Me._SelectedItem})
@@ -296,6 +300,10 @@ Public Class IniFileListEdit : Inherits UserControl
 
     Private Sub AddNewItem()
         'TODO: Abfrage ob Eintrag wirklich hinzugefügt werden soll
+
+
+
+
         RaiseEvent ItemAdd(
             Me, New IniFileListEditEventArgs With {
             .NewItemName = ""})

@@ -4,13 +4,11 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.IO
-
 
 ''' <summary>
 ''' Steuerelement zum Verwalten von INI - Dateien
@@ -19,11 +17,7 @@ Imports System.IO
 <MyDescription("ClassDescriptionIniFile")>
 <ToolboxBitmap(GetType(IniFile), "IniFile.bmp")>
 <ToolboxItem(True)>
-Public Class IniFile
-
-
-    Inherits Component
-
+Public Class IniFile : Inherits Component
 
 #Region "Definition der Variablen"
 
@@ -38,9 +32,7 @@ Public Class IniFile
 
 #End Region
 
-
 #Region "Definition der Ereignisse"
-
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Dateiinhalt geändert hat.
@@ -48,20 +40,17 @@ Public Class IniFile
     <MyDescription("FileContentChangedDescription")>
     Public Event FileContentChanged(sender As Object, e As EventArgs)
 
-
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Dateikommentar geändert hat.
     ''' </summary>
     <MyDescription("FileCommentChangedDescription")>
     Public Event FileCommentChanged(sender As Object, e As EventArgs)
 
-
     ''' <summary>
     ''' Wird ausgelöst wenn sich die Liste der Abschnitte geändert hat.
     ''' </summary>
     <MyDescription("SectionsChangedDescription")>
     Public Event SectionsChanged(sender As Object, e As EventArgs)
-
 
     ''' <summary>
     ''' Wird ausgelöst wenn beim anlegen eines neuen Abschnitts oder 
@@ -70,13 +59,11 @@ Public Class IniFile
     <MyDescription("SectionNameExistDescription")>
     Public Event SectionNameExist(sender As Object, e As EventArgs)
 
-
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Abschnittskommentar geändert hat.
     ''' </summary>
     <MyDescription("SectionCommentChangedDescription")>
     Public Event SectionCommentChanged(sender As Object, e As EventArgs)
-
 
     ''' <summary>
     ''' Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder 
@@ -85,13 +72,11 @@ Public Class IniFile
     <MyDescription("EntrynameExistDescription")>
     Public Event EntrynameExist(sender As Object, e As EventArgs)
 
-
     ''' <summary>
     ''' wird ausgelöst wenn sich die Liste der Einträge geändert hat.
     ''' </summary>
     <MyDescription("EntrysChangedDescription")>
     Public Event EntrysChanged(sender As Object, e As EventArgs)
-
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Wert eines Eintrags in einem Abschnitt geändert hat.
@@ -99,9 +84,7 @@ Public Class IniFile
     <MyDescription("EntryValueChangedDescription")>
     Public Event EntryValueChanged(sender As Object, e As EventArgs)
 
-
 #End Region
-
 
 #Region "Definition neuer Eigenschaften"
 
@@ -120,7 +103,6 @@ Public Class IniFile
         End Set
     End Property
 
-
     ''' <summary>
     ''' Gibt den Pfad und den Name zur INI-Datei zurück oder legt diesen fest.
     ''' </summary>
@@ -135,7 +117,6 @@ Public Class IniFile
             Me._FilePath = Value
         End Set
     End Property
-
 
     ''' <summary>
     ''' Legt das Speicherverhalten der Klasse fest.
@@ -155,12 +136,9 @@ Public Class IniFile
         End Set
     End Property
 
-
 #End Region
 
-
 #Region "Definition der öffentlichen Funktionen"
-
 
     ''' <summary>
     ''' Erstellt eine neue Instanz dieser Klasse.
@@ -171,8 +149,7 @@ Public Class IniFile
         Me.New(
         My.Computer.FileSystem.SpecialDirectories.MyDocuments &
         IO.Path.DirectorySeparatorChar &
-        My.Resources.DefaultFileName,
-        CChar(My.Resources.DefaultCommentPrefix))
+        My.Resources.DefaultFileName, CChar(My.Resources.DefaultCommentPrefix))
 
     End Sub
 
@@ -195,18 +172,14 @@ Public Class IniFile
 
         ' Standardwerte festlegen
         Me.CreateStandardValues(FilePath, CommentPrefix)
-
         ' anfänglichen Dateiinhalt erzeugen
         Me.CreateTemplate()
-
         ' eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-
         ' Dateiinhalt analysieren
         Me.ParseFileContent()
 
     End Sub
-
 
     ''' <summary>
     ''' Lädt die angegebene Datei
@@ -230,7 +203,6 @@ Public Class IniFile
 
     End Sub
 
-
     ''' <summary>
     ''' Lädt die Datei die in <see cref="FilePath"/> angegeben wurde.
     ''' </summary>
@@ -240,10 +212,8 @@ Public Class IniFile
         Try
 
             Me._FileContent = IO.File.ReadAllLines(Me._FilePath)
-
             ' Dateiinhalt analysieren
             Me.ParseFileContent()
-
             ' Ereignis auslösen
             RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -258,7 +228,6 @@ Public Class IniFile
         End Try
 
     End Sub
-
 
     ''' <summary>
     ''' Speichert die angegebene Datei.
@@ -282,7 +251,6 @@ Public Class IniFile
 
     End Sub
 
-
     ''' <summary>
     ''' Speichert die in <see cref="FilePath"/> angegebene Datei.
     ''' </summary>
@@ -293,7 +261,6 @@ Public Class IniFile
 
     End Sub
 
-
     ''' <summary>
     ''' Gibt den Dateiinhalt zurück
     ''' </summary>
@@ -303,7 +270,6 @@ Public Class IniFile
 
     End Function
 
-
     ''' <summary>
     ''' Gibt den Dateikommentar zurück
     ''' </summary>
@@ -312,7 +278,6 @@ Public Class IniFile
         Return Me._FileComment.ToArray
 
     End Function
-
 
     ''' <summary>
     ''' Setzt den Dateikommentar.
@@ -324,13 +289,10 @@ Public Class IniFile
 
         ' alten Dateikommentar löschen
         Me._FileComment.Clear()
-
         ' neuen Dateikommentar übenehmen
         Me._FileComment.AddRange(CommentLines)
-
         ' Dateiinhalt neu erzeugen 
         Me.CreateFileContent()
-
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
 
@@ -354,7 +316,6 @@ Public Class IniFile
 
     End Function
 
-
     ''' <summary>
     ''' Gibt die Namen der Einträge eines Abschnitts zurück
     ''' </summary>
@@ -368,7 +329,6 @@ Public Class IniFile
 
         'Variable für Rückgabewert
         Dim result() As String = Nothing
-
         'wenn Abschnitt existiert -> Eintagsliste erstellen
         If Me._Sections.ContainsKey(SectionName) Then
 
@@ -385,7 +345,6 @@ Public Class IniFile
 
     End Function
 
-
     ''' <summary>
     ''' Fügt einen neuen Abschnitt hinzu.
     ''' </summary>
@@ -396,7 +355,6 @@ Public Class IniFile
 
         ' Prüfen ob der Name vorhanden ist
         If Me._Sections.ContainsKey(Name) Then
-
             ' Ereignis auslösen und beenden
             RaiseEvent SectionNameExist(Me, EventArgs.Empty)
             Exit Sub
@@ -405,19 +363,15 @@ Public Class IniFile
 
         ' neuen Abschnitt erstellen
         Me.AddNewSection(Name)
-
         ' Dateiinhalt neu erzeugen 
         Me.CreateFileContent()
-
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-
         ' Ereignisse auslösen
         RaiseEvent SectionsChanged(Me, EventArgs.Empty)
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
-
 
     ''' <summary>
     ''' Fügt einen neuen Eintrag in die Liste der Eintragsnamen ein.
@@ -432,7 +386,6 @@ Public Class IniFile
 
         ' Prüfen ob der Name vorhanden ist
         If Me._Sections.Item(Section).ContainsKey(Name) Then
-
             ' Ereignis auslösen und beenden
             RaiseEvent EntrynameExist(Me, EventArgs.Empty)
             Exit Sub
@@ -441,19 +394,15 @@ Public Class IniFile
 
         ' neuen Eintrag erstellen
         Me.AddNewEntry(Section, Name)
-
         ' Dateiinhalt neu erzeugen 
         Me.CreateFileContent()
-
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-
         ' Ereignisse auslösen
         RaiseEvent EntrysChanged(Me, EventArgs.Empty)
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
-
 
     ''' <summary>
     ''' Benennt einen Abschnitt um.
@@ -468,7 +417,6 @@ Public Class IniFile
 
         ' Ist der neue Name bereits vorhanden?
         If Me._Sections.ContainsKey(NewName) Then
-
             ' Ereignis auslösen und beenden
             RaiseEvent SectionNameExist(Me, EventArgs.Empty)
             Exit Sub
@@ -477,22 +425,17 @@ Public Class IniFile
 
         ' Name-Wert-Paar des Abschnitts umbenennen
         Me.RenameSectionValue(OldName, NewName)
-
         ' Name-Kommentar-Paar umbenennen
         Me.RenameSectionComment(OldName, NewName)
-
         ' Dateiinhalt neu erzeugen 
         Me.CreateFileContent()
-
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-
         ' Ereignisse auslösen
         RaiseEvent SectionsChanged(Me, EventArgs.Empty)
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
-
 
     ''' <summary>
     ''' Benennt einen Eintrag in einem Abschnitt um.
@@ -507,7 +450,6 @@ Public Class IniFile
 
         ' Ist der neue Name bereits vorhanden? 
         If Me._Sections.Item(Section).ContainsKey(NewName) Then
-
             ' Ereignis auslösen und beenden
             RaiseEvent EntrynameExist(Me, EventArgs.Empty)
             Exit Sub
@@ -516,19 +458,15 @@ Public Class IniFile
 
         ' Name-Wert-Paar des Eintrags umbenennen
         Me.RenameEntryvalue(Section, Oldname, NewName)
-
         ' Dateiinhalt neu erzeugen 
         Me.CreateFileContent()
-
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-
         ' Ereignisse auslösen
         RaiseEvent EntrysChanged(Me, EventArgs.Empty)
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
-
 
     ''' <summary>
     ''' Löscht einen Abschnitt
@@ -541,19 +479,15 @@ Public Class IniFile
         ' Abschnitt aus den Listen für Abschnitte und Abschnittskommentare entfernen
         Dim unused = Me._Sections.Remove(Name)
         Dim unused1 = Me._SectionsComments.Remove(Name)
-
         ' Dateiinhalt neu erzeugen 
         Me.CreateFileContent()
-
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-
         ' Ereignisse auslösen
         RaiseEvent SectionsChanged(Me, EventArgs.Empty)
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
-
 
     ''' <summary>
     ''' Löscht einen Eintrag aus einem Abschnitt.
@@ -568,19 +502,15 @@ Public Class IniFile
 
         ' Eintrag aus der Liste der Einträge entfernen
         Dim unused = Me._Sections.Item(Section).Remove(Entry)
-
         ' Dateiinhalt neu erzeugen 
         Me.CreateFileContent()
-
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-
         ' Ereignisse auslösen
         RaiseEvent EntrysChanged(Me, EventArgs.Empty)
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
-
 
     ''' <summary>
     ''' Gibt die Kommentarzeilen für einen Abschnitt zurück
@@ -595,17 +525,14 @@ Public Class IniFile
 
         ' Variable für Rückgabewert
         Dim result() As String = Nothing
-
         ' wenn Abschnitt einen Kommentar enthält -> Kommentar holen 
         If Me._SectionsComments.ContainsKey(SectionName) Then
             result = Me._SectionsComments.Item(SectionName).ToArray
         End If
-
         ' Kommentar oder Nothing zurück
         Return result
 
     End Function
-
 
     ''' <summary>
     ''' Gibt den Wert eines Eintrags aus einem Abschnitt zurück
@@ -623,7 +550,6 @@ Public Class IniFile
         Return Me._Sections.Item(Section).Item(Entry)
     End Function
 
-
     ''' <summary>
     ''' Setzt den Kommentar für einen Abschnitt.
     ''' </summary>
@@ -638,19 +564,15 @@ Public Class IniFile
         ' geänderten Abschnittskommentar übernehmen
         Me._SectionsComments.Item(Name).Clear()
         Me._SectionsComments.Item(Name).AddRange(CommentLines)
-
         ' Dateiinhalt neu erzeugen 
         Me.CreateFileContent()
-
         ' eventuell Änderung speichern
         If Me._AutoSave Then Me.SaveFile()
-
         ' Ereignisse auslösen
         RaiseEvent SectionCommentChanged(Me, EventArgs.Empty)
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
-
 
     ''' <summary>
     ''' Setzt den Wert eines Eintrags in einem Abschnitt.
@@ -668,25 +590,19 @@ Public Class IniFile
 
         ' geänderten Wert übenehmen
         Me._Sections.Item(Section).Item(Entry) = Value
-
         ' Dateiinhalt neu erzeugen 
         Me.CreateFileContent()
-
         ' eventuell Änderung speichern
         If Me._AutoSave Then Me.SaveFile()
-
         ' Ereignisse auslösen
         RaiseEvent EntryValueChanged(Me, EventArgs.Empty)
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
 
-
 #End Region
 
-
 #Region "Definition der internen Funktionen"
-
 
     ''' <summary>
     ''' Fügt einen neuen Abschnitt hinzu.
@@ -698,12 +614,10 @@ Public Class IniFile
 
         ' Name-Wert-Paar hinzufügen
         Me._Sections.Add(Name, New Dictionary(Of String, String))
-
         ' Name-Kommentar-Paar hinzufügen
         Me._SectionsComments.Add(Name, New List(Of String))
 
     End Sub
-
 
     ''' <summary>
     ''' fügt einen neuen Eintrag in einen Abschnitt ein.
@@ -717,7 +631,6 @@ Public Class IniFile
     Private Sub AddNewEntry(Section As String, Name As String)
         Me._Sections.Item(Section).Add(Name, $"")
     End Sub
-
 
     ''' <summary>
     ''' Benennt das Key-Comment-Paar eines Abschnitts um.
@@ -738,7 +651,6 @@ Public Class IniFile
 
     End Sub
 
-
     ''' <summary>
     ''' Benennt das Key-Value-Paar eines Abschnitts um.
     ''' </summary>
@@ -757,7 +669,6 @@ Public Class IniFile
         Me._Sections.Add(NewName, oldvalue)
 
     End Sub
-
 
     ''' <summary>
     ''' Benennt einen Eintrag in einem Abschnitt um.
@@ -781,7 +692,6 @@ Public Class IniFile
 
     End Sub
 
-
     ''' <summary>
     ''' Legt die anfänglichen Standardwerte fest
     ''' </summary>
@@ -800,7 +710,6 @@ Public Class IniFile
 
     End Sub
 
-
     ''' <summary>
     ''' Erzeugt den Dateiinhalt
     ''' </summary>
@@ -808,49 +717,39 @@ Public Class IniFile
 
         ' Zeilenliste
         Dim filecontent As New List(Of String)
-
         ' Dateikommentarzeilen anfügen
         For Each line As String In Me._FileComment
             filecontent.Add(Me._CommentPrefix & $" " & line)
         Next
-
         ' Leerzeile anfügen
         filecontent.Add($"")
-
         ' alle Abschnitte durchlaufen
         For Each sectionname As String In Me._Sections.Keys
 
             ' Abschnittsname hinzufügen
             filecontent.Add($"[" & sectionname & $"]")
-
             ' Zeilen des Abschnittskommentars durchlaufen
             For Each commentline As String In Me._SectionsComments.Item(sectionname)
-
                 ' Kommentarzeile einfügen
                 filecontent.Add(Me._CommentPrefix & $" " & commentline)
 
             Next
-
             ' alle Eintragszeilen durchlaufen
             Dim entryline As String
             For Each entryname As String In Me._Sections.Item(sectionname).Keys
-
                 ' Eintragszeile erzeugen und einfügen
                 entryline = entryname & $" = " & Me._Sections.Item(sectionname).Item(entryname)
                 filecontent.Add(entryline)
 
             Next
-
             ' Leerzeile anfügen
             filecontent.Add($"")
 
         Next
-
         ' Dateiinhalt erzeugen
         Me._FileContent = filecontent.ToArray
 
     End Sub
-
 
     ''' <summary>
     ''' Erzeugt den Beispielinhalt der Datei
@@ -875,7 +774,6 @@ Public Class IniFile
 
     End Sub
 
-
     ''' <summary>
     ''' analysiert den Dateiinhalt
     ''' </summary>
@@ -883,23 +781,18 @@ Public Class IniFile
 
         ' Variablen initialisieren
         Me.InitParseVariables()
-
         ' aktueller Abschnittsname
         Me._CurrentSectionName = $""
-
         ' alle Zeilen des Dateiinhaltes durchlaufen
         For Each line As String In Me._FileContent
-
             ' Leerzeichen am Anfang und Ende der Zeile entfernen
             line = line.Trim
-
             ' aktuelle Zeile analysieren
             Me.LineAnalyse(line)
 
         Next
 
     End Sub
-
 
     ''' <summary>
     ''' Analysiert eine Zeile.
@@ -910,25 +803,21 @@ Public Class IniFile
     Private Sub LineAnalyse(LineContent As String)
 
         If Me._CurrentSectionName Is $"" And LineContent.StartsWith(Me._CommentPrefix) Then
-
             ' noch kein Abschnitt gefunden und Zeile startet mit Prefix ->
             ' Dateikommentar hinzufügen
             Me.AddFileCommentLine(LineContent)
 
         ElseIf LineContent.StartsWith($"[") And LineContent.EndsWith($"]") Then
-
             ' Zeile enthält eckige Klammern ->
             ' Abschnittsname hinzufügen
             Me.AddSectionNameLine(LineContent)
 
         ElseIf Me._CurrentSectionName IsNot $"" And LineContent.StartsWith(Me._CommentPrefix) Then
-
             ' aktueller Abschnitt und Zeile startet mit Prefix ->
             ' Abschnittskommentar hinzufügen
             Me.AddSectionCommentLine(LineContent)
 
         ElseIf Me._CurrentSectionName IsNot $"" And LineContent.Contains($"=") Then
-
             ' aktueller Abschnitt und Zeile enthält Gleichheitszeichen ->
             ' Eintrag hinzufügen
             Me.AddEntryLine(LineContent)
@@ -936,7 +825,6 @@ Public Class IniFile
         End If
 
     End Sub
-
 
     ''' <summary>
     ''' fügt einen Eintrag hinzu
@@ -949,12 +837,10 @@ Public Class IniFile
         ' Eintagszeile in Name und Wert trennen
         Dim name As String = LineContent.Split("="c)(0).Trim
         Dim value As String = LineContent.Split("="c)(1).Trim
-
         ' Eintrag hinzufügen
         Me._Sections.Item(Me._CurrentSectionName).Add(name, value)
 
     End Sub
-
 
     ''' <summary>
     ''' fügt eine Abschnittskommentarzeile hinzu
@@ -966,12 +852,10 @@ Public Class IniFile
 
         ' Prefix und eventuelle Leerzeichen am Anfang und Ende entfernen
         Dim line As String = LineContent.Substring(1, LineContent.Length - 1).Trim
-
         ' Kommentarzeile hinzufügen
         Me._SectionsComments.Item(Me._CurrentSectionName).Add(line)
 
     End Sub
-
 
     ''' <summary>
     ''' fügt einen Abschnittsname hinzu
@@ -983,16 +867,13 @@ Public Class IniFile
 
         ' Klammern und eventuelle Leerzeichen am Anfang und Ende entfernen
         Dim line = LineContent.Substring(1, LineContent.Length - 2).Trim
-
         ' Abschnittsname merken
         Me._CurrentSectionName = line
-
         ' neuen Abschnitt erstellen
         Me._Sections.Add(Me._CurrentSectionName, New Dictionary(Of String, String))
         Me._SectionsComments.Add(Me._CurrentSectionName, New List(Of String))
 
     End Sub
-
 
     ''' <summary>
     ''' fügt eine Dateikommentarzeile hinzu
@@ -1004,12 +885,10 @@ Public Class IniFile
 
         ' Prefix und eventuelle Leerzeichen am Anfang und Ende entfernen
         Dim line = LineContent.Substring(1, LineContent.Length - 1).Trim
-
         ' Zeile in den Dateikommentar übernehmen
         Me._FileComment.Add(line)
 
     End Sub
-
 
     ''' <summary>
     ''' Initialisiert die Variablen für den Parser
@@ -1022,8 +901,6 @@ Public Class IniFile
 
     End Sub
 
-
 #End Region
-
 
 End Class

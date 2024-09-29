@@ -266,6 +266,11 @@ Public Class FormIniFileControl
         Debug.Print($"SectionsListEdit_ItemRename: Der Eintrag {e.SelectedItem} soll in {e.NewItemName} umbenannt werden")
 #End If
 
+        Me.IniFile.RenameSection(e.SelectedItem, e.NewItemName)
+
+
+
+
     End Sub
 
     Private Sub SectionsListEdit_SelectedItemChanged(sender As Object, e As IniFileListEditEventArgs) Handles _
