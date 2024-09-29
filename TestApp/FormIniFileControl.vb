@@ -241,6 +241,9 @@ Public Class FormIniFileControl
 
 #Region "Ereignisse von SectionsListEdit"
 
+    ''' <summary>
+    ''' Wird aufgerufen wenn ein Abschnitt hinzugefügt werden soll.
+    ''' </summary>
     Private Sub SectionsListEdit_ItemAdd(sender As Object, e As IniFileListEditEventArgs) Handles _
         SectionsListEdit.ItemAdd
 
@@ -250,6 +253,9 @@ Public Class FormIniFileControl
 
     End Sub
 
+    ''' <summary>
+    ''' Wird aufgerufen wenn ein Abschnitt gelöscht werden soll.
+    ''' </summary>
     Private Sub SectionsListEdit_ItemRemove(sender As Object, e As IniFileListEditEventArgs) Handles _
         SectionsListEdit.ItemRemove
 
@@ -259,6 +265,9 @@ Public Class FormIniFileControl
 
     End Sub
 
+    ''' <summary>
+    ''' Wird aufgerufen wenn ein Abschnitt umbenannt werden soll.
+    ''' </summary>
     Private Sub SectionsListEdit_ItemRename(sender As Object, e As IniFileListEditEventArgs) Handles _
         SectionsListEdit.ItemRename
 
@@ -266,13 +275,14 @@ Public Class FormIniFileControl
         Debug.Print($"SectionsListEdit_ItemRename: Der Eintrag {e.SelectedItem} soll in {e.NewItemName} umbenannt werden")
 #End If
 
+        ' Abschnitt umbenennen
         Me.IniFile.RenameSection(e.SelectedItem, e.NewItemName)
-
-
-
 
     End Sub
 
+    ''' <summary>
+    ''' wird aufgerufen wenn sich der gewählte Abschnitt geändert hat.
+    ''' </summary>
     Private Sub SectionsListEdit_SelectedItemChanged(sender As Object, e As IniFileListEditEventArgs) Handles _
         SectionsListEdit.SelectedItemChanged
 
