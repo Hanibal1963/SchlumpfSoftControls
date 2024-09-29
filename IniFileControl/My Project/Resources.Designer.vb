@@ -318,6 +318,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Setzt die Elemente der Listbox oder gibt diese zurück. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ListeditListItemsDescription() As String
+            Get
+                Return ResourceManager.GetString("ListeditListItemsDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Wird ausgelöst wenn sich der gewählte Eintrag geändert hat. ähnelt.
         '''</summary>
         Friend ReadOnly Property ListEditSelectedItemChangedDescription() As String

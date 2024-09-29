@@ -186,6 +186,9 @@
   <data name="ListEditItemRenameDescription" xml:space="preserve">
     <value>Is triggered if an entry is to be renamed.</value>
   </data>
+  <data name="ListeditListItemsDescription" xml:space="preserve">
+    <value>Set the elements of the list box or return it.</value>
+  </data>
   <data name="ListEditSelectedItemChangedDescription" xml:space="preserve">
     <value>Is triggered if the selected entry has changed.</value>
   </data>

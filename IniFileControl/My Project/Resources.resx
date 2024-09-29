@@ -202,6 +202,9 @@
   <data name="ListEditItemRenameDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn ein Eintrag umbenannt werden soll.</value>
   </data>
+  <data name="ListeditListItemsDescription" xml:space="preserve">
+    <value>Setzt die Elemente der Listbox oder gibt diese zurück.</value>
+  </data>
   <data name="ListEditSelectedItemChangedDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.</value>
   </data>
