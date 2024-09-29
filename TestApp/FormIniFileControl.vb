@@ -6,7 +6,11 @@
 
 Imports System.Globalization
 Imports System.Threading
+Imports SchlumpfSoft.Controls.IniFileControl
 
+''' <summary>
+''' Formular zum Anzeigen und Bearbeiten einer INI-Datei.
+''' </summary>
 Public Class FormIniFileControl
 
 #Region "Definition der internen Variablen"
@@ -230,6 +234,46 @@ Public Class FormIniFileControl
 
         ' Dateikommentar speichern
         Me.IniFile.SetFileComment(Me.FileCommentEdit.Comment)
+
+    End Sub
+
+#End Region
+
+#Region "Ereignisse von SectionsListEdit"
+
+    Private Sub SectionsListEdit_ItemAdd(sender As Object, e As IniFileListEditEventArgs) Handles _
+        SectionsListEdit.ItemAdd
+
+#If DEBUG Then
+        Debug.Print($"SectionsListEdit_ItemAdd: Der Eintrag {e.NewItemName} soll hinzugefügt werden.")
+#End If
+
+    End Sub
+
+    Private Sub SectionsListEdit_ItemRemove(sender As Object, e As IniFileListEditEventArgs) Handles _
+        SectionsListEdit.ItemRemove
+
+#If DEBUG Then
+        Debug.Print($"SectionsListEdit_ItemRemove: Der Eintrag {e.SelectedItem} soll gelöscht werden")
+#End If
+
+    End Sub
+
+    Private Sub SectionsListEdit_ItemRename(sender As Object, e As IniFileListEditEventArgs) Handles _
+        SectionsListEdit.ItemRename
+
+#If DEBUG Then
+        Debug.Print($"SectionsListEdit_ItemRename: Der Eintrag {e.SelectedItem} soll in {e.NewItemName} umbenannt werden")
+#End If
+
+    End Sub
+
+    Private Sub SectionsListEdit_SelectedItemChanged(sender As Object, e As IniFileListEditEventArgs) Handles _
+        SectionsListEdit.SelectedItemChanged
+
+#If DEBUG Then
+        Debug.Print($"SectionsListEdit_SelectedItemChanged: Die Auswahl hat sich auf {e.SelectedItem} geändert")
+#End If
 
     End Sub
 

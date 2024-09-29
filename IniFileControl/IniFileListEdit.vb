@@ -266,15 +266,24 @@ Public Class IniFileListEdit : Inherits UserControl
     End Sub
 
     Private Sub DeleteItem()
-        Throw New NotImplementedException()
+        'TODO: Abfrage ob Eintrag wirklich gelöscht werden soll
+        RaiseEvent ItemRemove(
+            Me, New IniFileListEditEventArgs With {
+            .SelectedItem = Me._SelectedItem})
     End Sub
 
     Private Sub RenameItem()
-        Throw New NotImplementedException()
+        'TODO: Abfrage ob Eintrag wirklich umbenannt werden soll
+        RaiseEvent ItemRename(
+            Me, New IniFileListEditEventArgs With {
+            .SelectedItem = Me._SelectedItem, .NewItemName = ""})
     End Sub
 
     Private Sub AddNewItem()
-        Throw New NotImplementedException()
+        'TODO: Abfrage ob Eintrag wirklich hinzugefügt werden soll
+        RaiseEvent ItemAdd(
+            Me, New IniFileListEditEventArgs With {
+            .NewItemName = ""})
     End Sub
 
 #End Region
