@@ -114,6 +114,13 @@
     <Compile Include="IniFileListEdit.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="IniFileListEditEventArgs.vb" />
+    <Compile Include="IniFileRenameDialog.Designer.vb">
+      <DependentUpon>IniFileRenameDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IniFileRenameDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -168,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IniFileListEdit.resx">
       <DependentUpon>IniFileListEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileRenameDialog.en-US.resx">
+      <DependentUpon>IniFileRenameDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileRenameDialog.resx">
+      <DependentUpon>IniFileRenameDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.en-US.resx">
       <SubType>Designer</SubType>

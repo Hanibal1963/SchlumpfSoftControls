@@ -45,28 +45,28 @@ Public Class IniFileListEdit : Inherits UserControl
     ''' </summary>
     <MyDescription("ListEditItemAddDescription")>
     <Category("ListEdit")>
-    Public Event ItemAdd(sender As Object, e As EventArgs)
+    Public Event ItemAdd(sender As Object, e As IniFileListEditEventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag umbenannt werden soll.
     ''' </summary>
     <MyDescription("ListEditItemRenameDescription")>
     <Category("ListEdit")>
-    Public Event ItemRename(sender As Object, e As EventArgs)
+    Public Event ItemRename(sender As Object, e As IniFileListEditEventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag gelöscht werden soll.
     ''' </summary>
     <MyDescription("ListEditItemRemoveDescription")>
     <Category("ListEdit")>
-    Public Event ItemRemove(sender As Object, e As EventArgs)
+    Public Event ItemRemove(sender As Object, e As IniFileListEditEventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.
     ''' </summary>
     <MyDescription("ListEditSelectedItemChangedDescription")>
     <Category("ListEdit")>
-    Public Event SelectedItemChanged(sender As Object, e As EventArgs)
+    Public Event SelectedItemChanged(sender As Object, e As IniFileListEditEventArgs)
 
 #End Region
 
@@ -133,20 +133,6 @@ Public Class IniFileListEdit : Inherits UserControl
 
 #End Region
 
-#Region "ausgeblendete Eigenschaften"
-
-    ''' <summary>
-    ''' Gibt den ausgewählten Eintrag oder leer zurück.
-    ''' </summary>
-    <Browsable(False)>
-    Public ReadOnly Property SelectedItem As String
-        Get
-            Return Me._SelectedItem
-        End Get
-    End Property
-
-#End Region
-
 #Region "Ereignisse der internen ListBox"
 
     ''' <summary>
@@ -163,7 +149,9 @@ Public Class IniFileListEdit : Inherits UserControl
         End If
 
         'Event auslösen
-        RaiseEvent SelectedItemChanged(Me, EventArgs.Empty)
+        RaiseEvent SelectedItemChanged(
+            Me, New IniFileListEditEventArgs With {
+            .SelectedItem = Me._SelectedItem})
 
     End Sub
 
@@ -181,20 +169,21 @@ Public Class IniFileListEdit : Inherits UserControl
 
         'Button auswerten
         If sender Is Me.ButtonAdd Then
-            'Ereignis zu hinzufügen eines Eintrags auslösen
-            RaiseEvent ItemAdd(Me, EventArgs.Empty)
+            ' Eintrag hinzufügen
+            Me.AddNewItem()
 
         ElseIf sender Is Me.ButtonRename Then
-            'Ereignis zum umbenennen eines Eintrags auslösen
-            RaiseEvent ItemRename(Me, EventArgs.Empty)
+            ' Eintrag umbenennen
+            Me.RenameItem()
 
         ElseIf sender Is Me.ButtonDelete Then
-            'Ereignis zum löschen eines Eintrags auslösen
-            RaiseEvent ItemRemove(Me, EventArgs.Empty)
+            ' Eintrag löschen
+            Me.DeleteItem()
 
         End If
 
     End Sub
+
 
 #End Region
 
@@ -227,7 +216,7 @@ Public Class IniFileListEdit : Inherits UserControl
 #Region "Definition der internen Funktionen"
 
     ''' <summary>
-    ''' Setzt die Eigenschaft <see cref="SelectedItem"/> auf den Gewählten Eintrrag
+    ''' Setzt die Eigenschaft <see cref="_SelectedItem"/> auf den Gewählten Eintrag
     ''' </summary>
     Private Sub SetPropertySelectedItem()
 
@@ -240,7 +229,7 @@ Public Class IniFileListEdit : Inherits UserControl
     End Sub
 
     ''' <summary>
-    ''' Setzt die Eigenschaft <see cref="SelectedItem"/> auf leer.
+    ''' Setzt die Eigenschaft <see cref="_SelectedItem"/> auf leer.
     ''' </summary>
     Private Sub ClearPropertySelectedItem()
 
@@ -270,8 +259,22 @@ Public Class IniFileListEdit : Inherits UserControl
         Me.ButtonDelete.Enabled = False
         Me.ButtonRename.Enabled = False
         'Event auslösen
-        RaiseEvent SelectedItemChanged(Me, EventArgs.Empty)
+        RaiseEvent SelectedItemChanged(
+            Me, New IniFileListEditEventArgs With {
+            .SelectedItem = Me._SelectedItem})
 
+    End Sub
+
+    Private Sub DeleteItem()
+        Throw New NotImplementedException()
+    End Sub
+
+    Private Sub RenameItem()
+        Throw New NotImplementedException()
+    End Sub
+
+    Private Sub AddNewItem()
+        Throw New NotImplementedException()
     End Sub
 
 #End Region
