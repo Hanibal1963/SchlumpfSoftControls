@@ -272,11 +272,26 @@ Public Class IniFileListEdit : Inherits UserControl
             .SelectedItem = Me._SelectedItem})
     End Sub
 
+    ''' <summary>
+    ''' Zeigt den Dialog zum Umbenennen an und wertet das Ergebnis aus.
+    ''' </summary>
     Private Sub RenameItem()
-        'TODO: Abfrage ob Eintrag wirklich umbenannt werden soll
-        RaiseEvent ItemRename(
-            Me, New IniFileListEditEventArgs With {
-            .SelectedItem = Me._SelectedItem, .NewItemName = ""})
+
+        ' Dialog initialisieren
+        Dim renamedlg As New IniFileRenameDialog With {.OldItemValue = Me._SelectedItem}
+        ' Variable für neuen Namen
+        Dim newname As String = $""
+        ' Dialog anzeigen und Ergebnis abfragen
+        Dim result As DialogResult = renamedlg.ShowDialog(Me)
+
+        ' Ergebnis auswerten
+        If result = DialogResult.Yes Then
+            ' wenn Antwort Ja -> Event auslösen
+            RaiseEvent ItemRename(Me, New IniFileListEditEventArgs With {
+                .SelectedItem = Me._SelectedItem,
+                .NewItemName = renamedlg.NewItemValue})
+        End If
+
     End Sub
 
     Private Sub AddNewItem()
