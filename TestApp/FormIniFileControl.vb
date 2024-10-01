@@ -251,6 +251,9 @@ Public Class FormIniFileControl
         Debug.Print($"SectionsListEdit_ItemAdd: Der Eintrag {e.NewItemName} soll hinzugefügt werden.")
 #End If
 
+        ' Abschnitt hinzufügen
+        Me.IniFile.AddSection(e.NewItemName)
+
     End Sub
 
     ''' <summary>
@@ -262,6 +265,10 @@ Public Class FormIniFileControl
 #If DEBUG Then
         Debug.Print($"SectionsListEdit_ItemRemove: Der Eintrag {e.SelectedItem} soll gelöscht werden")
 #End If
+
+
+
+
 
     End Sub
 
@@ -289,6 +296,11 @@ Public Class FormIniFileControl
 #If DEBUG Then
         Debug.Print($"SectionsListEdit_SelectedItemChanged: Die Auswahl hat sich auf {e.SelectedItem} geändert")
 #End If
+
+
+
+
+
 
     End Sub
 
