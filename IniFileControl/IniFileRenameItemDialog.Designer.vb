@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class IniFileRenameDialog
+Partial Class IniFileRenameItemDialog
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -23,11 +23,11 @@ Partial Class IniFileRenameDialog
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim TableLayoutPanel As System.Windows.Forms.TableLayoutPanel
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IniFileRenameDialog))
-        Me.Button_Yes = New System.Windows.Forms.Button()
-        Me.Button_No = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IniFileRenameItemDialog))
+        Me.ButtonYes = New System.Windows.Forms.Button()
+        Me.ButtonNo = New System.Windows.Forms.Button()
         Me.LabelFrage = New System.Windows.Forms.Label()
-        Me.TextBoxNewValue = New System.Windows.Forms.TextBox()
+        Me.TextBox = New System.Windows.Forms.TextBox()
         TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         TableLayoutPanel.SuspendLayout()
         Me.SuspendLayout()
@@ -35,55 +35,55 @@ Partial Class IniFileRenameDialog
         'TableLayoutPanel
         '
         resources.ApplyResources(TableLayoutPanel, "TableLayoutPanel")
-        TableLayoutPanel.Controls.Add(Me.Button_Yes, 0, 0)
-        TableLayoutPanel.Controls.Add(Me.Button_No, 1, 0)
+        TableLayoutPanel.Controls.Add(Me.ButtonYes, 0, 0)
+        TableLayoutPanel.Controls.Add(Me.ButtonNo, 1, 0)
         TableLayoutPanel.Name = "TableLayoutPanel"
         '
-        'Button_Yes
+        'ButtonYes
         '
-        resources.ApplyResources(Me.Button_Yes, "Button_Yes")
-        Me.Button_Yes.DialogResult = System.Windows.Forms.DialogResult.Yes
-        Me.Button_Yes.Name = "Button_Yes"
+        resources.ApplyResources(Me.ButtonYes, "ButtonYes")
+        Me.ButtonYes.DialogResult = System.Windows.Forms.DialogResult.Yes
+        Me.ButtonYes.Name = "ButtonYes"
         '
-        'Button_No
+        'ButtonNo
         '
-        resources.ApplyResources(Me.Button_No, "Button_No")
-        Me.Button_No.DialogResult = System.Windows.Forms.DialogResult.No
-        Me.Button_No.Name = "Button_No"
+        resources.ApplyResources(Me.ButtonNo, "ButtonNo")
+        Me.ButtonNo.DialogResult = System.Windows.Forms.DialogResult.No
+        Me.ButtonNo.Name = "ButtonNo"
         '
         'LabelFrage
         '
         resources.ApplyResources(Me.LabelFrage, "LabelFrage")
         Me.LabelFrage.Name = "LabelFrage"
         '
-        'TextBoxNewValue
+        'TextBox
         '
-        Me.TextBoxNewValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.TextBoxNewValue, "TextBoxNewValue")
-        Me.TextBoxNewValue.Name = "TextBoxNewValue"
+        Me.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.TextBox, "TextBox")
+        Me.TextBox.Name = "TextBox"
         '
-        'IniFileRenameDialog
+        'IniFileRenameItemDialog
         '
-        Me.AcceptButton = Me.Button_Yes
+        Me.AcceptButton = Me.ButtonYes
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.Button_No
+        Me.CancelButton = Me.ButtonNo
         Me.ControlBox = False
-        Me.Controls.Add(Me.TextBoxNewValue)
+        Me.Controls.Add(Me.TextBox)
         Me.Controls.Add(Me.LabelFrage)
         Me.Controls.Add(TableLayoutPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "IniFileRenameDialog"
+        Me.Name = "IniFileRenameItemDialog"
         Me.ShowInTaskbar = False
         TableLayoutPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Private WithEvents Button_Yes As System.Windows.Forms.Button
-    Private WithEvents Button_No As System.Windows.Forms.Button
+    Private WithEvents ButtonYes As System.Windows.Forms.Button
+    Private WithEvents ButtonNo As System.Windows.Forms.Button
     Private WithEvents LabelFrage As System.Windows.Forms.Label
-    Private WithEvents TextBoxNewValue As System.Windows.Forms.TextBox
+    Private WithEvents TextBox As System.Windows.Forms.TextBox
 End Class

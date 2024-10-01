@@ -120,10 +120,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Rename the element</value>
   </data>
-  <data name="Button_No.Text" xml:space="preserve">
+  <data name="ButtonNo.Text" xml:space="preserve">
     <value>No</value>
   </data>
-  <data name="Button_Yes.Text" xml:space="preserve">
+  <data name="ButtonYes.Text" xml:space="preserve">
     <value>Yes</value>
   </data>
   <data name="LabelFrage.Text" xml:space="preserve">

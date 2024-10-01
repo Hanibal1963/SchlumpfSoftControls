@@ -266,6 +266,7 @@ Public Class IniFileListEdit : Inherits UserControl
     End Sub
 
     Private Sub DeleteItem()
+
         'TODO: Abfrage ob Eintrag wirklich gelöscht werden soll
 
 
@@ -282,12 +283,9 @@ Public Class IniFileListEdit : Inherits UserControl
     Private Sub RenameItem()
 
         ' Dialog initialisieren
-        Dim renamedlg As New IniFileRenameDialog With {.OldItemValue = Me._SelectedItem}
-        ' Variable für neuen Namen
-        Dim newname As String = $""
+        Dim renamedlg As New IniFileRenameItemDialog With {.OldItemValue = Me._SelectedItem}
         ' Dialog anzeigen und Ergebnis abfragen
         Dim result As DialogResult = renamedlg.ShowDialog(Me)
-
         ' Ergebnis auswerten
         If result = DialogResult.Yes Then
             ' wenn Antwort Ja -> Event auslösen
@@ -298,15 +296,24 @@ Public Class IniFileListEdit : Inherits UserControl
 
     End Sub
 
+    ''' <summary>
+    ''' Zeigt den Dialog zum Hinzufügen eines neuen Elementes an und wertet das Ergebnis aus.
+    ''' </summary>
     Private Sub AddNewItem()
-        'TODO: Abfrage ob Eintrag wirklich hinzugefügt werden soll
 
+        ' Dialog initialisieren
+        Dim newitemdlg As New IniFileAddItemDialog
 
+        ' Dialog anzeigen und Ergebnis abfragen
+        Dim result As DialogResult = newitemdlg.ShowDialog(Me)
+        ' Ergebnis auswerten
+        If result = DialogResult.OK Then
+            ' wenn Antwort OK -> Event auslösen
+            RaiseEvent ItemAdd(
+           Me, New IniFileListEditEventArgs With {
+           .NewItemName = newitemdlg.NewItemValue})
+        End If
 
-
-        RaiseEvent ItemAdd(
-            Me, New IniFileListEditEventArgs With {
-            .NewItemName = ""})
     End Sub
 
 #End Region

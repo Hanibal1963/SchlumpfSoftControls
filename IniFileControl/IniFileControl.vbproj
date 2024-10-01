@@ -90,6 +90,12 @@
     <Compile Include="IniFile.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="IniFileAddItemDialog.Designer.vb">
+      <DependentUpon>IniFileAddItemDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IniFileAddItemDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IniFileCommentEdit.Designer.vb">
       <DependentUpon>IniFileCommentEdit.vb</DependentUpon>
     </Compile>
@@ -115,10 +121,10 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IniFileListEditEventArgs.vb" />
-    <Compile Include="IniFileRenameDialog.Designer.vb">
-      <DependentUpon>IniFileRenameDialog.vb</DependentUpon>
+    <Compile Include="IniFileRenameItemDialog.Designer.vb">
+      <DependentUpon>IniFileRenameItemDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="IniFileRenameDialog.vb">
+    <Compile Include="IniFileRenameItemDialog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -152,6 +158,12 @@
     <EmbeddedResource Include="IniFile.resx">
       <DependentUpon>IniFile.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IniFileAddItemDialog.en-US.resx">
+      <DependentUpon>IniFileAddItemDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileAddItemDialog.resx">
+      <DependentUpon>IniFileAddItemDialog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IniFileCommentEdit.en-US.resx">
       <DependentUpon>IniFileCommentEdit.vb</DependentUpon>
     </EmbeddedResource>
@@ -176,11 +188,11 @@
     <EmbeddedResource Include="IniFileListEdit.resx">
       <DependentUpon>IniFileListEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IniFileRenameDialog.en-US.resx">
-      <DependentUpon>IniFileRenameDialog.vb</DependentUpon>
+    <EmbeddedResource Include="IniFileRenameItemDialog.en-US.resx">
+      <DependentUpon>IniFileRenameItemDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IniFileRenameDialog.resx">
-      <DependentUpon>IniFileRenameDialog.vb</DependentUpon>
+    <EmbeddedResource Include="IniFileRenameItemDialog.resx">
+      <DependentUpon>IniFileRenameItemDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.en-US.resx">
       <SubType>Designer</SubType>
