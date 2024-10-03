@@ -150,6 +150,7 @@ Public Class FormIniFileControl
         ' Dateiinhalt anzeigen
         Me.ContentView.Lines = Me.IniFile.GetFileContent
         ' Dateikommentar anzeigen
+        Me.FileCommentEdit.SectionName = $""
         Me.FileCommentEdit.Comment = Me.IniFile.GetFileComment
         ' Abschnittsliste anzeigen
         Me.SectionsListEdit.ListItems = Me.IniFile.GetSectionNames
@@ -223,7 +224,7 @@ Public Class FormIniFileControl
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub FileCommentEdit_CommentChanged(sender As Object, e As EventArgs) Handles _
+    Private Sub FileCommentEdit_CommentChanged(sender As Object, e As IniFileCommentEditEventArgs) Handles _
         FileCommentEdit.CommentChanged
 
 #If DEBUG Then
@@ -231,7 +232,7 @@ Public Class FormIniFileControl
 #End If
 
         ' Dateikommentar speichern
-        Me.IniFile.SetFileComment(Me.FileCommentEdit.Comment)
+        Me.IniFile.SetFileComment(e.Comment)
 
     End Sub
 
@@ -294,33 +295,62 @@ Public Class FormIniFileControl
         Debug.Print($"SectionsListEdit_SelectedItemChanged: Die Auswahl hat sich auf {e.SelectedItem} geändert")
 #End If
 
-        ' Wenn Null oder nur Leerzeichen -> nichts tun ansonsten Kommentar und Einträge laden
+        ' Wenn Null oder nur Leerzeichen ->
+        ' Werte der abhängigen Controls löschen ansonsten neue Werte laden
         If String.IsNullOrEmpty(e.SelectedItem) Then
+            ' Werte für SectionCommentEdit löschen
+            Me.SectionCommentEdit.SectionName = $""
+            Me.SectionCommentEdit.Comment = {$""}
+            ' Werte für EntryListEdit löschen
+            Me.EntryListEdit.ListItems = {$""}
 
         Else
+            ' Werte für den Abschnitt in SectionCommentEdit laden
+            Me.SectionCommentEdit.SectionName = e.SelectedItem
             Me.SectionCommentEdit.Comment = Me.IniFile.GetSectionComment(e.SelectedItem)
+            ' Werte für den Abschnitt in EntryListEdit laden
+            Me.EntryListEdit.ListItems = Me.IniFile.GetEntryNames(e.SelectedItem)
 
         End If
 
-
     End Sub
-
 
 #End Region
 
 #Region "Ereignisbehandlungen von SectionCommentEdit"
 
-    Private Sub SectionCommentEdit_CommentChanged(sender As Object, e As EventArgs) Handles _
+    Private Sub SectionCommentEdit_CommentChanged(sender As Object, e As IniFileCommentEditEventArgs) Handles _
         SectionCommentEdit.CommentChanged
 
 #If DEBUG Then
-        Debug.Print($"SectionCommentEdit_CommentChanged: Der Abschnittskommentar hat sich geändert")
+        Debug.Print($"SectionCommentEdit_CommentChanged: Der Abschnittskommentar des Abschnitts {e.Section} hat sich geändert")
 #End If
+
+        Me.IniFile.SetSectionComment(e.Section, e.Comment)
+
+    End Sub
+
+
+#End Region
+
+#Region "Ereignisbehandlungen für EntryListEdit"
+
+    Private Sub EntryListEdit_ItemAdd(sender As Object, e As IniFileListEditEventArgs) Handles EntryListEdit.ItemAdd
+
+    End Sub
+
+    Private Sub EntryListEdit_ItemRemove(sender As Object, e As IniFileListEditEventArgs) Handles EntryListEdit.ItemRemove
+
+    End Sub
+
+    Private Sub EntryListEdit_ItemRename(sender As Object, e As IniFileListEditEventArgs) Handles EntryListEdit.ItemRename
+
+    End Sub
+
+    Private Sub EntryListEdit_SelectedItemChanged(sender As Object, e As IniFileListEditEventArgs) Handles EntryListEdit.SelectedItemChanged
 
     End Sub
 
 #End Region
-
-
 
 End Class
