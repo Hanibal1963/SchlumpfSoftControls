@@ -126,7 +126,7 @@
   <data name="ButtonYes.Text" xml:space="preserve">
     <value>Yes</value>
   </data>
-  <data name="LabelFrage.Text" xml:space="preserve">
+  <data name="Label.Text" xml:space="preserve">
     <value>Do you really want to rename the element "{0}"?
 New value:</value>
   </data>
