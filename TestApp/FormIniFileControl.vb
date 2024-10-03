@@ -156,7 +156,6 @@ Public Class FormIniFileControl
 
     End Sub
 
-
     Private Sub IniFile_SectionsChanged(sender As Object, e As EventArgs) Handles _
         IniFile.SectionsChanged
 
@@ -165,7 +164,6 @@ Public Class FormIniFileControl
 #End If
 
     End Sub
-
 
     Private Sub IniFile_SectionCommentChanged(sender As Object, e As EventArgs) Handles _
         IniFile.SectionCommentChanged
@@ -176,7 +174,6 @@ Public Class FormIniFileControl
 
     End Sub
 
-
     Private Sub IniFile_EntrysChanged(sender As Object, e As EventArgs) Handles _
         IniFile.EntrysChanged
 
@@ -185,7 +182,6 @@ Public Class FormIniFileControl
 #End If
 
     End Sub
-
 
     Private Sub IniFile_EntryValueChanged(sender As Object, e As EventArgs) Handles _
         IniFile.EntryValueChanged
@@ -196,7 +192,6 @@ Public Class FormIniFileControl
 
     End Sub
 
-
     Private Sub IniFile_SectionNameExist(sender As Object, e As EventArgs) Handles _
         IniFile.SectionNameExist
 
@@ -204,8 +199,11 @@ Public Class FormIniFileControl
         Debug.Print($"IniFile_SectionNameExist: Abschnitt existiert")
 #End If
 
-    End Sub
+        MsgBox(My.Resources.IniFile_ErrorMsgSectionNameExist,
+               MsgBoxStyle.Critical And MsgBoxStyle.ApplicationModal,
+               My.Resources.IniFile_MsgBoxTitleError)
 
+    End Sub
 
     Private Sub IniFile_EntrynameExist(sender As Object, e As EventArgs) Handles _
         IniFile.EntrynameExist

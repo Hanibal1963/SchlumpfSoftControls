@@ -378,11 +378,30 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Der gewählte Abschnittsname existiert bereits!
+        '''Bitte wählen sie einen anderen Name. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_ErrorMsgSectionNameExist() As String
+            Get
+                Return ResourceManager.GetString("IniFile_ErrorMsgSectionNameExist", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die INI - Dateien (*.ini)|*.ini ähnelt.
         '''</summary>
         Friend ReadOnly Property IniFile_FileDialogFilter() As String
             Get
                 Return ResourceManager.GetString("IniFile_FileDialogFilter", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Fehler! ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_MsgBoxTitleError() As String
+            Get
+                Return ResourceManager.GetString("IniFile_MsgBoxTitleError", resourceCulture)
             End Get
         End Property
         

@@ -214,6 +214,25 @@
   <data name="DriveWatcherMsgLine6" xml:space="preserve">
     <value>Das Laufwerk {0} wurde entfernt.</value>
   </data>
+  <data name="IniFile_ContentViewTitle" xml:space="preserve">
+    <value>Dateiinhalt:</value>
+  </data>
+  <data name="IniFile_ErrorMsgSectionNameExist" xml:space="preserve">
+    <value>Der gewählte Abschnittsname existiert bereits!
+Bitte wählen sie einen anderen Name.</value>
+  </data>
+  <data name="IniFile_FileDialogFilter" xml:space="preserve">
+    <value>INI - Dateien (*.ini)|*.ini</value>
+  </data>
+  <data name="IniFile_MsgBoxTitleError" xml:space="preserve">
+    <value>Fehler!</value>
+  </data>
+  <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
+    <value>INI - Datei öffnen</value>
+  </data>
+  <data name="IniFile_SaveFileDialogTitle" xml:space="preserve">
+    <value>INI - Datei speichern unter</value>
+  </data>
   <data name="NoAnimationMsg" xml:space="preserve">
     <value>Das Bild kann nicht animiert werden.</value>
   </data>
@@ -271,26 +290,17 @@
   <data name="Shape_ModusItem7" xml:space="preserve">
     <value>gefüllte Ellipse</value>
   </data>
-  <data name="Wizard_NeuerIndex0AlterIndex1" xml:space="preserve">
-    <value>neuer Index: {0} / alter Index: {1}</value>
-  </data>
-  <data name="Wizard_VorDemSeitenwechsel" xml:space="preserve">
-    <value>Vor dem Seitenwechsel</value>
-  </data>
-  <data name="Wizard_NachDemSeitenwechsel" xml:space="preserve">
-    <value>Nach dem Seitenwechsel</value>
-  </data>
-  <data name="Wizard_AssistentenAbgebrochen" xml:space="preserve">
-    <value>Sie haben den Assistenten abgebrochen.</value>
-  </data>
-  <data name="Wizard_AssistenteAbgeschlossen" xml:space="preserve">
-    <value>Sie haben den Assistente abgeschlossen.</value>
-  </data>
   <data name="Wizard_AktionAbgebrochen" xml:space="preserve">
     <value>Aktion abgebrochen</value>
   </data>
   <data name="Wizard_AktionAbgeschlossen" xml:space="preserve">
     <value>Aktion abgeschlossen</value>
+  </data>
+  <data name="Wizard_AssistenteAbgeschlossen" xml:space="preserve">
+    <value>Sie haben den Assistente abgeschlossen.</value>
+  </data>
+  <data name="Wizard_AssistentenAbgebrochen" xml:space="preserve">
+    <value>Sie haben den Assistenten abgebrochen.</value>
   </data>
   <data name="Wizard_DieHilfeFürDieSeite0DesAssistenten" xml:space="preserve">
     <value>Die Hilfe für die Seite {0} des Assistenten.</value>
@@ -298,16 +308,13 @@
   <data name="Wizard_Hilfe" xml:space="preserve">
     <value>Hilfe</value>
   </data>
-  <data name="IniFile_ContentViewTitle" xml:space="preserve">
-    <value>Dateiinhalt:</value>
+  <data name="Wizard_NachDemSeitenwechsel" xml:space="preserve">
+    <value>Nach dem Seitenwechsel</value>
   </data>
-  <data name="IniFile_FileDialogFilter" xml:space="preserve">
-    <value>INI - Dateien (*.ini)|*.ini</value>
+  <data name="Wizard_NeuerIndex0AlterIndex1" xml:space="preserve">
+    <value>neuer Index: {0} / alter Index: {1}</value>
   </data>
-  <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
-    <value>INI - Datei öffnen</value>
-  </data>
-  <data name="IniFile_SaveFileDialogTitle" xml:space="preserve">
-    <value>INI - Datei speichern unter</value>
+  <data name="Wizard_VorDemSeitenwechsel" xml:space="preserve">
+    <value>Vor dem Seitenwechsel</value>
   </data>
 </root>
