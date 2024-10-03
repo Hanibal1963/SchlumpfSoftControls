@@ -265,16 +265,23 @@ Public Class IniFileListEdit : Inherits UserControl
 
     End Sub
 
+    ''' <summary>
+    ''' Zeigt den Dialog zum Löschen an und wertet das Ergebnis aus.
+    ''' </summary>
     Private Sub DeleteItem()
 
-        'TODO: Abfrage ob Eintrag wirklich gelöscht werden soll
-
-
-
-
-        RaiseEvent ItemRemove(
+        ' Dialog initialisieren
+        Dim deldlg As New IniFileDeleteItemDialog With {.ItemValue = Me._SelectedItem}
+        ' Dialog anzeigen und Ergebnis abfragen
+        Dim result As DialogResult = deldlg.ShowDialog(Me)
+        ' Ergebnis auswerten
+        If result = DialogResult.Yes Then
+            ' wenn Antwort Ja -> Event auslösen
+            RaiseEvent ItemRemove(
             Me, New IniFileListEditEventArgs With {
             .SelectedItem = Me._SelectedItem})
+        End If
+
     End Sub
 
     ''' <summary>

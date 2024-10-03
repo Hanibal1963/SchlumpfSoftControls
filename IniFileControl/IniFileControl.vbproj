@@ -108,6 +108,12 @@
     <Compile Include="IniFileContentView.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="IniFileDeleteItemDialog.Designer.vb">
+      <DependentUpon>IniFileDeleteItemDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IniFileDeleteItemDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IniFileEntryValueEdit.Designer.vb">
       <DependentUpon>IniFileEntryValueEdit.vb</DependentUpon>
     </Compile>
@@ -175,6 +181,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IniFileContentView.resx">
       <DependentUpon>IniFileContentView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileDeleteItemDialog.en-US.resx">
+      <DependentUpon>IniFileDeleteItemDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileDeleteItemDialog.resx">
+      <DependentUpon>IniFileDeleteItemDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniFileEntryValueEdit.en-US.resx">
       <DependentUpon>IniFileEntryValueEdit.vb</DependentUpon>
