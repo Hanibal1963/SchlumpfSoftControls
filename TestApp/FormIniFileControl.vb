@@ -266,9 +266,8 @@ Public Class FormIniFileControl
         Debug.Print($"SectionsListEdit_ItemRemove: Der Eintrag {e.SelectedItem} soll gelöscht werden")
 #End If
 
-
-
-
+        ' Abschnitt löschen
+        Me.IniFile.DeleteSection(e.SelectedItem)
 
     End Sub
 
