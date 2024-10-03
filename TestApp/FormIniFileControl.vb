@@ -135,7 +135,7 @@ Public Class FormIniFileControl
 
 #End Region
 
-#Region "Ereignisse von IniFile"
+#Region "Ereignisbehandlungen von IniFile"
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Dateiinhalt geändert hat.
@@ -216,7 +216,7 @@ Public Class FormIniFileControl
 
 #End Region
 
-#Region "Ereignisse von FileCommentEdit"
+#Region "Ereignisbehandlungen von FileCommentEdit"
 
     ''' <summary>
     ''' Wird aufgerufen wenn sich der Dateikommentar geändert hat.
@@ -237,7 +237,7 @@ Public Class FormIniFileControl
 
 #End Region
 
-#Region "Ereignisse von SectionsListEdit"
+#Region "Ereignisbehandlungen von SectionsListEdit"
 
     ''' <summary>
     ''' Wird aufgerufen wenn ein Abschnitt hinzugefügt werden soll.
@@ -294,13 +294,33 @@ Public Class FormIniFileControl
         Debug.Print($"SectionsListEdit_SelectedItemChanged: Die Auswahl hat sich auf {e.SelectedItem} geändert")
 #End If
 
+        ' Wenn Null oder nur Leerzeichen -> nichts tun ansonsten Kommentar und Einträge laden
+        If String.IsNullOrEmpty(e.SelectedItem) Then
 
+        Else
+            Me.SectionCommentEdit.Comment = Me.IniFile.GetSectionComment(e.SelectedItem)
 
-
+        End If
 
 
     End Sub
 
+
 #End Region
+
+#Region "Ereignisbehandlungen von SectionCommentEdit"
+
+    Private Sub SectionCommentEdit_CommentChanged(sender As Object, e As EventArgs) Handles _
+        SectionCommentEdit.CommentChanged
+
+#If DEBUG Then
+        Debug.Print($"SectionCommentEdit_CommentChanged: Der Abschnittskommentar hat sich geändert")
+#End If
+
+    End Sub
+
+#End Region
+
+
 
 End Class

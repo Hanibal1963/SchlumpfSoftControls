@@ -39,6 +39,7 @@ Partial Class FormIniFileControl
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.IniFile = New SchlumpfSoft.Controls.IniFileControl.IniFile()
+        Me.SectionCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
         MenuStrip_HauptMenu = New System.Windows.Forms.MenuStrip()
         ToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
@@ -81,6 +82,7 @@ Partial Class FormIniFileControl
         TableLayoutPanel.Controls.Add(Me.ContentView, 0, 0)
         TableLayoutPanel.Controls.Add(Me.FileCommentEdit, 0, 1)
         TableLayoutPanel.Controls.Add(Me.SectionsListEdit, 1, 0)
+        TableLayoutPanel.Controls.Add(Me.SectionCommentEdit, 1, 1)
         TableLayoutPanel.Name = "TableLayoutPanel"
         '
         'ContentView
@@ -161,6 +163,13 @@ Partial Class FormIniFileControl
         Me.IniFile.CommentPrefix = Global.Microsoft.VisualBasic.ChrW(59)
         Me.IniFile.FilePath = ""
         '
+        'SectionCommentEdit
+        '
+        Me.SectionCommentEdit.Comment = New String() {""}
+        resources.ApplyResources(Me.SectionCommentEdit, "SectionCommentEdit")
+        Me.SectionCommentEdit.Name = "SectionCommentEdit"
+        Me.SectionCommentEdit.TitelText = "Abschnittskommentar:"
+        '
         'FormIniFileControl
         '
         resources.ApplyResources(Me, "$this")
@@ -194,4 +203,5 @@ Partial Class FormIniFileControl
     Private WithEvents ContentView As SchlumpfSoft.Controls.IniFileControl.IniFileContentView
     Private WithEvents FileCommentEdit As SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit
     Private WithEvents SectionsListEdit As SchlumpfSoft.Controls.IniFileControl.IniFileListEdit
+    Private WithEvents SectionCommentEdit As SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit
 End Class
