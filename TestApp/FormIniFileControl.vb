@@ -157,6 +157,7 @@ Public Class FormIniFileControl
 
     End Sub
 
+    'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
     Private Sub IniFile_SectionsChanged(sender As Object, e As EventArgs) Handles _
         IniFile.SectionsChanged
 
@@ -166,6 +167,7 @@ Public Class FormIniFileControl
 
     End Sub
 
+    'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
     Private Sub IniFile_SectionCommentChanged(sender As Object, e As EventArgs) Handles _
         IniFile.SectionCommentChanged
 
@@ -175,6 +177,7 @@ Public Class FormIniFileControl
 
     End Sub
 
+    'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
     Private Sub IniFile_EntrysChanged(sender As Object, e As EventArgs) Handles _
         IniFile.EntrysChanged
 
