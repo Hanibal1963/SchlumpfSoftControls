@@ -144,6 +144,9 @@
   <data name="CommentPrefixDescription" xml:space="preserve">
     <value>Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.</value>
   </data>
+  <data name="CommentSectionNameDescription" xml:space="preserve">
+    <value>Gibt den Name des Abschnitts zurück oder legt diesen fest für den der Kommentar angezeigt werden soll.</value>
+  </data>
   <data name="DefaultCommentPrefix" xml:space="preserve">
     <value>;</value>
   </data>

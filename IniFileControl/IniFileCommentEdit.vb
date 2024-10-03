@@ -23,16 +23,17 @@ Public Class IniFileCommentEdit : Inherits UserControl
 
     Private _Lines As String() = {""}
     Private _TitelText As String
+    Private _SectionName As String
 
 #End Region
 
-#Region "Definition der öffentlichenEreignisse"
+#Region "Definition der öffentlichen Ereignisse"
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Kommentartext geändert hat.
     ''' </summary>
     <MyDescription("CommentChangedDescription")>
-    Public Event CommentChanged(sender As Object, e As EventArgs)
+    Public Event CommentChanged(sender As Object, e As IniFileCommenteditEventArgs)
 
 #End Region
 
@@ -105,6 +106,22 @@ Public Class IniFileCommentEdit : Inherits UserControl
         End Set
     End Property
 
+    ''' <summary>
+    ''' Gibt den Name des Abschnitts zurück oder legt diesen fest 
+    ''' für den der Kommentar angezeigt werden soll.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <MyDescription("CommentSectionNameDescription")>
+    Public Property SectionName As String
+        Get
+            Return Me._SectionName
+        End Get
+        Set
+            Me._SectionName = Value
+        End Set
+    End Property
+
 
 #End Region
 
@@ -121,7 +138,7 @@ Public Class IniFileCommentEdit : Inherits UserControl
         ' Button deaktivieren
         Me.Button.Enabled = False
         ' Ereignis auslösen
-        RaiseEvent CommentChanged(Me, EventArgs.Empty)
+        RaiseEvent CommentChanged(Me, New IniFileCommenteditEventArgs(Me._SectionName, Me._Lines))
 
     End Sub
 

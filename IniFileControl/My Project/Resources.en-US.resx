@@ -144,6 +144,9 @@
   <data name="CommentPrefixDescription" xml:space="preserve">
     <value>Gives back the prefix sign for comments or defines this festival.</value>
   </data>
+  <data name="CommentSectionNameDescription" xml:space="preserve">
+    <value>Gives back the name of the section or defines it for which the comment is to be displayed.</value>
+  </data>
   <data name="DefaultCommentPrefix" xml:space="preserve">
     <value>;</value>
   </data>

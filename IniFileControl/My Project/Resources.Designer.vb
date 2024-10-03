@@ -142,6 +142,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Gibt den Name des Abschnitts zurück oder legt diesen fest für den der Kommentar angezeigt werden soll. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property CommentSectionNameDescription() As String
+            Get
+                Return ResourceManager.GetString("CommentSectionNameDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die ; ähnelt.
         '''</summary>
         Friend ReadOnly Property DefaultCommentPrefix() As String

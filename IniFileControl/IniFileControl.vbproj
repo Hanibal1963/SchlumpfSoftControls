@@ -102,6 +102,7 @@
     <Compile Include="IniFileCommentEdit.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="IniFileCommenteditEventArgs.vb" />
     <Compile Include="IniFileContentView.Designer.vb">
       <DependentUpon>IniFileContentView.vb</DependentUpon>
     </Compile>
