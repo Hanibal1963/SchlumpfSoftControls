@@ -52,10 +52,13 @@ Public Class IniFileCommentEdit : Inherits UserControl
 #End Region
 
     Public Sub New()
+
         ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
         Me._TitelText = Me.GroupBox.Text
+        Me.Button.Enabled = False
+
     End Sub
 
 #Region "Definition der neuen Eigenschaften"
