@@ -13,6 +13,11 @@ Friend Class IniFileRenameItemDialog
     Private _OldItemValue As String = $""
     Private _NewItemValue As String = $""
 
+    Private Event PropertyoldItemValueChanged()
+
+    ''' <summary>
+    ''' Gibt den alten Wert zurück oder legt ihn fest.
+    ''' </summary>
     Public Sub New()
 
         ' Dieser Aufruf ist für den Designer erforderlich.
@@ -33,6 +38,7 @@ Friend Class IniFileRenameItemDialog
         End Get
         Set
             Me._OldItemValue = Value
+            RaiseEvent PropertyoldItemValueChanged()
         End Set
     End Property
 
@@ -95,6 +101,13 @@ Friend Class IniFileRenameItemDialog
             Me.ButtonYes.Enabled = True
 
         End If
+
+    End Sub
+
+    Private Sub IniFileRenameItemDialog_PropertyoldItemValueChanged() Handles _
+        Me.PropertyoldItemValueChanged
+
+        Me.Label.Text = Me.Label.Text.Replace("{0}", Me._OldItemValue)
 
     End Sub
 

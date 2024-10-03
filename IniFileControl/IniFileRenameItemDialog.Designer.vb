@@ -26,7 +26,7 @@ Partial Class IniFileRenameItemDialog
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IniFileRenameItemDialog))
         Me.ButtonYes = New System.Windows.Forms.Button()
         Me.ButtonNo = New System.Windows.Forms.Button()
-        Me.LabelFrage = New System.Windows.Forms.Label()
+        Me.Label = New System.Windows.Forms.Label()
         Me.TextBox = New System.Windows.Forms.TextBox()
         TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         TableLayoutPanel.SuspendLayout()
@@ -51,10 +51,10 @@ Partial Class IniFileRenameItemDialog
         Me.ButtonNo.DialogResult = System.Windows.Forms.DialogResult.No
         Me.ButtonNo.Name = "ButtonNo"
         '
-        'LabelFrage
+        'Label
         '
-        resources.ApplyResources(Me.LabelFrage, "LabelFrage")
-        Me.LabelFrage.Name = "LabelFrage"
+        resources.ApplyResources(Me.Label, "Label")
+        Me.Label.Name = "Label"
         '
         'TextBox
         '
@@ -70,7 +70,7 @@ Partial Class IniFileRenameItemDialog
         Me.CancelButton = Me.ButtonNo
         Me.ControlBox = False
         Me.Controls.Add(Me.TextBox)
-        Me.Controls.Add(Me.LabelFrage)
+        Me.Controls.Add(Me.Label)
         Me.Controls.Add(TableLayoutPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -84,6 +84,6 @@ Partial Class IniFileRenameItemDialog
     End Sub
     Private WithEvents ButtonYes As System.Windows.Forms.Button
     Private WithEvents ButtonNo As System.Windows.Forms.Button
-    Private WithEvents LabelFrage As System.Windows.Forms.Label
+    Private WithEvents Label As System.Windows.Forms.Label
     Private WithEvents TextBox As System.Windows.Forms.TextBox
 End Class

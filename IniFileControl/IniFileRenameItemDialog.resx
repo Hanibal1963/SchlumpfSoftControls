@@ -184,7 +184,7 @@
     <value>1</value>
   </data>
   <data name="TableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 68</value>
+    <value>188, 68</value>
   </data>
   <data name="TableLayoutPanel.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
@@ -210,32 +210,32 @@
   <data name="TableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonYes" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ButtonNo" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="LabelFrage.AutoSize" type="System.Boolean, mscorlib">
+  <data name="Label.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="LabelFrage.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Label.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 9</value>
   </data>
-  <data name="LabelFrage.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Label.Size" type="System.Drawing.Size, System.Drawing">
     <value>255, 26</value>
   </data>
-  <data name="LabelFrage.TabIndex" type="System.Int32, mscorlib">
+  <data name="Label.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="LabelFrage.Text" xml:space="preserve">
+  <data name="Label.Text" xml:space="preserve">
     <value>Wollen Sie das Element "{0}" wirklich umbenennen?
 neuer Wert:</value>
   </data>
-  <data name="&gt;&gt;LabelFrage.Name" xml:space="preserve">
-    <value>LabelFrage</value>
+  <data name="&gt;&gt;Label.Name" xml:space="preserve">
+    <value>Label</value>
   </data>
-  <data name="&gt;&gt;LabelFrage.Type" xml:space="preserve">
+  <data name="&gt;&gt;Label.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LabelFrage.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Label.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;LabelFrage.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Label.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="TextBox.Location" type="System.Drawing.Point, System.Drawing">
@@ -245,7 +245,7 @@ neuer Wert:</value>
     <value>Both</value>
   </data>
   <data name="TextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 20</value>
+    <value>316, 20</value>
   </data>
   <data name="TextBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -272,7 +272,7 @@ neuer Wert:</value>
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>273, 109</value>
+    <value>341, 109</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
