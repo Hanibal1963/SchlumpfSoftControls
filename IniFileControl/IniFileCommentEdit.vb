@@ -33,7 +33,7 @@ Public Class IniFileCommentEdit : Inherits UserControl
     ''' Wird ausgelöst wenn sich der Kommentartext geändert hat.
     ''' </summary>
     <MyDescription("CommentChangedDescription")>
-    Public Event CommentChanged(sender As Object, e As IniFileCommenteditEventArgs)
+    Public Event CommentChanged(sender As Object, e As IniFileCommentEditEventArgs)
 
 #End Region
 
@@ -138,7 +138,7 @@ Public Class IniFileCommentEdit : Inherits UserControl
         ' Button deaktivieren
         Me.Button.Enabled = False
         ' Ereignis auslösen
-        RaiseEvent CommentChanged(Me, New IniFileCommenteditEventArgs(Me._SectionName, Me._Lines))
+        RaiseEvent CommentChanged(Me, New IniFileCommentEditEventArgs(Me._SectionName, Me._Lines))
 
     End Sub
 
