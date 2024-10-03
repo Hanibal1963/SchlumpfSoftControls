@@ -37,8 +37,8 @@ Partial Class IniFileListEdit
         '
         'GroupBox
         '
-        resources.ApplyResources(Me.GroupBox, "GroupBox")
         Me.GroupBox.Controls.Add(Me.TableLayoutPanel1)
+        resources.ApplyResources(Me.GroupBox, "GroupBox")
         Me.GroupBox.Name = "GroupBox"
         Me.GroupBox.TabStop = False
         '
