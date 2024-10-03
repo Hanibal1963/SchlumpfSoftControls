@@ -275,7 +275,7 @@ Public Class IniFileListEdit : Inherits UserControl
         ' Dialog anzeigen und Ergebnis abfragen
         Dim result As DialogResult = deldlg.ShowDialog(Me)
         ' Ergebnis auswerten
-        If result = DialogResult.Yes Then
+        If result = DialogResult.OK Then
             ' wenn Antwort Ja -> Event auslösen
             RaiseEvent ItemRemove(
             Me, New IniFileListEditEventArgs With {
