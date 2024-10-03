@@ -22,21 +22,22 @@ Partial Class IniFileAddItemDialog
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim TableLayoutPanel As System.Windows.Forms.TableLayoutPanel
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IniFileAddItemDialog))
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ButtonOK = New System.Windows.Forms.Button()
         Me.ButtonCancel = New System.Windows.Forms.Button()
         Me.Label = New System.Windows.Forms.Label()
         Me.TextBox = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel1.SuspendLayout()
+        TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+        TableLayoutPanel.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel1
+        'TableLayoutPanel
         '
-        resources.ApplyResources(Me.TableLayoutPanel1, "TableLayoutPanel1")
-        Me.TableLayoutPanel1.Controls.Add(Me.ButtonOK, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.ButtonCancel, 1, 0)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        resources.ApplyResources(TableLayoutPanel, "TableLayoutPanel")
+        TableLayoutPanel.Controls.Add(Me.ButtonOK, 0, 0)
+        TableLayoutPanel.Controls.Add(Me.ButtonCancel, 1, 0)
+        TableLayoutPanel.Name = "TableLayoutPanel"
         '
         'ButtonOK
         '
@@ -69,18 +70,17 @@ Partial Class IniFileAddItemDialog
         Me.ControlBox = False
         Me.Controls.Add(Me.TextBox)
         Me.Controls.Add(Me.Label)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(TableLayoutPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "IniFileAddItemDialog"
         Me.ShowInTaskbar = False
-        Me.TableLayoutPanel1.ResumeLayout(False)
+        TableLayoutPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Private WithEvents Label As System.Windows.Forms.Label
     Private WithEvents TextBox As System.Windows.Forms.TextBox
     Private WithEvents ButtonOK As System.Windows.Forms.Button
