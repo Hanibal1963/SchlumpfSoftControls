@@ -346,8 +346,7 @@ Public Class FormIniFileControl
         Debug.Print($"EntryListEdit_ItemAdd: Das Element {e.NewItemName} soll zu {e.SelectedSection} hinzugefügt werden")
 #End If
 
-
-
+        Me.IniFile.AddEntry(e.SelectedSection, e.NewItemName)
 
     End Sub
 
@@ -358,8 +357,7 @@ Public Class FormIniFileControl
         Debug.Print($"EntryListEdit_ItemRemove: Das Element {e.SelectedItem} soll aus {e.SelectedSection} entfernt werden")
 #End If
 
-
-
+        Me.IniFile.DeleteEntry(e.SelectedSection, e.SelectedItem)
 
     End Sub
 
@@ -370,8 +368,7 @@ Public Class FormIniFileControl
         Debug.Print($"EntryListEdit_ItemRename: Das Element {e.SelectedItem} aus {e.SelectedSection} soll in {e.NewItemName} umbenannt werden")
 #End If
 
-
-
+        Me.IniFile.RenameEntry(e.SelectedSection, e.SelectedItem, e.NewItemName)
 
     End Sub
 
@@ -400,7 +397,7 @@ Public Class FormIniFileControl
         Debug.Print($"EntryValueEdit_ValueChanged: Der Wert von {e.OldValue} soll auf {e.NewValue} geändert werden")
 #End If
 
-
+        Me.IniFile.SetEntryValue(e.SelectedSection, e.SelectedEntry, e.NewValue)
 
 
     End Sub
