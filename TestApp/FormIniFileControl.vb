@@ -379,10 +379,11 @@ Public Class FormIniFileControl
         Debug.Print($"EntryListEdit_SelectedItemChanged: Die Auswahl in {e.SelectedSection} wurde auf {e.SelectedItem} geändert")
 #End If
 
+        Me.EntryValueEdit.SelectedSection = e.SelectedSection
+        Me.EntryValueEdit.SelectedEntry = e.SelectedItem
         Me.EntryValueEdit.Value = Me.IniFile.GetEntryValue(
             e.SelectedSection,
             e.SelectedItem)
-
 
     End Sub
 
@@ -394,7 +395,7 @@ Public Class FormIniFileControl
         EntryValueEdit.ValueChanged
 
 #If DEBUG Then
-        Debug.Print($"EntryValueEdit_ValueChanged: Der Wert von {e.OldValue} soll auf {e.NewValue} geändert werden")
+        Debug.Print($"EntryValueEdit_ValueChanged: Der Wert von {e.SelectedEntry} aus {e.SelectedSection} soll auf {e.NewValue} geändert werden")
 #End If
 
         Me.IniFile.SetEntryValue(e.SelectedSection, e.SelectedEntry, e.NewValue)
