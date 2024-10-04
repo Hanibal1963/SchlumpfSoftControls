@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonHelp.Text" xml:space="preserve">
-    <value>Help</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Delete element</value>
   </data>
-  <data name="ButtonBack.Text" xml:space="preserve">
-    <value>&lt;Back</value>
+  <data name="ButtonNo.Text" xml:space="preserve">
+    <value>No</value>
   </data>
-  <data name="ButtonNext.Text" xml:space="preserve">
-    <value>Next&gt;</value>
+  <data name="ButtonYes.Text" xml:space="preserve">
+    <value>Yes</value>
   </data>
-  <data name="ButtonCancel.Text" xml:space="preserve">
-    <value>Demolition</value>
+  <data name="Label.Text" xml:space="preserve">
+    <value>Do you really want to delete the element "{0}"?</value>
   </data>
 </root>

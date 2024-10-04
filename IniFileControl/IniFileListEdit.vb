@@ -4,12 +4,11 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System
 Imports System.ComponentModel
+Imports System.Diagnostics
 Imports System.Drawing
 Imports System.Windows.Forms
-
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei.
@@ -18,87 +17,97 @@ Imports System.Windows.Forms
 <MyDescription("ClassDescriptionListEdit")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileListEdit), "IniFileListEdit.bmp")>
-Public Class IniFileListEdit
+Public Class IniFileListEdit : Inherits UserControl
 
+#Region "Definition der internen Eigenschaftsvariablen"
 
-    Inherits UserControl
-
-
-#Region "Definition der Variablen"
-
+    ''' <summary>
+    ''' Name des aktuell gewählten Eintrags.
+    ''' </summary>
     Private _SelectedItem As String = String.Empty
-    Private _Items As String()
+
+    ''' <summary>
+    ''' Name des aktuell gewählten Abschnitts
+    ''' </summary>
+    Private _SelectedSection As String = String.Empty
+
+    ''' <summary>
+    ''' Liste der Einträge.
+    ''' </summary>
+    Private _Items As String() = {""}
+
+    ''' <summary>
+    ''' Inhlt des Titeltextes.
+    ''' </summary>
     Private _TitelText As String
 
 #End Region
 
-
-#Region "Definition der Ereignisse"
-
+#Region "Definition der öffentlichen Ereignisse"
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag hinzugefügt werden soll.
     ''' </summary>
     <MyDescription("ListEditItemAddDescription")>
     <Category("ListEdit")>
-    Public Event ItemAdd(sender As Object, e As EventArgs)
-
+    Public Event ItemAdd(sender As Object, e As IniFileListEditEventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag umbenannt werden soll.
     ''' </summary>
     <MyDescription("ListEditItemRenameDescription")>
     <Category("ListEdit")>
-    Public Event ItemRename(sender As Object, e As EventArgs)
-
+    Public Event ItemRename(sender As Object, e As IniFileListEditEventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag gelöscht werden soll.
     ''' </summary>
     <MyDescription("ListEditItemRemoveDescription")>
     <Category("ListEdit")>
-    Public Event ItemRemove(sender As Object, e As EventArgs)
-
+    Public Event ItemRemove(sender As Object, e As IniFileListEditEventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.
     ''' </summary>
     <MyDescription("ListEditSelectedItemChangedDescription")>
     <Category("ListEdit")>
-    Public Event SelectedItemChanged(sender As Object, e As EventArgs)
-
-
-    Private Event TitelTextChanged()
-
+    Public Event SelectedItemChanged(sender As Object, e As IniFileListEditEventArgs)
 
 #End Region
 
+#Region "Definition der internen Ereignisse"
+
+    ''' <summary>
+    ''' wird ausgelöst wenn sich der Titeltext geändert hat.
+    ''' </summary>
+    Private Event TitelTextChanged()
+
+    ''' <summary>
+    ''' Wird ausgelöst wenn sich die Liste der Einträge geändert hat.
+    ''' </summary>
+    Private Event ListItemsChanged()
+
+#End Region
 
     Public Sub New()
 
         ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
-
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
         Me._TitelText = Me.GroupBox.Text
 
     End Sub
 
-
 #Region "Definition der neuen Eigenschaften"
-
 
     ''' <summary>
     ''' Gibt den Text der Titelzeile zurück oder legt diesen fest.
     ''' </summary>
-    ''' <returns></returns>
     <Browsable(True)>
     <Category("Appearance")>
     <MyDescription("TitelTextDescription")>
     Public Property TitelText As String
         Set(value As String)
-            'Me._TitelText = value
-            'RaiseEvent TitelTextChanged()
             If value <> Me._TitelText Then
                 Me._TitelText = value
                 RaiseEvent TitelTextChanged()
@@ -109,44 +118,42 @@ Public Class IniFileListEdit
         End Get
     End Property
 
-#End Region
-
-
-#Region "ausgeblendete Eigenschaften"
-
-
     ''' <summary>
-    ''' Gibt den ausgewählten Eintrag oder leer zurück.
+    ''' Setzt die Elemente der Listbox oder gibt diese zurück.
     ''' </summary>
-    <Browsable(False)>
-    Public ReadOnly Property SelectedItem As String
+    <Browsable(True)>
+    <Category("Data")>
+    <MyDescription("ListEditListItemsDescription")>
+    Public Property ListItems() As String()
+        Set
+            If Me._Items IsNot Value Then
+                Me._Items = Value
+                RaiseEvent ListItemsChanged()
+            End If
+        End Set
         Get
-            Return Me._SelectedItem
+            Return Me._Items
         End Get
     End Property
 
-
     ''' <summary>
-    ''' Elemente der Listbox.
+    ''' Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest.
     ''' </summary>
-    <Browsable(False)>
-    Public WriteOnly Property Items() As String()
+    <Browsable(True)>
+    <Category("Appearance")>
+    <MyDescription("SelectedSectionDescription")>
+    Public Property SelectedSection As String
+        Get
+            Return Me._SelectedSection
+        End Get
         Set
-            'Me._Items = Value
-            'Me.FillListbox()
-            If Me._Items IsNot Value Then
-                Me._Items = Value
-                Me.FillListbox()
-            End If
+            Me._SelectedSection = Value
         End Set
     End Property
 
-
 #End Region
 
-
-#Region "Definition der internen Ereignisbehandlungen"
-
+#Region "Ereignisse der internen ListBox"
 
     ''' <summary>
     ''' Setzt die Eigenschaft und schaltet die Buttons.
@@ -162,87 +169,97 @@ Public Class IniFileListEdit
         End If
 
         'Event auslösen
-        RaiseEvent SelectedItemChanged(Me, EventArgs.Empty)
+        RaiseEvent SelectedItemChanged(Me, New IniFileListEditEventArgs(
+                                       Me._SelectedSection,
+                                       Me._SelectedItem,
+                                       String.Empty))
 
     End Sub
 
+#End Region
+
+#Region "Ereignisse der internen Buttons"
 
     ''' <summary>
-    ''' Löst das Ereignis zum hinzufügen eines Eintrags aus.
+    ''' Löst die Ereignisse der Buttons aus.
     ''' </summary>
-    Private Sub Button_Add_Click(sender As Object, e As EventArgs) Handles _
-        ButtonAdd.Click
-
-        RaiseEvent ItemAdd(Me, EventArgs.Empty)
-
-    End Sub
-
-
-    ''' <summary>
-    ''' Löst das Ereignis zum Umbenennen eines Eintrags aus.
-    ''' </summary>
-    Private Sub Button_Rename_Click(sender As Object, e As EventArgs) Handles _
-        ButtonRename.Click
-
-        RaiseEvent ItemRename(Me, EventArgs.Empty)
-
-    End Sub
-
-
-    ''' <summary>
-    ''' Löst das Ereignis zum Löschen eines Eintrags aus.
-    ''' </summary>
-    Private Sub Button_Delete_Click(sender As Object, e As EventArgs) Handles _
+    Private Sub Button_Click(sender As Object, e As EventArgs) Handles _
+        ButtonAdd.Click,
+        ButtonRename.Click,
         ButtonDelete.Click
 
-        RaiseEvent ItemRemove(Me, EventArgs.Empty)
+        'Button auswerten
+        If sender Is Me.ButtonAdd Then
+            ' Eintrag hinzufügen
+            Me.AddNewItem()
+
+        ElseIf sender Is Me.ButtonRename Then
+            ' Eintrag umbenennen
+            Me.RenameItem()
+
+        ElseIf sender Is Me.ButtonDelete Then
+            ' Eintrag löschen
+            Me.DeleteItem()
+
+        End If
 
     End Sub
 
+#End Region
 
-    Private Sub IniFileCommentEdit_TitelTextChanged() Handles _
+#Region "interne Ereignisbehandlungen"
+
+    ''' <summary>
+    ''' wird ausgelöst wenn sich die Liste der Einträge geändert hat.
+    ''' </summary>
+    Private Sub IniFileListEdit_ListItemsChanged() Handles _
+        Me.ListItemsChanged
+
+        ' Listbox neu befüllen
+        Me.FillListbox()
+
+    End Sub
+
+    ''' <summary>
+    ''' Wird ausgelöst wenn sich der Titeltext geändert hat.
+    ''' </summary>
+    Private Sub IniFileListEdit_TitelTextChanged() Handles _
         Me.TitelTextChanged
 
+        ' Titeltext setzen
         Me.GroupBox.Text = Me._TitelText
 
     End Sub
 
-
 #End Region
-
 
 #Region "Definition der internen Funktionen"
 
-
     ''' <summary>
-    ''' Setzt die Eigenschaft <see cref="SelectedItem"/> auf den Gewählten Eintrrag
+    ''' Setzt die Eigenschaft <see cref="_SelectedItem"/> auf den Gewählten Eintrag
     ''' </summary>
     Private Sub SetPropertySelectedItem()
 
         'Eigenschaft setzen
         Me._SelectedItem = CStr(Me.ListBox.SelectedItem)
-
         'Buttons schalten
         Me.ButtonDelete.Enabled = True
         Me.ButtonRename.Enabled = True
 
     End Sub
 
-
     ''' <summary>
-    ''' Setzt die Eigenschaft <see cref="SelectedItem"/> auf leer.
+    ''' Setzt die Eigenschaft <see cref="_SelectedItem"/> auf leer.
     ''' </summary>
     Private Sub ClearPropertySelectedItem()
 
         'Eigenschaft leeren
-        Me._SelectedItem = $""
-
+        Me._SelectedItem = String.Empty
         'Buttons schalten
         Me.ButtonDelete.Enabled = False
         Me.ButtonRename.Enabled = False
 
     End Sub
-
 
     ''' <summary>
     ''' Befüllt die Listbox
@@ -251,28 +268,87 @@ Public Class IniFileListEdit
 
         'Listbox leeren
         Me.ListBox.Items.Clear()
-
         'Listbox neu befüllen
         If Me._Items IsNot Nothing Then Me.ListBox.Items.AddRange(Me._Items)
-
         'kein Eintrag ausgewählt
         Me.ListBox.SelectedIndex = -1
-
         'Eigenschaft setzen
         Me._SelectedItem = $""
-
         'Buttons schalten
         Me.ButtonAdd.Enabled = True
         Me.ButtonDelete.Enabled = False
         Me.ButtonRename.Enabled = False
-
         'Event auslösen
-        RaiseEvent SelectedItemChanged(Me, EventArgs.Empty)
+        RaiseEvent SelectedItemChanged(Me, New IniFileListEditEventArgs(
+                                       String.Empty,
+                                       Me._SelectedItem,
+                                       String.Empty))
 
     End Sub
 
+    ''' <summary>
+    ''' Zeigt den Dialog zum Löschen an und wertet das Ergebnis aus.
+    ''' </summary>
+    Private Sub DeleteItem()
+
+        ' Dialog initialisieren
+        Dim deldlg As New IniFileDeleteItemDialog With {.ItemValue = Me._SelectedItem}
+        ' Dialog anzeigen und Ergebnis abfragen
+        Dim result As DialogResult = deldlg.ShowDialog(Me)
+        ' Ergebnis auswerten
+        If result = DialogResult.OK Then
+            ' wenn Antwort Ja -> Event auslösen
+            RaiseEvent ItemRemove(Me, New IniFileListEditEventArgs(
+                                  Me._SelectedSection,
+                                  Me._SelectedItem,
+                                  String.Empty))
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' Zeigt den Dialog zum Umbenennen an und wertet das Ergebnis aus.
+    ''' </summary>
+    Private Sub RenameItem()
+
+        ' Dialog initialisieren
+        Dim renamedlg As New IniFileRenameItemDialog With {.OldItemValue = Me._SelectedItem}
+        ' Dialog anzeigen und Ergebnis abfragen
+        Dim result As DialogResult = renamedlg.ShowDialog(Me)
+        ' Ergebnis auswerten
+        If result = DialogResult.Yes Then
+            ' wenn Antwort Ja -> Event auslösen
+            RaiseEvent ItemRename(Me, New IniFileListEditEventArgs(
+                                  Me._SelectedSection,
+                                  Me._SelectedItem,
+                                  renamedlg.NewItemValue))
+
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' Zeigt den Dialog zum Hinzufügen eines neuen Elementes an und wertet das Ergebnis aus.
+    ''' </summary>
+    Private Sub AddNewItem()
+
+        ' Dialog initialisieren
+        Dim newitemdlg As New IniFileAddItemDialog
+
+        ' Dialog anzeigen und Ergebnis abfragen
+        Dim result As DialogResult = newitemdlg.ShowDialog(Me)
+        ' Ergebnis auswerten
+        If result = DialogResult.OK Then
+            ' wenn Antwort OK -> Event auslösen
+            RaiseEvent ItemAdd(Me, New IniFileListEditEventArgs(
+                               Me._SelectedSection,
+                               Me._SelectedItem,
+                               newitemdlg.NewItemValue))
+
+        End If
+
+    End Sub
 
 #End Region
-
 
 End Class

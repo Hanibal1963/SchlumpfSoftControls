@@ -144,13 +144,16 @@
   <data name="CommentPrefixDescription" xml:space="preserve">
     <value>Gives back the prefix sign for comments or defines this festival.</value>
   </data>
+  <data name="CommentSectionNameDescription" xml:space="preserve">
+    <value>Gives back the name of the section or defines it for which the comment is to be displayed.</value>
+  </data>
   <data name="DefaultCommentPrefix" xml:space="preserve">
     <value>;</value>
   </data>
   <data name="DefaultFileName" xml:space="preserve">
     <value>Neuedatei.ini</value>
   </data>
-  <data name="EntrynameExistDescription" xml:space="preserve">
+  <data name="EntryNameExistDescription" xml:space="preserve">
     <value>Is triggered if the name is already available when creating a new entry or renaming an entry.</value>
   </data>
   <data name="EntrysChangedDescription" xml:space="preserve">
@@ -158,6 +161,9 @@
   </data>
   <data name="EntryValueChangedDescription" xml:space="preserve">
     <value>Is triggered if the value of an entry has changed in a section.</value>
+  </data>
+  <data name="ErrorMsgIoException" xml:space="preserve">
+    <value>Error when loading the file "{0}".</value>
   </data>
   <data name="ErrorMsgNullOrWhitSpace" xml:space="preserve">
     <value>The parameter "{0}" must not be zero or an empty space sign.</value>
@@ -183,6 +189,9 @@
   <data name="ListEditItemRenameDescription" xml:space="preserve">
     <value>Is triggered if an entry is to be renamed.</value>
   </data>
+  <data name="ListeditListItemsDescription" xml:space="preserve">
+    <value>Set the elements of the list box or return it.</value>
+  </data>
   <data name="ListEditSelectedItemChangedDescription" xml:space="preserve">
     <value>Is triggered if the selected entry has changed.</value>
   </data>
@@ -194,6 +203,12 @@
   </data>
   <data name="SectionsChangedDescription" xml:space="preserve">
     <value>Is triggered when the list of sections has changed.</value>
+  </data>
+  <data name="SelectedEntryDescription" xml:space="preserve">
+    <value>Gives back the currently selected entry or sets it.</value>
+  </data>
+  <data name="SelectedSectionDescription" xml:space="preserve">
+    <value>Gives back the currently selected section or defines it.</value>
   </data>
   <data name="TitelTextDescription" xml:space="preserve">
     <value>Put the text of the title line back or define it.</value>

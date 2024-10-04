@@ -23,7 +23,7 @@ Partial Class FormTransparentLabelControl
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormTransparentLabelControl))
-        Me.TransparentLabel1 = New SchlumpfSoft.TransparentLabelControl.TransparentLabel()
+        Me.TransparentLabel1 = New SchlumpfSoft.Controls.TransparentLabelControl.TransparentLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -60,6 +60,6 @@ Partial Class FormTransparentLabelControl
 
     End Sub
 
-    Private WithEvents TransparentLabel1 As SchlumpfSoft.TransparentLabelControl.TransparentLabel
+    Private WithEvents TransparentLabel1 As SchlumpfSoft.Controls.TransparentLabelControl.TransparentLabel
     Private WithEvents PictureBox1 As PictureBox
 End Class

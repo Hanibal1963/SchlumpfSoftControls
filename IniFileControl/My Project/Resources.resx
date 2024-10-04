@@ -144,20 +144,26 @@
   <data name="CommentPrefixDescription" xml:space="preserve">
     <value>Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.</value>
   </data>
+  <data name="CommentSectionNameDescription" xml:space="preserve">
+    <value>Gibt den Name des Abschnitts zurück oder legt diesen fest für den der Kommentar angezeigt werden soll.</value>
+  </data>
   <data name="DefaultCommentPrefix" xml:space="preserve">
     <value>;</value>
   </data>
   <data name="DefaultFileName" xml:space="preserve">
     <value>NeueDatei.ini</value>
   </data>
-  <data name="EntrynameExistDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereitsvorhanden ist.</value>
+  <data name="EntryNameExistDescription" xml:space="preserve">
+    <value>Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereits vorhanden ist.</value>
   </data>
   <data name="EntrysChangedDescription" xml:space="preserve">
     <value>wird ausgelöst wenn sich die Liste der Einträge geändert hat.</value>
   </data>
   <data name="EntryValueChangedDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn sich der Wert eines Eintrags in einem Abschnitt geändert hat.</value>
+  </data>
+  <data name="ErrorMsgIoException" xml:space="preserve">
+    <value>Fehler beim laden der Datei "{0}".</value>
   </data>
   <data name="ErrorMsgNullOrWhitSpace" xml:space="preserve">
     <value>Der Parameter "{0}" darf nicht NULL oder ein Leerraumzeichen sein.</value>
@@ -199,6 +205,9 @@
   <data name="ListEditItemRenameDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn ein Eintrag umbenannt werden soll.</value>
   </data>
+  <data name="ListeditListItemsDescription" xml:space="preserve">
+    <value>Setzt die Elemente der Listbox oder gibt diese zurück.</value>
+  </data>
   <data name="ListEditSelectedItemChangedDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.</value>
   </data>
@@ -210,6 +219,12 @@
   </data>
   <data name="SectionsChangedDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn sich die Liste der Abschnitte geändert hat.</value>
+  </data>
+  <data name="SelectedEntryDescription" xml:space="preserve">
+    <value>Gibt den aktuell ausgewählten Eintrag zurück oder legt diesen fest.</value>
+  </data>
+  <data name="SelectedSectionDescription" xml:space="preserve">
+    <value>Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest.</value>
   </data>
   <data name="TitelTextDescription" xml:space="preserve">
     <value>Gibt den Text der Titelzeile zurück oder legt diesen fest.</value>

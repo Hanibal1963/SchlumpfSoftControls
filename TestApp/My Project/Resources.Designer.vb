@@ -369,38 +369,31 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Der gewählte Eintragsname existiert bereits!
+        '''Bitte wählen sie einen anderen Name. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ErrorMsgEntryNameExist() As String
+            Get
+                Return ResourceManager.GetString("ErrorMsgEntryNameExist", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Der gewählte Abschnittsname existiert bereits!
+        '''Bitte wählen sie einen anderen Name. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ErrorMsgSectionNameExist() As String
+            Get
+                Return ResourceManager.GetString("ErrorMsgSectionNameExist", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Dateiinhalt: ähnelt.
         '''</summary>
         Friend ReadOnly Property IniFile_ContentViewTitle() As String
             Get
                 Return ResourceManager.GetString("IniFile_ContentViewTitle", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Eintragsliste: ähnelt.
-        '''</summary>
-        Friend ReadOnly Property IniFile_EntrysListEditTitle() As String
-            Get
-                Return ResourceManager.GetString("IniFile_EntrysListEditTitle", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Eintragswert: ähnelt.
-        '''</summary>
-        Friend ReadOnly Property IniFile_EntryValueEditTitle() As String
-            Get
-                Return ResourceManager.GetString("IniFile_EntryValueEditTitle", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Dateikommentar: ähnelt.
-        '''</summary>
-        Friend ReadOnly Property IniFile_FileCommentEditTitle() As String
-            Get
-                Return ResourceManager.GetString("IniFile_FileCommentEditTitle", resourceCulture)
             End Get
         End Property
         
@@ -432,20 +425,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Abschnittskommentar: ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Fehler! ähnelt.
         '''</summary>
-        Friend ReadOnly Property IniFile_SectionsCommentEditTitle() As String
+        Friend ReadOnly Property MsgBoxTitleError() As String
             Get
-                Return ResourceManager.GetString("IniFile_SectionsCommentEditTitle", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Abschnittsliste: ähnelt.
-        '''</summary>
-        Friend ReadOnly Property IniFile_SectionsListEditTitle() As String
-            Get
-                Return ResourceManager.GetString("IniFile_SectionsListEditTitle", resourceCulture)
+                Return ResourceManager.GetString("MsgBoxTitleError", resourceCulture)
             End Get
         End Property
         

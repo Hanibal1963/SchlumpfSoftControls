@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonHelp.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="ButtonBack.Text" xml:space="preserve">
-    <value>&lt;Back</value>
-  </data>
-  <data name="ButtonNext.Text" xml:space="preserve">
-    <value>Next&gt;</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Add element</value>
   </data>
   <data name="ButtonCancel.Text" xml:space="preserve">
-    <value>Demolition</value>
+    <value>Cancel</value>
+  </data>
+  <data name="ButtonOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Label.Text" xml:space="preserve">
+    <value>Enter the name for the new element:</value>
   </data>
 </root>

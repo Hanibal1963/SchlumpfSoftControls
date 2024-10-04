@@ -4,12 +4,13 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System
+Imports System.Collections.Generic
 Imports System.Globalization
+Imports System.Linq
 Imports System.Runtime.InteropServices
+Imports System.Text
 Imports Microsoft.VisualStudio.Shell
-
 
 ''' <summary>
 ''' Dieses Attribut fügt der Assembly einen Toolbox Controls Installer-Schlüssel hinzu, 
@@ -22,19 +23,13 @@ Imports Microsoft.VisualStudio.Shell
 '''         "WpfControls"="1"
 ''' </remarks>
 <AttributeUsage(AttributeTargets.Class, AllowMultiple:=False, Inherited:=True)>
-<ComVisible(False)>
-Public NotInheritable Class ProvideToolboxControlAttribute
-
-
-    Inherits RegistrationAttribute
-
+<System.Runtime.InteropServices.ComVisibleAttribute(False)>
+Public NotInheritable Class ProvideToolboxControlAttribute : Inherits RegistrationAttribute
 
     Private Const ToolboxControlsInstallerPath As String = "ToolboxControlsInstaller"
 
-
     Private _isWpfControls As Boolean
     Private _name As String
-
 
     ''' <summary>
     ''' Erstellt ein neues Attribut „Provide Toolbox Control“, um die Assembly für das 
@@ -53,7 +48,6 @@ Public NotInheritable Class ProvideToolboxControlAttribute
 
     End Sub
 
-
     ''' <summary>
     ''' Ruft ab, ob die Toolbox-Steuerelemente für WPF gelten.
     ''' </summary>
@@ -66,7 +60,6 @@ Public NotInheritable Class ProvideToolboxControlAttribute
         End Set
     End Property
 
-
     ''' <summary>
     ''' Ruft den Namen für die Steuerelemente ab.
     ''' </summary>
@@ -78,7 +71,6 @@ Public NotInheritable Class ProvideToolboxControlAttribute
             Me._name = value
         End Set
     End Property
-
 
     ''' <summary>
     ''' Wird aufgerufen, um dieses Attribut im angegebenen Kontext zu registrieren. 
@@ -113,7 +105,6 @@ Public NotInheritable Class ProvideToolboxControlAttribute
 
     End Sub
 
-
     ''' <summary>
     ''' Wird aufgerufen, um die Registrierung dieses Attributs im angegebenen Kontext aufzuheben.
     ''' </summary>
@@ -137,6 +128,5 @@ Public NotInheritable Class ProvideToolboxControlAttribute
         End If
 
     End Sub
-
 
 End Class

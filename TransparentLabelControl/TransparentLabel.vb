@@ -20,7 +20,7 @@ Imports System.Windows.Forms
 Public Class TransparentLabel
 
 
-Inherits Label
+    Inherits Label
 
 
     '''<summary>

@@ -1,28 +1,29 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormMain
-  Inherits System.Windows.Forms.Form
+    Inherits System.Windows.Forms.Form
 
-  'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-  <System.Diagnostics.DebuggerNonUserCode()> _
-  Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-    Try
-      If disposing AndAlso components IsNot Nothing Then
-        components.Dispose()
-      End If
-    Finally
-      MyBase.Dispose(disposing)
-    End Try
-  End Sub
+    'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
 
-  'Wird vom Windows Form-Designer benötigt.
-  Private components As System.ComponentModel.IContainer
+    'Wird vom Windows Form-Designer benötigt.
+    Private components As System.ComponentModel.IContainer
 
-  'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
-  'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
-  'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-  <System.Diagnostics.DebuggerStepThrough()> _
-  Private Sub InitializeComponent()
+    'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
+    'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
+    'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
+        Dim ToolStripMenuItemSprache As System.Windows.Forms.ToolStripMenuItem
         Me.FlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.ButtonAniGif = New System.Windows.Forms.Button()
         Me.ButtonDriveWatcher = New System.Windows.Forms.Button()
@@ -33,9 +34,9 @@ Partial Class FormMain
         Me.ButtonTransparentLabelControl = New System.Windows.Forms.Button()
         Me.ButtonWizardControl = New System.Windows.Forms.Button()
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
-        Me.ToolStripMenuItemSprache = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItemDeutsch = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItemEnglisch = New System.Windows.Forms.ToolStripMenuItem()
+        ToolStripMenuItemSprache = New System.Windows.Forms.ToolStripMenuItem()
         Me.FlowLayoutPanel.SuspendLayout()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -103,15 +104,15 @@ Partial Class FormMain
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemSprache})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {ToolStripMenuItemSprache})
         resources.ApplyResources(Me.MenuStrip, "MenuStrip")
         Me.MenuStrip.Name = "MenuStrip"
         '
         'ToolStripMenuItemSprache
         '
-        Me.ToolStripMenuItemSprache.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemDeutsch, Me.ToolStripMenuItemEnglisch})
-        Me.ToolStripMenuItemSprache.Name = "ToolStripMenuItemSprache"
-        resources.ApplyResources(Me.ToolStripMenuItemSprache, "ToolStripMenuItemSprache")
+        ToolStripMenuItemSprache.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemDeutsch, Me.ToolStripMenuItemEnglisch})
+        ToolStripMenuItemSprache.Name = "ToolStripMenuItemSprache"
+        resources.ApplyResources(ToolStripMenuItemSprache, "ToolStripMenuItemSprache")
         '
         'ToolStripMenuItemDeutsch
         '
@@ -152,7 +153,6 @@ Partial Class FormMain
     Private WithEvents ButtonTransparentLabelControl As Button
     Private WithEvents ButtonWizardControl As Button
     Private WithEvents MenuStrip As MenuStrip
-    Private WithEvents ToolStripMenuItemSprache As ToolStripMenuItem
     Private WithEvents ToolStripMenuItemDeutsch As ToolStripMenuItem
     Private WithEvents ToolStripMenuItemEnglisch As ToolStripMenuItem
 End Class

@@ -1,5 +1,5 @@
-Imports System.Resources
 Imports System.Reflection
+Imports System.Resources
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 Imports Microsoft.VisualBasic

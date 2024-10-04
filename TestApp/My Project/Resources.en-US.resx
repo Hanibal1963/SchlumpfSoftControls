@@ -117,17 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AnimationComboBoxItem1" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="AnimationComboBoxItem2" xml:space="preserve">
+    <value>Centered</value>
+  </data>
+  <data name="AnimationComboBoxItem3" xml:space="preserve">
+    <value>zoom</value>
+  </data>
+  <data name="AnimationComboBoxItem4" xml:space="preserve">
+    <value>Filled</value>
+  </data>
   <data name="AnimationNumberText" xml:space="preserve">
     <value>Animation No.: {0}</value>
   </data>
   <data name="AnimationStandardText" xml:space="preserve">
     <value>Standard animation</value>
-  </data>
-  <data name="NoAnimationMsg" xml:space="preserve">
-    <value>The picture cannot be animated.</value>
-  </data>
-  <data name="NoAnimationTitle" xml:space="preserve">
-    <value>No animation</value>
   </data>
   <data name="DriveWatcherMsgLine1" xml:space="preserve">
     <value>The drive {0} has been added.</value>
@@ -147,20 +153,34 @@
   <data name="DriveWatcherMsgLine6" xml:space="preserve">
     <value>The drive {0} was removed.</value>
   </data>
-  <data name="NotifyForm_ComboBoxStylesItem4" xml:space="preserve">
-    <value>Indicative symbol</value>
+  <data name="ErrorMsgEntryNameExist" xml:space="preserve">
+    <value>The selected entry name already exists!
+Please choose another name.</value>
   </data>
-  <data name="AnimationComboBoxItem1" xml:space="preserve">
-    <value>Normal</value>
+  <data name="ErrorMsgSectionNameExist" xml:space="preserve">
+    <value>The selected section name already exists!
+Please choose another name.</value>
   </data>
-  <data name="AnimationComboBoxItem2" xml:space="preserve">
-    <value>Centered</value>
+  <data name="IniFile_ContentViewTitle" xml:space="preserve">
+    <value>File content:</value>
   </data>
-  <data name="AnimationComboBoxItem3" xml:space="preserve">
-    <value>zoom</value>
+  <data name="IniFile_FileDialogFilter" xml:space="preserve">
+    <value>Ini - files (*.ini) |*.ini</value>
   </data>
-  <data name="AnimationComboBoxItem4" xml:space="preserve">
-    <value>Filled</value>
+  <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
+    <value>Open ini file</value>
+  </data>
+  <data name="IniFile_SaveFileDialogTitle" xml:space="preserve">
+    <value>Save ini file under</value>
+  </data>
+  <data name="MsgBoxTitleError" xml:space="preserve">
+    <value>Mistake!</value>
+  </data>
+  <data name="NoAnimationMsg" xml:space="preserve">
+    <value>The picture cannot be animated.</value>
+  </data>
+  <data name="NoAnimationTitle" xml:space="preserve">
+    <value>No animation</value>
   </data>
   <data name="NotifyForm_ComboBoxDesignItem1" xml:space="preserve">
     <value>Bright</value>
@@ -179,6 +199,9 @@
   </data>
   <data name="NotifyForm_ComboBoxStylesItem3" xml:space="preserve">
     <value>Error symbol</value>
+  </data>
+  <data name="NotifyForm_ComboBoxStylesItem4" xml:space="preserve">
+    <value>Indicative symbol</value>
   </data>
   <data name="Shape_LineModusItem1" xml:space="preserve">
     <value>on the top left</value>
@@ -207,58 +230,31 @@
   <data name="Shape_ModusItem7" xml:space="preserve">
     <value>filled ellipse</value>
   </data>
-  <data name="Wizard_NeuerIndex0AlterIndex1" xml:space="preserve">
-    <value>New index: {0} / old index: {1}</value>
-  </data>
-  <data name="Wizard_VorDemSeitenwechsel" xml:space="preserve">
-    <value>Before the change of sides</value>
-  </data>
-  <data name="Wizard_NachDemSeitenwechsel" xml:space="preserve">
-    <value>After the change of sides</value>
-  </data>
-  <data name="Wizard_AssistentenAbgebrochen" xml:space="preserve">
-    <value>You broke off the assistant.</value>
-  </data>
-  <data name="Wizard_AssistenteAbgeschlossen" xml:space="preserve">
-    <value>You have completed the assistant.</value>
-  </data>
   <data name="Wizard_AktionAbgebrochen" xml:space="preserve">
     <value>Action canceled</value>
   </data>
   <data name="Wizard_AktionAbgeschlossen" xml:space="preserve">
     <value>Action completed</value>
   </data>
-  <data name="Wizard_Hilfe" xml:space="preserve">
-    <value>Help</value>
+  <data name="Wizard_AssistenteAbgeschlossen" xml:space="preserve">
+    <value>You have completed the assistant.</value>
+  </data>
+  <data name="Wizard_AssistentenAbgebrochen" xml:space="preserve">
+    <value>You broke off the assistant.</value>
   </data>
   <data name="Wizard_DieHilfeFürDieSeite0DesAssistenten" xml:space="preserve">
     <value>The help for the assistant's page {0}.</value>
   </data>
-  <data name="IniFile_ContentViewTitle" xml:space="preserve">
-    <value>File content:</value>
+  <data name="Wizard_Hilfe" xml:space="preserve">
+    <value>Help</value>
   </data>
-  <data name="IniFile_FileCommentEditTitle" xml:space="preserve">
-    <value>File commentary:</value>
+  <data name="Wizard_NachDemSeitenwechsel" xml:space="preserve">
+    <value>After the change of sides</value>
   </data>
-  <data name="IniFile_EntrysListEditTitle" xml:space="preserve">
-    <value>Entry list:</value>
+  <data name="Wizard_NeuerIndex0AlterIndex1" xml:space="preserve">
+    <value>New index: {0} / old index: {1}</value>
   </data>
-  <data name="IniFile_EntryValueEditTitle" xml:space="preserve">
-    <value>Entry value:</value>
-  </data>
-  <data name="IniFile_SectionsCommentEditTitle" xml:space="preserve">
-    <value>Section comment:</value>
-  </data>
-  <data name="IniFile_SectionsListEditTitle" xml:space="preserve">
-    <value>Section list:</value>
-  </data>
-  <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
-    <value>Open ini file</value>
-  </data>
-  <data name="IniFile_SaveFileDialogTitle" xml:space="preserve">
-    <value>Save ini file under</value>
-  </data>
-  <data name="IniFile_FileDialogFilter" xml:space="preserve">
-    <value>Ini - files (*.ini) |*.ini</value>
+  <data name="Wizard_VorDemSeitenwechsel" xml:space="preserve">
+    <value>Before the change of sides</value>
   </data>
 </root>

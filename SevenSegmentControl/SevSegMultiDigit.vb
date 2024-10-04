@@ -6,9 +6,9 @@
 
 
 Imports System
-Imports System.Windows.Forms
-Imports System.Drawing
 Imports System.ComponentModel
+Imports System.Drawing
+Imports System.Windows.Forms
 
 
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>

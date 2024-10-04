@@ -1,5 +1,5 @@
 ﻿' ****************************************************************************************************************
-' Form1.vb
+' FormMain.vb
 ' © 2024 by Andreas Sauer
 ' ****************************************************************************************************************
 '
@@ -37,82 +37,85 @@ Public Class FormMain
         ButtonTransparentLabelControl.Click,
         ButtonShapeControl.Click
 
-        Dim result As DialogResult
+        Dim result As DialogResult = DialogResult.None
 
-        'welcher Button wurde geklickt?
-        Select Case True
+        Try
 
-            Case sender Is Me.ButtonAniGif
+            ' welcher Button wurde geklickt?
+            If sender Is Me.ButtonAniGif Then
                 result = My.Forms.FormAniGifControl.ShowDialog(Me)
 
-            Case sender Is Me.ButtonDriveWatcher
+            ElseIf sender Is Me.ButtonDriveWatcher Then
                 result = My.Forms.FormDriveWatcherControl.ShowDialog(Me)
 
-            Case sender Is Me.ButtonIniFilecontrol
+            ElseIf sender Is Me.ButtonIniFilecontrol Then
                 result = My.Forms.FormIniFileControl.ShowDialog(Me)
 
-            Case sender Is Me.ButtonNotifyFormControl
+            ElseIf sender Is Me.ButtonNotifyFormControl Then
                 result = My.Forms.FormNotifyFormControl.ShowDialog(Me)
 
-            Case sender Is Me.ButtonSevenSegmentControl
+            ElseIf sender Is Me.ButtonSevenSegmentControl Then
                 result = My.Forms.FormSevenSegmentControl.ShowDialog(Me)
 
-            Case sender Is Me.ButtonShapeControl
+            ElseIf sender Is Me.ButtonShapeControl Then
                 result = My.Forms.FormShapeControl.ShowDialog(Me)
 
-            Case sender Is Me.ButtonTransparentLabelControl
+            ElseIf sender Is Me.ButtonTransparentLabelControl Then
                 result = My.Forms.FormTransparentLabelControl.ShowDialog(Me)
 
-            Case sender Is Me.ButtonWizardControl
+            ElseIf sender Is Me.ButtonWizardControl Then
                 result = My.Forms.FormWizardControl.ShowDialog(Me)
 
-        End Select
+            End If
 
+        Catch ex As Exception
+
+            Dim unused = MessageBox.Show($"Fehler: {ex.Message}",
+                            $"Fehler",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error)
+
+        End Try
 
     End Sub
 
 
-    Private Sub FormMain_Load(
-                sender As Object,
-                e As EventArgs) Handles _
+    Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles _
                 Me.Load
 
-        'Titelzeile anpassen
+        ' Titelzeile anpassen
         Me.Text = $"{My.Application.Info.Title} V{My.Application.Info.Version}"
-
-
-#If DEBUG Then
-
-        Dim currentUICulture As CultureInfo = Thread.CurrentThread.CurrentUICulture
-        Debug.Print($"Aktuelle Benutzeroberflächenkultur: {currentUICulture.Name}")
-
-#End If
 
     End Sub
 
 
-    Private Sub ToolStripMenuItemDeutsch_Click(
-                sender As Object,
-                e As EventArgs) Handles _
+    Private Sub ToolStripMenuItemLang_Click(sender As Object, e As EventArgs) Handles _
                 ToolStripMenuItemDeutsch.Click,
                 ToolStripMenuItemEnglisch.Click
 
-        Select Case True
+        Try
 
-            Case sender Is Me.ToolStripMenuItemDeutsch
+            If sender Is Me.ToolStripMenuItemDeutsch Then
+                ' Oberfläche auf Deutsch einstellen
+                My.Settings.LangCode = "de-DE"
 
-                'Oberfläche auf Deutsch einstellen
-                My.Settings.LangCode = $"de-DE"
+            ElseIf sender Is Me.ToolStripMenuItemEnglisch Then
+                ' Oberfläche auf Enlisch einstellen
+                My.Settings.LangCode = "en-US"
 
-            Case sender Is Me.ToolStripMenuItemEnglisch
+            End If
 
-                'Oberfläche auf Enlisch einstellen
-                My.Settings.LangCode = $"en-US"
+            ' Anwendung neu starten
+            Application.Restart()
 
-        End Select
+        Catch ex As Exception
 
-        'Anwendung neu starten
-        Application.Restart()
+            Dim unused = MessageBox.Show($"Fehler beim Sprachwechsel: {ex.Message}",
+                            $"Fehler",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error)
+
+        End Try
 
     End Sub
 

@@ -169,9 +169,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormIniFileControl.resx">
       <DependentUpon>FormIniFileControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.en-US.resx">
       <DependentUpon>FormMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.vb</DependentUpon>

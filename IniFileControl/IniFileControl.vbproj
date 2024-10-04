@@ -90,17 +90,30 @@
     <Compile Include="IniFile.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="IniFileAddItemDialog.Designer.vb">
+      <DependentUpon>IniFileAddItemDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IniFileAddItemDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IniFileCommentEdit.Designer.vb">
       <DependentUpon>IniFileCommentEdit.vb</DependentUpon>
     </Compile>
     <Compile Include="IniFileCommentEdit.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="IniFileCommentEditEventArgs.vb" />
     <Compile Include="IniFileContentView.Designer.vb">
       <DependentUpon>IniFileContentView.vb</DependentUpon>
     </Compile>
     <Compile Include="IniFileContentView.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IniFileDeleteItemDialog.Designer.vb">
+      <DependentUpon>IniFileDeleteItemDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IniFileDeleteItemDialog.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="IniFileEntryValueEdit.Designer.vb">
       <DependentUpon>IniFileEntryValueEdit.vb</DependentUpon>
@@ -108,11 +121,19 @@
     <Compile Include="IniFileEntryValueEdit.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="IniFileEntryValueEditEventArgs.vb" />
     <Compile Include="IniFileListEdit.Designer.vb">
       <DependentUpon>IniFileListEdit.vb</DependentUpon>
     </Compile>
     <Compile Include="IniFileListEdit.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IniFileListEditEventArgs.vb" />
+    <Compile Include="IniFileRenameItemDialog.Designer.vb">
+      <DependentUpon>IniFileRenameItemDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IniFileRenameItemDialog.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
@@ -129,8 +150,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.10.40171" ExcludeAssets="runtime">
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.11.40262" ExcludeAssets="runtime">
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VSSDK.BuildTools">
+      <Version>17.11.435</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +165,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IniFile.resx">
       <DependentUpon>IniFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileAddItemDialog.en-US.resx">
+      <DependentUpon>IniFileAddItemDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileAddItemDialog.resx">
+      <DependentUpon>IniFileAddItemDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniFileCommentEdit.en-US.resx">
       <DependentUpon>IniFileCommentEdit.vb</DependentUpon>
@@ -152,6 +184,12 @@
     <EmbeddedResource Include="IniFileContentView.resx">
       <DependentUpon>IniFileContentView.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IniFileDeleteItemDialog.en-US.resx">
+      <DependentUpon>IniFileDeleteItemDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileDeleteItemDialog.resx">
+      <DependentUpon>IniFileDeleteItemDialog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IniFileEntryValueEdit.en-US.resx">
       <DependentUpon>IniFileEntryValueEdit.vb</DependentUpon>
     </EmbeddedResource>
@@ -164,7 +202,15 @@
     <EmbeddedResource Include="IniFileListEdit.resx">
       <DependentUpon>IniFileListEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Resources.en-US.resx" />
+    <EmbeddedResource Include="IniFileRenameItemDialog.en-US.resx">
+      <DependentUpon>IniFileRenameItemDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniFileRenameItemDialog.resx">
+      <DependentUpon>IniFileRenameItemDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\IniFileCommentEdit.bmp" />
     <EmbeddedResource Include="Resources\IniFileListEdit.bmp" />
     <EmbeddedResource Include="Resources\IniFileEntryValueEdit.bmp" />

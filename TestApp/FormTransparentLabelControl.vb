@@ -7,6 +7,8 @@
 
 Imports System.Globalization
 Imports System.Threading
+Imports SchlumpfSoft.Controls.TransparentLabelControl
+
 
 Public Class FormTransparentLabelControl
 

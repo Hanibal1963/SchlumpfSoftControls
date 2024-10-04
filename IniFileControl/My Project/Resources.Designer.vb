@@ -142,6 +142,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Gibt den Name des Abschnitts zurück oder legt diesen fest für den der Kommentar angezeigt werden soll. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property CommentSectionNameDescription() As String
+            Get
+                Return ResourceManager.GetString("CommentSectionNameDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die ; ähnelt.
         '''</summary>
         Friend ReadOnly Property DefaultCommentPrefix() As String
@@ -160,11 +169,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereitsvorhanden ist. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereits vorhanden ist. ähnelt.
         '''</summary>
-        Friend ReadOnly Property EntrynameExistDescription() As String
+        Friend ReadOnly Property EntryNameExistDescription() As String
             Get
-                Return ResourceManager.GetString("EntrynameExistDescription", resourceCulture)
+                Return ResourceManager.GetString("EntryNameExistDescription", resourceCulture)
             End Get
         End Property
         
@@ -183,6 +192,15 @@ Namespace My.Resources
         Friend ReadOnly Property EntryValueChangedDescription() As String
             Get
                 Return ResourceManager.GetString("EntryValueChangedDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Fehler beim laden der Datei &quot;{0}&quot;. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ErrorMsgIoException() As String
+            Get
+                Return ResourceManager.GetString("ErrorMsgIoException", resourceCulture)
             End Get
         End Property
         
@@ -309,6 +327,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Setzt die Elemente der Listbox oder gibt diese zurück. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ListeditListItemsDescription() As String
+            Get
+                Return ResourceManager.GetString("ListeditListItemsDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Wird ausgelöst wenn sich der gewählte Eintrag geändert hat. ähnelt.
         '''</summary>
         Friend ReadOnly Property ListEditSelectedItemChangedDescription() As String
@@ -341,6 +368,24 @@ Namespace My.Resources
         Friend ReadOnly Property SectionsChangedDescription() As String
             Get
                 Return ResourceManager.GetString("SectionsChangedDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Gibt den aktuell ausgewählten Eintrag zurück oder legt diesen fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SelectedEntryDescription() As String
+            Get
+                Return ResourceManager.GetString("SelectedEntryDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SelectedSectionDescription() As String
+            Get
+                Return ResourceManager.GetString("SelectedSectionDescription", resourceCulture)
             End Get
         End Property
         
