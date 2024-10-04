@@ -368,7 +368,7 @@ Public Class IniFile : Inherits Component
         ' Ereignisse auslösen
 
         'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        RaiseEvent SectionsChanged(Me, EventArgs.Empty)
+        'RaiseEvent SectionsChanged(Me, EventArgs.Empty)
 
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -402,7 +402,7 @@ Public Class IniFile : Inherits Component
         ' Ereignisse auslösen
 
         'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        RaiseEvent EntrysChanged(Me, EventArgs.Empty)
+        'RaiseEvent EntrysChanged(Me, EventArgs.Empty)
 
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -438,7 +438,7 @@ Public Class IniFile : Inherits Component
         ' Ereignisse auslösen
 
         'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        RaiseEvent SectionsChanged(Me, EventArgs.Empty)
+        'RaiseEvent SectionsChanged(Me, EventArgs.Empty)
 
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -472,7 +472,7 @@ Public Class IniFile : Inherits Component
         ' Ereignisse auslösen
 
         'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        RaiseEvent EntrysChanged(Me, EventArgs.Empty)
+        'RaiseEvent EntrysChanged(Me, EventArgs.Empty)
 
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -496,7 +496,7 @@ Public Class IniFile : Inherits Component
         ' Ereignisse auslösen
 
         'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        RaiseEvent SectionsChanged(Me, EventArgs.Empty)
+        'RaiseEvent SectionsChanged(Me, EventArgs.Empty)
 
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -522,7 +522,7 @@ Public Class IniFile : Inherits Component
         ' Ereignisse auslösen
 
         'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        RaiseEvent EntrysChanged(Me, EventArgs.Empty)
+        'RaiseEvent EntrysChanged(Me, EventArgs.Empty)
 
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -587,7 +587,7 @@ Public Class IniFile : Inherits Component
         ' Ereignisse auslösen
 
         'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        RaiseEvent SectionCommentChanged(Me, EventArgs.Empty)
+        'RaiseEvent SectionCommentChanged(Me, EventArgs.Empty)
 
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
