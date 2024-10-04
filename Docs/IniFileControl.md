@@ -160,6 +160,13 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 
 ## Versionsverlauf
 
+**Version 2.2024.04.10**
+
+Datum: 04.10.2024
+
+- Fehlerbereinigung von Logikfehlern.
+- Codeoptimierungen.
+
 **Version 2.2024.22.08**
 
 Datum 22.08.2024
