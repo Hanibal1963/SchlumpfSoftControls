@@ -214,24 +214,28 @@
   <data name="DriveWatcherMsgLine6" xml:space="preserve">
     <value>Das Laufwerk {0} wurde entfernt.</value>
   </data>
-  <data name="IniFile_ContentViewTitle" xml:space="preserve">
-    <value>Dateiinhalt:</value>
+  <data name="ErrorMsgEntryNameExist" xml:space="preserve">
+    <value>Der gewählte Eintragsname existiert bereits!
+Bitte wählen sie einen anderen Name.</value>
   </data>
-  <data name="IniFile_ErrorMsgSectionNameExist" xml:space="preserve">
+  <data name="ErrorMsgSectionNameExist" xml:space="preserve">
     <value>Der gewählte Abschnittsname existiert bereits!
 Bitte wählen sie einen anderen Name.</value>
   </data>
+  <data name="IniFile_ContentViewTitle" xml:space="preserve">
+    <value>Dateiinhalt:</value>
+  </data>
   <data name="IniFile_FileDialogFilter" xml:space="preserve">
     <value>INI - Dateien (*.ini)|*.ini</value>
-  </data>
-  <data name="IniFile_MsgBoxTitleError" xml:space="preserve">
-    <value>Fehler!</value>
   </data>
   <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
     <value>INI - Datei öffnen</value>
   </data>
   <data name="IniFile_SaveFileDialogTitle" xml:space="preserve">
     <value>INI - Datei speichern unter</value>
+  </data>
+  <data name="MsgBoxTitleError" xml:space="preserve">
+    <value>Fehler!</value>
   </data>
   <data name="NoAnimationMsg" xml:space="preserve">
     <value>Das Bild kann nicht animiert werden.</value>

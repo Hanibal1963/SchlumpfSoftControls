@@ -157,45 +157,6 @@ Public Class FormIniFileControl
 
     End Sub
 
-    'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-    '    Private Sub IniFile_SectionsChanged(sender As Object, e As EventArgs) Handles _
-    '        IniFile.SectionsChanged
-
-    '#If DEBUG Then
-    '        Debug.Print($"IniFile_SectionsChanged: Abschnittsliste geändert")
-    '#End If
-
-    '    End Sub
-
-    'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-    '    Private Sub IniFile_SectionCommentChanged(sender As Object, e As EventArgs) Handles _
-    '        IniFile.SectionCommentChanged
-
-    '#If DEBUG Then
-    '        Debug.Print($"IniFile_SectionCommentChanged: Abschnittskommentar geänder")
-    '#End If
-
-    '    End Sub
-
-    'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-    '    Private Sub IniFile_EntrysChanged(sender As Object, e As EventArgs) Handles _
-    '        IniFile.EntrysChanged
-
-    '#If DEBUG Then
-    '        Debug.Print($"IniFile_EntrysChanged: Eintragsliste geändert")
-    '#End If
-
-    '    End Sub
-
-    Private Sub IniFile_EntryValueChanged(sender As Object, e As EventArgs) Handles _
-        IniFile.EntryValueChanged
-
-#If DEBUG Then
-        Debug.Print($"IniFile_EntryValueChanged: Eintragswert geändert")
-#End If
-
-    End Sub
-
     Private Sub IniFile_SectionNameExist(sender As Object, e As EventArgs) Handles _
         IniFile.SectionNameExist
 
@@ -203,9 +164,9 @@ Public Class FormIniFileControl
         Debug.Print($"IniFile_SectionNameExist: Abschnitt existiert")
 #End If
 
-        MsgBox(My.Resources.IniFile_ErrorMsgSectionNameExist,
+        MsgBox(My.Resources.ErrorMsgSectionNameExist,
                MsgBoxStyle.Critical And MsgBoxStyle.ApplicationModal,
-               My.Resources.IniFile_MsgBoxTitleError)
+               My.Resources.MsgBoxTitleError)
 
     End Sub
 
@@ -216,6 +177,9 @@ Public Class FormIniFileControl
         Debug.Print($"IniFile_EntrynameExist: Eintrag existiert")
 #End If
 
+        MsgBox(My.Resources.ErrorMsgEntryNameExist,
+               MsgBoxStyle.Critical And MsgBoxStyle.ApplicationModal,
+               My.Resources.MsgBoxTitleError)
     End Sub
 
 #End Region

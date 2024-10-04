@@ -153,24 +153,28 @@
   <data name="DriveWatcherMsgLine6" xml:space="preserve">
     <value>The drive {0} was removed.</value>
   </data>
-  <data name="IniFile_ContentViewTitle" xml:space="preserve">
-    <value>File content:</value>
+  <data name="ErrorMsgEntryNameExist" xml:space="preserve">
+    <value>The selected entry name already exists!
+Please choose another name.</value>
   </data>
-  <data name="IniFile_ErrorMsgSectionNameExist" xml:space="preserve">
+  <data name="ErrorMsgSectionNameExist" xml:space="preserve">
     <value>The selected section name already exists!
 Please choose another name.</value>
   </data>
+  <data name="IniFile_ContentViewTitle" xml:space="preserve">
+    <value>File content:</value>
+  </data>
   <data name="IniFile_FileDialogFilter" xml:space="preserve">
     <value>Ini - files (*.ini) |*.ini</value>
-  </data>
-  <data name="IniFile_MsgBoxTitleError" xml:space="preserve">
-    <value>Mistake!</value>
   </data>
   <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
     <value>Open ini file</value>
   </data>
   <data name="IniFile_SaveFileDialogTitle" xml:space="preserve">
     <value>Save ini file under</value>
+  </data>
+  <data name="MsgBoxTitleError" xml:space="preserve">
+    <value>Mistake!</value>
   </data>
   <data name="NoAnimationMsg" xml:space="preserve">
     <value>The picture cannot be animated.</value>
