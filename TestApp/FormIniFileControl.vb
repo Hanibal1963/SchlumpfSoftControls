@@ -158,34 +158,34 @@ Public Class FormIniFileControl
     End Sub
 
     'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-    Private Sub IniFile_SectionsChanged(sender As Object, e As EventArgs) Handles _
-        IniFile.SectionsChanged
+    '    Private Sub IniFile_SectionsChanged(sender As Object, e As EventArgs) Handles _
+    '        IniFile.SectionsChanged
 
-#If DEBUG Then
-        Debug.Print($"IniFile_SectionsChanged: Abschnittsliste geändert")
-#End If
+    '#If DEBUG Then
+    '        Debug.Print($"IniFile_SectionsChanged: Abschnittsliste geändert")
+    '#End If
 
-    End Sub
-
-    'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-    Private Sub IniFile_SectionCommentChanged(sender As Object, e As EventArgs) Handles _
-        IniFile.SectionCommentChanged
-
-#If DEBUG Then
-        Debug.Print($"IniFile_SectionCommentChanged: Abschnittskommentar geänder")
-#End If
-
-    End Sub
+    '    End Sub
 
     'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-    Private Sub IniFile_EntrysChanged(sender As Object, e As EventArgs) Handles _
-        IniFile.EntrysChanged
+    '    Private Sub IniFile_SectionCommentChanged(sender As Object, e As EventArgs) Handles _
+    '        IniFile.SectionCommentChanged
 
-#If DEBUG Then
-        Debug.Print($"IniFile_EntrysChanged: Eintragsliste geändert")
-#End If
+    '#If DEBUG Then
+    '        Debug.Print($"IniFile_SectionCommentChanged: Abschnittskommentar geänder")
+    '#End If
 
-    End Sub
+    '    End Sub
+
+    'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
+    '    Private Sub IniFile_EntrysChanged(sender As Object, e As EventArgs) Handles _
+    '        IniFile.EntrysChanged
+
+    '#If DEBUG Then
+    '        Debug.Print($"IniFile_EntrysChanged: Eintragsliste geändert")
+    '#End If
+
+    '    End Sub
 
     Private Sub IniFile_EntryValueChanged(sender As Object, e As EventArgs) Handles _
         IniFile.EntryValueChanged
