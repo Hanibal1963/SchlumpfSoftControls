@@ -299,7 +299,7 @@ Public Class IniFileListEdit : Inherits UserControl
         If result = DialogResult.OK Then
             ' wenn Antwort Ja -> Event auslösen
             RaiseEvent ItemRemove(Me, New IniFileListEditEventArgs(
-                                  String.Empty,
+                                  Me._SelectedSection,
                                   Me._SelectedItem,
                                   String.Empty))
         End If
@@ -319,7 +319,7 @@ Public Class IniFileListEdit : Inherits UserControl
         If result = DialogResult.Yes Then
             ' wenn Antwort Ja -> Event auslösen
             RaiseEvent ItemRename(Me, New IniFileListEditEventArgs(
-                                  String.Empty,
+                                  Me._SelectedSection,
                                   Me._SelectedItem,
                                   renamedlg.NewItemValue))
 
@@ -341,8 +341,8 @@ Public Class IniFileListEdit : Inherits UserControl
         If result = DialogResult.OK Then
             ' wenn Antwort OK -> Event auslösen
             RaiseEvent ItemAdd(Me, New IniFileListEditEventArgs(
-                               String.Empty,
-                               String.Empty,
+                               Me._SelectedSection,
+                               Me._SelectedItem,
                                newitemdlg.NewItemValue))
 
         End If
