@@ -18,8 +18,9 @@ Imports System.Drawing
 Public Class IniFileEntryValueEdit : Inherits UserControl
 
     Private _TitelText As String
-    Private _Value As String = $""
-    Private _SelectedSection As String
+    Private _Value As String = String.Empty
+    Private _SelectedSection As String = String.Empty
+    Private _SelectedEntry As String
 
 #Region "Definition der Ereignisse"
 
@@ -40,7 +41,7 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
         ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
-        Me._titeltext = Me.GroupBox.Text
+        Me._TitelText = Me.GroupBox.Text
 
     End Sub
 
@@ -54,13 +55,13 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
     <MyDescription("TitelTextDescription")>
     Public Property TitelText As String
         Set(value As String)
-            If Me._titeltext <> value Then
-                Me._titeltext = value
+            If Me._TitelText <> value Then
+                Me._TitelText = value
                 RaiseEvent TitelTextChanged()
             End If
         End Set
         Get
-            Return Me._titeltext
+            Return Me._TitelText
         End Get
     End Property
 
@@ -76,6 +77,21 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
         End Get
         Set
             Me._SelectedSection = Value
+        End Set
+    End Property
+
+    ''' <summary>
+    ''' Gibt den aktuell ausgewählten Eintrag zurück oder legt diesen fest.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <MyDescription("SelectedEntryDescription")>
+    Public Property SelectedEntry As String
+        Get
+            Return Me._SelectedEntry
+        End Get
+        Set
+            Me._SelectedEntry = Value
         End Set
     End Property
 
@@ -104,10 +120,9 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
 
         'Ereignis auslösen
         RaiseEvent ValueChanged(Me, New IniFileEntryValueEditEventArgs(
-                                $"",
-                                $"",
-                                $"",
-                                $""))
+                                Me._SelectedSection,
+                                Me._SelectedEntry,
+                                Me._Value))
 
         Me.Button.Enabled = False
 
@@ -116,11 +131,13 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
     Private Sub TextBox_TextChanged(sender As Object, e As System.EventArgs) Handles _
         TextBox.TextChanged
 
-        'Fehlerprüfung
-
-
-        'Button aktivieren
-        Me.Button.Enabled = True
+        ' Prüfung ob sich der Wert geändert hat
+        If Me._Value <> Me.TextBox.Text Then
+            Me.Button.Enabled = True
+            Me._Value = Me.TextBox.Text
+        Else
+            Me.Button.Enabled = False
+        End If
 
     End Sub
 

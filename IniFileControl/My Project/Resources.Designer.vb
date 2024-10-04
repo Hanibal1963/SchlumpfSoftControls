@@ -372,6 +372,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Gibt den aktuell ausgewählten Eintrag zurück oder legt diesen fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SelectedEntryDescription() As String
+            Get
+                Return ResourceManager.GetString("SelectedEntryDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest. ähnelt.
         '''</summary>
         Friend ReadOnly Property SelectedSectionDescription() As String

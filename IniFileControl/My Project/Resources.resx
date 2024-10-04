@@ -220,6 +220,9 @@
   <data name="SectionsChangedDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn sich die Liste der Abschnitte geändert hat.</value>
   </data>
+  <data name="SelectedEntryDescription" xml:space="preserve">
+    <value>Gibt den aktuell ausgewählten Eintrag zurück oder legt diesen fest.</value>
+  </data>
   <data name="SelectedSectionDescription" xml:space="preserve">
     <value>Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest.</value>
   </data>

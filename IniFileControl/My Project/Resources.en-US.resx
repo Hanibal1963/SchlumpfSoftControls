@@ -204,6 +204,9 @@
   <data name="SectionsChangedDescription" xml:space="preserve">
     <value>Is triggered when the list of sections has changed.</value>
   </data>
+  <data name="SelectedEntryDescription" xml:space="preserve">
+    <value>Gives back the currently selected entry or sets it.</value>
+  </data>
   <data name="SelectedSectionDescription" xml:space="preserve">
     <value>Gives back the currently selected section or defines it.</value>
   </data>
