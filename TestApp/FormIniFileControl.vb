@@ -86,11 +86,6 @@ Public Class FormIniFileControl
 
             ' Dateiname abrufen
             Me.filename = Me.SaveFileDialog.FileName
-
-#If DEBUG Then
-            Debug.Print($"FileSaveAs: Datei speichern unter: {Me.filename}")
-#End If
-
             ' Datei speichern
             Me.IniFile.SaveFile(Me.filename)
 
@@ -104,11 +99,6 @@ Public Class FormIniFileControl
         If Me.filename Is Nothing Then
             Me.FileSaveAs()
         End If
-
-#If DEBUG Then
-        Debug.Print($"FileSave: Datei speichern unter: {Me.filename}")
-#End If
-
         ' Datei speichern
         Me.IniFile.SaveFile(Me.filename)
 
@@ -121,11 +111,6 @@ Public Class FormIniFileControl
 
             ' Dateiname abrufen
             Me.filename = Me.OpenFileDialog.FileName
-
-#If DEBUG Then
-            Debug.Print($"FileOpen: Datei öffnen: {Me.filename}")
-#End If
-
             ' Datei öffnen
             Me.IniFile.LoadFile(Me.filename)
 
@@ -143,10 +128,6 @@ Public Class FormIniFileControl
     Private Sub IniFile_FileContentChanged(sender As Object, e As EventArgs) Handles _
         IniFile.FileContentChanged
 
-#If DEBUG Then
-        Debug.Print($"IniFile_FileContentChanged: Dateiinhalt geändert")
-#End If
-
         ' Dateiinhalt anzeigen
         Me.ContentView.Lines = Me.IniFile.GetFileContent
         ' Dateikommentar anzeigen
@@ -160,26 +141,20 @@ Public Class FormIniFileControl
     Private Sub IniFile_SectionNameExist(sender As Object, e As EventArgs) Handles _
         IniFile.SectionNameExist
 
-#If DEBUG Then
-        Debug.Print($"IniFile_SectionNameExist: Abschnitt existiert")
-#End If
-
-        MsgBox(My.Resources.ErrorMsgSectionNameExist,
-               MsgBoxStyle.Critical And MsgBoxStyle.ApplicationModal,
-               My.Resources.MsgBoxTitleError)
+        Dim unused = MsgBox(
+            My.Resources.ErrorMsgSectionNameExist,
+            MsgBoxStyle.Critical And MsgBoxStyle.ApplicationModal,
+            My.Resources.MsgBoxTitleError)
 
     End Sub
 
     Private Sub IniFile_EntrynameExist(sender As Object, e As EventArgs) Handles _
-        IniFile.EntrynameExist
+        IniFile.EntryNameExist
 
-#If DEBUG Then
-        Debug.Print($"IniFile_EntrynameExist: Eintrag existiert")
-#End If
-
-        MsgBox(My.Resources.ErrorMsgEntryNameExist,
-               MsgBoxStyle.Critical And MsgBoxStyle.ApplicationModal,
-               My.Resources.MsgBoxTitleError)
+        Dim unused = MsgBox(
+            My.Resources.ErrorMsgEntryNameExist,
+            MsgBoxStyle.Critical And MsgBoxStyle.ApplicationModal,
+            My.Resources.MsgBoxTitleError)
     End Sub
 
 #End Region
@@ -193,10 +168,6 @@ Public Class FormIniFileControl
     ''' <param name="e"></param>
     Private Sub FileCommentEdit_CommentChanged(sender As Object, e As IniFileCommentEditEventArgs) Handles _
         FileCommentEdit.CommentChanged
-
-#If DEBUG Then
-        Debug.Print($"FileCommentEdit_CommentChanged: Dateikommentar hat sich geändert")
-#End If
 
         ' Dateikommentar speichern
         Me.IniFile.SetFileComment(e.Comment)
@@ -213,10 +184,6 @@ Public Class FormIniFileControl
     Private Sub SectionsListEdit_ItemAdd(sender As Object, e As IniFileListEditEventArgs) Handles _
         SectionsListEdit.ItemAdd
 
-#If DEBUG Then
-        Debug.Print($"SectionsListEdit_ItemAdd: Der Eintrag {e.NewItemName} soll hinzugefügt werden.")
-#End If
-
         ' Abschnitt hinzufügen
         Me.IniFile.AddSection(e.NewItemName)
 
@@ -227,10 +194,6 @@ Public Class FormIniFileControl
     ''' </summary>
     Private Sub SectionsListEdit_ItemRemove(sender As Object, e As IniFileListEditEventArgs) Handles _
         SectionsListEdit.ItemRemove
-
-#If DEBUG Then
-        Debug.Print($"SectionsListEdit_ItemRemove: Der Eintrag {e.SelectedItem} soll gelöscht werden")
-#End If
 
         ' Abschnitt löschen
         Me.IniFile.DeleteSection(e.SelectedItem)
@@ -243,10 +206,6 @@ Public Class FormIniFileControl
     Private Sub SectionsListEdit_ItemRename(sender As Object, e As IniFileListEditEventArgs) Handles _
         SectionsListEdit.ItemRename
 
-#If DEBUG Then
-        Debug.Print($"SectionsListEdit_ItemRename: Der Eintrag {e.SelectedItem} soll in {e.NewItemName} umbenannt werden")
-#End If
-
         ' Abschnitt umbenennen
         Me.IniFile.RenameSection(e.SelectedItem, e.NewItemName)
 
@@ -257,10 +216,6 @@ Public Class FormIniFileControl
     ''' </summary>
     Private Sub SectionsListEdit_SelectedItemChanged(sender As Object, e As IniFileListEditEventArgs) Handles _
         SectionsListEdit.SelectedItemChanged
-
-#If DEBUG Then
-        Debug.Print($"SectionsListEdit_SelectedItemChanged: Die Auswahl hat sich auf {e.SelectedItem} geändert")
-#End If
 
         ' Wenn Null oder nur Leerzeichen ->
         ' Werte der abhängigen Controls löschen ansonsten neue Werte laden
@@ -290,14 +245,9 @@ Public Class FormIniFileControl
     Private Sub SectionCommentEdit_CommentChanged(sender As Object, e As IniFileCommentEditEventArgs) Handles _
         SectionCommentEdit.CommentChanged
 
-#If DEBUG Then
-        Debug.Print($"SectionCommentEdit_CommentChanged: Der Abschnittskommentar des Abschnitts {e.Section} hat sich geändert")
-#End If
-
         Me.IniFile.SetSectionComment(e.Section, e.Comment)
 
     End Sub
-
 
 #End Region
 
@@ -306,20 +256,12 @@ Public Class FormIniFileControl
     Private Sub EntryListEdit_ItemAdd(sender As Object, e As IniFileListEditEventArgs) Handles _
         EntryListEdit.ItemAdd
 
-#If DEBUG Then
-        Debug.Print($"EntryListEdit_ItemAdd: Das Element {e.NewItemName} soll zu {e.SelectedSection} hinzugefügt werden")
-#End If
-
         Me.IniFile.AddEntry(e.SelectedSection, e.NewItemName)
 
     End Sub
 
     Private Sub EntryListEdit_ItemRemove(sender As Object, e As IniFileListEditEventArgs) Handles _
         EntryListEdit.ItemRemove
-
-#If DEBUG Then
-        Debug.Print($"EntryListEdit_ItemRemove: Das Element {e.SelectedItem} soll aus {e.SelectedSection} entfernt werden")
-#End If
 
         Me.IniFile.DeleteEntry(e.SelectedSection, e.SelectedItem)
 
@@ -328,10 +270,6 @@ Public Class FormIniFileControl
     Private Sub EntryListEdit_ItemRename(sender As Object, e As IniFileListEditEventArgs) Handles _
         EntryListEdit.ItemRename
 
-#If DEBUG Then
-        Debug.Print($"EntryListEdit_ItemRename: Das Element {e.SelectedItem} aus {e.SelectedSection} soll in {e.NewItemName} umbenannt werden")
-#End If
-
         Me.IniFile.RenameEntry(e.SelectedSection, e.SelectedItem, e.NewItemName)
 
     End Sub
@@ -339,15 +277,11 @@ Public Class FormIniFileControl
     Private Sub EntryListEdit_SelectedItemChanged(sender As Object, e As IniFileListEditEventArgs) Handles _
         EntryListEdit.SelectedItemChanged
 
-#If DEBUG Then
-        Debug.Print($"EntryListEdit_SelectedItemChanged: Die Auswahl in {e.SelectedSection} wurde auf {e.SelectedItem} geändert")
-#End If
-
-        Me.EntryValueEdit.SelectedSection = e.SelectedSection
-        Me.EntryValueEdit.SelectedEntry = e.SelectedItem
-        Me.EntryValueEdit.Value = Me.IniFile.GetEntryValue(
-            e.SelectedSection,
-            e.SelectedItem)
+        With Me.EntryValueEdit
+            .SelectedSection = e.SelectedSection
+            .SelectedEntry = e.SelectedItem
+            .Value = Me.IniFile.GetEntryValue(e.SelectedSection, e.SelectedItem)
+        End With
 
     End Sub
 
@@ -358,12 +292,7 @@ Public Class FormIniFileControl
     Private Sub EntryValueEdit_ValueChanged(sender As Object, e As IniFileEntryValueEditEventArgs) Handles _
         EntryValueEdit.ValueChanged
 
-#If DEBUG Then
-        Debug.Print($"EntryValueEdit_ValueChanged: Der Wert von {e.SelectedEntry} aus {e.SelectedSection} soll auf {e.NewValue} geändert werden")
-#End If
-
         Me.IniFile.SetEntryValue(e.SelectedSection, e.SelectedEntry, e.NewValue)
-
 
     End Sub
 
