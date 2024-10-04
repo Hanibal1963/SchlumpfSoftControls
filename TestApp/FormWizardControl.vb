@@ -4,10 +4,9 @@
 ' ****************************************************************************************************************
 '
 
-Imports SchlumpfSoft.Controls.WizardControl
-
 Imports System.Globalization
 Imports System.Threading
+Imports SchlumpfSoft.Controls.WizardControl
 
 
 Public Class FormWizardControl

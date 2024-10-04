@@ -5,11 +5,11 @@
 '
 
 Imports System
-Imports System.Globalization
-Imports System.Runtime.InteropServices
-Imports System.Linq
-Imports System.Text
 Imports System.Collections.Generic
+Imports System.Globalization
+Imports System.Linq
+Imports System.Runtime.InteropServices
+Imports System.Text
 Imports Microsoft.VisualStudio.Shell
 
 ''' <summary>

@@ -5,8 +5,8 @@
 '
 
 Imports System.ComponentModel
-Imports System.Windows.Forms
 Imports System.Drawing
+Imports System.Windows.Forms
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.

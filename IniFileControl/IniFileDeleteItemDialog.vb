@@ -4,8 +4,8 @@
 ' ****************************************************************************************************************
 '
 
-Imports System.Windows.Forms
 Imports System
+Imports System.Windows.Forms
 
 Public Class IniFileDeleteItemDialog
 

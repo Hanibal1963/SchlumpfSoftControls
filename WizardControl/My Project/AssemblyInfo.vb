@@ -1,11 +1,11 @@
-﻿Imports System.Resources
-' ****************************************************************************************************************
+﻿' ****************************************************************************************************************
 ' AssemblyInfo.vb
 ' © 2024 by Andreas Sauer
 ' ****************************************************************************************************************
 '
 
 Imports System.Reflection
+Imports System.Resources
 Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("WizardControl")>
