@@ -313,6 +313,7 @@ Public Class FormIniFileControl
             Me.SectionCommentEdit.Comment = Me.IniFile.GetSectionComment(e.SelectedItem)
             ' Werte für den Abschnitt in EntryListEdit laden
             Me.EntryListEdit.ListItems = Me.IniFile.GetEntryNames(e.SelectedItem)
+            Me.EntryListEdit.SelectedSection = e.SelectedItem
 
         End If
 
@@ -338,19 +339,69 @@ Public Class FormIniFileControl
 
 #Region "Ereignisbehandlungen für EntryListEdit"
 
-    Private Sub EntryListEdit_ItemAdd(sender As Object, e As IniFileListEditEventArgs) Handles EntryListEdit.ItemAdd
+    Private Sub EntryListEdit_ItemAdd(sender As Object, e As IniFileListEditEventArgs) Handles _
+        EntryListEdit.ItemAdd
+
+#If DEBUG Then
+        Debug.Print($"EntryListEdit_ItemAdd: Das Element {e.NewItemName} soll zu {e.SelectedSection} hinzugefügt werden")
+#End If
+
+
+
 
     End Sub
 
-    Private Sub EntryListEdit_ItemRemove(sender As Object, e As IniFileListEditEventArgs) Handles EntryListEdit.ItemRemove
+    Private Sub EntryListEdit_ItemRemove(sender As Object, e As IniFileListEditEventArgs) Handles _
+        EntryListEdit.ItemRemove
+
+#If DEBUG Then
+        Debug.Print($"EntryListEdit_ItemRemove: Das Element {e.SelectedItem} soll aus {e.SelectedSection} entfernt werden")
+#End If
+
+
+
 
     End Sub
 
-    Private Sub EntryListEdit_ItemRename(sender As Object, e As IniFileListEditEventArgs) Handles EntryListEdit.ItemRename
+    Private Sub EntryListEdit_ItemRename(sender As Object, e As IniFileListEditEventArgs) Handles _
+        EntryListEdit.ItemRename
+
+#If DEBUG Then
+        Debug.Print($"EntryListEdit_ItemRename: Das Element {e.SelectedItem} aus {e.SelectedSection} soll in {e.NewItemName} umbenannt werden")
+#End If
+
+
+
 
     End Sub
 
-    Private Sub EntryListEdit_SelectedItemChanged(sender As Object, e As IniFileListEditEventArgs) Handles EntryListEdit.SelectedItemChanged
+    Private Sub EntryListEdit_SelectedItemChanged(sender As Object, e As IniFileListEditEventArgs) Handles _
+        EntryListEdit.SelectedItemChanged
+
+#If DEBUG Then
+        Debug.Print($"EntryListEdit_SelectedItemChanged: Die Auswahl in {e.SelectedSection} wurde auf {e.SelectedItem} geändert")
+#End If
+
+        Me.EntryValueEdit.Value = Me.IniFile.GetEntryValue(
+            e.SelectedSection,
+            e.SelectedItem)
+
+
+    End Sub
+
+#End Region
+
+#Region "Ereignisbehandlungen von EntryValueEdit"
+
+    Private Sub EntryValueEdit_ValueChanged(sender As Object, e As IniFileEntryValueEditEventArgs) Handles _
+        EntryValueEdit.ValueChanged
+
+#If DEBUG Then
+        Debug.Print($"EntryValueEdit_ValueChanged: Der Wert von {e.OldValue} soll auf {e.NewValue} geändert werden")
+#End If
+
+
+
 
     End Sub
 

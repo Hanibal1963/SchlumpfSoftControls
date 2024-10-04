@@ -41,6 +41,7 @@ Partial Class FormIniFileControl
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.IniFile = New SchlumpfSoft.Controls.IniFileControl.IniFile()
+        Me.EntryValueEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit()
         MenuStrip_HauptMenu = New System.Windows.Forms.MenuStrip()
         ToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
@@ -85,6 +86,7 @@ Partial Class FormIniFileControl
         TableLayoutPanel.Controls.Add(Me.SectionsListEdit, 1, 0)
         TableLayoutPanel.Controls.Add(Me.SectionCommentEdit, 1, 1)
         TableLayoutPanel.Controls.Add(Me.EntryListEdit, 2, 0)
+        TableLayoutPanel.Controls.Add(Me.EntryValueEdit, 2, 1)
         TableLayoutPanel.Name = "TableLayoutPanel"
         '
         'ContentView
@@ -181,6 +183,13 @@ Partial Class FormIniFileControl
         Me.IniFile.CommentPrefix = Global.Microsoft.VisualBasic.ChrW(59)
         Me.IniFile.FilePath = ""
         '
+        'EntryValueEdit
+        '
+        resources.ApplyResources(Me.EntryValueEdit, "EntryValueEdit")
+        Me.EntryValueEdit.Name = "EntryValueEdit"
+        Me.EntryValueEdit.TitelText = "Eintrag:"
+        Me.EntryValueEdit.Value = ""
+        '
         'FormIniFileControl
         '
         resources.ApplyResources(Me, "$this")
@@ -216,4 +225,5 @@ Partial Class FormIniFileControl
     Private WithEvents SectionsListEdit As SchlumpfSoft.Controls.IniFileControl.IniFileListEdit
     Private WithEvents SectionCommentEdit As SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit
     Private WithEvents EntryListEdit As SchlumpfSoft.Controls.IniFileControl.IniFileListEdit
+    Private WithEvents EntryValueEdit As SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit
 End Class
