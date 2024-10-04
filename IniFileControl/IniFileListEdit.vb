@@ -141,7 +141,7 @@ Public Class IniFileListEdit : Inherits UserControl
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("ListEditSelectedSectionDescription")>
+    <MyDescription("SelectedSectionDescription")>
     Public Property SelectedSection As String
         Get
             Return Me._SelectedSection

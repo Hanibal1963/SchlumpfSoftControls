@@ -4,11 +4,9 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System.ComponentModel
 Imports System.Windows.Forms
 Imports System.Drawing
-
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.
@@ -19,8 +17,9 @@ Imports System.Drawing
 <ToolboxBitmap(GetType(IniFileEntryValueEdit), "IniFileEntryValueEdit.bmp")>
 Public Class IniFileEntryValueEdit : Inherits UserControl
 
-    Private _titeltext As String
-    Private _value As String = $""
+    Private _TitelText As String
+    Private _Value As String = $""
+    Private _SelectedSection As String
 
 #Region "Definition der Ereignisse"
 
@@ -41,7 +40,7 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
         ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
-        Me._TitelText = Me.GroupBox.Text
+        Me._titeltext = Me.GroupBox.Text
 
     End Sub
 
@@ -50,20 +49,34 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
     ''' <summary>
     ''' Gibt den Text der Titelzeile zurück oder legt diesen fest.
     ''' </summary>
-    ''' <returns></returns>
     <Browsable(True)>
     <Category("Appearance")>
     <MyDescription("TitelTextDescription")>
     Public Property TitelText As String
         Set(value As String)
-            If Me._TitelText <> value Then
-                Me._TitelText = value
+            If Me._titeltext <> value Then
+                Me._titeltext = value
                 RaiseEvent TitelTextChanged()
             End If
         End Set
         Get
-            Return Me._TitelText
+            Return Me._titeltext
         End Get
+    End Property
+
+    ''' <summary>
+    ''' Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <MyDescription("SelectedSectionDescription")>
+    Public Property SelectedSection As String
+        Get
+            Return Me._SelectedSection
+        End Get
+        Set
+            Me._SelectedSection = Value
+        End Set
     End Property
 
     ''' <summary>
@@ -91,6 +104,7 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
 
         'Ereignis auslösen
         RaiseEvent ValueChanged(Me, New IniFileEntryValueEditEventArgs(
+                                $"",
                                 $"",
                                 $"",
                                 $""))

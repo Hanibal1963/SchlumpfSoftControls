@@ -8,10 +8,19 @@ Imports System
 
 Public Class IniFileEntryValueEditEventArgs : Inherits EventArgs
 
+    Private _SelectedSection As String
     Private _SelectedEntry As String
     Private _OldValue As String
     Private _NewValue As String
 
+    Public Property SelectedSection As String
+        Get
+            Return Me._SelectedSection
+        End Get
+        Set
+            Me._SelectedSection = Value
+        End Set
+    End Property
 
     Public Property SelectedEntry As String
         Get
@@ -42,8 +51,9 @@ Public Class IniFileEntryValueEditEventArgs : Inherits EventArgs
         End Set
     End Property
 
-    Public Sub New(SelectedEntry As String, OldValue As String, NewValue As String)
+    Public Sub New(SelectedSection As String, SelectedEntry As String, OldValue As String, NewValue As String)
 
+        Me._SelectedSection = SelectedSection
         Me._SelectedEntry = SelectedEntry
         Me._OldValue = OldValue
         Me._NewValue = NewValue
