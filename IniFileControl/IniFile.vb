@@ -41,18 +41,6 @@ Public Class IniFile : Inherits Component
     Public Event FileContentChanged(sender As Object, e As EventArgs)
 
     ''' <summary>
-    ''' Wird ausgelöst wenn sich der Dateikommentar geändert hat.
-    ''' </summary>
-    <MyDescription("FileCommentChangedDescription")>
-    Public Event FileCommentChanged(sender As Object, e As EventArgs)
-
-    ''' <summary>
-    ''' Wird ausgelöst wenn sich die Liste der Abschnitte geändert hat.
-    ''' </summary>
-    <MyDescription("SectionsChangedDescription")>
-    Public Event SectionsChanged(sender As Object, e As EventArgs)
-
-    ''' <summary>
     ''' Wird ausgelöst wenn beim anlegen eines neuen Abschnitts oder 
     ''' umbnennen eines Abschnitts der Name bereits vorhanden ist.
     ''' </summary>
@@ -60,29 +48,11 @@ Public Class IniFile : Inherits Component
     Public Event SectionNameExist(sender As Object, e As EventArgs)
 
     ''' <summary>
-    ''' Wird ausgelöst wenn sich der Abschnittskommentar geändert hat.
-    ''' </summary>
-    <MyDescription("SectionCommentChangedDescription")>
-    Public Event SectionCommentChanged(sender As Object, e As EventArgs)
-
-    ''' <summary>
     ''' Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder 
     ''' umbenennen eines Eintrags der Name bereitsvorhanden ist.
     ''' </summary>
     <MyDescription("EntrynameExistDescription")>
-    Public Event EntrynameExist(sender As Object, e As EventArgs)
-
-    ''' <summary>
-    ''' wird ausgelöst wenn sich die Liste der Einträge geändert hat.
-    ''' </summary>
-    <MyDescription("EntrysChangedDescription")>
-    Public Event EntrysChanged(sender As Object, e As EventArgs)
-
-    ''' <summary>
-    ''' Wird ausgelöst wenn sich der Wert eines Eintrags in einem Abschnitt geändert hat.
-    ''' </summary>
-    <MyDescription("EntryValueChangedDescription")>
-    Public Event EntryValueChanged(sender As Object, e As EventArgs)
+    Public Event EntryNameExist(sender As Object, e As EventArgs)
 
 #End Region
 
@@ -294,9 +264,7 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-
-        ' Ereignisse auslösen
-        RaiseEvent FileCommentChanged(Me, EventArgs.Empty)
+        ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
@@ -365,11 +333,7 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-        ' Ereignisse auslösen
-
-        'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        'RaiseEvent SectionsChanged(Me, EventArgs.Empty)
-
+        ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
@@ -399,11 +363,7 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-        ' Ereignisse auslösen
-
-        'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        'RaiseEvent EntrysChanged(Me, EventArgs.Empty)
-
+        ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
@@ -435,11 +395,7 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-        ' Ereignisse auslösen
-
-        'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        'RaiseEvent SectionsChanged(Me, EventArgs.Empty)
-
+        ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
@@ -469,11 +425,7 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-        ' Ereignisse auslösen
-
-        'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        'RaiseEvent EntrysChanged(Me, EventArgs.Empty)
-
+        ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
@@ -493,11 +445,7 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-        ' Ereignisse auslösen
-
-        'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        'RaiseEvent SectionsChanged(Me, EventArgs.Empty)
-
+        ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
@@ -519,11 +467,7 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
-        ' Ereignisse auslösen
-
-        'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        'RaiseEvent EntrysChanged(Me, EventArgs.Empty)
-
+        ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
@@ -592,11 +536,7 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' eventuell Änderung speichern
         If Me._AutoSave Then Me.SaveFile()
-        ' Ereignisse auslösen
-
-        'TODO INFO: Wird wahrscheinlich nicht mehr benötigt
-        'RaiseEvent SectionCommentChanged(Me, EventArgs.Empty)
-
+        ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub
@@ -621,8 +561,7 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' eventuell Änderung speichern
         If Me._AutoSave Then Me.SaveFile()
-        ' Ereignisse auslösen
-        RaiseEvent EntryValueChanged(Me, EventArgs.Empty)
+        ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
     End Sub

@@ -153,8 +153,8 @@
   <data name="DefaultFileName" xml:space="preserve">
     <value>NeueDatei.ini</value>
   </data>
-  <data name="EntrynameExistDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereitsvorhanden ist.</value>
+  <data name="EntryNameExistDescription" xml:space="preserve">
+    <value>Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereits vorhanden ist.</value>
   </data>
   <data name="EntrysChangedDescription" xml:space="preserve">
     <value>wird ausgelöst wenn sich die Liste der Einträge geändert hat.</value>

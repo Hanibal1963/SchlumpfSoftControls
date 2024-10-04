@@ -169,11 +169,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereitsvorhanden ist. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereits vorhanden ist. ähnelt.
         '''</summary>
-        Friend ReadOnly Property EntrynameExistDescription() As String
+        Friend ReadOnly Property EntryNameExistDescription() As String
             Get
-                Return ResourceManager.GetString("EntrynameExistDescription", resourceCulture)
+                Return ResourceManager.GetString("EntryNameExistDescription", resourceCulture)
             End Get
         End Property
         

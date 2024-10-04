@@ -153,7 +153,7 @@
   <data name="DefaultFileName" xml:space="preserve">
     <value>Neuedatei.ini</value>
   </data>
-  <data name="EntrynameExistDescription" xml:space="preserve">
+  <data name="EntryNameExistDescription" xml:space="preserve">
     <value>Is triggered if the name is already available when creating a new entry or renaming an entry.</value>
   </data>
   <data name="EntrysChangedDescription" xml:space="preserve">
