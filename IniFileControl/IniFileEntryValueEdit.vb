@@ -17,14 +17,10 @@ Imports System.Drawing
 <MyDescription("ClassDescriptionEntryValueEdit")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileEntryValueEdit), "IniFileEntryValueEdit.bmp")>
-Public Class IniFileEntryValueEdit
+Public Class IniFileEntryValueEdit : Inherits UserControl
 
-
-    Inherits UserControl
-
-
-    Private _TitelText As String
-
+    Private _titeltext As String
+    Private _value As String = $""
 
 #Region "Definition der Ereignisse"
 
@@ -33,28 +29,23 @@ Public Class IniFileEntryValueEdit
     ''' Wird ausgelöst wenn sich der Wert geändert hat.
     ''' </summary>
     <MyDescription("ValueEditValueChanged")>
-    Public Event ValueChanged(sender As Object, e As System.EventArgs)
-
+    Public Event ValueChanged(sender As Object, e As IniFileEntryValueEditEventArgs)
 
     Private Event TitelTextChanged()
-
+    Private Event PropertyValueChanged()
 
 #End Region
-
 
     Public Sub New()
 
         ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
-
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
         Me._TitelText = Me.GroupBox.Text
 
     End Sub
 
-
 #Region "Definition der neuen Eigenschaften"
-
 
     ''' <summary>
     ''' Gibt den Text der Titelzeile zurück oder legt diesen fest.
@@ -65,8 +56,6 @@ Public Class IniFileEntryValueEdit
     <MyDescription("TitelTextDescription")>
     Public Property TitelText As String
         Set(value As String)
-            'Me._TitelText = value
-            'RaiseEvent TitelTextChanged()
             If Me._TitelText <> value Then
                 Me._TitelText = value
                 RaiseEvent TitelTextChanged()
@@ -77,42 +66,44 @@ Public Class IniFileEntryValueEdit
         End Get
     End Property
 
-
     ''' <summary>
-    ''' Eintragswert
+    ''' Gibt den Eintragswert zurück oder legt diesen fest.
     ''' </summary>
     <MyDescription("ValueDescription")>
     Public Property Value As String
         Get
-            Return Me.TextBox.Text
+            Return Me._value
         End Get
         Set
-            'Me.TextBox.Text = Value
-            'Me.Button.Enabled = False
-            If Me.TextBox.Text <> Value Then
-                Me.TextBox.Text = Value
-                Me.Button.Enabled = False
+            If Me._value <> Value Then
+                Me._value = Value
+                RaiseEvent PropertyValueChanged()
             End If
         End Set
     End Property
 
 #End Region
 
-
 #Region "Definition der internen Ereignisbehandlungen"
-
 
     Private Sub Button_Click(sender As Object, e As System.EventArgs) Handles _
         Button.Click
 
         'Ereignis auslösen
-        RaiseEvent ValueChanged(Me, System.EventArgs.Empty)
+        RaiseEvent ValueChanged(Me, New IniFileEntryValueEditEventArgs(
+                                $"",
+                                $"",
+                                $""))
+
+        Me.Button.Enabled = False
 
     End Sub
 
-
     Private Sub TextBox_TextChanged(sender As Object, e As System.EventArgs) Handles _
         TextBox.TextChanged
+
+        'Fehlerprüfung
+
 
         'Button aktivieren
         Me.Button.Enabled = True
@@ -122,12 +113,19 @@ Public Class IniFileEntryValueEdit
     Private Sub IniFileCommentEdit_TitelTextChanged() Handles _
         Me.TitelTextChanged
 
+        ' Titeltext setzen
         Me.GroupBox.Text = Me._TitelText
 
     End Sub
 
+    Private Sub IniFileEntryValueEdit_PropertyValueChanged() Handles _
+        Me.PropertyValueChanged
+
+        Me.TextBox.Text = Me._value
+        Me.Button.Enabled = False
+
+    End Sub
 
 #End Region
-
 
 End Class

@@ -345,6 +345,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ListEditSelectedSectionDescription() As String
+            Get
+                Return ResourceManager.GetString("ListEditSelectedSectionDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Wird ausgelöst wenn sich der Abschnittskommentar geändert hat. ähnelt.
         '''</summary>
         Friend ReadOnly Property SectionCommentChangedDescription() As String

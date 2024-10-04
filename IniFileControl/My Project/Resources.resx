@@ -211,6 +211,9 @@
   <data name="ListEditSelectedItemChangedDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.</value>
   </data>
+  <data name="ListEditSelectedSectionDescription" xml:space="preserve">
+    <value>Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest.</value>
+  </data>
   <data name="SectionCommentChangedDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn sich der Abschnittskommentar geändert hat.</value>
   </data>

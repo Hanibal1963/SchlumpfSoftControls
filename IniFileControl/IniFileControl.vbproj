@@ -121,6 +121,7 @@
     <Compile Include="IniFileEntryValueEdit.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="IniFileEntryValueEditEventArgs.vb" />
     <Compile Include="IniFileListEdit.Designer.vb">
       <DependentUpon>IniFileListEdit.vb</DependentUpon>
     </Compile>

@@ -563,7 +563,15 @@ Public Class IniFile : Inherits Component
     ''' Wert des Eintrags.
     ''' </returns>
     Public Function GetEntryValue(Section As String, Entry As String) As String
-        Return Me._Sections.Item(Section).Item(Entry)
+
+        ' wenn Abschnitt und Eintrag existieren -> Wert zurückgeben ansonsten Null
+        Dim result = If(
+            String.IsNullOrEmpty(Section) AndAlso String.IsNullOrEmpty(Entry),
+            String.Empty,
+            Me._Sections.Item(Section).Item(Entry))
+        ' Ergebnis zurückgeben
+        Return result
+
     End Function
 
     ''' <summary>

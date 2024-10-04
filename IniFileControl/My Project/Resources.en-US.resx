@@ -195,6 +195,9 @@
   <data name="ListEditSelectedItemChangedDescription" xml:space="preserve">
     <value>Is triggered if the selected entry has changed.</value>
   </data>
+  <data name="ListEditSelectedSectionDescription" xml:space="preserve">
+    <value>Gives back the currently selected section or defines it.</value>
+  </data>
   <data name="SectionCommentChangedDescription" xml:space="preserve">
     <value>Is triggered when the section comment has changed.</value>
   </data>

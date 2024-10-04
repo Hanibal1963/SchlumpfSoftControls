@@ -27,6 +27,11 @@ Public Class IniFileListEdit : Inherits UserControl
     Private _SelectedItem As String = String.Empty
 
     ''' <summary>
+    ''' Name des aktuell gewählten Abschnitts
+    ''' </summary>
+    Private _SelectedSection As String = String.Empty
+
+    ''' <summary>
     ''' Liste der Einträge.
     ''' </summary>
     Private _Items As String() = {""}
@@ -131,6 +136,21 @@ Public Class IniFileListEdit : Inherits UserControl
         End Get
     End Property
 
+    ''' <summary>
+    ''' Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <MyDescription("ListEditSelectedSectionDescription")>
+    Public Property SelectedSection As String
+        Get
+            Return Me._SelectedSection
+        End Get
+        Set
+            Me._SelectedSection = Value
+        End Set
+    End Property
+
 #End Region
 
 #Region "Ereignisse der internen ListBox"
@@ -149,9 +169,10 @@ Public Class IniFileListEdit : Inherits UserControl
         End If
 
         'Event auslösen
-        RaiseEvent SelectedItemChanged(
-            Me, New IniFileListEditEventArgs With {
-            .SelectedItem = Me._SelectedItem})
+        RaiseEvent SelectedItemChanged(Me, New IniFileListEditEventArgs(
+                                       Me._SelectedSection,
+                                       Me._SelectedItem,
+                                       String.Empty))
 
     End Sub
 
@@ -183,7 +204,6 @@ Public Class IniFileListEdit : Inherits UserControl
         End If
 
     End Sub
-
 
 #End Region
 
@@ -234,7 +254,7 @@ Public Class IniFileListEdit : Inherits UserControl
     Private Sub ClearPropertySelectedItem()
 
         'Eigenschaft leeren
-        Me._SelectedItem = $""
+        Me._SelectedItem = String.Empty
         'Buttons schalten
         Me.ButtonDelete.Enabled = False
         Me.ButtonRename.Enabled = False
@@ -259,9 +279,10 @@ Public Class IniFileListEdit : Inherits UserControl
         Me.ButtonDelete.Enabled = False
         Me.ButtonRename.Enabled = False
         'Event auslösen
-        RaiseEvent SelectedItemChanged(
-            Me, New IniFileListEditEventArgs With {
-            .SelectedItem = Me._SelectedItem})
+        RaiseEvent SelectedItemChanged(Me, New IniFileListEditEventArgs(
+                                       String.Empty,
+                                       Me._SelectedItem,
+                                       String.Empty))
 
     End Sub
 
@@ -277,9 +298,10 @@ Public Class IniFileListEdit : Inherits UserControl
         ' Ergebnis auswerten
         If result = DialogResult.OK Then
             ' wenn Antwort Ja -> Event auslösen
-            RaiseEvent ItemRemove(
-            Me, New IniFileListEditEventArgs With {
-            .SelectedItem = Me._SelectedItem})
+            RaiseEvent ItemRemove(Me, New IniFileListEditEventArgs(
+                                  String.Empty,
+                                  Me._SelectedItem,
+                                  String.Empty))
         End If
 
     End Sub
@@ -296,9 +318,11 @@ Public Class IniFileListEdit : Inherits UserControl
         ' Ergebnis auswerten
         If result = DialogResult.Yes Then
             ' wenn Antwort Ja -> Event auslösen
-            RaiseEvent ItemRename(Me, New IniFileListEditEventArgs With {
-                .SelectedItem = Me._SelectedItem,
-                .NewItemName = renamedlg.NewItemValue})
+            RaiseEvent ItemRename(Me, New IniFileListEditEventArgs(
+                                  String.Empty,
+                                  Me._SelectedItem,
+                                  renamedlg.NewItemValue))
+
         End If
 
     End Sub
@@ -316,9 +340,11 @@ Public Class IniFileListEdit : Inherits UserControl
         ' Ergebnis auswerten
         If result = DialogResult.OK Then
             ' wenn Antwort OK -> Event auslösen
-            RaiseEvent ItemAdd(
-           Me, New IniFileListEditEventArgs With {
-           .NewItemName = newitemdlg.NewItemValue})
+            RaiseEvent ItemAdd(Me, New IniFileListEditEventArgs(
+                               String.Empty,
+                               String.Empty,
+                               newitemdlg.NewItemValue))
+
         End If
 
     End Sub
