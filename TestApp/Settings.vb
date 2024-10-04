@@ -8,15 +8,12 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System.ComponentModel
 Imports System.Configuration
-
 
 Namespace My
 
     Partial Friend NotInheritable Class MySettings
-
 
         ''' <summary>
         ''' wird ausgelöst, nachdem der Wert einer Einstellung geändert wurde.
@@ -30,7 +27,6 @@ Namespace My
 
         End Sub
 
-
         ''' <summary>
         ''' wird ausgelöst, bevor der Wert einer Einstellung geändert wird.
         ''' </summary>
@@ -42,7 +38,6 @@ Namespace My
                     Me.SettingChanging
 
         End Sub
-
 
         ''' <summary>
         ''' wird ausgelöst, nachdem die Einstellungswerte geladen wurden.
@@ -56,7 +51,6 @@ Namespace My
 
         End Sub
 
-
         ''' <summary>
         ''' wird ausgelöst, bevor die Einstellungswerte gespeichert werden.
         ''' </summary>
@@ -68,7 +62,6 @@ Namespace My
                     Me.SettingsSaving
 
         End Sub
-
 
     End Class
 

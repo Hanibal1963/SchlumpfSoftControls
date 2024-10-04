@@ -8,16 +8,12 @@
 ' ****************************************************************************************************************
 '
 
-
-
 Imports Microsoft.VisualBasic.ApplicationServices
 Imports Microsoft.VisualBasic.Devices
-
 
 Namespace My
 
     Partial Friend Class MyApplication
-
 
         ''' <summary>
         ''' Wird beim Herstellen oder Trennen der Netzwerkverbindung ausgelöst.
@@ -30,7 +26,6 @@ Namespace My
                     Me.NetworkAvailabilityChanged
 
         End Sub
-
 
         ''' <summary>
         ''' Wird nach dem Schließen aller Anwendungsformulare ausgelöst.  
@@ -46,7 +41,6 @@ Namespace My
                     Me.Shutdown
 
         End Sub
-
 
         ''' <summary>
         ''' Wird beim Starten der Anwendung noch vor dem Erstellen des Startformulars ausgelöst.
@@ -67,7 +61,6 @@ Namespace My
 
         End Sub
 
-
         ''' <summary>
         ''' Wird beim Starten einer Einzelinstanzanwendung ausgelöst, wenn die Anwendung bereits aktiv ist.
         ''' </summary>
@@ -80,7 +73,6 @@ Namespace My
 
         End Sub
 
-
         ''' <summary>
         ''' Wird bei einem Ausnahmefehler ausgelöst.
         ''' </summary>
@@ -92,7 +84,6 @@ Namespace My
                     Me.UnhandledException
 
         End Sub
-
 
     End Class
 

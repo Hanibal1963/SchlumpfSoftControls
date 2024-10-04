@@ -13,8 +13,8 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Testprogramm für SchlumpfSoft Controls")>
 <Assembly: AssemblyCompany("SchlumpfSoft")>
 <Assembly: AssemblyProduct("SchlumpfSoft Controls")>
-<Assembly: AssemblyCopyright("Copyright © Andreas Sauer 2024")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyCopyright("Copyright © Andreas Sauer 2023 - 2024")>
+<Assembly: AssemblyTrademark("privat")>
 
 <Assembly: ComVisible(False)>
 
@@ -32,6 +32,6 @@ Imports System.Runtime.InteropServices
 ' indem Sie "*" wie unten gezeigt eingeben:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.2024.07.05")>
-<Assembly: AssemblyFileVersion("1.2024.07.05")>
+<Assembly: AssemblyVersion("1.2024.10.04")>
+<Assembly: AssemblyFileVersion("1.2024.10.04")>
 <Assembly: NeutralResourcesLanguage("de-DE")>
