@@ -32,6 +32,7 @@ Public Class IniFile : Inherits Component
     Private _Sections As Dictionary(Of String, Dictionary(Of String, String))
     Private _SectionsComments As Dictionary(Of String, List(Of String))
     Private _CurrentSectionName As String
+    Private _FileSaved As Boolean = False
 
 #End Region
 
@@ -60,6 +61,17 @@ Public Class IniFile : Inherits Component
 #End Region
 
 #Region "Definition neuer Eigenschaften"
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <returns></returns>
+    <Browsable(False)>
+    Public ReadOnly Property FileSaved As Boolean
+        Get
+            Return Me._FileSaved
+        End Get
+    End Property
 
     '''' <summary>
     '''' Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.
@@ -153,6 +165,8 @@ Public Class IniFile : Inherits Component
         Me.ParseFileContent()
         ' eventuell Änderung speichern
         If Me._AutoSave Then Me.SaveFile()
+        ' Datei als ungespeichert markieren
+        Me._FileSaved = False
         ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -263,6 +277,8 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
+        ' Datei als ungespeichert markieren
+        Me._FileSaved = False
         ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -332,6 +348,8 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
+        ' Datei als ungespeichert markieren
+        Me._FileSaved = False
         ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -362,6 +380,8 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
+        ' Datei als ungespeichert markieren
+        Me._FileSaved = False
         ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -394,6 +414,8 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
+        ' Datei als ungespeichert markieren
+        Me._FileSaved = False
         ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -424,6 +446,8 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
+        ' Datei als ungespeichert markieren
+        Me._FileSaved = False
         ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -444,6 +468,8 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
+        ' Datei als ungespeichert markieren
+        Me._FileSaved = False
         ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -466,6 +492,8 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' Änderungen eventuell speichern
         If Me._AutoSave Then Me.SaveFile()
+        ' Datei als ungespeichert markieren
+        Me._FileSaved = False
         ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -535,6 +563,8 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' eventuell Änderung speichern
         If Me._AutoSave Then Me.SaveFile()
+        ' Datei als ungespeichert markieren
+        Me._FileSaved = False
         ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -560,6 +590,8 @@ Public Class IniFile : Inherits Component
         Me.CreateFileContent()
         ' eventuell Änderung speichern
         If Me._AutoSave Then Me.SaveFile()
+        ' Datei als ungespeichert markieren
+        Me._FileSaved = False
         ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -576,6 +608,8 @@ Public Class IniFile : Inherits Component
 
         'Dateiinhalt auf Datenträger schreiben
         IO.File.WriteAllLines(Me._FilePath, Me._FileContent)
+        ' Datei als gespeichert markieren
+        Me._FileSaved = True
 
     End Sub
 
