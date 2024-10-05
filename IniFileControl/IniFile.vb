@@ -156,6 +156,8 @@ Public Class IniFile : Inherits Component
         Me._FileContent = content.Split(CChar(vbCrLf))
         ' Dateiinhalt analysieren
         Me.ParseFileContent()
+        ' eventuell Änderung speichern
+        If Me._AutoSave Then Me.SaveFile()
         ' Ereignis auslösen
         RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
