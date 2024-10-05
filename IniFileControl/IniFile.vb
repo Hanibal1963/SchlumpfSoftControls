@@ -21,10 +21,10 @@ Public Class IniFile : Inherits Component
 
 #Region "Definition der Variablen"
 
-    Private _FilePath As String
-    Private _CommentPrefix As Char
-    Private _FileContent() As String
-    Private _AutoSave As Boolean
+    Private _FilePath As String = String.Empty
+    Private _CommentPrefix As Char = CChar(My.Resources.DefaultCommentPrefix)
+    Private _FileContent() As String = {$""}
+    Private _AutoSave As Boolean = False
     Private _FileComment As List(Of String)
     Private _Sections As Dictionary(Of String, Dictionary(Of String, String))
     Private _SectionsComments As Dictionary(Of String, List(Of String))
@@ -110,45 +110,45 @@ Public Class IniFile : Inherits Component
 
 #Region "Definition der öffentlichen Funktionen"
 
-    ''' <summary>
-    ''' Erstellt eine neue Instanz dieser Klasse.
-    ''' </summary>
-    Public Sub New()
+    '''' <summary>
+    '''' Erstellt eine neue Instanz dieser Klasse.
+    '''' </summary>
+    'Public Sub New()
 
-        'anfänglichen Speicherort und Name der Datei sowie Standardprefix für Kommentare festlegen
-        Me.New(
-        My.Computer.FileSystem.SpecialDirectories.MyDocuments &
-        IO.Path.DirectorySeparatorChar &
-        My.Resources.DefaultFileName, CChar(My.Resources.DefaultCommentPrefix))
+    '    'anfänglichen Speicherort und Name der Datei sowie Standardprefix für Kommentare festlegen
+    '    Me.New(
+    '    My.Computer.FileSystem.SpecialDirectories.MyDocuments &
+    '    IO.Path.DirectorySeparatorChar &
+    '    My.Resources.DefaultFileName, CChar(My.Resources.DefaultCommentPrefix))
 
-    End Sub
+    'End Sub
 
-    ''' <summary>
-    ''' Erstellt eine neue Instanz dieser Klasse unter Angabe der Datei.
-    ''' </summary>
-    ''' <param name="FilePath">
-    ''' Pfad und Name zur INI-Datei.
-    ''' </param>
-    ''' <param name="CommentPrefix">
-    ''' Prefixzeichen für Kommentare.
-    ''' </param>
-    ''' <remarks>
-    ''' Wenn kein Prefixzeichen angegeben wird, wird Standardmäßig das Semikolon verwendet.
-    ''' </remarks>
-    Public Sub New(FilePath As String, CommentPrefix As Char)
+    '''' <summary>
+    '''' Erstellt eine neue Instanz dieser Klasse unter Angabe der Datei.
+    '''' </summary>
+    '''' <param name="FilePath">
+    '''' Pfad und Name zur INI-Datei.
+    '''' </param>
+    '''' <param name="CommentPrefix">
+    '''' Prefixzeichen für Kommentare.
+    '''' </param>
+    '''' <remarks>
+    '''' Wenn kein Prefixzeichen angegeben wird, wird Standardmäßig das Semikolon verwendet.
+    '''' </remarks>
+    'Public Sub New(FilePath As String, CommentPrefix As Char)
 
-        MyBase.New
+    '    MyBase.New
 
-        ' Standardwerte festlegen
-        Me.CreateStandardValues(FilePath, CommentPrefix)
-        ' anfänglichen Dateiinhalt erzeugen
-        Me.CreateTemplate()
-        ' eventuell speichern
-        If Me._AutoSave Then Me.SaveFile()
-        ' Dateiinhalt analysieren
-        Me.ParseFileContent()
+    '    ' Standardwerte festlegen
+    '    Me.CreateStandardValues(FilePath, CommentPrefix)
+    '    ' anfänglichen Dateiinhalt erzeugen
+    '    Me.CreateTemplate()
+    '    ' eventuell speichern
+    '    If Me._AutoSave Then Me.SaveFile()
+    '    ' Dateiinhalt analysieren
+    '    Me.ParseFileContent()
 
-    End Sub
+    'End Sub
 
     ''' <summary>
     ''' Lädt die angegebene Datei
