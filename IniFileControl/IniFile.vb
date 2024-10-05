@@ -116,19 +116,14 @@ Public Class IniFile : Inherits Component
     ''' <summary>
     ''' Erzeugt eine neue Datei mit Beispielinhalt
     ''' </summary>
-    ''' <param name="FilePath">
-    ''' Pfad und Name zur INI-Datei.
-    ''' </param>
     ''' <param name="CommentPrefix">
     ''' Prefixzeichen für Kommentare.
     ''' </param>
     ''' <remarks>
     ''' Wenn kein Prefixzeichen angegeben wird, wird Standardmäßig das Semikolon verwendet.
     ''' </remarks>
-    Public Sub CreateNewFile(FilePath As String, CommentPrefix As Char)
+    Public Sub CreateNewFile(CommentPrefix As Char)
 
-        ' Name und Pfad der Datei festlegen
-        Me._FilePath = FilePath
         ' Prefixzeichen für Kommentare festlegen (Standard wenn nicht festgelegt)
         Me._CommentPrefix = If(CommentPrefix = CChar(""), CChar(My.Resources.DefaultCommentPrefix), CommentPrefix)
         ' Dateiinhalt erzeugen
@@ -233,15 +228,6 @@ Public Class IniFile : Inherits Component
 
     End Sub
 
-    ''' <summary>
-    ''' Speichert die in <see cref="FilePath"/> angegebene Datei.
-    ''' </summary>
-    Public Sub SaveFile()
-
-        'Dateiinhalt auf Datenträger schreiben
-        IO.File.WriteAllLines(Me._FilePath, Me._FileContent)
-
-    End Sub
 
     ''' <summary>
     ''' Gibt den Dateiinhalt zurück
@@ -582,6 +568,16 @@ Public Class IniFile : Inherits Component
 #End Region
 
 #Region "Definition der internen Funktionen"
+
+    ''' <summary>
+    ''' Speichert die in <see cref="FilePath"/> angegebene Datei.
+    ''' </summary>
+    Private Sub SaveFile()
+
+        'Dateiinhalt auf Datenträger schreiben
+        IO.File.WriteAllLines(Me._FilePath, Me._FileContent)
+
+    End Sub
 
     ''' <summary>
     ''' Fügt einen neuen Abschnitt hinzu.
