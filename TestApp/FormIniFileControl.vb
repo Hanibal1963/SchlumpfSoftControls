@@ -20,12 +20,7 @@ Public Class FormIniFileControl
     ''' <summary>
     ''' Speichert den Dateinamen der geöffneten oder gespeicherten Datei.
     ''' </summary>
-    Private filename As String = Nothing
-
-    ''' <summary>
-    ''' speichert den Zustand der geöffneten Datei
-    ''' </summary>
-    Private filenotsaved As Boolean = False
+    Private _Filename As String = Nothing
 
 #End Region
 
@@ -96,7 +91,7 @@ Public Class FormIniFileControl
         Me.Closing
 
         ' prüfen ob Datei geändert wurde
-        If Me.filenotsaved Then
+        If Me.IniFile.FileSaved = False Then
 
             ' Abfragedialog anzeigen
             Dim result As DialogResult = MessageBox.Show(
@@ -130,11 +125,9 @@ Public Class FormIniFileControl
         If result = DialogResult.OK Then
 
             ' Dateiname abrufen
-            Me.filename = Me.SaveFileDialog.FileName
+            Me._Filename = Me.SaveFileDialog.FileName
             ' Datei speichern
-            Me.IniFile.SaveFile(Me.filename)
-            ' Speicherzustand der Datei in gespeichert ändern
-            Me.filenotsaved = False
+            Me.IniFile.SaveFile(Me._Filename)
 
         End If
 
@@ -143,8 +136,10 @@ Public Class FormIniFileControl
     Private Sub FileSave()
 
         ' Dateiname abrufen wenn noch nicht gesetzt
-        If Me.filename Is Nothing Then
+        If Me._Filename Is Nothing Then
             Me.FileSaveAs()
+        Else
+            Me.IniFile.SaveFile(Me._Filename)
         End If
 
     End Sub
@@ -155,9 +150,9 @@ Public Class FormIniFileControl
         If result = DialogResult.OK Then
 
             ' Dateiname abrufen
-            Me.filename = Me.OpenFileDialog.FileName
+            Me._Filename = Me.OpenFileDialog.FileName
             ' Datei öffnen
-            Me.IniFile.LoadFile(Me.filename)
+            Me.IniFile.LoadFile(Me._Filename)
 
         End If
 
@@ -192,18 +187,6 @@ Public Class FormIniFileControl
         Me.FileCommentEdit.Comment = Me.IniFile.GetFileComment
         ' Abschnittsliste anzeigen
         Me.SectionsListEdit.ListItems = Me.IniFile.GetSectionNames
-        ' Speicherzustand der geöffneten Datei setzen
-        Select Case Me.IniFile.AutoSave
-
-            Case True
-                'wenn Automatisch speichern aktiv -> Dateiinhalt wurde gespeichert
-                Me.filenotsaved = False
-
-            Case Else
-                ' ansonsten -> Dateiinhalt wurde nicht gespeichert
-                Me.filenotsaved = True
-
-        End Select
 
     End Sub
 
