@@ -148,11 +148,17 @@
   <data name="ToolStripMenuItem_Datei.Text" xml:space="preserve">
     <value>file</value>
   </data>
+  <data name="ToolStripMenuItem_Neu.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
   <data name="ToolStripMenuItem_Oeffnen.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 22</value>
   </data>
   <data name="ToolStripMenuItem_Oeffnen.Text" xml:space="preserve">
     <value>Open ...</value>
+  </data>
+  <data name="ToolStripMenuItem_Options.Text" xml:space="preserve">
+    <value>Options ...</value>
   </data>
   <data name="ToolStripMenuItem_Speichern.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 22</value>
