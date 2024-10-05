@@ -48,14 +48,20 @@ Public Class FormIniFileControl
     ''' <param name="e">
     ''' übergibt die Ereignisdaten.
     ''' </param>
-    Private Sub ToolStripMenuItem_Oeffnen_Click(sender As Object, e As EventArgs) Handles _
+    Private Sub ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles _
+        ToolStripMenuItem_Neu.Click,
         ToolStripMenuItem_Oeffnen.Click,
         ToolStripMenuItem_Speichern.Click,
         ToolStripMenuItem_SpeichernUnter.Click,
+        ToolStripMenuItem_Options.Click,
         ToolStripMenuItem_Beenden.Click
 
         ' welcher Menüeintrag wurde geklickt?
-        If sender Is Me.ToolStripMenuItem_Oeffnen Then
+        If sender Is Me.ToolStripMenuItem_Neu Then
+            ' neue Datei erstellen
+            Me.CreateNewFile()
+
+        ElseIf sender Is Me.ToolStripMenuItem_Oeffnen Then
             ' Datei öffnen
             Me.FileOpen()
 
@@ -66,6 +72,10 @@ Public Class FormIniFileControl
         ElseIf sender Is Me.ToolStripMenuItem_SpeichernUnter Then
             ' Datei unter anderem Namen speichern
             Me.FileSaveAs()
+
+        ElseIf sender Is Me.ToolStripMenuItem_Options Then
+            ' Dialog für Optionen anzeigen
+            Me.ShowOptionsDialog()
 
         ElseIf sender Is Me.ToolStripMenuItem_Beenden Then
             ' Programm beenden
@@ -155,6 +165,17 @@ Public Class FormIniFileControl
             My.Resources.ErrorMsgEntryNameExist,
             MsgBoxStyle.Critical And MsgBoxStyle.ApplicationModal,
             My.Resources.MsgBoxTitleError)
+    End Sub
+    Private Sub ShowOptionsDialog()
+
+
+
+    End Sub
+
+    Private Sub CreateNewFile()
+
+
+
     End Sub
 
 #End Region

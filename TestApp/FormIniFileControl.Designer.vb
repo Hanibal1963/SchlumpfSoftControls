@@ -27,27 +27,33 @@ Partial Class FormIniFileControl
         Dim ToolStripContainer As System.Windows.Forms.ToolStripContainer
         Dim TableLayoutPanel As System.Windows.Forms.TableLayoutPanel
         Dim ToolStripMenuItem_Datei As System.Windows.Forms.ToolStripMenuItem
+        Dim ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
         Dim ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
         Dim ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+        Dim ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
         Me.ContentView = New SchlumpfSoft.Controls.IniFileControl.IniFileContentView()
         Me.FileCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
         Me.SectionsListEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileListEdit()
         Me.SectionCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
         Me.EntryListEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileListEdit()
+        Me.EntryValueEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit()
+        Me.ToolStripMenuItem_Neu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_Oeffnen = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_Speichern = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_SpeichernUnter = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem_Options = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_Beenden = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.IniFile = New SchlumpfSoft.Controls.IniFileControl.IniFile()
-        Me.EntryValueEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit()
         MenuStrip_HauptMenu = New System.Windows.Forms.MenuStrip()
         ToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         ToolStripMenuItem_Datei = New System.Windows.Forms.ToolStripMenuItem()
+        ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         MenuStrip_HauptMenu.SuspendLayout()
         ToolStripContainer.ContentPanel.SuspendLayout()
         ToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -91,6 +97,7 @@ Partial Class FormIniFileControl
         '
         'ContentView
         '
+        Me.ContentView.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.ContentView, "ContentView")
         Me.ContentView.Lines = Nothing
         Me.ContentView.Name = "ContentView"
@@ -109,6 +116,7 @@ Partial Class FormIniFileControl
         resources.ApplyResources(Me.SectionsListEdit, "SectionsListEdit")
         Me.SectionsListEdit.ListItems = New String(-1) {}
         Me.SectionsListEdit.Name = "SectionsListEdit"
+        Me.SectionsListEdit.SelectedSection = ""
         Me.SectionsListEdit.TitelText = "Abschnittsliste:"
         '
         'SectionCommentEdit
@@ -124,13 +132,33 @@ Partial Class FormIniFileControl
         resources.ApplyResources(Me.EntryListEdit, "EntryListEdit")
         Me.EntryListEdit.ListItems = New String() {""}
         Me.EntryListEdit.Name = "EntryListEdit"
+        Me.EntryListEdit.SelectedSection = ""
         Me.EntryListEdit.TitelText = "Eintragsliste:"
+        '
+        'EntryValueEdit
+        '
+        resources.ApplyResources(Me.EntryValueEdit, "EntryValueEdit")
+        Me.EntryValueEdit.Name = "EntryValueEdit"
+        Me.EntryValueEdit.SelectedEntry = Nothing
+        Me.EntryValueEdit.SelectedSection = ""
+        Me.EntryValueEdit.TitelText = "Eintrag:"
+        Me.EntryValueEdit.Value = ""
         '
         'ToolStripMenuItem_Datei
         '
-        ToolStripMenuItem_Datei.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem_Oeffnen, ToolStripSeparator1, Me.ToolStripMenuItem_Speichern, Me.ToolStripMenuItem_SpeichernUnter, ToolStripSeparator2, Me.ToolStripMenuItem_Beenden})
+        ToolStripMenuItem_Datei.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem_Neu, ToolStripSeparator3, Me.ToolStripMenuItem_Oeffnen, ToolStripSeparator1, Me.ToolStripMenuItem_Speichern, Me.ToolStripMenuItem_SpeichernUnter, ToolStripSeparator2, Me.ToolStripMenuItem_Options, ToolStripSeparator4, Me.ToolStripMenuItem_Beenden})
         ToolStripMenuItem_Datei.Name = "ToolStripMenuItem_Datei"
         resources.ApplyResources(ToolStripMenuItem_Datei, "ToolStripMenuItem_Datei")
+        '
+        'ToolStripMenuItem_Neu
+        '
+        Me.ToolStripMenuItem_Neu.Name = "ToolStripMenuItem_Neu"
+        resources.ApplyResources(Me.ToolStripMenuItem_Neu, "ToolStripMenuItem_Neu")
+        '
+        'ToolStripSeparator3
+        '
+        ToolStripSeparator3.Name = "ToolStripSeparator3"
+        resources.ApplyResources(ToolStripSeparator3, "ToolStripSeparator3")
         '
         'ToolStripMenuItem_Oeffnen
         '
@@ -157,6 +185,16 @@ Partial Class FormIniFileControl
         ToolStripSeparator2.Name = "ToolStripSeparator2"
         resources.ApplyResources(ToolStripSeparator2, "ToolStripSeparator2")
         '
+        'ToolStripMenuItem_Options
+        '
+        Me.ToolStripMenuItem_Options.Name = "ToolStripMenuItem_Options"
+        resources.ApplyResources(Me.ToolStripMenuItem_Options, "ToolStripMenuItem_Options")
+        '
+        'ToolStripSeparator4
+        '
+        ToolStripSeparator4.Name = "ToolStripSeparator4"
+        resources.ApplyResources(ToolStripSeparator4, "ToolStripSeparator4")
+        '
         'ToolStripMenuItem_Beenden
         '
         Me.ToolStripMenuItem_Beenden.Name = "ToolStripMenuItem_Beenden"
@@ -182,13 +220,6 @@ Partial Class FormIniFileControl
         Me.IniFile.AutoSave = False
         Me.IniFile.CommentPrefix = Global.Microsoft.VisualBasic.ChrW(59)
         Me.IniFile.FilePath = ""
-        '
-        'EntryValueEdit
-        '
-        resources.ApplyResources(Me.EntryValueEdit, "EntryValueEdit")
-        Me.EntryValueEdit.Name = "EntryValueEdit"
-        Me.EntryValueEdit.TitelText = "Eintrag:"
-        Me.EntryValueEdit.Value = ""
         '
         'FormIniFileControl
         '
@@ -226,4 +257,6 @@ Partial Class FormIniFileControl
     Private WithEvents SectionCommentEdit As SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit
     Private WithEvents EntryListEdit As SchlumpfSoft.Controls.IniFileControl.IniFileListEdit
     Private WithEvents EntryValueEdit As SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit
+    Private WithEvents ToolStripMenuItem_Neu As ToolStripMenuItem
+    Private WithEvents ToolStripMenuItem_Options As ToolStripMenuItem
 End Class
