@@ -31,6 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{EAFFEA96-8
 		Docs\AniGifControl.md = Docs\AniGifControl.md
 		Docs\DriveWatcherControl.md = Docs\DriveWatcherControl.md
 		Docs\IniFileControl.md = Docs\IniFileControl.md
+		IniFileStruktur.md = IniFileStruktur.md
 		Docs\NotifyFormControl.md = Docs\NotifyFormControl.md
 		Docs\SevenSegmentControl.md = Docs\SevenSegmentControl.md
 		Docs\ShapeControl.md = Docs\ShapeControl.md
@@ -185,12 +186,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1F02675E-F1F5-4CB4-9063-742717056245}
-		RESX_NeutralResourcesLanguage = de-DE
-		RESX_PrefixTranslations = False
-		RESX_AutoCreateNewLanguageFiles = False
-		RESX_CultureCountyOverrides = 
-		RESX_ConfirmAddLanguageFile = True
 		RESX_SortFileContentOnSave = True
+		RESX_ConfirmAddLanguageFile = True
+		RESX_CultureCountyOverrides = 
+		RESX_AutoCreateNewLanguageFiles = False
+		RESX_PrefixTranslations = False
+		RESX_NeutralResourcesLanguage = de-DE
+		SolutionGuid = {1F02675E-F1F5-4CB4-9063-742717056245}
 	EndGlobalSection
 EndGlobal

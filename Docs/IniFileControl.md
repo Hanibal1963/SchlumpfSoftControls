@@ -16,10 +16,16 @@ Inzwischen habe ich weitere Komponenten hinzugefügt welche die Benutzung der
 Komponente IniFile weiter vereinfachen. 
 Es sind nur noch wenige Zeilen Code erforderlich um die volle Funktionalität zu erreichen.
 
+[Beschreibung der Struktur einer INI - Datei](https://github.com/Hanibal1963/SchlumpfSoftControls/blob/main/Docs/IniFileStruktur.md)
+
+---
+
+## Inhalt der Bibliothek
+
 Die Bibliothek IniFileControl umfasst folgende Komponenten:
 
 - **IniFile** - Das Verwaltungscontrol.
-- **IniFileCommentEdit** - Control zum Bearbeiten des Dateikommentars.
+- **IniFileCommentEdit** - Control zum Bearbeiten der Datei- und Abschnittskommentare.
 - **IniFileListEdit** - Control zum Bearbeiten der Abschnitts- oder Eintragsnamen. 
 - **IniFileEntryValueEdit** - Control zum Bearbeiten der Eintragswerte.
 - **IniFileContentView** - Control zum Anzeigen des gesamten Dateiinhaltes.
@@ -31,8 +37,7 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 <details>
 <summary>Eigenschaften</summary>
 
-- **AutoSave** - Legt das Speicherverhalten der Klasse fest.
-  (True legt fest das Änderungen automatisch gespeichert werden.)
+- **AutoSave** - Gibt das Speicherverhalten der Klasse zurück oder legt dieses fest.
 - **CommentPrefix** - Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.
 - **FilePath** - Gibt den Pfad und den Name zur INI-Datei zurück oder legt diesen fest.
 
@@ -65,13 +70,8 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 <summary>Ereignisse</summary>
 
 - **EntryNameExist** - Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereits vorhanden ist.
-- **EntrysChanged** - Wird ausgelöst wenn sich die Liste der Einträge geändert hat.
-- **EntryValueChanged** - Wird ausgelöst wenn sich der Wert eines Eintrags in einem Abschnitt geändert hat.
-- **FileCommentChanged** - Wird ausgelöst wenn sich der Dateikommentar geändert hat.
 - **FileContentChanged** - Wird ausgelöst wenn sich der Dateiinhalt geändert hat.
-- **SectionCommentChanged** - Wird ausgelöst wenn sich der Abschnittskommentar geändert hat.
 - **SectionNameExist** - Wird ausgelöst wenn beim anlegen eines neuen Abschnitts oder umbenennen eines Abschnitts der Name bereits vorhanden ist.
-- **SectionsChanged** - Wird ausgelöst wenn sich die Liste der Abschnitte geändert hat.
 
 </details>
 
@@ -82,7 +82,9 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 <details> 
 <summary>Eigenschaften</summary>
 
+- **TitelText** - Gibt den Text der Titelzeile zurück oder legt diesen fest.
 - **Comment** - Gibt den Kommentartext zurück oder legt diesen fest.
+- **SectionName** - Gibt den Name eines Abschnitts zurück oder legt diesen fest.
 
 </details>
 
@@ -100,8 +102,9 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 <details> 
 <summary>Eigenschaften</summary>
 
+- **TitelText** - Gibt den Text der Titelzeile zurück oder legt diesen fest.
 - **SelectedItem** - Gibt den ausgewählten Eintrag oder leer zurück.
-- **Items** - Elemente der Listbox.
+- **ListItems** - Gibt die Elemente der Listbox zurück oder legt diese fest.
 
 </details>
 
@@ -122,7 +125,10 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 <details> 
 <summary>Eigenschaften</summary>
 
-- **Value** - Eintragswert.
+- **TitelText** - Gibt den Text der Titelzeile zurück oder legt diesen fest.
+- **SelectedSection** - Gibt den Name des Abschnitts zurück oder legt diesen fest in dem  der wert abgelegt ist.
+- **SelectedEntry** - Gibt den Name des Eintrags zurück oder legt diesen fest unter dem der Wert abgelgt ist.
+- **Value** - Gibt den Eintragswert zurück oder legt diesen fest.
 
 </details>
 
@@ -135,12 +141,13 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 
 ---
 
-## Eigenschaften, Funktionen und Ereignisse für IniFilecontentView
+## Eigenschaften, Funktionen und Ereignisse für IniFileContentView
 
 <details>
 <summary>Eigenschaften</summary>
 
-- **Lines** - Dateiinhalt
+- **TitelText** - Gibt den Text der Titelzeile zurück oder legt diesen fest.
+- **Lines** - Gibt den Dateiinhalt zurück oder gibt diesen zurück.
 
 </details>
 
