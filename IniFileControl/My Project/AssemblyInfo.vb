@@ -9,12 +9,12 @@ Imports Microsoft.VisualBasic
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("SchlumpfSoft")>
 <Assembly: AssemblyProduct("IniFileControl")>
-<Assembly: AssemblyCopyright("© 2024 by Andreas Sauer")>
+<Assembly: AssemblyCopyright("© 2023 - 2024 by Andreas Sauer")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 
 <Assembly: ComVisible(False)>
 
-<Assembly: AssemblyVersion("2.2024.04.10")>
-<Assembly: AssemblyFileVersion("2.2024.04.10")>
+<Assembly: AssemblyVersion("2.2024.05.10")>
+<Assembly: AssemblyFileVersion("2.2024.05.10")>
 <Assembly: NeutralResourcesLanguage("de-DE")>

@@ -7,8 +7,11 @@
 Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
+Imports System.Diagnostics
 Imports System.Drawing
 Imports System.IO
+Imports Microsoft.SqlServer
+Imports Microsoft.VisualBasic.Logging
 
 ''' <summary>
 ''' Steuerelement zum Verwalten von INI - Dateien
@@ -110,45 +113,53 @@ Public Class IniFile : Inherits Component
 
 #Region "Definition der öffentlichen Funktionen"
 
-    '''' <summary>
-    '''' Erstellt eine neue Instanz dieser Klasse.
-    '''' </summary>
-    'Public Sub New()
+    ''' <summary>
+    ''' Erzeugt eine neue Datei mit Beispielinhalt
+    ''' </summary>
+    ''' <param name="FilePath">
+    ''' Pfad und Name zur INI-Datei.
+    ''' </param>
+    ''' <param name="CommentPrefix">
+    ''' Prefixzeichen für Kommentare.
+    ''' </param>
+    ''' <remarks>
+    ''' Wenn kein Prefixzeichen angegeben wird, wird Standardmäßig das Semikolon verwendet.
+    ''' </remarks>
+    Public Sub CreateNewFile(FilePath As String, CommentPrefix As Char)
 
-    '    'anfänglichen Speicherort und Name der Datei sowie Standardprefix für Kommentare festlegen
-    '    Me.New(
-    '    My.Computer.FileSystem.SpecialDirectories.MyDocuments &
-    '    IO.Path.DirectorySeparatorChar &
-    '    My.Resources.DefaultFileName, CChar(My.Resources.DefaultCommentPrefix))
+        ' Name und Pfad der Datei festlegen
+        Me._FilePath = FilePath
+        ' Prefixzeichen für Kommentare festlegen (Standard wenn nicht festgelegt)
+        Me._CommentPrefix = If(CommentPrefix = CChar(""), CChar(My.Resources.DefaultCommentPrefix), CommentPrefix)
+        ' Dateiinhalt erzeugen
+        Dim content As String =
+            $"{Me._CommentPrefix} INI - Datei Beispiel {vbCrLf}" &
+            $"{Me._CommentPrefix} Diese Datei wurde von " &
+            $"{My.Application.Info.AssemblyName} erzeugt{vbCrLf}" &
+            $"{vbCrLf}" &
+            $"[Allgemein]{vbCrLf}" &
+            $"{Me._CommentPrefix} Anwendungsname und Version{vbCrLf}" &
+            $"AppName = MeineApp{vbCrLf}" &
+            $"Version = 1.0.0{vbCrLf}" &
+            $"{vbCrLf}" &
+            $"[Datenbank]{vbCrLf}" &
+            $"{Me._CommentPrefix} Einstellungen zur Datenbank{vbCrLf}" &
+            $"Server = localhost{vbCrLf}" &
+            $"Port = 3306{vbCrLf}" &
+            $"Benutzername = admin{vbCrLf}" &
+            $"Passwort = geheim{vbCrLf}" &
+            $"{vbCrLf}" &
+            $"[Logging]{vbCrLf}" &
+            $"{Me._CommentPrefix} Einstellungen zum Logging{vbCrLf}" &
+            $"LogLevel = Debug{vbCrLf}" &
+            $"LogDatei = logs / app.log{vbCrLf}"
+        Me._FileContent = content.Split(CChar(vbCrLf))
+        ' Dateiinhalt analysieren
+        Me.ParseFileContent()
+        ' Ereignis auslösen
+        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
-    'End Sub
-
-    '''' <summary>
-    '''' Erstellt eine neue Instanz dieser Klasse unter Angabe der Datei.
-    '''' </summary>
-    '''' <param name="FilePath">
-    '''' Pfad und Name zur INI-Datei.
-    '''' </param>
-    '''' <param name="CommentPrefix">
-    '''' Prefixzeichen für Kommentare.
-    '''' </param>
-    '''' <remarks>
-    '''' Wenn kein Prefixzeichen angegeben wird, wird Standardmäßig das Semikolon verwendet.
-    '''' </remarks>
-    'Public Sub New(FilePath As String, CommentPrefix As Char)
-
-    '    MyBase.New
-
-    '    ' Standardwerte festlegen
-    '    Me.CreateStandardValues(FilePath, CommentPrefix)
-    '    ' anfänglichen Dateiinhalt erzeugen
-    '    Me.CreateTemplate()
-    '    ' eventuell speichern
-    '    If Me._AutoSave Then Me.SaveFile()
-    '    ' Dateiinhalt analysieren
-    '    Me.ParseFileContent()
-
-    'End Sub
+    End Sub
 
     ''' <summary>
     ''' Lädt die angegebene Datei
@@ -352,7 +363,7 @@ Public Class IniFile : Inherits Component
         ' Prüfen ob der Name vorhanden ist
         If Me._Sections.Item(Section).ContainsKey(Name) Then
             ' Ereignis auslösen und beenden
-            RaiseEvent EntrynameExist(Me, EventArgs.Empty)
+            RaiseEvent EntryNameExist(Me, EventArgs.Empty)
             Exit Sub
 
         End If
@@ -414,7 +425,7 @@ Public Class IniFile : Inherits Component
         ' Ist der neue Name bereits vorhanden? 
         If Me._Sections.Item(Section).ContainsKey(NewName) Then
             ' Ereignis auslösen und beenden
-            RaiseEvent EntrynameExist(Me, EventArgs.Empty)
+            RaiseEvent EntryNameExist(Me, EventArgs.Empty)
             Exit Sub
 
         End If
@@ -659,24 +670,6 @@ Public Class IniFile : Inherits Component
     End Sub
 
     ''' <summary>
-    ''' Legt die anfänglichen Standardwerte fest
-    ''' </summary>
-    ''' <param name="FilePath">
-    ''' Pfad und Name der Datei
-    ''' </param>
-    ''' <param name="CommentPrefix">
-    ''' Prefixzeichen für Kommentare
-    ''' </param>
-    Private Sub CreateStandardValues(FilePath As String, CommentPrefix As Char)
-
-        Me._FilePath = FilePath
-        Me._CommentPrefix = CommentPrefix
-        Me._AutoSave = False
-        Me._FileComment = New List(Of String)
-
-    End Sub
-
-    ''' <summary>
     ''' Erzeugt den Dateiinhalt
     ''' </summary>
     Private Sub CreateFileContent()
@@ -714,29 +707,6 @@ Public Class IniFile : Inherits Component
         Next
         ' Dateiinhalt erzeugen
         Me._FileContent = filecontent.ToArray
-
-    End Sub
-
-    ''' <summary>
-    ''' Erzeugt den Beispielinhalt der Datei
-    ''' </summary>
-    Private Sub CreateTemplate()
-
-        Me._FileContent = {
-         Me._CommentPrefix & $" " & My.Resources.DefaultFileName,
-         Me._CommentPrefix & $" erstellt von " & My.Application.Info.AssemblyName &
-         $" V" & My.Application.Info.Version.ToString,
-         Me._CommentPrefix & $" " & My.Application.Info.Copyright,
-         $"",
-         $"[Abschnitt 1]",
-         Me._CommentPrefix & $"Beispielabschnitt",
-         Me._CommentPrefix & $"Computername - Name des PC's",
-         Me._CommentPrefix & $"Betriebssystem - welches Betriebssystem",
-         Me._CommentPrefix & $"Version - Versionsnummer des Betriebssystems",
-         $"Computername = " & My.Computer.Name,
-         $"Betriebssystem = " & My.Computer.Info.OSFullName,
-         $"Version = " & My.Computer.Info.OSVersion
-        }
 
     End Sub
 
