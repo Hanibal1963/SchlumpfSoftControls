@@ -46,6 +46,7 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 <details> 
 <summary>Funktionen</summary>
 
+- **CreateNewFile** - Erstellt eine neue Datei mit Beispielinhalt.
 - **AddEntry** - Fügt einen neuen Eintrag in die Liste der Eintragnamen ein.
 - **AddSection** - Fügt einen neuen Abschnitt hinzu.
 - **DeleteEntry** - Löscht einen Eintrag aus einem Abschnitt.
