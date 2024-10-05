@@ -398,11 +398,38 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die NeueDatei.ini ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_DefaultFileName() As String
+            Get
+                Return ResourceManager.GetString("IniFile_DefaultFileName", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die INI - Dateien (*.ini)|*.ini ähnelt.
         '''</summary>
         Friend ReadOnly Property IniFile_FileDialogFilter() As String
             Get
                 Return ResourceManager.GetString("IniFile_FileDialogFilter", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Wollen Sie wirklich ohne zu speichern beenden? ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_MsgBoxFileContentChanged() As String
+            Get
+                Return ResourceManager.GetString("IniFile_MsgBoxFileContentChanged", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Die Datei ist noch nicht gespeichert! ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_MsgBoxTitleFileContentChanged() As String
+            Get
+                Return ResourceManager.GetString("IniFile_MsgBoxTitleFileContentChanged", resourceCulture)
             End Get
         End Property
         
@@ -421,6 +448,15 @@ Namespace My.Resources
         Friend ReadOnly Property IniFile_SaveFileDialogTitle() As String
             Get
                 Return ResourceManager.GetString("IniFile_SaveFileDialogTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Neue INI - Datei erstellen ähnelt.
+        '''</summary>
+        Friend ReadOnly Property IniFile_TitleNewIniFile() As String
+            Get
+                Return ResourceManager.GetString("IniFile_TitleNewIniFile", resourceCulture)
             End Get
         End Property
         

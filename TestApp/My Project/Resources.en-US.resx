@@ -164,14 +164,26 @@ Please choose another name.</value>
   <data name="IniFile_ContentViewTitle" xml:space="preserve">
     <value>File content:</value>
   </data>
+  <data name="IniFile_DefaultFileName" xml:space="preserve">
+    <value>newfile.ini</value>
+  </data>
   <data name="IniFile_FileDialogFilter" xml:space="preserve">
     <value>Ini - files (*.ini) |*.ini</value>
+  </data>
+  <data name="IniFile_MsgBoxFileContentChanged" xml:space="preserve">
+    <value>Do you really want to end without saving?</value>
+  </data>
+  <data name="IniFile_MsgBoxTitleFileContentChanged" xml:space="preserve">
+    <value>The file is not yet saved!</value>
   </data>
   <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
     <value>Open ini file</value>
   </data>
   <data name="IniFile_SaveFileDialogTitle" xml:space="preserve">
     <value>Save ini file under</value>
+  </data>
+  <data name="IniFile_TitleNewIniFile" xml:space="preserve">
+    <value>Create new ini file</value>
   </data>
   <data name="MsgBoxTitleError" xml:space="preserve">
     <value>Mistake!</value>

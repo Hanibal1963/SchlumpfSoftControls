@@ -225,14 +225,26 @@ Bitte wählen sie einen anderen Name.</value>
   <data name="IniFile_ContentViewTitle" xml:space="preserve">
     <value>Dateiinhalt:</value>
   </data>
+  <data name="IniFile_DefaultFileName" xml:space="preserve">
+    <value>NeueDatei.ini</value>
+  </data>
   <data name="IniFile_FileDialogFilter" xml:space="preserve">
     <value>INI - Dateien (*.ini)|*.ini</value>
+  </data>
+  <data name="IniFile_MsgBoxFileContentChanged" xml:space="preserve">
+    <value>Wollen Sie wirklich ohne zu speichern beenden?</value>
+  </data>
+  <data name="IniFile_MsgBoxTitleFileContentChanged" xml:space="preserve">
+    <value>Die Datei ist noch nicht gespeichert!</value>
   </data>
   <data name="IniFile_OpenFileDialogTitle" xml:space="preserve">
     <value>INI - Datei öffnen</value>
   </data>
   <data name="IniFile_SaveFileDialogTitle" xml:space="preserve">
     <value>INI - Datei speichern unter</value>
+  </data>
+  <data name="IniFile_TitleNewIniFile" xml:space="preserve">
+    <value>Neue INI - Datei erstellen</value>
   </data>
   <data name="MsgBoxTitleError" xml:space="preserve">
     <value>Fehler!</value>

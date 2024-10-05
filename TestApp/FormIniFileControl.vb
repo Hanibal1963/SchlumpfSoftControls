@@ -4,7 +4,9 @@
 ' ****************************************************************************************************************
 '
 
+Imports System.ComponentModel
 Imports System.Globalization
+Imports System.Security.Cryptography
 Imports System.Threading
 Imports SchlumpfSoft.Controls.IniFileControl
 
@@ -19,6 +21,11 @@ Public Class FormIniFileControl
     ''' Speichert den Dateinamen der geöffneten oder gespeicherten Datei.
     ''' </summary>
     Private filename As String = Nothing
+
+    ''' <summary>
+    ''' speichert den Zustand der geöffneten Datei
+    ''' </summary>
+    Private filenotsaved As Boolean = False
 
 #End Region
 
@@ -85,6 +92,34 @@ Public Class FormIniFileControl
 
     End Sub
 
+    Private Sub FormIniFileControl_Closing(sender As Object, e As CancelEventArgs) Handles _
+        Me.Closing
+
+        ' prüfen ob Datei geändert wurde
+        If Me.filenotsaved Then
+
+            ' Abfragedialog anzeigen
+            Dim result As DialogResult = MessageBox.Show(
+                My.Resources.IniFile_MsgBoxFileContentChanged,
+                My.Resources.IniFile_MsgBoxTitleFileContentChanged,
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button2)
+            ' Abfrage auswerten
+            If result = DialogResult.Yes Then
+                ' weiter Schließen
+                Exit Sub
+
+            ElseIf result = DialogResult.No Then
+                ' Schließen abbrechen
+                e.Cancel = True
+
+            End If
+
+        End If
+
+    End Sub
+
 #End Region
 
 #Region "interne Methoden"
@@ -98,6 +133,8 @@ Public Class FormIniFileControl
             Me.filename = Me.SaveFileDialog.FileName
             ' Datei speichern
             Me.IniFile.SaveFile(Me.filename)
+            ' Speicherzustand der Datei in gespeichert ändern
+            Me.filenotsaved = False
 
         End If
 
@@ -109,8 +146,6 @@ Public Class FormIniFileControl
         If Me.filename Is Nothing Then
             Me.FileSaveAs()
         End If
-        ' Datei speichern
-        Me.IniFile.SaveFile(Me.filename)
 
     End Sub
 
@@ -125,6 +160,18 @@ Public Class FormIniFileControl
             Me.IniFile.LoadFile(Me.filename)
 
         End If
+
+    End Sub
+
+    Private Sub ShowOptionsDialog()
+
+
+
+    End Sub
+
+    Private Sub CreateNewFile()
+
+        Me.IniFile.CreateNewFile(CChar($""))
 
     End Sub
 
@@ -145,6 +192,18 @@ Public Class FormIniFileControl
         Me.FileCommentEdit.Comment = Me.IniFile.GetFileComment
         ' Abschnittsliste anzeigen
         Me.SectionsListEdit.ListItems = Me.IniFile.GetSectionNames
+        ' Speicherzustand der geöffneten Datei setzen
+        Select Case Me.IniFile.AutoSave
+
+            Case True
+                'wenn Automatisch speichern aktiv -> Dateiinhalt wurde gespeichert
+                Me.filenotsaved = False
+
+            Case Else
+                ' ansonsten -> Dateiinhalt wurde nicht gespeichert
+                Me.filenotsaved = True
+
+        End Select
 
     End Sub
 
@@ -165,17 +224,6 @@ Public Class FormIniFileControl
             My.Resources.ErrorMsgEntryNameExist,
             MsgBoxStyle.Critical And MsgBoxStyle.ApplicationModal,
             My.Resources.MsgBoxTitleError)
-    End Sub
-    Private Sub ShowOptionsDialog()
-
-
-
-    End Sub
-
-    Private Sub CreateNewFile()
-
-
-
     End Sub
 
 #End Region
