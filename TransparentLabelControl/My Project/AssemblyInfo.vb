@@ -1,4 +1,10 @@
-﻿Imports System.Reflection
+﻿' ****************************************************************************************************************
+' AssemblyInfo.vb
+' © 2023 - 2024 by Andreas Sauer
+' ****************************************************************************************************************
+'
+
+Imports System.Reflection
 Imports System.Resources
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
