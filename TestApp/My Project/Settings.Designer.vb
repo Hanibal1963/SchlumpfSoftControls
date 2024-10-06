@@ -56,13 +56,48 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("de-DE")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property LangCode() As String
             Get
                 Return CType(Me("LangCode"),String)
             End Get
             Set
                 Me("LangCode") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property IniFile_CommentPrefix() As String
+            Get
+                Return CType(Me("IniFile_CommentPrefix"),String)
+            End Get
+            Set
+                Me("IniFile_CommentPrefix") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property IniFile_FileAutoSave() As Boolean
+            Get
+                Return CType(Me("IniFile_FileAutoSave"),Boolean)
+            End Get
+            Set
+                Me("IniFile_FileAutoSave") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property IniFile_DefaultFolder() As String
+            Get
+                Return CType(Me("IniFile_DefaultFolder"),String)
+            End Get
+            Set
+                Me("IniFile_DefaultFolder") = value
             End Set
         End Property
     End Class

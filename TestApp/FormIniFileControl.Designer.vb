@@ -26,22 +26,28 @@ Partial Class FormIniFileControl
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormIniFileControl))
         Dim ToolStripContainer As System.Windows.Forms.ToolStripContainer
         Dim TableLayoutPanel As System.Windows.Forms.TableLayoutPanel
+        Dim GroupBoxOptionen As System.Windows.Forms.GroupBox
+        Dim FlowLayoutPanel2 As System.Windows.Forms.FlowLayoutPanel
+        Dim FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+        Dim LabelDefaultFolder As System.Windows.Forms.Label
         Dim ToolStripMenuItem_Datei As System.Windows.Forms.ToolStripMenuItem
         Dim ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
         Dim ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
         Dim ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
-        Dim ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
         Me.ContentView = New SchlumpfSoft.Controls.IniFileControl.IniFileContentView()
         Me.FileCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
         Me.SectionsListEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileListEdit()
         Me.SectionCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
         Me.EntryListEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileListEdit()
         Me.EntryValueEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit()
+        Me.LabelCommentPrefix = New System.Windows.Forms.Label()
+        Me.TextBoxCommentPrefix = New System.Windows.Forms.TextBox()
+        Me.TextBoxDefaultFolder = New System.Windows.Forms.TextBox()
+        Me.CheckBoxAutoSave = New System.Windows.Forms.CheckBox()
         Me.ToolStripMenuItem_Neu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_Oeffnen = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_Speichern = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_SpeichernUnter = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem_Options = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_Beenden = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
@@ -49,16 +55,22 @@ Partial Class FormIniFileControl
         MenuStrip_HauptMenu = New System.Windows.Forms.MenuStrip()
         ToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+        GroupBoxOptionen = New System.Windows.Forms.GroupBox()
+        FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
+        FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        LabelDefaultFolder = New System.Windows.Forms.Label()
         ToolStripMenuItem_Datei = New System.Windows.Forms.ToolStripMenuItem()
         ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         MenuStrip_HauptMenu.SuspendLayout()
         ToolStripContainer.ContentPanel.SuspendLayout()
         ToolStripContainer.TopToolStripPanel.SuspendLayout()
         ToolStripContainer.SuspendLayout()
         TableLayoutPanel.SuspendLayout()
+        GroupBoxOptionen.SuspendLayout()
+        FlowLayoutPanel2.SuspendLayout()
+        FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip_HauptMenu
@@ -93,6 +105,7 @@ Partial Class FormIniFileControl
         TableLayoutPanel.Controls.Add(Me.SectionCommentEdit, 1, 1)
         TableLayoutPanel.Controls.Add(Me.EntryListEdit, 2, 0)
         TableLayoutPanel.Controls.Add(Me.EntryValueEdit, 2, 1)
+        TableLayoutPanel.Controls.Add(GroupBoxOptionen, 0, 2)
         TableLayoutPanel.Name = "TableLayoutPanel"
         '
         'ContentView
@@ -144,9 +157,61 @@ Partial Class FormIniFileControl
         Me.EntryValueEdit.TitelText = "Eintrag:"
         Me.EntryValueEdit.Value = ""
         '
+        'GroupBoxOptionen
+        '
+        TableLayoutPanel.SetColumnSpan(GroupBoxOptionen, 3)
+        GroupBoxOptionen.Controls.Add(FlowLayoutPanel2)
+        GroupBoxOptionen.Controls.Add(FlowLayoutPanel1)
+        GroupBoxOptionen.Controls.Add(Me.CheckBoxAutoSave)
+        resources.ApplyResources(GroupBoxOptionen, "GroupBoxOptionen")
+        GroupBoxOptionen.Name = "GroupBoxOptionen"
+        GroupBoxOptionen.TabStop = False
+        '
+        'FlowLayoutPanel2
+        '
+        resources.ApplyResources(FlowLayoutPanel2, "FlowLayoutPanel2")
+        FlowLayoutPanel2.Controls.Add(Me.LabelCommentPrefix)
+        FlowLayoutPanel2.Controls.Add(Me.TextBoxCommentPrefix)
+        FlowLayoutPanel2.Name = "FlowLayoutPanel2"
+        '
+        'LabelCommentPrefix
+        '
+        resources.ApplyResources(Me.LabelCommentPrefix, "LabelCommentPrefix")
+        Me.LabelCommentPrefix.Name = "LabelCommentPrefix"
+        '
+        'TextBoxCommentPrefix
+        '
+        Me.TextBoxCommentPrefix.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.TextBoxCommentPrefix, "TextBoxCommentPrefix")
+        Me.TextBoxCommentPrefix.Name = "TextBoxCommentPrefix"
+        '
+        'FlowLayoutPanel1
+        '
+        resources.ApplyResources(FlowLayoutPanel1, "FlowLayoutPanel1")
+        FlowLayoutPanel1.Controls.Add(LabelDefaultFolder)
+        FlowLayoutPanel1.Controls.Add(Me.TextBoxDefaultFolder)
+        FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        '
+        'LabelDefaultFolder
+        '
+        resources.ApplyResources(LabelDefaultFolder, "LabelDefaultFolder")
+        LabelDefaultFolder.Name = "LabelDefaultFolder"
+        '
+        'TextBoxDefaultFolder
+        '
+        Me.TextBoxDefaultFolder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.TextBoxDefaultFolder, "TextBoxDefaultFolder")
+        Me.TextBoxDefaultFolder.Name = "TextBoxDefaultFolder"
+        '
+        'CheckBoxAutoSave
+        '
+        resources.ApplyResources(Me.CheckBoxAutoSave, "CheckBoxAutoSave")
+        Me.CheckBoxAutoSave.Name = "CheckBoxAutoSave"
+        Me.CheckBoxAutoSave.UseVisualStyleBackColor = True
+        '
         'ToolStripMenuItem_Datei
         '
-        ToolStripMenuItem_Datei.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem_Neu, ToolStripSeparator3, Me.ToolStripMenuItem_Oeffnen, ToolStripSeparator1, Me.ToolStripMenuItem_Speichern, Me.ToolStripMenuItem_SpeichernUnter, ToolStripSeparator2, Me.ToolStripMenuItem_Options, ToolStripSeparator4, Me.ToolStripMenuItem_Beenden})
+        ToolStripMenuItem_Datei.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem_Neu, ToolStripSeparator3, Me.ToolStripMenuItem_Oeffnen, ToolStripSeparator1, Me.ToolStripMenuItem_Speichern, Me.ToolStripMenuItem_SpeichernUnter, ToolStripSeparator2, Me.ToolStripMenuItem_Beenden})
         ToolStripMenuItem_Datei.Name = "ToolStripMenuItem_Datei"
         resources.ApplyResources(ToolStripMenuItem_Datei, "ToolStripMenuItem_Datei")
         '
@@ -184,16 +249,6 @@ Partial Class FormIniFileControl
         '
         ToolStripSeparator2.Name = "ToolStripSeparator2"
         resources.ApplyResources(ToolStripSeparator2, "ToolStripSeparator2")
-        '
-        'ToolStripMenuItem_Options
-        '
-        Me.ToolStripMenuItem_Options.Name = "ToolStripMenuItem_Options"
-        resources.ApplyResources(Me.ToolStripMenuItem_Options, "ToolStripMenuItem_Options")
-        '
-        'ToolStripSeparator4
-        '
-        ToolStripSeparator4.Name = "ToolStripSeparator4"
-        resources.ApplyResources(ToolStripSeparator4, "ToolStripSeparator4")
         '
         'ToolStripMenuItem_Beenden
         '
@@ -240,6 +295,12 @@ Partial Class FormIniFileControl
         ToolStripContainer.ResumeLayout(False)
         ToolStripContainer.PerformLayout()
         TableLayoutPanel.ResumeLayout(False)
+        GroupBoxOptionen.ResumeLayout(False)
+        GroupBoxOptionen.PerformLayout()
+        FlowLayoutPanel2.ResumeLayout(False)
+        FlowLayoutPanel2.PerformLayout()
+        FlowLayoutPanel1.ResumeLayout(False)
+        FlowLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -258,5 +319,8 @@ Partial Class FormIniFileControl
     Private WithEvents EntryListEdit As SchlumpfSoft.Controls.IniFileControl.IniFileListEdit
     Private WithEvents EntryValueEdit As SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit
     Private WithEvents ToolStripMenuItem_Neu As ToolStripMenuItem
-    Private WithEvents ToolStripMenuItem_Options As ToolStripMenuItem
+    Private WithEvents LabelCommentPrefix As Label
+    Private WithEvents TextBoxCommentPrefix As TextBox
+    Private WithEvents CheckBoxAutoSave As CheckBox
+    Private WithEvents TextBoxDefaultFolder As TextBox
 End Class

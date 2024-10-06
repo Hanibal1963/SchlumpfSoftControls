@@ -26,16 +26,22 @@ Public Class FormIniFileControl
 
     Public Sub New()
 
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        Me.InitializeComponent()
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
         ' gespeicherte Sprache einstellen
         Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.LangCode)
         Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.LangCode)
-
-        ' Dieser Aufruf ist für den Designer erforderlich.
-        Me.InitializeComponent()
-
-        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
-        Me.OpenFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-        Me.SaveFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
+        ' Standardverzeichnis für öffnen und speichern festlegen
+        Me.OpenFileDialog.InitialDirectory = My.Settings.IniFile_DefaultFolder
+        Me.SaveFileDialog.InitialDirectory = My.Settings.IniFile_DefaultFolder
+        Me.TextBoxDefaultFolder.Text = My.Settings.IniFile_DefaultFolder
+        ' Standardoption für automatisches speichern festlegen
+        Me.IniFile.AutoSave = My.Settings.IniFile_FileAutoSave
+        Me.CheckBoxAutoSave.Checked = My.Settings.IniFile_FileAutoSave
+        ' Standardoption für Kommentarzeichen festlegen
+        Me.IniFile.CommentPrefix = CChar(My.Settings.IniFile_CommentPrefix)
+        Me.TextBoxCommentPrefix.Text = My.Settings.IniFile_CommentPrefix
 
     End Sub
 
@@ -55,7 +61,6 @@ Public Class FormIniFileControl
         ToolStripMenuItem_Oeffnen.Click,
         ToolStripMenuItem_Speichern.Click,
         ToolStripMenuItem_SpeichernUnter.Click,
-        ToolStripMenuItem_Options.Click,
         ToolStripMenuItem_Beenden.Click
 
         ' welcher Menüeintrag wurde geklickt?
@@ -75,10 +80,6 @@ Public Class FormIniFileControl
             ' Datei unter anderem Namen speichern
             Me.FileSaveAs()
 
-        ElseIf sender Is Me.ToolStripMenuItem_Options Then
-            ' Dialog für Optionen anzeigen
-            Me.ShowOptionsDialog()
-
         ElseIf sender Is Me.ToolStripMenuItem_Beenden Then
             ' Programm beenden
             Me.Close()
@@ -87,6 +88,9 @@ Public Class FormIniFileControl
 
     End Sub
 
+    ''' <summary>
+    ''' Wird aufgerufen wenn das Formular geschlossen wird.
+    ''' </summary>
     Private Sub FormIniFileControl_Closing(sender As Object, e As CancelEventArgs) Handles _
         Me.Closing
 
@@ -155,12 +159,6 @@ Public Class FormIniFileControl
             Me.IniFile.LoadFile(Me._Filename)
 
         End If
-
-    End Sub
-
-    Private Sub ShowOptionsDialog()
-
-
 
     End Sub
 

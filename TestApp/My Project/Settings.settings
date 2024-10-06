@@ -3,7 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="LangCode" Type="System.String" Scope="User">
-      <Value Profile="(Default)">de-DE</Value>
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="IniFile_CommentPrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="IniFile_FileAutoSave" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="IniFile_DefaultFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
