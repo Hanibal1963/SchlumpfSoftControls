@@ -124,6 +124,9 @@
     <value>367, 17</value>
   </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MenuStrip_HauptMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <metadata name="ToolStripMenuItem_Datei.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
@@ -137,459 +140,147 @@
     <value>False</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ToolStripMenuItem_Datei.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_Datei.Text" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="MenuStrip_HauptMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MenuStrip_HauptMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1069, 24</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MenuStrip_HauptMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_HauptMenu.Name" xml:space="preserve">
+    <value>MenuStrip_HauptMenu</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_HauptMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_HauptMenu.Parent" xml:space="preserve">
+    <value>ToolStripContainer.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_HauptMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="ToolStripContainer.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <data name="&gt;&gt;ToolStripContainer.BottomToolStripPanel.Name" xml:space="preserve">
+    <value>ToolStripContainer.BottomToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer.BottomToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer.BottomToolStripPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer.BottomToolStripPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="TableLayoutPanel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="GroupBoxOptionen.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="FlowLayoutPanel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="LabelDefaultFolder.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="ToolStripSeparator3.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="ToolStripSeparator1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="ToolStripSeparator2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="OpenFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="SaveFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>152, 17</value>
-  </metadata>
-  <metadata name="IniFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>282, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1069, 644</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormIniFileControl</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>IniFile - Control - Test</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CheckBoxAutoSave.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="CheckBoxAutoSave.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="CheckBoxAutoSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="CheckBoxAutoSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 65</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxAutoSave.Name" xml:space="preserve">
-    <value>CheckBoxAutoSave</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxAutoSave.Parent" xml:space="preserve">
-    <value>GroupBoxOptionen</value>
-  </data>
-  <data name="CheckBoxAutoSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 17</value>
-  </data>
-  <data name="CheckBoxAutoSave.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="CheckBoxAutoSave.Text" xml:space="preserve">
-    <value>Datei nach Änderungen automatisch speichern:</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxAutoSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxAutoSave.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ContentView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ContentView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="TableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;ContentView.Name" xml:space="preserve">
     <value>ContentView</value>
   </data>
-  <data name="&gt;&gt;ContentView.Parent" xml:space="preserve">
-    <value>TableLayoutPanel</value>
-  </data>
-  <data name="ContentView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 304</value>
-  </data>
-  <data name="ContentView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;ContentView.Type" xml:space="preserve">
     <value>SchlumpfSoft.Controls.IniFileControl.IniFileContentView, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ContentView.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;ContentView.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="EntryListEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="EntryListEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>717, 3</value>
-  </data>
-  <data name="&gt;&gt;EntryListEdit.Name" xml:space="preserve">
-    <value>EntryListEdit</value>
-  </data>
-  <data name="&gt;&gt;EntryListEdit.Parent" xml:space="preserve">
-    <value>TableLayoutPanel</value>
-  </data>
-  <data name="EntryListEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 304</value>
-  </data>
-  <data name="EntryListEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;EntryListEdit.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;EntryListEdit.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="EntryValueEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="EntryValueEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>717, 313</value>
-  </data>
-  <data name="&gt;&gt;EntryValueEdit.Name" xml:space="preserve">
-    <value>EntryValueEdit</value>
-  </data>
-  <data name="&gt;&gt;EntryValueEdit.Parent" xml:space="preserve">
-    <value>TableLayoutPanel</value>
-  </data>
-  <data name="EntryValueEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 149</value>
-  </data>
-  <data name="EntryValueEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;EntryValueEdit.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;EntryValueEdit.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="FileCommentEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="FileCommentEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 313</value>
-  </data>
   <data name="&gt;&gt;FileCommentEdit.Name" xml:space="preserve">
     <value>FileCommentEdit</value>
-  </data>
-  <data name="&gt;&gt;FileCommentEdit.Parent" xml:space="preserve">
-    <value>TableLayoutPanel</value>
-  </data>
-  <data name="FileCommentEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 149</value>
-  </data>
-  <data name="FileCommentEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;FileCommentEdit.Type" xml:space="preserve">
     <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;FileCommentEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
   <data name="&gt;&gt;FileCommentEdit.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="FlowLayoutPanel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="FlowLayoutPanel1.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 30</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
-    <value>GroupBoxOptionen</value>
-  </data>
-  <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>481, 26</value>
-  </data>
-  <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="FlowLayoutPanel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="FlowLayoutPanel2.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="FlowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 88</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel2.Name" xml:space="preserve">
-    <value>FlowLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel2.Parent" xml:space="preserve">
-    <value>GroupBoxOptionen</value>
-  </data>
-  <data name="FlowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 26</value>
-  </data>
-  <data name="FlowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GroupBoxOptionen.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="GroupBoxOptionen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 468</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxOptionen.Name" xml:space="preserve">
-    <value>GroupBoxOptionen</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxOptionen.Parent" xml:space="preserve">
-    <value>TableLayoutPanel</value>
-  </data>
-  <data name="GroupBoxOptionen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1063, 149</value>
-  </data>
-  <data name="GroupBoxOptionen.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="GroupBoxOptionen.Text" xml:space="preserve">
-    <value>Optionen</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxOptionen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxOptionen.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;IniFile.Name" xml:space="preserve">
-    <value>IniFile</value>
-  </data>
-  <data name="&gt;&gt;IniFile.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.IniFileControl.IniFile, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="LabelCommentPrefix.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LabelCommentPrefix.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LabelCommentPrefix.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 6</value>
-  </data>
-  <data name="LabelCommentPrefix.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 6, 3, 0</value>
-  </data>
-  <data name="&gt;&gt;LabelCommentPrefix.Name" xml:space="preserve">
-    <value>LabelCommentPrefix</value>
-  </data>
-  <data name="&gt;&gt;LabelCommentPrefix.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel2</value>
-  </data>
-  <data name="LabelCommentPrefix.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 13</value>
-  </data>
-  <data name="LabelCommentPrefix.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="LabelCommentPrefix.Text" xml:space="preserve">
-    <value>Standardzeichen für Kommentarzeilen in neu erstellten Dateien:</value>
-  </data>
-  <data name="&gt;&gt;LabelCommentPrefix.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelCommentPrefix.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LabelDefaultFolder.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LabelDefaultFolder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LabelDefaultFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 6</value>
-  </data>
-  <data name="LabelDefaultFolder.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 6, 3, 0</value>
-  </data>
-  <data name="&gt;&gt;LabelDefaultFolder.Name" xml:space="preserve">
-    <value>LabelDefaultFolder</value>
-  </data>
-  <data name="&gt;&gt;LabelDefaultFolder.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
-  </data>
-  <data name="LabelDefaultFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 13</value>
-  </data>
-  <data name="LabelDefaultFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="LabelDefaultFolder.Text" xml:space="preserve">
-    <value>Standardspeicherort:</value>
-  </data>
-  <data name="&gt;&gt;LabelDefaultFolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelDefaultFolder.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="MenuStrip_HauptMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="MenuStrip_HauptMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_HauptMenu.Name" xml:space="preserve">
-    <value>MenuStrip_HauptMenu</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_HauptMenu.Parent" xml:space="preserve">
-    <value>ToolStripContainer.TopToolStripPanel</value>
-  </data>
-  <data name="MenuStrip_HauptMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1069, 24</value>
-  </data>
-  <data name="MenuStrip_HauptMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_HauptMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip_HauptMenu.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="OpenFileDialog.Filter" xml:space="preserve">
-    <value>INI-Dateien (*.ini)|*.ini</value>
-  </data>
-  <data name="&gt;&gt;OpenFileDialog.Name" xml:space="preserve">
-    <value>OpenFileDialog</value>
-  </data>
-  <data name="OpenFileDialog.Title" xml:space="preserve">
-    <value>INI-Datei öffnen</value>
-  </data>
-  <data name="&gt;&gt;OpenFileDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="SaveFileDialog.Filter" xml:space="preserve">
-    <value>INI-Dateien (*.ini)|*.ini</value>
-  </data>
-  <data name="&gt;&gt;SaveFileDialog.Name" xml:space="preserve">
-    <value>SaveFileDialog</value>
-  </data>
-  <data name="SaveFileDialog.Title" xml:space="preserve">
-    <value>INI-Datei speichern unter</value>
-  </data>
-  <data name="&gt;&gt;SaveFileDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="SectionCommentEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SectionCommentEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 313</value>
-  </data>
-  <data name="&gt;&gt;SectionCommentEdit.Name" xml:space="preserve">
-    <value>SectionCommentEdit</value>
-  </data>
-  <data name="&gt;&gt;SectionCommentEdit.Parent" xml:space="preserve">
-    <value>TableLayoutPanel</value>
-  </data>
-  <data name="SectionCommentEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 149</value>
-  </data>
-  <data name="SectionCommentEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;SectionCommentEdit.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;SectionCommentEdit.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="SectionsListEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="SectionsListEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 3</value>
   </data>
   <data name="&gt;&gt;SectionsListEdit.Name" xml:space="preserve">
     <value>SectionsListEdit</value>
   </data>
-  <data name="&gt;&gt;SectionsListEdit.Parent" xml:space="preserve">
-    <value>TableLayoutPanel</value>
-  </data>
-  <data name="SectionsListEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 304</value>
-  </data>
-  <data name="SectionsListEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;SectionsListEdit.Type" xml:space="preserve">
     <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;SectionsListEdit.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="TableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;SectionCommentEdit.Name" xml:space="preserve">
+    <value>SectionCommentEdit</value>
+  </data>
+  <data name="&gt;&gt;SectionCommentEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SectionCommentEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;SectionCommentEdit.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;EntryListEdit.Name" xml:space="preserve">
+    <value>EntryListEdit</value>
+  </data>
+  <data name="&gt;&gt;EntryListEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;EntryListEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;EntryListEdit.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Name" xml:space="preserve">
+    <value>EntryValueEdit</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxOptionen.Name" xml:space="preserve">
+    <value>GroupBoxOptionen</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxOptionen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxOptionen.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxOptionen.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="TableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="TableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ContentView" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FileCommentEdit" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="SectionsListEdit" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="SectionCommentEdit" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="EntryListEdit" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="EntryValueEdit" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="GroupBoxOptionen" Row="2" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33,44481,Percent,33,44482,Percent,33,11037" /&gt;&lt;Rows Styles="Percent,50,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <data name="TableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel.Name" xml:space="preserve">
-    <value>TableLayoutPanel</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel.Parent" xml:space="preserve">
-    <value>ToolStripContainer.ContentPanel</value>
   </data>
   <data name="TableLayoutPanel.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
@@ -600,86 +291,32 @@
   <data name="TableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;TableLayoutPanel.Name" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
   <data name="&gt;&gt;TableLayoutPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer.ContentPanel</value>
   </data>
   <data name="&gt;&gt;TableLayoutPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="TextBoxCommentPrefix.Location" type="System.Drawing.Point, System.Drawing">
-    <value>314, 3</value>
-  </data>
-  <data name="TextBoxCommentPrefix.MaxLength" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxCommentPrefix.Name" xml:space="preserve">
-    <value>TextBoxCommentPrefix</value>
-  </data>
-  <data name="&gt;&gt;TextBoxCommentPrefix.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel2</value>
-  </data>
-  <data name="TextBoxCommentPrefix.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 20</value>
-  </data>
-  <data name="TextBoxCommentPrefix.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxCommentPrefix.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBoxCommentPrefix.WordWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;TextBoxCommentPrefix.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TextBoxDefaultFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 3</value>
-  </data>
-  <data name="&gt;&gt;TextBoxDefaultFolder.Name" xml:space="preserve">
-    <value>TextBoxDefaultFolder</value>
-  </data>
-  <data name="&gt;&gt;TextBoxDefaultFolder.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
-  </data>
-  <data name="TextBoxDefaultFolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>364, 20</value>
-  </data>
-  <data name="TextBoxDefaultFolder.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;TextBoxDefaultFolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBoxDefaultFolder.WordWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;TextBoxDefaultFolder.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer.BottomToolStripPanel.Name" xml:space="preserve">
-    <value>ToolStripContainer.BottomToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer.BottomToolStripPanel.Parent" xml:space="preserve">
-    <value>ToolStripContainer</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer.BottomToolStripPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer.BottomToolStripPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer.ContentPanel.Name" xml:space="preserve">
-    <value>ToolStripContainer.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer.ContentPanel.Parent" xml:space="preserve">
-    <value>ToolStripContainer</value>
+  <data name="TableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ContentView" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FileCommentEdit" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="SectionsListEdit" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="SectionCommentEdit" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="EntryListEdit" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="EntryValueEdit" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="GroupBoxOptionen" Row="2" RowSpan="1" Column="0" ColumnSpan="3" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33,44481,Percent,33,44482,Percent,33,11037" /&gt;&lt;Rows Styles="Percent,50,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="ToolStripContainer.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1069, 620</value>
   </data>
+  <data name="&gt;&gt;ToolStripContainer.ContentPanel.Name" xml:space="preserve">
+    <value>ToolStripContainer.ContentPanel</value>
+  </data>
   <data name="&gt;&gt;ToolStripContainer.ContentPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripContentPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer.ContentPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer</value>
   </data>
   <data name="&gt;&gt;ToolStripContainer.ContentPanel.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -690,11 +327,11 @@
   <data name="&gt;&gt;ToolStripContainer.LeftToolStripPanel.Name" xml:space="preserve">
     <value>ToolStripContainer.LeftToolStripPanel</value>
   </data>
-  <data name="&gt;&gt;ToolStripContainer.LeftToolStripPanel.Parent" xml:space="preserve">
-    <value>ToolStripContainer</value>
-  </data>
   <data name="&gt;&gt;ToolStripContainer.LeftToolStripPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer.LeftToolStripPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer</value>
   </data>
   <data name="&gt;&gt;ToolStripContainer.LeftToolStripPanel.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -702,20 +339,14 @@
   <data name="ToolStripContainer.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;ToolStripContainer.Name" xml:space="preserve">
-    <value>ToolStripContainer</value>
-  </data>
-  <data name="&gt;&gt;ToolStripContainer.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;ToolStripContainer.RightToolStripPanel.Name" xml:space="preserve">
     <value>ToolStripContainer.RightToolStripPanel</value>
   </data>
-  <data name="&gt;&gt;ToolStripContainer.RightToolStripPanel.Parent" xml:space="preserve">
-    <value>ToolStripContainer</value>
-  </data>
   <data name="&gt;&gt;ToolStripContainer.RightToolStripPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer.RightToolStripPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer</value>
   </data>
   <data name="&gt;&gt;ToolStripContainer.RightToolStripPanel.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -732,47 +363,544 @@
   <data name="&gt;&gt;ToolStripContainer.TopToolStripPanel.Name" xml:space="preserve">
     <value>ToolStripContainer.TopToolStripPanel</value>
   </data>
-  <data name="&gt;&gt;ToolStripContainer.TopToolStripPanel.Parent" xml:space="preserve">
-    <value>ToolStripContainer</value>
-  </data>
   <data name="&gt;&gt;ToolStripContainer.TopToolStripPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer.TopToolStripPanel.Parent" xml:space="preserve">
+    <value>ToolStripContainer</value>
   </data>
   <data name="&gt;&gt;ToolStripContainer.TopToolStripPanel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;ToolStripContainer.Name" xml:space="preserve">
+    <value>ToolStripContainer</value>
+  </data>
   <data name="&gt;&gt;ToolStripContainer.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripContainer.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;ToolStripContainer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Beenden.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Beenden</value>
+  <data name="ContentView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="ToolStripMenuItem_Beenden.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 22</value>
+  <data name="ContentView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="ToolStripMenuItem_Beenden.Text" xml:space="preserve">
-    <value>Beenden</value>
+  <data name="ContentView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>351, 304</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Beenden.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ContentView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Datei.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Datei</value>
+  <data name="&gt;&gt;ContentView.Name" xml:space="preserve">
+    <value>ContentView</value>
   </data>
-  <data name="ToolStripMenuItem_Datei.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
+  <data name="&gt;&gt;ContentView.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileContentView, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ToolStripMenuItem_Datei.Text" xml:space="preserve">
-    <value>Datei</value>
+  <data name="&gt;&gt;ContentView.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Datei.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ContentView.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Neu.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Neu</value>
+  <data name="FileCommentEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="FileCommentEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 313</value>
+  </data>
+  <data name="FileCommentEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>351, 149</value>
+  </data>
+  <data name="FileCommentEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.Name" xml:space="preserve">
+    <value>FileCommentEdit</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;FileCommentEdit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SectionsListEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="SectionsListEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 3</value>
+  </data>
+  <data name="SectionsListEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>351, 304</value>
+  </data>
+  <data name="SectionsListEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Name" xml:space="preserve">
+    <value>SectionsListEdit</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;SectionsListEdit.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SectionCommentEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="SectionCommentEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 313</value>
+  </data>
+  <data name="SectionCommentEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>351, 149</value>
+  </data>
+  <data name="SectionCommentEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;SectionCommentEdit.Name" xml:space="preserve">
+    <value>SectionCommentEdit</value>
+  </data>
+  <data name="&gt;&gt;SectionCommentEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SectionCommentEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;SectionCommentEdit.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="EntryListEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="EntryListEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>717, 3</value>
+  </data>
+  <data name="EntryListEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>349, 304</value>
+  </data>
+  <data name="EntryListEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;EntryListEdit.Name" xml:space="preserve">
+    <value>EntryListEdit</value>
+  </data>
+  <data name="&gt;&gt;EntryListEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileListEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;EntryListEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;EntryListEdit.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="EntryValueEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="EntryValueEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>717, 313</value>
+  </data>
+  <data name="EntryValueEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>349, 149</value>
+  </data>
+  <data name="EntryValueEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Name" xml:space="preserve">
+    <value>EntryValueEdit</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;EntryValueEdit.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="GroupBoxOptionen.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="FlowLayoutPanel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="&gt;&gt;FlowLayoutPanel2.Name" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.Parent" xml:space="preserve">
+    <value>GroupBoxOptionen</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
+    <value>GroupBoxOptionen</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAutoSave.Name" xml:space="preserve">
+    <value>CheckBoxAutoSave</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAutoSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAutoSave.Parent" xml:space="preserve">
+    <value>GroupBoxOptionen</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAutoSave.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GroupBoxOptionen.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GroupBoxOptionen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 468</value>
+  </data>
+  <data name="GroupBoxOptionen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1063, 149</value>
+  </data>
+  <data name="GroupBoxOptionen.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="GroupBoxOptionen.Text" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxOptionen.Name" xml:space="preserve">
+    <value>GroupBoxOptionen</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxOptionen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxOptionen.Parent" xml:space="preserve">
+    <value>TableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxOptionen.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="FlowLayoutPanel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FlowLayoutPanel2.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;LabelCommentPrefix.Name" xml:space="preserve">
+    <value>LabelCommentPrefix</value>
+  </data>
+  <data name="&gt;&gt;LabelCommentPrefix.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelCommentPrefix.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;LabelCommentPrefix.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TextBoxCommentPrefix.Name" xml:space="preserve">
+    <value>TextBoxCommentPrefix</value>
+  </data>
+  <data name="&gt;&gt;TextBoxCommentPrefix.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBoxCommentPrefix.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;TextBoxCommentPrefix.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="FlowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 88</value>
+  </data>
+  <data name="FlowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 26</value>
+  </data>
+  <data name="FlowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.Name" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.Parent" xml:space="preserve">
+    <value>GroupBoxOptionen</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LabelCommentPrefix.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelCommentPrefix.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LabelCommentPrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="LabelCommentPrefix.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 6, 3, 0</value>
+  </data>
+  <data name="LabelCommentPrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 13</value>
+  </data>
+  <data name="LabelCommentPrefix.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="LabelCommentPrefix.Text" xml:space="preserve">
+    <value>Standardzeichen für Kommentarzeilen in neu erstellten Dateien:</value>
+  </data>
+  <data name="&gt;&gt;LabelCommentPrefix.Name" xml:space="preserve">
+    <value>LabelCommentPrefix</value>
+  </data>
+  <data name="&gt;&gt;LabelCommentPrefix.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelCommentPrefix.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;LabelCommentPrefix.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TextBoxCommentPrefix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 3</value>
+  </data>
+  <data name="TextBoxCommentPrefix.MaxLength" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TextBoxCommentPrefix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 20</value>
+  </data>
+  <data name="TextBoxCommentPrefix.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TextBoxCommentPrefix.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TextBoxCommentPrefix.Name" xml:space="preserve">
+    <value>TextBoxCommentPrefix</value>
+  </data>
+  <data name="&gt;&gt;TextBoxCommentPrefix.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBoxCommentPrefix.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;TextBoxCommentPrefix.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="FlowLayoutPanel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="LabelDefaultFolder.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="FlowLayoutPanel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FlowLayoutPanel1.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;LabelDefaultFolder.Name" xml:space="preserve">
+    <value>LabelDefaultFolder</value>
+  </data>
+  <data name="&gt;&gt;LabelDefaultFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelDefaultFolder.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;LabelDefaultFolder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TextBoxDefaultFolder.Name" xml:space="preserve">
+    <value>TextBoxDefaultFolder</value>
+  </data>
+  <data name="&gt;&gt;TextBoxDefaultFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBoxDefaultFolder.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;TextBoxDefaultFolder.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectDefaultFolder.Name" xml:space="preserve">
+    <value>ButtonSelectDefaultFolder</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectDefaultFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectDefaultFolder.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectDefaultFolder.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 30</value>
+  </data>
+  <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>521, 29</value>
+  </data>
+  <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
+    <value>GroupBoxOptionen</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="LabelDefaultFolder.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="LabelDefaultFolder.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelDefaultFolder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="LabelDefaultFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
+  </data>
+  <data name="LabelDefaultFolder.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 6, 3, 0</value>
+  </data>
+  <data name="LabelDefaultFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 13</value>
+  </data>
+  <data name="LabelDefaultFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="LabelDefaultFolder.Text" xml:space="preserve">
+    <value>Standardspeicherort:</value>
+  </data>
+  <data name="&gt;&gt;LabelDefaultFolder.Name" xml:space="preserve">
+    <value>LabelDefaultFolder</value>
+  </data>
+  <data name="&gt;&gt;LabelDefaultFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelDefaultFolder.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;LabelDefaultFolder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TextBoxDefaultFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 3</value>
+  </data>
+  <data name="TextBoxDefaultFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>364, 20</value>
+  </data>
+  <data name="TextBoxDefaultFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="TextBoxDefaultFolder.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TextBoxDefaultFolder.Name" xml:space="preserve">
+    <value>TextBoxDefaultFolder</value>
+  </data>
+  <data name="&gt;&gt;TextBoxDefaultFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBoxDefaultFolder.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;TextBoxDefaultFolder.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ButtonSelectDefaultFolder.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7BAAAOwQG4kWvtAAABE0lE
+        QVQ4T2MYHGBGHsODmfkM/9ExUPzj9HwGB6gy3ACsoYBBEgPnM7QiG4iMQZZCtUMNwI4/ALEfDsP/Q7Xj
+        cQE+TKoBc3MZROfHM3DI18/n4I9aKjgzjyEYqp2wASDN4jGLuBlidixiiNn1F4q3McTvlyDKAJDNQM1T
+        GWJ37WKI3W3IEL3diCFm9x4wnxgD/v9nYATa+BasMXq7JBjH7zRmiN35jygD6usZmIC2vSTbgJlpDKwM
+        sTumgJ0NMgSseddeoAFrwAbgTIn5DP+AoV3IELfDDKj4BdAbC8Beid31BUjPZUjawAs2AC+I2WEFVPyK
+        IXqXH1SEBBC72wZi8w5XqAiJIHZnKUPMTicoDwtgYAAAqwLvMvqE9doAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="ButtonSelectDefaultFolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 3</value>
+  </data>
+  <data name="ButtonSelectDefaultFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 23</value>
+  </data>
+  <data name="ButtonSelectDefaultFolder.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectDefaultFolder.Name" xml:space="preserve">
+    <value>ButtonSelectDefaultFolder</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectDefaultFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectDefaultFolder.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectDefaultFolder.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CheckBoxAutoSave.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckBoxAutoSave.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="CheckBoxAutoSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CheckBoxAutoSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 65</value>
+  </data>
+  <data name="CheckBoxAutoSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 17</value>
+  </data>
+  <data name="CheckBoxAutoSave.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="CheckBoxAutoSave.Text" xml:space="preserve">
+    <value>Datei nach Änderungen automatisch speichern:</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAutoSave.Name" xml:space="preserve">
+    <value>CheckBoxAutoSave</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAutoSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAutoSave.Parent" xml:space="preserve">
+    <value>GroupBoxOptionen</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAutoSave.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="ToolStripMenuItem_Neu.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 22</value>
@@ -780,11 +908,11 @@
   <data name="ToolStripMenuItem_Neu.Text" xml:space="preserve">
     <value>Neu</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Neu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Oeffnen.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Oeffnen</value>
+  <metadata name="ToolStripSeparator3.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 6</value>
   </data>
   <data name="ToolStripMenuItem_Oeffnen.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 22</value>
@@ -792,11 +920,11 @@
   <data name="ToolStripMenuItem_Oeffnen.Text" xml:space="preserve">
     <value>Öffnen ...</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Oeffnen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Speichern.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Speichern</value>
+  <metadata name="ToolStripSeparator1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 6</value>
   </data>
   <data name="ToolStripMenuItem_Speichern.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 22</value>
@@ -804,46 +932,145 @@
   <data name="ToolStripMenuItem_Speichern.Text" xml:space="preserve">
     <value>Speichern</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Speichern.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_SpeichernUnter.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_SpeichernUnter</value>
-  </data>
   <data name="ToolStripMenuItem_SpeichernUnter.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 22</value>
   </data>
   <data name="ToolStripMenuItem_SpeichernUnter.Text" xml:space="preserve">
     <value>Speichern unter ...</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_SpeichernUnter.Type" xml:space="preserve">
+  <metadata name="ToolStripSeparator2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 6</value>
+  </data>
+  <data name="ToolStripMenuItem_Beenden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Beenden.Text" xml:space="preserve">
+    <value>Beenden</value>
+  </data>
+  <metadata name="OpenFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="OpenFileDialog.Filter" xml:space="preserve">
+    <value>INI-Dateien (*.ini)|*.ini</value>
+  </data>
+  <data name="OpenFileDialog.Title" xml:space="preserve">
+    <value>INI-Datei öffnen</value>
+  </data>
+  <metadata name="SaveFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>152, 17</value>
+  </metadata>
+  <data name="SaveFileDialog.Filter" xml:space="preserve">
+    <value>INI-Dateien (*.ini)|*.ini</value>
+  </data>
+  <data name="SaveFileDialog.Title" xml:space="preserve">
+    <value>INI-Datei speichern unter</value>
+  </data>
+  <metadata name="IniFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>282, 17</value>
+  </metadata>
+  <metadata name="FolderBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>545, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1069, 644</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>IniFile - Control - Test</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Datei.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Datei</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Datei.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Neu.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Neu</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Neu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator3.Name" xml:space="preserve">
+    <value>ToolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Oeffnen.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Oeffnen</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Oeffnen.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolStripSeparator1.Name" xml:space="preserve">
     <value>ToolStripSeparator1</value>
   </data>
-  <data name="ToolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 6</value>
-  </data>
   <data name="&gt;&gt;ToolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Speichern.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Speichern</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Speichern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_SpeichernUnter.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_SpeichernUnter</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_SpeichernUnter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
     <value>ToolStripSeparator2</value>
   </data>
-  <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 6</value>
-  </data>
   <data name="&gt;&gt;ToolStripSeparator2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator3.Name" xml:space="preserve">
-    <value>ToolStripSeparator3</value>
+  <data name="&gt;&gt;ToolStripMenuItem_Beenden.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Beenden</value>
   </data>
-  <data name="ToolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 6</value>
+  <data name="&gt;&gt;ToolStripMenuItem_Beenden.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;OpenFileDialog.Name" xml:space="preserve">
+    <value>OpenFileDialog</value>
+  </data>
+  <data name="&gt;&gt;OpenFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveFileDialog.Name" xml:space="preserve">
+    <value>SaveFileDialog</value>
+  </data>
+  <data name="&gt;&gt;SaveFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IniFile.Name" xml:space="preserve">
+    <value>IniFile</value>
+  </data>
+  <data name="&gt;&gt;IniFile.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.IniFileControl.IniFile, IniFileControl, Version=2.2024.5.10, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;FolderBrowserDialog.Name" xml:space="preserve">
+    <value>FolderBrowserDialog</value>
+  </data>
+  <data name="&gt;&gt;FolderBrowserDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormIniFileControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

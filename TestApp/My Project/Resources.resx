@@ -214,6 +214,9 @@
   <data name="DriveWatcherMsgLine6" xml:space="preserve">
     <value>Das Laufwerk {0} wurde entfernt.</value>
   </data>
+  <data name="ErrorMsgCommentPrefix" xml:space="preserve">
+    <value>Es sind nur die Zeichen ; oder # zulässig!</value>
+  </data>
   <data name="ErrorMsgEntryNameExist" xml:space="preserve">
     <value>Der gewählte Eintragsname existiert bereits!
 Bitte wählen sie einen anderen Name.</value>

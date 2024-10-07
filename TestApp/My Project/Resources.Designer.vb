@@ -369,6 +369,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Es sind nur die Zeichen ; oder # zulässig! ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ErrorMsgCommentPrefix() As String
+            Get
+                Return ResourceManager.GetString("ErrorMsgCommentPrefix", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Der gewählte Eintragsname existiert bereits!
         '''Bitte wählen sie einen anderen Name. ähnelt.
         '''</summary>

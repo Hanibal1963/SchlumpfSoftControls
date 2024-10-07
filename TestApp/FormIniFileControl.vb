@@ -9,6 +9,7 @@ Imports System.Globalization
 Imports System.Security.Cryptography
 Imports System.Threading
 Imports SchlumpfSoft.Controls.IniFileControl
+Imports TestApp.My
 
 ''' <summary>
 ''' Formular zum Anzeigen und Bearbeiten einer INI-Datei.
@@ -18,7 +19,8 @@ Public Class FormIniFileControl
 #Region "Definition der internen Variablen"
 
     ''' <summary>
-    ''' Speichert den Dateinamen der geöffneten oder gespeicherten Datei.
+    ''' <lang name="de">Speichert den Dateinamen der geöffneten oder gespeicherten Datei.</lang><br/>
+    ''' <lang name="en">Stores the file name of the opened or saved file.</lang>
     ''' </summary>
     Private _Filename As String = Nothing
 
@@ -29,6 +31,7 @@ Public Class FormIniFileControl
         ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+
         ' gespeicherte Sprache einstellen
         Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.LangCode)
         Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.LangCode)
@@ -44,6 +47,55 @@ Public Class FormIniFileControl
         Me.TextBoxCommentPrefix.Text = My.Settings.IniFile_CommentPrefix
 
     End Sub
+
+#Region "interne Methoden"
+
+    Private Sub FileSaveAs()
+
+        Dim result As DialogResult = Me.SaveFileDialog.ShowDialog(Me)
+        If result = DialogResult.OK Then
+
+            ' Dateiname abrufen
+            Me._Filename = Me.SaveFileDialog.FileName
+            ' Datei speichern
+            Me.IniFile.SaveFile(Me._Filename)
+
+        End If
+
+    End Sub
+
+    Private Sub FileSave()
+
+        ' Dateiname abrufen wenn noch nicht gesetzt
+        If Me._Filename Is Nothing Then
+            Me.FileSaveAs()
+        Else
+            Me.IniFile.SaveFile(Me._Filename)
+        End If
+
+    End Sub
+
+    Private Sub FileOpen()
+
+        Dim result As DialogResult = Me.OpenFileDialog.ShowDialog(Me)
+        If result = DialogResult.OK Then
+
+            ' Dateiname abrufen
+            Me._Filename = Me.OpenFileDialog.FileName
+            ' Datei öffnen
+            Me.IniFile.LoadFile(Me._Filename)
+
+        End If
+
+    End Sub
+
+    Private Sub CreateNewFile()
+
+        Me.IniFile.CreateNewFile(CChar($""))
+
+    End Sub
+
+#End Region
 
 #Region "Interne Ereignisbehandlungen"
 
@@ -119,52 +171,86 @@ Public Class FormIniFileControl
 
     End Sub
 
-#End Region
+    ''' <summary>
+    ''' Wird aufgerufen wenn der Button zum Auswählen des Standardverzeichnisses geklickt wurde.
+    ''' </summary>
+    Private Sub ButtonSelectDefaultFolder_Click(sender As Object, e As EventArgs) Handles _
+        ButtonSelectDefaultFolder.Click
 
-#Region "interne Methoden"
-
-    Private Sub FileSaveAs()
-
-        Dim result As DialogResult = Me.SaveFileDialog.ShowDialog(Me)
+        Dim result As DialogResult = Me.FolderBrowserDialog.ShowDialog(Me)
         If result = DialogResult.OK Then
 
-            ' Dateiname abrufen
-            Me._Filename = Me.SaveFileDialog.FileName
-            ' Datei speichern
-            Me.IniFile.SaveFile(Me._Filename)
+            ' Standardverzeichnis setzen
+            Me.TextBoxDefaultFolder.Text = Me.FolderBrowserDialog.SelectedPath
+            ' Die Einstellung speichern
+            Settings.IniFile_DefaultFolder = Me.TextBoxDefaultFolder.Text
+            Settings.Save()
 
         End If
 
     End Sub
 
-    Private Sub FileSave()
+    ''' <summary>
+    ''' Wird aufgerufen wenn sich der Inhalt der Textbox geändert hat.
+    ''' </summary>
+    Private Sub TextBox_TextChanged(sender As Object, e As EventArgs) Handles _
+        TextBoxDefaultFolder.TextChanged,
+        TextBoxCommentPrefix.TextChanged
 
-        ' Dateiname abrufen wenn noch nicht gesetzt
-        If Me._Filename Is Nothing Then
-            Me.FileSaveAs()
-        Else
-            Me.IniFile.SaveFile(Me._Filename)
+        ' Fehlerprüfung -> wenn der Text leer oder nur Leerzeichen -> Abbrechen
+        If String.IsNullOrWhiteSpace(CType(sender, TextBox).Text) Then
+
+            Exit Sub
+
+        End If
+
+        ' Welche Textbox wurde verändert?
+        If sender Is Me.TextBoxCommentPrefix Then
+
+            ' Nur die Zeichen ; oder # zulassen
+            If Me.TextBoxCommentPrefix.Text <> ";" And Me.TextBoxCommentPrefix.Text <> "#" Then
+
+                ' Fehlermeldung anzeigen
+                Dim unused = MsgBox(
+                    My.Resources.ErrorMsgCommentPrefix,
+                    MsgBoxStyle.Critical And MsgBoxStyle.ApplicationModal,
+                    My.Resources.MsgBoxTitleError)
+                ' Text zurücksetzen
+                Me.TextBoxCommentPrefix.Text = Me.IniFile.CommentPrefix
+                ' Abbrechen
+                Exit Sub
+
+            End If
+
+            ' Kommentarzeichen setzen
+            Me.IniFile.CommentPrefix = CChar(CType(sender, TextBox).Text)
+            ' Die Einstellung speichern
+            Settings.IniFile_CommentPrefix = Me.TextBoxCommentPrefix.Text
+            Settings.Save()
+
+        ElseIf sender Is Me.TextBoxDefaultFolder Then
+
+            ' Standardverzeichnis setzen
+            Me.IniFile.FilePath = CType(sender, TextBox).Text
+            ' Die Einstellung speichern
+            Settings.IniFile_DefaultFolder = Me.TextBoxDefaultFolder.Text
+            Settings.Save()
+
         End If
 
     End Sub
 
-    Private Sub FileOpen()
+    ''' <summary>
+    ''' Wird aufgerufen wenn sich der Zustand der Checkbox geändert hat.
+    ''' </summary>
+    Private Sub CheckBoxAutoSave_CheckedCanged(sender As Object, e As EventArgs) Handles _
+        CheckBoxAutoSave.CheckedChanged
 
-        Dim result As DialogResult = Me.OpenFileDialog.ShowDialog(Me)
-        If result = DialogResult.OK Then
-
-            ' Dateiname abrufen
-            Me._Filename = Me.OpenFileDialog.FileName
-            ' Datei öffnen
-            Me.IniFile.LoadFile(Me._Filename)
-
-        End If
-
-    End Sub
-
-    Private Sub CreateNewFile()
-
-        Me.IniFile.CreateNewFile(CChar($""))
+        ' Automatisches Speichern aktivieren/deaktivieren
+        Me.IniFile.AutoSave = Me.CheckBoxAutoSave.Checked
+        ' Die Einstellung speichern
+        Settings.IniFile_FileAutoSave = Me.CheckBoxAutoSave.Checked
+        Settings.Save()
 
     End Sub
 

@@ -153,6 +153,9 @@
   <data name="DriveWatcherMsgLine6" xml:space="preserve">
     <value>The drive {0} was removed.</value>
   </data>
+  <data name="ErrorMsgCommentPrefix" xml:space="preserve">
+    <value>They are just the signs; Or # permissible!</value>
+  </data>
   <data name="ErrorMsgEntryNameExist" xml:space="preserve">
     <value>The selected entry name already exists!
 Please choose another name.</value>

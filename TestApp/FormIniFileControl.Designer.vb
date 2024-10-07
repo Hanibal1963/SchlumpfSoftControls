@@ -27,7 +27,6 @@ Partial Class FormIniFileControl
         Dim ToolStripContainer As System.Windows.Forms.ToolStripContainer
         Dim TableLayoutPanel As System.Windows.Forms.TableLayoutPanel
         Dim GroupBoxOptionen As System.Windows.Forms.GroupBox
-        Dim FlowLayoutPanel2 As System.Windows.Forms.FlowLayoutPanel
         Dim FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
         Dim LabelDefaultFolder As System.Windows.Forms.Label
         Dim ToolStripMenuItem_Datei As System.Windows.Forms.ToolStripMenuItem
@@ -40,9 +39,11 @@ Partial Class FormIniFileControl
         Me.SectionCommentEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileCommentEdit()
         Me.EntryListEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileListEdit()
         Me.EntryValueEdit = New SchlumpfSoft.Controls.IniFileControl.IniFileEntryValueEdit()
+        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.LabelCommentPrefix = New System.Windows.Forms.Label()
         Me.TextBoxCommentPrefix = New System.Windows.Forms.TextBox()
         Me.TextBoxDefaultFolder = New System.Windows.Forms.TextBox()
+        Me.ButtonSelectDefaultFolder = New System.Windows.Forms.Button()
         Me.CheckBoxAutoSave = New System.Windows.Forms.CheckBox()
         Me.ToolStripMenuItem_Neu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem_Oeffnen = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,11 +53,11 @@ Partial Class FormIniFileControl
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.SaveFileDialog = New System.Windows.Forms.SaveFileDialog()
         Me.IniFile = New SchlumpfSoft.Controls.IniFileControl.IniFile()
+        Me.FolderBrowserDialog = New System.Windows.Forms.FolderBrowserDialog()
         MenuStrip_HauptMenu = New System.Windows.Forms.MenuStrip()
         ToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         GroupBoxOptionen = New System.Windows.Forms.GroupBox()
-        FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         LabelDefaultFolder = New System.Windows.Forms.Label()
         ToolStripMenuItem_Datei = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,7 +70,7 @@ Partial Class FormIniFileControl
         ToolStripContainer.SuspendLayout()
         TableLayoutPanel.SuspendLayout()
         GroupBoxOptionen.SuspendLayout()
-        FlowLayoutPanel2.SuspendLayout()
+        Me.FlowLayoutPanel2.SuspendLayout()
         FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -160,7 +161,7 @@ Partial Class FormIniFileControl
         'GroupBoxOptionen
         '
         TableLayoutPanel.SetColumnSpan(GroupBoxOptionen, 3)
-        GroupBoxOptionen.Controls.Add(FlowLayoutPanel2)
+        GroupBoxOptionen.Controls.Add(Me.FlowLayoutPanel2)
         GroupBoxOptionen.Controls.Add(FlowLayoutPanel1)
         GroupBoxOptionen.Controls.Add(Me.CheckBoxAutoSave)
         resources.ApplyResources(GroupBoxOptionen, "GroupBoxOptionen")
@@ -169,10 +170,10 @@ Partial Class FormIniFileControl
         '
         'FlowLayoutPanel2
         '
-        resources.ApplyResources(FlowLayoutPanel2, "FlowLayoutPanel2")
-        FlowLayoutPanel2.Controls.Add(Me.LabelCommentPrefix)
-        FlowLayoutPanel2.Controls.Add(Me.TextBoxCommentPrefix)
-        FlowLayoutPanel2.Name = "FlowLayoutPanel2"
+        resources.ApplyResources(Me.FlowLayoutPanel2, "FlowLayoutPanel2")
+        Me.FlowLayoutPanel2.Controls.Add(Me.LabelCommentPrefix)
+        Me.FlowLayoutPanel2.Controls.Add(Me.TextBoxCommentPrefix)
+        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
         '
         'LabelCommentPrefix
         '
@@ -190,6 +191,7 @@ Partial Class FormIniFileControl
         resources.ApplyResources(FlowLayoutPanel1, "FlowLayoutPanel1")
         FlowLayoutPanel1.Controls.Add(LabelDefaultFolder)
         FlowLayoutPanel1.Controls.Add(Me.TextBoxDefaultFolder)
+        FlowLayoutPanel1.Controls.Add(Me.ButtonSelectDefaultFolder)
         FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         '
         'LabelDefaultFolder
@@ -200,8 +202,16 @@ Partial Class FormIniFileControl
         'TextBoxDefaultFolder
         '
         Me.TextBoxDefaultFolder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBoxDefaultFolder.HideSelection = False
         resources.ApplyResources(Me.TextBoxDefaultFolder, "TextBoxDefaultFolder")
         Me.TextBoxDefaultFolder.Name = "TextBoxDefaultFolder"
+        Me.TextBoxDefaultFolder.ReadOnly = True
+        '
+        'ButtonSelectDefaultFolder
+        '
+        resources.ApplyResources(Me.ButtonSelectDefaultFolder, "ButtonSelectDefaultFolder")
+        Me.ButtonSelectDefaultFolder.Name = "ButtonSelectDefaultFolder"
+        Me.ButtonSelectDefaultFolder.UseVisualStyleBackColor = True
         '
         'CheckBoxAutoSave
         '
@@ -276,6 +286,10 @@ Partial Class FormIniFileControl
         Me.IniFile.CommentPrefix = Global.Microsoft.VisualBasic.ChrW(59)
         Me.IniFile.FilePath = ""
         '
+        'FolderBrowserDialog
+        '
+        Me.FolderBrowserDialog.RootFolder = System.Environment.SpecialFolder.MyComputer
+        '
         'FormIniFileControl
         '
         resources.ApplyResources(Me, "$this")
@@ -297,8 +311,8 @@ Partial Class FormIniFileControl
         TableLayoutPanel.ResumeLayout(False)
         GroupBoxOptionen.ResumeLayout(False)
         GroupBoxOptionen.PerformLayout()
-        FlowLayoutPanel2.ResumeLayout(False)
-        FlowLayoutPanel2.PerformLayout()
+        Me.FlowLayoutPanel2.ResumeLayout(False)
+        Me.FlowLayoutPanel2.PerformLayout()
         FlowLayoutPanel1.ResumeLayout(False)
         FlowLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -323,4 +337,7 @@ Partial Class FormIniFileControl
     Private WithEvents TextBoxCommentPrefix As TextBox
     Private WithEvents CheckBoxAutoSave As CheckBox
     Private WithEvents TextBoxDefaultFolder As TextBox
+    Private WithEvents ButtonSelectDefaultFolder As Button
+    Private WithEvents FlowLayoutPanel2 As FlowLayoutPanel
+    Private WithEvents FolderBrowserDialog As FolderBrowserDialog
 End Class
