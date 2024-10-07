@@ -21,6 +21,6 @@ Imports Microsoft.VisualBasic
 
 <Assembly: ComVisible(False)>
 
-<Assembly: AssemblyVersion("2.2024.05.10")>
-<Assembly: AssemblyFileVersion("2.2024.05.10")>
+<Assembly: AssemblyVersion("2.2024.10.07")>
+<Assembly: AssemblyFileVersion("2.2024.10.07")>
 <Assembly: NeutralResourcesLanguage("de-DE")>

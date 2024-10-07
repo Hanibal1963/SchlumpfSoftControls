@@ -174,8 +174,11 @@
   <data name="FileContentChangedDescription" xml:space="preserve">
     <value>Wird ausgelöst wenn sich der Dateiinhalt geändert hat.</value>
   </data>
+  <data name="FileNameDescription" xml:space="preserve">
+    <value>Gibt den aktuellen Dateiname zurück oder legt diesen fest</value>
+  </data>
   <data name="FilePathDescription" xml:space="preserve">
-    <value>Gibt den Pfad und den Name zur INI-Datei zurück oder legt diesen fest.</value>
+    <value>Gibt den Pfad zur INI-Datei zurück oder legt diesen fest.</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="IniFile" type="System.Resources.ResXFileRef, System.Windows.Forms">

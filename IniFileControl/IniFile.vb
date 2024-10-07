@@ -24,6 +24,7 @@ Public Class IniFile : Inherits Component
 
 #Region "Definition der Variablen"
 
+    Private _FileName As String = My.Resources.DefaultFileName
     Private _FilePath As String = String.Empty
     Private _CommentPrefix As Char = CChar(My.Resources.DefaultCommentPrefix)
     Private _FileContent() As String = {$""}
@@ -63,9 +64,8 @@ Public Class IniFile : Inherits Component
 #Region "Definition neuer Eigenschaften"
 
     ''' <summary>
-    ''' 
+    ''' Zeigt an ob die Datei gespeichert wurde
     ''' </summary>
-    ''' <returns></returns>
     <Browsable(False)>
     Public ReadOnly Property FileSaved As Boolean
         Get
@@ -89,7 +89,20 @@ Public Class IniFile : Inherits Component
     End Property
 
     ''' <summary>
-    ''' Gibt den Pfad und den Name zur INI-Datei zurück oder legt diesen fest.
+    ''' Gibt den aktuellen Dateiname zurück oder legt diesen fest
+    ''' </summary>
+    <Browsable(True)> <Category("Design")> <MyDescription("FileNameDescription")>
+    Public Property FileName As String
+        Set(value As String)
+            Me._FileName = value
+        End Set
+        Get
+            Return Me._FileName
+        End Get
+    End Property
+
+    ''' <summary>
+    ''' Gibt den Pfad zur INI-Datei zurück oder legt diesen fest.
     ''' </summary>
     <Browsable(True)>
     <Category("Design")>
@@ -175,21 +188,22 @@ Public Class IniFile : Inherits Component
     ''' <summary>
     ''' Lädt die angegebene Datei
     ''' </summary>
-    ''' <param name="FilePath">
+    ''' <param name="FilePathAndName">
     ''' Name und Pfad der Datei die geladen werden soll.
     ''' </param>
-    Public Sub LoadFile(FilePath As String)
+    Public Sub LoadFile(FilePathAndName As String)
 
         'Parameter überprüfen
         If String.IsNullOrWhiteSpace(FilePath) Then
             Throw New ArgumentException(
           String.Format(
           My.Resources.ErrorMsgNullOrWhitSpace,
-          NameOf(FilePath)))
+          NameOf(FilePathAndName)))
         End If
 
         'Pfad und Name der Datei merken
-        Me._FilePath = FilePath
+        Me._FilePath = Path.GetDirectoryName(FilePathAndName)
+        Me._FileName = Path.GetFileName(FilePathAndName)
         Me.LoadFile()
 
     End Sub
@@ -200,9 +214,9 @@ Public Class IniFile : Inherits Component
     Public Sub LoadFile()
 
         ' Datei laden mit Fehlerbehandlung
+        Dim filepathandname As String = Path.Combine(Me._FilePath, Me._FileName)
         Try
-
-            Me._FileContent = IO.File.ReadAllLines(Me._FilePath)
+            Me._FileContent = IO.File.ReadAllLines(filepathandname)
             ' Dateiinhalt analysieren
             Me.ParseFileContent()
             ' Ereignis auslösen
@@ -214,7 +228,7 @@ Public Class IniFile : Inherits Component
             Throw New IOException(
                 String.Format(
                 My.Resources.ErrorMsgIoException,
-                Me._FilePath))
+                filepathandname))
 
         End Try
 
@@ -223,25 +237,25 @@ Public Class IniFile : Inherits Component
     ''' <summary>
     ''' Speichert die angegebene Datei.
     ''' </summary>
-    ''' <param name="FilePath">
+    ''' <param name="FilePathAndName">
     ''' Name und Pfad der Datei die gespeichert werden soll.
     ''' </param>
-    Public Sub SaveFile(FilePath As String)
+    Public Sub SaveFile(FilePathAndName As String)
 
         'Parameter überprüfen
-        If String.IsNullOrWhiteSpace(FilePath) Then
+        If String.IsNullOrWhiteSpace(FilePathAndName) Then
             Throw New ArgumentException(
           String.Format(
           My.Resources.ErrorMsgNullOrWhitSpace,
-          NameOf(FilePath)))
+          NameOf(FilePathAndName)))
         End If
 
         'Pfad und Name der Datei merken
-        Me._FilePath = FilePath
+        Me._FilePath = Path.GetDirectoryName(FilePathAndName)
+        Me._FileName = Path.GetFileName(FilePathAndName)
         Me.SaveFile()
 
     End Sub
-
 
     ''' <summary>
     ''' Gibt den Dateiinhalt zurück
@@ -606,8 +620,9 @@ Public Class IniFile : Inherits Component
     ''' </summary>
     Private Sub SaveFile()
 
+        Dim filepathandname As String = Path.Combine(Me._FilePath, Me._FileName)
         'Dateiinhalt auf Datenträger schreiben
-        IO.File.WriteAllLines(Me._FilePath, Me._FileContent)
+        IO.File.WriteAllLines(filepathandname, Me._FileContent)
         ' Datei als gespeichert markieren
         Me._FileSaved = True
 

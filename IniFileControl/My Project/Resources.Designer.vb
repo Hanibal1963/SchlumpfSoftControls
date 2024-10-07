@@ -232,7 +232,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Gibt den Pfad und den Name zur INI-Datei zurück oder legt diesen fest. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Gibt den aktuellen Dateiname zurück oder legt diesen fest ähnelt.
+        '''</summary>
+        Friend ReadOnly Property FileNameDescription() As String
+            Get
+                Return ResourceManager.GetString("FileNameDescription", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Gibt den Pfad zur INI-Datei zurück oder legt diesen fest. ähnelt.
         '''</summary>
         Friend ReadOnly Property FilePathDescription() As String
             Get
