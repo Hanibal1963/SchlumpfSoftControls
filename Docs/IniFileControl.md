@@ -40,7 +40,8 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 - **FileSaved** - Gibt an ob die datei gespeichert wurde oder nicht.
 - **AutoSave** - Gibt das Speicherverhalten der Klasse zurück oder legt dieses fest.
 - **CommentPrefix** - Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.
-- **FilePath** - Gibt den Pfad und den Name zur INI-Datei zurück oder legt diesen fest.
+- **FilePath** - Gibt den Pfad zur INI-Datei zurück oder legt diesen fest.
+- **FileName** - Gibt den Name der Datei zurück oder legt diesen fest.
 
 </details>
 
