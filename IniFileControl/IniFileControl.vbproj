@@ -78,7 +78,17 @@
     <None Include="..\Docs\IniFileControl.md">
       <Link>IniFileControl.md</Link>
     </None>
-    <None Include="ClassDiagram.cd" />
+    <None Include="IniFileRenameItemDialog.cd" />
+    <None Include="IniFileListEditEventArgs.cd" />
+    <None Include="IniFileListEdit.cd" />
+    <None Include="IniFileEntryValueEditEventArgs.cd" />
+    <None Include="IniFileEntryValueEdit.cd" />
+    <None Include="IniFileDeleteItemDialog.cd" />
+    <None Include="IniFileContentView.cd" />
+    <None Include="IniFileCommentEditEventArgs.cd" />
+    <None Include="IniFileCommentEdit.cd" />
+    <None Include="IniFileAddItemDialog.cd" />
+    <None Include="IniFile.cd" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\CommonCodes\MyDescription.vb">

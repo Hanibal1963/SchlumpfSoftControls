@@ -363,12 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Benutzerdefiniert
-/AniGifControl/ClassDiagram.cd
-/DriveWatcherControl/ClassDiagram.cd
-/IniFileControl/ClassDiagram.cd
-/NotifyFormControl/ClassDiagram.cd
-/SevenSegmentControl/ClassDiagram.cd
-/ShapeControl/ClassDiagram.cd
-/TransparentLabelControl/ClassDiagram.cd
-/WizardControl/ClassDiagram.cd
-/ExifControlEntwurf.zip
+*.zip
+*.cd

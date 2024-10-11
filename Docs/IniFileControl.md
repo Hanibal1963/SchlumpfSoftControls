@@ -170,32 +170,38 @@ Die Bibliothek IniFileControl umfasst folgende Komponenten:
 
 ## Versionsverlauf
 
-**Version 2.2024.04.10**
+**Version 2.2024.10.11**
+
+Datum: 11.10.2024
+
+- Fehlerbereinigung von Logikfehlern in IniFile Control
+
+**Version 2.2024.10.04**
 
 Datum: 04.10.2024
 
 - Fehlerbereinigung von Logikfehlern.
 - Codeoptimierungen.
 
-**Version 2.2024.22.08**
+**Version 2.2024.08.22**
 
 Datum 22.08.2024
 
 - Fehlerbereinigung
 
-**Version 2.2024.04.08**
+**Version 2.2024.08.04**
 
 Datum: 04.08.2024
 
 - Layoutfehler beseitigt und Texte in Englisch hinzugefügt.
 
-**Version 2.2024.16.07**
+**Version 2.2024.07.16**
 
 Datum: 16.07.2024
 
 - Layoutfehler in **IniFileCommentEdit**, **IniFileEntryValueEdit** und **IniFileListEdit** beseitigt.
 
-**Version 2.2024.30.06**
+**Version 2.2024.06.30**
 
 Datum: 30.06.2024
 
