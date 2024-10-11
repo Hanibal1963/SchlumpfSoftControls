@@ -7,11 +7,8 @@
 Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
-Imports System.Diagnostics
 Imports System.Drawing
 Imports System.IO
-Imports Microsoft.SqlServer
-Imports Microsoft.VisualBasic.Logging
 
 ''' <summary>
 ''' Steuerelement zum Verwalten von INI - Dateien
@@ -24,10 +21,10 @@ Public Class IniFile : Inherits Component
 
 #Region "Definition der Variablen"
 
-    Private _FileName As String = My.Resources.DefaultFileName
-    Private _FilePath As String = String.Empty
-    Private _CommentPrefix As Char = CChar(My.Resources.DefaultCommentPrefix)
-    Private _FileContent() As String = {$""}
+    Private _FileName As String
+    Private _FilePath As String
+    Private _FileContent() As String
+    Private _CommentPrefix As Char
     Private _AutoSave As Boolean = False
     Private _FileComment As List(Of String)
     Private _Sections As Dictionary(Of String, Dictionary(Of String, String))
@@ -136,7 +133,21 @@ Public Class IniFile : Inherits Component
 
 #End Region
 
-#Region "Definition der öffentlichen Funktionen"
+    Public Sub New()
+
+        Me._FileName = My.Resources.DefaultFileName
+        Me._FilePath = String.Empty
+        Me._FileContent = {$""}
+        Me._CommentPrefix = CChar(My.Resources.DefaultCommentPrefix)
+        Me._FileComment = New List(Of String)
+        Me._Sections = New Dictionary(Of String, Dictionary(Of String, String))
+        Me._SectionsComments = New Dictionary(Of String, List(Of String))
+        Me._CurrentSectionName = $""
+        Me._FileSaved = True
+
+    End Sub
+
+#Region "öffentliche Funktionen"
 
     ''' <summary>
     ''' Erzeugt eine neue Datei mit Beispielinhalt
@@ -176,8 +187,6 @@ Public Class IniFile : Inherits Component
         Me._FileContent = content.Split(CChar(vbCrLf))
         ' Dateiinhalt analysieren
         Me.ParseFileContent()
-        ' eventuell Änderung speichern
-        If Me._AutoSave Then Me.SaveFile()
         ' Datei als ungespeichert markieren
         Me._FileSaved = False
         ' Ereignis auslösen
@@ -200,7 +209,6 @@ Public Class IniFile : Inherits Component
           My.Resources.ErrorMsgNullOrWhitSpace,
           NameOf(FilePathAndName)))
         End If
-
         'Pfad und Name der Datei merken
         Me._FilePath = Path.GetDirectoryName(FilePathAndName)
         Me._FileName = Path.GetFileName(FilePathAndName)
@@ -219,6 +227,8 @@ Public Class IniFile : Inherits Component
             Me._FileContent = IO.File.ReadAllLines(filepathandname)
             ' Dateiinhalt analysieren
             Me.ParseFileContent()
+            ' Datei als gespeichert markieren
+            Me._FileSaved = True
             ' Ereignis auslösen
             RaiseEvent FileContentChanged(Me, EventArgs.Empty)
 
@@ -249,7 +259,6 @@ Public Class IniFile : Inherits Component
           My.Resources.ErrorMsgNullOrWhitSpace,
           NameOf(FilePathAndName)))
         End If
-
         'Pfad und Name der Datei merken
         Me._FilePath = Path.GetDirectoryName(FilePathAndName)
         Me._FileName = Path.GetFileName(FilePathAndName)
@@ -287,14 +296,8 @@ Public Class IniFile : Inherits Component
         Me._FileComment.Clear()
         ' neuen Dateikommentar übenehmen
         Me._FileComment.AddRange(CommentLines)
-        ' Dateiinhalt neu erzeugen 
-        Me.CreateFileContent()
-        ' Änderungen eventuell speichern
-        If Me._AutoSave Then Me.SaveFile()
-        ' Datei als ungespeichert markieren
-        Me._FileSaved = False
-        ' Ereignis auslösen
-        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+        ' Änderungen übernehmen
+        Me.ChangeFileContent()
 
     End Sub
 
@@ -355,17 +358,10 @@ Public Class IniFile : Inherits Component
             Exit Sub
 
         End If
-
         ' neuen Abschnitt erstellen
         Me.AddNewSection(Name)
-        ' Dateiinhalt neu erzeugen 
-        Me.CreateFileContent()
-        ' Änderungen eventuell speichern
-        If Me._AutoSave Then Me.SaveFile()
-        ' Datei als ungespeichert markieren
-        Me._FileSaved = False
-        ' Ereignis auslösen
-        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+        ' Änderungen übernehmen
+        Me.ChangeFileContent()
 
     End Sub
 
@@ -387,17 +383,10 @@ Public Class IniFile : Inherits Component
             Exit Sub
 
         End If
-
         ' neuen Eintrag erstellen
         Me.AddNewEntry(Section, Name)
-        ' Dateiinhalt neu erzeugen 
-        Me.CreateFileContent()
-        ' Änderungen eventuell speichern
-        If Me._AutoSave Then Me.SaveFile()
-        ' Datei als ungespeichert markieren
-        Me._FileSaved = False
-        ' Ereignis auslösen
-        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+        ' Änderungen übernehmen
+        Me.ChangeFileContent()
 
     End Sub
 
@@ -419,19 +408,12 @@ Public Class IniFile : Inherits Component
             Exit Sub
 
         End If
-
         ' Name-Wert-Paar des Abschnitts umbenennen
         Me.RenameSectionValue(OldName, NewName)
         ' Name-Kommentar-Paar umbenennen
         Me.RenameSectionComment(OldName, NewName)
-        ' Dateiinhalt neu erzeugen 
-        Me.CreateFileContent()
-        ' Änderungen eventuell speichern
-        If Me._AutoSave Then Me.SaveFile()
-        ' Datei als ungespeichert markieren
-        Me._FileSaved = False
-        ' Ereignis auslösen
-        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+        ' Änderungen übernehmen
+        Me.ChangeFileContent()
 
     End Sub
 
@@ -453,17 +435,10 @@ Public Class IniFile : Inherits Component
             Exit Sub
 
         End If
-
         ' Name-Wert-Paar des Eintrags umbenennen
         Me.RenameEntryvalue(Section, Oldname, NewName)
-        ' Dateiinhalt neu erzeugen 
-        Me.CreateFileContent()
-        ' Änderungen eventuell speichern
-        If Me._AutoSave Then Me.SaveFile()
-        ' Datei als ungespeichert markieren
-        Me._FileSaved = False
-        ' Ereignis auslösen
-        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+        ' Änderungen übernehmen
+        Me.ChangeFileContent()
 
     End Sub
 
@@ -478,14 +453,8 @@ Public Class IniFile : Inherits Component
         ' Abschnitt aus den Listen für Abschnitte und Abschnittskommentare entfernen
         Dim unused = Me._Sections.Remove(Name)
         Dim unused1 = Me._SectionsComments.Remove(Name)
-        ' Dateiinhalt neu erzeugen 
-        Me.CreateFileContent()
-        ' Änderungen eventuell speichern
-        If Me._AutoSave Then Me.SaveFile()
-        ' Datei als ungespeichert markieren
-        Me._FileSaved = False
-        ' Ereignis auslösen
-        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+        ' Änderungen übernehmen
+        Me.ChangeFileContent()
 
     End Sub
 
@@ -502,14 +471,8 @@ Public Class IniFile : Inherits Component
 
         ' Eintrag aus der Liste der Einträge entfernen
         Dim unused = Me._Sections.Item(Section).Remove(Entry)
-        ' Dateiinhalt neu erzeugen 
-        Me.CreateFileContent()
-        ' Änderungen eventuell speichern
-        If Me._AutoSave Then Me.SaveFile()
-        ' Datei als ungespeichert markieren
-        Me._FileSaved = False
-        ' Ereignis auslösen
-        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+        ' Änderungen übernehmen
+        Me.ChangeFileContent()
 
     End Sub
 
@@ -573,14 +536,8 @@ Public Class IniFile : Inherits Component
         ' geänderten Abschnittskommentar übernehmen
         Me._SectionsComments.Item(Name).Clear()
         Me._SectionsComments.Item(Name).AddRange(CommentLines)
-        ' Dateiinhalt neu erzeugen 
-        Me.CreateFileContent()
-        ' eventuell Änderung speichern
-        If Me._AutoSave Then Me.SaveFile()
-        ' Datei als ungespeichert markieren
-        Me._FileSaved = False
-        ' Ereignis auslösen
-        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+        ' Änderungen übernehmen
+        Me.ChangeFileContent()
 
     End Sub
 
@@ -600,20 +557,36 @@ Public Class IniFile : Inherits Component
 
         ' geänderten Wert übenehmen
         Me._Sections.Item(Section).Item(Entry) = Value
-        ' Dateiinhalt neu erzeugen 
-        Me.CreateFileContent()
-        ' eventuell Änderung speichern
-        If Me._AutoSave Then Me.SaveFile()
-        ' Datei als ungespeichert markieren
-        Me._FileSaved = False
-        ' Ereignis auslösen
-        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+        ' Änderungen übernehmen
+        Me.ChangeFileContent()
 
     End Sub
 
 #End Region
 
-#Region "Definition der internen Funktionen"
+#Region "interne Funktionen"
+
+    ''' <summary>
+    ''' Übenimmt die Ändeungen uns speichert die Datei
+    ''' </summary>
+    Private Sub ChangeFileContent()
+
+        ' Dateiinhalt neu erzeugen 
+        Me.CreateFileContent()
+        ' wenn automatisch speichern aktiv
+        If Me._AutoSave Then
+            ' Änderung speichern
+            Me.SaveFile()
+
+        Else
+            'ansonsten Datei als ungespeichert markieren
+            Me._FileSaved = False
+
+        End If
+        ' Ereignis auslösen
+        RaiseEvent FileContentChanged(Me, EventArgs.Empty)
+
+    End Sub
 
     ''' <summary>
     ''' Speichert die in <see cref="FilePath"/> angegebene Datei.
@@ -768,6 +741,7 @@ Public Class IniFile : Inherits Component
         Me._CurrentSectionName = $""
         ' alle Zeilen des Dateiinhaltes durchlaufen
         For Each line As String In Me._FileContent
+
             ' Leerzeichen am Anfang und Ende der Zeile entfernen
             line = line.Trim
             ' aktuelle Zeile analysieren
