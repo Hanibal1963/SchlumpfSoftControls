@@ -5,7 +5,7 @@
         <DisplayName>SchlumpfSoftControls</DisplayName>
         <Description xml:space="preserve">Eine Sammlung verschiedener Controls.</Description>
         <MoreInfo>https://github.com/Hanibal1963/SchlumpfSoftControls</MoreInfo>
-        <License>LICENSE.txt</License>
+        <License>LICENSE.rtf</License>
         <ReleaseNotes>ReleaseNotes.html</ReleaseNotes>
         <Icon>Papa Schlumpf 08.jpg</Icon>
         <Tags>Windows Forms,Control,Animation,Drive,IniFile,Shape,SevenSegment,Transparent,Wizard,NotifyForm,Label</Tags>

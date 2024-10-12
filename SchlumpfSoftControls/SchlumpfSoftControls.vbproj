@@ -71,6 +71,10 @@
     <DocumentationFile>SchlumpfSoftControls.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="LICENSE.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="SchlumpfSoftControlsPackage.cd" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
@@ -94,10 +98,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LICENSE.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Papa Schlumpf 08.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
