@@ -80,9 +80,6 @@
     <None Include="ProvideToolboxControlAttribute.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\CommonCodes\MyDescription.vb">
-      <Link>MyDescription.vb</Link>
-    </Compile>
     <Compile Include="EnumCharacterPattern.vb" />
     <Compile Include="Helpers.vb" />
     <Compile Include="My Project\Resources.Designer.vb">

@@ -4,82 +4,33 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
-
+''' <summary>
+''' Stellt ein Control dar, das mehrere Siebensegmentanzeigen enthält.
+''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<MyDescription("ClassDescriptionSevSegMultiDigit")>
+<Description("ClassDescriptionSevSegMultiDigit")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(SevSegMultiDigit), "SevSegMultiDigit.bmp")>
-Public Class SevSegMultiDigit
-
-
-    Inherits Control
-
+Public Class SevSegMultiDigit : Inherits Control
 
 #Region "Eigenschaftsvariablen"
 
-
-    ''' <summary>
-    ''' Array von Segmentsteuerelementen, die derzeit untergeordnete Elemente dieses Steuerelements sind.
-    ''' </summary>
     Private _digits As SevSegSingleDigit() = Nothing
-
-
-    ''' <summary>
-    ''' Breite der Segmente eines Digits
-    ''' </summary>
     Private _segmentWidth As Integer = 10
-
-
-    ''' <summary>
-    ''' Scherkoeffizient
-    ''' </summary>
     Private _italicFactor As Single = -0.1F
-
-
-    ''' <summary>
-    ''' Hintergrundfarbe
-    ''' </summary>
     Private _backgroundColor As Color = Color.LightGray
-
-
-    ''' <summary>
-    ''' Farbe für inaktives Segment
-    ''' </summary>
     Private _inactiveColor As Color = Color.DarkGray
-
-
-    ''' <summary>
-    ''' Vordergrundfarbe
-    ''' </summary>
     Private _foreColor As Color = Color.DarkGreen
-
-
-    ''' <summary>
-    ''' Dezimalpunkt anzeigen
-    ''' </summary>
     Private _showDecimalPoint As Boolean = True
-
-
-    ''' <summary>
-    ''' 
-    ''' </summary>
     Private _digitPadding As Padding
-
-
-    ''' <summary>
-    ''' anzuzeigender Wert
-    ''' </summary>
     Private _value As String = Nothing
 
-
 #End Region
-
 
     ''' <summary>
     ''' Wird ausgeführt wenn eine neue Instanz dieses Controls erstellt wird.
@@ -97,9 +48,7 @@ Public Class SevSegMultiDigit
 
     End Sub
 
-
 #Region "interne Methoden"
-
 
     ''' <summary>
     ''' Ändert die Anzahl der Elemente im LED-Array. 
@@ -195,15 +144,13 @@ Public Class SevSegMultiDigit
 
 #End Region
 
-
 #Region "neue Eigenschaften"
-
 
     ''' <summary>
     ''' Legt die Farbe inaktiver Segmente fest oder gibt diese zurück.
     ''' </summary>
     <Category("Appearance")>
-    <MyDescription("InactiveColorDescription")>
+    <Description("Legt die Farbe inaktiver Segmente fest oder gibt diese zurück.")>
     Public Property InactiveColor As Color
         Get
             Return Me._inactiveColor
@@ -214,12 +161,11 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
     ''' <summary>
     ''' Legt die Breite der LED-Segmente fest oder gibt diese zurück.
     ''' </summary>
     <Category("Appearance")>
-    <MyDescription("SegmentWidthDescription")>
+    <Description("Legt die Breite der LED-Segmente fest oder gibt diese zurück.")>
     Public Property SegmentWidth As Integer
         Get
             Return Me._segmentWidth
@@ -230,7 +176,6 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
     ''' <summary>
     ''' Scherkoeffizient für die Kursivschrift der Anzeige.
     ''' </summary>
@@ -238,7 +183,7 @@ Public Class SevSegMultiDigit
     ''' Standardwert ist -0.1
     ''' </remarks>
     <Category("Appearance")>
-    <MyDescription("ItalicFactorDescription")>
+    <Description("Scherkoeffizient für die Kursivschrift der Anzeige.")>
     Public Property ItalicFactor As Single
         Get
             Return Me._italicFactor
@@ -249,12 +194,11 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
     ''' <summary>
     ''' Gibt an, ob die Dezimalpunkt-LED angezeigt wird.
     ''' </summary>
     <Category("Appearance")>
-    <MyDescription("ShowDecimalPointDescription")>
+    <Description("Gibt an, ob die Dezimalpunkt-LED angezeigt wird.")>
     Public Property ShowDecimalPoint As Boolean
         Get
             Return Me._showDecimalPoint
@@ -265,12 +209,11 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
     ''' <summary>
     ''' Anzahl der Digits in diesem Control.
     ''' </summary>
     <Category("Appearance")>
-    <MyDescription("DigitCountDescription")>
+    <Description("Anzahl der Digits in diesem Control.")>
     Public Property DigitCount As Integer
         Get
             Return Me._digits.Length
@@ -280,7 +223,6 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
     ''' <summary>
     ''' Auffüllung, die für jedes Digit im Control gilt. 
     ''' </summary>
@@ -288,7 +230,7 @@ Public Class SevSegMultiDigit
     ''' Passen Sie diese Zahlen an, um das perfekte Erscheinungsbild für das Control Ihrer Größe zu erhalten.
     ''' </remarks>
     <Category("Appearance")>
-    <MyDescription("DigitPaddingDescription")>
+    <Description("Auffüllung, die für jedes Digit im Control gilt.")>
     Public Property DigitPadding As Padding
         Get
             Return Me._digitPadding
@@ -299,7 +241,6 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
     ''' <summary>
     ''' Der auf dem Control anzuzeigende Wert. 
     ''' </summary>
@@ -307,7 +248,7 @@ Public Class SevSegMultiDigit
     ''' Kann Zahlen, bestimmte Buchstaben und Dezimalpunkte enthalten.
     ''' </remarks>
     <Category("Appearance")>
-    <MyDescription("ValueDescription")>
+    <Description("Der auf dem Control anzuzeigende Wert.")>
     Public Property Value As String
         Get
             Return Me._value
@@ -332,19 +273,16 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
 #End Region
 
-
 #Region "geänderte Eigenschaften"
-
 
     ''' <summary>
     ''' Legt die Hintergrundfarbe des Controls fest oder gibt diese zurück.
     ''' </summary>
     ''' <returns></returns>
     <Category("Appearance")>
-    <MyDescription("BackColorDescription")>
+    <Description("Legt die Hintergrundfarbe des Controls fest oder gibt diese zurück.")>
     Public Overrides Property BackColor As Color
         Get
             Return Me._backgroundColor
@@ -355,13 +293,12 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
     ''' <summary>
     ''' Legt die Vordergrundfarbe der Segmente des Controls fest oder gibt diese zurück.
     ''' </summary>
     ''' <returns></returns>
     <Category("Appearance")>
-    <MyDescription("ForeColorDescription")>
+    <Description("Legt die Vordergrundfarbe der Segmente des Controls fest oder gibt diese zurück.")>
     Public Overrides Property ForeColor As Color
         Get
             Return Me._foreColor
@@ -372,12 +309,9 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
 #End Region
 
-
 #Region "Ausgeblendete Eigenschaften"
-
 
     ''' <summary>
     ''' Ausgeblendet da nicht relevant.
@@ -394,7 +328,6 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
     ''' <summary>
     ''' Ausgeblendet da nicht relevant.
     ''' </summary>
@@ -409,7 +342,6 @@ Public Class SevSegMultiDigit
             MyBase.BackgroundImageLayout = value
         End Set
     End Property
-
 
     ''' <summary>
     ''' Ausgeblendet da nicht relevant.
@@ -426,7 +358,6 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
     ''' <summary>
     ''' Ausgeblendet da nicht relevant.
     ''' </summary>
@@ -441,7 +372,6 @@ Public Class SevSegMultiDigit
             MyBase.Text = value
         End Set
     End Property
-
 
     ''' <summary>
     ''' Ausgeblendet da nicht relevant.
@@ -458,9 +388,7 @@ Public Class SevSegMultiDigit
         End Set
     End Property
 
-
 #End Region
-
 
 #Region "geänderte Methoden"
 
@@ -474,8 +402,6 @@ Public Class SevSegMultiDigit
 
     End Sub
 
-
 #End Region
-
 
 End Class
