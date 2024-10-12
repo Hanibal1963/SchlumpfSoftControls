@@ -14,7 +14,7 @@ Imports System.IO
 ''' Steuerelement zum Verwalten von INI - Dateien
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<MyDescription("ClassDescriptionIniFile")>
+<Description("Steuerelement zum Verwalten von INI - Dateien")>
 <ToolboxBitmap(GetType(IniFile), "IniFile.bmp")>
 <ToolboxItem(True)>
 Public Class IniFile : Inherits Component
@@ -39,21 +39,21 @@ Public Class IniFile : Inherits Component
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Dateiinhalt geändert hat.
     ''' </summary>
-    <MyDescription("FileContentChangedDescription")>
+    <Description("Wird ausgelöst wenn sich der Dateiinhalt geändert hat.")>
     Public Event FileContentChanged(sender As Object, e As EventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn beim anlegen eines neuen Abschnitts oder 
     ''' umbnennen eines Abschnitts der Name bereits vorhanden ist.
     ''' </summary>
-    <MyDescription("SectionNameExistDescription")>
+    <Description("Wird ausgelöst wenn beim anlegen eines neuen Abschnitts oder umbnennen eines Abschnitts der Name bereits vorhanden ist.")>
     Public Event SectionNameExist(sender As Object, e As EventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder 
     ''' umbenennen eines Eintrags der Name bereitsvorhanden ist.
     ''' </summary>
-    <MyDescription("EntrynameExistDescription")>
+    <Description("Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereits vorhanden ist.")>
     Public Event EntryNameExist(sender As Object, e As EventArgs)
 
 #End Region
@@ -75,7 +75,7 @@ Public Class IniFile : Inherits Component
     '''' </summary>
     <Browsable(True)>
     <Category("Design")>
-    <MyDescription("CommentPrefixDescription")>
+    <Description("Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.")>
     Public Property CommentPrefix As Char
         Get
             Return Me._CommentPrefix
@@ -88,7 +88,9 @@ Public Class IniFile : Inherits Component
     ''' <summary>
     ''' Gibt den aktuellen Dateiname zurück oder legt diesen fest
     ''' </summary>
-    <Browsable(True)> <Category("Design")> <MyDescription("FileNameDescription")>
+    <Browsable(True)>
+    <Category("Design")>
+    <Description("Gibt den aktuellen Dateiname zurück oder legt diesen fest")>
     Public Property FileName As String
         Set(value As String)
             Me._FileName = value
@@ -103,7 +105,7 @@ Public Class IniFile : Inherits Component
     ''' </summary>
     <Browsable(True)>
     <Category("Design")>
-    <MyDescription("FilePathDescription")>
+    <Description("Gibt den Pfad zur INI-Datei zurück oder legt diesen fest.")>
     Public Property FilePath As String
         Get
             Return Me._FilePath
@@ -121,7 +123,7 @@ Public Class IniFile : Inherits Component
     ''' </remarks>
     <Browsable(True)>
     <Category("Design")>
-    <MyDescription("AutoSaveDescription")>
+    <Description("Legt das Speicherverhalten der Klasse fest.")>
     Public Property AutoSave As Boolean
         Get
             Return Me._AutoSave
@@ -203,7 +205,7 @@ Public Class IniFile : Inherits Component
     Public Sub LoadFile(FilePathAndName As String)
 
         'Parameter überprüfen
-        If String.IsNullOrWhiteSpace(FilePath) Then
+        If String.IsNullOrWhiteSpace(FilePathAndName) Then
             Throw New ArgumentException(
           String.Format(
           My.Resources.ErrorMsgNullOrWhitSpace,

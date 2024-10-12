@@ -14,31 +14,16 @@ Imports System.Windows.Forms
 ''' Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<MyDescription("ClassDescriptionListEdit")>
+<Description("Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileListEdit), "IniFileListEdit.bmp")>
 Public Class IniFileListEdit : Inherits UserControl
 
 #Region "Definition der internen Eigenschaftsvariablen"
 
-    ''' <summary>
-    ''' Name des aktuell gewählten Eintrags.
-    ''' </summary>
     Private _SelectedItem As String = String.Empty
-
-    ''' <summary>
-    ''' Name des aktuell gewählten Abschnitts
-    ''' </summary>
     Private _SelectedSection As String = String.Empty
-
-    ''' <summary>
-    ''' Liste der Einträge.
-    ''' </summary>
     Private _Items As String() = {""}
-
-    ''' <summary>
-    ''' Inhlt des Titeltextes.
-    ''' </summary>
     Private _TitelText As String
 
 #End Region
@@ -48,28 +33,28 @@ Public Class IniFileListEdit : Inherits UserControl
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag hinzugefügt werden soll.
     ''' </summary>
-    <MyDescription("ListEditItemAddDescription")>
+    <Description("Wird ausgelöst wenn ein Eintrag hinzugefügt werden soll.")>
     <Category("ListEdit")>
     Public Event ItemAdd(sender As Object, e As IniFileListEditEventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag umbenannt werden soll.
     ''' </summary>
-    <MyDescription("ListEditItemRenameDescription")>
+    <Description("Wird ausgelöst wenn ein Eintrag umbenannt werden soll.")>
     <Category("ListEdit")>
     Public Event ItemRename(sender As Object, e As IniFileListEditEventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Eintrag gelöscht werden soll.
     ''' </summary>
-    <MyDescription("ListEditItemRemoveDescription")>
+    <Description("Wird ausgelöst wenn ein Eintrag gelöscht werden soll.")>
     <Category("ListEdit")>
     Public Event ItemRemove(sender As Object, e As IniFileListEditEventArgs)
 
     ''' <summary>
     ''' Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.
     ''' </summary>
-    <MyDescription("ListEditSelectedItemChangedDescription")>
+    <Description("Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.")>
     <Category("ListEdit")>
     Public Event SelectedItemChanged(sender As Object, e As IniFileListEditEventArgs)
 
@@ -105,7 +90,7 @@ Public Class IniFileListEdit : Inherits UserControl
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("TitelTextDescription")>
+    <Description("Gibt den Text der Titelzeile zurück oder legt diesen fest.")>
     Public Property TitelText As String
         Set(value As String)
             If value <> Me._TitelText Then
@@ -123,7 +108,7 @@ Public Class IniFileListEdit : Inherits UserControl
     ''' </summary>
     <Browsable(True)>
     <Category("Data")>
-    <MyDescription("ListEditListItemsDescription")>
+    <Description("Setzt die Elemente der Listbox oder gibt diese zurück.")>
     Public Property ListItems() As String()
         Set
             If Me._Items IsNot Value Then
@@ -141,7 +126,7 @@ Public Class IniFileListEdit : Inherits UserControl
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("SelectedSectionDescription")>
+    <Description("Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest.")>
     Public Property SelectedSection As String
         Get
             Return Me._SelectedSection
@@ -158,8 +143,7 @@ Public Class IniFileListEdit : Inherits UserControl
     ''' <summary>
     ''' Setzt die Eigenschaft und schaltet die Buttons.
     ''' </summary>
-    Private Sub ListBox_SelectedIndex_Changed(sender As Object, e As EventArgs) Handles _
-        ListBox.SelectedIndexChanged
+    Private Sub ListBox_SelectedIndex_Changed(sender As Object, e As EventArgs) Handles ListBox.SelectedIndexChanged
 
         'Wenn kein Eintrag ausgewählt -> Eigenschaft auf leer ansonten auf Wert setzen
         If Me.ListBox.SelectedIndex = -1 Then
@@ -181,27 +165,36 @@ Public Class IniFileListEdit : Inherits UserControl
 #Region "Ereignisse der internen Buttons"
 
     ''' <summary>
-    ''' Löst die Ereignisse der Buttons aus.
+    ''' Wird aufgerufen wenn der Button "Hinzufügen" geklickt wurde
     ''' </summary>
-    Private Sub Button_Click(sender As Object, e As EventArgs) Handles _
-        ButtonAdd.Click,
-        ButtonRename.Click,
-        ButtonDelete.Click
+    Private Sub ButtonAdd_Click(sender As Object, e As EventArgs) Handles ButtonAdd.Click
 
-        'Button auswerten
-        If sender Is Me.ButtonAdd Then
-            ' Eintrag hinzufügen
-            Me.AddNewItem()
+        ' Eintrag hinzufügen
+        Me.AddNewItem()
 
-        ElseIf sender Is Me.ButtonRename Then
-            ' Eintrag umbenennen
-            Me.RenameItem()
+    End Sub
 
-        ElseIf sender Is Me.ButtonDelete Then
-            ' Eintrag löschen
-            Me.DeleteItem()
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub ButtonRename_Click(sender As Object, e As EventArgs) Handles ButtonRename.Click
 
-        End If
+        ' Eintrag umbenennen
+        Me.RenameItem()
+
+    End Sub
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles TableLayoutPanel2.Click
+
+        ' Eintrag löschen
+        Me.DeleteItem()
 
     End Sub
 
@@ -212,8 +205,7 @@ Public Class IniFileListEdit : Inherits UserControl
     ''' <summary>
     ''' wird ausgelöst wenn sich die Liste der Einträge geändert hat.
     ''' </summary>
-    Private Sub IniFileListEdit_ListItemsChanged() Handles _
-        Me.ListItemsChanged
+    Private Sub IniFileListEdit_ListItemsChanged() Handles Me.ListItemsChanged
 
         ' Listbox neu befüllen
         Me.FillListbox()
@@ -223,8 +215,7 @@ Public Class IniFileListEdit : Inherits UserControl
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Titeltext geändert hat.
     ''' </summary>
-    Private Sub IniFileListEdit_TitelTextChanged() Handles _
-        Me.TitelTextChanged
+    Private Sub IniFileListEdit_TitelTextChanged() Handles Me.TitelTextChanged
 
         ' Titeltext setzen
         Me.GroupBox.Text = Me._TitelText

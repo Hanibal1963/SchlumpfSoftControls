@@ -117,109 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AutoSaveDescription" xml:space="preserve">
-    <value>Determines the memory behavior of the class.</value>
-  </data>
-  <data name="ClassDescriptionCommentEdit" xml:space="preserve">
-    <value>Control element for displaying and editing the file or section comment on an ini file.</value>
-  </data>
-  <data name="ClassDescriptionContentView" xml:space="preserve">
-    <value>Control element for displaying the file content.</value>
-  </data>
-  <data name="ClassDescriptionEntryValueEdit" xml:space="preserve">
-    <value>Control element for displaying and editing the entries of an ini file section.</value>
-  </data>
-  <data name="ClassDescriptionIniFile" xml:space="preserve">
-    <value>Control element for managing ini files</value>
-  </data>
-  <data name="ClassDescriptionListEdit" xml:space="preserve">
-    <value>Control element for displaying and editing the section or entry list of an INI file.</value>
-  </data>
-  <data name="CommentChangedDescription" xml:space="preserve">
-    <value>Is triggered when the comment text has changed.</value>
-  </data>
-  <data name="CommentDescription" xml:space="preserve">
-    <value>Put the comment text back or define it.</value>
-  </data>
-  <data name="CommentPrefixDescription" xml:space="preserve">
-    <value>Gives back the prefix sign for comments or defines this festival.</value>
-  </data>
-  <data name="CommentSectionNameDescription" xml:space="preserve">
-    <value>Gives back the name of the section or defines it for which the comment is to be displayed.</value>
-  </data>
   <data name="DefaultCommentPrefix" xml:space="preserve">
     <value>;</value>
   </data>
   <data name="DefaultFileName" xml:space="preserve">
     <value>Neuedatei.ini</value>
   </data>
-  <data name="EntryNameExistDescription" xml:space="preserve">
-    <value>Is triggered if the name is already available when creating a new entry or renaming an entry.</value>
-  </data>
-  <data name="EntrysChangedDescription" xml:space="preserve">
-    <value>is triggered when the list of entries has changed.</value>
-  </data>
-  <data name="EntryValueChangedDescription" xml:space="preserve">
-    <value>Is triggered if the value of an entry has changed in a section.</value>
-  </data>
   <data name="ErrorMsgIoException" xml:space="preserve">
     <value>Error when loading the file "{0}".</value>
   </data>
   <data name="ErrorMsgNullOrWhitSpace" xml:space="preserve">
     <value>The parameter "{0}" must not be zero or an empty space sign.</value>
-  </data>
-  <data name="FileCommentChangedDescription" xml:space="preserve">
-    <value>Is triggered when the file commentary has changed.</value>
-  </data>
-  <data name="FileContentChangedDescription" xml:space="preserve">
-    <value>Is triggered if the file content has changed.</value>
-  </data>
-  <data name="FileNameDescription" xml:space="preserve">
-    <value>Gives back the current file name or define this festival</value>
-  </data>
-  <data name="FilePathDescription" xml:space="preserve">
-    <value>Put the path and the name back to the ini file or define it.</value>
-  </data>
-  <data name="LinesDescription" xml:space="preserve">
-    <value>Put the file content back or define it.</value>
-  </data>
-  <data name="ListEditItemAddDescription" xml:space="preserve">
-    <value>Is triggered if an entry is to be added.</value>
-  </data>
-  <data name="ListEditItemRemoveDescription" xml:space="preserve">
-    <value>Is triggered if an entry is to be deleted.</value>
-  </data>
-  <data name="ListEditItemRenameDescription" xml:space="preserve">
-    <value>Is triggered if an entry is to be renamed.</value>
-  </data>
-  <data name="ListeditListItemsDescription" xml:space="preserve">
-    <value>Set the elements of the list box or return it.</value>
-  </data>
-  <data name="ListEditSelectedItemChangedDescription" xml:space="preserve">
-    <value>Is triggered if the selected entry has changed.</value>
-  </data>
-  <data name="SectionCommentChangedDescription" xml:space="preserve">
-    <value>Is triggered when the section comment has changed.</value>
-  </data>
-  <data name="SectionNameExistDescription" xml:space="preserve">
-    <value>Is triggered if the name is already available when a new section or surrounding a section is.</value>
-  </data>
-  <data name="SectionsChangedDescription" xml:space="preserve">
-    <value>Is triggered when the list of sections has changed.</value>
-  </data>
-  <data name="SelectedEntryDescription" xml:space="preserve">
-    <value>Gives back the currently selected entry or sets it.</value>
-  </data>
-  <data name="SelectedSectionDescription" xml:space="preserve">
-    <value>Gives back the currently selected section or defines it.</value>
-  </data>
-  <data name="TitelTextDescription" xml:space="preserve">
-    <value>Put the text of the title line back or define it.</value>
-  </data>
-  <data name="ValueDescription" xml:space="preserve">
-    <value>Entry value</value>
-  </data>
-  <data name="ValueEditValueChanged" xml:space="preserve">
-    <value>Is triggered when the value has changed.</value>
   </data>
 </root>

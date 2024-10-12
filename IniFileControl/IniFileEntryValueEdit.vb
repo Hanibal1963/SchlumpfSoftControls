@@ -12,7 +12,7 @@ Imports System.Windows.Forms
 ''' Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<MyDescription("ClassDescriptionEntryValueEdit")>
+<Description("Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileEntryValueEdit), "IniFileEntryValueEdit.bmp")>
 Public Class IniFileEntryValueEdit : Inherits UserControl
@@ -24,11 +24,10 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
 
 #Region "Definition der Ereignisse"
 
-
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Wert geändert hat.
     ''' </summary>
-    <MyDescription("ValueEditValueChanged")>
+    <Description("Wird ausgelöst wenn sich der Wert geändert hat.")>
     Public Event ValueChanged(sender As Object, e As IniFileEntryValueEditEventArgs)
 
     Private Event TitelTextChanged()
@@ -52,7 +51,7 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("TitelTextDescription")>
+    <Description("Gibt den Text der Titelzeile zurück oder legt diesen fest.")>
     Public Property TitelText As String
         Set(value As String)
             If Me._TitelText <> value Then
@@ -70,7 +69,7 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("SelectedSectionDescription")>
+    <Description("Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest.")>
     Public Property SelectedSection As String
         Get
             Return Me._SelectedSection
@@ -85,7 +84,7 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("SelectedEntryDescription")>
+    <Description("Gibt den aktuell ausgewählten Eintrag zurück oder legt diesen fest.")>
     Public Property SelectedEntry As String
         Get
             Return Me._SelectedEntry
@@ -98,7 +97,7 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
     ''' <summary>
     ''' Gibt den Eintragswert zurück oder legt diesen fest.
     ''' </summary>
-    <MyDescription("ValueDescription")>
+    <Description("Gibt den Eintragswert zurück oder legt diesen fest.")>
     Public Property Value As String
         Get
             Return Me._value
@@ -115,8 +114,7 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
 
 #Region "Definition der internen Ereignisbehandlungen"
 
-    Private Sub Button_Click(sender As Object, e As System.EventArgs) Handles _
-        Button.Click
+    Private Sub Button_Click(sender As Object, e As System.EventArgs) Handles Button.Click
 
         'Ereignis auslösen
         RaiseEvent ValueChanged(Me, New IniFileEntryValueEditEventArgs(
@@ -128,8 +126,7 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
 
     End Sub
 
-    Private Sub TextBox_TextChanged(sender As Object, e As System.EventArgs) Handles _
-        TextBox.TextChanged
+    Private Sub TextBox_TextChanged(sender As Object, e As System.EventArgs) Handles TextBox.TextChanged
 
         ' Prüfung ob sich der Wert geändert hat
         If Me._Value <> Me.TextBox.Text Then
@@ -141,18 +138,16 @@ Public Class IniFileEntryValueEdit : Inherits UserControl
 
     End Sub
 
-    Private Sub IniFileCommentEdit_TitelTextChanged() Handles _
-        Me.TitelTextChanged
+    Private Sub IniFileCommentEdit_TitelTextChanged() Handles Me.TitelTextChanged
 
         ' Titeltext setzen
         Me.GroupBox.Text = Me._TitelText
 
     End Sub
 
-    Private Sub IniFileEntryValueEdit_PropertyValueChanged() Handles _
-        Me.PropertyValueChanged
+    Private Sub IniFileEntryValueEdit_PropertyValueChanged() Handles Me.PropertyValueChanged
 
-        Me.TextBox.Text = Me._value
+        Me.TextBox.Text = Me._Value
         Me.Button.Enabled = False
 
     End Sub

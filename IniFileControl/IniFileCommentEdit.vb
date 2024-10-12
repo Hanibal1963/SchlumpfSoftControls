@@ -14,7 +14,7 @@ Imports System.Windows.Forms
 ''' Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<MyDescription("ClassDescriptionCommentEdit")>
+<Description("Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(IniFileCommentEdit), "IniFileCommentEdit.bmp")>
 Public Class IniFileCommentEdit : Inherits UserControl
@@ -32,7 +32,7 @@ Public Class IniFileCommentEdit : Inherits UserControl
     ''' <summary>
     ''' Wird ausgelöst wenn sich der Kommentartext geändert hat.
     ''' </summary>
-    <MyDescription("CommentChangedDescription")>
+    <Description("Wird ausgelöst wenn sich der Kommentartext geändert hat.")>
     Public Event CommentChanged(sender As Object, e As IniFileCommentEditEventArgs)
 
 #End Region
@@ -69,7 +69,7 @@ Public Class IniFileCommentEdit : Inherits UserControl
     ''' <returns></returns>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("TitelTextDescription")>
+    <Description("Gibt den Text der Titelzeile zurück oder legt diesen fest.")>
     Public Property TitelText As String
         Set(value As String)
             ' hat sich der Wert geändert?
@@ -92,7 +92,7 @@ Public Class IniFileCommentEdit : Inherits UserControl
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("CommentDescription")>
+    <Description("Gibt den Kommentartext zurück oder legt diesen fest.")>
     Public Property Comment As String()
         Get
             ' Wert zurückgeben
@@ -115,7 +115,7 @@ Public Class IniFileCommentEdit : Inherits UserControl
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("CommentSectionNameDescription")>
+    <Description("Gibt den Name des Abschnitts zurück oder legt diesen fest für den der Kommentar angezeigt werden soll.")>
     Public Property SectionName As String
         Get
             Return Me._SectionName

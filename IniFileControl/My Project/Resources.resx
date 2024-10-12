@@ -117,68 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AutoSaveDescription" xml:space="preserve">
-    <value>Legt das Speicherverhalten der Klasse fest.</value>
-  </data>
-  <data name="ClassDescriptionCommentEdit" xml:space="preserve">
-    <value>Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.</value>
-  </data>
-  <data name="ClassDescriptionContentView" xml:space="preserve">
-    <value>Steuerelement zum Anzeigen des Dateiinhaltes.</value>
-  </data>
-  <data name="ClassDescriptionEntryValueEdit" xml:space="preserve">
-    <value>Steuerelement zum Anzeigen und Bearbeiten der Einträge eines Abschnitts einer INI - Datei.</value>
-  </data>
-  <data name="ClassDescriptionIniFile" xml:space="preserve">
-    <value>Steuerelement zum Verwalten von INI - Dateien</value>
-  </data>
-  <data name="ClassDescriptionListEdit" xml:space="preserve">
-    <value>Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei.</value>
-  </data>
-  <data name="CommentChangedDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn sich der Kommentartext geändert hat.</value>
-  </data>
-  <data name="CommentDescription" xml:space="preserve">
-    <value>Gibt den Kommentartext zurück oder legt diesen fest.</value>
-  </data>
-  <data name="CommentPrefixDescription" xml:space="preserve">
-    <value>Gibt das Prefixzeichen für Kommentare zurück oder legt dieses fest.</value>
-  </data>
-  <data name="CommentSectionNameDescription" xml:space="preserve">
-    <value>Gibt den Name des Abschnitts zurück oder legt diesen fest für den der Kommentar angezeigt werden soll.</value>
-  </data>
   <data name="DefaultCommentPrefix" xml:space="preserve">
     <value>;</value>
   </data>
   <data name="DefaultFileName" xml:space="preserve">
     <value>NeueDatei.ini</value>
   </data>
-  <data name="EntryNameExistDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn beim anlegen eines neuen Eintrags oder umbenennen eines Eintrags der Name bereits vorhanden ist.</value>
-  </data>
-  <data name="EntrysChangedDescription" xml:space="preserve">
-    <value>wird ausgelöst wenn sich die Liste der Einträge geändert hat.</value>
-  </data>
-  <data name="EntryValueChangedDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn sich der Wert eines Eintrags in einem Abschnitt geändert hat.</value>
-  </data>
   <data name="ErrorMsgIoException" xml:space="preserve">
     <value>Fehler beim laden der Datei "{0}".</value>
   </data>
   <data name="ErrorMsgNullOrWhitSpace" xml:space="preserve">
     <value>Der Parameter "{0}" darf nicht NULL oder ein Leerraumzeichen sein.</value>
-  </data>
-  <data name="FileCommentChangedDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn sich der Dateikommentar geändert hat.</value>
-  </data>
-  <data name="FileContentChangedDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn sich der Dateiinhalt geändert hat.</value>
-  </data>
-  <data name="FileNameDescription" xml:space="preserve">
-    <value>Gibt den aktuellen Dateiname zurück oder legt diesen fest</value>
-  </data>
-  <data name="FilePathDescription" xml:space="preserve">
-    <value>Gibt den Pfad zur INI-Datei zurück oder legt diesen fest.</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="IniFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -195,47 +144,5 @@
   </data>
   <data name="IniFileListEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IniFileListEdit.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LinesDescription" xml:space="preserve">
-    <value>Gibt den Dateiinhalt zurück oder legt diesen fest.</value>
-  </data>
-  <data name="ListEditItemAddDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn ein Eintrag hinzugefügt werden soll.</value>
-  </data>
-  <data name="ListEditItemRemoveDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn ein Eintrag gelöscht werden soll.</value>
-  </data>
-  <data name="ListEditItemRenameDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn ein Eintrag umbenannt werden soll.</value>
-  </data>
-  <data name="ListeditListItemsDescription" xml:space="preserve">
-    <value>Setzt die Elemente der Listbox oder gibt diese zurück.</value>
-  </data>
-  <data name="ListEditSelectedItemChangedDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn sich der gewählte Eintrag geändert hat.</value>
-  </data>
-  <data name="SectionCommentChangedDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn sich der Abschnittskommentar geändert hat.</value>
-  </data>
-  <data name="SectionNameExistDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn beim anlegen eines neuen Abschnitts oder umbnennen eines Abschnitts der Name bereits vorhanden ist.</value>
-  </data>
-  <data name="SectionsChangedDescription" xml:space="preserve">
-    <value>Wird ausgelöst wenn sich die Liste der Abschnitte geändert hat.</value>
-  </data>
-  <data name="SelectedEntryDescription" xml:space="preserve">
-    <value>Gibt den aktuell ausgewählten Eintrag zurück oder legt diesen fest.</value>
-  </data>
-  <data name="SelectedSectionDescription" xml:space="preserve">
-    <value>Gibt den aktuell ausgewählten Abschnitt zurück oder legt diesen fest.</value>
-  </data>
-  <data name="TitelTextDescription" xml:space="preserve">
-    <value>Gibt den Text der Titelzeile zurück oder legt diesen fest.</value>
-  </data>
-  <data name="ValueDescription" xml:space="preserve">
-    <value>Eintragswert</value>
-  </data>
-  <data name="ValueEditValueChanged" xml:space="preserve">
-    <value>Wird ausgelöst wenn sich der Wert geändert hat.</value>
   </data>
 </root>

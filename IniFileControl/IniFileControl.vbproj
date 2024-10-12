@@ -89,9 +89,6 @@
     <None Include="IniFile.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\CommonCodes\MyDescription.vb">
-      <Link>MyDescription.vb</Link>
-    </Compile>
     <Compile Include="IniFile.vb">
       <SubType>Component</SubType>
     </Compile>
