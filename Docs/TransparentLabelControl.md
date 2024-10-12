@@ -37,6 +37,14 @@ bzw. es Probleme mit der Darstellung gibt, wurden diese von mir ausgeblendet.
 
 ## Versionsverlauf
 
+**Version 2.2024.10.12**
+
+Datum: 12.10.2024
+
+- Beseitigung von Logigfehlern
+- Optimierung des Codes
+- Änderung der Versionsnummerierung
+
 **Version 2.2024.22.08**
 
 Datum 22.08.2024

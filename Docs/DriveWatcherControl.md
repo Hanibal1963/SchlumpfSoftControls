@@ -29,6 +29,14 @@ Grundlage und Anregung für dieses Control stammen aus dem Internet.
 ---
 
 ## Versionsverlauf
+ 
+**Version 2.2024.10.12**
+
+Datum: 12.10.2024
+
+- Beseitigung von Logigfehlern
+- Optimierung des Codes
+- Änderung der Versionsnummerierung
 
 **Version 2.2024.25.09**
 
