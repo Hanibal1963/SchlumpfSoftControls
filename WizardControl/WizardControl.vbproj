@@ -73,9 +73,6 @@
     <DocumentationFile>WizardControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\CommonCodes\MyDescription.vb">
-      <Link>MyDescription.vb</Link>
-    </Compile>
     <Compile Include="AfterSwitchPagesEventArgs.vb" />
     <Compile Include="BeforeSwitchPagesEventArgs.vb" />
     <Compile Include="PageCustom.vb">

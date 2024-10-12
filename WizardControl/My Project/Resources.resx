@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AfterSwitchPagesDescription" xml:space="preserve">
-    <value>Tritt auf, nachdem die Seiten des Assistenten gewechselt wurden, und gibt dem Benutzer die Möglichkeit, die neue Seite einzurichten.</value>
-  </data>
-  <data name="BeforeSwitchPagesDescription" xml:space="preserve">
-    <value>Tritt auf, bevor die Seiten des Assistenten gewechselt werden, um dem Benutzer die Möglichkeit zur Validierung zu geben.</value>
-  </data>
   <data name="ButtonCancelText_PageCustom" xml:space="preserve">
     <value>OK</value>
   </data>
@@ -132,60 +126,12 @@
   <data name="ButtonCancelText_Standard" xml:space="preserve">
     <value>Abbruch</value>
   </data>
-  <data name="CancelDesription" xml:space="preserve">
-    <value>Tritt auf wenn der Benutzer auf Abbrechen geklickt hat.</value>
-  </data>
-  <data name="ClassDescription" xml:space="preserve">
-    <value>Ein Control zum erstellen eines Assistenen</value>
-  </data>
-  <data name="DescriptionDescription" xml:space="preserve">
-    <value>Ruft die Beschreibung der Assistentenseite ab oder legt diese fest.</value>
-  </data>
-  <data name="DockDescription" xml:space="preserve">
-    <value>Ruft ab oder legt fest, an welcher Kante des übergeordneten Containers ein Steuerelement angedockt ist.</value>
-  </data>
-  <data name="FinishDescription" xml:space="preserve">
-    <value>Tritt auf, wenn der Assistent abgeschlossen ist, und gibt dem Benutzer die Möglichkeit, zusätzliche Aufgaben zu erledigen.</value>
-  </data>
-  <data name="HeaderFontDescription" xml:space="preserve">
-    <value>Ruft die Schriftart ab, die zum Anzeigen der Beschreibung einer Standardseite verwendet wird, oder legt diese fest.</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="HeaderImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeaderImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HeaderTitleFontDescription" xml:space="preserve">
-    <value>Ruft die Schriftart ab, die zum Anzeigen des Titels einer Standardseite verwendet wird, oder legt diese fest.</value>
-  </data>
-  <data name="HelpDescription" xml:space="preserve">
-    <value>Tritt auf, wenn der Benutzer auf die Hilfeschaltfläche klickt.</value>
-  </data>
-  <data name="ImageHeaderDesription" xml:space="preserve">
-    <value>Ruft das in der Kopfzeile der Standardseiten angezeigte Bild ab oder legt dieses fest.</value>
-  </data>
-  <data name="ImageWelcomeDescription" xml:space="preserve">
-    <value>Ruft das auf den Begrüßungs- und Abschlussseiten angezeigte Bild ab oder legt es fest.</value>
-  </data>
-  <data name="PagesCollectionDescription" xml:space="preserve">
-    <value>Ruft die Auflistung der Assistentenseiten in diesem Registerkartensteuerelement ab.</value>
-  </data>
-  <data name="StyleDescription" xml:space="preserve">
-    <value>Ruft den Stil der Assistentenseite ab oder legt diesen fest.</value>
-  </data>
-  <data name="TitleDescription" xml:space="preserve">
-    <value>Ruft den Titel der Assistentenseite ab oder legt diesen fest.</value>
-  </data>
-  <data name="VisibleHelpDescription" xml:space="preserve">
-    <value>Ruft die Sichtbarkeit Status der Hilfeschaltfläche ab oder legt diesen fest.</value>
-  </data>
-  <data name="WelcomeFontDescription" xml:space="preserve">
-    <value>Ruft die Schriftart ab, die zum Anzeigen der Beschreibung einer Begrüßungs- oder Abschlussseite verwendet wird, oder legt diese fest.</value>
-  </data>
   <data name="WelcomeImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WelcomeImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WelcomeTitleFontDescription" xml:space="preserve">
-    <value>Ruft die Schriftart ab, die zum Anzeigen des Titels einer Begrüßungs- oder Abschlussseite verwendet wird, oder legt diese fest.</value>
   </data>
   <data name="Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wizard.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

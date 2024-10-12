@@ -4,26 +4,19 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System.ComponentModel
-
 
 ''' <summary>
 ''' Definiert eine Standardseite
 ''' </summary>
 <ToolboxItem(False)>
-Public Class PageStandard
-
-
-    Inherits WizardPage
-
+Public Class PageStandard : Inherits WizardPage
 
     Private _Style As PageStyle = PageStyle.Standard
 
-
     <DefaultValue(PageStyle.Standard)>
     <Category("Design")>
-    <MyDescription("StyleDescription")>
+    <Description("Ruft den Stil der Assistentenseite ab oder legt diesen fest.")>
     Public Overrides Property Style As PageStyle
         Get
             Return Me._Style
@@ -32,7 +25,6 @@ Public Class PageStandard
             Me._Style = value
         End Set
     End Property
-
 
 End Class
 
