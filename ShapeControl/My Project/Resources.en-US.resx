@@ -117,22 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClassDescription" xml:space="preserve">
-    <value>Control element for displaying a line, a rectangle or a ellipse.</value>
-  </data>
-  <data name="DiagonalLineModusDescription" xml:space="preserve">
-    <value>Specifies whether a diagonal line runs from the top right or vice versa from the top right.</value>
-  </data>
-  <data name="FillColorDescription" xml:space="preserve">
-    <value>Detects the fill color for the shape or returns it.</value>
-  </data>
-  <data name="LineColorDescription" xml:space="preserve">
-    <value>Detects the color of the line or framework line or returns it.</value>
-  </data>
-  <data name="LineWidthDescription" xml:space="preserve">
-    <value>Specifies the width of the line or framework line or return it.</value>
-  </data>
-  <data name="ShapeModusDescription" xml:space="preserve">
-    <value>Detects the form to be displayed or returns it.</value>
-  </data>
 </root>

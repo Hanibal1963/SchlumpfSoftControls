@@ -8,64 +8,44 @@ Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
-
 ''' <summary>
 ''' Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<MyDescription("ClassDescription")>
+<Description("Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(Shape), "Shape.bmp")>
-Public Class Shape
-
-
-    Inherits Control
-
+Public Class Shape : Inherits Control
 
 #Region "Definition der Variablen"
 
-    ''' <summary>Wird vom Steuerelement-Designer benötigt.</summary>
     Private components As IContainer
-
-    ''' <summary>Speichert die Art der Form die gezeichnet wird.</summary>
     Private _ShapeModus As ShapeModes
-
-    ''' <summary>Speichert die Breite der Linien.</summary>
     Private _LineWidth As Single
-
-    ''' <summary>Speichert die Linienfarbe.</summary>
     Private _LineColor As Color
-
-    ''' <summary>Speichert die Füllfarbe.</summary>
     Private _FillColor As Color
-
-    ''' <summary>Speichert die Art wie eine diagonale Linie gezeichnet wird.</summary>
     Private _DiagonalLineModus As DiagonalLineModes
 
 #End Region
-
 
     Public Sub New()
 
         'Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
-
         'Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
         Me.InitializeVariables()
         Me.InitializeStyles()
 
     End Sub
 
-
 #Region "neue Eigenschaften"
-
 
     ''' <summary>
     ''' Legt die anzuzeigende Form fest oder gibt diese zurück.
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("ShapeModusDescription")>
+    <Description("Legt die anzuzeigende Form fest oder gibt diese zurück.")>
     Public Property ShapeModus() As ShapeModes
         Get
             Return Me._ShapeModus
@@ -76,13 +56,12 @@ Public Class Shape
         End Set
     End Property
 
-
     ''' <summary>
     ''' Legt die Breite der Linie oder Rahmenlinie fest oder gibt diese zurück.
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("LineWidthDescription")>
+    <Description("Legt die Breite der Linie oder Rahmenlinie fest oder gibt diese zurück.")>
     Public Property LineWidth() As Single
         Get
             Return Me._LineWidth
@@ -93,13 +72,12 @@ Public Class Shape
         End Set
     End Property
 
-
     ''' <summary>
     ''' Legt die Farbe der Linie oder Rahmenlinie fest oder gibt diese zurück.
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("LineColorDescription")>
+    <Description("Legt die Farbe der Linie oder Rahmenlinie fest oder gibt diese zurück.")>
     Public Property LineColor() As Color
         Get
             Return Me._LineColor
@@ -110,13 +88,12 @@ Public Class Shape
         End Set
     End Property
 
-
     ''' <summary>
     ''' Legt die Füllfarbe für die Form fest oder gibt diese zurück.
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("FillColorDescription")>
+    <Description("Legt die Füllfarbe für die Form fest oder gibt diese zurück.")>
     Public Property FillColor() As Color
         Get
             Return Me._FillColor
@@ -127,14 +104,12 @@ Public Class Shape
         End Set
     End Property
 
-
     ''' <summary>
-    ''' Legt fest ob eine diagonale Linie von links oben nach rechts unten oder 
-    ''' umgekehrt verläuft oder gibt dieses zurück.
+    ''' Legt fest ob eine diagonale Linie von links oben nach rechts unten oder umgekehrt verläuft oder gibt dieses zurück.
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("DiagonalLineModusDescription")>
+    <Description("Legt fest ob eine diagonale Linie von links oben nach rechts unten oder umgekehrt verläuft oder gibt dieses zurück.")>
     Public Property DiagonalLineModus() As DiagonalLineModes
         Get
             Return Me._DiagonalLineModus
@@ -145,9 +120,7 @@ Public Class Shape
         End Set
     End Property
 
-
 #End Region
-
 
 #Region "überschriebene Eigenschften"
 
@@ -169,9 +142,7 @@ Public Class Shape
 
 #End Region
 
-
 #Region "ausgeblendete Eigenschaften"
-
 
     ''' <summary>
     ''' Hintergrundfarbe (nicht relevant für dieses Control)
@@ -187,7 +158,6 @@ Public Class Shape
         End Set
     End Property
 
-
     ''' <summary>
     ''' Hintergrundbild (nicht relevant für dieses Control)
     ''' </summary>
@@ -201,7 +171,6 @@ Public Class Shape
             MyBase.BackgroundImage = value
         End Set
     End Property
-
 
     ''' <summary>
     ''' Layout Hintergrundbild (nicht relevant für dieses Control)
@@ -217,7 +186,6 @@ Public Class Shape
         End Set
     End Property
 
-
     ''' <summary>
     ''' Schriftart (nicht relevant für dieses Control)
     ''' </summary>
@@ -231,7 +199,6 @@ Public Class Shape
             MyBase.Font = value
         End Set
     End Property
-
 
     ''' <summary>
     ''' Vordergrundfarbe (nicht relevant für dieses Control)
@@ -247,7 +214,6 @@ Public Class Shape
         End Set
     End Property
 
-
     ''' <summary>
     ''' Rechts - Links Schreibweise (nicht relevant für dieses Control)
     ''' </summary>
@@ -261,7 +227,6 @@ Public Class Shape
             MyBase.RightToLeft = value
         End Set
     End Property
-
 
     ''' <summary>
     ''' Text (nicht relevant für dieses Control)
@@ -277,9 +242,7 @@ Public Class Shape
         End Set
     End Property
 
-
 #End Region
-
 
     ''' <summary>
     ''' zeichnet das ShapeControl neu
@@ -289,8 +252,6 @@ Public Class Shape
         MyBase.OnPaint(e)
 
         Dim g As Graphics = Me.CreateGraphics
-
-        'Benutzerdefinierten Zeichnungscode hier einfügen
         Select Case Me._ShapeModus
 
             Case ShapeModes.HorizontalLine
@@ -385,7 +346,6 @@ Public Class Shape
 
     End Sub
 
-
     ''' <summary>
     ''' Das Steuerelement überschreibt den Löschvorgang zum Bereinigen der Komponentenliste.
     ''' </summary>
@@ -400,7 +360,6 @@ Public Class Shape
         End Try
     End Sub
 
-
     ''' <summary>
     ''' Initialisiert die Standardwerte für das ShapeControl
     ''' </summary>
@@ -408,21 +367,16 @@ Public Class Shape
 
         'Horizontale Linie
         Me._ShapeModus = ShapeModes.HorizontalLine
-
         'diagonale Linie von links oben nach rechts unten
         Me._DiagonalLineModus = DiagonalLineModes.TopLeftToBottomRight
-
         'schwarze Linie für Linie und Rahmenlinie bei Ellipse und Rechteck
         Me._LineColor = Color.Black
-
         'Breite der Linie
         Me._LineWidth = 2
-
         'Füllfarbe für Ellipse und Rechteck
         Me._FillColor = Color.Gray
 
     End Sub
-
 
     ''' <summary>
     ''' Initialisiert die Styles für das ShapeControl
@@ -434,7 +388,6 @@ Public Class Shape
 
     End Sub
 
-
     ''' <summary>
     ''' Hinweis: Die folgende Prozedur ist für den Komponenten-Designer erforderlich.
     ''' Sie kann mit dem Komponenten-Designer geändert werden.
@@ -442,10 +395,10 @@ Public Class Shape
     ''' </summary>
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+
         Me.SuspendLayout()
         Me.ResumeLayout(False)
 
     End Sub
-
 
 End Class

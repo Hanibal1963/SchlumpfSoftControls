@@ -79,9 +79,6 @@
     <None Include="ProvideToolboxControlAttribute.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\CommonCodes\MyDescription.vb">
-      <Link>MyDescription.vb</Link>
-    </Compile>
     <Compile Include="EnumDefDiagonalLineModes.vb" />
     <Compile Include="EnumDefShapeModes.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
