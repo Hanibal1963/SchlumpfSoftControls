@@ -40,3 +40,5 @@ Imports Microsoft.VisualBasic
 <Assembly: AssemblyVersion("2.2024.10.12")>
 <Assembly: AssemblyFileVersion("2.2024.10.12")>
 <Assembly: NeutralResourcesLanguage("de-DE")>
+
+<assembly: AssemblyInformationalVersion("0.2024.10.12")>

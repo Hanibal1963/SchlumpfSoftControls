@@ -181,12 +181,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_SortFileContentOnSave = True
-		RESX_ConfirmAddLanguageFile = True
-		RESX_CultureCountyOverrides = 
-		RESX_AutoCreateNewLanguageFiles = False
-		RESX_PrefixTranslations = False
-		RESX_NeutralResourcesLanguage = de-DE
 		SolutionGuid = {1F02675E-F1F5-4CB4-9063-742717056245}
+		RESX_NeutralResourcesLanguage = de-DE
+		RESX_PrefixTranslations = False
+		RESX_AutoCreateNewLanguageFiles = False
+		RESX_CultureCountyOverrides = 
+		RESX_ConfirmAddLanguageFile = True
+		RESX_SortFileContentOnSave = True
 	EndGlobalSection
 EndGlobal
