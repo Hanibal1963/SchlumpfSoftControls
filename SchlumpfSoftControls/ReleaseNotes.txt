@@ -1,7 +1,0 @@
-﻿
-Versionshinweise
-----------------
-
-Hinweise zu den Versionen der einzelnen Controls sind unter
-folgendem Link zu finden:
-https://github.com/Hanibal1963/SchlumpfSoftControls
