@@ -4,44 +4,31 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
-
 
 ''' <summary>
 ''' Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<MyDescription("ClassDescription")>
+<Description("Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(TransparentLabel), "TransparentLabel.bmp")>
-Public Class TransparentLabel
+Public Class TransparentLabel : Inherits Label
 
-
-    Inherits Label
-
-
-    '''<summary>
-    ''' Wird vom Steuerelement-Designer benötigt.
-    ''' </summary>
     Private components As IContainer
-
 
     Public Sub New()
 
         'Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
-
         'Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
         Me.InitializeStyles()
 
     End Sub
 
-
 #Region "ausgeblendete Eigenschaften"
-
 
     ''' <summary>
     ''' Nicht Relevant
@@ -57,7 +44,6 @@ Public Class TransparentLabel
         End Set
     End Property
 
-
     ''' <summary>
     ''' Nicht Relevant
     ''' </summary>
@@ -71,7 +57,6 @@ Public Class TransparentLabel
             MyBase.BackgroundImage = value
         End Set
     End Property
-
 
     ''' <summary>
     ''' Nicht Relevant
@@ -87,7 +72,6 @@ Public Class TransparentLabel
         End Set
     End Property
 
-
     ''' <summary>
     ''' Nicht Relevant
     ''' </summary>
@@ -102,13 +86,9 @@ Public Class TransparentLabel
         End Set
     End Property
 
-
 #End Region
 
-
-    ''' <summary>
-    ''' Hiermit wird die Möglichkeit der Transparenz aktiviert
-    ''' </summary>
+    ' Hiermit wird die Möglichkeit der Transparenz aktiviert
     Protected Overrides ReadOnly Property CreateParams As CreateParams
         Get
             Dim cp As CreateParams = MyBase.CreateParams
@@ -119,7 +99,6 @@ Public Class TransparentLabel
         End Get
     End Property
 
-
     Private Sub InitializeStyles()
 
         Me.SetStyle(ControlStyles.Opaque, True)
@@ -128,10 +107,7 @@ Public Class TransparentLabel
 
     End Sub
 
-
-    ''' <summary>
-    ''' Das Steuerelement überschreibt den Löschvorgang zum Bereinigen der Komponentenliste.
-    ''' </summary>
+    ' Das Steuerelement überschreibt den Löschvorgang zum Bereinigen der Komponentenliste.
     <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -143,16 +119,12 @@ Public Class TransparentLabel
         End Try
     End Sub
 
-
-    ''' <summary>
-    ''' Hinweis: Die folgende Prozedur ist für den Komponenten-Designer erforderlich.
-    ''' Sie kann mit dem Komponenten-Designer geändert werden.
-    ''' Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    ''' </summary>
+    ' Hinweis: Die folgende Prozedur ist für den Komponenten-Designer erforderlich.
+    ' Sie kann mit dem Komponenten-Designer geändert werden.
+    ' Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New Container()
     End Sub
-
 
 End Class
