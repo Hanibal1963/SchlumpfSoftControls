@@ -117,24 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClassDescription" xml:space="preserve">
-    <value>Control for displaying notification windows.</value>
-  </data>
-  <data name="DesignDescription" xml:space="preserve">
-    <value>Detects the appearance of the notification window.</value>
-  </data>
-  <data name="MessageDescription" xml:space="preserve">
-    <value>Detects the notification text that should be displayed or gives it back.</value>
-  </data>
-  <data name="ShowTimeDescription" xml:space="preserve">
-    <value>Defines the display time of the notification window in MS or returns them. (The value 0 deactivates the automatic closure)</value>
-  </data>
-  <data name="StyleDescription" xml:space="preserve">
-    <value>If the symbol of the notification window to be displayed, defines or returns it.</value>
-  </data>
-  <data name="TitleDescription" xml:space="preserve">
-    <value>Detects the text of the title line of the notification window or returns it.</value>
-  </data>
   <data name="StandardMessage" xml:space="preserve">
     <value>Window message</value>
   </data>

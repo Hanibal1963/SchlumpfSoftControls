@@ -81,9 +81,6 @@
     <None Include="FormDesign.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\CommonCodes\MyDescription.vb">
-      <Link>MyDescription.vb</Link>
-    </Compile>
     <Compile Include="FormDesign.vb" />
     <Compile Include="FormStyle.vb" />
     <Compile Include="FormTemplate.vb">

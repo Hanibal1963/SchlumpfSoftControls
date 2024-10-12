@@ -61,15 +61,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Control zum Anzeigen von Benachrichtigungsfenstern. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property ClassDescription() As String
-            Get
-                Return ResourceManager.GetString("ClassDescription", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property CriticalError() As System.Drawing.Bitmap
@@ -80,30 +71,12 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Legt das Aussehen des Benachrichtigungsfensters fest. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property DesignDescription() As String
-            Get
-                Return ResourceManager.GetString("DesignDescription", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Information() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Information", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Legt den Benachrichtigungstext fest der angezeigt werden soll oder gibt diesen zurück. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property MessageDescription() As String
-            Get
-                Return ResourceManager.GetString("MessageDescription", resourceCulture)
             End Get
         End Property
         
@@ -128,15 +101,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Legt die Anzeigedauer des Benachrichtigungsfensters in ms fest oder gibt diese zurück. (Der Wert 0 deaktiviert das automatische schließen.) ähnelt.
-        '''</summary>
-        Friend ReadOnly Property ShowTimeDescription() As String
-            Get
-                Return ResourceManager.GetString("ShowTimeDescription", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Fensternachricht ähnelt.
         '''</summary>
         Friend ReadOnly Property StandardMessage() As String
@@ -151,24 +115,6 @@ Namespace My.Resources
         Friend ReadOnly Property StandardTitle() As String
             Get
                 Return ResourceManager.GetString("StandardTitle", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Legt das anzuzeigende Symbol des Benachrichtigungsfensters fest oder gibt dieses zurück. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property StyleDescription() As String
-            Get
-                Return ResourceManager.GetString("StyleDescription", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Legt den Text der Titelzeile des Benachrichtigungsfensters fest oder gibt diesen zurück. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property TitleDescription() As String
-            Get
-                Return ResourceManager.GetString("TitleDescription", resourceCulture)
             End Get
         End Property
         

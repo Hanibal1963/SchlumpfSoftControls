@@ -4,31 +4,36 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Threading
 Imports System.Windows.Forms
 
-
 ''' <summary>
 ''' Control zum anzeigen von Benachrichtigungsfenstern.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
-<MyDescription("ClassDescription")>
+<Description("Control zum anzeigen von Benachrichtigungsfenstern.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(NotifyForm), "NotifyForm.bmp")>
-Public Class NotifyForm
+Public Class NotifyForm : Inherits Component
 
+    Private _Title As String
+    Private _Message As String
+    Private _Design As FormDesign
+    Private _ShowTime As Integer
+    Private _Style As FormStyle
 
-    Inherits Component
+    Public Sub New()
 
-    Private _Title As String = String.Format(My.Resources.StandardTitle)
-    Private _Message As String = String.Format(My.Resources.StandardMessage)
-    Private _Design As FormDesign = FormDesign.Bright
-    Private _ShowTime As Integer = 5000
-    Private _Style As FormStyle = FormStyle.Information
+        Me._Title = String.Format(My.Resources.StandardTitle)
+        Me._Message = String.Format(My.Resources.StandardMessage)
+        Me._Design = FormDesign.Bright
+        Me._Style = FormStyle.Information
+        Me._ShowTime = 5000
+
+    End Sub
 
 
     ''' <summary>
@@ -36,7 +41,7 @@ Public Class NotifyForm
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("DesignDescription")>
+    <Description("Legt das Aussehen des Benachrichtigungsfensters fest.")>
     Public Property Design As FormDesign
         Get
             Return Me._Design
@@ -46,13 +51,12 @@ Public Class NotifyForm
         End Set
     End Property
 
-
     ''' <summary>
     ''' Legt den Benachrichtigungstext fest der angezeigt werden soll.
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("MessageDescription")>
+    <Description("Legt den Benachrichtigungstext fest der angezeigt werden soll.")>
     Public Property Message As String
         Get
             Return Me._Message
@@ -62,7 +66,6 @@ Public Class NotifyForm
         End Set
     End Property
 
-
     ''' <summary>
     ''' Legt die Anzeigedauer des Benachrichtigungsfensters in ms fest.
     ''' </summary>
@@ -71,7 +74,7 @@ Public Class NotifyForm
     ''' </remarks>
     <Browsable(True)>
     <Category("Behavior")>
-    <MyDescription("ShowTimeDescription")>
+    <Description("Legt die Anzeigedauer des Benachrichtigungsfensters in ms fest.")>
     Public Property ShowTime As Integer
         Get
             Return Me._ShowTime
@@ -81,13 +84,12 @@ Public Class NotifyForm
         End Set
     End Property
 
-
     ''' <summary>
     ''' Legt das anzuzeigende Symbol im Benachrichtigungsfensters fest.
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("StyleDescription")>
+    <Description("Legt das anzuzeigende Symbol im Benachrichtigungsfensters fest.")>
     Public Property Style As FormStyle
         Get
             Return Me._Style
@@ -97,13 +99,12 @@ Public Class NotifyForm
         End Set
     End Property
 
-
     ''' <summary>
     ''' Legt den Text der Titelzeile des Benachrichtigungsfensters fest.
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <MyDescription("TitleDescription")>
+    <Description("Legt den Text der Titelzeile des Benachrichtigungsfensters fest.")>
     Public Property Title As String
         Get
             Return Me._Title
@@ -112,7 +113,6 @@ Public Class NotifyForm
             Me._Title = Value
         End Set
     End Property
-
 
     ''' <summary>
     ''' Zeigt das Meldungsfenster an.
@@ -126,7 +126,6 @@ Public Class NotifyForm
         Me.SetFormDesign()
 
     End Sub
-
 
     ''' <summary>
     ''' Setzt das Design des Fensters
@@ -148,7 +147,6 @@ Public Class NotifyForm
 
     End Sub
 
-
     ''' <summary>
     ''' Setzt das helle Design
     ''' </summary>
@@ -162,7 +160,6 @@ Public Class NotifyForm
         ini.Initialize()
 
     End Sub
-
 
     ''' <summary>
     ''' Setz das farbige Design
@@ -178,7 +175,6 @@ Public Class NotifyForm
 
     End Sub
 
-
     ''' <summary>
     ''' Setzt das dunkle Design
     ''' </summary>
@@ -192,7 +188,6 @@ Public Class NotifyForm
         ini.Initialize()
 
     End Sub
-
 
     ''' <summary>
     ''' Setzt das Symbol des Fensters
@@ -221,11 +216,5 @@ Public Class NotifyForm
         Return result
 
     End Function
-
-
-    Private Sub InitializeComponent()
-
-    End Sub
-
 
 End Class
