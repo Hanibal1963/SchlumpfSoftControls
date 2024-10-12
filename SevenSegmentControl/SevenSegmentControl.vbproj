@@ -73,17 +73,15 @@
     <DocumentationFile>SevenSegmentControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\Docs\SevenSegmentControl.md">
-      <Link>SevenSegmentControl.md</Link>
-    </None>
-    <None Include="ClassDiagram.cd" />
+    <None Include="EnumCharacterPattern.cd" />
+    <None Include="Helpers.cd" />
+    <None Include="SevSegMultiDigit.cd" />
+    <None Include="SevSegSingleDigit.cd" />
+    <None Include="ProvideToolboxControlAttribute.cd" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\CommonCodes\MyDescription.vb">
       <Link>MyDescription.vb</Link>
-    </Compile>
-    <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
-      <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
     <Compile Include="EnumCharacterPattern.vb" />
     <Compile Include="Helpers.vb" />
@@ -92,6 +90,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProvideToolboxControlAttribute.vb" />
     <Compile Include="SevSegSingleDigit.vb">
       <SubType>Component</SubType>
     </Compile>

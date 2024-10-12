@@ -73,17 +73,8 @@
     <DocumentationFile>WizardControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\Docs\WizardControl.md">
-      <Link>WizardControl.md</Link>
-    </None>
-    <None Include="ClassDiagram.cd" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="..\CommonCodes\MyDescription.vb">
       <Link>MyDescription.vb</Link>
-    </Compile>
-    <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
-      <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
     <Compile Include="AfterSwitchPagesEventArgs.vb" />
     <Compile Include="BeforeSwitchPagesEventArgs.vb" />
@@ -109,6 +100,7 @@
     <Compile Include="PageWelcome.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ProvideToolboxControlAttribute.vb" />
     <Compile Include="Wizard.Designer.vb">
       <DependentUpon>Wizard.vb</DependentUpon>
     </Compile>
@@ -161,6 +153,22 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Wizard.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AfterSwitchPagesEventArgs.cd" />
+    <None Include="BeforeSwitchPagesEventArgs.cd" />
+    <None Include="WizardPage.cd" />
+    <None Include="WizardDesigner.cd" />
+    <None Include="Wizard.cd" />
+    <None Include="ProvideToolboxControlAttribute.cd" />
+    <None Include="PageWelcome.cd" />
+    <None Include="PageStyle.cd" />
+    <None Include="PageStandard.cd" />
+    <None Include="PagesCollectionEditor.cd" />
+    <None Include="PagesCollection.cd" />
+    <None Include="PageFinish.cd" />
+    <None Include="PageDesigner.cd" />
+    <None Include="PageCustom.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

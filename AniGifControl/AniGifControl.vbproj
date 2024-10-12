@@ -84,17 +84,13 @@
     <DocumentationFile>AniGifControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\Docs\AniGifControl.md">
-      <Link>AniGifControl.md</Link>
-    </None>
-    <None Include="ClassDiagram.cd" />
+    <None Include="AniGif.cd" />
+    <None Include="ProvideToolboxControlAttribute.cd" />
+    <None Include="SizeMode.cd" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\CommonCodes\MyDescription.vb">
       <Link>MyDescription.vb</Link>
-    </Compile>
-    <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
-      <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
     <Compile Include="AniGif.vb">
       <SubType>UserControl</SubType>
@@ -105,6 +101,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProvideToolboxControlAttribute.vb" />
     <Compile Include="SizeMode.vb" />
   </ItemGroup>
   <ItemGroup>

@@ -73,17 +73,14 @@
     <DocumentationFile>ShapeControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\Docs\ShapeControl.md">
-      <Link>ShapeControl.md</Link>
-    </None>
-    <None Include="ClassDiagram.cd" />
+    <None Include="Shape.cd" />
+    <None Include="EnumDefShapeModes.cd" />
+    <None Include="EnumDefDiagonalLineModes.cd" />
+    <None Include="ProvideToolboxControlAttribute.cd" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\CommonCodes\MyDescription.vb">
       <Link>MyDescription.vb</Link>
-    </Compile>
-    <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
-      <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
     <Compile Include="EnumDefDiagonalLineModes.vb" />
     <Compile Include="EnumDefShapeModes.vb" />
@@ -93,6 +90,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProvideToolboxControlAttribute.vb" />
     <Compile Include="Shape.vb">
       <SubType>Component</SubType>
     </Compile>

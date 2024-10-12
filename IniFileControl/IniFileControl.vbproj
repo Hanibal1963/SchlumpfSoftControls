@@ -75,9 +75,7 @@
     <DocumentationFile>IniFileControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\Docs\IniFileControl.md">
-      <Link>IniFileControl.md</Link>
-    </None>
+    <None Include="ProvideToolboxControlAttribute.cd" />
     <None Include="IniFileRenameItemDialog.cd" />
     <None Include="IniFileListEditEventArgs.cd" />
     <None Include="IniFileListEdit.cd" />
@@ -93,9 +91,6 @@
   <ItemGroup>
     <Compile Include="..\CommonCodes\MyDescription.vb">
       <Link>MyDescription.vb</Link>
-    </Compile>
-    <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
-      <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
     <Compile Include="IniFile.vb">
       <SubType>Component</SubType>
@@ -151,6 +146,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProvideToolboxControlAttribute.vb" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

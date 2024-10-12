@@ -74,17 +74,14 @@
     <CreateVsixContainer>False</CreateVsixContainer>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\Docs\DriveWatcherControl.md">
-      <Link>DriveWatcherControl.md</Link>
-    </None>
-    <None Include="ClassDiagram.cd" />
+    <None Include="DriveWatcher.cd" />
+    <None Include="DriveRemovedEventArgs.cd" />
+    <None Include="DriveAddedEventArgs.cd" />
+    <None Include="ProvideToolboxControlAttribute.cd" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\CommonCodes\MyDescription.vb">
       <Link>MyDescription.vb</Link>
-    </Compile>
-    <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
-      <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
     <Compile Include="DriveAddedEventArgs.vb" />
     <Compile Include="DriveRemovedEventArgs.vb" />
@@ -97,6 +94,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ProvideToolboxControlAttribute.vb" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

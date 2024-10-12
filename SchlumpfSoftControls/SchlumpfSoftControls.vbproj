@@ -71,6 +71,7 @@
     <DocumentationFile>SchlumpfSoftControls.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="SchlumpfSoftControlsPackage.cd" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>

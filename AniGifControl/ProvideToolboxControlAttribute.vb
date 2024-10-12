@@ -27,7 +27,6 @@ Imports Microsoft.VisualStudio.Shell
 Public NotInheritable Class ProvideToolboxControlAttribute : Inherits RegistrationAttribute
 
     Private Const ToolboxControlsInstallerPath As String = "ToolboxControlsInstaller"
-
     Private _isWpfControls As Boolean
     Private _name As String
 
@@ -42,7 +41,6 @@ Public NotInheritable Class ProvideToolboxControlAttribute : Inherits Registrati
         If name Is Nothing Then
             Throw New ArgumentException("name")
         End If
-
         Me.Name = name
         Me.IsWpfControls = isWpfControls
 
@@ -86,7 +84,6 @@ Public NotInheritable Class ProvideToolboxControlAttribute : Inherits Registrati
         If context Is Nothing Then
             Throw New ArgumentNullException("context")
         End If
-
         Using key As Key = context.CreateKey(
             String.Format(
             CultureInfo.InvariantCulture,
@@ -96,7 +93,6 @@ Public NotInheritable Class ProvideToolboxControlAttribute : Inherits Registrati
 
             key.SetValue(String.Empty, Me.Name)
             key.SetValue("Codebase", context.CodeBase)
-
             If Me.IsWpfControls Then
                 key.SetValue("WPFControls", "1")
             End If

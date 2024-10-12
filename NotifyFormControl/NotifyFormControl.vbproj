@@ -74,17 +74,15 @@
     <DocumentationFile>NotifyFormControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\Docs\NotifyFormControl.md">
-      <Link>NotifyFormControl.md</Link>
-    </None>
-    <None Include="ClassDiagram.cd" />
+    <None Include="ProvideToolboxControlAttribute.cd" />
+    <None Include="NotifyForm.cd" />
+    <None Include="FormTemplate.cd" />
+    <None Include="FormStyle.cd" />
+    <None Include="FormDesign.cd" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\CommonCodes\MyDescription.vb">
       <Link>MyDescription.vb</Link>
-    </Compile>
-    <Compile Include="..\CommonCodes\ProvideToolboxControlAttribute.vb">
-      <Link>ProvideToolboxControlAttribute.vb</Link>
     </Compile>
     <Compile Include="FormDesign.vb" />
     <Compile Include="FormStyle.vb" />
@@ -100,6 +98,7 @@
     <Compile Include="NotifyForm.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ProvideToolboxControlAttribute.vb" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
