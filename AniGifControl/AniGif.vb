@@ -387,8 +387,7 @@ Public Class AniGif : Inherits UserControl
     ''' <summary>
     ''' Wird ausgeführt wenn das Bild gewechselt wurde.
     ''' </summary>
-    Private Sub AniGif_GifChange() Handles _
-        Me.GifChanged
+    Private Sub AniGif_GifChange() Handles Me.GifChanged
 
         'überprüfen ob das Bild animiert werden kann wenn Autoplay auf True gesetzt ist
         If ImageAnimator.CanAnimate(Me._Gif) = False And Me.AutoPlay = True Then
@@ -417,8 +416,7 @@ Public Class AniGif : Inherits UserControl
     ''' <summary>
     ''' Wird ausgeführt wenn die benutzerdefinierte Anzeigegeschwindigkeit ein oder ausgeschaltet wurde
     ''' </summary>
-    Private Sub AniGif_CustomDisplaySpeedChanged() Handles _
-        Me.CustomDisplaySpeedChanged
+    Private Sub AniGif_CustomDisplaySpeedChanged() Handles Me.CustomDisplaySpeedChanged
 
         Me.Timer.Enabled = Me._CustomDisplaySpeed
         If Me.Timer.Enabled Then
@@ -443,8 +441,7 @@ Public Class AniGif : Inherits UserControl
     ''' <summary>
     ''' wird ausgeführt wenn die Anzeigezeit abgelaufen ist.
     ''' </summary>
-    Private Sub Tick(sender As Object, e As EventArgs) Handles _
-        Timer.Tick
+    Private Sub Tick(sender As Object, e As EventArgs) Handles Timer.Tick
 
         'Bild animieren wenn AutoPlay und Benutzerdefinierte Geschwindigkeit aktiv
         If Not Me.DesignMode AndAlso Me.AutoPlay Then
