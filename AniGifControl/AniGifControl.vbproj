@@ -89,9 +89,6 @@
     <None Include="SizeMode.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\CommonCodes\MyDescription.vb">
-      <Link>MyDescription.vb</Link>
-    </Compile>
     <Compile Include="AniGif.vb">
       <SubType>UserControl</SubType>
     </Compile>

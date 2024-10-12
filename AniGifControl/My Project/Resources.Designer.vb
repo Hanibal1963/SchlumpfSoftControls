@@ -71,84 +71,12 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Legt fest ob die Animation sofort nach dem laden gestartet wird. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property AutoPlayDescription() As String
-            Get
-                Return ResourceManager.GetString("AutoPlayDescription", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Control zum Anzeigen von animierten Grafiken. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property ClassDescription() As String
-            Get
-                Return ResourceManager.GetString("ClassDescription", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Legt fest ob die benutzerdefinierte Anzeigegeschwindigkeit oder die in der Datei festgelegte Geschwindigkeit benutzt wird. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property CustomDisplaySpeedDescription() As String
-            Get
-                Return ResourceManager.GetString("CustomDisplaySpeedDescription", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Legt die benutzerdefinierte Anzeigegeschwindigkeit in Bildern/Sekunde fest wenn CustomDisplaySpeed auf True festgelegt ist. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property FramesPerSecondDescription() As String
-            Get
-                Return ResourceManager.GetString("FramesPerSecondDescription", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Gibt die animierte Gif-Grafik zurück oder legt diese fest. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property GifDescription() As String
-            Get
-                Return ResourceManager.GetString("GifDescription", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Gibt die Art wie die Grafik angezeigt wird zurück oder legt diese fest. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property GifSizeModeDescription() As String
-            Get
-                Return ResourceManager.GetString("GifSizeModeDescription", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Wird ausgelöst wenn die Grafik nicht animiert werden kann. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property NoAnimationDescription() As String
-            Get
-                Return ResourceManager.GetString("NoAnimationDescription", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Standard() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Standard", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Legt den Zoomfaktor fest wenn GifSizeMode auf Zoom festgelegt ist. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property ZoomFactorDescription() As String
-            Get
-                Return ResourceManager.GetString("ZoomFactorDescription", resourceCulture)
             End Get
         End Property
     End Module

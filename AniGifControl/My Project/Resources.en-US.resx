@@ -117,28 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AutoPlayDescription" xml:space="preserve">
-    <value>Specify whether the animation is started immediately after the loading.</value>
-  </data>
-  <data name="ClassDescription" xml:space="preserve">
-    <value>Control for displaying animated graphics.</value>
-  </data>
-  <data name="CustomDisplaySpeedDescription" xml:space="preserve">
-    <value>Specifies whether the custom display speed or the speed specified in the file is used.</value>
-  </data>
-  <data name="FramesPerSecondDescription" xml:space="preserve">
-    <value>Puts the custom display speed in pictures/second when Custom DisplaySpeed ​​is set to true.</value>
-  </data>
-  <data name="GifDescription" xml:space="preserve">
-    <value>Put the animated GIF graphics back or define it.</value>
-  </data>
-  <data name="GifSizeModeDescription" xml:space="preserve">
-    <value>If the way the graphic is displayed indicates or defines it.</value>
-  </data>
-  <data name="NoAnimationDescription" xml:space="preserve">
-    <value>Is triggered if the graphic cannot be animated.</value>
-  </data>
-  <data name="ZoomFactorDescription" xml:space="preserve">
-    <value>Specify the zoom factor when gifsizemod is set on zoom.</value>
-  </data>
 </root>
