@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClassDescription" xml:space="preserve">
-    <value>Control element to monitor the drives.</value>
-  </data>
-  <data name="DriveAddedDescription" xml:space="preserve">
-    <value>Is triggered when a drive has been added.</value>
-  </data>
-  <data name="DriveRemovedDescription" xml:space="preserve">
-    <value>Is triggered when a drive has been removed.</value>
-  </data>
 </root>

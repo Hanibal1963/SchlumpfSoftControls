@@ -11,31 +11,19 @@ Imports System.Drawing
 Imports System.IO
 Imports System.Windows.Forms
 
-
 ''' <summary>
 ''' Steuerelement um die Laufwerke zu überwachen.
 ''' </summary>
 <ProvideToolboxControl("Schlumpfsoft Controls", False)>
 <ToolboxItem(True)>
-<MyDescription("ClassDescription")>
+<Description("Steuerelement um die Laufwerke zu überwachen.")>
 <ToolboxBitmap(GetType(DriveWatcher), "DriveWatcher.bmp")>
-Public Class DriveWatcher
+Public Class DriveWatcher : Inherits Component
 
-
-    Inherits Component
-
-
-    ''' <summary>
-    ''' Wird vom Komponenten-Designer benötigt.
-    ''' </summary>
+    ' Wird vom Komponenten-Designer benötigt.
     Private ReadOnly components As System.ComponentModel.IContainer
-
-
-    ''' <summary>
-    ''' Internes Formular welches die Meldungen empfängt.
-    ''' </summary>
+    ' Internes Formular welches die Meldungen empfängt.
     Private WithEvents _Form As New NativeForm
-
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk hinzugefügt wurde.
@@ -44,9 +32,8 @@ Public Class DriveWatcher
     ''' <param name="e">
     ''' Enthält die Eigenschaften zum hinzugefügten Laufwerk. (<see cref="DriveAddedEventArgs"/>)
     ''' </param>
-    <MyDescription("DriveAddedDescription")>
+    <Description("Wird ausgelöst wenn ein Laufwerk hinzugefügt wurde.")>
     Public Event DriveAdded(sender As Object, e As DriveAddedEventArgs)
-
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk entfernt wurde.
@@ -55,9 +42,8 @@ Public Class DriveWatcher
     ''' <param name="e">
     ''' Enthält die Eigenschaften zum entfernten Laufwerk. (<see cref="DriveRemovedEventArgs"/>)
     ''' </param>
-    <MyDescription("DriveRemovedDescription")>
+    <Description("Wird ausgelöst wenn ein Laufwerk entfernt wurde.")>
     Public Event DriveRemoved(sender As Object, e As DriveRemovedEventArgs)
-
 
     <System.Diagnostics.DebuggerNonUserCode()>
     Public Sub New()
@@ -67,7 +53,6 @@ Public Class DriveWatcher
         Me.InitializeComponent()
 
     End Sub
-
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk hinzugefügt wurde
@@ -90,7 +75,6 @@ Public Class DriveWatcher
 
     End Sub
 
-
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk entfern wurde
     ''' </summary>
@@ -102,7 +86,6 @@ Public Class DriveWatcher
         RaiseEvent DriveRemoved(Me, arg)
 
     End Sub
-
 
     ''' <summary>
     ''' Hinweis: Die folgende Prozedur ist für den Komponenten-Designer erforderlich.
@@ -116,7 +99,6 @@ Public Class DriveWatcher
 
     End Sub
 
-
     <System.Diagnostics.DebuggerNonUserCode()>
     Public Sub New(container As IContainer)
 
@@ -126,7 +108,6 @@ Public Class DriveWatcher
         If container IsNot Nothing Then container.Add(Me)
 
     End Sub
-
 
     ''' <summary>
     ''' Die Komponente überschreibt den Löschvorgang zum Bereinigen der Komponentenliste.
@@ -146,14 +127,11 @@ Public Class DriveWatcher
 
     End Sub
 
-
     ''' <summary>
     ''' Definiert das Fenster welches die WindowsMessages empfängt.
     ''' </summary>
-    Private Class NativeForm
+    Private Class NativeForm : Inherits NativeWindow
 
-
-        Inherits NativeWindow
         Implements IDisposable
 
         'Das sind die Ereignisse aus WParam.
@@ -161,18 +139,14 @@ Public Class DriveWatcher
         Public Event DriveAdded(sender As Object, e As DriveInfo)
         Public Event DriveRemoved(sender As Object, e As DriveInfo)
 
-
         'Windowmessage DeviceChange
         Private Const WM_DEVICECHANGE As Integer = &H219
-
 
         'Die beiden Ereignisse, die für uns von Bedeutung sind.
         Private Const DBT_DEVICEARRIVAL As Integer = &H8000
         Private Const DBT_DEVICEREMOVECOMPLETE As Integer = &H8004
 
-
         Private disposedValue As Boolean
-
 
         ''' <summary>
         ''' Das sind die Konstanten der Gerätetypen
@@ -227,7 +201,6 @@ Public Class DriveWatcher
 
         End Enum
 
-
         ''' <summary>
         ''' Die Struktur für den Header.
         ''' </summary>
@@ -239,7 +212,6 @@ Public Class DriveWatcher
             Public dbch_devicetype As Integer
             Public dbch_reserved As Integer
         End Structure
-
 
         ''' <summary>
         ''' Die Struktur für OEM.
@@ -255,7 +227,6 @@ Public Class DriveWatcher
             Public dbco_suppfunc As Integer
         End Structure
 
-
         ''' <summary>
         ''' Die Struktur für Volumes.
         ''' </summary>
@@ -270,14 +241,12 @@ Public Class DriveWatcher
             Public dbcv_flags As Short
         End Structure
 
-
         'Dies ist der Dreh- und Angelpunkt der Klasse. - Hier bekommen wir die Messages mit.
         'In unserm Fall interessiert uns nur die WM_DeviceChange-Nachricht
         Protected Overrides Sub WndProc(ByRef m As Message)
             If m.Msg = WM_DEVICECHANGE Then Me.HandleHeader(m)
             MyBase.WndProc(m)
         End Sub
-
 
         'Hier schauen wir erst mal in den Header und verzweigen dementsprechend
         Private Sub HandleHeader(ByRef m As Message)
@@ -296,7 +265,6 @@ Public Class DriveWatcher
             End If
         End Sub
 
-
         'Das Ereignis betrifft ein Volume
         Private Sub HandleVolume(ByRef m As Message)
             Dim volume As DEV_BROADCAST_VOLUME
@@ -310,7 +278,6 @@ Public Class DriveWatcher
                 End Select
             End If
         End Sub
-
 
         'OEM, und was genau?
         'Uns interesieren nur Volumes
@@ -328,7 +295,6 @@ Public Class DriveWatcher
 
         End Sub
 
-
         'Liefert den Laufwerksbuchstaben zurück
         Private Function DriveFromMask(mask As Integer) As Char
 
@@ -345,11 +311,9 @@ Public Class DriveWatcher
 
         End Function
 
-
         Public Sub New()
             Me.CreateHandle(New CreateParams) 'eigenes Handle erstellen
         End Sub
-
 
         Protected Overridable Sub Dispose(disposing As Boolean)
 
@@ -370,7 +334,6 @@ Public Class DriveWatcher
 
         End Sub
 
-
         ' Finalizer nur überschreiben, wenn "Dispose(disposing As Boolean)"
         ' Code für die Freigabe nicht verwalteter Ressourcen enthält
         Protected Overrides Sub Finalize()
@@ -382,7 +345,6 @@ Public Class DriveWatcher
 
         End Sub
 
-
         Public Sub Dispose() Implements IDisposable.Dispose
 
             ' Ändern Sie diesen Code nicht.
@@ -392,8 +354,6 @@ Public Class DriveWatcher
 
         End Sub
 
-
     End Class
-
 
 End Class

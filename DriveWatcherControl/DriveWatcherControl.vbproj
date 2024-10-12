@@ -80,9 +80,6 @@
     <None Include="ProvideToolboxControlAttribute.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\CommonCodes\MyDescription.vb">
-      <Link>MyDescription.vb</Link>
-    </Compile>
     <Compile Include="DriveAddedEventArgs.vb" />
     <Compile Include="DriveRemovedEventArgs.vb" />
     <Compile Include="DriveWatcher.vb">
