@@ -17,7 +17,9 @@ Imports System.Windows.Forms
 <Description("Control zum anzeigen von Benachrichtigungsfenstern.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(NotifyForm), "NotifyForm.bmp")>
-Public Class NotifyForm : Inherits Component
+Public Class NotifyForm
+
+    Inherits Component
 
     Private _Title As String
     Private _Message As String
@@ -34,7 +36,6 @@ Public Class NotifyForm : Inherits Component
         Me._ShowTime = 5000
 
     End Sub
-
 
     ''' <summary>
     ''' Legt das Aussehen des Benachrichtigungsfensters fest.

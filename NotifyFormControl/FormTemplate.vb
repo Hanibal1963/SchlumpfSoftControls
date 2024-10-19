@@ -4,24 +4,19 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System
 Imports System.Drawing
 Imports System.Threading
 Imports System.Windows.Forms
-
 
 ''' <summary>
 ''' Vorlage für das Benachrichtigungsfenster
 ''' </summary>
 Friend Class FormTemplate
 
-
     Inherits Form
 
-
     Private CloseThread As Thread
-
 
     'Eigenschaften
     Public Shared BackgroundColor As Color
@@ -33,7 +28,6 @@ Friend Class FormTemplate
     Public Shared Title As String
     Public Shared TitleBarColor As Color
 
-
     'Controls
     Private ReadOnly LabelClose As New Label
     Private ReadOnly LabelTitle As New Label
@@ -41,7 +35,6 @@ Friend Class FormTemplate
     Private ReadOnly PanelTitle As New Panel
     Private ReadOnly PictureBoxImage As New PictureBox
     Private ReadOnly RichTextBoxMessage As New RichTextBox
-
 
     Private Sub CloseForm()
 
@@ -52,7 +45,6 @@ Friend Class FormTemplate
         End If
 
     End Sub
-
 
     Public Sub Initialize()
 
@@ -69,7 +61,6 @@ Friend Class FormTemplate
 
     End Sub
 
-
     Protected Overrides Sub Dispose(disposing As Boolean)
 
         'Bereinigung durchführen
@@ -85,7 +76,6 @@ Friend Class FormTemplate
 
     End Sub
 
-
     Private Sub AddControls()
 
         With Me.Controls
@@ -99,7 +89,6 @@ Friend Class FormTemplate
 
     End Sub
 
-
     Private Sub AutoClose()
 
         'Fenster nur automatisch schließen wenn Zeit > 0 ist.
@@ -109,7 +98,6 @@ Friend Class FormTemplate
         End If
 
     End Sub
-
 
     Private Sub Form_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles Me.Closing
 
@@ -121,7 +109,6 @@ Friend Class FormTemplate
         Next
 
     End Sub
-
 
     Private Sub Form_Load(sender As Object, e As EventArgs) Handles Me.Load
 
@@ -155,7 +142,6 @@ Friend Class FormTemplate
 
     End Sub
 
-
     Private Sub FormFadeIn()
 
         For iCount As Integer = 10 To 100 Step +15
@@ -166,13 +152,11 @@ Friend Class FormTemplate
 
     End Sub
 
-
     Private Sub Lbl_Close_Click(sender As Object, e As EventArgs)
 
         Me.Close()
 
     End Sub
-
 
     Private Sub SetPropertys_Lbl_Close()
 
@@ -189,7 +173,6 @@ Friend Class FormTemplate
 
     End Sub
 
-
     Private Sub SetPropertys_Lbl_Title()
 
         With Me.LabelTitle
@@ -205,7 +188,6 @@ Friend Class FormTemplate
 
     End Sub
 
-
     Private Sub SetPropertys_Panel_Spacer()
 
         With Me.PanelSpacer
@@ -217,7 +199,6 @@ Friend Class FormTemplate
         End With
 
     End Sub
-
 
     Private Sub SetPropertys_Panel_Title()
 
@@ -232,7 +213,6 @@ Friend Class FormTemplate
         End With
 
     End Sub
-
 
     Private Sub SetPropertys_Pb_Image()
 
@@ -249,7 +229,6 @@ Friend Class FormTemplate
         End With
 
     End Sub
-
 
     Private Sub SetPropertys_Txt_Msg()
 
@@ -270,7 +249,6 @@ Friend Class FormTemplate
 
     End Sub
 
-
     Protected Overrides Sub Finalize()
 
         MyBase.Finalize()
@@ -278,6 +256,7 @@ Friend Class FormTemplate
     End Sub
 
     Private Sub InitializeComponent()
+
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormTemplate))
         Me.SuspendLayout()
         '
@@ -288,5 +267,6 @@ Friend Class FormTemplate
         Me.ResumeLayout(False)
 
     End Sub
+
 End Class
 
