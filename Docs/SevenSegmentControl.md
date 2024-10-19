@@ -94,6 +94,12 @@ Die Bibliothek SevenSegmentControl umfasst folgende Komponenten:
 
 ## Versionsverlauf
 
+**Version 2.2024.10.19**
+
+Datum: 19.10.2024
+
+- geringfügige interne Codeänderungen
+
 **Version 2.2024.10.12**
 
 Datum: 12.10.2024
@@ -122,6 +128,6 @@ Datum: 30.06.2024
 
 **Version 1.2024.06.04**
 
-Datum 04.06.2024
+Datum: 04.06.2024
 
 - Erstveröffentlichung

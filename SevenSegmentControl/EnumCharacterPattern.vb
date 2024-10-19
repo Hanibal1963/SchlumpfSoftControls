@@ -10,6 +10,7 @@
 ''' Die Bits 0 bis 6 entsprechen den einzelnen LEDs, von oben nach unten!
 ''' </summary>
 Public Enum CharacterPattern
+
     None = &H0
     Zero = &H77
     One = &H24
@@ -52,4 +53,5 @@ Public Enum CharacterPattern
     Underscore = &H40
     Identical = &H49
     [Not] = &H28
+
 End Enum

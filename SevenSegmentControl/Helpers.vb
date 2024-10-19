@@ -27,7 +27,11 @@ Friend Module Helpers
     ''' <param name="SegmentWidth">
     ''' Breite der Segmente des Digits
     ''' </param>
-    Friend Sub CalculatePoints(ByRef SegmentCornerPoints As Point()(), DigitHeight As Integer, DigitWidth As Integer, SegmentWidth As Integer)
+    Friend Sub CalculatePoints(
+                              ByRef SegmentCornerPoints As Point()(),
+                              DigitHeight As Integer,
+                              DigitWidth As Integer,
+                              SegmentWidth As Integer)
 
         Dim halfHeight As Integer = CInt(DigitHeight / 2)
         Dim halfWidth As Integer = CInt(SegmentWidth / 2)

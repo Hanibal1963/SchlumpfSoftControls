@@ -90,7 +90,6 @@ Public Class SevSegMultiDigit : Inherits Control
 
     End Sub
 
-
     ''' <summary>
     ''' Richtet die Elemente des Arrays so aus, 
     ''' dass sie genau in die Breite des übergeordneten Steuerelements passen.
@@ -107,7 +106,6 @@ Public Class SevSegMultiDigit : Inherits Control
         Next
 
     End Sub
-
 
     ''' <summary>
     ''' Aktualisiert die Eigenschaften jedes Elements mit den Eigenschaften
@@ -129,7 +127,6 @@ Public Class SevSegMultiDigit : Inherits Control
 
     End Sub
 
-
     ''' <summary>
     ''' Wird ausgeführt wenn die Größe des Controls geändert wird
     ''' </summary>
@@ -140,7 +137,6 @@ Public Class SevSegMultiDigit : Inherits Control
         Me.ResizeSegments()
 
     End Sub
-
 
 #End Region
 

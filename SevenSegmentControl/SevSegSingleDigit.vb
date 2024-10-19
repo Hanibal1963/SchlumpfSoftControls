@@ -511,7 +511,6 @@ Public Class SevSegSingleDigit : Inherits Control
 
     End Sub
 
-
     ''' <summary>
     ''' Zeichnet die Segmente basierend darauf, ob das entsprechende Bit hoch ist
     ''' </summary>
@@ -566,7 +565,6 @@ Public Class SevSegSingleDigit : Inherits Control
             SegmentPoints(6))
 
     End Sub
-
 
     ''' <summary>
     ''' Tritt beim Ändern der Größe des Steuerelements ein.
