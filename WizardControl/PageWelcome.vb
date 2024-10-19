@@ -10,7 +10,9 @@ Imports System.ComponentModel
 ''' Definiert die Willkommenseite
 ''' </summary>
 <ToolboxItem(False)>
-Public Class PageWelcome : Inherits WizardPage
+Public Class PageWelcome
+
+    Inherits WizardPage
 
     Private _Style As PageStyle = PageStyle.Welcome
 

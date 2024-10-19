@@ -10,7 +10,9 @@ Imports System.ComponentModel
 ''' Definiert eine Benutzerdefinierte Seite
 ''' </summary>
 <ToolboxItem(False)>
-Public Class PageCustom : Inherits WizardPage
+Public Class PageCustom
+
+    Inherits WizardPage
 
     Private _Style As PageStyle = PageStyle.Custom
 

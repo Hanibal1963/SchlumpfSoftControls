@@ -20,7 +20,9 @@ Imports System.Windows.Forms.Design
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(Wizard), "Wizard.bmp")>
 <Designer(GetType(WizardDesigner))>
-Public Class Wizard : Inherits UserControl
+Public Class Wizard
+
+    Inherits UserControl
 
     Friend _ImageHeader As Image
     Friend _ImageWelcome As Image
@@ -31,7 +33,6 @@ Public Class Wizard : Inherits UserControl
     Friend _SelectedPage As WizardPage
     Friend _Pages As PagesCollection
     Friend _ButtonHelpVisible As Boolean
-
     Friend ReadOnly _OffsetCancel As New Point(84, 36)
     Friend ReadOnly _OffsetNext As New Point(164, 36)
     Friend ReadOnly _OffsetBack As New Point(244, 36)
@@ -396,11 +397,9 @@ Public Class Wizard : Inherits UserControl
     Public Sub [Next]()
 
         If Me.SelectedIndex = Me._Pages.Count - 1 Then
-
             Me.ButtonNext.Enabled = False
 
         Else
-
             Me.OnBeforeSwitchPages(
                 New BeforeSwitchPagesEventArgs(
                 Me.SelectedIndex,
@@ -416,11 +415,9 @@ Public Class Wizard : Inherits UserControl
     Public Sub Back()
 
         If Me.SelectedIndex = 0 Then
-
             Me.ButtonBack.Enabled = False
 
         Else
-
             Me.OnBeforeSwitchPages(
                 New BeforeSwitchPagesEventArgs(
                 Me.SelectedIndex,
@@ -458,7 +455,6 @@ Public Class Wizard : Inherits UserControl
         Me._SelectedPage = page
 
         If Me._SelectedPage IsNot Nothing Then
-
             Me._SelectedPage.Parent = Me
 
             If Not Me.Contains(Me._SelectedPage) Then
@@ -466,17 +462,21 @@ Public Class Wizard : Inherits UserControl
             End If
 
             Select Case Me._SelectedPage.Style
+
                 Case PageStyle.Finish
                     Me.ButtonCancel.Text = My.Resources.ButtonCancelText_PageFinish
                     Me.ButtonCancel.DialogResult = DialogResult.OK
+
                 Case Else
                     Me.ButtonCancel.Text = My.Resources.ButtonCancelText_Standard
                     Me.ButtonCancel.DialogResult = DialogResult.Cancel
+
             End Select
 
             If Me._SelectedPage.Style = PageStyle.Custom And Me._SelectedPage Is Me._Pages(Me._Pages.Count - 1) Then
                 Me.ButtonCancel.Text = My.Resources.ButtonCancelText_PageCustom
                 Me.ButtonCancel.DialogResult = DialogResult.OK
+
             End If
 
             Me._SelectedPage.SetBounds(0, 0, Me.Width, Me.Height - 48)
@@ -490,16 +490,20 @@ Public Class Wizard : Inherits UserControl
 
         If Me.SelectedIndex < Me._Pages.Count - 1 Then
             Me.ButtonNext.Enabled = True
+
         Else
             If Not Me.DesignMode Then
             End If
             Me.ButtonNext.Enabled = False
+
         End If
 
         If Me._SelectedPage IsNot Nothing Then
             Me._SelectedPage.Invalidate()
+
         Else
             Me.Invalidate()
+
         End If
 
     End Sub
@@ -507,7 +511,6 @@ Public Class Wizard : Inherits UserControl
     Private Sub FocusFirstTabIndex(container As Control)
 
         Dim control As Control = Nothing
-
         For Each control2 As Control In container.Controls
 
             If control2.CanFocus AndAlso (control Is Nothing OrElse control2.TabIndex < control.TabIndex) Then
@@ -518,8 +521,10 @@ Public Class Wizard : Inherits UserControl
 
         If control IsNot Nothing Then
             Dim unused = control.Focus()
+
         Else
             Dim unused1 = container.Focus()
+
         End If
 
     End Sub
@@ -531,6 +536,7 @@ Public Class Wizard : Inherits UserControl
         If Not e.Cancel Then
             Me.ActivatePage(e.NewIndex)
             Me.OnAfterSwitchPages(e)
+
         End If
 
     End Sub
@@ -547,8 +553,10 @@ Public Class Wizard : Inherits UserControl
 
         If e.Cancel Then
             Me.ParentForm.DialogResult = DialogResult.None
+
         Else
             Me.ParentForm.Close()
+
         End If
 
     End Sub
@@ -569,7 +577,6 @@ Public Class Wizard : Inherits UserControl
     Protected Overrides Sub OnLoad(e As EventArgs)
 
         MyBase.OnLoad(e)
-
         If Me._Pages.Count > 0 Then
             Me.ActivatePage(0)
         End If
@@ -579,16 +586,14 @@ Public Class Wizard : Inherits UserControl
     Protected Overrides Sub OnResize(e As EventArgs)
 
         MyBase.OnResize(e)
-
         If Me._SelectedPage IsNot Nothing Then
             Me._SelectedPage.SetBounds(0, 0, Me.Width, Me.Height - 48)
-        End If
 
+        End If
         Me.ButtonHelp.Location = New Point(Me.ButtonHelp.Location.X, Me.Height - Me._OffsetBack.Y)
         Me.ButtonBack.Location = New Point(Me.Width - Me._OffsetBack.X, Me.Height - Me._OffsetBack.Y)
         Me.ButtonNext.Location = New Point(Me.Width - Me._OffsetNext.X, Me.Height - Me._OffsetNext.Y)
         Me.ButtonCancel.Location = New Point(Me.Width - Me._OffsetCancel.X, Me.Height - Me._OffsetCancel.Y)
-
         MyBase.Refresh()
 
     End Sub
@@ -596,11 +601,9 @@ Public Class Wizard : Inherits UserControl
     Protected Overrides Sub OnPaint(e As PaintEventArgs)
 
         MyBase.OnPaint(e)
-
         Dim clientRectangle = MyBase.ClientRectangle
         clientRectangle.Y = Me.Height - 48
         clientRectangle.Height = 48
-
         ControlPaint.DrawBorder3D(
             e.Graphics,
             clientRectangle,
@@ -612,13 +615,11 @@ Public Class Wizard : Inherits UserControl
     Protected Overrides Sub OnControlAdded(e As ControlEventArgs)
 
         If Not (TypeOf e.Control Is WizardPage) AndAlso e.Control IsNot Me.ButtonCancel AndAlso e.Control IsNot Me.ButtonNext AndAlso e.Control IsNot Me.ButtonBack Then
-
             If Me._SelectedPage IsNot Nothing Then
                 Me._SelectedPage.Controls.Add(e.Control)
             End If
 
         Else
-
             MyBase.OnControlAdded(e)
 
         End If
@@ -650,11 +651,9 @@ Public Class Wizard : Inherits UserControl
         ButtonCancel.Click
 
         If Me.ButtonCancel.DialogResult = DialogResult.Cancel Then
-
             Me.OnCancel(New CancelEventArgs())
 
         ElseIf Me.ButtonCancel.DialogResult = DialogResult.OK Then
-
             Me.OnFinish(EventArgs.Empty)
 
         End If

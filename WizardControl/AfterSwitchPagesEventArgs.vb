@@ -9,7 +9,9 @@ Imports System
 ''' <summary>
 ''' Enthält die Indexwerte der Seiten nachdem die Seiten gewechselt wurden.
 ''' </summary>
-Public Class AfterSwitchPagesEventArgs : Inherits EventArgs
+Public Class AfterSwitchPagesEventArgs
+
+    Inherits EventArgs
 
     Protected _NewIndex As Integer
     Private ReadOnly _OldIndex As Integer

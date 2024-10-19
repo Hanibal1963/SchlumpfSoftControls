@@ -10,7 +10,9 @@ Imports System.ComponentModel
 ''' Definiert die Abschlußseite
 ''' </summary>
 <ToolboxItem(False)>
-Public Class PageFinish : Inherits WizardPage
+Public Class PageFinish
+
+    Inherits WizardPage
 
     Private _Style As PageStyle = PageStyle.Finish
 

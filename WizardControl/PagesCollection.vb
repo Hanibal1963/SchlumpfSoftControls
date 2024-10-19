@@ -9,7 +9,9 @@ Imports System.Collections
 ''' <summary>
 ''' Definiert die Auflistung der Seiten des Assistenten
 ''' </summary>
-Public Class PagesCollection : Inherits CollectionBase
+Public Class PagesCollection
+
+    Inherits CollectionBase
 
     Private ReadOnly _Owner As Wizard = Nothing
 
@@ -73,11 +75,19 @@ Public Class PagesCollection : Inherits CollectionBase
 
     End Sub
 
+    <System.Diagnostics.CodeAnalysis.SuppressMessage(
+        "Style",
+        "IDE0045:In bedingten Ausdruck konvertieren",
+        Justification:="<Ausstehend>")>
     Protected Overrides Sub OnRemoveComplete(Index As Integer, Value As Object)
 
         MyBase.OnRemoveComplete(Index, Value)
         If Me._Owner.SelectedIndex = Index Then
-            Me._Owner.SelectedIndex = If(Index < Me.InnerList.Count, Index, Me.InnerList.Count - 1)
+            If Index < Me.InnerList.Count Then
+                Me._Owner.SelectedIndex = Index
+            Else
+                Me._Owner.SelectedIndex = Me.InnerList.Count - 1
+            End If
         End If
 
     End Sub

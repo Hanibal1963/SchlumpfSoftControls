@@ -10,7 +10,9 @@ Imports System.ComponentModel
 ''' Definiert eine Standardseite
 ''' </summary>
 <ToolboxItem(False)>
-Public Class PageStandard : Inherits WizardPage
+Public Class PageStandard
+
+    Inherits WizardPage
 
     Private _Style As PageStyle = PageStyle.Standard
 

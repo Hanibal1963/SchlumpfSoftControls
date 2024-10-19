@@ -74,6 +74,12 @@ des übegeordneten Fensters.
 
 ## Versionsverlauf
 
+**Version 2.2024.10.19**
+
+Datum: 19.10.2024
+
+- gringfügige interne Codeänderungen
+
 **Version 2.2024.10.12**
 
 Datum: 12.10.2024
@@ -84,7 +90,7 @@ Datum: 12.10.2024
 
 **Version 2.2024.22.08**
 
-Datum 22.08.2024
+Datum: 22.08.2024
 
 - Fehlerbereinigung
 

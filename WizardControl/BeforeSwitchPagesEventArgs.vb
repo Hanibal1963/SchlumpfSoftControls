@@ -7,7 +7,9 @@
 ''' <summary>
 ''' Enthält die Indexwerte der Seiten bevor die Seiten gewechselt werden.
 ''' </summary>
-Public Class BeforeSwitchPagesEventArgs : Inherits AfterSwitchPagesEventArgs
+Public Class BeforeSwitchPagesEventArgs
+
+    Inherits AfterSwitchPagesEventArgs
 
     Private _Cancel As Boolean = False
 
