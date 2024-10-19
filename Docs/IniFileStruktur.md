@@ -1,8 +1,8 @@
 # Struktur einer INI-Datei
 
-## Abschnitte (Sections):
+**Abschnitte (Sections):**
 
-   -	Abschnitte werden durch eckige Klammern [] gekennzeichnet.
+   -	Abschnitte werden durch eckige Klammern <font color="red">[  ]</font> gekennzeichnet.
    -	Sie dienen dazu, verwandte Einstellungen zu gruppieren.
    
    Beispiel:
@@ -10,8 +10,9 @@
 ```ini
 [Datenbank]
 ```
+---
 
-## Schlüssel-Wert-Paare (Key-Value Pairs):
+**Schlüssel-Wert-Paare (Key-Value Pairs):**
 
    -	Innerhalb eines Abschnitts werden Einstellungen als Schlüssel-Wert-Paare definiert.
    -	Der Schlüssel und der Wert werden durch ein Gleichheitszeichen = getrennt.
@@ -22,10 +23,11 @@
 Benutzername=admin
 Passwort=geheim
 ```
+ ---
 
-## Kommentare:
+**Kommentare:**
 
-   - Kommentare beginnen mit einem Semikolon ; oder einem Hashtag #.
+   - Kommentare beginnen mit einem Semikolon <font color="red">;</font> oder einem Hashtag <font color="red">#</font>.
    - Sie werden ignoriert und dienen nur zur Dokumentation.
    
    Beispiel:
@@ -34,17 +36,20 @@ Passwort=geheim
 ; Dies ist ein Kommentar
 # Dies ist auch ein Kommentar
 ```
+---
 
-## Beispiel einer vollständigen INI-Datei:
+**Beispiel einer vollständigen INI-Datei:**
 
 ```ini
 ; Dies ist eine Beispiel-INI-Datei
 
 [Allgemein]
+; Allgemeine Einstellungen
 AppName=MeineApp
 Version=1.0.0
 
 [Datenbank]
+; Einstellungen zur Datenbank
 Server=localhost
 Port=3306
 Benutzername=admin
@@ -56,35 +61,44 @@ LogDatei=logs/app.log
 ```
 ---
 
-## Erklärung des Beispiels:
+**Erklärung des Beispiels:**
 
-### Kommentare: 
+:memo: **Kommentare:** 
 
-> Die ersten beiden Zeilen sind Kommentare, die ignoriert werden.
+> &rarr; Die ersten beiden Zeilen sind Kommentare, die ignoriert werden.
 
-### Abschnitt "Allgemein":
+:memo: **Abschnitt "Allgemein":**
 
->   -	AppName=MeineApp: Definiert den Namen der Anwendung.
->   -	Version=1.0.0: Gibt die Version der Anwendung an.
+>   &rarr;	**AppName=MeineApp**: Definiert den Namen der Anwendung.
+>
+>   &rarr;	**Version=1.0.0**: Gibt die Version der Anwendung an.
 
-###	Abschnitt "Datenbank":
+:memo: **Abschnitt "Datenbank":**
 
->   -	Server=localhost: Gibt den Datenbankserver an.
->   -	Port=3306: Gibt den Port an, auf dem die Datenbank läuft.
->   -	Benutzername=admin: Der Benutzername für die Datenbank.
->   -	Passwort=geheim: Das Passwort für die Datenbank.
+>   &rarr;	**Server=localhost**: Gibt den Datenbankserver an.
+>
+>   &rarr;	**Port=3306**: Gibt den Port an, auf dem die Datenbank läuft.
+>
+>   &rarr;	**Benutzername=admin**: Der Benutzername für die Datenbank.
+>
+>   &rarr;	**Passwort=geheim**: Das Passwort für die Datenbank.
 
-###	Abschnitt "Logging":
+:memo:	**Abschnitt "Logging":**
 
->   -	LogLevel=DEBUG: Definiert das Log-Level.
->   -	LogDatei=logs/app.log: Gibt den Pfad zur Log-Datei an.
+>   &rarr;	**LogLevel=DEBUG**: Definiert das Log-Level.
+>
+>   &rarr;	**LogDatei=logs/app.log**: Gibt den Pfad zur Log-Datei an.
 
 ---
 
-## Wichtige Hinweise:
+:memo: **Wichtige Hinweise:**
 
->   -	Leerzeichen: Leerzeichen um das Gleichheitszeichen werden ignoriert.
->   -	Groß-/Kleinschreibung: In der Regel sind Schlüssel und Abschnittsnamen nicht case-sensitive, aber das kann je nach Implementierung variieren.
->   -	Mehrere Abschnitte: Eine INI-Datei kann mehrere Abschnitte enthalten, und jeder Abschnitt kann mehrere Schlüssel-Wert-Paare haben.
+>   &rarr;	**Leerzeichen**: Leerzeichen um das Gleichheitszeichen werden ignoriert.
 >
->INI-Dateien sind aufgrund ihrer Einfachheit und Lesbarkeit weit verbreitet, insbesondere für kleinere Anwendungen und Konfigurationsdateien, die von Menschen bearbeitet werden sollen.
+>   &rarr;	**Groß-/Kleinschreibung**: In der Regel sind Schlüssel und Abschnittsnamen nicht case-sensitive, aber das kann je nach Implementierung variieren.
+>
+>   &rarr;	**Mehrere Abschnitte**: Eine INI-Datei kann mehrere Abschnitte enthalten, und jeder Abschnitt kann mehrere Schlüssel-Wert-Paare haben.
+
+---
+
+:bulb: INI-Dateien sind aufgrund ihrer Einfachheit und Lesbarkeit weit verbreitet, insbesondere für kleinere Anwendungen und Konfigurationsdateien, die von Menschen bearbeitet werden sollen.
