@@ -17,7 +17,9 @@ Imports System.IO
 <Description("Steuerelement zum Verwalten von INI - Dateien")>
 <ToolboxBitmap(GetType(IniFile), "IniFile.bmp")>
 <ToolboxItem(True)>
-Public Class IniFile : Inherits Component
+Public Class IniFile
+
+    Inherits Component
 
 #Region "Definition der Variablen"
 
