@@ -392,12 +392,6 @@ Public Class SevSegMultiDigit : Inherits Control
         e.Graphics.Clear(Me._backgroundColor)
     End Sub
 
-    Private Sub InitializeComponent()
-        Me.SuspendLayout()
-        Me.ResumeLayout(False)
-
-    End Sub
-
 #End Region
 
 End Class

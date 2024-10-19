@@ -257,7 +257,8 @@ Friend Class FormTemplate
 
     Private Sub InitializeComponent()
 
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormTemplate))
+        Dim resources As New System.ComponentModel.ComponentResourceManager(
+            GetType(FormTemplate))
         Me.SuspendLayout()
         '
         'FormTemplate

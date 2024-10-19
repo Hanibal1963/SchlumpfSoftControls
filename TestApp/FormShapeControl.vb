@@ -4,16 +4,13 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System.Globalization
 Imports System.Threading
 Imports SchlumpfSoft.Controls.ShapeControl
 
-
 Public Class FormShapeControl
 
-
-    Private _ShapeModusItems() As String = {
+    Private ReadOnly _ShapeModusItems() As String = {
         My.Resources.Shape_ModusItem1,
         My.Resources.Shape_ModusItem2,
         My.Resources.Shape_ModusItem3,
@@ -21,10 +18,10 @@ Public Class FormShapeControl
         My.Resources.Shape_ModusItem5,
         My.Resources.Shape_ModusItem6,
         My.Resources.Shape_ModusItem7}
-    Private _LineModusItems() As String = {
+
+    Private ReadOnly _LineModusItems() As String = {
         My.Resources.Shape_LineModusItem1,
         My.Resources.Shape_LineModusItem2}
-
 
     Public Sub New()
 
@@ -47,7 +44,6 @@ Public Class FormShapeControl
         Me.Button_FillColor.Enabled = False
 
     End Sub
-
 
     Private Sub Button_Click(
                 sender As Object,
@@ -81,7 +77,6 @@ Public Class FormShapeControl
 
     End Sub
 
-
     Private Sub NumericUpDown_LineWidth_ValueChanged(
                 sender As Object,
                 e As EventArgs) Handles _
@@ -92,7 +87,6 @@ Public Class FormShapeControl
         Me.Shape1.LineWidth = selvalue
 
     End Sub
-
 
     Private Sub ComboBox_LineModus_SelectedIndexChanged(
                 sender As Object,
@@ -105,7 +99,6 @@ Public Class FormShapeControl
         Me.Shape1.DiagonalLineModus = CType(selindex, DiagonalLineModes)
 
     End Sub
-
 
     Private Sub ComboBox_ShapeModus_SelectedIndexChanged(
                 sender As Object,
@@ -143,6 +136,5 @@ Public Class FormShapeControl
         Me.Shape1.ShapeModus = CType(selindex, ShapeModes)
 
     End Sub
-
 
 End Class
