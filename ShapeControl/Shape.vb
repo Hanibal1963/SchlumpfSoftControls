@@ -15,11 +15,13 @@ Imports System.Windows.Forms
 <Description("Steuerelement zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(Shape), "Shape.bmp")>
-Public Class Shape : Inherits Control
+Public Class Shape
+
+    Inherits Control
 
 #Region "Definition der Variablen"
 
-    Private components As IContainer
+    Private ReadOnly components As IContainer
     Private _ShapeModus As ShapeModes
     Private _LineWidth As Single
     Private _LineColor As Color
@@ -105,7 +107,8 @@ Public Class Shape : Inherits Control
     End Property
 
     ''' <summary>
-    ''' Legt fest ob eine diagonale Linie von links oben nach rechts unten oder umgekehrt verläuft oder gibt dieses zurück.
+    ''' Legt fest ob eine diagonale Linie von links oben nach rechts unten oder umgekehrt<br/>
+    ''' verläuft oder gibt dieses zurück.
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
