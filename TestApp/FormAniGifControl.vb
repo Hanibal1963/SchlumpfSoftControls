@@ -14,7 +14,7 @@ Public Class FormAniGifControl
 
 
     Private _Ani As Integer = 0
-    Private _ComboBox_Ansicht_Items() As String = {
+    Private ReadOnly _ComboBox_Ansicht_Items() As String = {
         My.Resources.AnimationComboBoxItem1,
         My.Resources.AnimationComboBoxItem2,
         My.Resources.AnimationComboBoxItem3,

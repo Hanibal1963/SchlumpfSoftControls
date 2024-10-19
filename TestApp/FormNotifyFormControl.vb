@@ -4,56 +4,52 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System.Globalization
 Imports System.Threading
 Imports SchlumpfSoft.Controls.NotifyFormControl
 
-
 Public Class FormNotifyFormControl
 
-
-    Private _ComboBox_Design_Items() As String = {
+    Private ReadOnly _ComboBox_Design_Items() As String = {
         My.Resources.NotifyForm_ComboBoxDesignItem1,
         My.Resources.NotifyForm_ComboBoxDesignItem2,
         My.Resources.NotifyForm_ComboBoxDesignItem3}
-    Private _ComboBox_Styles_Items() As String = {
+
+    Private ReadOnly _ComboBox_Styles_Items() As String = {
         My.Resources.NotifyForm_ComboBoxStylesItem1,
         My.Resources.NotifyForm_ComboBoxStylesItem2,
         My.Resources.NotifyForm_ComboBoxStylesItem3,
         My.Resources.NotifyForm_ComboBoxStylesItem4}
 
-
     Public Sub New()
 
-        'Zuletzt verwendete Sprache einstellen
+        ' Zuletzt verwendete Sprache einstellen
         Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.LangCode)
         Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.LangCode)
 
-        'Dieser Aufruf ist für den Designer erforderlich.
+        ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
 
-        'Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
 
-        'Elemente der Combobox für das Fensterdesign
+        ' Elemente der Combobox für das Fensterdesign
         Me.ComboBox_Design.Items.AddRange(Me._ComboBox_Design_Items)
         Me.ComboBox_Design.SelectedIndex = 0
 
-        'Elemente für die Combobox für den Fensterstyle
+        ' Elemente für die Combobox für den Fensterstyle
         Me.ComboBox_Style.Items.AddRange(Me._ComboBox_Styles_Items)
         Me.ComboBox_Style.SelectedIndex = 0
 
-        'Startwert für Anzeigezeit
+        ' Startwert für Anzeigezeit
         Me.NumericUpDown_ShowTime.Value = CDec(Me.NotifyForm1.ShowTime / 1000)
 
-        'Startwert für Titelzeile
+        ' Startwert für Titelzeile
         Me.TextBox_Title.Text = Me.NotifyForm1.Title
 
-        'Startwert für Meldungstext
+        ' Startwert für Meldungstext
         Me.TextBox_Message.Text = Me.NotifyForm1.Message
 
     End Sub
-
 
     Private Sub ComboBox_SelectedindexChanged(sender As Object, e As EventArgs) Handles _
                 ComboBox_Style.SelectedIndexChanged,
@@ -111,7 +107,6 @@ Public Class FormNotifyFormControl
 
     End Sub
 
-
     Private Sub TextBox_TextChanged(sender As Object, e As EventArgs) Handles _
                 TextBox_Title.TextChanged,
                 TextBox_Message.TextChanged
@@ -134,7 +129,6 @@ Public Class FormNotifyFormControl
 
     End Sub
 
-
     Private Sub NumericUpDown_ShowTime_ValueChanged_1(sender As Object, e As EventArgs) Handles _
                 NumericUpDown_ShowTime.ValueChanged
 
@@ -144,13 +138,11 @@ Public Class FormNotifyFormControl
 
     End Sub
 
-
     Private Sub Button_Show_Click(sender As Object, e As EventArgs) Handles _
                 Button_Show.Click
 
         Me.NotifyForm1.Show()
 
     End Sub
-
 
 End Class
