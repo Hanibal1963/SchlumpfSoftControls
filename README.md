@@ -13,6 +13,10 @@ Zurzeit sind folgende Steuerelemente vorhanden:
 - [TransparentLabelControl](https://github.com/Hanibal1963/SchlumpfSoftControls/blob/main/Docs/TransparentLabelControl.md) - Ein Control zum Anzeigen eines Textes mit durchscheinendem Hintergrund.([Der ursprüngliche Code wurde ins Archiv verschoben](https://github.com/Hanibal1963/TransparenLabelControl))
 - **NEU** [SevenSegmentControl](https://github.com/Hanibal1963/SchlumpfSoftControls/blob/main/Docs/SevenSegmentControl.md) - Ein Control zum Anzeigen von Zeichen als 7-Segmentanzeige (Entwurf) 
 
+>**Wichtiger Hinweis**
+>
+>Die Archive werden demnächst entfernt.
+
 ---
 
 ## geplante Änderungen

@@ -66,9 +66,9 @@ Die Eigenschaft **"GifSizeMode"** kann folgende Werte annehmen:
 
 ## Versionsverlauf
 
-**version 2.2024.10.19**
+**version 2.2024.10.24**
 
-Datum: 19.10.2024
+Datum: 24.10.2024
 
 - neue Version erstellt
 

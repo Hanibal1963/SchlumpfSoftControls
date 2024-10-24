@@ -37,9 +37,9 @@ bzw. es Probleme mit der Darstellung gibt, wurden diese von mir ausgeblendet.
 
 ## Versionsverlauf
 
-**Version 2.2024.10.19**
+**Version 2.2024.10.24**
 
-Datum: 19.10.2024
+Datum: 24.10.2024
 
 - geringfügige interne Codeänderungen
 
