@@ -1,6 +1,6 @@
 # IniFile Control
 
-Eine Komponente zum Verwalten von INI - Dateien.
+Ein Set von Komponenten zum Verwalten von INI - Dateien.
 
 ---
 
