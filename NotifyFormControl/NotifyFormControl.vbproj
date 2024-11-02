@@ -85,6 +85,7 @@
     <DocumentationFile>NotifyFormControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="NotifyFormControl.md" />
     <None Include="ProvideToolboxControlAttribute.cd" />
     <None Include="NotifyForm.cd" />
     <None Include="FormTemplate.cd" />

@@ -16,7 +16,7 @@ Inzwischen habe ich weitere Komponenten hinzugefügt welche die Benutzung der
 Komponente IniFile weiter vereinfachen. 
 Es sind nur noch wenige Zeilen Code erforderlich um die volle Funktionalität zu erreichen.
 
-[Beschreibung der Struktur einer INI - Datei](https://github.com/Hanibal1963/SchlumpfSoftControls/blob/main/Docs/IniFileStruktur.md)
+[Beschreibung der Struktur einer INI - Datei](https://github.com/Hanibal1963/SchlumpfSoftControls/blob/main/IniFileControl/IniFileStruktur.md)
 
 ---
 

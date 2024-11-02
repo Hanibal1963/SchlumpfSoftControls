@@ -96,6 +96,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="AniGif.cd" />
+    <None Include="AniGifControl.md" />
     <None Include="ProvideToolboxControlAttribute.cd" />
     <None Include="SizeMode.cd" />
   </ItemGroup>

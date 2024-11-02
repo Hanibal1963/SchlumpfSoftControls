@@ -86,6 +86,8 @@
     <DocumentationFile>IniFileControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="IniFileControl.md" />
+    <None Include="IniFileStruktur.md" />
     <None Include="ProvideToolboxControlAttribute.cd" />
     <None Include="IniFileRenameItemDialog.cd" />
     <None Include="IniFileListEditEventArgs.cd" />

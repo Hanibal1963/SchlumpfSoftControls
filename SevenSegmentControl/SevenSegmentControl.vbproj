@@ -86,6 +86,7 @@
   <ItemGroup>
     <None Include="EnumCharacterPattern.cd" />
     <None Include="Helpers.cd" />
+    <None Include="SevenSegmentControl.md" />
     <None Include="SevSegMultiDigit.cd" />
     <None Include="SevSegSingleDigit.cd" />
     <None Include="ProvideToolboxControlAttribute.cd" />

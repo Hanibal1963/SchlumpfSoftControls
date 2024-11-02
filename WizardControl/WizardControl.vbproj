@@ -165,6 +165,7 @@
   <ItemGroup>
     <None Include="AfterSwitchPagesEventArgs.cd" />
     <None Include="BeforeSwitchPagesEventArgs.cd" />
+    <None Include="WizardControl.md" />
     <None Include="WizardPage.cd" />
     <None Include="WizardDesigner.cd" />
     <None Include="Wizard.cd" />

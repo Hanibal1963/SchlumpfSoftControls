@@ -88,6 +88,7 @@
     <None Include="EnumDefShapeModes.cd" />
     <None Include="EnumDefDiagonalLineModes.cd" />
     <None Include="ProvideToolboxControlAttribute.cd" />
+    <None Include="ShapeControl.md" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnumDefDiagonalLineModes.vb" />
