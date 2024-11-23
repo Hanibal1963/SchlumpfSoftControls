@@ -116,7 +116,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\ExplorerTreeView.bmp" />
+    <EmbeddedResource Include="Resources\ExplorerTreeView.bmp" />
     <Content Include="Resources\ImgComputer.png" />
     <Content Include="Resources\ImgDesktopFolder.png" />
     <Content Include="Resources\ImgDocumentsFolder.png" />
