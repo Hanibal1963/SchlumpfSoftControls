@@ -22,40 +22,40 @@ Partial Class FormMain
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
-        Me.ToolStripMenuItemSprache = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItemDeutsch = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItemEnglisch = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.ButtonAniGif = New System.Windows.Forms.Button()
-        Me.ButtonDriveWatcher = New System.Windows.Forms.Button()
-        Me.ButtonIniFilecontrol = New System.Windows.Forms.Button()
-        Me.ButtonNotifyFormControl = New System.Windows.Forms.Button()
-        Me.ButtonSevenSegmentControl = New System.Windows.Forms.Button()
-        Me.ButtonShapeControl = New System.Windows.Forms.Button()
-        Me.ButtonTransparentLabelControl = New System.Windows.Forms.Button()
-        Me.ButtonWizardControl = New System.Windows.Forms.Button()
-        Me.ButtonExplorerTreeView = New System.Windows.Forms.Button()
-        Me.MenuStrip = New System.Windows.Forms.MenuStrip()
+    Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
+    Me.ToolStripMenuItemSprache = New System.Windows.Forms.ToolStripMenuItem()
+    Me.ToolStripMenuItemDeutsch = New System.Windows.Forms.ToolStripMenuItem()
+    Me.ToolStripMenuItemEnglisch = New System.Windows.Forms.ToolStripMenuItem()
+    Me.FlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+    Me.ButtonAniGif = New System.Windows.Forms.Button()
+    Me.ButtonDriveWatcher = New System.Windows.Forms.Button()
+    Me.ButtonIniFilecontrol = New System.Windows.Forms.Button()
+    Me.ButtonNotifyFormControl = New System.Windows.Forms.Button()
+    Me.ButtonSevenSegmentControl = New System.Windows.Forms.Button()
+    Me.ButtonShapeControl = New System.Windows.Forms.Button()
+    Me.ButtonTransparentLabelControl = New System.Windows.Forms.Button()
+    Me.ButtonWizardControl = New System.Windows.Forms.Button()
+    Me.ButtonExplorerTreeView = New System.Windows.Forms.Button()
+    Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FlowLayoutPanel.SuspendLayout()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStripMenuItemSprache
         '
+        resources.ApplyResources(Me.ToolStripMenuItemSprache, "ToolStripMenuItemSprache")
         Me.ToolStripMenuItemSprache.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemDeutsch, Me.ToolStripMenuItemEnglisch})
         Me.ToolStripMenuItemSprache.Name = "ToolStripMenuItemSprache"
-        resources.ApplyResources(Me.ToolStripMenuItemSprache, "ToolStripMenuItemSprache")
         '
         'ToolStripMenuItemDeutsch
         '
-        Me.ToolStripMenuItemDeutsch.Name = "ToolStripMenuItemDeutsch"
         resources.ApplyResources(Me.ToolStripMenuItemDeutsch, "ToolStripMenuItemDeutsch")
+        Me.ToolStripMenuItemDeutsch.Name = "ToolStripMenuItemDeutsch"
         '
         'ToolStripMenuItemEnglisch
         '
-        Me.ToolStripMenuItemEnglisch.Name = "ToolStripMenuItemEnglisch"
         resources.ApplyResources(Me.ToolStripMenuItemEnglisch, "ToolStripMenuItemEnglisch")
+        Me.ToolStripMenuItemEnglisch.Name = "ToolStripMenuItemEnglisch"
         '
         'FlowLayoutPanel
         '
@@ -127,8 +127,8 @@ Partial Class FormMain
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemSprache})
         resources.ApplyResources(Me.MenuStrip, "MenuStrip")
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemSprache})
         Me.MenuStrip.Name = "MenuStrip"
         '
         'FormMain
