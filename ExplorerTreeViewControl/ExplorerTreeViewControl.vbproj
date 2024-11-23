@@ -144,20 +144,23 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\ImgComputer.png" />
-    <Content Include="Resources\ImgDesktopFolder.png" />
-    <Content Include="Resources\ImgDocumentsFolder.png" />
-    <Content Include="Resources\ImgDownloadsFolder.png" />
-    <Content Include="Resources\ImgFolder.png" />
-    <Content Include="Resources\ImgHardDrive.png" />
-    <Content Include="Resources\ImgMusicFolder.png" />
-    <Content Include="Resources\ImgNetwork.png" />
-    <Content Include="Resources\ImgNetworkDrive.png" />
-    <Content Include="Resources\ImgNetworkFolder.png" />
-    <Content Include="Resources\ImgOpticalDrive.png" />
-    <Content Include="Resources\ImgPicturesFolder.png" />
-    <Content Include="Resources\ImgSystemDrive.png" />
-    <Content Include="Resources\ImgVideosFolder.png" />
+    <EmbeddedResource Include="Resources\ImgComputer.png" />
+    <EmbeddedResource Include="Resources\ImgDesktopFolder.png" />
+    <EmbeddedResource Include="Resources\ImgDocumentsFolder.png" />
+    <EmbeddedResource Include="Resources\ImgDownloadsFolder.png" />
+    <EmbeddedResource Include="Resources\ImgFolder.png" />
+    <EmbeddedResource Include="Resources\ImgHardDrive.png" />
+    <EmbeddedResource Include="Resources\ImgMusicFolder.png" />
+    <EmbeddedResource Include="Resources\ImgNetwork.png" />
+    <EmbeddedResource Include="Resources\ImgNetworkDrive.png" />
+    <EmbeddedResource Include="Resources\ImgNetworkFolder.png" />
+    <EmbeddedResource Include="Resources\ImgOpticalDrive.png" />
+    <EmbeddedResource Include="Resources\ImgPicturesFolder.png" />
+    <EmbeddedResource Include="Resources\ImgSystemDrive.png" />
+    <EmbeddedResource Include="Resources\ImgVideosFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ExplorerTreeView.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
