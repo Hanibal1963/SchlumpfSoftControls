@@ -1,4 +1,4 @@
-﻿Imports System.Resources
+Imports System.Resources
 Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
@@ -31,6 +31,8 @@ Imports System.Runtime.InteropServices
 ' Sie können alle Werte angeben oder Standardwerte für die Build- und Revisionsnummern verwenden,
 ' indem Sie "*" wie unten gezeigt eingeben:
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.2024.11.23")>
+<Assembly: AssemblyFileVersion("1.2024.11.23")>
 <Assembly: NeutralResourcesLanguage("de")>
+
+<assembly: AssemblyInformationalVersion("0.2024.11.23")>
