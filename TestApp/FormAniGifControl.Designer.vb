@@ -41,12 +41,12 @@ Partial Class FormAniGifControl
         '
         'AniGif1
         '
+        resources.ApplyResources(Me.AniGif1, "AniGif1")
         Me.AniGif1.AutoPlay = False
         Me.AniGif1.CustomDisplaySpeed = False
         Me.AniGif1.FramesPerSecond = New Decimal(New Integer() {10, 0, 0, 0})
         Me.AniGif1.Gif = CType(resources.GetObject("AniGif1.Gif"), System.Drawing.Bitmap)
         Me.AniGif1.GifSizeMode = SchlumpfSoft.Controls.AniGifControl.SizeMode.Normal
-        resources.ApplyResources(Me.AniGif1, "AniGif1")
         Me.AniGif1.Name = "AniGif1"
         Me.AniGif1.ZoomFactor = New Decimal(New Integer() {50, 0, 0, 0})
         '
@@ -111,8 +111,8 @@ Partial Class FormAniGifControl
         '
         'ComboBox_Ansicht
         '
-        Me.ComboBox_Ansicht.FormattingEnabled = True
         resources.ApplyResources(Me.ComboBox_Ansicht, "ComboBox_Ansicht")
+        Me.ComboBox_Ansicht.FormattingEnabled = True
         Me.ComboBox_Ansicht.Name = "ComboBox_Ansicht"
         '
         'FormAniGifControl

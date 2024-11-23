@@ -4,10 +4,8 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System.Globalization
 Imports System.Threading
-
 
 Public Class FormMain
 
@@ -17,7 +15,6 @@ Public Class FormMain
         'Zuletzt verwendete Sprache einstellen
         Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.LangCode)
         Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.LangCode)
-
 
         ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
@@ -35,7 +32,8 @@ Public Class FormMain
         ButtonIniFilecontrol.Click,
         ButtonWizardControl.Click,
         ButtonTransparentLabelControl.Click,
-        ButtonShapeControl.Click
+        ButtonShapeControl.Click,
+        ButtonExplorerTreeView.Click
 
         Dim result As DialogResult = DialogResult.None
 
@@ -65,6 +63,9 @@ Public Class FormMain
 
             ElseIf sender Is Me.ButtonWizardControl Then
                 result = My.Forms.FormWizardControl.ShowDialog(Me)
+
+            ElseIf sender Is Me.ButtonExplorerTreeView Then
+                result = My.Forms.FormExplorerTreeViewControl.ShowDialog(Me)
 
             End If
 

@@ -1,0 +1,44 @@
+Versionsverlauf
+===============
+
+Version 3.2024.11.23 - Datum: 23.11.2024
+- Anpassung der Versionierung
+- Neues Control: *ExplorerTreeView* hinzugefügt
+
+Version 2.2024.10.24 - Datum: 24.10.2024
+- neue Version erstellt
+
+Version 2.2024.10.12 - Datum: 12.10.2024
+- Beseitigung von Logigfehlern
+- Optimierung des Codes
+- Änderung der Versionsnummerierung
+ 
+Version 2.2024.10.11 - Datum: 11.10.2024
+- Fehlerbereinigung von Logikfehlern in IniFile Control
+
+Version 2.2024.24.09 - Datum: 24.09.2024
+- kleinere Codeoptimierungen
+
+Version 2.2024.22.08 - Datum: 22.08.2024
+- Fehlerbereinigung
+
+Version 2.2024.19.07 - Datum: 19.07.2024
+- Beschreibungstexte in Englisch hinzugefügt. (Google Translate)
+
+Version 2.2024.14.07 - Datum: 14.07.2024
+- Die Auflistungen *FormDesign* und *FormStyle* sowie die Klassenvorlage *FormTemplate* 
+  wurden in eigene Dateien ausgelagert.
+
+Version 2.2024.11.07 - Datum: 11.07.2024
+- Kleinere Änderungen am Code (Achtung! Das Ereignis *NoAnimation* 
+  weist ein geändertes Verhalten auf.)
+
+Version 2.2024.04.07 - Datum: 07.04.2024
+- Wizard Control: Problem mit der Eigenschaft für die Sichtbarkeit des Hilfebuttons korrigiert.
+
+Version 2.2024.04.05 - Datum: 05.04.2024
+- Änderung des Repositorie zur besseren Verwaltung des Quellcodes.
+- Änderung der Versionsnummerierung wegen Prblemen mit VisualStudio Marketplace.
+
+Version 1.2024.3103.00 - Datum: 31.03.2024
+- Erste Release Version

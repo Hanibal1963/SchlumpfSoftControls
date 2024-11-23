@@ -22,24 +22,40 @@ Partial Class FormMain
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
-        Dim ToolStripMenuItemSprache As System.Windows.Forms.ToolStripMenuItem
-        Me.FlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.ButtonAniGif = New System.Windows.Forms.Button()
-        Me.ButtonDriveWatcher = New System.Windows.Forms.Button()
-        Me.ButtonIniFilecontrol = New System.Windows.Forms.Button()
-        Me.ButtonNotifyFormControl = New System.Windows.Forms.Button()
-        Me.ButtonSevenSegmentControl = New System.Windows.Forms.Button()
-        Me.ButtonShapeControl = New System.Windows.Forms.Button()
-        Me.ButtonTransparentLabelControl = New System.Windows.Forms.Button()
-        Me.ButtonWizardControl = New System.Windows.Forms.Button()
-        Me.MenuStrip = New System.Windows.Forms.MenuStrip()
-        Me.ToolStripMenuItemDeutsch = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItemEnglisch = New System.Windows.Forms.ToolStripMenuItem()
-        ToolStripMenuItemSprache = New System.Windows.Forms.ToolStripMenuItem()
+    Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
+    Me.ToolStripMenuItemSprache = New System.Windows.Forms.ToolStripMenuItem()
+    Me.ToolStripMenuItemDeutsch = New System.Windows.Forms.ToolStripMenuItem()
+    Me.ToolStripMenuItemEnglisch = New System.Windows.Forms.ToolStripMenuItem()
+    Me.FlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+    Me.ButtonAniGif = New System.Windows.Forms.Button()
+    Me.ButtonDriveWatcher = New System.Windows.Forms.Button()
+    Me.ButtonIniFilecontrol = New System.Windows.Forms.Button()
+    Me.ButtonNotifyFormControl = New System.Windows.Forms.Button()
+    Me.ButtonSevenSegmentControl = New System.Windows.Forms.Button()
+    Me.ButtonShapeControl = New System.Windows.Forms.Button()
+    Me.ButtonTransparentLabelControl = New System.Windows.Forms.Button()
+    Me.ButtonWizardControl = New System.Windows.Forms.Button()
+    Me.ButtonExplorerTreeView = New System.Windows.Forms.Button()
+    Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FlowLayoutPanel.SuspendLayout()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'ToolStripMenuItemSprache
+        '
+        resources.ApplyResources(Me.ToolStripMenuItemSprache, "ToolStripMenuItemSprache")
+        Me.ToolStripMenuItemSprache.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemDeutsch, Me.ToolStripMenuItemEnglisch})
+        Me.ToolStripMenuItemSprache.Name = "ToolStripMenuItemSprache"
+        '
+        'ToolStripMenuItemDeutsch
+        '
+        resources.ApplyResources(Me.ToolStripMenuItemDeutsch, "ToolStripMenuItemDeutsch")
+        Me.ToolStripMenuItemDeutsch.Name = "ToolStripMenuItemDeutsch"
+        '
+        'ToolStripMenuItemEnglisch
+        '
+        resources.ApplyResources(Me.ToolStripMenuItemEnglisch, "ToolStripMenuItemEnglisch")
+        Me.ToolStripMenuItemEnglisch.Name = "ToolStripMenuItemEnglisch"
         '
         'FlowLayoutPanel
         '
@@ -52,6 +68,7 @@ Partial Class FormMain
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonShapeControl)
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonTransparentLabelControl)
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonWizardControl)
+        Me.FlowLayoutPanel.Controls.Add(Me.ButtonExplorerTreeView)
         Me.FlowLayoutPanel.Name = "FlowLayoutPanel"
         '
         'ButtonAniGif
@@ -102,27 +119,17 @@ Partial Class FormMain
         Me.ButtonWizardControl.Name = "ButtonWizardControl"
         Me.ButtonWizardControl.UseVisualStyleBackColor = True
         '
+        'ButtonExplorerTreeView
+        '
+        resources.ApplyResources(Me.ButtonExplorerTreeView, "ButtonExplorerTreeView")
+        Me.ButtonExplorerTreeView.Name = "ButtonExplorerTreeView"
+        Me.ButtonExplorerTreeView.UseVisualStyleBackColor = True
+        '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {ToolStripMenuItemSprache})
         resources.ApplyResources(Me.MenuStrip, "MenuStrip")
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemSprache})
         Me.MenuStrip.Name = "MenuStrip"
-        '
-        'ToolStripMenuItemSprache
-        '
-        ToolStripMenuItemSprache.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemDeutsch, Me.ToolStripMenuItemEnglisch})
-        ToolStripMenuItemSprache.Name = "ToolStripMenuItemSprache"
-        resources.ApplyResources(ToolStripMenuItemSprache, "ToolStripMenuItemSprache")
-        '
-        'ToolStripMenuItemDeutsch
-        '
-        Me.ToolStripMenuItemDeutsch.Name = "ToolStripMenuItemDeutsch"
-        resources.ApplyResources(Me.ToolStripMenuItemDeutsch, "ToolStripMenuItemDeutsch")
-        '
-        'ToolStripMenuItemEnglisch
-        '
-        Me.ToolStripMenuItemEnglisch.Name = "ToolStripMenuItemEnglisch"
-        resources.ApplyResources(Me.ToolStripMenuItemEnglisch, "ToolStripMenuItemEnglisch")
         '
         'FormMain
         '
@@ -155,4 +162,6 @@ Partial Class FormMain
     Private WithEvents MenuStrip As MenuStrip
     Private WithEvents ToolStripMenuItemDeutsch As ToolStripMenuItem
     Private WithEvents ToolStripMenuItemEnglisch As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemSprache As ToolStripMenuItem
+    Private WithEvents ButtonExplorerTreeView As Button
 End Class

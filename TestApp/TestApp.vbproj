@@ -101,6 +101,12 @@
     <Compile Include="FormDriveWatcherControl.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormExplorerTreeViewControl.Designer.vb">
+      <DependentUpon>FormExplorerTreeViewControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormExplorerTreeViewControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormIniFileControl.Designer.vb">
       <DependentUpon>FormIniFileControl.vb</DependentUpon>
     </Compile>
@@ -175,6 +181,12 @@
     <EmbeddedResource Include="FormDriveWatcherControl.resx">
       <DependentUpon>FormDriveWatcherControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormExplorerTreeViewControl.en-US.resx">
+      <DependentUpon>FormExplorerTreeViewControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExplorerTreeViewControl.resx">
+      <DependentUpon>FormExplorerTreeViewControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormIniFileControl.en-US.resx">
       <DependentUpon>FormIniFileControl.vb</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +260,10 @@
     <ProjectReference Include="..\DriveWatcherControl\DriveWatcherControl.vbproj">
       <Project>{fba9160f-6f7d-4182-982c-5df153309f33}</Project>
       <Name>DriveWatcherControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExplorerTreeViewControl\ExplorerTreeViewControl.vbproj">
+      <Project>{a0356c9d-d869-4066-b744-ac7530d106e2}</Project>
+      <Name>ExplorerTreeViewControl</Name>
     </ProjectReference>
     <ProjectReference Include="..\IniFileControl\IniFileControl.vbproj">
       <Project>{1d25b863-7d2e-4748-aeb5-71af873907a2}</Project>
