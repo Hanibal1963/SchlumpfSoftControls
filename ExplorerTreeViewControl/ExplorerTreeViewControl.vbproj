@@ -70,6 +70,12 @@
     <Compile Include="DirectoryNode.vb" />
     <Compile Include="DriveHelpers.vb" />
     <Compile Include="DriveNode.vb" />
+    <Compile Include="ExplorerTreeView.Designer.vb">
+      <DependentUpon>ExplorerTreeView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ExplorerTreeView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
@@ -91,6 +97,9 @@
     <Compile Include="SpezialFolderNode.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ExplorerTreeView.resx">
+      <DependentUpon>ExplorerTreeView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -99,6 +108,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ExplorerTreeView.cd" />
     <None Include="NodeHelpers.cd" />
     <None Include="ComputerNode.cd" />
     <None Include="DirectoryNode.cd" />
