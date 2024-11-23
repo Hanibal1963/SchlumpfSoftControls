@@ -66,6 +66,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputerNode.vb" />
+    <Compile Include="DirectoryNode.vb" />
+    <Compile Include="DriveHelpers.vb" />
+    <Compile Include="DriveNode.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
@@ -82,7 +86,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NodeHelpers.vb" />
     <Compile Include="ProvideToolboxControlAttribute.vb" />
+    <Compile Include="SpezialFolderNode.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -93,6 +99,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="NodeHelpers.cd" />
+    <None Include="ComputerNode.cd" />
+    <None Include="DirectoryNode.cd" />
+    <None Include="DriveHelpers.cd" />
+    <None Include="DriveNode.cd" />
+    <None Include="SpezialFolderNode.cd" />
     <None Include="ExplorerTreeViewControl.md" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
