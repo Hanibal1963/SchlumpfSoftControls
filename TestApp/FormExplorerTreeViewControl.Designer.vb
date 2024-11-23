@@ -25,8 +25,8 @@ Partial Class FormExplorerTreeViewControl
         Dim SplitContainer1 As System.Windows.Forms.SplitContainer
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormExplorerTreeViewControl))
         Dim SplitContainer2 As System.Windows.Forms.SplitContainer
-        Me.ListView = New System.Windows.Forms.ListView()
         Me.TextBox = New System.Windows.Forms.TextBox()
+        Me.ListView = New System.Windows.Forms.ListView()
         Me.ExplorerTreeView = New SchlumpfSoft.Controls.ExplorerTreeViewControl.ExplorerTreeView()
         SplitContainer1 = New System.Windows.Forms.SplitContainer()
         SplitContainer2 = New System.Windows.Forms.SplitContainer()
@@ -66,6 +66,12 @@ Partial Class FormExplorerTreeViewControl
         '
         SplitContainer2.Panel2.Controls.Add(Me.ListView)
         '
+        'TextBox
+        '
+        Me.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        resources.ApplyResources(Me.TextBox, "TextBox")
+        Me.TextBox.Name = "TextBox"
+        '
         'ListView
         '
         resources.ApplyResources(Me.ListView, "ListView")
@@ -74,12 +80,6 @@ Partial Class FormExplorerTreeViewControl
         Me.ListView.Name = "ListView"
         Me.ListView.UseCompatibleStateImageBehavior = False
         Me.ListView.View = System.Windows.Forms.View.List
-        '
-        'TextBox
-        '
-        Me.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        resources.ApplyResources(Me.TextBox, "TextBox")
-        Me.TextBox.Name = "TextBox"
         '
         'ExplorerTreeView
         '
@@ -110,7 +110,7 @@ Partial Class FormExplorerTreeViewControl
 
     End Sub
 
-    Private WithEvents ExplorerTreeView As SchlumpfSoft.Controls.ExplorerTreeViewControl.ExplorerTreeView
     Private WithEvents TextBox As TextBox
-    Private WithEvents ListView As ListView
+  Private WithEvents ListView As ListView
+    Private WithEvents ExplorerTreeView As SchlumpfSoft.Controls.ExplorerTreeViewControl.ExplorerTreeView
 End Class

@@ -33,6 +33,6 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyVersion("1.2024.11.23")>
 <Assembly: AssemblyFileVersion("1.2024.11.23")>
-<Assembly: NeutralResourcesLanguage("de")>
+<Assembly: NeutralResourcesLanguage("de-DE")>
 
 <assembly: AssemblyInformationalVersion("0.2024.11.23")>

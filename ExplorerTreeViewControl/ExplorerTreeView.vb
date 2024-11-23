@@ -4,7 +4,10 @@
 ' ****************************************************************************************************************
 '
 
+Imports System
 Imports System.ComponentModel
+Imports System.Drawing
+Imports System.Windows.Forms
 
 ''' <summary>
 ''' Stellt eine benutzerdefinierte Steuerung bereit, die ein TreeView-Steuerelement enthält, 

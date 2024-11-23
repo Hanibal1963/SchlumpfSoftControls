@@ -135,7 +135,7 @@
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
     <ProjectReference Include="..\ExplorerTreeViewControl\ExplorerTreeViewControl.vbproj">
-      <Project>{A0356C9D-D869-4066-B744-AC7530D106E2}</Project>
+      <Project>{8EB6FF5D-8F48-4766-AC1F-690F2707DD69}</Project>
       <Name>ExplorerTreeViewControl</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3bPkgdefProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>

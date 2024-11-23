@@ -262,7 +262,7 @@
       <Name>DriveWatcherControl</Name>
     </ProjectReference>
     <ProjectReference Include="..\ExplorerTreeViewControl\ExplorerTreeViewControl.vbproj">
-      <Project>{a0356c9d-d869-4066-b744-ac7530d106e2}</Project>
+      <Project>{8EB6FF5D-8F48-4766-AC1F-690F2707DD69}</Project>
       <Name>ExplorerTreeViewControl</Name>
     </ProjectReference>
     <ProjectReference Include="..\IniFileControl\IniFileControl.vbproj">
