@@ -117,31 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label_ZoomFactor.Text" xml:space="preserve">
-    <value>Zoom factor:</value>
-  </data>
-  <data name="Label_FramesPerSecound.Text" xml:space="preserve">
-    <value>Showing speed:</value>
-  </data>
-  <data name="CheckBox_CustomDisplaySpeed.Text" xml:space="preserve">
-    <value>User -defined display speed:</value>
-  </data>
-  <data name="Label_Ansicht.Text" xml:space="preserve">
-    <value>Advanced mode:</value>
-  </data>
-  <data name="Label_Ani.Text" xml:space="preserve">
-    <value>standard</value>
-  </data>
-  <data name="Button_Forward.Text" xml:space="preserve">
-    <value>forward&gt;</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Anigif - Control test</value>
   </data>
   <data name="Button_Back.Text" xml:space="preserve">
     <value>&lt;back</value>
   </data>
+  <data name="Button_Forward.Text" xml:space="preserve">
+    <value>forward&gt;</value>
+  </data>
   <data name="CheckBox_AutoPlay.Text" xml:space="preserve">
     <value>Autostart:</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Anigif - Control test</value>
+  <data name="CheckBox_CustomDisplaySpeed.Text" xml:space="preserve">
+    <value>User -defined display speed:</value>
+  </data>
+  <data name="Label_Ani.Text" xml:space="preserve">
+    <value>standard</value>
+  </data>
+  <data name="Label_Ansicht.Text" xml:space="preserve">
+    <value>Advanced mode:</value>
+  </data>
+  <data name="Label_FramesPerSecound.Text" xml:space="preserve">
+    <value>Showing speed:</value>
+  </data>
+  <data name="Label_ZoomFactor.Text" xml:space="preserve">
+    <value>Zoom factor:</value>
   </data>
 </root>
