@@ -35,17 +35,6 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExplorerTreeViewControl", "ExplorerTreeViewControl\ExplorerTreeViewControl.vbproj", "{A0356C9D-D869-4066-B744-AC7530D106E2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{34AB3658-1BDF-4ED8-BECA-7BFA05E41D82}"
-	ProjectSection(SolutionItems) = preProject
-		Docs\AniGifControl.md = Docs\AniGifControl.md
-		Docs\DriveWatcherControl.md = Docs\DriveWatcherControl.md
-		Docs\ExplorerTreeViewControl.md = Docs\ExplorerTreeViewControl.md
-		Docs\IniFileControl.md = Docs\IniFileControl.md
-		Docs\NotifyFormControl.md = Docs\NotifyFormControl.md
-		Docs\SevenSegmentControl.md = Docs\SevenSegmentControl.md
-		Docs\ShapeControl.md = Docs\ShapeControl.md
-		Docs\TransparentLabelControl.md = Docs\TransparentLabelControl.md
-		Docs\WizardControl.md = Docs\WizardControl.md
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
