@@ -21,11 +21,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Pr
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
-		ExifControlEntwurf.zip = ExifControlEntwurf.zip
 		LICENSE.txt = LICENSE.txt
 		Links.md = Links.md
 		README.md = README.md
-		ToDo.md = ToDo.md
 	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SevenSegmentControl", "SevenSegmentControl\SevenSegmentControl.vbproj", "{E4EB5FE5-7A23-4A30-8E17-9FEBD796FE53}"
@@ -35,6 +33,19 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestApp", "TestApp\TestApp.vbproj", "{EDCA0404-EF9C-46E8-AA7D-62150BB695B4}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExplorerTreeViewControl", "ExplorerTreeViewControl\ExplorerTreeViewControl.vbproj", "{A0356C9D-D869-4066-B744-AC7530D106E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{34AB3658-1BDF-4ED8-BECA-7BFA05E41D82}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\AniGifControl.md = Docs\AniGifControl.md
+		Docs\DriveWatcherControl.md = Docs\DriveWatcherControl.md
+		Docs\ExplorerTreeViewControl.md = Docs\ExplorerTreeViewControl.md
+		Docs\IniFileControl.md = Docs\IniFileControl.md
+		Docs\NotifyFormControl.md = Docs\NotifyFormControl.md
+		Docs\SevenSegmentControl.md = Docs\SevenSegmentControl.md
+		Docs\ShapeControl.md = Docs\ShapeControl.md
+		Docs\TransparentLabelControl.md = Docs\TransparentLabelControl.md
+		Docs\WizardControl.md = Docs\WizardControl.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -182,24 +193,16 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_SortFileContentOnSave = True
-		RESX_ConfirmAddLanguageFile = True
-		RESX_CultureCountyOverrides = 
-		RESX_AutoCreateNewLanguageFiles = False
-		RESX_PrefixTranslations = False
-		RESX_NeutralResourcesLanguage = de-DE
-		SolutionGuid = {1F02675E-F1F5-4CB4-9063-742717056245}
+	GlobalSection(NestedProjects) = preSolution
+		{34AB3658-1BDF-4ED8-BECA-7BFA05E41D82} = {D1836307-515A-4493-85B3-F56DFC9C2214}
 	EndGlobalSection
-	GlobalSection(AutomaticVersions) = postSolution
-		UpdateAssemblyVersion = True
-		UpdateAssemblyFileVersion = True
-		UpdateAssemblyInfoVersion = True
-		AssemblyVersionSettings = None.YearStamp.MonthStamp.DayStamp
-		AssemblyFileVersionSettings = None.YearStamp.MonthStamp.DayStamp
-		AssemblyInfoVersionSettings = None.YearStamp.MonthStamp.DayStamp
-		UpdatePackageVersion = False
-		AssemblyInfoVersionType = SettingsVersion
-		InheritWinAppVersionFrom = None
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F02675E-F1F5-4CB4-9063-742717056245}
+		RESX_NeutralResourcesLanguage = de-DE
+		RESX_PrefixTranslations = False
+		RESX_AutoCreateNewLanguageFiles = False
+		RESX_CultureCountyOverrides = 
+		RESX_ConfirmAddLanguageFile = True
+		RESX_SortFileContentOnSave = True
 	EndGlobalSection
 EndGlobal
