@@ -56,6 +56,7 @@ Partial Class FormExplorerTreeViewControl
         'ExplorerTreeView
         '
         resources.ApplyResources(Me.ExplorerTreeView, "ExplorerTreeView")
+        Me.ExplorerTreeView.Intent = 23
         Me.ExplorerTreeView.LineColor = System.Drawing.Color.Black
         Me.ExplorerTreeView.Name = "ExplorerTreeView"
         Me.ExplorerTreeView.ShowLines = True

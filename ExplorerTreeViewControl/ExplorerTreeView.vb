@@ -80,7 +80,7 @@ Public Class ExplorerTreeView : Inherits UserControl
     ''' Legt fest ob Linien zwischen Strukturknoten gezeichnet werden.
     ''' </summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category("Behavior")>
     <Description("Legt fest ob Linien zwischen Strukturknoten gezeichnet werden.")>
     Public Property ShowLines As Boolean
         Get
@@ -95,7 +95,7 @@ Public Class ExplorerTreeView : Inherits UserControl
     ''' Legt fest ob die Plus- und Minuszeichen zum Anzeigen von Unterknoten angezeigt werden.
     ''' </summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category("Behavior")>
     <Description("Legt fest ob die Plus- und Minuszeichen zum Anzeigen von Unterknoten angezeigt werden.")>
     Public Property ShowPluMinus As Boolean
         Get
@@ -110,7 +110,7 @@ Public Class ExplorerTreeView : Inherits UserControl
     ''' Legt fest ob die Linien zwischen den Stammknoten angezeigt werden.
     ''' </summary>
     <Browsable(True)>
-    <Category("Appearance")>
+    <Category("Behavior")>
     <Description("Legt fest ob die Linien zwischen den Stammknoten angezeigt werden.")>
     Public Property ShowRootLines As Boolean
         Get
@@ -148,6 +148,21 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Get
         Set(value As Color)
             Me.Tv1.BackColor = value
+        End Set
+    End Property
+
+    ''' <summary>
+    ''' Ruft den Abstand für das Einrücken der einzelnen Ebenen von untergeordneten Strukturknoten ab oder legt diesen fest.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Behavior")>
+    <Description("Ruft den Abstand für das Einrücken der einzelnen Ebenen von untergeordneten Strukturknoten ab oder legt diesen fest.")>
+    Public Property Intent As Integer
+        Get
+            Return Me.Tv1.Indent
+        End Get
+        Set(value As Integer)
+            Me.Tv1.Indent = value
         End Set
     End Property
 

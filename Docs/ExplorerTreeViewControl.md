@@ -24,6 +24,7 @@ Diese Steuerelement habe ich für ein anderes Projekt entwickelt um dessen Code 
 - **ShowPlusMinus** - Legt fest ob die Plus- und Minuszeichen zum Anzeigen von Unterknoten angezeigt werden.
 - **ForeColor** - Legt die Vordergrundfarbe für das Anzeigen von Text fest oder gibt diese zurück.
 - **BackColor** - Legt die Hintergrundfarbe für das Steuerelement fest oder gibt diese zurück.
+- **Indent** - Ruft den Abstand für das Einrücken der einzelnen Ebenen von untergeordneten Strukturknoten ab oder legt diesen fest.
 
 </details>
 
