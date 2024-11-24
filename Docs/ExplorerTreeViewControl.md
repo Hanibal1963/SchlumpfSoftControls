@@ -17,6 +17,9 @@ Diese Steuerelement habe ich für ein anderes Projekt entwickelt um dessen Code 
 <details>
 <summary>Eigenschaften</summary>
 
+- **SelectedPath** - Gibt den vollständigen Pfad des ausgewählten Knotens zurück.
+- **LineColor** - Gibt die Farbe der Linien zwischen den Knoten zurück oder legt diese fest.
+
 </details>
 
 <details> 

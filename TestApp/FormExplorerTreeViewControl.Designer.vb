@@ -25,9 +25,9 @@ Partial Class FormExplorerTreeViewControl
         Dim SplitContainer1 As System.Windows.Forms.SplitContainer
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormExplorerTreeViewControl))
         Dim SplitContainer2 As System.Windows.Forms.SplitContainer
+        Me.ExplorerTreeView = New SchlumpfSoft.Controls.ExplorerTreeViewControl.ExplorerTreeView()
         Me.TextBox = New System.Windows.Forms.TextBox()
         Me.ListView = New System.Windows.Forms.ListView()
-        Me.ExplorerTreeView = New SchlumpfSoft.Controls.ExplorerTreeViewControl.ExplorerTreeView()
         SplitContainer1 = New System.Windows.Forms.SplitContainer()
         SplitContainer2 = New System.Windows.Forms.SplitContainer()
         CType(SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,6 +52,13 @@ Partial Class FormExplorerTreeViewControl
         'SplitContainer1.Panel2
         '
         SplitContainer1.Panel2.Controls.Add(SplitContainer2)
+        '
+        'ExplorerTreeView
+        '
+        resources.ApplyResources(Me.ExplorerTreeView, "ExplorerTreeView")
+        Me.ExplorerTreeView.ForeColor = System.Drawing.Color.Black
+        Me.ExplorerTreeView.LineColor = System.Drawing.Color.Black
+        Me.ExplorerTreeView.Name = "ExplorerTreeView"
         '
         'SplitContainer2
         '
@@ -80,11 +87,6 @@ Partial Class FormExplorerTreeViewControl
         Me.ListView.Name = "ListView"
         Me.ListView.UseCompatibleStateImageBehavior = False
         Me.ListView.View = System.Windows.Forms.View.List
-        '
-        'ExplorerTreeView
-        '
-        resources.ApplyResources(Me.ExplorerTreeView, "ExplorerTreeView")
-        Me.ExplorerTreeView.Name = "ExplorerTreeView"
         '
         'FormExplorerTreeViewControl
         '

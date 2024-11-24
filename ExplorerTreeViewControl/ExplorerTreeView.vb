@@ -61,6 +61,24 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Get
     End Property
 
+    ''' <summary>
+    ''' Legt die Farbe der Linien die, die Knoten miteinander verbinden fest oder gibt diese zurück.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <Description("Legt die Farbe der Linien die, die Knoten miteinander verbinden fest oder gibt diese zurück.")>
+    Public Property LineColor As Color
+        Get
+            Return Me.Tv1.LineColor
+        End Get
+        Set(value As Color)
+            Me.Tv1.LineColor = value
+        End Set
+    End Property
+
+
+
+
 #End Region
 
     ''' <summary>
