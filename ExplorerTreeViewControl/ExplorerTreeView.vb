@@ -121,6 +121,21 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Set
     End Property
 
+    ''' <summary>
+    ''' Legt die Vordergrundfarbe für das Anzeigen von Text fest oder gibt diese zurück.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <Description("Legt die Vordergrundfarbe für das Anzeigen von Text fest oder gibt diese zurück.")>
+    Public Overrides Property ForeColor As Color
+        Get
+            Return Me.Tv1.ForeColor
+        End Get
+        Set(value As Color)
+            Me.Tv1.ForeColor = value
+        End Set
+    End Property
+
 #End Region
 
     ''' <summary>

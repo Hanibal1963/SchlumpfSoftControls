@@ -22,6 +22,8 @@ Diese Steuerelement habe ich für ein anderes Projekt entwickelt um dessen Code 
 - **ShowLines** - Gibt an, ob Linien zwischen den Knoten angezeigt werden.
 - **ShowRootLines** - Gibt an, ob Linien zwischen den Stammknoten angezeigt werden.
 - **ShowPlusMinus** - Legt fest ob die Plus- und Minuszeichen zum Anzeigen von Unterknoten angezeigt werden.
+- **ForeColor** - Legt die Vordergrundfarbe für das Anzeigen von Text fest oder gibt diese zurück.
+- 
 
 </details>
 
