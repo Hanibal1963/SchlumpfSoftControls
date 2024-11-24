@@ -1,6 +1,6 @@
 ﻿# ExplorerTreeView Control
 
-Das Steuerelement ist ein spezielles TreeView Control, das die Struktur des Verzeichnisbaums des Windows Explorers nachahmt. 
+Das Steuerelement ist ein spezielles TreeView Control, dass die Struktur des Verzeichnisbaums des Windows Explorers nachahmt. 
 
 Es zeigt die Ordnerstruktur und Laufwerke in einem Baumdiagramm an. Das Control kann verwendet werden, um Laufwerke und Ordner in einem Verzeichnisbaum anzuzeigen.
 
