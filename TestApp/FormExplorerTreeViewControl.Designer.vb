@@ -61,6 +61,7 @@ Partial Class FormExplorerTreeViewControl
         Me.ExplorerTreeView.Name = "ExplorerTreeView"
         Me.ExplorerTreeView.ShowLines = True
         Me.ExplorerTreeView.ShowPluMinus = True
+        Me.ExplorerTreeView.ShowRootLines = True
         '
         'SplitContainer2
         '

@@ -106,6 +106,21 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Set
     End Property
 
+    ''' <summary>
+    ''' Legt fest ob die Linien zwischen den Stammknoten angezeigt werden.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <Description("Legt fest ob die Linien zwischen den Stammknoten angezeigt werden.")>
+    Public Property ShowRootLines As Boolean
+        Get
+            Return Me.Tv1.ShowRootLines
+        End Get
+        Set(value As Boolean)
+            Me.Tv1.ShowRootLines = value
+        End Set
+    End Property
+
 #End Region
 
     ''' <summary>

@@ -20,6 +20,7 @@ Diese Steuerelement habe ich für ein anderes Projekt entwickelt um dessen Code 
 - **SelectedPath** - Gibt den vollständigen Pfad des ausgewählten Knotens zurück.
 - **LineColor** - Gibt die Farbe der Linien zwischen den Knoten zurück oder legt diese fest.
 - **ShowLines** - Gibt an, ob Linien zwischen den Knoten angezeigt werden.
+- **ShowRootLines** - Gibt an, ob Linien zwischen den Stammknoten angezeigt werden.
 - **ShowPlusMinus** - Legt fest ob die Plus- und Minuszeichen zum Anzeigen von Unterknoten angezeigt werden.
 
 </details>
