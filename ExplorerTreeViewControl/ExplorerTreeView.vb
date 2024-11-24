@@ -91,6 +91,20 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Set
     End Property
 
+    ''' <summary>
+    ''' Legt fest ob die Plus- und Minuszeichen zum Anzeigen von Unterknoten angezeigt werden.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <Description("Legt fest ob die Plus- und Minuszeichen zum Anzeigen von Unterknoten angezeigt werden.")>
+    Public Property ShowPluMinus As Boolean
+        Get
+            Return Me.Tv1.ShowPlusMinus
+        End Get
+        Set(value As Boolean)
+            Me.Tv1.ShowPlusMinus = value
+        End Set
+    End Property
 
 #End Region
 

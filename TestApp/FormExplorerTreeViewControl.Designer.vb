@@ -60,6 +60,7 @@ Partial Class FormExplorerTreeViewControl
         Me.ExplorerTreeView.LineColor = System.Drawing.Color.Black
         Me.ExplorerTreeView.Name = "ExplorerTreeView"
         Me.ExplorerTreeView.ShowLines = True
+        Me.ExplorerTreeView.ShowPluMinus = True
         '
         'SplitContainer2
         '
