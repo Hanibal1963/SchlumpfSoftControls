@@ -136,6 +136,21 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Set
     End Property
 
+    ''' <summary>
+    ''' Legt die Hintergrundfarbe des Controls fest oder gibt diese zurück.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <Description("Legt die Hintergrundfarbe des Controls fest oder gibt diese zurück.")>
+    Public Overrides Property BackColor As Color
+        Get
+            Return Me.Tv1.BackColor
+        End Get
+        Set(value As Color)
+            Me.Tv1.BackColor = value
+        End Set
+    End Property
+
 #End Region
 
     ''' <summary>
