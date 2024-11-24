@@ -8,9 +8,7 @@ Imports System
 Imports System.IO
 Imports System.Windows.Forms
 
-Friend Class DriveNode
-
-    Inherits TreeNode
+Friend Class DriveNode : Inherits TreeNode
 
     Public Sub New(DrI As DriveInfo)
         MyBase.New
@@ -23,18 +21,16 @@ Friend Class DriveNode
 
     Private Sub FillNodes(DrI As DriveInfo)
         Dim node As DirectoryNode
-        With Me.Nodes
-            .Clear()
-            Try
-                If DrI.IsReady Then
-                    For Each d As DirectoryInfo In DrI.RootDirectory.GetDirectories
-                        node = New DirectoryNode(d)
-                        .Add(node)
-                    Next
-                End If
-            Catch ex As UnauthorizedAccessException
-            End Try
-        End With
+        Me.Nodes.Clear()
+        Try
+            If DrI.IsReady Then
+                For Each d As DirectoryInfo In DrI.RootDirectory.GetDirectories
+                    node = New DirectoryNode(d)
+                    Dim unused = Me.Nodes.Add(node)
+                Next
+            End If
+        Catch ex As UnauthorizedAccessException
+        End Try
     End Sub
 
 End Class

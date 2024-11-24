@@ -10,7 +10,7 @@ Imports System.IO
 ''' <summary>
 ''' Hilfsfunktionen für den Zugriff auf Laufwerksinformationen.
 ''' </summary>
-Module DriveHelpers
+Friend Module DriveHelpers
 
     ''' <summary>
     ''' Gibt den Laufwerksbuchstaben des angegebenen Laufwerks zurück.
@@ -23,11 +23,7 @@ Module DriveHelpers
     ''' Gibt den Namen des angegebenen Laufwerks zurück.
     ''' </summary>
     Friend Function GetVolumeName(di As DriveInfo) As String
-        If di.IsReady Then
-            Return di.VolumeLabel
-        Else
-            Return GetDriveType(di)
-        End If
+        Return If(di.IsReady, di.VolumeLabel, GetDriveType(di))
     End Function
 
     ''' <summary>
@@ -51,13 +47,11 @@ Module DriveHelpers
         Dim result As String = $""
         Select Case True
             Case di.DriveType = DriveType.Fixed
-                If di.Name.Equals(
+                result = If(di.Name.Equals(
                   Path.GetPathRoot(Environment.SystemDirectory),
-                  StringComparison.OrdinalIgnoreCase) Then
-                    result = "SystemDrive"
-                Else
-                    result = "HardDrive"
-                End If
+                  StringComparison.OrdinalIgnoreCase),
+                    "SystemDrive",
+                    "HardDrive")
             Case di.DriveType = DriveType.CDRom : result = "OpticalDrive"
             Case di.DriveType = DriveType.Network : result = "NetworkDrive"
             Case di.DriveType = DriveType.Removable : result = "HardDrive"

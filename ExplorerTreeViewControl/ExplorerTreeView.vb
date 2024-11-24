@@ -3,14 +3,22 @@
 ' © 2024 by Andreas Sauer
 ' ****************************************************************************************************************
 '
+' weitere Infos:
+' <Browsable> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.browsableattribute?view=netframework-4.7.2
+' <Cathegory> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.categoryattribute?view=netframework-4.7.2
+' <Description> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.descriptionattribute?view=netframework-4.7.2
+
+#Region "Importe"
 
 Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
 
+#End Region
+
 ''' <summary>
-''' Stellt eine benutzerdefinierte Steuerung bereit, die ein TreeView-Steuerelement enthält, 
+''' Stellt ein benutzerdefiniertes Steuerelement bereit, die ein TreeView-Steuerelement enthält, 
 ''' das die Verzeichnisstruktur des Computers anzeigt.
 ''' </summary>
 <ProvideToolboxControl("SchlumpfSoft Controls", False)>
@@ -19,14 +27,26 @@ Imports System.Windows.Forms
 <ToolboxBitmap(GetType(ExplorerTreeView), "ExplorerTreeView.bmp")>
 Public Class ExplorerTreeView : Inherits UserControl
 
+
+#Region "Ereignisdefinitionen"
+
     ''' <summary>
-    ''' Wird ausgelöst, wenn sich der ausgewählte Pfad ändert.
+    ''' Wird ausgelöst, wenn sich der ausgewählte Pfad geändert hat.
     ''' </summary>
+    <Category("Behavior")>
+    <Description("Wird ausgelöst, wenn sich der ausgewählte Pfad geändert hat.")>
     Public Event SelectedPathChanged(sender As Object, e As EventArgs)
+
+#End Region
+
+
+#Region "neue Eigenschaften"
 
     ''' <summary>
     ''' Gibt den vollständigen Pfad des ausgewähten Knotens zurück.
     ''' </summary>
+    <Browsable(False)>
+    <Description("Gibt den vollständigen Pfad des ausgewählten Knotens zurück.")>
     Public ReadOnly Property SelectedPath As String
         Get
             ' Holt den aktuell ausgewählten Knoten im TreeView.
@@ -41,25 +61,22 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Get
     End Property
 
+#End Region
+
     ''' <summary>
     ''' Konstruktor der ExpTreeControl-Klasse.
     ''' </summary>
     Public Sub New()
         ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
-        ' Initialisiert die Steuerung.
-        Me.IntitializeControl()
-    End Sub
-
-    ''' <summary>
-    ''' Initialisiert die Steuerung.
-    ''' </summary>
-    Private Sub IntitializeControl()
         ' Füllt die ImageList mit den Standardbildern.
         Me.FillImageList()
         ' Füllt das TreeView mit den Standardbildern und Knoten.
         Me.FillTreeView()
+
     End Sub
+
+#Region "interne Funktionen"
 
     ''' <summary>
     ''' Füllt das TreeView mit den Standardbildern und Knoten.
@@ -110,6 +127,10 @@ Public Class ExplorerTreeView : Inherits UserControl
       $"VideoFolder", My.Resources.ImgVideosFolder)
     End Sub
 
+#End Region
+
+#Region "interne Ereignisbehandlungen"
+
     ''' <summary>
     ''' Wird ausgelöst, bevor sich der ausgewählte Knoten ändert.
     ''' </summary>
@@ -129,5 +150,7 @@ Public Class ExplorerTreeView : Inherits UserControl
         ' Löst das SelectedPathChanged-Ereignis aus, um anzuzeigen, dass sich der ausgewählte Pfad geändert hat.
         RaiseEvent SelectedPathChanged(Me, EventArgs.Empty)
     End Sub
+
+#End Region
 
 End Class

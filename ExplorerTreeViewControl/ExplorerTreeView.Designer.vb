@@ -25,6 +25,7 @@ Partial Class ExplorerTreeView
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ExplorerTreeView))
         Me.Tv1 = New System.Windows.Forms.TreeView()
         Me.ImageList = New System.Windows.Forms.ImageList(Me.components)
         Me.StateImageList = New System.Windows.Forms.ImageList(Me.components)
@@ -32,35 +33,29 @@ Partial Class ExplorerTreeView
         '
         'Tv1
         '
-        Me.Tv1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Tv1.ImageIndex = 0
+        resources.ApplyResources(Me.Tv1, "Tv1")
         Me.Tv1.ImageList = Me.ImageList
-        Me.Tv1.Location = New System.Drawing.Point(0, 0)
         Me.Tv1.Name = "Tv1"
-        Me.Tv1.SelectedImageIndex = 0
-        Me.Tv1.Size = New System.Drawing.Size(216, 349)
         Me.Tv1.StateImageList = Me.StateImageList
-        Me.Tv1.TabIndex = 0
         '
         'ImageList
         '
         Me.ImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
-        Me.ImageList.ImageSize = New System.Drawing.Size(20, 20)
+        resources.ApplyResources(Me.ImageList, "ImageList")
         Me.ImageList.TransparentColor = System.Drawing.Color.Transparent
         '
         'StateImageList
         '
         Me.StateImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit
-        Me.StateImageList.ImageSize = New System.Drawing.Size(20, 20)
+        resources.ApplyResources(Me.StateImageList, "StateImageList")
         Me.StateImageList.TransparentColor = System.Drawing.Color.Transparent
         '
-        'ExpTreeControl
+        'ExplorerTreeView
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.Tv1)
-        Me.Name = "ExpTreeControl"
-        Me.Size = New System.Drawing.Size(216, 349)
+        Me.Name = "ExplorerTreeView"
         Me.ResumeLayout(False)
 
     End Sub
