@@ -1,6 +1,10 @@
 Versionsverlauf
 ===============
 
+Version 3.2024.11.24 - Datum: 24.11.2024
+- neue Eigenschaften zum *ExplorerTreeView* hinzugefuegt
+- Fehlerbereinigung
+
 Version 3.2024.11.23 - Datum: 23.11.2024
 - Anpassung der Versionierung
 - Neues Control: *ExplorerTreeView* hinzugefuegt
