@@ -134,7 +134,7 @@
     <value>ExploreTreeView Control</value>
   </data>
   <data name="ButtonIniFilecontrol.Text" xml:space="preserve">
-    <value>Inifile control</value>
+    <value>Inifile Control</value>
   </data>
   <data name="ButtonNotifyFormControl.Text" xml:space="preserve">
     <value>Notificform Control</value>
@@ -142,8 +142,14 @@
   <data name="ButtonSevenSegmentControl.Text" xml:space="preserve">
     <value>SevenSegment Control</value>
   </data>
+  <data name="ButtonShapeControl.Text" xml:space="preserve">
+    <value>Shape Control</value>
+  </data>
   <data name="ButtonTransparentLabelControl.Text" xml:space="preserve">
-    <value>Transparent label Control</value>
+    <value>Transparent Label Control</value>
+  </data>
+  <data name="ButtonWizardControl.Text" xml:space="preserve">
+    <value>Wizard Control</value>
   </data>
   <data name="FlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>255, 269</value>

@@ -67,10 +67,13 @@ Public Class ExplorerTreeView : Inherits UserControl
     ''' Konstruktor der ExpTreeControl-Klasse.
     ''' </summary>
     Public Sub New()
+
         ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
+
         ' Füllt die ImageList mit den Standardbildern.
         Me.FillImageList()
+
         ' Füllt das TreeView mit den Standardbildern und Knoten.
         Me.FillTreeView()
 
@@ -82,49 +85,69 @@ Public Class ExplorerTreeView : Inherits UserControl
     ''' Füllt das TreeView mit den Standardbildern und Knoten.
     ''' </summary>
     Private Sub FillTreeView()
+
         ' Erstellt einen neuen Knoten für den Computer.
         Dim node As New ComputerNode
+
         ' Löscht alle vorhandenen Knoten im TreeView.
         Me.Tv1.Nodes.Clear()
+
         ' Fügt den neuen Computerknoten zum TreeView hinzu.
         Dim unused = Me.Tv1.Nodes.Add(node)
+
         ' Erweitert den Computerknoten, um seine Unterknoten anzuzeigen.
         node.Expand()
+
     End Sub
 
     ''' <summary>
     ''' Füllt die ImageList mit den Standardbildern für Computer, Laufwerke, Ordner und Spezialordner.
     ''' </summary>
     Private Sub FillImageList()
+
         ' Fügt die Bilder zu der ImageList hinzu, die im TreeView verwendet werden.
         Me.ImageList.Images.Add(
       $"Computer", My.Resources.ImgComputer)
+
         Me.ImageList.Images.Add(
       $"DesktopFolder", My.Resources.ImgDesktopFolder)
+
         Me.ImageList.Images.Add(
       $"DocumentsFolder", My.Resources.ImgDocumentsFolder)
+
         Me.ImageList.Images.Add(
       $"DownloadsFolder", My.Resources.ImgDownloadsFolder)
+
         Me.ImageList.Images.Add(
       $"Folder", My.Resources.ImgFolder)
+
         Me.ImageList.Images.Add(
       $"HardDrive", My.Resources.ImgHardDrive)
+
         Me.ImageList.Images.Add(
       $"MusicFolder", My.Resources.ImgMusicFolder)
+
         Me.ImageList.Images.Add(
       $"Network", My.Resources.ImgNetwork)
+
         Me.ImageList.Images.Add(
       $"NetworkDrive", My.Resources.ImgNetworkDrive)
+
         Me.ImageList.Images.Add(
       $"NetworkFolder", My.Resources.ImgNetworkFolder)
+
         Me.ImageList.Images.Add(
       $"OpticalDrive", My.Resources.ImgOpticalDrive)
+
         Me.ImageList.Images.Add(
       $"PicturesFolder", My.Resources.ImgPicturesFolder)
+
         Me.ImageList.Images.Add(
       $"SystemDrive", My.Resources.ImgSystemDrive)
+
         Me.ImageList.Images.Add(
       $"VideoFolder", My.Resources.ImgVideosFolder)
+
     End Sub
 
 #End Region
@@ -134,21 +157,28 @@ Public Class ExplorerTreeView : Inherits UserControl
     ''' <summary>
     ''' Wird ausgelöst, bevor sich der ausgewählte Knoten ändert.
     ''' </summary>
-    Private Sub Tv1_BeforeExpand(sender As Object, e As TreeViewCancelEventArgs) Handles Tv1.BeforeExpand
+    Private Sub Tv1_BeforeExpand(sender As Object, e As TreeViewCancelEventArgs) Handles _
+            Tv1.BeforeExpand
+
         ' Versucht, den Knoten in einen DirectoryNode zu konvertieren.
         Dim node As DirectoryNode = TryCast(e.Node, DirectoryNode)
+
         ' Wenn der Knoten ein DirectoryNode ist, lädt die Unterverzeichnisse.
         If node IsNot Nothing Then
             node.LoadSubDirectories()
         End If
+
     End Sub
 
     ''' <summary>
     ''' Wird ausgelöst, wenn sich der ausgewählte Knoten geändert hat.
     ''' </summary>
-    Private Sub Tv1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles Tv1.AfterSelect
+    Private Sub Tv1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles _
+        Tv1.AfterSelect
+
         ' Löst das SelectedPathChanged-Ereignis aus, um anzuzeigen, dass sich der ausgewählte Pfad geändert hat.
         RaiseEvent SelectedPathChanged(Me, EventArgs.Empty)
+
     End Sub
 
 #End Region

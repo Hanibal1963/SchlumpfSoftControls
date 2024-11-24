@@ -20,17 +20,25 @@ Friend Class DriveNode : Inherits TreeNode
     End Sub
 
     Private Sub FillNodes(DrI As DriveInfo)
+
         Dim node As DirectoryNode
+
+        ' alle Knoten löschen
         Me.Nodes.Clear()
+
         Try
+
             If DrI.IsReady Then
                 For Each d As DirectoryInfo In DrI.RootDirectory.GetDirectories
                     node = New DirectoryNode(d)
                     Dim unused = Me.Nodes.Add(node)
                 Next
             End If
+
         Catch ex As UnauthorizedAccessException
+
         End Try
+
     End Sub
 
 End Class
