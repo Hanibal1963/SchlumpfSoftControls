@@ -76,7 +76,20 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Set
     End Property
 
-
+    ''' <summary>
+    ''' Legt fest ob Linien zwischen Strukturknoten gezeichnet werden.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <Description("Legt fest ob Linien zwischen Strukturknoten gezeichnet werden.")>
+    Public Property ShowLines As Boolean
+        Get
+            Return Me.Tv1.ShowLines
+        End Get
+        Set(value As Boolean)
+            Me.Tv1.ShowLines = value
+        End Set
+    End Property
 
 
 #End Region

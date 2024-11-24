@@ -59,6 +59,7 @@ Partial Class FormExplorerTreeViewControl
         Me.ExplorerTreeView.ForeColor = System.Drawing.Color.Black
         Me.ExplorerTreeView.LineColor = System.Drawing.Color.Black
         Me.ExplorerTreeView.Name = "ExplorerTreeView"
+        Me.ExplorerTreeView.ShowLines = True
         '
         'SplitContainer2
         '
