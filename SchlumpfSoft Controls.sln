@@ -24,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Pr
 		LICENSE.txt = LICENSE.txt
 		Links.md = Links.md
 		README.md = README.md
+		VS Marketplace Vorlage.md = VS Marketplace Vorlage.md
 	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SevenSegmentControl", "SevenSegmentControl\SevenSegmentControl.vbproj", "{E4EB5FE5-7A23-4A30-8E17-9FEBD796FE53}"
@@ -197,12 +198,12 @@ Global
 		{34AB3658-1BDF-4ED8-BECA-7BFA05E41D82} = {D1836307-515A-4493-85B3-F56DFC9C2214}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1F02675E-F1F5-4CB4-9063-742717056245}
-		RESX_NeutralResourcesLanguage = de-DE
-		RESX_PrefixTranslations = False
-		RESX_AutoCreateNewLanguageFiles = False
-		RESX_CultureCountyOverrides = 
-		RESX_ConfirmAddLanguageFile = True
 		RESX_SortFileContentOnSave = True
+		RESX_ConfirmAddLanguageFile = True
+		RESX_CultureCountyOverrides = 
+		RESX_AutoCreateNewLanguageFiles = False
+		RESX_PrefixTranslations = False
+		RESX_NeutralResourcesLanguage = de-DE
+		SolutionGuid = {1F02675E-F1F5-4CB4-9063-742717056245}
 	EndGlobalSection
 EndGlobal
