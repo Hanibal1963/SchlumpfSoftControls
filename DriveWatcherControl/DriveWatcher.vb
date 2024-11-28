@@ -21,9 +21,9 @@ Imports System.Windows.Forms
 Public Class DriveWatcher : Inherits Component
 
     ' Wird vom Komponenten-Designer benötigt.
-    Private ReadOnly components As System.ComponentModel.IContainer
+    Private ReadOnly components As IContainer
     ' Internes Formular welches die Meldungen empfängt.
-    Private WithEvents _Form As New NativeForm
+    Private WithEvents NatForm As New NativeForm
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk hinzugefügt wurde.
@@ -45,22 +45,17 @@ Public Class DriveWatcher : Inherits Component
     <Description("Wird ausgelöst wenn ein Laufwerk entfernt wurde.")>
     Public Event DriveRemoved(sender As Object, e As DriveRemovedEventArgs)
 
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <Diagnostics.DebuggerNonUserCode()>
     Public Sub New()
         MyBase.New()
-
         'Dieser Aufruf ist für den Komponenten-Designer erforderlich.
         Me.InitializeComponent()
-
     End Sub
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk hinzugefügt wurde
     ''' </summary>
-    Private Sub _Form_DriveAdded(sender As Object, e As DriveInfo) Handles _
-        _Form.DriveAdded
-
-
+    Private Sub NatForm_DriveAdded(sender As Object, e As DriveInfo) Handles NatForm.DriveAdded
         Dim arg As New DriveAddedEventArgs With {
             .DriveName = e.Name,
             .VolumeLabel = e.VolumeLabel,
@@ -70,21 +65,15 @@ Public Class DriveWatcher : Inherits Component
             .DriveFormat = e.DriveFormat,
             .DriveType = e.DriveType,
             .IsReady = e.IsReady}
-
         RaiseEvent DriveAdded(Me, arg)
-
     End Sub
 
     ''' <summary>
     ''' Wird ausgelöst wenn ein Laufwerk entfern wurde
     ''' </summary>
-    Private Sub _Form_DriveRemoved(sender As Object, e As DriveInfo) Handles _
-        _Form.DriveRemoved
-
+    Private Sub NatForm_DriveRemoved(sender As Object, e As DriveInfo) Handles NatForm.DriveRemoved
         Dim arg As New DriveRemovedEventArgs With {.DriveName = e.Name}
-
         RaiseEvent DriveRemoved(Me, arg)
-
     End Sub
 
     ''' <summary>
@@ -94,44 +83,39 @@ Public Class DriveWatcher : Inherits Component
     ''' Das Bearbeiten ist mit dem Komponenten-Designer möglich.<br/>
     ''' Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     ''' </remarks>
-    <System.Diagnostics.DebuggerStepThrough()>
+    <Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-
     End Sub
 
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <Diagnostics.DebuggerNonUserCode()>
     Public Sub New(container As IContainer)
-
         MyClass.New()
-
         'Erforderlich für die Unterstützung des Windows.Forms-Klassenkompositions-Designers
         If container IsNot Nothing Then container.Add(Me)
-
     End Sub
 
     ''' <summary>
     ''' Die Komponente überschreibt den Löschvorgang zum Bereinigen der Komponentenliste.
     ''' </summary>
     ''' <param name="disposing"></param>
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(disposing As Boolean)
-
         Try
             If disposing Then
                 If Me.components IsNot Nothing Then Me.components.Dispose()
-                If Me._Form IsNot Nothing Then Me._Form.Dispose()
+                If Me.NatForm IsNot Nothing Then Me.NatForm.Dispose()
             End If
         Finally
             MyBase.Dispose(disposing)
         End Try
-
     End Sub
 
     ''' <summary>
     ''' Definiert das Fenster welches die WindowsMessages empfängt.
     ''' </summary>
-    Private Class NativeForm : Inherits NativeWindow
+    Private Class NativeForm
 
+        Inherits NativeWindow
         Implements IDisposable
 
         'Das sind die Ereignisse aus WParam.
@@ -157,42 +141,35 @@ Public Class DriveWatcher : Inherits Component
         ''' </remarks>
         Private Enum DBT_DEVTYP
 
-
             ''' <summary>
             ''' OEM- oder IHV-definiert
             ''' </summary>
             OEM = 0
-
 
             ''' <summary>
             ''' Devnode-Nummer
             ''' </summary>
             DEVNODE = 1
 
-
             ''' <summary>
             ''' Logisches Volumen
             ''' </summary>
             VOLUME = 2
-
 
             ''' <summary>
             ''' Port (seriell oder parallel)
             ''' </summary>
             PORT = 3
 
-
             ''' <summary>
             ''' Netzwerkressource
             ''' </summary>
             NET = 4
 
-
             ''' <summary>
             ''' Geräteschnittstellenklasse
             ''' </summary>
             DEVICEINTERFACE = 5
-
 
             ''' <summary>
             ''' Dateisystem-Handle
@@ -282,33 +259,24 @@ Public Class DriveWatcher : Inherits Component
         'OEM, und was genau?
         'Uns interesieren nur Volumes
         Private Sub HandleOEM(ByRef m As Message)
-
             Dim oem As DEV_BROADCAST_OEM
             Dim objOem As Object = m.GetLParam(oem.GetType)
-
             If Not Microsoft.VisualBasic.IsNothing(objOem) Then
-
                 oem = DirectCast(objOem, DEV_BROADCAST_OEM)
                 If oem.dbco_devicetype = DBT_DEVTYP.VOLUME Then Me.HandleVolume(m)
-
             End If
-
         End Sub
 
         'Liefert den Laufwerksbuchstaben zurück
         Private Function DriveFromMask(mask As Integer) As Char
-
             Dim result As Char = CChar(String.Empty)
-
             For b As Integer = 0 To 25
                 If (mask And CInt(2 ^ b)) <> 0 Then
                     result = Microsoft.VisualBasic.Chr(65 + b)
                     Exit For
                 End If
             Next b
-
             Return result
-
         End Function
 
         Public Sub New()
@@ -316,42 +284,31 @@ Public Class DriveWatcher : Inherits Component
         End Sub
 
         Protected Overridable Sub Dispose(disposing As Boolean)
-
             If Not Me.disposedValue Then
-
                 If disposing Then
                     ' Verwalteten Zustand (verwaltete Objekte) bereinigen
                     Me.DestroyHandle() 'eigenes Handle zerstören
                 End If
-
                 ' Nicht verwaltete Ressourcen (nicht verwaltete Objekte) freigeben und Finalizer überschreiben
-
-
                 ' Große Felder auf NULL setzen
                 Me.disposedValue = True
-
             End If
-
         End Sub
 
         ' Finalizer nur überschreiben, wenn "Dispose(disposing As Boolean)"
         ' Code für die Freigabe nicht verwalteter Ressourcen enthält
         Protected Overrides Sub Finalize()
-
             ' Ändern Sie diesen Code nicht.
             ' Fügen Sie Bereinigungscode in der Methode "Dispose(disposing As Boolean)" ein.
             Me.Dispose(disposing:=False)
             MyBase.Finalize()
-
         End Sub
 
         Public Sub Dispose() Implements IDisposable.Dispose
-
             ' Ändern Sie diesen Code nicht.
             ' Fügen Sie Bereinigungscode in der Methode "Dispose(disposing As Boolean)" ein.
             Me.Dispose(disposing:=True)
             GC.SuppressFinalize(Me)
-
         End Sub
 
     End Class
