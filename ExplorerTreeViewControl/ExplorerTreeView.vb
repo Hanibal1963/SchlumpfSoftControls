@@ -14,6 +14,7 @@ Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
+Imports System.Windows.Forms.Layout
 
 #End Region
 
@@ -163,6 +164,72 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Get
         Set(value As Integer)
             Me.Tv1.Indent = value
+        End Set
+    End Property
+
+    ''' <summary>
+    ''' ausgeblendet da  nicht Relevant
+    ''' </summary>
+    <Browsable(False)>
+    <EditorBrowsable(EditorBrowsableState.Never)>
+    Public Overrides Property BackgroundImage As Image
+        Get
+            Return MyBase.BackgroundImage
+        End Get
+        Set(value As Image)
+            MyBase.BackgroundImage = value
+        End Set
+    End Property
+
+    ''' <summary>
+    ''' ausgeblendet da  nicht Relevant
+    ''' </summary>
+    <Browsable(False)>
+    <EditorBrowsable(EditorBrowsableState.Never)>
+    Public Overrides Property BackgroundImageLayout As ImageLayout
+        Get
+            Return MyBase.BackgroundImageLayout
+        End Get
+        Set(value As ImageLayout)
+            MyBase.BackgroundImageLayout = value
+        End Set
+    End Property
+
+    ''' <summary>
+    ''' ausgeblendet da  nicht Relevant
+    ''' </summary>
+    <Browsable(False)>
+    <EditorBrowsable(EditorBrowsableState.Never)>
+    Public Overrides Property AutoSize As Boolean
+        Get
+            Return MyBase.AutoSize
+        End Get
+        Set(value As Boolean)
+            MyBase.AutoSize = value
+        End Set
+    End Property
+
+    ''' <summary>
+    ''' ausgeblendet da  nicht Relevant
+    ''' </summary>
+    <Browsable(False)>
+    <EditorBrowsable(EditorBrowsableState.Never)>
+    Public Overloads Property AutosizeMode As AutoSizeMode
+        Get
+            Return MyBase.AutoSizeMode
+        End Get
+        Set(value As AutoSizeMode)
+            MyBase.AutoSizeMode = value
+        End Set
+    End Property
+
+    'TODO: Eigenschaften für die Schriftart hinzufügen
+    Public Overrides Property Font As Font
+        Get
+            Return MyBase.Font
+        End Get
+        Set(value As Font)
+            MyBase.Font = value
         End Set
     End Property
 
