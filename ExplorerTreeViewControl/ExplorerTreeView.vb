@@ -28,8 +28,7 @@ Imports System.Windows.Forms.Layout
 <ToolboxBitmap(GetType(ExplorerTreeView), "ExplorerTreeView.bmp")>
 Public Class ExplorerTreeView : Inherits UserControl
 
-
-#Region "Ereignisdefinitionen"
+#Region "Ereignisdefinitionen für öffentliche Ereignisse"
 
     ''' <summary>
     ''' Wird ausgelöst, wenn sich der ausgewählte Pfad geändert hat.
@@ -40,6 +39,9 @@ Public Class ExplorerTreeView : Inherits UserControl
 
 #End Region
 
+#Region "Ereignisdefinitionen für interne Ereignisse"
+
+#End Region
 
 #Region "neue Eigenschaften"
 
@@ -121,6 +123,10 @@ Public Class ExplorerTreeView : Inherits UserControl
             Me.Tv1.ShowRootLines = value
         End Set
     End Property
+
+#End Region
+
+#Region "überschriebene Eigenschaften"
 
     ''' <summary>
     ''' Legt die Vordergrundfarbe für das Anzeigen von Text fest oder gibt diese zurück.
@@ -223,13 +229,15 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Set
     End Property
 
-    'TODO: Eigenschaften für die Schriftart hinzufügen
+    'BUG: beim auslesen der Schriftart aus Tv1 stürzt die IDE ab.
     Public Overrides Property Font As Font
         Get
             Return MyBase.Font
+            'Return Me.Tv1.Font  
         End Get
         Set(value As Font)
             MyBase.Font = value
+            Me.Tv1.Font = value
         End Set
     End Property
 
@@ -239,16 +247,12 @@ Public Class ExplorerTreeView : Inherits UserControl
     ''' Konstruktor der ExpTreeControl-Klasse.
     ''' </summary>
     Public Sub New()
-
         ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
-
         ' Füllt die ImageList mit den Standardbildern.
         Me.FillImageList()
-
         ' Füllt das TreeView mit den Standardbildern und Knoten.
         Me.FillTreeView()
-
     End Sub
 
 #Region "interne Funktionen"
@@ -257,19 +261,14 @@ Public Class ExplorerTreeView : Inherits UserControl
     ''' Füllt das TreeView mit den Standardbildern und Knoten.
     ''' </summary>
     Private Sub FillTreeView()
-
         ' Erstellt einen neuen Knoten für den Computer.
         Dim node As New ComputerNode
-
         ' Löscht alle vorhandenen Knoten im TreeView.
         Me.Tv1.Nodes.Clear()
-
         ' Fügt den neuen Computerknoten zum TreeView hinzu.
         Dim unused = Me.Tv1.Nodes.Add(node)
-
         ' Erweitert den Computerknoten, um seine Unterknoten anzuzeigen.
         node.Expand()
-
     End Sub
 
     ''' <summary>
@@ -329,28 +328,21 @@ Public Class ExplorerTreeView : Inherits UserControl
     ''' <summary>
     ''' Wird ausgelöst, bevor sich der ausgewählte Knoten ändert.
     ''' </summary>
-    Private Sub Tv1_BeforeExpand(sender As Object, e As TreeViewCancelEventArgs) Handles _
-            Tv1.BeforeExpand
-
+    Private Sub Tv1_BeforeExpand(sender As Object, e As TreeViewCancelEventArgs) Handles Tv1.BeforeExpand
         ' Versucht, den Knoten in einen DirectoryNode zu konvertieren.
         Dim node As DirectoryNode = TryCast(e.Node, DirectoryNode)
-
         ' Wenn der Knoten ein DirectoryNode ist, lädt die Unterverzeichnisse.
         If node IsNot Nothing Then
             node.LoadSubDirectories()
         End If
-
     End Sub
 
     ''' <summary>
     ''' Wird ausgelöst, wenn sich der ausgewählte Knoten geändert hat.
     ''' </summary>
-    Private Sub Tv1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles _
-        Tv1.AfterSelect
-
+    Private Sub Tv1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles Tv1.AfterSelect
         ' Löst das SelectedPathChanged-Ereignis aus, um anzuzeigen, dass sich der ausgewählte Pfad geändert hat.
         RaiseEvent SelectedPathChanged(Me, EventArgs.Empty)
-
     End Sub
 
 #End Region
