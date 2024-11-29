@@ -229,9 +229,15 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Set
     End Property
 
-    'BUG: beim auslesen der Schriftart aus Tv1 stürzt die IDE ab.
+    ''' <summary>
+    ''' Die Schriftart des Textes im Steuerelement.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Appearance")>
+    <Description("Die Schriftart des Textes im Steuerelement.")>
     Public Overrides Property Font As Font
         Get
+            'BUG: beim auslesen der Schriftart aus Tv1 stürzt die IDE ab.
             Return MyBase.Font
             'Return Me.Tv1.Font  
         End Get
