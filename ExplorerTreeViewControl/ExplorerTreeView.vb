@@ -124,6 +124,22 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Set
     End Property
 
+    ''' <summary>
+    ''' Ruft die Höhe des jeweiligen Strukturknotens im Strukturansicht-Steuerelement ab 
+    ''' oder legt diese fest.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Behavior")>
+    <Description("Ruft die Höhe des jeweiligen Strukturknotens im Strukturansicht-Steuerelement ab oder legt diese fest.")>
+    Public Property ItemHight As Integer
+        Get
+            Return Me.Tv1.ItemHeight
+        End Get
+        Set(value As Integer)
+            Me.Tv1.ItemHeight = value
+        End Set
+    End Property
+
 #End Region
 
 #Region "überschriebene Eigenschaften"
