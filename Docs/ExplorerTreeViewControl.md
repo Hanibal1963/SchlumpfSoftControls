@@ -20,11 +20,13 @@ Diese Steuerelement habe ich für ein anderes Projekt entwickelt um dessen Code 
 - **SelectedPath** - Gibt den vollständigen Pfad des ausgewählten Knotens zurück.
 - **LineColor** - Gibt die Farbe der Linien zwischen den Knoten zurück oder legt diese fest.
 - **ShowLines** - Gibt an, ob Linien zwischen den Knoten angezeigt werden.
-- **ShowRootLines** - Gibt an, ob Linien zwischen den Stammknoten angezeigt werden.
 - **ShowPlusMinus** - Legt fest ob die Plus- und Minuszeichen zum Anzeigen von Unterknoten angezeigt werden.
+- **ShowRootLines** - Gibt an, ob Linien zwischen den Stammknoten angezeigt werden.
+- **ItemHeight** - Ruft die Höhe des jeweiligen Strukturknotens im Strukturansicht-Steuerelement ab oder legt diese fest.
 - **ForeColor** - Legt die Vordergrundfarbe für das Anzeigen von Text fest oder gibt diese zurück.
 - **BackColor** - Legt die Hintergrundfarbe für das Steuerelement fest oder gibt diese zurück.
 - **Indent** - Ruft den Abstand für das Einrücken der einzelnen Ebenen von untergeordneten Strukturknoten ab oder legt diesen fest.
+- **Font** - Legt die Schriftart des Textes im Steuerelement fest oder gibt diese zurück.
 
 </details>
 

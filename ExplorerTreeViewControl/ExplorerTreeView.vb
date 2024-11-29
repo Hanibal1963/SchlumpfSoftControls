@@ -100,7 +100,7 @@ Public Class ExplorerTreeView : Inherits UserControl
     <Browsable(True)>
     <Category("Behavior")>
     <Description("Legt fest ob die Plus- und Minuszeichen zum Anzeigen von Unterknoten angezeigt werden.")>
-    Public Property ShowPluMinus As Boolean
+    Public Property ShowPlusMinus As Boolean
         Get
             Return Me.Tv1.ShowPlusMinus
         End Get
@@ -246,11 +246,11 @@ Public Class ExplorerTreeView : Inherits UserControl
     End Property
 
     ''' <summary>
-    ''' Die Schriftart des Textes im Steuerelement.
+    ''' Legt die Schriftart des Textes im Steuerelement fest oder gibt diese zurück.
     ''' </summary>
     <Browsable(True)>
     <Category("Appearance")>
-    <Description("Die Schriftart des Textes im Steuerelement.")>
+    <Description("Legt die Schriftart des Textes im Steuerelement fest oder gibt diese zurück.")>
     Public Overrides Property Font As Font
         Get
             'BUG: beim auslesen der Schriftart aus Tv1 stürzt die IDE ab.
