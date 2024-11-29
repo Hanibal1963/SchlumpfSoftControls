@@ -43,14 +43,18 @@ Public Class ComputerNode : Inherits TreeNode
 
         'spezielle Ordner hinzufügen
         For Each SFI As Environment.SpecialFolder In Me.SpezialFolders
+
             nodes = New SpezialFolderNode(SFI)
             Dim unused = Me.Nodes.Add(nodes)
+
         Next
 
         'Laufwerke hinzufügen
         For Each DRI As DriveInfo In My.Computer.FileSystem.Drives
+
             nodes = New DriveNode(DRI)
             Dim unused = Me.Nodes.Add(nodes)
+
         Next
 
     End Sub

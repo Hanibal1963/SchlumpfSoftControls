@@ -7,7 +7,9 @@
 Imports System
 Imports System.Windows.Forms
 
-Friend Class SpezialFolderNode : Inherits TreeNode
+Friend Class SpezialFolderNode
+
+    Inherits TreeNode
 
     Public Sub New(Folder As Environment.SpecialFolder)
 
