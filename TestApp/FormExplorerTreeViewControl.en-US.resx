@@ -126,4 +126,7 @@
   <data name="FolderBrowserDialog.Description" xml:space="preserve">
     <value>Find a directory to be opened</value>
   </data>
+  <data name="LabelPath.Text" xml:space="preserve">
+    <value> </value>
+  </data>
 </root>

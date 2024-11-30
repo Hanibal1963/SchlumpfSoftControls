@@ -33,6 +33,8 @@ Diese Steuerelement habe ich für ein anderes Projekt entwickelt um dessen Code 
 <details> 
 <summary>Funktionen</summary>
 
+- **ExpandPath** - Öffnet den angegebenen Pfad im TreeView-Steuerelement.
+
 </details>
 
 <details>
