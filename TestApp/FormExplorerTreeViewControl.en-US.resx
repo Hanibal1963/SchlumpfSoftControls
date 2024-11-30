@@ -120,4 +120,13 @@
   <data name="$this.Text" xml:space="preserve">
     <value>ExplorerTreeviewControl - test</value>
   </data>
+  <data name="ButtonSearchPath.Text" xml:space="preserve">
+    <value>Find the path ...</value>
+  </data>
+  <data name="FolderBrowserDialog.Description" xml:space="preserve">
+    <value>Find a directory to be opened</value>
+  </data>
+  <data name="LabelPath.Text" xml:space="preserve">
+    <value> </value>
+  </data>
 </root>

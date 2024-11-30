@@ -13,7 +13,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Control zum Anzeigen der Laufwerke und Ordner eines Computers.")>
 <Assembly: AssemblyCompany("SchlumpfSoft")>
 <Assembly: AssemblyProduct("ExplorerTreeViewControl")>
-<Assembly: AssemblyCopyright("Copyright © Andreas Sauer 2024")>
+<Assembly: AssemblyCopyright("Copyright © 2024 by Andreas Sauer")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

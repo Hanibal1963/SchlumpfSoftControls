@@ -12,9 +12,13 @@
 
 Imports System
 Imports System.ComponentModel
+Imports System.Diagnostics
 Imports System.Drawing
+Imports System.Linq
 Imports System.Windows.Forms
 Imports System.Windows.Forms.Layout
+Imports Microsoft.VisualBasic
+Imports Microsoft.VisualStudio.PlatformUI
 
 #End Region
 
@@ -276,6 +280,60 @@ Public Class ExplorerTreeView : Inherits UserControl
         ' Füllt das TreeView mit den Standardbildern und Knoten.
         Me.FillTreeView()
     End Sub
+
+#Region "öffentliche Funktionen"
+
+    ''' <summary>
+    ''' Öffnet den angegebenen Pfad im TreeView-Steuerelement.
+    ''' </summary>
+    Public Sub ExpandPath(Path As String)
+
+        'Pfad in einzelne Verzeichnisse aufteilen.
+        Dim dirs As String() = Path.Split(
+            New Char() {"\"c},
+            StringSplitOptions.RemoveEmptyEntries)
+
+
+        'Startet die Suche beim Wurzelknoten.
+        Dim currentNode As TreeNode = Me.Tv1.Nodes(0)
+
+        'Durchläuft die Verzeichnisse im Pfad.
+        For Each dir As String In dirs
+
+            Dim found As Boolean = False
+
+            'Durchläuft die untergeordneten Knoten des aktuellen Knotens.
+            For Each node As TreeNode In currentNode.Nodes
+
+                'eventuell vorhandene Klammern entfernen
+                Dim s As String = node.Text
+                If InStr(s, "(") > 0 Then
+                    s = Strings.Split(s, "(").ElementAt(1).Replace(")", "")
+                End If
+
+                'Wenn der Knoten gefunden wurde, wird er erweitert und als aktueller Knoten gesetzt.
+                If String.Equals(s, dir, StringComparison.OrdinalIgnoreCase) Then
+                    currentNode = node
+                    currentNode.Expand()
+                    found = True
+                    Exit For
+                End If
+
+            Next
+
+            ' Wenn der Knoten nicht gefunden wurde, wird die Suche abgebrochen.
+            If Not found Then
+                Exit Sub
+            End If
+
+        Next
+
+        ' Wählt den letzten Knoten im Pfad aus.
+        Me.Tv1.SelectedNode = currentNode
+
+    End Sub
+
+#End Region
 
 #Region "interne Funktionen"
 

@@ -17,8 +17,8 @@ Imports Microsoft.VisualBasic
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("SchlumpfSoft")>
 <Assembly: AssemblyProduct("SchlumpfSoftControls")>
-<Assembly: AssemblyCopyright("© 2024 by Andreas Sauer")>
-<Assembly: AssemblyTrademark("privat")>
+<Assembly: AssemblyCopyright("Copyright © 2023 - 2024 by Andreas Sauer")>
+<Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 
 ' Setting ComVisible to false makes the types in this assembly not visible 
@@ -36,7 +36,7 @@ Imports Microsoft.VisualBasic
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 ' [assembly: AssemblyVersion("1.0.*")]
-<Assembly: AssemblyVersion("3.2024.11.29")>
-<Assembly: AssemblyFileVersion("3.2024.11.29")>
+<Assembly: AssemblyVersion("3.2024.11.30")>
+<Assembly: AssemblyFileVersion("3.2024.11.30")>
 
 <assembly: AssemblyInformationalVersion("0.2024.11.29")>

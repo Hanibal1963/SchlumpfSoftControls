@@ -21,7 +21,9 @@ Friend Class DirectoryNode : Inherits TreeNode
 
         'wenn Unterverzeichnisse vorhanden sind, wird ein Dummy hinzugefügt
         If DII.GetDirectories().Any() Then
+
             Dim unused = Me.Nodes.Add(New TreeNode(""))
+
         End If
 
     End Sub
@@ -39,8 +41,10 @@ Friend Class DirectoryNode : Inherits TreeNode
         Try
 
             For Each d As DirectoryInfo In DII.GetDirectories
+
                 node = New DirectoryNode(d)
                 Dim unused = Me.Nodes.Add(node)
+
             Next
 
         Catch ex As UnauthorizedAccessException

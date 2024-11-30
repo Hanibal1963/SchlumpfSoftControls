@@ -13,12 +13,12 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("SchlumpfSoft")>
 <Assembly: AssemblyProduct("WizardControl")>
-<Assembly: AssemblyCopyright("© 2024 by Andreas Sauer")>
+<Assembly: AssemblyCopyright("Copyright © 2024 by Andreas Sauer")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 <Assembly: ComVisible(False)>
-<Assembly: AssemblyVersion("2.2024.11.29")>
-<Assembly: AssemblyFileVersion("2.2024.11.29")>
+<Assembly: AssemblyVersion("2.2024.11.30")>
+<Assembly: AssemblyFileVersion("2.2024.11.30")>
 <Assembly: NeutralResourcesLanguage("de-DE")>
 
-<assembly: AssemblyInformationalVersion("0.2024.11.29")>
+<assembly: AssemblyInformationalVersion("0.2024.11.30")>
