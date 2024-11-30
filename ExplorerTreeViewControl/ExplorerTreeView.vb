@@ -12,6 +12,7 @@
 
 Imports System
 Imports System.ComponentModel
+Imports System.Diagnostics
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports System.Windows.Forms.Layout
@@ -276,6 +277,30 @@ Public Class ExplorerTreeView : Inherits UserControl
         ' Füllt das TreeView mit den Standardbildern und Knoten.
         Me.FillTreeView()
     End Sub
+
+#Region "öffentliche Funktionen"
+
+    Public Sub ExpandPath(Path As String)
+
+        'Pfad in einzelne Verzeichnisse aufteilen.
+        Dim dirs As String() = Path.Split(
+            New Char() {"\"c},
+            StringSplitOptions.RemoveEmptyEntries)
+
+#If DEBUG Then
+
+        Dim z As Integer=0
+        For Each dir As String In dirs
+            Debug.Print($"Verzeichnisteil {z}: {dir}")
+            z += 1
+        Next
+
+#End If
+
+
+    End Sub
+
+#End Region
 
 #Region "interne Funktionen"
 

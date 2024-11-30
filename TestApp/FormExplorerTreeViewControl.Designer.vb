@@ -27,7 +27,11 @@ Partial Class FormExplorerTreeViewControl
         Dim SplitContainer2 As System.Windows.Forms.SplitContainer
         Me.ExplorerTreeView = New SchlumpfSoft.Controls.ExplorerTreeViewControl.ExplorerTreeView()
         Me.TextBox = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.ListView = New System.Windows.Forms.ListView()
+        Me.ButtonSearchPath = New System.Windows.Forms.Button()
+        Me.LabelPath = New System.Windows.Forms.Label()
+        Me.FolderBrowserDialog = New System.Windows.Forms.FolderBrowserDialog()
         SplitContainer1 = New System.Windows.Forms.SplitContainer()
         SplitContainer2 = New System.Windows.Forms.SplitContainer()
         CType(SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -38,6 +42,7 @@ Partial Class FormExplorerTreeViewControl
         SplitContainer2.Panel1.SuspendLayout()
         SplitContainer2.Panel2.SuspendLayout()
         SplitContainer2.SuspendLayout()
+        Me.TableLayoutPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -61,8 +66,7 @@ Partial Class FormExplorerTreeViewControl
         Me.ExplorerTreeView.LineColor = System.Drawing.Color.Black
         Me.ExplorerTreeView.Name = "ExplorerTreeView"
         Me.ExplorerTreeView.ShowLines = True
-        Me.ExplorerTreeView.ShowNodeToolTips = True
-        Me.ExplorerTreeView.ShowPluMinus = True
+        Me.ExplorerTreeView.ShowPlusMinus = True
         Me.ExplorerTreeView.ShowRootLines = True
         '
         'SplitContainer2
@@ -76,7 +80,7 @@ Partial Class FormExplorerTreeViewControl
         '
         'SplitContainer2.Panel2
         '
-        SplitContainer2.Panel2.Controls.Add(Me.ListView)
+        SplitContainer2.Panel2.Controls.Add(Me.TableLayoutPanel)
         '
         'TextBox
         '
@@ -84,14 +88,40 @@ Partial Class FormExplorerTreeViewControl
         resources.ApplyResources(Me.TextBox, "TextBox")
         Me.TextBox.Name = "TextBox"
         '
+        'TableLayoutPanel
+        '
+        resources.ApplyResources(Me.TableLayoutPanel, "TableLayoutPanel")
+        Me.TableLayoutPanel.Controls.Add(Me.ListView, 0, 0)
+        Me.TableLayoutPanel.Controls.Add(Me.ButtonSearchPath, 1, 1)
+        Me.TableLayoutPanel.Controls.Add(Me.LabelPath, 0, 1)
+        Me.TableLayoutPanel.Name = "TableLayoutPanel"
+        '
         'ListView
         '
+        Me.TableLayoutPanel.SetColumnSpan(Me.ListView, 2)
         resources.ApplyResources(Me.ListView, "ListView")
         Me.ListView.HideSelection = False
         Me.ListView.MultiSelect = False
         Me.ListView.Name = "ListView"
         Me.ListView.UseCompatibleStateImageBehavior = False
         Me.ListView.View = System.Windows.Forms.View.List
+        '
+        'ButtonSearchPath
+        '
+        resources.ApplyResources(Me.ButtonSearchPath, "ButtonSearchPath")
+        Me.ButtonSearchPath.Name = "ButtonSearchPath"
+        Me.ButtonSearchPath.UseVisualStyleBackColor = True
+        '
+        'LabelPath
+        '
+        resources.ApplyResources(Me.LabelPath, "LabelPath")
+        Me.LabelPath.Name = "LabelPath"
+        '
+        'FolderBrowserDialog
+        '
+        resources.ApplyResources(Me.FolderBrowserDialog, "FolderBrowserDialog")
+        Me.FolderBrowserDialog.RootFolder = System.Environment.SpecialFolder.MyComputer
+        Me.FolderBrowserDialog.ShowNewFolderButton = False
         '
         'FormExplorerTreeViewControl
         '
@@ -113,6 +143,7 @@ Partial Class FormExplorerTreeViewControl
         SplitContainer2.Panel2.ResumeLayout(False)
         CType(SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         SplitContainer2.ResumeLayout(False)
+        Me.TableLayoutPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -120,4 +151,8 @@ Partial Class FormExplorerTreeViewControl
     Private WithEvents TextBox As TextBox
   Private WithEvents ListView As ListView
     Private WithEvents ExplorerTreeView As SchlumpfSoft.Controls.ExplorerTreeViewControl.ExplorerTreeView
+    Private WithEvents TableLayoutPanel As TableLayoutPanel
+    Private WithEvents ButtonSearchPath As Button
+    Private WithEvents LabelPath As Label
+    Private WithEvents FolderBrowserDialog As FolderBrowserDialog
 End Class

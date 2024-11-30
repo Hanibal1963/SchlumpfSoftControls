@@ -36,6 +36,18 @@ Public Class FormExplorerTreeViewControl
 
     End Sub
 
+    Private Sub ButtonSearchPath_Click(sender As Object, e As EventArgs) Handles ButtonSearchPath.Click
+
+        Dim result As DialogResult = Me.FolderBrowserDialog.ShowDialog(Me)
+        If result = DialogResult.OK Then
+
+            Me.LabelPath.Text = Me.FolderBrowserDialog.SelectedPath
+            Me.ExplorerTreeView.ExpandPath(Me.FolderBrowserDialog.SelectedPath)
+
+        End If
+
+    End Sub
+
     Private Function GetName(FileOrDirectory As String) As String
 
         Return Path.GetFileName(FileOrDirectory)
