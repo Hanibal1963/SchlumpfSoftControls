@@ -300,7 +300,24 @@ Public Class ExplorerTreeView : Inherits UserControl
             Debug.Print($"Verzeichnisteil gefunden: {dir}")
 #End If
 
+            ' Durchläuft die untergeordneten Knoten des aktuellen Knotens.
+            For Each node As TreeNode In currentNode.Nodes
 
+#If DEBUG Then
+                Debug.Print($"Knoten: {node.Text}")
+#End If
+
+
+
+
+                If String.Equals(node.Text, dir, StringComparison.OrdinalIgnoreCase) Then
+                    ' Wenn der Knoten gefunden wurde, wird er erweitert und als aktueller Knoten gesetzt.
+                    currentNode = node
+                    currentNode.Expand()
+                    found = True
+                    Exit For
+                End If
+            Next
 
 
 
