@@ -18,7 +18,7 @@ Imports Microsoft.VisualBasic
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("SchlumpfSoft")>
 <Assembly: AssemblyProduct("ShapeControl")>
-<Assembly: AssemblyCopyright("© 2024 by Andreas Sauer")>
+<Assembly: AssemblyCopyright("Copyright © 2024 by Andreas Sauer")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

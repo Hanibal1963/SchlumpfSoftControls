@@ -18,7 +18,7 @@ Imports Microsoft.VisualBasic
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("SchlumpfSoft")>
 <Assembly: AssemblyProduct("TransparentLabelControl")>
-<Assembly: AssemblyCopyright("Copyright © 2024 Andreas Sauer")>
+<Assembly: AssemblyCopyright("Copyright © 2024 by Andreas Sauer")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 

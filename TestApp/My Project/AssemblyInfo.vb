@@ -13,7 +13,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Testprogramm für SchlumpfSoft Controls")>
 <Assembly: AssemblyCompany("SchlumpfSoft")>
 <Assembly: AssemblyProduct("SchlumpfSoft Controls")>
-<Assembly: AssemblyCopyright("Copyright © Andreas Sauer 2023 - 2024")>
+<Assembly: AssemblyCopyright("Copyright © 2023 - 2024 by Andreas Sauer")>
 <Assembly: AssemblyTrademark("privat")>
 
 <Assembly: ComVisible(False)>

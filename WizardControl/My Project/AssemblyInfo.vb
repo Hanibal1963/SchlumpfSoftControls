@@ -13,7 +13,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("SchlumpfSoft")>
 <Assembly: AssemblyProduct("WizardControl")>
-<Assembly: AssemblyCopyright("© 2024 by Andreas Sauer")>
+<Assembly: AssemblyCopyright("Copyright © 2024 by Andreas Sauer")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 <Assembly: ComVisible(False)>

@@ -15,7 +15,7 @@ Imports Microsoft.VisualBasic
 <Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("SchlumpfSoft")>
 <Assembly: AssemblyProduct("IniFileControl")>
-<Assembly: AssemblyCopyright("© 2023 - 2024 by Andreas Sauer")>
+<Assembly: AssemblyCopyright("Copyright © 2023 - 2024 by Andreas Sauer")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 
