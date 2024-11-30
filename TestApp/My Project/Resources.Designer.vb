@@ -398,6 +398,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Aktuell ausgewählter Pfad: ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ExplTreeView_TextBox_String1() As String
+            Get
+                Return ResourceManager.GetString("ExplTreeView_TextBox_String1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Dateiinhalt: ähnelt.
         '''</summary>
         Friend ReadOnly Property IniFile_ContentViewTitle() As String

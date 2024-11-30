@@ -164,6 +164,9 @@ Please choose another name.</value>
     <value>The selected section name already exists!
 Please choose another name.</value>
   </data>
+  <data name="ExplTreeView_TextBox_String1" xml:space="preserve">
+    <value>Currently selected path:</value>
+  </data>
   <data name="IniFile_ContentViewTitle" xml:space="preserve">
     <value>File content:</value>
   </data>

@@ -13,6 +13,7 @@ Zurzeit sind folgende Steuerelemente vorhanden:
 - [TransparentLabel Control](./Docs/TransparentLabelControl.md) - Ein Control zum Anzeigen eines Textes mit durchscheinendem Hintergrund.
 - [SevenSegment Control](./Docs/SevenSegmentControl.md) - Ein Control zum Anzeigen von Zeichen als 7-Segmentanzeige 
 - **NEU** [ExplorerTreeView Control](./Docs/ExplorerTreeViewControl.md) - Ein Control zum Anzeigen von Laufwerken und Ordnern eines PC's
+
 ---
 
 # geplante Änderungen und Erweiterungen

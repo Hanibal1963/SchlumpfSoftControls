@@ -12,7 +12,7 @@ Public Class FormExplorerTreeViewControl
 
         ' aktuell ausgewählten Pfad anzeigen
         Dim selpath As String = Me.ExplorerTreeView.SelectedPath
-        Dim text As String = $"{Me.TextBox.Text}{vbCrLf}aktuell ausgewählter Pfad: {selpath}"
+        Dim text As String = $"{Me.TextBox.Text}{vbCrLf}{My.Resources.ExplTreeView_TextBox_String1} {selpath}"
         Me.TextBox.Text = text
 
         ' Liste leeren

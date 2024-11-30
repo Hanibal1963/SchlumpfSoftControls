@@ -225,6 +225,9 @@ Bitte wählen sie einen anderen Name.</value>
     <value>Der gewählte Abschnittsname existiert bereits!
 Bitte wählen sie einen anderen Name.</value>
   </data>
+  <data name="ExplTreeView_TextBox_String1" xml:space="preserve">
+    <value>Aktuell ausgewählter Pfad:</value>
+  </data>
   <data name="IniFile_ContentViewTitle" xml:space="preserve">
     <value>Dateiinhalt:</value>
   </data>
