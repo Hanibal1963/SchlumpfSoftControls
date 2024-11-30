@@ -287,15 +287,32 @@ Public Class ExplorerTreeView : Inherits UserControl
             New Char() {"\"c},
             StringSplitOptions.RemoveEmptyEntries)
 
-#If DEBUG Then
 
-        Dim z As Integer=0
+        'Startet die Suche beim Wurzelknoten.
+        Dim currentNode As TreeNode = Me.Tv1.Nodes(0)
+
+        'Durchläuft die Verzeichnisse im Pfad.
         For Each dir As String In dirs
-            Debug.Print($"Verzeichnisteil {z}: {dir}")
-            z += 1
-        Next
 
+            Dim found As Boolean = False
+
+#If DEBUG Then
+            Debug.Print($"Verzeichnisteil gefunden: {dir}")
 #End If
+
+
+
+
+
+
+
+
+            ' Wenn der Knoten nicht gefunden wurde, wird die Suche abgebrochen.
+            If Not found Then
+                Exit Sub
+            End If
+
+        Next
 
 
     End Sub
