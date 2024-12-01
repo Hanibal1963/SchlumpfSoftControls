@@ -95,6 +95,12 @@
     <Compile Include="FormAniGifControl.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormColorProgressBarControl.Designer.vb">
+      <DependentUpon>FormColorProgressBarControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormColorProgressBarControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormDriveWatcherControl.Designer.vb">
       <DependentUpon>FormDriveWatcherControl.vb</DependentUpon>
     </Compile>
@@ -174,6 +180,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAniGifControl.resx">
       <DependentUpon>FormAniGifControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormColorProgressBarControl.en-US.resx">
+      <DependentUpon>FormColorProgressBarControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormColorProgressBarControl.resx">
+      <DependentUpon>FormColorProgressBarControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDriveWatcherControl.en-US.resx">
       <DependentUpon>FormDriveWatcherControl.vb</DependentUpon>
@@ -256,6 +268,10 @@
     <ProjectReference Include="..\AniGifControl\AniGifControl.vbproj">
       <Project>{98546338-1a3f-47bf-b195-5b25a19c4dfa}</Project>
       <Name>AniGifControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorProgressBarControl\ColorProgressBarControl.vbproj">
+      <Project>{21c5ed2a-df2c-4344-bbd2-1c234e9a64fa}</Project>
+      <Name>ColorProgressBarControl</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveWatcherControl\DriveWatcherControl.vbproj">
       <Project>{fba9160f-6f7d-4182-982c-5df153309f33}</Project>

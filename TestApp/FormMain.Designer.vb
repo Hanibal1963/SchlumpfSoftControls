@@ -37,25 +37,26 @@ Partial Class FormMain
     Me.ButtonWizardControl = New System.Windows.Forms.Button()
     Me.ButtonExplorerTreeView = New System.Windows.Forms.Button()
     Me.MenuStrip = New System.Windows.Forms.MenuStrip()
+        Me.ButtonColorProgressBar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel.SuspendLayout()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStripMenuItemSprache
         '
-        resources.ApplyResources(Me.ToolStripMenuItemSprache, "ToolStripMenuItemSprache")
         Me.ToolStripMenuItemSprache.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemDeutsch, Me.ToolStripMenuItemEnglisch})
         Me.ToolStripMenuItemSprache.Name = "ToolStripMenuItemSprache"
+        resources.ApplyResources(Me.ToolStripMenuItemSprache, "ToolStripMenuItemSprache")
         '
         'ToolStripMenuItemDeutsch
         '
-        resources.ApplyResources(Me.ToolStripMenuItemDeutsch, "ToolStripMenuItemDeutsch")
         Me.ToolStripMenuItemDeutsch.Name = "ToolStripMenuItemDeutsch"
+        resources.ApplyResources(Me.ToolStripMenuItemDeutsch, "ToolStripMenuItemDeutsch")
         '
         'ToolStripMenuItemEnglisch
         '
-        resources.ApplyResources(Me.ToolStripMenuItemEnglisch, "ToolStripMenuItemEnglisch")
         Me.ToolStripMenuItemEnglisch.Name = "ToolStripMenuItemEnglisch"
+        resources.ApplyResources(Me.ToolStripMenuItemEnglisch, "ToolStripMenuItemEnglisch")
         '
         'FlowLayoutPanel
         '
@@ -69,6 +70,7 @@ Partial Class FormMain
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonTransparentLabelControl)
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonWizardControl)
         Me.FlowLayoutPanel.Controls.Add(Me.ButtonExplorerTreeView)
+        Me.FlowLayoutPanel.Controls.Add(Me.ButtonColorProgressBar)
         Me.FlowLayoutPanel.Name = "FlowLayoutPanel"
         '
         'ButtonAniGif
@@ -127,9 +129,15 @@ Partial Class FormMain
         '
         'MenuStrip
         '
-        resources.ApplyResources(Me.MenuStrip, "MenuStrip")
         Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemSprache})
+        resources.ApplyResources(Me.MenuStrip, "MenuStrip")
         Me.MenuStrip.Name = "MenuStrip"
+        '
+        'ButtonColorProgressBar
+        '
+        resources.ApplyResources(Me.ButtonColorProgressBar, "ButtonColorProgressBar")
+        Me.ButtonColorProgressBar.Name = "ButtonColorProgressBar"
+        Me.ButtonColorProgressBar.UseVisualStyleBackColor = True
         '
         'FormMain
         '
@@ -164,4 +172,5 @@ Partial Class FormMain
     Private WithEvents ToolStripMenuItemEnglisch As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItemSprache As ToolStripMenuItem
     Private WithEvents ButtonExplorerTreeView As Button
+    Private WithEvents ButtonColorProgressBar As Button
 End Class

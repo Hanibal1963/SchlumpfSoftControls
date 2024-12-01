@@ -33,7 +33,7 @@ Public Class FormMain
         ButtonWizardControl.Click,
         ButtonTransparentLabelControl.Click,
         ButtonShapeControl.Click,
-        ButtonExplorerTreeView.Click
+        ButtonExplorerTreeView.Click, ButtonColorProgressBar.Click
 
         Dim result As DialogResult = DialogResult.None
 
@@ -66,6 +66,9 @@ Public Class FormMain
 
             ElseIf sender Is Me.ButtonExplorerTreeView Then
                 result = My.Forms.FormExplorerTreeViewControl.ShowDialog(Me)
+
+            ElseIf sender Is Me.ButtonColorProgressBar Then
+                result = My.Forms.FormColorProgressBarControl.ShowDialog(Me)
 
             End If
 
