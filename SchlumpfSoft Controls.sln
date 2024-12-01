@@ -36,6 +36,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{34AB3658-1BDF-4ED8-BECA-7BFA05E41D82}"
 	ProjectSection(SolutionItems) = preProject
 		Docs\AniGifControl.md = Docs\AniGifControl.md
+		Docs\ColorProgressBarControl.md = Docs\ColorProgressBarControl.md
 		Docs\DriveWatcherControl.md = Docs\DriveWatcherControl.md
 		Docs\ExplorerTreeViewControl.md = Docs\ExplorerTreeViewControl.md
 		Docs\IniFileControl.md = Docs\IniFileControl.md
@@ -47,6 +48,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{34AB3658-1
 	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExplorerTreeViewControl", "ExplorerTreeViewControl\ExplorerTreeViewControl.vbproj", "{8EB6FF5D-8F48-4766-AC1F-690F2707DD69}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ColorProgressBarControl", "ColorProgressBarControl\ColorProgressBarControl.vbproj", "{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -190,6 +193,18 @@ Global
 		{8EB6FF5D-8F48-4766-AC1F-690F2707DD69}.Release|arm64.Build.0 = Release|arm64
 		{8EB6FF5D-8F48-4766-AC1F-690F2707DD69}.Release|x86.ActiveCfg = Release|x86
 		{8EB6FF5D-8F48-4766-AC1F-690F2707DD69}.Release|x86.Build.0 = Release|x86
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Debug|arm64.ActiveCfg = Debug|arm64
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Debug|arm64.Build.0 = Debug|arm64
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Debug|x86.ActiveCfg = Debug|x86
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Debug|x86.Build.0 = Debug|x86
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Release|arm64.ActiveCfg = Release|arm64
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Release|arm64.Build.0 = Release|arm64
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Release|x86.ActiveCfg = Release|x86
+		{21C5ED2A-DF2C-4344-BBD2-1C234E9A64FA}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -198,12 +213,12 @@ Global
 		{34AB3658-1BDF-4ED8-BECA-7BFA05E41D82} = {D1836307-515A-4493-85B3-F56DFC9C2214}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1F02675E-F1F5-4CB4-9063-742717056245}
-		RESX_NeutralResourcesLanguage = de-DE
-		RESX_PrefixTranslations = False
-		RESX_AutoCreateNewLanguageFiles = False
-		RESX_CultureCountyOverrides = 
-		RESX_ConfirmAddLanguageFile = True
 		RESX_SortFileContentOnSave = True
+		RESX_ConfirmAddLanguageFile = True
+		RESX_CultureCountyOverrides = 
+		RESX_AutoCreateNewLanguageFiles = False
+		RESX_PrefixTranslations = False
+		RESX_NeutralResourcesLanguage = de-DE
+		SolutionGuid = {1F02675E-F1F5-4CB4-9063-742717056245}
 	EndGlobalSection
 EndGlobal
