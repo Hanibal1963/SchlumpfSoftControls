@@ -29,6 +29,7 @@ Partial Class ExplorerTreeView
         Me.Tv1 = New System.Windows.Forms.TreeView()
         Me.ImageList = New System.Windows.Forms.ImageList(Me.components)
         Me.StateImageList = New System.Windows.Forms.ImageList(Me.components)
+        Me.Dw = New SchlumpfSoft.Controls.DriveWatcherControl.DriveWatcher(Me.components)
         Me.SuspendLayout()
         '
         'Tv1
@@ -63,4 +64,5 @@ Partial Class ExplorerTreeView
     Private WithEvents Tv1 As TreeView
     Private WithEvents StateImageList As ImageList
     Private WithEvents ImageList As ImageList
+    Private WithEvents Dw As DriveWatcherControl.DriveWatcher
 End Class

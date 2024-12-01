@@ -401,6 +401,15 @@ Public Class ExplorerTreeView : Inherits UserControl
 
     End Sub
 
+    ''' <summary>
+    ''' Aktualisiert die Laufwerke im TreeView-Steuerelement.
+    ''' </summary>
+    Private Sub UpdateDrives()
+        Dim lastpath As String = Me.SelectedPath
+        Me.FillTreeView()
+        Me.ExpandPath(lastpath)
+    End Sub
+
 #End Region
 
 #Region "interne Ereignisbehandlungen"
@@ -423,6 +432,20 @@ Public Class ExplorerTreeView : Inherits UserControl
     Private Sub Tv1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles Tv1.AfterSelect
         ' Löst das SelectedPathChanged-Ereignis aus, um anzuzeigen, dass sich der ausgewählte Pfad geändert hat.
         RaiseEvent SelectedPathChanged(Me, EventArgs.Empty)
+    End Sub
+
+    ''' <summary>
+    ''' Wird ausgeführt wenn ein Laufwerk hinzugefügt wurde.
+    ''' </summary>
+    Private Sub Dw_DriveAdded(sender As Object, e As DriveWatcherControl.DriveAddedEventArgs) Handles Dw.DriveAdded
+        Me.UpdateDrives()
+    End Sub
+
+    ''' <summary>
+    ''' Wird ausgeführt wenn ein Laufwerk entfernt wurde.
+    ''' </summary>
+    Private Sub Dw_DriveRemoved(sender As Object, e As DriveWatcherControl.DriveRemovedEventArgs) Handles Dw.DriveRemoved
+        Me.UpdateDrives()
     End Sub
 
 #End Region

@@ -118,61 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Tv1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Tv1.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>170, 13</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <metadata name="StateImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>39, 13</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ExplorerTreeView</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 349</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="ImageList.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
   </data>
-  <data name="&gt;&gt;ImageList.Name" xml:space="preserve">
-    <value>ImageList</value>
-  </data>
-  <data name="&gt;&gt;ImageList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="StateImageList.ImageSize" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
-  </data>
-  <data name="&gt;&gt;StateImageList.Name" xml:space="preserve">
-    <value>StateImageList</value>
-  </data>
-  <data name="&gt;&gt;StateImageList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Tv1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Tv1.ImageIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="Tv1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;Tv1.Name" xml:space="preserve">
-    <value>Tv1</value>
-  </data>
-  <data name="&gt;&gt;Tv1.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="Tv1.SelectedImageIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -180,13 +141,61 @@
   <data name="Tv1.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 349</value>
   </data>
+  <metadata name="StateImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>39, 13</value>
+  </metadata>
+  <data name="StateImageList.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
   <data name="Tv1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;Tv1.Name" xml:space="preserve">
+    <value>Tv1</value>
   </data>
   <data name="&gt;&gt;Tv1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;Tv1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;Tv1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <metadata name="Dw.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>275, 13</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 349</value>
+  </data>
+  <data name="&gt;&gt;ImageList.Name" xml:space="preserve">
+    <value>ImageList</value>
+  </data>
+  <data name="&gt;&gt;ImageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StateImageList.Name" xml:space="preserve">
+    <value>StateImageList</value>
+  </data>
+  <data name="&gt;&gt;StateImageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dw.Name" xml:space="preserve">
+    <value>Dw</value>
+  </data>
+  <data name="&gt;&gt;Dw.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.DriveWatcherControl.DriveWatcher, DriveWatcherControl, Version=2.2024.11.30, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ExplorerTreeView</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

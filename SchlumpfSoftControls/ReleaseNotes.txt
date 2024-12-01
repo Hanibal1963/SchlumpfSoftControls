@@ -1,6 +1,9 @@
 Versionsverlauf
 ===============
 
+Version 3.2024.12.01 - Datum: 01.12.2024
+- interne Funktion zum aktualisieren der Laufwerke hinzugefügt
+
 Version 3.2024.11.30 - Datum: 30.11.2024
 - neue Funktion zum *ExplorerTreeView* hinzugefuegt
 - automatische Versionierung der einzelnen Controls abgeschaltet (zum Erhalt der jeweiligen aktuellen Version)

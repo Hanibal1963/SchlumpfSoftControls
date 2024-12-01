@@ -133,6 +133,12 @@
     <Content Include="Resources\ImgSystemDrive.png" />
     <Content Include="Resources\ImgVideosFolder.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DriveWatcherControl\DriveWatcherControl.vbproj">
+      <Project>{FBA9160F-6F7D-4182-982C-5DF153309F33}</Project>
+      <Name>DriveWatcherControl</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
