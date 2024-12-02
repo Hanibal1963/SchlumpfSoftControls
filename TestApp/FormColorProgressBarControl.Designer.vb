@@ -23,7 +23,6 @@ Partial Class FormColorProgressBarControl
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormColorProgressBarControl))
-        Me.ColorProgressBar = New SchlumpfSoft.Controls.ColorProgressBarControl.ColorProgressBar()
         Me.CheckBoxShowBorder = New System.Windows.Forms.CheckBox()
         Me.CheckBoxShowGliss = New System.Windows.Forms.CheckBox()
         Me.ColorDialog = New System.Windows.Forms.ColorDialog()
@@ -31,17 +30,9 @@ Partial Class FormColorProgressBarControl
         Me.ButtonEmptyColor = New System.Windows.Forms.Button()
         Me.ButtonBorderColor = New System.Windows.Forms.Button()
         Me.NumericUpDownProgressValue = New System.Windows.Forms.NumericUpDown()
+        Me.ColorProgressBar = New SchlumpfSoft.Controls.ColorProgressBarControl.ColorProgressBar()
         CType(Me.NumericUpDownProgressValue, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ColorProgressBar
-        '
-        Me.ColorProgressBar.BackColor = System.Drawing.Color.Black
-        Me.ColorProgressBar.BarColor = System.Drawing.Color.Blue
-        Me.ColorProgressBar.BorderColor = System.Drawing.Color.Black
-        Me.ColorProgressBar.EmptyColor = System.Drawing.Color.LightGray
-        resources.ApplyResources(Me.ColorProgressBar, "ColorProgressBar")
-        Me.ColorProgressBar.Name = "ColorProgressBar"
         '
         'CheckBoxShowBorder
         '
@@ -81,6 +72,15 @@ Partial Class FormColorProgressBarControl
         '
         resources.ApplyResources(Me.NumericUpDownProgressValue, "NumericUpDownProgressValue")
         Me.NumericUpDownProgressValue.Name = "NumericUpDownProgressValue"
+        '
+        'ColorProgressBar
+        '
+        Me.ColorProgressBar.BackColor = System.Drawing.Color.Black
+        Me.ColorProgressBar.BarColor = System.Drawing.Color.Blue
+        Me.ColorProgressBar.BorderColor = System.Drawing.Color.Black
+        Me.ColorProgressBar.EmptyColor = System.Drawing.Color.LightGray
+        resources.ApplyResources(Me.ColorProgressBar, "ColorProgressBar")
+        Me.ColorProgressBar.Name = "ColorProgressBar"
         '
         'FormColorProgressBarControl
         '
