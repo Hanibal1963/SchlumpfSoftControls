@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="SchlumpfSoftControls.67733eb9-8dac-495e-aaaf-c655d899bf18" Version="3.2024.12.01" Language="de-DE" Publisher="Andreas Sauer" />
+        <Identity Id="SchlumpfSoftControls.67733eb9-8dac-495e-aaaf-c655d899bf18" Version="3.2024.12.06" Language="de-DE" Publisher="Andreas Sauer" />
         <DisplayName>SchlumpfSoftControls</DisplayName>
         <Description xml:space="preserve">Eine Sammlung verschiedener Controls.</Description>
         <MoreInfo>https://github.com/Hanibal1963/SchlumpfSoftControls</MoreInfo>
         <License>LICENSE.rtf</License>
         <ReleaseNotes>ReleaseNotes.txt</ReleaseNotes>
         <Icon>Papa Schlumpf 08.jpg</Icon>
-        <Tags>Windows Forms,Control,Animation,Drive,IniFile,Shape,SevenSegment,Transparent,Wizard,NotifyForm,Label,Explorer,TreeView</Tags>
+        <Tags>Windows Forms,Control,Animation,Drive,IniFile,Shape,SevenSegment,Transparent,Wizard,NotifyForm,Label,Explorer,TreeView,ProgressBar,Color</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
@@ -37,5 +37,6 @@
         <Asset Type="Microsoft.VisualStudio.ToolboxControl" d:Source="Project" d:ProjectName="TransparentLabelControl" Path="|TransparentLabelControl;PkgdefProjectOutputGroup|" />
         <Asset Type="Microsoft.VisualStudio.ToolboxControl" d:Source="Project" d:ProjectName="WizardControl" Path="|WizardControl;PkgdefProjectOutputGroup|" />
         <Asset Type="Microsoft.VisualStudio.ToolboxControl" d:Source="Project" d:ProjectName="ExplorerTreeViewControl" Path="|ExplorerTreeViewControl;PkgdefProjectOutputGroup|" />
+        <Asset Type="Microsoft.VisualStudio.ToolboxControl" d:Source="Project" d:ProjectName="ColorProgressBarControl" Path="|ColorProgressBarControl;PkgdefProjectOutputGroup|" />
     </Assets>
 </PackageManifest>

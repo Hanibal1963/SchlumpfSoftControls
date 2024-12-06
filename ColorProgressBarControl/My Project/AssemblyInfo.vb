@@ -37,6 +37,6 @@ Imports Microsoft.VisualBasic
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 ' [assembly: AssemblyVersion("1.0.*")]
-<Assembly: AssemblyVersion("1.2024.12.01")>
-<Assembly: AssemblyFileVersion("1.2024.12.01")>
+<Assembly: AssemblyVersion("1.2024.12.06")>
+<Assembly: AssemblyFileVersion("1.2024.12.06")>
 <Assembly: NeutralResourcesLanguage("de-DE")>

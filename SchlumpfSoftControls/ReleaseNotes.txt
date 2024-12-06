@@ -1,6 +1,10 @@
 Versionsverlauf
 ===============
 
+Version 3.2024.12.06 - Datum: 06.12.2024
+- neues Control *ColorProgressBar* hinzugefuegt
+- Fehlerbereinigung
+
 Version 3.2024.12.01 - Datum: 01.12.2024
 - interne Funktion zum aktualisieren der Laufwerke hinzugefügt
 

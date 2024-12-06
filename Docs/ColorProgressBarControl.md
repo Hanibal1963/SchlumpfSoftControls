@@ -31,9 +31,3 @@ Da die Donwnloads auf der Seite nicht mehr zu funktionieren scheinen und die Bes
 - **IsGlossy** - Gibt an, ob der Glanz auf der Fortschrittsleiste angezeigt wird.
 
 </details>
-
-<details>
-<summary> Ereignisse </summary>
-
-
-</details>
