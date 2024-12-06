@@ -81,6 +81,7 @@ Partial Class FormColorProgressBarControl
         Me.ColorProgressBar.EmptyColor = System.Drawing.Color.LightGray
         resources.ApplyResources(Me.ColorProgressBar, "ColorProgressBar")
         Me.ColorProgressBar.Name = "ColorProgressBar"
+        Me.ColorProgressBar.ProgressMaximumValue = 100
         '
         'FormColorProgressBarControl
         '

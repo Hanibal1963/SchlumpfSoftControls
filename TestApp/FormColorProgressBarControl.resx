@@ -118,34 +118,142 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <metadata name="ColorDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>306, 135</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormColorProgressBarControl</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ColorProgressBar - Control - Test</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonBarColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ButtonBarColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 43</value>
+  </data>
+  <data name="&gt;&gt;ButtonBarColor.Name" xml:space="preserve">
+    <value>ButtonBarColor</value>
+  </data>
+  <data name="&gt;&gt;ButtonBarColor.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ButtonBarColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 23</value>
+  </data>
+  <data name="ButtonBarColor.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ButtonBarColor.Text" xml:space="preserve">
+    <value>Balkenfarbe ändern</value>
+  </data>
+  <data name="&gt;&gt;ButtonBarColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonBarColor.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ButtonBorderColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ButtonBorderColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 72</value>
+  </data>
+  <data name="&gt;&gt;ButtonBorderColor.Name" xml:space="preserve">
+    <value>ButtonBorderColor</value>
+  </data>
+  <data name="&gt;&gt;ButtonBorderColor.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ButtonBorderColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 23</value>
+  </data>
+  <data name="ButtonBorderColor.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ButtonBorderColor.Text" xml:space="preserve">
+    <value>Rahmenfarbe ändern</value>
+  </data>
+  <data name="&gt;&gt;ButtonBorderColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonBorderColor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ButtonEmptyColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ButtonEmptyColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 12</value>
+  </data>
+  <data name="&gt;&gt;ButtonEmptyColor.Name" xml:space="preserve">
+    <value>ButtonEmptyColor</value>
+  </data>
+  <data name="&gt;&gt;ButtonEmptyColor.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ButtonEmptyColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 23</value>
+  </data>
+  <data name="ButtonEmptyColor.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ButtonEmptyColor.Text" xml:space="preserve">
+    <value>Hintergrundfarbe ändern</value>
+  </data>
+  <data name="&gt;&gt;ButtonEmptyColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonEmptyColor.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="CheckBoxShowBorder.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CheckBoxShowBorder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="CheckBoxShowBorder.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
+  <data name="&gt;&gt;CheckBoxShowBorder.Name" xml:space="preserve">
+    <value>CheckBoxShowBorder</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxShowBorder.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="CheckBoxShowBorder.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 24</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CheckBoxShowBorder.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="CheckBoxShowBorder.Text" xml:space="preserve">
     <value>Ramen anzeigen</value>
   </data>
-  <data name="&gt;&gt;CheckBoxShowBorder.Name" xml:space="preserve">
-    <value>CheckBoxShowBorder</value>
-  </data>
   <data name="&gt;&gt;CheckBoxShowBorder.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxShowBorder.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;CheckBoxShowBorder.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -159,6 +267,12 @@
   <data name="CheckBoxShowGliss.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 42</value>
   </data>
+  <data name="&gt;&gt;CheckBoxShowGliss.Name" xml:space="preserve">
+    <value>CheckBoxShowGliss</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxShowGliss.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="CheckBoxShowGliss.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 24</value>
   </data>
@@ -168,164 +282,11 @@
   <data name="CheckBoxShowGliss.Text" xml:space="preserve">
     <value>Glanz anzeigen</value>
   </data>
-  <data name="&gt;&gt;CheckBoxShowGliss.Name" xml:space="preserve">
-    <value>CheckBoxShowGliss</value>
-  </data>
   <data name="&gt;&gt;CheckBoxShowGliss.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CheckBoxShowGliss.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;CheckBoxShowGliss.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <metadata name="ColorDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="ButtonBarColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ButtonBarColor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 43</value>
-  </data>
-  <data name="ButtonBarColor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 23</value>
-  </data>
-  <data name="ButtonBarColor.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="ButtonBarColor.Text" xml:space="preserve">
-    <value>Balkenfarbe ändern</value>
-  </data>
-  <data name="&gt;&gt;ButtonBarColor.Name" xml:space="preserve">
-    <value>ButtonBarColor</value>
-  </data>
-  <data name="&gt;&gt;ButtonBarColor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonBarColor.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ButtonBarColor.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ButtonEmptyColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ButtonEmptyColor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 12</value>
-  </data>
-  <data name="ButtonEmptyColor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 23</value>
-  </data>
-  <data name="ButtonEmptyColor.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="ButtonEmptyColor.Text" xml:space="preserve">
-    <value>Hintergrundfarbe ändern</value>
-  </data>
-  <data name="&gt;&gt;ButtonEmptyColor.Name" xml:space="preserve">
-    <value>ButtonEmptyColor</value>
-  </data>
-  <data name="&gt;&gt;ButtonEmptyColor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonEmptyColor.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ButtonEmptyColor.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ButtonBorderColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ButtonBorderColor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 72</value>
-  </data>
-  <data name="ButtonBorderColor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 23</value>
-  </data>
-  <data name="ButtonBorderColor.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ButtonBorderColor.Text" xml:space="preserve">
-    <value>Rahmenfarbe ändern</value>
-  </data>
-  <data name="&gt;&gt;ButtonBorderColor.Name" xml:space="preserve">
-    <value>ButtonBorderColor</value>
-  </data>
-  <data name="&gt;&gt;ButtonBorderColor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonBorderColor.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ButtonBorderColor.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="NumericUpDownProgressValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 101</value>
-  </data>
-  <data name="NumericUpDownProgressValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 20</value>
-  </data>
-  <data name="NumericUpDownProgressValue.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;NumericUpDownProgressValue.Name" xml:space="preserve">
-    <value>NumericUpDownProgressValue</value>
-  </data>
-  <data name="&gt;&gt;NumericUpDownProgressValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;NumericUpDownProgressValue.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;NumericUpDownProgressValue.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ColorProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 101</value>
-  </data>
-  <data name="ColorProgressBar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
-  </data>
-  <data name="ColorProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 20</value>
-  </data>
-  <data name="ColorProgressBar.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;ColorProgressBar.Name" xml:space="preserve">
-    <value>ColorProgressBar</value>
-  </data>
-  <data name="&gt;&gt;ColorProgressBar.Type" xml:space="preserve">
-    <value>SchlumpfSoft.Controls.ColorProgressBarControl.ColorProgressBar, ColorProgressBarControl, Version=1.2024.12.1, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ColorProgressBar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ColorProgressBar.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>306, 135</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ColorProgressBar - Control - Test</value>
   </data>
   <data name="&gt;&gt;ColorDialog.Name" xml:space="preserve">
     <value>ColorDialog</value>
@@ -333,10 +294,49 @@
   <data name="&gt;&gt;ColorDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormColorProgressBarControl</value>
+  <data name="ColorProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 101</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ColorProgressBar.Name" xml:space="preserve">
+    <value>ColorProgressBar</value>
+  </data>
+  <data name="ColorProgressBar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="&gt;&gt;ColorProgressBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ColorProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="ColorProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;ColorProgressBar.Type" xml:space="preserve">
+    <value>SchlumpfSoft.Controls.ColorProgressBarControl.ColorProgressBar, ColorProgressBarControl, Version=1.2024.12.1, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ColorProgressBar.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="NumericUpDownProgressValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 101</value>
+  </data>
+  <data name="&gt;&gt;NumericUpDownProgressValue.Name" xml:space="preserve">
+    <value>NumericUpDownProgressValue</value>
+  </data>
+  <data name="&gt;&gt;NumericUpDownProgressValue.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="NumericUpDownProgressValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
+  </data>
+  <data name="NumericUpDownProgressValue.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;NumericUpDownProgressValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NumericUpDownProgressValue.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
 </root>

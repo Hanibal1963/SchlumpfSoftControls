@@ -12,16 +12,11 @@ Public Class FormColorProgressBarControl
         ' Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
-        Me.NumericUpDownProgressValue.Value = Me.GetProgressValue(Me.ColorProgressBar.Value)
+        Me.ColorProgressBar.ProgressMaximumValue = 100
+        Me.NumericUpDownProgressValue.Maximum = 100
+        Me.ColorProgressBar.Value = 0
+        Me.NumericUpDownProgressValue.Value = 0
     End Sub
-
-    Private Function GetProgressValue(Value As Integer) As Decimal
-        'TODO: Wert des Fortschrittsbalkens in Prozent zurückgeben
-    End Function
-
-    Private Function SetProgressValue(Value As Decimal) As Integer
-        'TODO: Wert des Fortschrittsbalkens aus dem Prozentwert berechnen
-    End Function
 
     ''' <summary>
     ''' Farbauswahl für den Fortschrittsbalken
@@ -77,9 +72,11 @@ Public Class FormColorProgressBarControl
         End Select
     End Sub
 
+    ''' <summary>
+    ''' Wert des Fortschrittsbalkens ändern
+    ''' </summary>
     Private Sub NumericUpDownProgressValue_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDownProgressValue.ValueChanged
-        'TODO: Wert des Fortschrittsbalkens berechnen
-        Me.ColorProgressBar.Value = Me.SetProgressValue(Me.NumericUpDownProgressValue.Value)
+        Me.ColorProgressBar.Value = CInt(Me.NumericUpDownProgressValue.Value)
     End Sub
 
 End Class
