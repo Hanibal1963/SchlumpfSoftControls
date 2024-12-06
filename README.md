@@ -11,8 +11,9 @@ Zurzeit sind folgende Steuerelemente vorhanden:
 - [Wizard Control](./Docs/WizardControl.md) - Ein Control zum erstellen eines Assistenten.
 - [Shape Control](./Docs/ShapeControl.md) - Ein Control zum Darstellen einer Linie, eines Rechtecks oder einer Ellipse.
 - [TransparentLabel Control](./Docs/TransparentLabelControl.md) - Ein Control zum Anzeigen eines Textes mit durchscheinendem Hintergrund.
-- [SevenSegment Control](./Docs/SevenSegmentControl.md) - Ein Control zum Anzeigen von Zeichen als 7-Segmentanzeige 
-- **NEU** [ExplorerTreeView Control](./Docs/ExplorerTreeViewControl.md) - Ein Control zum Anzeigen von Laufwerken und Ordnern eines PC's
+- [SevenSegment Control](./Docs/SevenSegmentControl.md) - Ein Control zum Anzeigen von Zeichen als 7-Segmentanzeige. 
+- **NEU** [ExplorerTreeView Control](./Docs/ExplorerTreeViewControl.md) - Ein Control zum Anzeigen von Laufwerken und Ordnern eines PC's.
+- **NEU** [ColorProgressBar Control](./Docs/ColorProgressBarControl.md) - Ein Control zum Anzeigen eines farblichen Fortschrittsbalkens.
 
 ---
 
@@ -22,4 +23,4 @@ Zurzeit sind folgende Steuerelemente vorhanden:
 - Eine Möglichkeit die Breite des MultiDigit Control automatisch an die Anzahl der Digits anzupassen.
 - Neues Control zum Auslesen und Bearbeiten der EXIF Tag's von Bildern hinzufügen.
 - Neues Control zum Auslesen und Bearbeiten von ID3 Tag's von Musikdateien hinzufügen.
-- Neues Control zum Anzeigen eines farblichen Fortschrittsbalkens.
+- Neue Eigenschaften des farblichen Fortschrittsbalkens hinzufügen.

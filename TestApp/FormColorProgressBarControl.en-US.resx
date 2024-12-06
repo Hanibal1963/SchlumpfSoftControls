@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,65 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>255, 293</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Controls test app</value>
+    <value>Color progressionbar - Control - test</value>
   </data>
-  <data name="ButtonAniGif.Text" xml:space="preserve">
-    <value>AniGif Control</value>
+  <data name="ButtonBarColor.Text" xml:space="preserve">
+    <value>Change the beam color</value>
   </data>
-  <data name="ButtonColorProgressBar.Text" xml:space="preserve">
-    <value>Color program Control</value>
+  <data name="ButtonBorderColor.Text" xml:space="preserve">
+    <value>Change frame color</value>
   </data>
-  <data name="ButtonDriveWatcher.Text" xml:space="preserve">
-    <value>DriveWatcher Control</value>
+  <data name="ButtonEmptyColor.Text" xml:space="preserve">
+    <value>Change background color</value>
   </data>
-  <data name="ButtonExplorerTreeView.Text" xml:space="preserve">
-    <value>ExploreTreeView Control</value>
+  <data name="CheckBoxShowBorder.Text" xml:space="preserve">
+    <value>Ramen</value>
   </data>
-  <data name="ButtonIniFilecontrol.Text" xml:space="preserve">
-    <value>Inifile Control</value>
-  </data>
-  <data name="ButtonNotifyFormControl.Text" xml:space="preserve">
-    <value>Notificform Control</value>
-  </data>
-  <data name="ButtonSevenSegmentControl.Text" xml:space="preserve">
-    <value>SevenSegment Control</value>
-  </data>
-  <data name="ButtonShapeControl.Text" xml:space="preserve">
-    <value>Shape Control</value>
-  </data>
-  <data name="ButtonTransparentLabelControl.Text" xml:space="preserve">
-    <value>Transparent Label Control</value>
-  </data>
-  <data name="ButtonWizardControl.Text" xml:space="preserve">
-    <value>Wizard Control</value>
-  </data>
-  <data name="FlowLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 269</value>
-  </data>
-  <data name="MenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 24</value>
-  </data>
-  <data name="ToolStripMenuItemDeutsch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
-  </data>
-  <data name="ToolStripMenuItemDeutsch.Text" xml:space="preserve">
-    <value>German</value>
-  </data>
-  <data name="ToolStripMenuItemEnglisch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
-  </data>
-  <data name="ToolStripMenuItemEnglisch.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="ToolStripMenuItemSprache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 20</value>
-  </data>
-  <data name="ToolStripMenuItemSprache.Text" xml:space="preserve">
-    <value>Language</value>
+  <data name="CheckBoxShowGliss.Text" xml:space="preserve">
+    <value>Show shine</value>
   </data>
 </root>
