@@ -80,6 +80,7 @@
     <DeployExtension>False</DeployExtension>
     <CreateVsixContainer>True</CreateVsixContainer>
     <DocumentationFile>SchlumpfSoftControls.xml</DocumentationFile>
+    <CopyVsixExtensionFiles>False</CopyVsixExtensionFiles>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="LICENSE.rtf">
@@ -127,6 +128,10 @@
       <Name>AniGifControl</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3bPkgdefProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorProgressBarControl\ColorProgressBarControl.vbproj">
+      <Project>{21c5ed2a-df2c-4344-bbd2-1c234e9a64fa}</Project>
+      <Name>ColorProgressBarControl</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveWatcherControl\DriveWatcherControl.vbproj">
       <Project>{FBA9160F-6F7D-4182-982C-5DF153309F33}</Project>
