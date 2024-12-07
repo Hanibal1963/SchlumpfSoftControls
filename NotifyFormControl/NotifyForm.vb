@@ -10,7 +10,7 @@
 
 Imports System.ComponentModel
 Imports System.Drawing
-Imports SchlumpfSoft.Controls.Attribute
+Imports SchlumpfSoft.Attribute
 
 ''' <summary>
 ''' Control zum anzeigen von Benachrichtigungsfenstern.
