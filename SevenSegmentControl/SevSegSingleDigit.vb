@@ -13,7 +13,7 @@ Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Imports System.Windows.Forms
-Imports SchlumpfSoft.Controls.Attribute
+Imports SchlumpfSoft.Attribute
 
 ''' <summary>
 ''' Dieses Steuerelement stellt ein einzelnes Siebensegment-LED-Display dar,<br/> 
