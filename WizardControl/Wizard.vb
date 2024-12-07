@@ -3,14 +3,17 @@
 ' © 2024 by Andreas Sauer
 ' ****************************************************************************************************************
 '
+' weitere Infos:
+' <Browsable> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.browsableattribute?view=netframework-4.7.2
+' <Category> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.categoryattribute?view=netframework-4.7.2
+' <Description> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.descriptionattribute?view=netframework-4.7.2
 
 Imports System
 Imports System.ComponentModel
-Imports System.ComponentModel.Design
 Imports System.Drawing
 Imports System.Drawing.Design
 Imports System.Windows.Forms
-Imports System.Windows.Forms.Design
+Imports SchlumpfSoft.Controls.Attribute
 
 ''' <summary>
 ''' Ein Control zum erstellen eines Assistenen

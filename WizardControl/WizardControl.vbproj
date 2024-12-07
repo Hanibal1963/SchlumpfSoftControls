@@ -108,7 +108,6 @@
     <Compile Include="PageWelcome.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ProvideToolboxControlAttribute.vb" />
     <Compile Include="Wizard.Designer.vb">
       <DependentUpon>Wizard.vb</DependentUpon>
     </Compile>
@@ -122,7 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MessagePack">
-      <Version>2.5.192</Version>
+      <Version>3.0.300</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.12.40392" ExcludeAssets="runtime">
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -171,7 +170,6 @@
     <None Include="WizardPage.cd" />
     <None Include="WizardDesigner.cd" />
     <None Include="Wizard.cd" />
-    <None Include="ProvideToolboxControlAttribute.cd" />
     <None Include="PageWelcome.cd" />
     <None Include="PageStyle.cd" />
     <None Include="PageStandard.cd" />
@@ -180,6 +178,12 @@
     <None Include="PageFinish.cd" />
     <None Include="PageDesigner.cd" />
     <None Include="PageCustom.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Attribute\Attribute.vbproj">
+      <Project>{411c55da-b346-4b5a-a28a-4e5b31f5b0bb}</Project>
+      <Name>Attribute</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
