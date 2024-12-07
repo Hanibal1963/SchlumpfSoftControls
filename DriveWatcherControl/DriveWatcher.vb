@@ -14,7 +14,7 @@ Imports System.ComponentModel
 Imports System.Drawing
 Imports System.IO
 Imports System.Windows.Forms
-Imports SchlumpfSoft.Controls.Attribute
+Imports SchlumpfSoft.Attribute
 
 ''' <summary>
 ''' Steuerelement um die Laufwerke zu überwachen.
