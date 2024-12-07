@@ -4,7 +4,6 @@
 ' ****************************************************************************************************************
 '
 
-
 Imports System
 Imports System.Runtime.InteropServices
 Imports System.Threading
@@ -34,15 +33,12 @@ Imports Microsoft.VisualStudio.Shell
 <Guid(SchlumpfSoftControlsPackage.PackageGuidString)>
 Public NotInheritable Class SchlumpfSoftControlsPackage
 
-
     Inherits AsyncPackage
-
 
     ''' <summary>
     ''' Package guid
     ''' </summary>
     Public Const PackageGuidString As String = "6daeed23-f0ef-4b11-8d6d-883af017e441"
-
 
 #Region "Package Members"
 
@@ -74,6 +70,5 @@ Public NotInheritable Class SchlumpfSoftControlsPackage
     End Function
 
 #End Region
-
 
 End Class

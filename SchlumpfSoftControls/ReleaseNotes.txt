@@ -1,6 +1,11 @@
 Versionsverlauf
 ===============
 
+Version 3.2024.12.07 - Datum: 07.12.2024
+- neue Bibliothek fuer Benutzerdefinierte Attribute hinzugefuegt
+- Codedateien fuer Benutzerdefinierte Attibute duch oben genannte Bibliothek ersetzt
+- Fehlerbereinigung
+
 Version 3.2024.12.06 - Datum: 06.12.2024
 - neues Control *ColorProgressBar* hinzugefuegt
 - Fehlerbereinigung
