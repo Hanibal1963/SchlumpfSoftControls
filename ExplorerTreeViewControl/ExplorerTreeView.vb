@@ -12,13 +12,11 @@
 
 Imports System
 Imports System.ComponentModel
-Imports System.Diagnostics
 Imports System.Drawing
 Imports System.Linq
 Imports System.Windows.Forms
-Imports System.Windows.Forms.Layout
 Imports Microsoft.VisualBasic
-Imports Microsoft.VisualStudio.PlatformUI
+Imports SchlumpfSoft.Controls.Attribute
 
 #End Region
 

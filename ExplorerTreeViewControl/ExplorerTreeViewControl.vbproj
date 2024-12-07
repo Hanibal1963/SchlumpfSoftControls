@@ -64,7 +64,6 @@
     <None Include="DriveNode.cd" />
     <None Include="ExplorerTreeView.cd" />
     <None Include="NodeHelpers.cd" />
-    <None Include="ProvideToolboxControlAttribute.cd" />
     <None Include="SpezialFolderNode.cd" />
   </ItemGroup>
   <ItemGroup>
@@ -85,7 +84,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="NodeHelpers.vb" />
-    <Compile Include="ProvideToolboxControlAttribute.vb" />
     <Compile Include="SpezialFolderNode.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -98,7 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MessagePack">
-      <Version>2.5.192</Version>
+      <Version>3.0.300</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.12.40392" ExcludeAssets="runtime">
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -134,6 +132,10 @@
     <Content Include="Resources\ImgVideosFolder.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Attribute\Attribute.vbproj">
+      <Project>{411c55da-b346-4b5a-a28a-4e5b31f5b0bb}</Project>
+      <Name>Attribute</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DriveWatcherControl\DriveWatcherControl.vbproj">
       <Project>{FBA9160F-6F7D-4182-982C-5DF153309F33}</Project>
       <Name>DriveWatcherControl</Name>
