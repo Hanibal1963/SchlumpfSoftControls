@@ -13,7 +13,7 @@ Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.IO
-Imports SchlumpfSoft.Controls.Attribute
+Imports SchlumpfSoft.Attribute
 
 ''' <summary>
 ''' Steuerelement zum Verwalten von INI - Dateien

@@ -12,7 +12,7 @@ Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
-Imports SchlumpfSoft.Controls.Attribute
+Imports SchlumpfSoft.Attribute
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten der Abschnitts- oder Eintrags- Liste einer INI - Datei.

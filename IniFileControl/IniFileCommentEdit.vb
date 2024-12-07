@@ -13,7 +13,7 @@ Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Linq
 Imports System.Windows.Forms
-Imports SchlumpfSoft.Controls.Attribute
+Imports SchlumpfSoft.Attribute
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.
