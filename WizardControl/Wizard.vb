@@ -13,7 +13,7 @@ Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Drawing.Design
 Imports System.Windows.Forms
-Imports SchlumpfSoft.Controls.Attribute
+Imports SchlumpfSoft.Attribute
 
 ''' <summary>
 ''' Ein Control zum erstellen eines Assistenen
