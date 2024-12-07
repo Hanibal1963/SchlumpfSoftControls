@@ -13,7 +13,7 @@ Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Drawing.Imaging
 Imports System.Windows.Forms
-Imports SchlumpfSoft.Controls.Attribute
+Imports SchlumpfSoft.Attribute
 
 ''' <summary>
 ''' Control zum anzeigen von animierten Grafiken.
