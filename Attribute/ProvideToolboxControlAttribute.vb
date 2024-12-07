@@ -4,12 +4,7 @@
 ' ****************************************************************************************************************
 '
 
-Imports System
-Imports System.Collections.Generic
-Imports System.Globalization
-Imports System.Linq
 Imports System.Runtime.InteropServices
-Imports System.Text
 Imports Microsoft.VisualStudio.Shell
 
 ''' <summary>
@@ -23,7 +18,7 @@ Imports Microsoft.VisualStudio.Shell
 '''         "WpfControls"="1"
 ''' </remarks>
 <AttributeUsage(AttributeTargets.Class, AllowMultiple:=False, Inherited:=True)>
-<System.Runtime.InteropServices.ComVisibleAttribute(False)>
+<ComVisible(False)>
 Public NotInheritable Class ProvideToolboxControlAttribute
 
     Inherits RegistrationAttribute
