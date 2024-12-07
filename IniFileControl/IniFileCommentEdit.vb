@@ -3,12 +3,17 @@
 ' © 2024 by Andreas Sauer
 ' ****************************************************************************************************************
 '
+' weitere Infos:
+' <Browsable> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.browsableattribute?view=netframework-4.7.2
+' <Category> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.categoryattribute?view=netframework-4.7.2
+' <Description> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.descriptionattribute?view=netframework-4.7.2
 
 Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Linq
 Imports System.Windows.Forms
+Imports SchlumpfSoft.Controls.Attribute
 
 ''' <summary>
 ''' Steuerelement zum Anzeigen und Bearbeiten des Datei- oder Abschnitts- Kommentars einer INI - Datei.

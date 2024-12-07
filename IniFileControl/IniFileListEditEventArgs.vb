@@ -6,7 +6,9 @@
 
 Imports System
 
-Public Class IniFileListEditEventArgs : Inherits EventArgs
+Public Class IniFileListEditEventArgs
+
+    Inherits EventArgs
 
     Private _SelectedSection As String = String.Empty
     Private _SelectedItem As String = String.Empty

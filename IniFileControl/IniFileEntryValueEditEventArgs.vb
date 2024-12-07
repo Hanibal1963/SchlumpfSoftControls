@@ -6,7 +6,9 @@
 
 Imports System
 
-Public Class IniFileEntryValueEditEventArgs : Inherits EventArgs
+Public Class IniFileEntryValueEditEventArgs
+
+    Inherits EventArgs
 
     Private _SelectedSection As String
     Private _SelectedEntry As String

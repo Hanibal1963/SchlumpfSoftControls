@@ -6,7 +6,9 @@
 
 Imports System
 
-Public Class IniFileCommentEditEventArgs : Inherits EventArgs
+Public Class IniFileCommentEditEventArgs
+
+    Inherits EventArgs
 
     Private _comment() As String
     Private _section As String
