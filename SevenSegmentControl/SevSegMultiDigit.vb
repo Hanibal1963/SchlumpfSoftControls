@@ -3,11 +3,16 @@
 ' © 2024 by Andreas Sauer
 ' ****************************************************************************************************************
 '
+' weitere Infos:
+' <Browsable> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.browsableattribute?view=netframework-4.7.2
+' <Category> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.categoryattribute?view=netframework-4.7.2
+' <Description> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.descriptionattribute?view=netframework-4.7.2
 
 Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
+Imports SchlumpfSoft.Controls.Attribute
 
 ''' <summary>
 ''' Stellt ein Control dar, das mehrere Siebensegmentanzeigen enthält.
@@ -16,7 +21,9 @@ Imports System.Windows.Forms
 <Description("ClassDescriptionSevSegMultiDigit")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(SevSegMultiDigit), "SevSegMultiDigit.bmp")>
-Public Class SevSegMultiDigit : Inherits Control
+Public Class SevSegMultiDigit
+
+    Inherits Control
 
 #Region "Eigenschaftsvariablen"
 

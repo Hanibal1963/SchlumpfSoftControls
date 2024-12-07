@@ -3,12 +3,17 @@
 ' © 2024 by Andreas Sauer
 ' ****************************************************************************************************************
 '
+' weitere Infos:
+' <Browsable> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.browsableattribute?view=netframework-4.7.2
+' <Category> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.categoryattribute?view=netframework-4.7.2
+' <Description> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.descriptionattribute?view=netframework-4.7.2
 
 Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Imports System.Windows.Forms
+Imports SchlumpfSoft.Controls.Attribute
 
 ''' <summary>
 ''' Dieses Steuerelement stellt ein einzelnes Siebensegment-LED-Display dar,<br/> 
@@ -18,7 +23,9 @@ Imports System.Windows.Forms
 <Description("Dieses Steuerelement stellt ein einzelnes Siebensegment-LED-Display dar, das eine Ziffer oder einen Buchstaben anzeigt.")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(SevSegSingleDigit), "SevSegSingleDigit.bmp")>
-Public Class SevSegSingleDigit : Inherits Control
+Public Class SevSegSingleDigit
+
+    Inherits Control
 
 #Region "Eigenschaftsvariablen"
 
