@@ -16,7 +16,7 @@ Imports System.Drawing
 Imports System.Linq
 Imports System.Windows.Forms
 Imports Microsoft.VisualBasic
-Imports SchlumpfSoft.Controls.Attribute
+Imports SchlumpfSoft.Attribute
 
 #End Region
 
