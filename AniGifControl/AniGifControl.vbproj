@@ -96,7 +96,6 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="AniGif.cd" />
-    <None Include="ProvideToolboxControlAttribute.cd" />
     <None Include="SizeMode.cd" />
   </ItemGroup>
   <ItemGroup>
@@ -109,7 +108,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ProvideToolboxControlAttribute.vb" />
     <Compile Include="SizeMode.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -144,7 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MessagePack">
-      <Version>2.5.192</Version>
+      <Version>3.0.300</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK">
       <Version>17.12.40392</Version>
@@ -157,6 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Attribute\Attribute.vbproj">
+      <Project>{411c55da-b346-4b5a-a28a-4e5b31f5b0bb}</Project>
+      <Name>Attribute</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
