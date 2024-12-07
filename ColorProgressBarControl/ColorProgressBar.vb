@@ -12,6 +12,7 @@ Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
+Imports SchlumpfSoft.Controls.Attribute
 
 ''' <summary>
 ''' Control zum Anzeigen eines farbigen Fortschrittbalkens.
