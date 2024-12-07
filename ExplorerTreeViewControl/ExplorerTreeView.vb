@@ -142,6 +142,21 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Set
     End Property
 
+    ''' <summary>
+    ''' Ruft den Abstand für das Einrücken der einzelnen Ebenen von untergeordneten Strukturknoten ab oder legt diesen fest.
+    ''' </summary>
+    <Browsable(True)>
+    <Category("Behavior")>
+    <Description("Ruft den Abstand für das Einrücken der einzelnen Ebenen von untergeordneten Strukturknoten ab oder legt diesen fest.")>
+    Public Property Intent As Integer
+        Get
+            Return Me.Tv1.Indent
+        End Get
+        Set(value As Integer)
+            Me.Tv1.Indent = value
+        End Set
+    End Property
+
 #End Region
 
 #Region "überschriebene Eigenschaften"
@@ -176,20 +191,28 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Set
     End Property
 
+
     ''' <summary>
-    ''' Ruft den Abstand für das Einrücken der einzelnen Ebenen von untergeordneten Strukturknoten ab oder legt diesen fest.
+    ''' Legt die Schriftart des Textes im Steuerelement fest oder gibt diese zurück.
     ''' </summary>
     <Browsable(True)>
-    <Category("Behavior")>
-    <Description("Ruft den Abstand für das Einrücken der einzelnen Ebenen von untergeordneten Strukturknoten ab oder legt diesen fest.")>
-    Public Property Intent As Integer
+    <Category("Appearance")>
+    <Description("Legt die Schriftart des Textes im Steuerelement fest oder gibt diese zurück.")>
+    Public Overrides Property Font As Font
         Get
-            Return Me.Tv1.Indent
+            'BUG: beim auslesen der Schriftart aus Tv1 stürzt die IDE ab.
+            Return MyBase.Font
+            'Return Me.Tv1.Font  
         End Get
-        Set(value As Integer)
-            Me.Tv1.Indent = value
+        Set(value As Font)
+            MyBase.Font = value
+            Me.Tv1.Font = value
         End Set
     End Property
+
+#End Region
+
+#Region "ausgeblendete Eigenschaften"
 
     ''' <summary>
     ''' ausgeblendet da  nicht Relevant
@@ -244,24 +267,6 @@ Public Class ExplorerTreeView : Inherits UserControl
         End Get
         Set(value As AutoSizeMode)
             MyBase.AutoSizeMode = value
-        End Set
-    End Property
-
-    ''' <summary>
-    ''' Legt die Schriftart des Textes im Steuerelement fest oder gibt diese zurück.
-    ''' </summary>
-    <Browsable(True)>
-    <Category("Appearance")>
-    <Description("Legt die Schriftart des Textes im Steuerelement fest oder gibt diese zurück.")>
-    Public Overrides Property Font As Font
-        Get
-            'BUG: beim auslesen der Schriftart aus Tv1 stürzt die IDE ab.
-            Return MyBase.Font
-            'Return Me.Tv1.Font  
-        End Get
-        Set(value As Font)
-            MyBase.Font = value
-            Me.Tv1.Font = value
         End Set
     End Property
 
