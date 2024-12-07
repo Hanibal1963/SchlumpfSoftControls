@@ -85,7 +85,6 @@
     <DocumentationFile>NotifyFormControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="ProvideToolboxControlAttribute.cd" />
     <None Include="NotifyForm.cd" />
     <None Include="FormTemplate.cd" />
     <None Include="FormStyle.cd" />
@@ -106,7 +105,6 @@
     <Compile Include="NotifyForm.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ProvideToolboxControlAttribute.vb" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -117,7 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MessagePack">
-      <Version>2.5.192</Version>
+      <Version>3.0.300</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.12.40392" ExcludeAssets="runtime">
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -158,6 +156,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\NotifyForm.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Attribute\Attribute.vbproj">
+      <Project>{411c55da-b346-4b5a-a28a-4e5b31f5b0bb}</Project>
+      <Name>Attribute</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
