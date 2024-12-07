@@ -3,10 +3,15 @@
 ' © 2024 by Andreas Sauer
 ' ****************************************************************************************************************
 '
+' weitere Infos:
+' <Browsable> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.browsableattribute?view=netframework-4.7.2
+' <Category> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.categoryattribute?view=netframework-4.7.2
+' <Description> - https://learn.microsoft.com/de-de/dotnet/api/system.componentmodel.descriptionattribute?view=netframework-4.7.2
 
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
+Imports Schlumpfsoft.Controls.Attribute
 
 ''' <summary>
 ''' Ein Steuerelement zum Anzeigen eines Textes mit durchscheinendem Hintergrund.
