@@ -50,6 +50,7 @@ Public Class ColorProgressBar
     ''' Gibt den Gesamtfortschritt des Fortschrittsbalkens zurück oder legt diesen fest.
     ''' </summary>
     <Browsable(True)>
+    <Category("Behavior")>
     <Description("Gibt den Gesamtfortschritt des Fortschrittsbalkens zurück oder legt diesen fest.")>
     <DefaultValue(1)>
     Public Property Value() As Integer
@@ -59,7 +60,7 @@ Public Class ColorProgressBar
         Set(value As Integer)
             'Nicht mehr als den Maximalwert erlauben
             Me._progressvalue = If(value <= Me._maxvalue, value, Me._maxvalue)
-            Me.UpdateProgress()
+            Dim unused = Me.UpdateProgress()
         End Set
     End Property
 
@@ -67,6 +68,7 @@ Public Class ColorProgressBar
     ''' Gibt den Maximalwert des Fortschrittsbalkens zurück oder legt diesen fest.
     ''' </summary>
     <Browsable(True)>
+    <Category("Behavior")>
     <Description("Gibt den Maximalwert des Fortschrittsbalkens zurück oder legt diesen fest.")>
     <DefaultValue(10)>
     Public Property ProgressMaximumValue() As Integer
@@ -75,7 +77,7 @@ Public Class ColorProgressBar
         End Get
         Set(value As Integer)
             Me._maxvalue = If(value > Me.Width, Me.Width, value)
-            Me.UpdateProgress()
+            Dim unused = Me.UpdateProgress()
         End Set
     End Property
 
@@ -83,6 +85,7 @@ Public Class ColorProgressBar
     ''' Gibt die Farbe des Fortschrittsbalkens zurück oder legt diese fest.
     ''' </summary>
     <Browsable(True)>
+    <Category("Appearance")>
     <Description("Gibt die Farbe des Fortschrittsbalkens zurück oder legt diese fest.")>
     Public Property BarColor As Color
         Get
@@ -99,6 +102,7 @@ Public Class ColorProgressBar
     ''' </summary>
     ''' <returns></returns>
     <Browsable(True)>
+    <Category("Appearance")>
     <Description("Gibt die Farbe des leeren Fortschrittsbalkens zurück oder legt diese fest.")>
     Public Property EmptyColor As Color
         Get
@@ -114,6 +118,7 @@ Public Class ColorProgressBar
     ''' Gibt die Farbe des Rahmens zurück oder legt diese fest.
     ''' </summary>
     <Browsable(True)>
+    <Category("Appearance")>
     <Description("Gibt die Farbe des Rahmens zurück oder legt diese fest.")>
     Public Property BorderColor As Color
         Get
@@ -129,6 +134,7 @@ Public Class ColorProgressBar
     ''' Gibt an, ob der Rahmen auf der Fortschrittsanzeige aktiviert ist.
     ''' </summary>
     <Browsable(True)>
+    <Category("Appearance")>
     <Description("Gibt an, ob der Rahmen auf der Fortschrittsanzeige aktiviert ist.")>
     <DefaultValue(True)>
     Public Property ShowBorder As Boolean
@@ -137,7 +143,7 @@ Public Class ColorProgressBar
         End Get
         Set(value As Boolean)
             Me._showborder = value
-            Me.UpdateProgress()
+            Dim unused = Me.UpdateProgress()
         End Set
     End Property
 
@@ -145,6 +151,7 @@ Public Class ColorProgressBar
     ''' Gibt an, ob der Glanz auf der Fortschrittsleiste angezeigt wird.
     ''' </summary>
     <Browsable(True)>
+    <Category("Appearance")>
     <Description("Gibt an, ob der Glanz auf der Fortschrittsleiste angezeigt wird.")>
     <DefaultValue(True)>
     Public Property IsGlossy As Boolean
@@ -153,7 +160,7 @@ Public Class ColorProgressBar
         End Get
         Set(value As Boolean)
             Me._isglossy = value
-            Me.UpdateProgress()
+            Dim unused = Me.UpdateProgress()
         End Set
     End Property
 
@@ -165,6 +172,7 @@ Public Class ColorProgressBar
     ''' Ausgeblendet da nicht relevant.
     ''' </summary>
     <Browsable(False)>
+    <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackColor As Color
         Get
             Return MyBase.BackColor
@@ -178,6 +186,7 @@ Public Class ColorProgressBar
     ''' Ausgeblendet da nicht relevant.
     ''' </summary>
     <Browsable(False)>
+    <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackgroundImage As Image
         Get
             Return MyBase.BackgroundImage
@@ -191,6 +200,7 @@ Public Class ColorProgressBar
     ''' Ausgeblendet da nicht relevant.
     ''' </summary>
     <Browsable(False)>
+    <EditorBrowsable(EditorBrowsableState.Never)>
     Public Overrides Property BackgroundImageLayout As ImageLayout
         Get
             Return MyBase.BackgroundImageLayout
@@ -204,6 +214,7 @@ Public Class ColorProgressBar
     ''' Ausgeblendet da nicht relevant.
     ''' </summary>
     <Browsable(False)>
+    <EditorBrowsable(EditorBrowsableState.Never)>
     Public Shadows Property BorderStyle As BorderStyle
         Get
             Return MyBase.BorderStyle
@@ -213,13 +224,43 @@ Public Class ColorProgressBar
         End Set
     End Property
 
+    ''' <summary>
+    ''' Ausgeblendet da nicht relevant.
+    ''' </summary>
+    <Browsable(False)>
+    <EditorBrowsable(EditorBrowsableState.Never)>
+    Public Overrides Property ForeColor As Color
+        Get
+            Return MyBase.ForeColor
+        End Get
+        Set(value As Color)
+            MyBase.ForeColor = value
+        End Set
+    End Property
+
+    ''' <summary>
+    ''' Ausgeblendet da nicht relevant.
+    ''' </summary>
+    <Browsable(False)>
+    <EditorBrowsable(EditorBrowsableState.Never)>
+    Public Overloads Property Padding As Padding
+        Get
+            Return MyBase.Padding
+        End Get
+        Set(value As Padding)
+            MyBase.Padding = value
+        End Set
+    End Property
+
 #End Region
 
     Public Sub New()
+
         'Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
         'Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
         Me.InitDefaultColors()
+
     End Sub
 
 #Region "interne Funktionen"
@@ -282,8 +323,8 @@ Public Class ColorProgressBar
 
     Private Sub ColorProgressBar_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         If Me.Value <= Me._maxvalue Then
-            Me.UpdateProgress()
-            Me.UpdateGloss()
+            Dim unused = Me.UpdateProgress()
+            Dim unused1 = Me.UpdateGloss()
         End If
     End Sub
 
