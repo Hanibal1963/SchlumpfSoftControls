@@ -23,19 +23,12 @@ Public Class NotifyForm
 
     Inherits Component
 
-    Private _Title As String
-    Private _Message As String
-    Private _Design As FormDesign
-    Private _ShowTime As Integer
-    Private _Style As FormStyle
-
     Public Sub New()
-
-        Me._Title = String.Format(My.Resources.StandardTitle)
-        Me._Message = String.Format(My.Resources.StandardMessage)
-        Me._Design = FormDesign.Bright
-        Me._Style = FormStyle.Information
-        Me._ShowTime = 5000
+        NotifyFormVariableDefs.Title = String.Format(My.Resources.StandardTitle)
+        NotifyFormVariableDefs.Message = String.Format(My.Resources.StandardMessage)
+        NotifyFormVariableDefs.Design = FormDesign.Bright
+        NotifyFormVariableDefs.Style = FormStyle.Information
+        NotifyFormVariableDefs.ShowTime = 5000
 
     End Sub
 
@@ -47,10 +40,10 @@ Public Class NotifyForm
     <Description("Legt das Aussehen des Benachrichtigungsfensters fest.")>
     Public Property Design As FormDesign
         Get
-            Return Me._Design
+            Return NotifyFormVariableDefs.Design
         End Get
         Set
-            Me._Design = Value
+            NotifyFormVariableDefs.Design = Value
         End Set
     End Property
 
@@ -62,10 +55,10 @@ Public Class NotifyForm
     <Description("Legt den Benachrichtigungstext fest der angezeigt werden soll.")>
     Public Property Message As String
         Get
-            Return Me._Message
+            Return NotifyFormVariableDefs.Message
         End Get
         Set
-            Me._Message = Value
+            NotifyFormVariableDefs.Message = Value
         End Set
     End Property
 
@@ -80,10 +73,10 @@ Public Class NotifyForm
     <Description("Legt die Anzeigedauer des Benachrichtigungsfensters in ms fest.")>
     Public Property ShowTime As Integer
         Get
-            Return Me._ShowTime
+            Return NotifyFormVariableDefs.ShowTime
         End Get
         Set
-            Me._ShowTime = Value
+            NotifyFormVariableDefs.ShowTime = Value
         End Set
     End Property
 
@@ -95,10 +88,10 @@ Public Class NotifyForm
     <Description("Legt das anzuzeigende Symbol im Benachrichtigungsfensters fest.")>
     Public Property Style As FormStyle
         Get
-            Return Me._Style
+            Return NotifyFormVariableDefs.Style
         End Get
         Set
-            Me._Style = Value
+            NotifyFormVariableDefs.Style = Value
         End Set
     End Property
 
@@ -110,10 +103,10 @@ Public Class NotifyForm
     <Description("Legt den Text der Titelzeile des Benachrichtigungsfensters fest.")>
     Public Property Title As String
         Get
-            Return Me._Title
+            Return NotifyFormVariableDefs.Title
         End Get
         Set
-            Me._Title = Value
+            NotifyFormVariableDefs.Title = Value
         End Set
     End Property
 
@@ -122,102 +115,12 @@ Public Class NotifyForm
     ''' </summary>
     Public Sub Show()
 
-        FormTemplate.Image = Me.SetFormImage
-        FormTemplate.Title = Me.Title
-        FormTemplate.Message = Me.Message
-        FormTemplate.ShowTime = Me.ShowTime
-        Me.SetFormDesign()
+        FormTemplate.Image = NotifyFormHelpers.SetFormImage()
+        FormTemplate.Title = NotifyFormVariableDefs.Title
+        FormTemplate.Message = NotifyFormVariableDefs.Message
+        FormTemplate.ShowTime = NotifyFormVariableDefs.ShowTime
+        NotifyFormHelpers.SetFormDesign()
 
     End Sub
-
-    ''' <summary>
-    ''' Setzt das Design des Fensters
-    ''' </summary>
-    Private Sub SetFormDesign()
-
-        Select Case Me.Design
-
-            Case FormDesign.Bright
-                SetFormDesignBright()
-
-            Case FormDesign.Colorful
-                SetFormDesignColorful()
-
-            Case FormDesign.Dark
-                SetFormDesignDark()
-
-        End Select
-
-    End Sub
-
-    ''' <summary>
-    ''' Setzt das helle Design
-    ''' </summary>
-    Private Shared Sub SetFormDesignBright()
-
-        FormTemplate.BackgroundColor = Color.White
-        FormTemplate.TextFieldColor = Color.White
-        FormTemplate.TitleBarColor = Color.Gray
-        FormTemplate.FontColor = Color.Black
-        Dim ini As New FormTemplate
-        ini.Initialize()
-
-    End Sub
-
-    ''' <summary>
-    ''' Setz das farbige Design
-    ''' </summary>
-    Private Shared Sub SetFormDesignColorful()
-
-        FormTemplate.BackgroundColor = Color.LightBlue
-        FormTemplate.TextFieldColor = Color.LightBlue
-        FormTemplate.TitleBarColor = Color.LightSeaGreen
-        FormTemplate.FontColor = Color.White
-        Dim ini As New FormTemplate
-        ini.Initialize()
-
-    End Sub
-
-    ''' <summary>
-    ''' Setzt das dunkle Design
-    ''' </summary>
-    Private Shared Sub SetFormDesignDark()
-
-        FormTemplate.BackgroundColor = Color.FromArgb(83, 79, 75)
-        FormTemplate.TextFieldColor = Color.FromArgb(83, 79, 75)
-        FormTemplate.TitleBarColor = Color.FromArgb(60, 57, 54)
-        FormTemplate.FontColor = Color.White
-        Dim ini As New FormTemplate
-        ini.Initialize()
-
-    End Sub
-
-    ''' <summary>
-    ''' Setzt das Symbol des Fensters
-    ''' </summary>
-    ''' <returns></returns>
-    Private Function SetFormImage() As Image
-
-        Dim result As Bitmap = Nothing
-
-        Select Case Me.Style
-
-            Case FormStyle.CriticalError
-                result = My.Resources.CriticalError
-
-            Case FormStyle.Exclamation
-                result = My.Resources.Warning
-
-            Case FormStyle.Information
-                result = My.Resources.Information
-
-            Case FormStyle.Question
-                result = My.Resources.Question
-
-        End Select
-
-        Return result
-
-    End Function
 
 End Class

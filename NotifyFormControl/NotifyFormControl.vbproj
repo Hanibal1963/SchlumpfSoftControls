@@ -99,6 +99,8 @@
     <Compile Include="NotifyForm.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="NotifyFormHelpers.vb" />
+    <Compile Include="NotifyFormVariableDefs.vb" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
