@@ -85,11 +85,6 @@
     <CreateVsixContainer>False</CreateVsixContainer>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="DriveWatcher.cd" />
-    <None Include="DriveRemovedEventArgs.cd" />
-    <None Include="DriveAddedEventArgs.cd" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="DriveAddedEventArgs.vb" />
     <Compile Include="DriveRemovedEventArgs.vb" />
     <Compile Include="DriveWatcher.vb">
