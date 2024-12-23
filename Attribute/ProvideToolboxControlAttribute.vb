@@ -85,10 +85,8 @@ Public NotInheritable Class ProvideToolboxControlAttribute
 
         Using key As Key = context.CreateKey(
             String.Format(
-            System.Globalization.CultureInfo.InvariantCulture,
-            "{0}\{1}",
-            ToolboxControlsInstallerPath,
-            context.ComponentType.Assembly.FullName))
+            Globalization.CultureInfo.InvariantCulture, "{0}\{1}",
+            ToolboxControlsInstallerPath, context.ComponentType.Assembly.FullName))
 
             key.SetValue(String.Empty, Me.Name)
             key.SetValue("Codebase", context.CodeBase)
@@ -115,10 +113,8 @@ Public NotInheritable Class ProvideToolboxControlAttribute
 
             context.RemoveKey(
                 String.Format(
-                System.Globalization.CultureInfo.InvariantCulture,
-                "{0}\{1}",
-                ToolboxControlsInstallerPath,
-                context.ComponentType.Assembly.FullName))
+                System.Globalization.CultureInfo.InvariantCulture, "{0}\{1}",
+                ToolboxControlsInstallerPath, context.ComponentType.Assembly.FullName))
 
         End If
 
