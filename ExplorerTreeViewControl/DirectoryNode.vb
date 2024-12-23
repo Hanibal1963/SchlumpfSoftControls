@@ -9,7 +9,9 @@ Imports System.IO
 Imports System.Linq
 Imports System.Windows.Forms
 
-Friend Class DirectoryNode : Inherits TreeNode
+Friend Class DirectoryNode
+
+    Inherits TreeNode
 
     Public Sub New(DII As DirectoryInfo)
 

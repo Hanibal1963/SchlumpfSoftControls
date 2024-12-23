@@ -58,15 +58,6 @@
     <CreateVsixContainer>False</CreateVsixContainer>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="ComputerNode.cd" />
-    <None Include="DirectoryNode.cd" />
-    <None Include="DriveHelpers.cd" />
-    <None Include="DriveNode.cd" />
-    <None Include="ExplorerTreeView.cd" />
-    <None Include="NodeHelpers.cd" />
-    <None Include="SpezialFolderNode.cd" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="ComputerNode.vb" />
     <Compile Include="DirectoryNode.vb" />
     <Compile Include="DriveHelpers.vb" />

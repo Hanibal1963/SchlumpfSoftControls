@@ -8,7 +8,9 @@ Imports System
 Imports System.IO
 Imports System.Windows.Forms
 
-Public Class ComputerNode : Inherits TreeNode
+Friend Class ComputerNode
+
+    Inherits TreeNode
 
     ''' <summary>
     ''' Auflistung der speziellen Verzeichnisse
