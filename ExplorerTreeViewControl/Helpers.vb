@@ -9,6 +9,25 @@ Imports System.Windows.Forms
 Friend Module Helpers
 
     ''' <summary>
+    ''' Füllt das TreeView mit den Standardbildern und Knoten.
+    ''' </summary>
+    Friend Sub FillTreeView(ByRef TV As TreeView)
+
+        ' Erstellt einen neuen Knoten für den Computer.
+        Dim node As New ComputerNode
+
+        ' Löscht alle vorhandenen Knoten im TreeView.
+        TV.Nodes.Clear()
+
+        ' Fügt den neuen Computerknoten zum TreeView hinzu.
+        Dim unused = TV.Nodes.Add(node)
+
+        ' Erweitert den Computerknoten, um seine Unterknoten anzuzeigen.
+        node.Expand()
+
+    End Sub
+
+    ''' <summary>
     ''' Füllt die ImageList mit den Standardbildern für Computer, Laufwerke, Ordner und Spezialordner.
     ''' </summary>
     Friend Sub FillImageList(ByRef Images As ImageList)

@@ -28,7 +28,9 @@ Imports SchlumpfSoft.Attribute
 <Description("Control zum Anzeigen der Laufwerke und Ordner eines Computers")>
 <ToolboxItem(True)>
 <ToolboxBitmap(GetType(ExplorerTreeView), "ExplorerTreeView.bmp")>
-Public Class ExplorerTreeView : Inherits UserControl
+Public Class ExplorerTreeView
+
+    Inherits UserControl
 
 #Region "Ereignisdefinitionen für öffentliche Ereignisse"
 
@@ -284,7 +286,18 @@ Public Class ExplorerTreeView : Inherits UserControl
         FillImageList(Me.ImageList)
 
         ' Füllt das TreeView mit den Standardbildern und Knoten.
-        Me.FillTreeView()
+        FillTreeView(Me.Tv1)
+
+    End Sub
+
+    ''' <summary>
+    ''' Aktualisiert die Laufwerke im TreeView-Steuerelement.
+    ''' </summary>
+    Private Sub UpdateDrives()
+
+        Dim lastpath As String = Me.SelectedPath
+        FillTreeView(Me.Tv1)
+        Me.ExpandPath(lastpath)
 
     End Sub
 
@@ -296,10 +309,7 @@ Public Class ExplorerTreeView : Inherits UserControl
     Public Sub ExpandPath(Path As String)
 
         'Pfad in einzelne Verzeichnisse aufteilen.
-        Dim dirs As String() = Path.Split(
-            New Char() {"\"c},
-            StringSplitOptions.RemoveEmptyEntries)
-
+        Dim dirs As String() = Path.Split(New Char() {"\"c}, StringSplitOptions.RemoveEmptyEntries)
 
         'Startet die Suche beim Wurzelknoten.
         Dim currentNode As TreeNode = Me.Tv1.Nodes(0)
@@ -337,41 +347,6 @@ Public Class ExplorerTreeView : Inherits UserControl
 
         ' Wählt den letzten Knoten im Pfad aus.
         Me.Tv1.SelectedNode = currentNode
-
-    End Sub
-
-#End Region
-
-#Region "interne Funktionen"
-
-    ''' <summary>
-    ''' Füllt das TreeView mit den Standardbildern und Knoten.
-    ''' </summary>
-    Private Sub FillTreeView()
-
-        ' Erstellt einen neuen Knoten für den Computer.
-        Dim node As New ComputerNode
-
-        ' Löscht alle vorhandenen Knoten im TreeView.
-        Me.Tv1.Nodes.Clear()
-
-        ' Fügt den neuen Computerknoten zum TreeView hinzu.
-        Dim unused = Me.Tv1.Nodes.Add(node)
-
-        ' Erweitert den Computerknoten, um seine Unterknoten anzuzeigen.
-        node.Expand()
-
-    End Sub
-
-
-    ''' <summary>
-    ''' Aktualisiert die Laufwerke im TreeView-Steuerelement.
-    ''' </summary>
-    Private Sub UpdateDrives()
-
-        Dim lastpath As String = Me.SelectedPath
-        Me.FillTreeView()
-        Me.ExpandPath(lastpath)
 
     End Sub
 
