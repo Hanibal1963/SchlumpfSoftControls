@@ -127,9 +127,6 @@
     <EmbeddedResource Include="Resources\TransparentLabel.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="TransparentLabel.cd" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Attribute\Attribute.vbproj">
       <Project>{411c55da-b346-4b5a-a28a-4e5b31f5b0bb}</Project>
       <Name>Attribute</Name>

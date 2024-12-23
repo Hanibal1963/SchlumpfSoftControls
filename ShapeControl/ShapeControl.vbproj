@@ -84,11 +84,6 @@
     <DocumentationFile>ShapeControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="Shape.cd" />
-    <None Include="EnumDefShapeModes.cd" />
-    <None Include="EnumDefDiagonalLineModes.cd" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="EnumDefDiagonalLineModes.vb" />
     <Compile Include="EnumDefShapeModes.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
