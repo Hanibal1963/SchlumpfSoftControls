@@ -85,12 +85,6 @@
     <DocumentationFile>NotifyFormControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="NotifyForm.cd" />
-    <None Include="FormTemplate.cd" />
-    <None Include="FormStyle.cd" />
-    <None Include="FormDesign.cd" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="FormDesign.vb" />
     <Compile Include="FormStyle.vb" />
     <Compile Include="FormTemplate.vb">
