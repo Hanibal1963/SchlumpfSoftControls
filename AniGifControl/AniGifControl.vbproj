@@ -95,13 +95,10 @@
     <DocumentationFile>AniGifControl.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="AniGif.cd" />
-    <None Include="SizeMode.cd" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="AniGif.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Helpers.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -109,6 +106,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SizeMode.vb" />
+    <Compile Include="VariableDefinitions.vb" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
