@@ -281,7 +281,7 @@ Public Class ExplorerTreeView : Inherits UserControl
         Me.InitializeComponent()
 
         ' Füllt die ImageList mit den Standardbildern.
-        Me.FillImageList()
+        FillImageList(Me.ImageList)
 
         ' Füllt das TreeView mit den Standardbildern und Knoten.
         Me.FillTreeView()
@@ -363,41 +363,6 @@ Public Class ExplorerTreeView : Inherits UserControl
 
     End Sub
 
-    ''' <summary>
-    ''' Füllt die ImageList mit den Standardbildern für Computer, Laufwerke, Ordner und Spezialordner.
-    ''' </summary>
-    Private Sub FillImageList()
-
-        ' Fügt die Bilder zu der ImageList hinzu, die im TreeView verwendet werden.
-        Me.ImageList.Images.Add($"Computer", My.Resources.ImgComputer)
-
-        Me.ImageList.Images.Add($"DesktopFolder", My.Resources.ImgDesktopFolder)
-
-        Me.ImageList.Images.Add($"DocumentsFolder", My.Resources.ImgDocumentsFolder)
-
-        Me.ImageList.Images.Add($"DownloadsFolder", My.Resources.ImgDownloadsFolder)
-
-        Me.ImageList.Images.Add($"Folder", My.Resources.ImgFolder)
-
-        Me.ImageList.Images.Add($"HardDrive", My.Resources.ImgHardDrive)
-
-        Me.ImageList.Images.Add($"MusicFolder", My.Resources.ImgMusicFolder)
-
-        Me.ImageList.Images.Add($"Network", My.Resources.ImgNetwork)
-
-        Me.ImageList.Images.Add($"NetworkDrive", My.Resources.ImgNetworkDrive)
-
-        Me.ImageList.Images.Add($"NetworkFolder", My.Resources.ImgNetworkFolder)
-
-        Me.ImageList.Images.Add($"OpticalDrive", My.Resources.ImgOpticalDrive)
-
-        Me.ImageList.Images.Add($"PicturesFolder", My.Resources.ImgPicturesFolder)
-
-        Me.ImageList.Images.Add($"SystemDrive", My.Resources.ImgSystemDrive)
-
-        Me.ImageList.Images.Add($"VideoFolder", My.Resources.ImgVideosFolder)
-
-    End Sub
 
     ''' <summary>
     ''' Aktualisiert die Laufwerke im TreeView-Steuerelement.
