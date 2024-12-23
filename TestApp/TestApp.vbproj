@@ -177,6 +177,7 @@
   <ItemGroup>
     <EmbeddedResource Include="FormAniGifControl.en-US.resx">
       <DependentUpon>FormAniGifControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAniGifControl.resx">
       <DependentUpon>FormAniGifControl.vb</DependentUpon>

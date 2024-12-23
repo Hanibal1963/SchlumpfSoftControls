@@ -117,31 +117,67 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Anigif - Control test</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="AniGif1.Gif" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AAA7
+</value>
   </data>
-  <data name="Button_Back.Text" xml:space="preserve">
-    <value>&lt;back</value>
+  <data name="Label_ZoomFactor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 13</value>
   </data>
-  <data name="Button_Forward.Text" xml:space="preserve">
-    <value>forward&gt;</value>
+  <data name="Label_ZoomFactor.Text" xml:space="preserve">
+    <value>Zoom factor:</value>
   </data>
-  <data name="CheckBox_AutoPlay.Text" xml:space="preserve">
-    <value>Autostart:</value>
-  </data>
-  <data name="CheckBox_CustomDisplaySpeed.Text" xml:space="preserve">
-    <value>User -defined display speed:</value>
-  </data>
-  <data name="Label_Ani.Text" xml:space="preserve">
-    <value>standard</value>
-  </data>
-  <data name="Label_Ansicht.Text" xml:space="preserve">
-    <value>Advanced mode:</value>
+  <data name="Label_FramesPerSecound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 13</value>
   </data>
   <data name="Label_FramesPerSecound.Text" xml:space="preserve">
     <value>Showing speed:</value>
   </data>
-  <data name="Label_ZoomFactor.Text" xml:space="preserve">
-    <value>Zoom factor:</value>
+  <data name="CheckBox_CustomDisplaySpeed.Text" xml:space="preserve">
+    <value>User -defined display speed:</value>
+  </data>
+  <data name="Label_Ansicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="Label_Ansicht.Text" xml:space="preserve">
+    <value>Advanced mode:</value>
+  </data>
+  <data name="Label_Ani.Text" xml:space="preserve">
+    <value>standard</value>
+  </data>
+  <data name="Button_Forward.Text" xml:space="preserve">
+    <value>forward&gt;</value>
+  </data>
+  <data name="Button_Back.Text" xml:space="preserve">
+    <value>&lt;back</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Anigif - Control test</value>
   </data>
 </root>
