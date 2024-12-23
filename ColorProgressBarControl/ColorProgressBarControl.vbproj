@@ -58,9 +58,6 @@
     <CreateVsixContainer>False</CreateVsixContainer>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="ColorProgressBar.cd" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="ColorProgressBar.Designer.vb">
       <DependentUpon>ColorProgressBar.vb</DependentUpon>
     </Compile>
@@ -73,6 +70,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="VariableDefinitions.vb" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

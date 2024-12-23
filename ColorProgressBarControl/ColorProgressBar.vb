@@ -25,19 +25,6 @@ Public Class ColorProgressBar
 
     Inherits UserControl
 
-#Region "globale Variablen"
-
-    Private _progressunit As Integer = 20 'Der Betrag in Pixeln, um den unser Fortschrittsbalken erhöht wird.
-    Private _progressvalue As Integer = 1 'Die Menge des ausgefüllten Maximalwerts.
-    Private _maxvalue As Integer = 10 'Der Maximalwert des Fortschrittsbalkens.
-    Private _showborder As Boolean = True 'Legt fest, ob der Rahmen auf der Fortschrittsanzeige aktiviert ist.
-    Private _isglossy As Boolean = True 'Legt fest, ob der Glanz auf der Fortschrittsleiste angezeigt wird.
-    Private _barcolor As Color = Color.Blue 'Die Farbe des Fortschrittsbalkens.
-    Private _emptycolor As Color = Color.LightGray 'Die Farbe des leeren Fortschrittsbalkens.
-    Private _bordercolor As Color = Color.Black 'Die Farbe des Rahmens.
-
-#End Region
-
 #Region "Ereignisdefinitionen für öffentliche Ereignisse"
 
     Public Shadows Event Click(sender As Object, e As EventArgs)
@@ -55,11 +42,11 @@ Public Class ColorProgressBar
     <DefaultValue(1)>
     Public Property Value() As Integer
         Get
-            Return Me._progressvalue
+            Return ProgressValue
         End Get
         Set(value As Integer)
             'Nicht mehr als den Maximalwert erlauben
-            Me._progressvalue = If(value <= Me._maxvalue, value, Me._maxvalue)
+            ProgressValue = If(value <= MaxValue, value, MaxValue)
             Dim unused = Me.UpdateProgress()
         End Set
     End Property
@@ -73,10 +60,10 @@ Public Class ColorProgressBar
     <DefaultValue(10)>
     Public Property ProgressMaximumValue() As Integer
         Get
-            Return Me._maxvalue
+            Return MaxValue
         End Get
         Set(value As Integer)
-            Me._maxvalue = If(value > Me.Width, Me.Width, value)
+            MaxValue = If(value > Me.Width, Me.Width, value)
             Dim unused = Me.UpdateProgress()
         End Set
     End Property
@@ -89,11 +76,11 @@ Public Class ColorProgressBar
     <Description("Gibt die Farbe des Fortschrittsbalkens zurück oder legt diese fest.")>
     Public Property BarColor As Color
         Get
-            Return Me._barcolor
+            Return VariableDefinitions.BarColor
         End Get
         Set(value As Color)
-            Me._barcolor = value
-            Me.ProgressFull.BackColor = Me._barcolor
+            VariableDefinitions.BarColor = value
+            Me.ProgressFull.BackColor = VariableDefinitions.BarColor
         End Set
     End Property
 
@@ -106,11 +93,11 @@ Public Class ColorProgressBar
     <Description("Gibt die Farbe des leeren Fortschrittsbalkens zurück oder legt diese fest.")>
     Public Property EmptyColor As Color
         Get
-            Return Me._emptycolor
+            Return VariableDefinitions.EmptyColor
         End Get
         Set(value As Color)
-            Me._emptycolor = value
-            Me.ProgressEmpty.BackColor = Me._emptycolor
+            VariableDefinitions.EmptyColor = value
+            Me.ProgressEmpty.BackColor = VariableDefinitions.EmptyColor
         End Set
     End Property
 
@@ -122,11 +109,11 @@ Public Class ColorProgressBar
     <Description("Gibt die Farbe des Rahmens zurück oder legt diese fest.")>
     Public Property BorderColor As Color
         Get
-            Return Me._bordercolor
+            Return VariableDefinitions.BorderColor
         End Get
         Set(value As Color)
-            Me._bordercolor = value
-            Me.BackColor = Me._bordercolor
+            VariableDefinitions.BorderColor = value
+            Me.BackColor = VariableDefinitions.BorderColor
         End Set
     End Property
 
@@ -139,10 +126,10 @@ Public Class ColorProgressBar
     <DefaultValue(True)>
     Public Property ShowBorder As Boolean
         Get
-            Return Me._showborder
+            Return VariableDefinitions.ShowBorder
         End Get
         Set(value As Boolean)
-            Me._showborder = value
+            VariableDefinitions.ShowBorder = value
             Dim unused = Me.UpdateProgress()
         End Set
     End Property
@@ -156,10 +143,10 @@ Public Class ColorProgressBar
     <DefaultValue(True)>
     Public Property IsGlossy As Boolean
         Get
-            Return Me._isglossy
+            Return VariableDefinitions.IsGlossy
         End Get
         Set(value As Boolean)
-            Me._isglossy = value
+            VariableDefinitions.IsGlossy = value
             Dim unused = Me.UpdateProgress()
         End Set
     End Property
@@ -258,78 +245,108 @@ Public Class ColorProgressBar
 
         'Dieser Aufruf ist für den Designer erforderlich.
         Me.InitializeComponent()
+
         'Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
-        Me.InitDefaultColors()
+
+        ' Standardwerte setzen
+        Me.GlossLeft.BackColor = Color.FromArgb(100, 255, 255, 255)
+        Me.GlossRight.BackColor = Color.FromArgb(100, 255, 255, 255)
+        Me.BackColor = VariableDefinitions.BorderColor
+        Me.ProgressEmpty.BackColor = VariableDefinitions.EmptyColor
+        Me.ProgressFull.BackColor = VariableDefinitions.BarColor
 
     End Sub
 
 #Region "interne Funktionen"
 
     Private Function UpdateGloss() As Boolean
+
         Try
+
             'Jedes Glanzfeld ausblenden
             Me.GlossLeft.Height = CInt(Me.Height / 3)
             Me.GlossRight.Height = Me.GlossLeft.Height
+
         Catch MyException As Exception
+
             'Einen Fehler zurückgeben und beenden
             Return False
             Exit Function
+
         End Try
+
         Return True
+
     End Function
 
     Private Function UpdateProgress() As Boolean
+
         Try
+
             'Globale Werte neu berechnen
-            Me._progressunit = CInt(Me.Width / Me._maxvalue)
-            Me.ProgressFull.Width = Me._progressvalue * Me._progressunit
+            ProgressUnit = CInt(Me.Width / MaxValue)
+            Me.ProgressFull.Width = ProgressValue * ProgressUnit
+
             'Glanzfelder gemäß Globals ausblenden oder anzeigen
-            If Me._isglossy Then
+            If VariableDefinitions.IsGlossy Then
+
                 Me.GlossLeft.Visible = True
                 Me.GlossRight.Visible = True
+
             Else
+
                 Me.GlossLeft.Visible = False
                 Me.GlossRight.Visible = False
+
             End If
+
             'Bei Maximalwert den Fortschrittsbalken ausfüllen
-            If Me._progressvalue = Me._maxvalue Then
-                Me.ProgressFull.Width = If(Me._showborder, Me.Width - 2, Me.Width)
+            If ProgressValue = MaxValue Then
+
+                Me.ProgressFull.Width = If(VariableDefinitions.ShowBorder, Me.Width - 2, Me.Width)
+
             End If
+
             'Ränder je nach Globalwerten ausblenden oder anzeigen
-            Me.Padding = If(Me._showborder, New Padding(1), New Padding(0))
+            Me.Padding = If(VariableDefinitions.ShowBorder, New Padding(1), New Padding(0))
+
         Catch MyException As Exception
+
             'Einen Fehler zurückgeben und beenden
             Return False
             Exit Function
-        End Try
-        Return True
-    End Function
 
-    Private Sub InitDefaultColors()
-        Me.GlossLeft.BackColor = Color.FromArgb(100, 255, 255, 255)
-        Me.GlossRight.BackColor = Color.FromArgb(100, 255, 255, 255)
-        Me.BackColor = Me._bordercolor
-        Me.ProgressEmpty.BackColor = Me._emptycolor
-        Me.ProgressFull.BackColor = Me._barcolor
-    End Sub
+        End Try
+
+        Return True
+
+    End Function
 
 #End Region
 
-#Region "Ereignisbehandlungen"
+#Region "Interne Ereignisbehandlungen"
 
     Private Sub ColorProgressBar_PaddingChanged(sender As Object, e As EventArgs) Handles Me.PaddingChanged
-        Me.Padding = If(Me._showborder, New Padding(1), New Padding(0))
+
+        Me.Padding = If(VariableDefinitions.ShowBorder, New Padding(1), New Padding(0))
+
     End Sub
 
     Private Sub ColorProgressBar_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-        If Me.Value <= Me._maxvalue Then
+
+        If Me.Value <= MaxValue Then
+
             Dim unused = Me.UpdateProgress()
             Dim unused1 = Me.UpdateGloss()
+
         End If
+
     End Sub
 
     Private Sub Panel_Click(sender As Object, e As EventArgs) Handles GlossLeft.Click, ProgressFull.Click, ProgressEmpty.Click, GlossRight.Click
+
         RaiseEvent Click(Me, e)
+
     End Sub
 
 #End Region
