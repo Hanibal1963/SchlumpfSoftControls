@@ -8,7 +8,7 @@ Eine Sammlung verschiedener Controls.
 >
 > Die neue Version enthält neue Steuerelemente und Verbesserungen der alten Steuerelemente.
 >
-> Desweitern ist die struktur gegenüber dieser Version etwas verändert.
+> Desweitern ist die Struktur gegenüber dieser Version etwas verändert.
 >
 > Ich empfehle die neue Version für neue Projekte zu verwenden b.z.w. bestehende Projekte auf die neue Version umzustellen.
 > 
