@@ -1,6 +1,10 @@
 Versionsverlauf
 ===============
 
+Version 3.2025.10.04 - Datum: 04.10.2025
+- Keine Codeänderungen, nur Versionsnummer aktualisiert.
+- Hinweis zum Abbruch der Entwicklung dieser Version.
+
 Version 3.2024.12.07 - Datum: 07.12.2024
 - neue Bibliothek fuer Benutzerdefinierte Attribute hinzugefuegt
 - Codedateien fuer Benutzerdefinierte Attibute durch oben genannte Bibliothek ersetzt
