@@ -2,6 +2,17 @@
 
 Eine Sammlung verschiedener Controls.
 
+> **Achtung !**
+> 
+> Diese Version wird nicht mehr weiterentwickelt, da ich mich auf die Entwicklung von [SchlumpfSoftControls2](https://github.com/Hanibal1963/SchlumpfSoftControls2) konzentriere.
+>
+> Die neue Version enthält neue Steuerelemente und Verbesserungen der alten Steuerelemente.
+>
+> Desweitern ist die struktur gegenüber dieser Version etwas verändert.
+>
+> Ich empfehle die neue Version für neue Projekte zu verwenden b.z.w. bestehende Projekte auf die neue Version umzustellen.
+> 
+
 Zurzeit sind folgende Steuerelemente vorhanden:
 
 - [AniGif Control](./Docs/AniGifControl.md) - Ein Control zum anzeigen von animierten Grafiken.
